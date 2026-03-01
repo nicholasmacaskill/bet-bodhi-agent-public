@@ -25,14 +25,14 @@ Bet Bodhi is an autonomous AI agent designed for sports betting self-mastery. Un
 In March 2026, Bet Bodhi pivoted from a static SaaS tool to a **Proactive Agent Architecture**. 
 
 **The SaaS Model (Old):** User logs in, looks at a chart, and wonders why they lost money.
-**The Agent Model (New):** Bodhi "awakens" every morning, scans the slate using its toolbox, monitors for "chase_win" or "pre-game-rush" behaviors, and intervenes *before* you place a high-risk bet.
+**The Agent Model (New):** Bodhi "awakens" every morning, refracts the slate through its Prism, monitors for "chase_win" or "pre-game-rush" behaviors, and intervenes *before* you place a high-risk bet.
 
 ---
 
 ## 🤖 Agent Capabilities
 
 ### 🌅 Morning Awakening
-The agent runs at sunrise to scan MLB, NHL, NBA, and MMA markets. It cross-references +EV opportunities with your current bankroll and psychological baseline.
+The agent runs at sunrise to scan MLB, NHL, NBA, and MMA markets. It cross-refracts +EV opportunities with your current bankroll and psychological baseline through its technical Prism.
 
 ### 🛡️ Guardian Interventions
 The agent monitors your timing. If it detects a "Pre-Game Rush" (betting < 30 mins before kickoff), it fires an intervention challenge to ensure you aren't acting on impulse.
@@ -42,16 +42,16 @@ Under the hood, the agent logs its own "stream of consciousness" in Supabase (`a
 
 ---
 
-## ⚙️ The Bodhi Toolbox
+## 💎 The Bodhi Prism
 
-The agent's "hands" in the digital world. A unified interface for interacting with sports data and your history.
+The agent's clarity layer. A unified medium for refracting sports data and your history. Software is not a tool; it is glass.
 
-| Tool | Capability |
+| Prism Function | Capability |
 | :--- | :--- |
-| **`scanMLB()` / `scanNHL()`** | Uses Pillar Analyzers to find mispriced underdogs. |
+| **`scanMLB()` / `scanNHL()`** | Refracts market data through Pillar Analyzers to find mispriced underdogs. |
 | **`recordBet()`** | Logs bets with automatic psychometric timing. |
-| **`getUserState()`** | Checks bankroll and peak watermarks. |
-| **`analyzeBiases()`** | Scans recent history for complacency or loss-chasing. |
+| **`getUserState()`** | Provides clarity on bankroll and peak watermarks. |
+| **`analyzeBiases()`** | Shines a light on recent history for complacency or loss-chasing. |
 
 ---
 
@@ -91,7 +91,7 @@ npx tsx -e "import { BodhiAgent } from './src/lib/agent/bodhi-agent'; new BodhiA
 bet-bodhi/
 ├── src/lib/agent/
 │   ├── bodhi-agent.ts       # Central Agent logic & "Consciousness"
-│   └── toolbox.ts           # Unified tools for analysis & logging
+│   └── prism.ts             # Clarity Layer for analysis & refracting logic
 ├── src/lib/                 # Core domain logic
 │   ├── pillar-analyzer.ts   # MLB strength modeling
 │   ├── nhl-pillar-analyzer.ts

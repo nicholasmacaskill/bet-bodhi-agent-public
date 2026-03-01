@@ -1,8 +1,8 @@
 /**
- * Bodhi Agent Toolbox
+ * Bodhi Agent Prism
  * -------------------
  * This module unifies all the standalone analysis and logging scripts 
- * into a single interface that an AI Agent can use to perform actions.
+ * into a single clarity layer that an AI Agent can use to refract data.
  */
 
 import { PillarAnalyzer } from '../pillar-analyzer';
@@ -13,7 +13,7 @@ import { OddsApi } from '../odds-api';
 import { logBet, BetLogEntry } from '../bet-logger';
 import { supabaseAdmin } from '../supabase-admin';
 
-export class BodhiToolbox {
+export class BodhiPrism {
     private mlb = new MLBApi();
     private nhl = new NHLApi();
     private odds = new OddsApi();

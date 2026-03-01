@@ -23,22 +23,15 @@ export interface BodhiAnalysis {
     valueOdds?: number;
 }
 
-// Map of 2026 Elite MLB Pitchers
-const ELITE_PITCHERS = [
-    "Gerrit Cole", "Zack Wheeler", "Corbin Burnes", "Logan Webb", "Tyler Glasnow",
-    "Luis Castillo", "Kevin Gausman", "Spencer Strider", "Yoshinobu Yamamoto",
-    "Framber Valdez", "Justin Steele", "Pablo Lopez", "Aaron Nola", "Tarik Skubal", "Paul Skenes",
-    "Shota Imanaga", "Michael Soroka", "Andrew Painter", "Andrew Abbott", "Logan Gilbert", "Drew Rasmussen", "Reid Detmers"
-];
+// Proprietary Elite lists redacted for public repo
+const ELITE_PITCHERS: string[] = [];
+const ELITE_BATS: string[] = [];
 
-// Map of 2026 Elite MLB Bats
-const ELITE_BATS = [
-    "Shohei Ohtani", "Aaron Judge", "Ronald Acuna Jr.", "Mookie Betts", "Freddie Freeman",
-    "Juan Soto", "Corey Seager", "Yordan Alvarez", "Matt Olson", "Kyle Tucker",
-    "Mike Trout", "Bobby Witt Jr.", "Julio Rodriguez", "Bryce Harper", "Adley Rutschman",
-    "Jung Hoo Lee", "Jorge Soler", "LaMonte Wade Jr.", "Eloy Jimenez", "Connor Griffin",
-    "Jackson Chourio", "Logan O'Hoppe"
-];
+// Decision Weights (Examples - actual weights redacted)
+const WEIGHT_ELITE_PITCHER = 1.0;
+const WEIGHT_ELITE_BAT = 1.0;
+const WEIGHT_HOT_BAT = 0.5;
+const WEIGHT_WEAK_PITCHER = -1.0;
 
 export class PillarAnalyzer {
 
@@ -166,14 +159,14 @@ export class PillarAnalyzer {
         const homePitcher = details.probables.home || "";
         const awayPitcher = details.probables.away || "";
 
-        const homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? 3 : 0;
-        const awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? 3 : 0;
+        const homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? WEIGHT_ELITE_PITCHER : 0;
+        const awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? WEIGHT_ELITE_PITCHER : 0;
 
-        const homePitcherWeak = weakPitchers.includes(homePitcher) ? -2 : 0;
-        const awayPitcherWeak = weakPitchers.includes(awayPitcher) ? -2 : 0;
+        const homePitcherWeak = weakPitchers.includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
+        const awayPitcherWeak = weakPitchers.includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
 
-        const homeTotalStrength = homeElite + homePitcherElite + (homeHotCount * 0.5) + homePitcherWeak;
-        const awayTotalStrength = awayElite + awayPitcherElite + (awayHotCount * 0.5) + awayPitcherWeak;
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "Home" : "Away";

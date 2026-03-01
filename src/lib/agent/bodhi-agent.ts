@@ -5,11 +5,11 @@
  * markets, detect bias, and "Coach" you through the day.
  */
 
-import { BodhiToolbox } from './toolbox';
+import { BodhiPrism } from './prism';
 import { supabaseAdmin } from '../supabase-admin';
 
 export class BodhiAgent {
-    private toolbox = new BodhiToolbox();
+    private prism = new BodhiPrism();
     private identity = "Bodhi-Alpha-1";
 
     /**
@@ -20,10 +20,10 @@ export class BodhiAgent {
         console.log(`   🌅 ${this.identity}: MORNING BREIFING (${date})   `);
         console.log(`=====================================================\n`);
 
-        const mlbOpportunities = await this.toolbox.scanMLB(date);
-        const nhlOpportunities = await this.toolbox.scanNHL(date);
-        const userState = await this.toolbox.getUserState();
-        const biasAlert = await this.toolbox.analyzeBiases();
+        const mlbOpportunities = await this.prism.scanMLB(date);
+        const nhlOpportunities = await this.prism.scanNHL(date);
+        const userState = await this.prism.getUserState();
+        const biasAlert = await this.prism.analyzeBiases();
 
         console.log(`-> Hello. I've scanned today's slate.`);
         console.log(`   Your current bankroll is $${userState?.current_balance?.toFixed(2) || '500.00'}.`);
