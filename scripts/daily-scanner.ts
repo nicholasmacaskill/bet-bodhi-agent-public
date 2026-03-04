@@ -159,10 +159,14 @@ function renderGame(result: ScanResult): void {
         const { home, away } = result.goalieStats;
         console.log(`\n  ${BOLD}GOALIES${RESET}`);
         if (away) {
-            console.log(`  ├─ ${CYAN}${away.name.padEnd(20)}${RESET} ${DIM}SV%: ${away.svPct.toFixed(3)}  GAA: ${away.gaa.toFixed(2)}${RESET}`);
+            const svPct = away.svPct ? away.svPct.toFixed(3) : '--.---';
+            const gaa = away.gaa ? away.gaa.toFixed(2) : '--.--';
+            console.log(`  ├─ ${CYAN}${away.name.padEnd(20)}${RESET} ${DIM}SV%: ${svPct}  GAA: ${gaa}${RESET}`);
         }
         if (home) {
-            console.log(`  └─ ${CYAN}${home.name.padEnd(20)}${RESET} ${DIM}SV%: ${home.svPct.toFixed(3)}  GAA: ${home.gaa.toFixed(2)}${RESET}`);
+            const svPct = home.svPct ? home.svPct.toFixed(3) : '--.---';
+            const gaa = home.gaa ? home.gaa.toFixed(2) : '--.--';
+            console.log(`  └─ ${CYAN}${home.name.padEnd(20)}${RESET} ${DIM}SV%: ${svPct}  GAA: ${gaa}${RESET}`);
         }
     }
 

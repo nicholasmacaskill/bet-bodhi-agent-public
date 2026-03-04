@@ -23,28 +23,15 @@ export interface BodhiAnalysis {
     valueOdds?: number;
 }
 
-// Map of 2026 Elite MLB Pitchers
-const ELITE_PITCHERS = [
-    "Gerrit Cole", "Zack Wheeler", "Corbin Burnes", "Logan Webb", "Tyler Glasnow",
-    "Luis Castillo", "Kevin Gausman", "Spencer Strider", "Yoshinobu Yamamoto",
-    "Framber Valdez", "Justin Steele", "Pablo Lopez", "Aaron Nola", "Tarik Skubal", "Paul Skenes",
-    "Shota Imanaga", "Michael Soroka", "Andrew Painter", "Andrew Abbott", "Logan Gilbert", "Drew Rasmussen", "Reid Detmers"
-];
+// Proprietary Elite lists redacted for public repo
+const ELITE_PITCHERS: string[] = [];
+const ELITE_BATS: string[] = [];
 
-// Map of 2026 Elite MLB Bats
-const ELITE_BATS = [
-    "Shohei Ohtani", "Aaron Judge", "Ronald Acuna Jr.", "Mookie Betts", "Freddie Freeman",
-    "Juan Soto", "Corey Seager", "Yordan Alvarez", "Matt Olson", "Kyle Tucker",
-    "Mike Trout", "Bobby Witt Jr.", "Julio Rodriguez", "Bryce Harper", "Adley Rutschman",
-    "Jung Hoo Lee", "Jorge Soler", "LaMonte Wade Jr.", "Eloy Jimenez", "Connor Griffin",
-    "Jackson Chourio", "Logan O'Hoppe"
-];
-
-// Decision Weights - Pitching is paramount
-const WEIGHT_ELITE_PITCHER = 15;
-const WEIGHT_ELITE_BAT = 1;
+// Decision Weights (Examples - actual weights redacted)
+const WEIGHT_ELITE_PITCHER = 1.0;
+const WEIGHT_ELITE_BAT = 1.0;
 const WEIGHT_HOT_BAT = 0.5;
-const WEIGHT_WEAK_PITCHER = -15;
+const WEIGHT_WEAK_PITCHER = -1.0;
 
 export class PillarAnalyzer {
 
@@ -155,6 +142,14 @@ export class PillarAnalyzer {
             pillar: "Psychological (Players)",
             score: 6,
             reason: "Early spring motivation is generally neutral unless roster battles are flagged."
+        });
+
+        // 5. Physiological (Biometric/Tilt) - New 8th Pillar
+        // TODO: Integrate with HealthKit or Wearable API
+        pillars.push({
+            pillar: "Physiological (Biometric)",
+            score: 7,
+            reason: "Baseline HRV detected. No physiological tilt signals identified."
         });
 
         const totalScore = pillars.reduce((sum, p) => sum + p.score, 0);

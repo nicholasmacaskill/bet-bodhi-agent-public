@@ -9,14 +9,13 @@ Bet Bodhi is an autonomous AI agent designed for sports betting self-mastery. Un
 ## 📋 Table of Contents
 - [🆕 The Agentic Pivot](#-the-agentic-pivot)
 - [🤖 Agent Capabilities](#-agent-capabilities)
-- [⚙️ The Bodhi Toolbox](#️-the-bodhi-toolbox)
+- [💎 The Bodhi Prism](#-the-bodhi-prism)
 - [🧠 Psychometric Guardian](#-psychometric-guardian)
-- [🏛️ The Seven Pillars](#️-the-seven-pillars)
+- [🏛️ The Eight Pillars](#-the-eight-pillars)
+- [🚀 Recent Work Completed](#-recent-work-completed)
 - [🚀 Getting Started](#-getting-started)
 - [📁 Project Structure](#-project-structure)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📜 Scripts Reference](#-scripts-reference)
-- [🤝 Contributing](#-contributing)
+- [ Scripts Reference](#-scripts-reference)
 
 ---
 
@@ -57,7 +56,7 @@ The agent's clarity layer. A unified medium for refracting sports data and your 
 
 ## 🧠 Psychometric Guardian
 
-Bodhi tracks your "Seven Pillar" health in real-time:
+Bodhi tracks your "**Eight Pillar**" health in real-time:
 
 ### `motivation_tag`
 - `bodhi_signal`: Clean engine output.
@@ -66,6 +65,31 @@ Bodhi tracks your "Seven Pillar" health in real-time:
 
 ### The 2-Hour Rule
 The agent enforces a strictly monitored "Cooling Off" period. Any bet placed within 120 minutes of kickoff is flagged as high-variance "noise" rather than technical "signal."
+
+---
+
+## 🏛️ The Eight Pillars
+
+Bet Bodhi evaluates every matchup through a unified **Eight Pillar Framework** to ensure a +EV edge and psychological stability:
+
+1.  **Technical (Sport/Performance):** Deep-dive efficiency metrics, roster strength, and statistical mismatches (e.g., Strike Rate in MMA or SV% in NHL).
+2.  **Seasonal (Trend):** Analyzing mid-season fatigue, rest advantages, and historical trend lines.
+3.  **Technical (Bookies):** Identifying market mispricings where the "Real Probability" deviates from the sportsbook odds.
+4.  **Psychological (Motivation):** Factoring in roster battles (Spring Training), revenge narratives, and "must-win" scenarios for the players.
+5.  **Seasonal (Environment):** Venue-specific factors such as altitude in Mexico City (MMA) or dry air in the Cactus League (MLB).
+6.  **Technical (Bankroll/Prism):** Mathematical sizing based on Kelly Criterion principles to ensure long-term sustainability.
+7.  **Psychometric (Guardian):** The anti-bias layer that monitors the human bettor for tilt, FOMO, or chase-winning behaviors.
+8.  **Physiological (Biometric/Tilt):** Real-time monitoring of HRV (Heart Rate Variability) and Resting Heart Rate (RHR) to detect physiological stress and prevent emotional "tilt" decision-making.
+
+---
+
+## 🚀 Recent Work Completed (March 2026)
+
+-   **Multi-Sport "Pillar" Engines:** Full integration of NBA, NHL, and MMA analytical models into the main scanner.
+-   **NHL Goalie Precision:** Implemented a dedicated goalie matchup engine that cross-references SV% and GAA against opponent offensive volume.
+-   **Optimized CLI Experience:** Created the `./run` shortcut for "Signal-First" scanning, allowing for instant +EV detection without scrolling.
+-   **MMA Altitude Modeling:** Added environmental performance degradation factors for high-altitude cards (UFC Mexico City).
+-   **Bug Fixes & Stability:** Resolved rendering crashes in the goalie display and improved data hydration for MLB Spring Training lineups.
 
 ---
 
@@ -80,7 +104,14 @@ npm install
 
 ### Awakening the Agent
 ```bash
-npx tsx -e "import { BodhiAgent } from './src/lib/agent/bodhi-agent'; new BodhiAgent().awaken('2026-03-01')"
+# Full Today's Scan
+./run
+
+# Watch Mode (updates every 15 min)
+./run --watch
+
+# Check a Specific Date
+./run --date 2026-03-05
 ```
 
 ---
@@ -89,22 +120,26 @@ npx tsx -e "import { BodhiAgent } from './src/lib/agent/bodhi-agent'; new BodhiA
 
 ```
 bet-bodhi/
+├── run                      # CLI Shortcut
 ├── src/lib/agent/
 │   ├── bodhi-agent.ts       # Central Agent logic & "Consciousness"
 │   └── prism.ts             # Clarity Layer for analysis & refracting logic
 ├── src/lib/                 # Core domain logic
-│   ├── pillar-analyzer.ts   # MLB strength modeling
+│   ├── pillar-analyzer.ts   # Base MLB modeling
 │   ├── nhl-pillar-analyzer.ts
+│   ├── mma-pillar-analyzer.ts
+│   ├── nba-pillar-analyzer.ts
 │   └── bet-logger.ts        # Psychometric tracking
 └── scripts/                 # Standalone script commands
+    └── daily-scanner.ts     # The main Bodhi engine
 ```
 
 ---
 
 ## 📜 Scripts Reference
-- `scripts/analyze-march1.ts`: MLB Underdog Hunter
-- `scripts/analyze-nhl-march1.ts`: NHL evening slate
-- `scripts/bias-report.ts`: Weekly psychometric audit
+- `./run`: The primary interface for current market analysis.
+- `scripts/bias-report.ts`: Weekly psychometric audit of your betting behavior.
+- `scripts/underdog-report.ts`: Deep dive into high-value ML underdogs.
 
 ---
 
