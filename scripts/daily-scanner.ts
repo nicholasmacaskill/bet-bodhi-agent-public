@@ -159,10 +159,14 @@ function renderGame(result: ScanResult): void {
         const { home, away } = result.goalieStats;
         console.log(`\n  ${BOLD}GOALIES${RESET}`);
         if (away) {
-            console.log(`  ├─ ${CYAN}${away.name.padEnd(20)}${RESET} ${DIM}SV%: ${away.svPct.toFixed(3)}  GAA: ${away.gaa.toFixed(2)}${RESET}`);
+            const svPct = (away.svPct !== undefined && away.svPct !== null) ? away.svPct.toFixed(3) : '--.---';
+            const gaa = (away.gaa !== undefined && away.gaa !== null) ? away.gaa.toFixed(2) : '--.--';
+            console.log(`  ├─ ${CYAN}${away.name.padEnd(20)}${RESET} ${DIM}SV%: ${svPct}  GAA: ${gaa}${RESET}`);
         }
         if (home) {
-            console.log(`  └─ ${CYAN}${home.name.padEnd(20)}${RESET} ${DIM}SV%: ${home.svPct.toFixed(3)}  GAA: ${home.gaa.toFixed(2)}${RESET}`);
+            const svPct = (home.svPct !== undefined && home.svPct !== null) ? home.svPct.toFixed(3) : '--.---';
+            const gaa = (home.gaa !== undefined && home.gaa !== null) ? home.gaa.toFixed(2) : '--.--';
+            console.log(`  └─ ${CYAN}${home.name.padEnd(20)}${RESET} ${DIM}SV%: ${svPct}  GAA: ${gaa}${RESET}`);
         }
     }
 
@@ -447,8 +451,12 @@ async function runScan(date: string): Promise<void> {
         const sportResults = allResults.filter(r => r.sport === sport);
         if (sportResults.length === 0) continue;
 
-        // Sort by confidence descending within each sport
-        sportResults.sort((a, b) => b.analysis.overallConfidence - a.analysis.overallConfidence);
+        // Sort by time ascending (earlier games first) within each sport
+        sportResults.sort((a, b) => {
+            const timeA = a.startTime ? new Date(a.startTime).getTime() : 0;
+            const timeB = b.startTime ? new Date(b.startTime).getTime() : 0;
+            return timeA - timeB;
+        });
 
         for (const result of sportResults) {
             renderGame(result);
