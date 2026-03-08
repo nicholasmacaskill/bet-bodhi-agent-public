@@ -1,0 +1,730 @@
+[1m[36m╔════════════════════════════════════════════════════════════════════╗
+║          🔍 BODHI DAILY SCANNER  —  Friday, March 6, 2026          ║
+╚════════════════════════════════════════════════════════════════════╝[0m
+  [2mScanning date: 2026-03-06  |  Last updated: 7:01:23 PM[0m
+
+  [36m⟳[0m Fetching MLB games...  [32m✓[0m MLB: 16 games found
+DEBUG GIANTS: side=away market=Found
+  [36m⟳[0m Fetching NHL games...  [32m✓[0m NHL: 7 games found
+  [36m⟳[0m Fetching NBA games...  [32m✓[0m NBA: 7 games found
+  [36m⟳[0m Fetching MMA events...  [32m✓[0m MMA: 2 fights found
+
+  [2mTotal: 32 matchups scanned across all sports[0m
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mBoston Red Sox @ Detroit Tigers[0m  [2m1:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mBoston Red Sox[0m [32m2.18[0m [2m(+118)[0m   [36mDetroit Tigers[0m [37m1.72[0m [2m(-139)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[████████░░] 8/10[0m
+  │      [2mDOG-LEAN: Balanced matchup. Value lean on away at 2.18.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m65%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mWashington Nationals @ Houston Astros[0m  [2m1:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStrong Home advantage (+1.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[████████████░░░░░░░░][0m [1m60%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mSt. Louis Cardinals @ Baltimore Orioles[0m  [2m1:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStrong Home advantage (+1.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[████████████░░░░░░░░][0m [1m60%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mPhiladelphia Phillies @ Pittsburgh Pirates[0m  [2m1:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mPittsburgh Pirates @ Toronto Blue Jays[0m  [2m1:07 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mPittsburgh Pirates[0m [32m2.05[0m [2m(+105)[0m   [36mToronto Blue Jays[0m [37m1.82[0m [2m(-122)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mLos Angeles Angels @ Cleveland Guardians[0m  [2m3:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mLos Angeles Angels[0m [32m2.25[0m [2m(+125)[0m   [36mCleveland Guardians[0m [37m1.65[0m [2m(-154)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [32m[██████████] 10/10[0m
+  │      [2mStrong Away advantage (+15.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mStandard (2.5%)[0m [2m→[0m [32m$25.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mColorado Rockies @ Athletics[0m  [2m3:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mColorado Rockies[0m [37m1.74[0m [2m(-135)[0m   [36mAthletics[0m [32m2.15[0m [2m(+115)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[████████░░] 8/10[0m
+  │      [2mDOG-LEAN: Balanced matchup. Value lean on home at 2.15.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m65%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mCincinnati Reds @ San Francisco Giants[0m  [2m3:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mCincinnati Reds[0m [37m1.95[0m [2m(-105)[0m   [36mSan Francisco Giants[0m [37m1.88[0m [2m(-114)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [32m[██████████] 10/10[0m
+  │      [2mStrong Away advantage (+15.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [32m[██████████] 10/10[0m
+  │      [2mBODHI-SIGNAL: Technically superior away side is undervalued[0m
+  │      [2mat 1.95.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m83%[0m
+  [1mSIGNAL[0m      [32m[1m✅ HIGH CONVICTION - Bet AWAY (+EV)[0m
+  [1mSTAKE[0m       [35mAggressive (5.0%)[0m [2m→[0m [32m$50.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mSeattle Mariners @ Texas Rangers[0m  [2m3:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mChicago White Sox @ Arizona Diamondbacks[0m  [2m3:10 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mChicago White Sox[0m [32m2.35[0m [2m(+135)[0m   [36mArizona Diamondbacks[0m [37m1.62[0m [2m(-161)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStrong Away advantage (+1.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [32m[██████████] 10/10[0m
+  │      [2mUNDERDOG-HUNTER: The superior away roster is catching 2.12.[0m
+  │      [2mHigh +EV.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m73%[0m
+  [1mSIGNAL[0m      [33m[1m⭐ Value Play - AWAY Entry[0m
+  [1mSTAKE[0m       [35mStandard (2.5%)[0m [2m→[0m [32m$25.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mArizona Diamondbacks @ Milwaukee Brewers[0m  [2m3:10 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mAtlanta Braves @ Minnesota Twins[0m  [2m6:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mTampa Bay Rays @ New York Yankees[0m  [2m6:35 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mTampa Bay Rays[0m [32m2.20[0m [2m(+120)[0m   [36mNew York Yankees[0m [37m1.70[0m [2m(-143)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[████████░░] 8/10[0m
+  │      [2mDOG-LEAN: Balanced matchup. Value lean on away at 2.2.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m65%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mNew York Mets @ Miami Marlins[0m  [2m7:10 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mKansas City Royals @ Los Angeles Dodgers[0m  [2m8:05 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mKansas City Royals[0m [32m2.25[0m [2m(+125)[0m   [36mLos Angeles Dodgers[0m [37m1.65[0m [2m(-154)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[███████░░░] 7/10[0m
+  │      [2mStrong Home advantage (+2.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$10.00[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mChicago Cubs @ San Diego Padres[0m  [2m8:10 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNeutral market framing.[0m
+  └─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mFlorida Panthers @ Detroit Red Wings[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mFlorida Panthers[0m [32m2.24[0m [2m(+124)[0m   [36mDetroit Red Wings[0m [37m1.68[0m [2m(-148)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mD. Tarasov          [0m [2mSV%: 0.902  GAA: 2.81[0m
+  └─ [36mJ. Gibson           [0m [2mSV%: 0.906  GAA: 2.57[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[███████░░░] 7/10[0m
+  │      [2mStrong home offense (3.0) vs struggling defense. [!] Weak[0m
+  │      [2mDefense: Florida Panthers. Home Goalie: J. Gibson (SV%:[0m
+  │      [2m0.906). Away Goalie: D. Tarasov (SV%: 0.902).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mColorado Avalanche @ Dallas Stars[0m  [2m8:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mColorado Avalanche[0m [37m1.82[0m [2m(-122)[0m   [36mDallas Stars[0m [32m2.02[0m [2m(+102)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mS. Wedgewood        [0m [2mSV%: 0.914  GAA: 2.25[0m
+  └─ [36mC. DeSmith          [0m [2mSV%: 0.914  GAA: 2.25[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStrong away offense (3.8) vs struggling defense. Home[0m
+  │      [2mGoalie: C. DeSmith (SV%: 0.914). Away Goalie: S. Wedgewood[0m
+  │      [2m(SV%: 0.914).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[████████████░░░░░░░░][0m [1m60%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mVancouver Canucks @ Chicago Blackhawks[0m  [2m8:30 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mVancouver Canucks[0m [32m2.30[0m [2m(+130)[0m   [36mChicago Blackhawks[0m [37m1.65[0m [2m(-155)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mT. Demko            [0m [2mSV%: 0.897  GAA: 2.90[0m
+  └─ [36mA. Soderblom        [0m [2mSV%: 0.879  GAA: 3.67[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[███████░░░] 7/10[0m
+  │      [2mStrong home offense (2.7) vs struggling defense. [!] Weak[0m
+  │      [2mDefense: Vancouver Canucks. Home Goalie: A. Soderblom (SV%:[0m
+  │      [2m0.879). Away Goalie: T. Demko (SV%: 0.897).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mCarolina Hurricanes @ Edmonton Oilers[0m  [2m9:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mCarolina Hurricanes[0m [37m1.87[0m [2m(-115)[0m   [36mEdmonton Oilers[0m [37m1.95[0m [2m(-105)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mP. Kochetkov        [0m [2mSV%: 0.899  GAA: 2.33[0m
+  └─ [36mC. Ingram           [0m [2mSV%: 0.890  GAA: 2.83[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [32m[█████████░] 9/10[0m
+  │      [2mStrong away offense (3.5) vs struggling defense. [!] Weak[0m
+  │      [2mDefense: Edmonton Oilers. Home Goalie: C. Ingram (SV%:[0m
+  │      [2m0.890). Away Goalie: P. Kochetkov (SV%: 0.899).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [32m[█████████░] 9/10[0m
+         [2mBODHI-SIGNAL: Technically superior away side is undervalued[0m
+         [2mat 1.8695652173913042.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m83%[0m
+  [1mSIGNAL[0m      [32m[1m✅ HIGH CONVICTION - Bet AWAY (+EV)[0m
+  [1mSTAKE[0m       [35mAggressive (5.0%)[0m [2m→[0m [32m$22.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mMontréal Canadiens @ Anaheim Ducks[0m  [2m9:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mMontréal Canadiens[0m [37m1.91[0m [2m(-110)[0m   [36mAnaheim Ducks[0m [37m1.91[0m [2m(-110)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mJ. Dobes            [0m [2mSV%: 0.889  GAA: 3.03[0m
+  └─ [36mL. Dostal           [0m [2mSV%: 0.894  GAA: 3.02[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mOffensive units are balanced. [!] Weak Defense: Montréal[0m
+  │      [2mCanadiens. Home Goalie: L. Dostal (SV%: 0.894). Away Goalie:[0m
+  │      [2mJ. Dobes (SV%: 0.889).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Odds match probability.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mMinnesota Wild @ Vegas Golden Knights[0m  [2m10:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mMinnesota Wild[0m [37m1.93[0m [2m(-108)[0m   [36mVegas Golden Knights[0m [37m1.89[0m [2m(-112)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mJ. Wallstedt        [0m [2mSV%: 0.911  GAA: 2.85[0m
+  └─ [36mA. Hill             [0m [2mSV%: 0.860  GAA: 3.42[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[███████░░░] 7/10[0m
+  │      [2mStrong away offense (3.4) vs struggling defense. Home[0m
+  │      [2mGoalie: A. Hill (SV%: 0.860). Away Goalie: J. Wallstedt[0m
+  │      [2m(SV%: 0.911).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mSt. Louis Blues @ San Jose Sharks[0m  [2m10:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mSt. Louis Blues[0m [32m2.20[0m [2m(+120)[0m   [36mSan Jose Sharks[0m [37m1.70[0m [2m(-142)[0m
+
+  [1mGOALIES[0m
+  ├─ [36mJ. Binnington       [0m [2mSV%: 0.867  GAA: 3.60[0m
+  └─ [36mA. Nedeljkovic      [0m [2mSV%: 0.902  GAA: 2.83[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[███████░░░] 7/10[0m
+  │      [2mStrong home offense (3.2) vs struggling defense. [!] Weak[0m
+  │      [2mDefense: St. Louis Blues. Home Goalie: A. Nedeljkovic (SV%:[0m
+  │      [2m0.902). Away Goalie: J. Binnington (SV%: 0.867).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Edge lean detected.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mDallas Mavericks @ Boston Celtics[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mDallas Mavericks[0m [32m7.75[0m [2m(+675)[0m   [36mBoston Celtics[0m [37m1.10[0m [2m(-1050)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [32m[█████████░] 9/10[0m
+  │      [2mDominant Net Rating for home (12.2). Mismatch detected.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [36mℹ️  Informational - Watch for live entry.[0m
+  [1mSTAKE[0m       [35mCaution (1.0%)[0m [2m→[0m [32m$4.50[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mMiami Heat @ Charlotte Hornets[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mMiami Heat[0m [32m3.40[0m [2m(+240)[0m   [36mCharlotte Hornets[0m [37m1.36[0m [2m(-278)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mPortland Trail Blazers @ Houston Rockets[0m  [2m8:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mPortland Trail Blazers[0m [32m2.90[0m [2m(+190)[0m   [36mHouston Rockets[0m [37m1.43[0m [2m(-230)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mNew York Knicks @ Denver Nuggets[0m  [2m9:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mNew York Knicks[0m [37m1.89[0m [2m(-112)[0m   [36mDenver Nuggets[0m [37m1.93[0m [2m(-108)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mNew Orleans Pelicans @ Phoenix Suns[0m  [2m9:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mNew Orleans Pelicans[0m [32m2.54[0m [2m(+154)[0m   [36mPhoenix Suns[0m [37m1.54[0m [2m(-185)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mLA Clippers @ San Antonio Spurs[0m  [2m9:30 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mLA Clippers[0m [32m3.25[0m [2m(+225)[0m   [36mSan Antonio Spurs[0m [37m1.36[0m [2m(-278)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mIndiana Pacers @ Los Angeles Lakers[0m  [2m10:30 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mIndiana Pacers[0m [32m4.20[0m [2m(+320)[0m   [36mLos Angeles Lakers[0m [37m1.24[0m [2m(-410)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are competitive.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mNeutral market framing.[0m
+
+  [1mCONFIDENCE[0m  [2m[███████████░░░░░░░░░][0m [1m57%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Model found no edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mBrandon Moreno vs Lone'er Kavanagh[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mBrandon Moreno[0m [37m1.57[0m [2m(-175)[0m   [36mLone'er Kavanagh[0m [32m2.50[0m [2m(+150)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance) [0m [32m[█████████░] 9/10[0m
+  │      [2mStrike volume differential favors Lone'er Kavanagh (+1.12[0m
+  │      [2mindex).[0m
+  ├─ [1mSeasonal (Environment)  [0m [33m[███████░░░] 7/10[0m
+  │      [2mAltitude baseline: Both fighters show disciplined cardio[0m
+  │      [2mprofiles.[0m
+  └─ [1mTechnical (Bookies)     [0m [32m[██████████] 10/10[0m
+         [2mBODHI-MMA-SIGNAL: Technically superior Lone'er Kavanagh is[0m
+         [2mundervalued underdog at 2.5.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m87%[0m
+  [1mSIGNAL[0m      [32m[1m✅ BODHI LOCK - Bet LONE'ER KAVANAGH[0m
+  [1mSTAKE[0m       [35mStandard (2.5%)[0m [2m→[0m [32m$11.25[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mMarlon Vera vs David Martinez[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mODDS[0m   [36mMarlon Vera[0m [32m2.70[0m [2m(+170)[0m   [36mDavid Martinez[0m [37m1.50[0m [2m(-200)[0m
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance) [0m [32m[██████████] 10/10[0m
+  │      [2mStrike volume differential favors David Martinez (+2.92[0m
+  │      [2mindex).[0m
+  ├─ [1mSeasonal (Environment)  [0m [2m[████░░░░░░] 4/10[0m
+  │      [2mAltitude warning: Marlon Vera absorbs high volume[0m
+  │      [2m(5.37/min). High risk of gassing in Mexico City.[0m
+  └─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+         [2mFair market framing.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m63%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - High variance combat market.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m[33m📊 VALUE PLAYS SUMMARY[0m  [2m(sorted by confidence, ≥60%)[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+  [1m[2m#  Sport  Matchup                              Bet        Odds    Conf   Stake[0m
+  [2m──────────────────────────────────────────────────────────────────────────────[0m
+   1  MMA    Brandon Moreno @ Lone'er Kavanagh    Brandon Mo 2.50    [32m87%   [0m [32m$11.25[0m
+   2  MLB    Cincinnati Reds @ San Francisco Gian Cincinnati 1.95    [32m83%   [0m [32m$50.00[0m
+   3  NHL    Carolina Hurricanes @ Edmonton Oiler Carolina H 1.87    [32m83%   [0m [32m$22.50[0m
+   4  MLB    Chicago White Sox @ Arizona Diamondb Chicago Wh 2.12    [33m73%   [0m [32m$25.00[0m
+   5  MLB    Boston Red Sox @ Detroit Tigers      Boston Red 2.18    [36m65%   [0m [32m$10.00[0m
+   6  MLB    Colorado Rockies @ Athletics         Athletics  2.15    [36m65%   [0m [32m$10.00[0m
+   7  MLB    Tampa Bay Rays @ New York Yankees    Tampa Bay  2.20    [36m65%   [0m [32m$10.00[0m
+

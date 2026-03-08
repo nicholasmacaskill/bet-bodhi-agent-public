@@ -3,7 +3,7 @@ import { FighterStats } from './mma-api';
 
 export class MMAPillarAnalyzer {
 
-    analyzeFight(fight: any, fighterStats: Record<string, FighterStats>, oddsList: any[]): BodhiAnalysis {
+    analyzeFight(fight: any, fighterStats: Record<string, FighterStats>, polyMarket?: any): BodhiAnalysis {
         const pillars: PillarScore[] = [];
 
         const f1 = fighterStats[fight.fighter1];
@@ -27,58 +27,99 @@ export class MMAPillarAnalyzer {
         pillars.push(techCombat);
 
         // 2. Altitude/Environment (Mexico City Factor)
-        pillars.push(this.scoreAltitudeFactor(f1, f2));
+        const envScore = this.scoreAltitudeFactor(f1, f2);
+        pillars.push(envScore);
 
-        // 3. Technical (Bookies)
-        const market = oddsList.find(o =>
-            (o.home_team.includes(f1.name) && o.away_team.includes(f2.name)) ||
-            (o.home_team.includes(f2.name) && o.away_team.includes(f1.name))
-        );
+        let currentConfidence = ((techCombat.score + envScore.score) / 20) * 100;
 
-        let valueTeam: string | undefined;
-        let valueOdds: number | undefined;
-        let bookiesScore = 5;
-        let bookiesReason = "Fair market framing.";
+        let recommendedAction = "PASS - No clear edge.";
+        let valueTeam = undefined;
+        let polyConditionId = undefined;
+        let polySharePrice = undefined;
+        let polyEV = undefined;
 
-        if (market && market.bookmakers && market.bookmakers.length > 0) {
-            const h2h = market.bookmakers[0].markets.find((m: any) => m.key === 'h2h');
-            if (h2h) {
-                const f1Odds = h2h.outcomes.find((o: any) => o.name.includes(f1.name))?.price || 1.91;
-                const f2Odds = h2h.outcomes.find((o: any) => o.name.includes(f2.name))?.price || 1.91;
+        let marketScore: PillarScore = {
+            pillar: "Market Sentiment (Web3)",
+            score: 5,
+            reason: "No Polymarket match found. Neutral default.",
+            side: "neutral"
+        };
 
-                const modelFavored = techCombat.side === 'f1' ? f1.name : f2.name;
-                const modelOdds = techCombat.side === 'f1' ? f1Odds : f2Odds;
+        // 3. Polymarket EV Calculation
+        if (polyMarket && polyMarket.outcomes) {
+            polyConditionId = polyMarket.conditionId;
+            let f1Price = 0;
+            let f2Price = 0;
 
-                // High confidence technical mismatch on an underdog
-                if (techCombat.score >= 8 && modelOdds >= 2.10) {
-                    bookiesScore = 10;
-                    bookiesReason = `BODHI-MMA-SIGNAL: Technically superior ${modelFavored} is undervalued underdog at ${modelOdds}.`;
-                    valueTeam = modelFavored;
-                    valueOdds = modelOdds;
+            for (let i = 0; i < polyMarket.outcomes.length; i++) {
+                const outcomeName = polyMarket.outcomes[i].toLowerCase();
+                const price = parseFloat(polyMarket.outcomePrices[i]);
+
+                const f1Parts = f1.name.toLowerCase().split(' ');
+                const f2Parts = f2.name.toLowerCase().split(' ');
+
+                if (f1Parts.some((p: string) => outcomeName.includes(p)) || outcomeName.includes(f1.name.toLowerCase())) {
+                    f1Price = price;
+                } else if (f2Parts.some((p: string) => outcomeName.includes(p)) || outcomeName.includes(f2.name.toLowerCase())) {
+                    f2Price = price;
+                }
+            }
+
+            const techFavored = techCombat.side; // 'away' or 'home'
+
+            if (techFavored !== 'neutral') {
+                const bodhiProb = currentConfidence / 100;
+                let marketPrice = techFavored === 'away' ? f1Price : f2Price;
+                valueTeam = techFavored === 'away' ? f1.name : f2.name;
+
+                if (marketPrice > 0) {
+                    polyEV = bodhiProb - marketPrice;
+                    polySharePrice = marketPrice;
+
+                    if (polyEV > 0.10) {
+                        marketScore.score = 9;
+                        marketScore.reason = `Massive Web3 Arb. Bodhi: ${(bodhiProb * 100).toFixed(1)}% vs Crowd: ${(marketPrice * 100).toFixed(1)}%. +${(polyEV * 100).toFixed(1)}% EV.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} Shares on Polymarket (+${(polyEV * 100).toFixed(1)}% EV).`;
+                    } else if (polyEV > 0.03) {
+                        marketScore.score = 7;
+                        marketScore.reason = `Small Web3 edge (+${(polyEV * 100).toFixed(1)}% EV) on ${valueTeam}.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `LEAN - Small EV edge on ${valueTeam}. Buy shares.`;
+                    } else if (polyEV < -0.10) {
+                        marketScore.score = 2;
+                        marketScore.reason = `Fading Crowd. Bodhi lean strongly opposed by Polymarket. Negative EV (${(polyEV * 100).toFixed(1)}%).`;
+                        marketScore.side = techFavored === 'away' ? 'home' : 'away';
+                        recommendedAction = `PASS - Negative EV (${(polyEV * 100).toFixed(1)}%). Crowd hates this bet.`;
+                        valueTeam = undefined;
+                    } else {
+                        marketScore.score = 5;
+                        marketScore.reason = "Bodhi probability accurately mirrors Polymarket share price. No edge.";
+                        recommendedAction = "PASS - Efficient Market. No EV edge.";
+                        valueTeam = undefined;
+                    }
                 }
             }
         }
 
-        pillars.push({
-            pillar: "Technical (Bookies)",
-            score: bookiesScore,
-            reason: bookiesReason
-        });
+        pillars.push(marketScore);
 
         const totalScore = pillars.reduce((sum, p) => sum + p.score, 0);
-        const confidence = (totalScore / (pillars.length * 10)) * 100;
+        const overallConfidence = (totalScore / 30) * 100; // 30 points max
 
-        const sizing = this.getMMAComplexitySizing(confidence);
+        const sizing = this.getMMAComplexitySizing(overallConfidence);
 
         return {
             gamePk: Math.floor(Math.random() * 100000),
             homeTeam: f2.name,
             awayTeam: f1.name,
-            overallConfidence: Math.round(confidence),
+            overallConfidence: Math.round(overallConfidence),
             pillars,
             valueTeam,
-            valueOdds,
-            recommendedAction: this.getMMARecommendation(confidence, valueTeam),
+            polyConditionId,
+            polySharePrice,
+            polyEV,
+            recommendedAction,
             recommendedSize: sizing.label,
             suggestedStake: sizing.amount
         };
@@ -96,13 +137,13 @@ export class MMAPillarAnalyzer {
         const diff = f1Diff - f2Diff;
         const grappleDiff = f1Grapple - f2Grapple;
 
-        const favored = diff + (grappleDiff * 0.5) > 0 ? 'f1' : 'f2';
+        const favored = diff + (grappleDiff * 0.5) > 0 ? 'away' : 'home';
         const absDiff = Math.abs(diff + (grappleDiff * 0.5));
 
         return {
             pillar: "Technical (Performance)",
             score: Math.min(5 + Math.floor(absDiff * 4), 10),
-            reason: `Strike volume differential favors ${favored === 'f1' ? f1.name : f2.name} (+${absDiff.toFixed(2)} index).`,
+            reason: `Strike volume differential favors ${favored === 'away' ? f1.name : f2.name} (+${absDiff.toFixed(2)} index).`,
             side: favored
         };
     }

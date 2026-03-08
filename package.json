@@ -12,21 +12,27 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.91.0",
+    "@types/node-cron": "^3.0.11",
     "dotenv": "^17.3.1",
     "framer-motion": "^12.28.1",
     "lucide-react": "^0.562.0",
     "mlb-stats-api": "^2.0.0",
     "next": "16.1.1",
+    "node-cron": "^4.2.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "resend": "^6.9.3"
   },
   "devDependencies": {
+    "@builder.io/sdk": "^6.2.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cheerio": "^1.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"

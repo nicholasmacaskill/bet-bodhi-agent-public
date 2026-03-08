@@ -1,0 +1,311 @@
+
+[1m[36m🔍 BODHI MLB SPRING TRAINING SCANNER — 2026-03-08[0m
+
+Analyzing 17 MLB games...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mHouston Astros @ Washington Nationals[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mBoston Red Sox @ Pittsburgh Pirates[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mToronto Blue Jays @ Baltimore Orioles[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mPhiladelphia Phillies @ Minnesota Twins[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mAtlanta Braves @ Tampa Bay Rays[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mDetroit Tigers @ Toronto Blue Jays[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [32m[██████████] 10/10[0m
+  │      [2mStrong Home advantage (+15.0 strength).[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[32m███████████████[2m░░░░░[36m][0m [1m75%[0m
+  [1mSIGNAL[0m      [32mPRESEASON CONVICTION - Bet Toronto Blue Jays (Implied Edge: +35.0%).[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mSt. Louis Cardinals @ Miami Marlins[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mNew York Yankees @ New York Mets[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mArizona Diamondbacks @ Cincinnati Reds[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mLos Angeles Angels @ Athletics[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mLos Angeles Dodgers @ Athletics[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mSan Francisco Giants @ Chicago Cubs[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mLos Angeles Angels @ Texas Rangers[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mKansas City Royals @ Chicago White Sox[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mCleveland Guardians @ Colorado Rockies[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mCincinnati Reds @ San Diego Padres[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚾ [1mSeattle Mariners @ Milwaukee Brewers[0m
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Sport)       [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mLineups are competitively balanced.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mMarket Sentiment (Web3) [0m [33m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  └─ [1mPsychological (Players) [0m [33m[██████░░░░] 6/10[0m
+         [2mEarly spring motivation is generally neutral unless roster[0m
+         [2mbattles are flagged.[0m
+
+  [1mCONFIDENCE[0m  [36m[[33m███████████[2m░░░░░░░░░[36m][0m [1m57%[0m
+  [1mSIGNAL[0m      [2mPASS - No clear edge.[0m
+

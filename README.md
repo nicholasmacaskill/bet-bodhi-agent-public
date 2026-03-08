@@ -1,8 +1,8 @@
-# Bet Bodhi — Autonomous AI Betting Agent
+# Bet Bodhi — Web3 EV Arbitrage Engine
 
-> *The transition from a passive dashboard to a proactive Guardian. From gambling to mastery through Agentic Enlightenment.*
+> *The transition from a passive dashboard to a proactive Guardian. From traditional sportsbooks to Web3 Arbitrage.*
 
-Bet Bodhi is an autonomous AI agent designed for sports betting self-mastery. Unlike traditional SaaS platforms, Bet Bodhi doesn't wait for you; it scans the world, monitors your psychological state, and intervenes in real-time to prevent biased decision-making.
+Bet Bodhi is an autonomous AI agent designed for high-value Polymarket EV discovery. Unlike traditional SaaS platforms, Bet Bodhi drops reliance on legacy bookmakers, continuously scanning the Web3 Gamma API and returning Arbitrage opportunities directly against Bodhi's internal sports probabilities.
 
 ---
 
@@ -11,6 +11,7 @@ Bet Bodhi is an autonomous AI agent designed for sports betting self-mastery. Un
 - [🤖 Agent Capabilities](#-agent-capabilities)
 - [⚙️ The Bodhi Toolbox](#️-the-bodhi-toolbox)
 - [🧠 Psychometric Guardian](#-psychometric-guardian)
+- [✨ Bodhi Prism v3.0 (New!)](#-bodhi-prism-v30-new)
 - [🏛️ The Seven Pillars](#️-the-seven-pillars)
 - [🚀 Getting Started](#-getting-started)
 - [📁 Project Structure](#-project-structure)
@@ -20,19 +21,19 @@ Bet Bodhi is an autonomous AI agent designed for sports betting self-mastery. Un
 
 ---
 
-## 🆕 The Agentic Pivot
+## 🆕 The Polymarket Pivot
 
-In March 2026, Bet Bodhi pivoted from a static SaaS tool to a **Proactive Agent Architecture**. 
+In March 2026, Bet Bodhi pivoted heavily into **Web3 Expected Value (EV) Arbitrage**.
 
-**The SaaS Model (Old):** User logs in, looks at a chart, and wonders why they lost money.
-**The Agent Model (New):** Bodhi "awakens" every morning, refracts the slate through its Prism, monitors for "chase_win" or "pre-game-rush" behaviors, and intervenes *before* you place a high-risk bet.
+**The Bookmaker Model (Old):** Bodhi analyzed lines from DraftKings and FanDuel, fighting massive vig and sharp money.
+**The Polymarket Model (New):** Bodhi calculates internal machine-learned confidence scores and explicitly compares them to Web3 crowd probabilities (share prices) on Polymarket. Any delta > 3% is flagged as +EV Arbitrage.
 
 ---
 
-## 🤖 Agent Capabilities
+## 🤖 Engine Capabilities
 
-### 🌅 Morning Awakening
-The agent runs at sunrise to scan MLB, NHL, NBA, and MMA markets. It cross-refracts +EV opportunities with your current bankroll and psychological baseline through its technical Prism.
+### 🌅 Polymarket Gamma Scan
+The engine runs a massive search across Polymarket's Gamma API for daily MLB, NHL, NBA, and MMA markets. It cross-refracts Web3 share pricing against Bodhi's internal Pillars to find mispriced opportunities.
 
 ### 🛡️ Guardian Interventions
 The agent monitors your timing. If it detects a "Pre-Game Rush" (betting < 30 mins before kickoff), it fires an intervention challenge to ensure you aren't acting on impulse.
@@ -48,10 +49,21 @@ The agent's clarity layer. A unified medium for refracting sports data and your 
 
 | Prism Function | Capability |
 | :--- | :--- |
-| **`scanMLB()` / `scanNHL()`** | Refracts market data through Pillar Analyzers to find mispriced underdogs. |
-| **`recordBet()`** | Logs bets with automatic psychometric timing. |
-| **`getUserState()`** | Provides clarity on bankroll and peak watermarks. |
-| **`analyzeBiases()`** | Shines a light on recent history for complacency or loss-chasing. |
+| **`daily-scanner`** | Master orchestration script. Scrapes all 4 major sports and directly calculates Web3 Arbitrage. |
+| **`PolymarketApi`** | High-throughput Gamma API scraper isolating daily games by substring heuristics. |
+| **`PillarAnalyzers`** | Mathematical scoring layers that calculate EV = (Bodhi Prob%) - (Polymarket Share%). |
+
+---
+
+## ✨ Bodhi Prism v3.0 (Polymarket Arbitrage)
+
+In March 2026, the Prism was upgraded to v3.0, introducing dynamic EV capabilities:
+
+### 1. Web3 Arbitrage Architecture
+Bodhi no longer relies on static vig-adjusted odds. It directly compares its analytical output to Polymarket tokens, identifying when the "crowd" is wildly mispricing an elite offense or a weak pitcher.
+
+### 2. High Conviction Edge Detection
+When the Polymarket EV (`Bodhi % - Poly %`) exceeds `10%`, the scanner automatically outputs a `BODHI RADAR: MASSIVE WEB3 ARBITRAGE SIGNAL`.
 
 ---
 

@@ -21,6 +21,7 @@ export interface OddsData {
             outcomes: {
                 name: string;
                 price: number;
+                point?: number;
             }[];
         }[];
     }[];
@@ -78,26 +79,44 @@ export class OddsApi {
                 const espnOdds = await this.espn.getOdds(espnSport);
                 if (espnOdds && espnOdds.length > 0) {
                     const mapped = espnOdds
-                        .filter(o => o.moneyline.home !== undefined && o.moneyline.away !== undefined)
-                        .map(o => ({
-                            id: `espn_${o.homeTeam}_${Date.now()}`,
-                            sport_key: sportKey,
-                            commence_time: new Date().toISOString(),
-                            home_team: o.homeTeam,
-                            away_team: o.awayTeam,
-                            bookmakers: [{
-                                key: "espn_bet",
-                                title: "ESPN Bet",
-                                last_update: new Date().toISOString(),
-                                markets: [{
+                        .map(o => {
+                            const markets: any[] = [];
+
+                            if (o.moneyline.home !== undefined && o.moneyline.away !== undefined) {
+                                markets.push({
                                     key: "h2h",
                                     outcomes: [
                                         { name: o.homeTeam, price: this.americanToDecimal(o.moneyline.home!) },
                                         { name: o.awayTeam, price: this.americanToDecimal(o.moneyline.away!) }
                                     ]
+                                });
+                            }
+
+                            if (o.spread.home && o.spread.away) {
+                                markets.push({
+                                    key: "spreads",
+                                    outcomes: [
+                                        { name: o.homeTeam, price: this.americanToDecimal(o.spread.home.odds), point: o.spread.home.line },
+                                        { name: o.awayTeam, price: this.americanToDecimal(o.spread.away.odds), point: o.spread.away.line }
+                                    ]
+                                });
+                            }
+
+                            return {
+                                id: `espn_${o.homeTeam}_${Date.now()}`,
+                                sport_key: sportKey,
+                                commence_time: new Date().toISOString(),
+                                home_team: o.homeTeam,
+                                away_team: o.awayTeam,
+                                bookmakers: [{
+                                    key: "espn_bet",
+                                    title: "ESPN Bet",
+                                    last_update: new Date().toISOString(),
+                                    markets
                                 }]
-                            }]
-                        }));
+                            };
+                        })
+                        .filter(o => o.bookmakers[0].markets.length > 0);
                     if (mapped.length > 0) return mapped;
                 }
             } catch (e) {
@@ -302,6 +321,28 @@ export class OddsApi {
                             { name: "Kansas City Royals", price: 1.74 }, { name: "Milwaukee Brewers", price: 2.15 }
                         ]
                     }]
+                }]
+            },
+            {
+                id: "mock_march7_1",
+                sport_key: "baseball_mlb",
+                commence_time: "2026-03-07T23:05:00Z",
+                home_team: "Washington Nationals",
+                away_team: "New York Yankees",
+                bookmakers: [{
+                    key: "draftkings", title: "DraftKings", last_update: "now",
+                    markets: [
+                        {
+                            key: "h2h", outcomes: [
+                                { name: "Washington Nationals", price: 1.65 }, { name: "New York Yankees", price: 2.25 }
+                            ]
+                        },
+                        {
+                            key: "spreads", outcomes: [
+                                { name: "Washington Nationals", price: 2.15, point: -1.5 }, { name: "New York Yankees", price: 1.70, point: 1.5 }
+                            ]
+                        }
+                    ]
                 }]
             }
         ];

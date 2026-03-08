@@ -2,83 +2,116 @@ import { PillarScore, BodhiAnalysis } from './pillar-analyzer';
 
 export class NBAPillarAnalyzer {
 
-    analyzeGame(game: any, teamStats: any, oddsList: any[]): BodhiAnalysis {
+    analyzeGame(game: any, teamStats: any, polyMarket?: any): BodhiAnalysis {
+        const homeTeam = game.homeTeam;
+        const awayTeam = game.awayTeam;
         const pillars: PillarScore[] = [];
 
         // 1. Technical Sport (Efficiency Matching)
-        const homeS = teamStats[game.homeTeam] || { offenseRating: 114, defenseRating: 114, netRating: 0 };
-        const awayS = teamStats[game.awayTeam] || { offenseRating: 114, defenseRating: 114, netRating: 0 };
+        const homeS = teamStats[homeTeam] || { offenseRating: 114, defenseRating: 114, netRating: 0 };
+        const awayS = teamStats[awayTeam] || { offenseRating: 114, defenseRating: 114, netRating: 0 };
 
         const techSportScore = this.scoreTechnicalSport(game, homeS, awayS);
         pillars.push(techSportScore);
 
         // 2. Seasonal (Pace and Fatigue - Placeholder)
-        pillars.push({
+        const seasonalScore = {
             pillar: "Seasonal (Sport)",
             score: 7,
             reason: "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-        });
+        };
+        pillars.push(seasonalScore);
 
-        // 3. Technical (Bookies)
-        let valueTeam: string | undefined;
-        let valueOdds: number | undefined;
-        let bookiesScore = 5;
-        let bookiesReason = "Neutral market framing.";
+        let currentConfidence = ((techSportScore.score + seasonalScore.score) / 20) * 100;
 
-        const market = oddsList.find(o =>
-            o.home_team.includes(game.homeTeam) ||
-            o.away_team.includes(game.awayTeam) ||
-            game.homeTeam.includes(o.home_team) ||
-            game.awayTeam.includes(o.away_team)
-        );
+        let recommendedAction = "PASS - No clear edge.";
+        let valueTeam = undefined;
+        let polyConditionId = undefined;
+        let polySharePrice = undefined;
+        let polyEV = undefined;
 
-        if (market && market.bookmakers && market.bookmakers.length > 0) {
-            const h2h = market.bookmakers[0].markets.find((m: any) => m.key === 'h2h');
-            if (h2h) {
-                const hOdds = h2h.outcomes.find((o: any) => o.name === market.home_team)?.price || 1.91;
-                const aOdds = h2h.outcomes.find((o: any) => o.name === market.away_team)?.price || 1.91;
+        let marketScore: PillarScore = {
+            pillar: "Market Sentiment (Web3)",
+            score: 5,
+            reason: "No Polymarket match found. Neutral default.",
+            side: "neutral"
+        };
 
-                const techFavored = techSportScore.side;
-                const favoredOdds = techFavored === 'home' ? hOdds : aOdds;
+        // 3. Polymarket EV Calculation
+        if (polyMarket && polyMarket.outcomes) {
+            polyConditionId = polyMarket.conditionId;
+            let homePrice = 0;
+            let awayPrice = 0;
 
-                // SPECIAL UNDERDOG HUNTER: High offensive underdog vs bad defense
-                if (techFavored !== 'neutral' && favoredOdds >= 2.10) {
-                    bookiesScore = 10;
-                    bookiesReason = `UNDERDOG-HUNTER: High offensive ${techFavored} unit vs bottom-tier defense catching ${favoredOdds}. High +EV.`;
-                    valueTeam = techFavored;
-                    valueOdds = favoredOdds;
+            for (let i = 0; i < polyMarket.outcomes.length; i++) {
+                const outcomeName = polyMarket.outcomes[i].toLowerCase();
+                const price = parseFloat(polyMarket.outcomePrices[i]);
+
+                const homeParts = homeTeam.toLowerCase().split(' ');
+                const awayParts = awayTeam.toLowerCase().split(' ');
+
+                if (homeParts.some((p: string) => outcomeName.includes(p)) || outcomeName.includes(homeTeam.toLowerCase())) {
+                    homePrice = price;
+                } else if (awayParts.some((p: string) => outcomeName.includes(p)) || outcomeName.includes(awayTeam.toLowerCase())) {
+                    awayPrice = price;
                 }
-                // Standard value
-                else if (techSportScore.score >= 8 && favoredOdds >= 1.70) {
-                    bookiesScore = 9;
-                    bookiesReason = `BODHI-SIGNAL: Technically superior ${techFavored} side is undervalued at ${favoredOdds}.`;
-                    valueTeam = techFavored;
-                    valueOdds = favoredOdds;
+            }
+
+            const techFavored = techSportScore.side;
+
+            if (techFavored !== 'neutral') {
+                const bodhiProb = currentConfidence / 100;
+                let marketPrice = techFavored === 'home' ? homePrice : awayPrice;
+                valueTeam = techFavored === 'home' ? homeTeam : awayTeam;
+
+                if (marketPrice > 0) {
+                    polyEV = bodhiProb - marketPrice;
+                    polySharePrice = marketPrice;
+
+                    if (polyEV > 0.10) {
+                        marketScore.score = 9;
+                        marketScore.reason = `Massive Web3 Arb. Bodhi: ${(bodhiProb * 100).toFixed(1)}% vs Crowd: ${(marketPrice * 100).toFixed(1)}%. +${(polyEV * 100).toFixed(1)}% EV.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} Shares on Polymarket (+${(polyEV * 100).toFixed(1)}% EV).`;
+                    } else if (polyEV > 0.03) {
+                        marketScore.score = 7;
+                        marketScore.reason = `Small Web3 edge (+${(polyEV * 100).toFixed(1)}% EV) on ${valueTeam}.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `LEAN - Small EV edge on ${valueTeam}. Buy shares.`;
+                    } else if (polyEV < -0.10) {
+                        marketScore.score = 2;
+                        marketScore.reason = `Fading Crowd. Bodhi lean strongly opposed by Polymarket. Negative EV (${(polyEV * 100).toFixed(1)}%).`;
+                        marketScore.side = techFavored === 'home' ? 'away' : 'home';
+                        recommendedAction = `PASS - Negative EV (${(polyEV * 100).toFixed(1)}%). Crowd hates this bet.`;
+                        valueTeam = undefined;
+                    } else {
+                        marketScore.score = 5;
+                        marketScore.reason = "Bodhi probability accurately mirrors Polymarket share price. No edge.";
+                        recommendedAction = "PASS - Efficient Market. No EV edge.";
+                        valueTeam = undefined;
+                    }
                 }
             }
         }
 
-        pillars.push({
-            pillar: "Technical (Bookies)",
-            score: bookiesScore,
-            reason: bookiesReason
-        });
+        pillars.push(marketScore);
 
         const totalScore = pillars.reduce((sum, p) => sum + p.score, 0);
-        const overallConfidence = (totalScore / (pillars.length * 10)) * 100;
+        const overallConfidence = (totalScore / 30) * 100; // 30 points max
 
-        // Custom Sizing for NBA (High variance, caution on spreads)
         const sizing = this.getNBAComplexitySizing(overallConfidence, 450);
 
         return {
             gamePk: game.id,
-            homeTeam: game.homeTeam,
-            awayTeam: game.awayTeam,
+            homeTeam,
+            awayTeam,
             overallConfidence: Math.round(overallConfidence),
             pillars,
             valueTeam,
-            valueOdds,
-            recommendedAction: this.getRecommendation(overallConfidence, valueTeam),
+            polyConditionId,
+            polySharePrice,
+            polyEV,
+            recommendedAction,
             recommendedSize: sizing.label,
             suggestedStake: sizing.amount
         };

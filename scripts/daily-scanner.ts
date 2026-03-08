@@ -17,7 +17,7 @@ import { MLBApi } from '../src/lib/mlb-api';
 import { NHLApi } from '../src/lib/nhl-api';
 import { NBAApi } from '../src/lib/nba-api';
 import { MMAApi } from '../src/lib/mma-api';
-import { OddsApi } from '../src/lib/odds-api';
+import { PolymarketApi } from '../src/lib/polymarket-api';
 import { PillarAnalyzer, BodhiAnalysis } from '../src/lib/pillar-analyzer';
 import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
 import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
@@ -132,8 +132,9 @@ interface ScanResult {
     sport: string;
     matchup: string;
     analysis: BodhiAnalysis;
-    homeOdds?: number;
-    awayOdds?: number;
+    polyConditionId?: string;
+    polySharePrice?: number;
+    polyEV?: number;
     startTime?: string;
     goalieStats?: {
         home?: { name: string; svPct: number; gaa: number };
@@ -142,16 +143,33 @@ interface ScanResult {
 }
 
 function renderGame(result: ScanResult): void {
-    const { sport, matchup, analysis, homeOdds, awayOdds, startTime } = result;
+    const { sport, matchup, analysis, startTime } = result;
     const time = startTime ? formatTime(startTime) : '';
 
     console.log(sectionHeader(sport, matchup, time));
 
-    // Odds row
-    if (homeOdds && awayOdds) {
-        const homeLabel = `${analysis.homeTeam}`;
-        const awayLabel = `${analysis.awayTeam}`;
-        console.log(`\n  ${BOLD}ODDS${RESET}   ${CYAN}${awayLabel}${RESET} ${oddsDisplay(awayOdds)}   ${CYAN}${homeLabel}${RESET} ${oddsDisplay(homeOdds)}`);
+    // Matchup Info
+    console.log(`\n  ${BOLD}MATCHUP INFO${RESET}`);
+
+    // Pitchers (if MLB)
+    if (sport === 'MLB') {
+        const hPitch = analysis.homePitcher || "TBD / Bullpen";
+        const aPitch = analysis.awayPitcher || "TBD / Bullpen";
+        console.log(`  ${CYAN}Pitchers:${RESET} ${aPitch} (Away) vs. ${hPitch} (Home)`);
+    }
+
+    // Pricing
+    if (analysis.polyConditionId) {
+        const aPrice = analysis.awayOdds ? `$${analysis.awayOdds.toFixed(2)}` : "N/A";
+        const hPrice = analysis.homeOdds ? `$${analysis.homeOdds.toFixed(2)}` : "N/A";
+        console.log(`  ${CYAN}Polymarket:${RESET} ${analysis.awayTeam} [${aPrice}] | ${analysis.homeTeam} [${hPrice}]`);
+        const actionStr = analysis.recommendedAction.includes("Buy") ? `${GREEN}${analysis.recommendedAction}${RESET}` : `${DIM}${analysis.recommendedAction}${RESET}`;
+        console.log(`  ${CYAN}Condition ID:${RESET} ${DIM}${analysis.polyConditionId}${RESET}`);
+        console.log(`  ${CYAN}Bodhi Action:${RESET} ${actionStr}`);
+    } else if (sport === 'MLB') {
+        console.log(`  ${CYAN}Polymarket:${RESET} ${DIM}Preseason Mode (API liquidity zero - Assumed 50¢/50¢ baseline)${RESET}`);
+    } else {
+        console.log(`  ${CYAN}Polymarket:${RESET} ${DIM}No active condition found.${RESET}`);
     }
 
     // Goalie Matchup (NHL specific)
@@ -211,34 +229,34 @@ function renderGame(result: ScanResult): void {
 
 function renderSummary(results: ScanResult[]): void {
     const valuePlays = results
-        .filter(r => r.analysis.valueTeam && r.analysis.overallConfidence >= 60)
+        .filter(r => r.analysis.valueTeam && r.analysis.polyEV && r.analysis.polyEV > 0.03) // Lean or Conviction Arbitrage
         .sort((a, b) => b.analysis.overallConfidence - a.analysis.overallConfidence);
 
     console.log(`\n${divider('━')}`);
-    console.log(`${BOLD}${YELLOW}📊 VALUE PLAYS SUMMARY${RESET}  ${DIM}(sorted by confidence, ≥60%)${RESET}`);
+    console.log(`${BOLD}${YELLOW}📊 WEB3 ARBITRAGE SUMMARY${RESET}  ${DIM}(sorted by Bodhi confidence)${RESET}`);
     console.log(divider('━'));
 
     if (valuePlays.length === 0) {
-        console.log(`  ${DIM}No value plays detected across today's slate.${RESET}\n`);
+        console.log(`  ${DIM}No Polymarket value plays detected across today's slate.${RESET}\n`);
         return;
     }
 
     // Table header
     const col = (s: string, w: number) => s.slice(0, w).padEnd(w);
-    console.log(`  ${BOLD}${DIM}#  Sport  Matchup                              Bet        Odds    Conf   Stake${RESET}`);
-    console.log(`  ${DIM}${'─'.repeat(78)}${RESET}`);
+    console.log(`  ${BOLD}${DIM}#  Sport  Matchup                              Target             Cost   EV      Stake${RESET}`);
+    console.log(`  ${DIM}${'─'.repeat(85)}${RESET}`);
 
     valuePlays.forEach((r, i) => {
         const { analysis, sport } = r;
         const matchup = `${analysis.awayTeam} @ ${analysis.homeTeam}`;
-        const betSide = analysis.valueTeam === 'home' ? analysis.homeTeam : analysis.awayTeam;
-        const odds = analysis.valueOdds ? analysis.valueOdds.toFixed(2) : '—';
-        const conf = `${analysis.overallConfidence}%`;
+        const betSide = `${analysis.valueTeam?.split(' ').pop()?.toUpperCase()}`;
+        const odds = analysis.polySharePrice ? `$${analysis.polySharePrice.toFixed(2)}` : '—';
+        const evStr = analysis.polyEV ? `+${(analysis.polyEV * 100).toFixed(1)}%` : '—';
         const stake = analysis.suggestedStake > 0 ? `$${analysis.suggestedStake.toFixed(2)}` : '—';
         const confColor = analysis.overallConfidence >= 80 ? GREEN : analysis.overallConfidence >= 70 ? YELLOW : CYAN;
 
         console.log(
-            `  ${String(i + 1).padStart(2)}  ${col(sport, 5)}  ${col(matchup, 36)} ${col(betSide, 10)} ${col(odds, 7)} ${confColor}${conf.padEnd(6)}${RESET} ${GREEN}${stake}${RESET}`
+            `  ${String(i + 1).padStart(2)}  ${col(sport, 5)}  ${col(matchup, 36)} ${col(betSide, 18)} ${col(odds, 6)} ${confColor}${col(evStr, 7)}${RESET} ${GREEN}${stake}${RESET}`
         );
     });
 
@@ -252,7 +270,7 @@ async function runScan(date: string): Promise<void> {
     const nhlApi = new NHLApi();
     const nbaApi = new NBAApi();
     const mmaApi = new MMAApi();
-    const oddsApi = new OddsApi();
+    const polySvc = new PolymarketApi();
 
     const mlbAnalyzer = new PillarAnalyzer();
     const nhlAnalyzer = new NHLPillarAnalyzer();
@@ -268,40 +286,42 @@ async function runScan(date: string): Promise<void> {
 
     const allResults: ScanResult[] = [];
 
+    // ── Pre-Fetch Global Web3 Polymarket Conditions ──────────────────────────
+    console.log(`  ${CYAN}⟳${RESET} Fetching Global Web3 Sports Markets from Polymarket Gamma API...`);
+    const polyMarkets = await polySvc.getActiveSportsMarkets("vs.");
+    console.log(`  ${GREEN}✓${RESET} Synced ${polyMarkets.length} active conditions\n`);
+
     // ── MLB ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching MLB games...`);
-        const [mlbGames, mlbOdds] = await Promise.all([
-            mlbApi.getSchedule(date),
-            oddsApi.getMLBOdds()
-        ]);
+        const mlbGames = await mlbApi.getSchedule(date);
         process.stdout.write(`\r  ${GREEN}✓${RESET} MLB: ${mlbGames.length} games found\n`);
 
+        const mockPlayerStats = new Map<string, any>();
+
         for (const game of mlbGames) {
-            // Try to get detailed lineup/pitcher data
             let details: any = { probables: game.probables || {}, lineups: game.lineups || { home: [], away: [] } };
             if ((!details.lineups.home || details.lineups.home.length === 0) && game.gamePk) {
                 const fetched = await mlbApi.getGameDetails(game.gamePk);
                 if (fetched) details = fetched;
             }
 
-            const analysis = mlbAnalyzer.analyzeGame(game, details, mlbOdds);
-
-            // Extract odds for display
-            const market = mlbOdds.find(o =>
-                o.home_team.includes(game.homeTeam) || game.homeTeam.includes(o.home_team) ||
-                o.away_team.includes(game.awayTeam) || game.awayTeam.includes(o.away_team)
+            const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
+            const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
+            const condition = polyMarkets.find(m =>
+                (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
+                (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
-            const h2h = market?.bookmakers?.[0]?.markets?.find((m: any) => m.key === 'h2h');
-            const homeOdds = h2h?.outcomes?.find((o: any) => o.name === market?.home_team)?.price;
-            const awayOdds = h2h?.outcomes?.find((o: any) => o.name === market?.away_team)?.price;
+
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats);
 
             allResults.push({
                 sport: 'MLB',
                 matchup: `${game.awayTeam} @ ${game.homeTeam}`,
                 analysis,
-                homeOdds,
-                awayOdds,
+                polyConditionId: analysis.polyConditionId,
+                polySharePrice: analysis.polySharePrice,
+                polyEV: analysis.polyEV,
                 startTime: game.date
             });
         }
@@ -312,30 +332,26 @@ async function runScan(date: string): Promise<void> {
     // ── NHL ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching NHL games...`);
-        const [nhlGames, nhlStats, nhlOdds, goalieLeaders] = await Promise.all([
+        const [nhlGames, nhlStats, goalieLeaders] = await Promise.all([
             nhlApi.getSchedule(date),
             nhlApi.getTeamStats(),
-            oddsApi.getNHLOdds(),
             nhlApi.getGoalieLeaders()
         ]);
         process.stdout.write(`\r  ${GREEN}✓${RESET} NHL: ${nhlGames.length} games found\n`);
 
         for (const game of nhlGames) {
-            // Fetch detailed goalie stats for each game
             const landing = await nhlApi.getGameLanding(game.id);
             const goalieSeasonStats = landing?.matchup?.goalieSeasonStats;
 
-            const analysis = nhlAnalyzer.analyzeGame(game, nhlStats, nhlOdds, goalieLeaders, goalieSeasonStats);
-
-            const market = nhlOdds.find(o =>
-                o.home_team.includes(game.homeTeam) || game.homeTeam.includes(o.home_team) ||
-                o.away_team.includes(game.awayTeam) || game.awayTeam.includes(o.away_team)
+            const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
+            const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
+            const condition = polyMarkets.find(m =>
+                (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
+                (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
-            const h2h = market?.bookmakers?.[0]?.markets?.find((m: any) => m.key === 'h2h');
-            const homeOdds = h2h?.outcomes?.find((o: any) => o.name === market?.home_team)?.price;
-            const awayOdds = h2h?.outcomes?.find((o: any) => o.name === market?.away_team)?.price;
 
-            // Extract goalie info for display
+            const analysis = nhlAnalyzer.analyzeGame(game, nhlStats, condition, goalieLeaders, goalieSeasonStats);
+
             let resultGoalieStats: any = undefined;
             if (goalieSeasonStats?.goalies) {
                 const hG = goalieSeasonStats.goalies.find((g: any) => g.teamId === game.homeTeamId);
@@ -352,8 +368,9 @@ async function runScan(date: string): Promise<void> {
                 sport: 'NHL',
                 matchup: `${game.awayTeam} @ ${game.homeTeam}`,
                 analysis,
-                homeOdds,
-                awayOdds,
+                polyConditionId: analysis.polyConditionId,
+                polySharePrice: analysis.polySharePrice,
+                polyEV: analysis.polyEV,
                 startTime: game.startTime,
                 goalieStats: resultGoalieStats
             });
@@ -364,33 +381,31 @@ async function runScan(date: string): Promise<void> {
 
     // ── NBA ──────────────────────────────────────────────────────────────────
     try {
-        // NBA date format: YYYYMMDD
         const nbaDate = date.replace(/-/g, '');
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching NBA games...`);
-        const [nbaGames, nbaStats, nbaOdds] = await Promise.all([
+        const [nbaGames, nbaStats] = await Promise.all([
             nbaApi.getSchedule(nbaDate),
-            nbaApi.getTeamAdvancedStats(),
-            oddsApi.getNBAOdds()
+            nbaApi.getTeamAdvancedStats()
         ]);
         process.stdout.write(`\r  ${GREEN}✓${RESET} NBA: ${nbaGames.length} games found\n`);
 
         for (const game of nbaGames) {
-            const analysis = nbaAnalyzer.analyzeGame(game, nbaStats, nbaOdds);
-
-            const market = nbaOdds.find(o =>
-                o.home_team.includes(game.homeTeam) || game.homeTeam.includes(o.home_team) ||
-                o.away_team.includes(game.awayTeam) || game.awayTeam.includes(o.away_team)
+            const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
+            const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
+            const condition = polyMarkets.find(m =>
+                (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
+                (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
-            const h2h = market?.bookmakers?.[0]?.markets?.find((m: any) => m.key === 'h2h');
-            const homeOdds = h2h?.outcomes?.find((o: any) => o.name === market?.home_team)?.price;
-            const awayOdds = h2h?.outcomes?.find((o: any) => o.name === market?.away_team)?.price;
+
+            const analysis = nbaAnalyzer.analyzeGame(game, nbaStats, condition);
 
             allResults.push({
                 sport: 'NBA',
                 matchup: `${game.awayTeam} @ ${game.homeTeam}`,
                 analysis,
-                homeOdds,
-                awayOdds,
+                polyConditionId: analysis.polyConditionId,
+                polySharePrice: analysis.polySharePrice,
+                polyEV: analysis.polyEV,
                 startTime: game.startTime
             });
         }
@@ -401,32 +416,30 @@ async function runScan(date: string): Promise<void> {
     // ── MMA ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching MMA events...`);
-        const [mmaEvents, fighterStats, mmaOdds] = await Promise.all([
+        const [mmaEvents, fighterStats] = await Promise.all([
             mmaApi.getUpcomingEvents(),
-            mmaApi.getFighterStats(),
-            oddsApi.getMMAOdds()
+            mmaApi.getFighterStats()
         ]);
 
         let fightCount = 0;
         for (const event of mmaEvents) {
             for (const fight of (event.mainCard || [])) {
-                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, mmaOdds);
                 fightCount++;
 
-                const market = mmaOdds.find(o =>
-                    o.home_team.includes(fight.fighter1) || o.home_team.includes(fight.fighter2) ||
-                    o.away_team.includes(fight.fighter1) || o.away_team.includes(fight.fighter2)
+                const condition = polyMarkets.find(m =>
+                    (m.question.toLowerCase().includes(fight.fighter1.toLowerCase()) || m.description.toLowerCase().includes(fight.fighter1.toLowerCase())) &&
+                    (m.question.toLowerCase().includes(fight.fighter2.toLowerCase()) || m.description.toLowerCase().includes(fight.fighter2.toLowerCase()))
                 );
-                const h2h = market?.bookmakers?.[0]?.markets?.find((m: any) => m.key === 'h2h');
-                const f1Odds = h2h?.outcomes?.find((o: any) => o.name.includes(fight.fighter1))?.price;
-                const f2Odds = h2h?.outcomes?.find((o: any) => o.name.includes(fight.fighter2))?.price;
+
+                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, condition);
 
                 allResults.push({
                     sport: 'MMA',
                     matchup: `${fight.fighter1} vs ${fight.fighter2}`,
                     analysis,
-                    homeOdds: f2Odds,   // "home" = fighter2 in MMA analyzer
-                    awayOdds: f1Odds,   // "away" = fighter1
+                    polyConditionId: analysis.polyConditionId,
+                    polySharePrice: analysis.polySharePrice,
+                    polyEV: analysis.polyEV,
                     startTime: event.date
                 });
             }

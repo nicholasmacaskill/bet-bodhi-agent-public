@@ -21,6 +21,15 @@ export interface BodhiAnalysis {
     suggestedStake: number;  // Actual dollar amount
     valueTeam?: string;
     valueOdds?: number;
+    runLineOdds?: number;
+    runLinePoint?: number;
+    polyConditionId?: string;
+    polySharePrice?: number;
+    polyEV?: number;
+    homePitcher?: string;
+    awayPitcher?: string;
+    homeOdds?: number;
+    awayOdds?: number;
 }
 
 // Map of 2026 Elite MLB Pitchers
@@ -37,7 +46,7 @@ const ELITE_BATS = [
     "Juan Soto", "Corey Seager", "Yordan Alvarez", "Matt Olson", "Kyle Tucker",
     "Mike Trout", "Bobby Witt Jr.", "Julio Rodriguez", "Bryce Harper", "Adley Rutschman",
     "Jung Hoo Lee", "Jorge Soler", "LaMonte Wade Jr.", "Eloy Jimenez", "Connor Griffin",
-    "Jackson Chourio", "Logan O'Hoppe"
+    "Jackson Chourio", "Logan O'Hoppe", "James Wood", "Dylan Crews", "CJ Abrams"
 ];
 
 // Decision Weights - Pitching is paramount
@@ -48,107 +57,166 @@ const WEIGHT_WEAK_PITCHER = -15;
 
 export class PillarAnalyzer {
 
-    analyzeGame(game: any, details: any, oddsList: any[], hotBats: string[] = [], weakPitchers: string[] = []): BodhiAnalysis {
+    analyzeGame(
+        game: any,
+        details: any,
+        polyMarket?: any, // Replaces traditional odds array with single condition
+        hotBats: string[] = [],
+        weakPitchers: string[] = [],
+        playerStats?: Map<string, any>
+    ): BodhiAnalysis {
+        const homeTeam = game.homeTeam;
+        const awayTeam = game.awayTeam;
+
         const pillars: PillarScore[] = [];
 
-        // 1. Technical Sport (Logic: Lineup & Pitcher Disparity)
-        const techSport = this.scoreTechnicalSport(details, hotBats, weakPitchers);
+        // 1. Technical Analysis (Sport-Specific)
+        const techSport = this.scoreTechnicalSport(details, hotBats, weakPitchers, playerStats);
         pillars.push(techSport);
 
         // 2. Seasonal Sport (Logic: Ramping and Environment)
         const seasonalSport = this.scoreSeasonalSport(game);
         pillars.push(seasonalSport);
 
-        // Find relevant market odds with loose matching
-        const homeTeam = game.homeTeam.trim();
-        const awayTeam = game.awayTeam.trim();
+        // Calculate initial confidence for sizing purposes and Bodhi True Probability
+        let currentConfidence = ((techSport.score + seasonalSport.score) / 20) * 100;
 
-        const market = oddsList.find(o =>
-            (o.home_team.includes(homeTeam) || homeTeam.includes(o.home_team)) ||
-            (this.normalizeTeam(o.home_team) === this.normalizeTeam(homeTeam))
-        );
+        // Veto logic preparation
+        const homePitcher = details.homePitcher?.fullName;
+        const awayPitcher = details.awayPitcher?.fullName;
+        const isHomeElite = homePitcher && (ELITE_PITCHERS.includes(homePitcher) || hotBats.includes(homePitcher));
+        const isAwayElite = awayPitcher && (ELITE_PITCHERS.includes(awayPitcher) || hotBats.includes(awayPitcher));
 
-        if (game.homeTeam.includes("Giants")) {
-            console.log(`DEBUG GIANTS: side=${techSport.side} market=${market ? 'Found' : 'Not Found'}`);
-        }
+        // Identify weak pitchers (for veto)
+        const isHomeWeak = homePitcher && (weakPitchers.includes(homePitcher) || (playerStats?.get(homePitcher)?.xera >= 5.00));
+        const isAwayWeak = awayPitcher && (weakPitchers.includes(awayPitcher) || (playerStats?.get(awayPitcher)?.xera >= 5.00));
 
-        let valueTeam: string | undefined;
-        let valueOdds: number | undefined;
-        let bookiesScore = 5;
-        let bookiesReason = "Neutral market framing.";
+        // Setup outputs
+        let recommendedAction = "PASS - No clear edge.";
+        let valueTeam = undefined;
+        let recommendedSize = this.getSizing(currentConfidence, 1000).label;
+        let suggestedStake = this.getSizing(currentConfidence, 1000).amount;
+        let polyConditionId = undefined;
+        let polySharePrice = undefined;
+        let polyEV = undefined;
 
-        let vetoReason = "";
-        let isVetoed = false;
+        let marketScore: PillarScore = {
+            pillar: "Market Sentiment (Web3)",
+            score: 5,
+            reason: "No Polymarket match found. Neutral default.",
+            side: "neutral"
+        };
 
-        // Veto Logic: Never bet AGAINST an Elite Pitcher or ON a Weak Pitcher
-        const homePitcher = details?.probables?.home || "";
-        const awayPitcher = details?.probables?.away || "";
-        const isHomeElite = ELITE_PITCHERS.includes(homePitcher) || hotBats.includes(homePitcher); // hotBats could contain ERA leaders if inverted, but we check explicitly
-        const isAwayElite = ELITE_PITCHERS.includes(awayPitcher) || hotBats.includes(awayPitcher);
-        const isHomeWeak = weakPitchers.includes(homePitcher);
-        const isAwayWeak = weakPitchers.includes(awayPitcher);
+        // 3. Polymarket EV Calculation
+        let homePrice = 0;
+        let awayPrice = 0;
 
-        if (market && market.bookmakers && market.bookmakers.length > 0) {
-            const h2h = market.bookmakers[0].markets.find((m: any) => m.key === 'h2h');
-            if (h2h) {
-                const hOdds = h2h.outcomes.find((o: any) => o.name === market.home_team)?.price || 1.91;
-                const aOdds = h2h.outcomes.find((o: any) => o.name === market.away_team)?.price || 1.91;
+        if (polyMarket && polyMarket.outcomes) {
+            polyConditionId = polyMarket.conditionId;
 
-                const techFavored = techSport.side;
-                const favoredOdds = techFavored === 'home' ? hOdds : aOdds;
+            for (let i = 0; i < polyMarket.outcomes.length; i++) {
+                const outcomeName = polyMarket.outcomes[i].toLowerCase();
+                const price = parseFloat(polyMarket.outcomePrices[i]);
 
-                // 1. Favorite Advantage: The technically superior side is undervalued by the bookie
-                if (techSport.score >= 8 && favoredOdds >= 1.70) {
-                    bookiesScore = 10;
-                    bookiesReason = `BODHI-SIGNAL: Technically superior ${techFavored} side is undervalued at ${favoredOdds}.`;
-                    valueTeam = techFavored as string;
-                    valueOdds = favoredOdds;
+                if (homeTeam.toLowerCase().includes(outcomeName) || outcomeName.includes(homeTeam.toLowerCase().split(' ').pop())) {
+                    homePrice = price;
+                } else if (awayTeam.toLowerCase().includes(outcomeName) || outcomeName.includes(awayTeam.toLowerCase().split(' ').pop())) {
+                    awayPrice = price;
                 }
-                // 2. Underdog Hunter: The technically superior side is actually the underdog
-                else if (techFavored !== 'neutral' && favoredOdds >= 2.02) {
-                    bookiesScore = 10;
-                    bookiesReason = `UNDERDOG-HUNTER: The superior ${techFavored} roster is catching ${favoredOdds}. High +EV.`;
-                    valueTeam = techFavored as string;
-                    valueOdds = favoredOdds;
-                }
-                // 3. Balanced dog discovery
-                else if (techFavored === 'neutral' && Math.max(hOdds, aOdds) >= 2.10) {
-                    bookiesScore = 8;
-                    const dogSide = hOdds >= 2.10 ? 'home' : 'away';
-                    bookiesReason = `DOG-LEAN: Balanced matchup. Value lean on ${dogSide} at ${Math.max(hOdds, aOdds)}.`;
-                    valueTeam = dogSide;
-                    valueOdds = Math.max(hOdds, aOdds);
-                }
+            }
 
-                // Apply Strict Veto Rules based on user request ('never bet against top pitcher')
-                if (valueTeam === 'home' && isAwayElite) {
-                    isVetoed = true;
-                    vetoReason = `VETO: Algorithm identified +EV on Home, but Away has elite pitcher (${awayPitcher}). Pitching strength overrides.`;
-                } else if (valueTeam === 'away' && isHomeElite) {
-                    isVetoed = true;
-                    vetoReason = `VETO: Algorithm identified +EV on Away, but Home has elite pitcher (${homePitcher}). Pitching strength overrides.`;
-                } else if (valueTeam === 'home' && isHomeWeak) {
-                    isVetoed = true;
-                    vetoReason = `VETO: Algorithm identified +EV on Home, but Home pitcher (${homePitcher}) is flagged as weak.`;
-                } else if (valueTeam === 'away' && isAwayWeak) {
-                    isVetoed = true;
-                    vetoReason = `VETO: Algorithm identified +EV on Away, but Away pitcher (${awayPitcher}) is flagged as weak.`;
+            const techFavored = techSport.side;
+
+            if (techFavored !== 'neutral') {
+                const bodhiProb = currentConfidence / 100;
+                let marketPrice = techFavored === 'home' ? homePrice : awayPrice;
+                valueTeam = techFavored === 'home' ? homeTeam : awayTeam;
+
+                // Check Veto Rules first before assigning value
+                let isVetoed = false;
+                let vetoReason = "";
+
+                if (valueTeam === homeTeam && isAwayElite) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Home, but Away has elite pitcher (${awayPitcher}).`;
+                } else if (valueTeam === awayTeam && isHomeElite) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Away, but Home has elite pitcher (${homePitcher}).`;
+                } else if (valueTeam === homeTeam && isHomeWeak) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Home, but Home pitcher (${homePitcher}) is weak.`;
+                } else if (valueTeam === awayTeam && isAwayWeak) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Away, but Away pitcher (${awayPitcher}) is weak.`;
                 }
 
                 if (isVetoed) {
-                    bookiesScore = 2; // Tank the bookies score
-                    bookiesReason = vetoReason;
+                    marketScore.score = 2;
+                    marketScore.reason = vetoReason;
+                    recommendedAction = vetoReason;
                     valueTeam = undefined;
-                    valueOdds = undefined;
+                } else if (marketPrice > 0) {
+                    // +EV Calculation
+                    polyEV = bodhiProb - marketPrice;
+                    polySharePrice = marketPrice;
+
+                    if (polyEV > 0.10) {
+                        marketScore.score = 9;
+                        marketScore.reason = `Massive Web3 Arb. Bodhi: ${(bodhiProb * 100).toFixed(1)}% vs Crowd: ${(marketPrice * 100).toFixed(1)}%. +${(polyEV * 100).toFixed(1)}% EV.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} Shares on Polymarket (+${(polyEV * 100).toFixed(1)}% EV).`;
+                    } else if (polyEV > 0.03) {
+                        marketScore.score = 7;
+                        marketScore.reason = `Small Web3 edge (+${(polyEV * 100).toFixed(1)}% EV) on ${valueTeam}.`;
+                        marketScore.side = techFavored;
+                        recommendedAction = `LEAN - Small EV edge on ${valueTeam}. Buy shares.`;
+                    } else if (polyEV < -0.10) {
+                        marketScore.score = 2;
+                        marketScore.reason = `Fading Crowd. Bodhi lean strongly opposed by Polymarket. Negative EV (${(polyEV * 100).toFixed(1)}%).`;
+                        marketScore.side = techFavored === 'home' ? 'away' : 'home';
+                        recommendedAction = `PASS - Negative EV (${(polyEV * 100).toFixed(1)}%). Crowd hates this bet.`;
+                        valueTeam = undefined;
+                    } else {
+                        marketScore.score = 5;
+                        marketScore.reason = "Bodhi probability accurately mirrors Polymarket share price. No edge.";
+                        recommendedAction = "PASS - Efficient Market. No EV edge.";
+                        valueTeam = undefined;
+                    }
+                }
+            }
+        } else {
+            // No Web3 market found. Fallback to Bodhi Native Preseason Model.
+            const techFavored = techSport.side;
+            if (techFavored !== 'neutral' && currentConfidence >= 55) {
+                valueTeam = techFavored === 'home' ? homeTeam : awayTeam;
+
+                // Veto Checks
+                let isVetoed = false;
+                let vetoReason = "";
+
+                if (valueTeam === homeTeam && isAwayElite) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Home, but Away has elite pitcher (${awayPitcher}).`;
+                } else if (valueTeam === awayTeam && isHomeElite) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Away, but Home has elite pitcher (${homePitcher}).`;
+                } else if (valueTeam === homeTeam && isHomeWeak) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Home, but Home pitcher (${homePitcher}) is weak.`;
+                } else if (valueTeam === awayTeam && isAwayWeak) {
+                    isVetoed = true; vetoReason = `VETO: +EV on Away, but Away pitcher (${awayPitcher}) is weak.`;
+                }
+
+                if (isVetoed) {
+                    marketScore.score = 2;
+                    marketScore.reason = vetoReason;
+                    recommendedAction = vetoReason;
+                    valueTeam = undefined;
+                } else {
+                    polyEV = (currentConfidence / 100) - 0.50; // Mock 50/50 line
+                    polySharePrice = 0.50;                     // Mock 50/50 line
+                    marketScore.score = 7;
+                    marketScore.reason = `PRESEASON MODE: No Web3 Market. Bodhi True Prob hits ${(currentConfidence).toFixed(1)}%.`;
+                    marketScore.side = techFavored;
+                    recommendedAction = `PRESEASON CONVICTION - Bet ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
                 }
             }
         }
 
-        pillars.push({
-            pillar: "Technical (Bookies)",
-            score: bookiesScore,
-            reason: bookiesReason
-        });
+        pillars.push(marketScore);
 
         // 4. Psychological (Players)
         pillars.push({
@@ -157,21 +225,34 @@ export class PillarAnalyzer {
             reason: "Early spring motivation is generally neutral unless roster battles are flagged."
         });
 
+        // Recalculate Final Confidence
         const totalScore = pillars.reduce((sum, p) => sum + p.score, 0);
-        const overallConfidence = (totalScore / (pillars.length * 10)) * 100;
-        const sizing = this.getSizing(overallConfidence, 1000); // Default $1,000 bankroll
+        currentConfidence = (totalScore / 40) * 100; // 40 points total
+
+        // Finalize sizing
+        if (valueTeam) {
+            const sizing = this.getSizing(currentConfidence, 1000); // Baseline $1k
+            recommendedSize = sizing.label;
+            suggestedStake = sizing.amount;
+        }
 
         return {
             gamePk: game.gamePk,
-            homeTeam: game.homeTeam,
-            awayTeam: game.awayTeam,
-            overallConfidence: Math.round(overallConfidence),
+            homeTeam,
+            awayTeam,
+            overallConfidence: Math.round(currentConfidence),
             pillars,
             valueTeam,
-            valueOdds,
-            recommendedAction: this.getRecommendation(overallConfidence, valueTeam),
-            recommendedSize: sizing.label,
-            suggestedStake: sizing.amount
+            polyConditionId,
+            polySharePrice,
+            polyEV,
+            recommendedAction,
+            recommendedSize,
+            suggestedStake,
+            homePitcher,
+            awayPitcher,
+            homeOdds: polyMarket ? homePrice : undefined,
+            awayOdds: polyMarket ? awayPrice : undefined
         };
     }
 
@@ -186,38 +267,75 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, hotBats: string[] = [], weakPitchers: string[] = []): PillarScore {
+    private scoreTechnicalSport(details: any, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>): PillarScore {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
         let awayHotCount = 0;
 
+        let homeMetricBonus = 0;
+        let awayMetricBonus = 0;
+
         (details.lineups?.home || []).forEach((p: string) => {
             if (ELITE_BATS.includes(p)) homeElite++;
             if (hotBats.includes(p)) homeHotCount++;
+
+            // v3.0 Metrics Sniper: Check for elite xWOBA (>= .380)
+            if (playerStats && playerStats.has(p) && playerStats.get(p).xwoba >= 0.380) {
+                homeMetricBonus += 0.5;
+            }
         });
 
         (details.lineups?.away || []).forEach((p: string) => {
             if (ELITE_BATS.includes(p)) awayElite++;
             if (hotBats.includes(p)) awayHotCount++;
+
+            // v3.0 Metrics Sniper: Check for elite xWOBA (>= .380)
+            if (playerStats && playerStats.has(p) && playerStats.get(p).xwoba >= 0.380) {
+                awayMetricBonus += 0.5;
+            }
         });
 
         const homePitcher = details.probables.home || "";
         const awayPitcher = details.probables.away || "";
 
-        const homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? WEIGHT_ELITE_PITCHER : 0;
-        const awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? WEIGHT_ELITE_PITCHER : 0;
+        let homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? WEIGHT_ELITE_PITCHER : 0;
+        let awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? WEIGHT_ELITE_PITCHER : 0;
 
-        const homePitcherWeak = weakPitchers.includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
-        const awayPitcherWeak = weakPitchers.includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
+        let homePitcherWeak = weakPitchers.includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
+        let awayPitcherWeak = weakPitchers.includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak;
+        // v3.0 Metrics Sniper: Expected ERA overriding legacy lists
+        if (playerStats) {
+            if (playerStats.has(homePitcher)) {
+                const xERA = playerStats.get(homePitcher).xera;
+                if (xERA <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER; // Positive Regression Lock
+                if (xERA >= 5.00) homePitcherWeak = WEIGHT_WEAK_PITCHER;
+            }
+            if (playerStats.has(awayPitcher)) {
+                const xERA = playerStats.get(awayPitcher).xera;
+                if (xERA <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER; // Positive Regression Lock
+                if (xERA >= 5.00) awayPitcherWeak = WEIGHT_WEAK_PITCHER;
+            }
+        }
+
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "Home" : "Away";
 
+        // Brand Momentum Adjustment (Handling cases like 10-3 Yankees)
+        let brandAdjustment = 0;
+        if (details.homeTeam?.includes("Yankees") || details.awayTeam?.includes("Yankees")) {
+            // Yankees specifically get a "Corporate Titan" momentum boost in the 'reason' but we stay data-led
+            brandAdjustment = 0.5;
+        }
+
         let reason = disparity > 0 ? `Strong ${favored} advantage (+${disparity.toFixed(1)} strength).` : "Lineups are competitively balanced.";
+        if (homeMetricBonus > 0 || awayMetricBonus > 0) {
+            reason += ` Adv. Metrics Boost: Home(+${homeMetricBonus}) Away(+${awayMetricBonus}).`;
+        }
         if (homeHotCount > 0 || awayHotCount > 0) {
             reason += ` Hot Bats detected: Home(${homeHotCount}) Away(${awayHotCount}).`;
         }
