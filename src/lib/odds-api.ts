@@ -60,7 +60,7 @@ export class OddsApi {
         return this.getOdds('mma_mixed_martial_arts');
     }
 
-    private async getOdds(sportKey: string): Promise<OddsData[]> {
+    public async getOdds(sportKey: string): Promise<OddsData[]> {
         // Try live API if key is present and not the placeholder
         if (this.apiKey && this.apiKey !== 'your_sportsbook_api_key' && !this.apiKey.startsWith('LOCAL_')) {
             const url = `${this.baseUrl}/${sportKey}/odds/?apiKey=${this.apiKey}&regions=us&markets=h2h&oddsFormat=decimal`;
@@ -133,7 +133,9 @@ export class OddsApi {
         switch (sportKey) {
             case 'basketball_nba': return 'basketball/nba';
             case 'icehockey_nhl': return 'hockey/nhl';
-            case 'baseball_mlb': return 'baseball/mlb';
+            case 'baseball_mlb':
+            case 'baseball_mlb_preseason':
+                return 'baseball/mlb';
             default: return null;
         }
     }
@@ -158,6 +160,28 @@ export class OddsApi {
      */
     private getMockSpringTrainingOdds(): OddsData[] {
         return [
+            {
+                id: "mock_march8_1",
+                sport_key: "baseball_mlb_preseason",
+                commence_time: "2026-03-08T18:05:00Z",
+                home_team: "Toronto Blue Jays",
+                away_team: "Detroit Tigers",
+                bookmakers: [{
+                    key: "draftkings", title: "DraftKings", last_update: "now",
+                    markets: [
+                        {
+                            key: "h2h", outcomes: [
+                                { name: "Toronto Blue Jays", price: 1.65 }, { name: "Detroit Tigers", price: 2.25 }
+                            ]
+                        },
+                        {
+                            key: "spreads", outcomes: [
+                                { name: "Toronto Blue Jays", price: 1.91, point: -1.5 }, { name: "Detroit Tigers", price: 1.91, point: 1.5 }
+                            ]
+                        }
+                    ]
+                }]
+            },
             {
                 id: "mock_march1_1",
                 sport_key: "baseball_mlb",

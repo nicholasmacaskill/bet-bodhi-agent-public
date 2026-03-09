@@ -23,7 +23,7 @@ export class BodhiPrism {
     /**
      * Scans all MLB games for a given date and returns +EV opportunities.
      */
-    async scanMLB(date: string) {
+    async scanMLB(date: string, bankroll: number = 464) {
         const games = await this.mlb.getSchedule(date);
         const odds = await this.odds.getMLBOdds();
 
@@ -31,21 +31,21 @@ export class BodhiPrism {
         // For now, we'll map through them similar to our scripts
         return games.map(g => {
             // Simplified for the toolbox; real logic would fetch 'details' per game
-            return this.mlbAnalyzer.analyzeGame(g, { probables: {}, lineups: {} }, odds);
+            return this.mlbAnalyzer.analyzeGame(g, { probables: {}, lineups: {} }, odds, [], [], new Map(), bankroll);
         }).filter(a => a.overallConfidence >= 60);
     }
 
     /**
      * Scans all NHL games for a given date and returns +EV opportunities.
      */
-    async scanNHL(date: string) {
+    async scanNHL(date: string, bankroll: number = 464) {
         const games = await this.nhl.getSchedule(date);
         const stats = await this.nhl.getTeamStats();
         const odds = await this.odds.getNHLOdds();
         const leaders = await this.nhl.getGoalieLeaders();
 
         return games.map(g => {
-            return this.nhlAnalyzer.analyzeGame(g, stats, odds, leaders);
+            return this.nhlAnalyzer.analyzeGame(g, stats, odds, leaders, undefined, bankroll);
         }).filter(a => a.overallConfidence >= 60);
     }
 

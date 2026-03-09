@@ -11,9 +11,11 @@
     "scan:watch": "tsx scripts/daily-scanner.ts --watch"
   },
   "dependencies": {
+    "@polymarket/clob-client": "^5.7.0",
     "@supabase/supabase-js": "^2.91.0",
     "@types/node-cron": "^3.0.11",
     "dotenv": "^17.3.1",
+    "ethers": "^6.16.0",
     "framer-motion": "^12.28.1",
     "lucide-react": "^0.562.0",
     "mlb-stats-api": "^2.0.0",
@@ -21,7 +23,8 @@
     "node-cron": "^4.2.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "resend": "^6.9.3"
+    "resend": "^6.9.3",
+    "telegraf": "^4.16.3"
   },
   "devDependencies": {
     "@builder.io/sdk": "^6.2.1",

@@ -12,7 +12,7 @@ async function main() {
 
     const mma = new MMAApi();
     const analyzer = new MMAPillarAnalyzer();
-    const oddsApi = new OddsApi(process.env.SPORTSBOOK_API_KEY || "");
+    const oddsApi = new OddsApi();
 
     try {
         console.log("\n-> Fetching UFC Event Data...");

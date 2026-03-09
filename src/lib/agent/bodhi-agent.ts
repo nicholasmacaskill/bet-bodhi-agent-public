@@ -1,15 +1,15 @@
-/**
- * Bodhi Agent v1.0
- * -----------------
- * A proactive, autonomous entity that uses the BodhiToolbox to monitor 
- * markets, detect bias, and "Coach" you through the day.
- */
-
 import { BodhiPrism } from './prism';
 import { supabaseAdmin } from '../supabase-admin';
+import { PolymarketApi } from '../polymarket-api';
+import { SxBetApi } from '../sx-bet-api';
+
+const RESET_ANSI = '\x1b[0m';
+const DIM = '\x1b[2m';
 
 export class BodhiAgent {
     private prism = new BodhiPrism();
+    private polyApi = new PolymarketApi();
+    private sxApi = new SxBetApi();
     private identity = "Bodhi-Alpha-1";
 
     /**
@@ -17,16 +17,20 @@ export class BodhiAgent {
      */
     async awaken(date: string) {
         console.log(`\n=====================================================`);
-        console.log(`   🌅 ${this.identity}: MORNING BREIFING (${date})   `);
+        console.log(`   🌅 ${this.identity}: MORNING BRIEFING (${date})   `);
         console.log(`=====================================================\n`);
 
-        const mlbOpportunities = await this.prism.scanMLB(date);
-        const nhlOpportunities = await this.prism.scanNHL(date);
-        const userState = await this.prism.getUserState();
-        const biasAlert = await this.prism.analyzeBiases();
+        const liveBalance = await this.polyApi.getUSDCBalance();
+        const bankroll = liveBalance > 0 ? liveBalance : 464.00;
+
+        const [mlbOpportunities, nhlOpportunities, biasAlert] = await Promise.all([
+            this.prism.scanMLB(date, bankroll),
+            this.prism.scanNHL(date, bankroll),
+            this.prism.analyzeBiases()
+        ]);
 
         console.log(`-> Hello. I've scanned today's slate.`);
-        console.log(`   Your current bankroll is $${userState?.current_balance?.toFixed(2) || '500.00'}.`);
+        console.log(`   Your live bankroll is $${bankroll.toFixed(2)}.`);
         console.log(`   Found ${mlbOpportunities.length} MLB and ${nhlOpportunities.length} NHL value plays.\n`);
 
         if (biasAlert !== "No immediate high-risk psychological patterns detected.") {
@@ -36,13 +40,68 @@ export class BodhiAgent {
             console.log(`✅ Your psychology looks stable. No recent overconfidence detected.`);
         }
 
+        // EXECUTION RECOMMENDATIONS
+        const recommendations = [...mlbOpportunities, ...nhlOpportunities].filter(p => p.overallConfidence >= 75);
+        if (recommendations.length > 0) {
+            console.log(`\n--- ${recommendations.length} High-Conviction Plays (Terminal Commands) ---`);
+            for (const play of recommendations) {
+                const outcomeIndex = play.valueTeam === play.homeTeam ? 0 : 1;
+                const stake = Math.min(play.suggestedStake || 0, parseFloat(process.env.MAX_TEST_STAKE || "1.00"));
+                const cmd = `npx tsx scripts/place-bet.ts --market poly --id ${play.polyConditionId} --outcome ${outcomeIndex} --amount ${stake.toFixed(2)} --price ${play.polySharePrice?.toFixed(2)}`;
+
+                console.log(`\n🏹 ${play.valueTeam} (${play.overallConfidence}% Confidence)`);
+                console.log(`   ${DIM}${cmd}${RESET_ANSI}`);
+            }
+        }
+
         // Log this to internal memory
-        await this.logInternal('awaken', `Morning scan complete. Found ${mlbOpportunities.length + nhlOpportunities.length} total plays. User balance: $${userState?.current_balance}`, {
+        await this.logInternal('awaken', `Morning scan complete. Found ${mlbOpportunities.length + nhlOpportunities.length} total plays.`, {
             mlbCount: mlbOpportunities.length,
             nhlCount: nhlOpportunities.length
         });
 
         return { mlb: mlbOpportunities, nhl: nhlOpportunities };
+    }
+
+    /**
+     * Executes a bet based on the provided analysis.
+     */
+    private async executePlay(play: any) {
+        const isDryRun = process.env.DRY_RUN === 'true';
+        const maxStake = parseFloat(process.env.MAX_TEST_STAKE || "1.00");
+
+        // Final safety cap: Never bet more than $1 in this phase
+        const safeStake = Math.min(play.suggestedStake || 0, maxStake);
+
+        if (safeStake <= 0) return;
+
+        console.log(`🚀 AUTO-EXECUTION: Attempting to play ${play.valueTeam} ($${safeStake.toFixed(2)})`);
+
+        try {
+            if (play.polyConditionId) {
+                // Determine outcome index (usually 0 for Home/Yes, 1 for Away/No)
+                // This logic would be refined based on the market mapping
+                const outcomeIndex = play.valueTeam === play.homeTeam ? 0 : 1;
+
+                const result = await this.polyApi.placeOrder(
+                    play.polyConditionId,
+                    outcomeIndex,
+                    safeStake,
+                    play.polySharePrice || 0.50
+                );
+
+                await this.logInternal('execution', `Executed Polymarket bet for ${play.valueTeam}`, {
+                    play,
+                    result,
+                    stake: safeStake
+                });
+            } else {
+                console.log(`   (No Polymarket ID, skipping for now)`);
+            }
+        } catch (error: any) {
+            console.error(`❌ Execution Failed: ${error.message}`);
+            await this.logInternal('execution_error', error.message, { play });
+        }
     }
 
     /**
