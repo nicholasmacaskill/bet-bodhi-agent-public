@@ -248,12 +248,29 @@ function renderGameDetailHTML(r: any, index: number) {
         msg += `\n`;
     }
 
+    if (analysis.killCriteria && analysis.killCriteria.length > 0) {
+        msg += `🚨 <b>KILL CRITERIA:</b>\n`;
+        analysis.killCriteria.forEach((crit: string) => {
+            msg += `  • <i>${crit}</i>\n`;
+        });
+        msg += `\n`;
+    }
+
     if (analysis.valueTeam) {
-        msg += `\n🏹 <b>BODHI:</b> ${analysis.recommendedAction}\n`;
+        msg += `🏹 <b>BODHI:</b> ${analysis.recommendedAction}\n`;
         msg += `💵 <b>STAKE:</b> ${analysis.recommendedSize} ($${analysis.suggestedStake?.toFixed(2)})\n`;
     } else {
-        msg += `\n🏹 <b>BODHI:</b> Pass market. No edge found.\n`;
+        msg += `🏹 <b>BODHI:</b> Pass market. No edge found.\n`;
     }
+
+    // Agentic Hidden Ingestion Block
+    const agentData = {
+        matchup_id: analysis.gamePk,
+        ev: analysis.polyEV || (analysis.sxEV ? analysis.sxEV / 100 : 0),
+        stake: analysis.suggestedStake || 0,
+        weather_risk: analysis.pillars?.find((p: any) => p.pillar === "Seasonal (Sport)")?.score || 5
+    };
+    msg += `<tg-spoiler>RAW_BODHI_DATA: ${JSON.stringify(agentData)}</tg-spoiler>\n`;
 
     return msg + `\n`;
 }

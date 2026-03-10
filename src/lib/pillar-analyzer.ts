@@ -39,6 +39,7 @@ export interface BodhiAnalysis {
     awayOdds?: number;
     matchupNotes?: string;
     advantages?: string[];
+    killCriteria?: string[];
 }
 
 // Map of 2026 Elite MLB Pitchers
@@ -56,6 +57,18 @@ const ELITE_BATS = [
     "Mike Trout", "Bobby Witt Jr.", "Julio Rodriguez", "Bryce Harper", "Adley Rutschman",
     "Jung Hoo Lee", "Jorge Soler", "LaMonte Wade Jr.", "Eloy Jimenez", "Connor Griffin",
     "Jackson Chourio", "Logan O'Hoppe", "James Wood", "Dylan Crews", "CJ Abrams"
+];
+
+// Map of 2026 Weak/Vulnerable MLB Pitchers (ERA / xERA ≥ 5.00 last season)
+// These automatically apply a negative weight even if not passed in at scan time.
+const WEAK_PITCHERS_STATIC = [
+    "José Urquidy",      // 5.97 ERA (2025) — high walk rate, poor secondary stuff
+    "Adrian Houser",     // 5.80 ERA — home run prone, weak strikeout rate
+    "Michael Lorenzen",  // 5.60 ERA — fly-ball heavy, limited swing-and-miss
+    "Kyle Bradish",      // returning from TJ — velocity/command not yet back
+    "Jake Odorizzi",     // 5.50 ERA — diminished velo, soft contact reliant
+    "Zach Davies",       // 5.45 ERA — extreme contact pitcher, bullpen game risk
+    "Aaron Civale",      // 5.30 ERA — high BABIP, weak xFIP track record
 ];
 
 // Decision Weights - Pitching is paramount
@@ -76,7 +89,8 @@ export class PillarAnalyzer {
         bankroll: number = 464,
         sxMarket?: any,
         mood?: string,
-        calmness?: number
+        calmness?: number,
+        rosters?: { home: string[], away: string[] }
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -84,7 +98,7 @@ export class PillarAnalyzer {
         const pillars: PillarScore[] = [];
 
         // 1. Technical Analysis (Sport-Specific)
-        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats);
+        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters);
         const techSport = techResult.score;
         const advantages = techResult.advantages;
         pillars.push(techSport);
@@ -127,6 +141,7 @@ export class PillarAnalyzer {
         let sxSharePrice = undefined;
         let sxEV = undefined;
         let executionRoute: 'POLY' | 'SX' | 'NONE' = 'NONE';
+        let killCriteria: string[] = [];
 
         let bookieScore: PillarScore = {
             pillar: "Technical (Bookies)",
@@ -345,11 +360,31 @@ export class PillarAnalyzer {
             suggestedStake = sizing.amount * calmnessModifier;
         }
 
+        // 4. Stability Score Recalibration
+        // Recalibrate the 'Stability Score' to be EV-dependent. 
+        // If EV is negative, the maximum possible Stability Score is 30%.
+        const maxEV = Math.max(polyEV || -1, sxEV || -1);
+        if (maxEV < 0) {
+            currentConfidence = Math.min(currentConfidence, 30);
+        }
+
+        // Generate Kill Criteria
+        if (homePitcher === "TBD / Bullpen" || awayPitcher === "TBD / Bullpen") {
+            killCriteria.push("ABORT IF: Expected starter scratch or transition to unknown opener.");
+        }
+        if (polyMarket) {
+            killCriteria.push("ABORT IF: Crowd Price shifts below 45% (Sharp reversal).");
+        }
+        if (seasonalSport.score <= 4) {
+            killCriteria.push(`ABORT IF: Wind conditions exceed 20mph blowing IN (current: ${game.weather?.wind || 'unknown'}).`);
+        }
+
+        // Finalize Bodhi Result
         return {
             gamePk: game.gamePk,
             homeTeam,
             awayTeam,
-            overallConfidence: finalConfidence,
+            overallConfidence: currentConfidence, // Use updated confidence
             pillars,
             valueTeam,
             polyConditionId,
@@ -361,14 +396,15 @@ export class PillarAnalyzer {
             sxEV,
             executionRoute,
             recommendedAction,
-            recommendedSize: this.getSizing(finalConfidence, bankroll).label,
-            suggestedStake: this.getSizing(finalConfidence, bankroll).amount,
+            recommendedSize: this.getSizing(currentConfidence, bankroll).label,
+            suggestedStake: this.getSizing(currentConfidence, bankroll).amount,
             homePitcher,
             awayPitcher,
             homeOdds: polyMarket ? homePrice : undefined,
             awayOdds: polyMarket ? awayPrice : undefined,
             matchupNotes: `${awayPitcher || '?'} vs ${homePitcher || '?'}. ${techSport.reason}`,
-            advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, finalConfidence, mood)
+            advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, currentConfidence, mood),
+            killCriteria
         };
     }
 
@@ -397,7 +433,7 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>): { score: PillarScore, advantages: string[] } {
+    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }): { score: PillarScore, advantages: string[] } {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
@@ -456,8 +492,20 @@ export class PillarAnalyzer {
         let homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? WEIGHT_ELITE_PITCHER : 0;
         let awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? WEIGHT_ELITE_PITCHER : 0;
 
-        let homePitcherWeak = weakPitchers.includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
-        let awayPitcherWeak = weakPitchers.includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
+        // v4.0 Hallucination Hard-Validation: Double-check if the pitcher is on the active roster
+        if (rosters) {
+            if (homePitcherElite > 0 && !rosters.home.includes(homePitcher)) {
+                homePitcherElite = 0;
+                advantages.push(`⚠️ Adjusted: ${homePitcher} (Home) is an Elite Pitcher but is NOT on the current active team roster. Hallucination guard triggered.`);
+            }
+            if (awayPitcherElite > 0 && !rosters.away.includes(awayPitcher)) {
+                awayPitcherElite = 0;
+                advantages.push(`⚠️ Adjusted: ${awayPitcher} (Away) is an Elite Pitcher but is NOT on the current active team roster. Hallucination guard triggered.`);
+            }
+        }
+
+        let homePitcherWeak = ([...weakPitchers, ...WEAK_PITCHERS_STATIC]).includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
+        let awayPitcherWeak = ([...weakPitchers, ...WEAK_PITCHERS_STATIC]).includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
 
         // v3.0 Metrics Sniper: Expected ERA overriding legacy lists
         if (playerStats) {
@@ -575,12 +623,25 @@ export class PillarAnalyzer {
     }
 
     private scoreSeasonalSport(game: any): PillarScore {
-        const isArizona = game.venue?.includes("Stadium") || game.venue?.includes("Field") || game.venue?.includes("Complex");
-        return {
-            pillar: "Seasonal (Sport)",
-            score: 7,
-            reason: isArizona ? "Cactus League: Dry air offensive boost. Watch totals." : "Grapefruit League: Neutral environment."
-        };
+        const venue = game.venue?.toLowerCase() || "";
+        const isArizona = venue.includes("stadium") || venue.includes("park") || venue.includes("field") || venue.includes("complex");
+
+        let score = isArizona ? 7 : 5;
+        let reason = isArizona ? "Cactus League: Dry air offensive boost. Watch totals." : "Grapefruit League: Neutral environment.";
+
+        // Integrate Live Weather (Pillar #2)
+        if (game.weather?.wind) {
+            const wind = game.weather.wind; // e.g. "12 mph, In From Center"
+            const speed = parseInt(wind);
+            const direction = wind.toLowerCase();
+
+            if (speed > 15 && (direction.includes('in') || direction.includes('towards'))) {
+                score = 4; // Penalize 30% from 7 is ~5, but we go to 4 for "hard validation"
+                reason = `WEATHER VETO: Wind ${speed}mph blowing IN. Neutralizing high-altitude offense edge.`;
+            }
+        }
+
+        return { pillar: "Seasonal (Sport)", score, reason };
     }
 
     private getRecommendation(confidence: number, valueTeam?: string): string {

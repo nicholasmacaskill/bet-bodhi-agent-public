@@ -377,9 +377,23 @@ async function runScan(date: string): Promise<void> {
 
         for (const game of mlbGames) {
             let details: any = { probables: game.probables || {}, lineups: game.lineups || { home: [], away: [] } };
-            if ((!details.lineups.home || details.lineups.home.length === 0) && game.gamePk) {
+            let rosters: { home: string[], away: string[] } | undefined = undefined;
+
+            if (game.gamePk) {
                 const fetched = await mlbApi.getGameDetails(game.gamePk);
-                if (fetched) details = fetched;
+                if (fetched) {
+                    details = { ...details, ...fetched };
+                    game.weather = fetched.weather; // Sync weather back to game object
+                }
+
+                // Fetch Official Roster for Hallucination Guard
+                if (game.homeId && game.awayId) {
+                    const [homeRoster, awayRoster] = await Promise.all([
+                        mlbApi.getTeamRoster(game.homeId),
+                        mlbApi.getTeamRoster(game.awayId)
+                    ]);
+                    rosters = { home: homeRoster, away: awayRoster };
+                }
             }
 
             const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
@@ -396,7 +410,7 @@ async function runScan(date: string): Promise<void> {
             );
 
             // Analysis
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, sxMatch, userMood, userCalmness);
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, sxMatch, userMood, userCalmness, rosters);
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&

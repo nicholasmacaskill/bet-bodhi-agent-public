@@ -6,7 +6,9 @@
 export interface MLBGame {
     gamePk: number;
     homeTeam: string;
+    homeId?: number;
     awayTeam: string;
+    awayId?: number;
     venue: string;
     status: string;
     date: string;
@@ -17,6 +19,11 @@ export interface MLBGame {
     probables?: {
         home?: string;
         away?: string;
+    };
+    weather?: {
+        condition: string;
+        temp: string;
+        wind: string;
     };
 }
 
@@ -37,7 +44,9 @@ export class MLBApi {
             return {
                 gamePk: game.gamePk,
                 homeTeam: (game.teams.home.team.name || "").trim(),
+                homeId: game.teams.home.team.id,
                 awayTeam: (game.teams.away.team.name || "").trim(),
+                awayId: game.teams.away.team.id,
                 venue: (game.venue.name || "").trim(),
                 status: game.status.detailedState,
                 date: game.gameDate,
@@ -118,10 +127,31 @@ export class MLBApi {
                 probables: {
                     home: homePitcher,
                     away: awayPitcher
-                }
+                },
+                weather: data.gameData?.weather ? {
+                    condition: data.gameData.weather.condition,
+                    temp: data.gameData.weather.temp,
+                    wind: data.gameData.weather.wind
+                } : undefined
             };
         } catch (e) {
             return null;
+        }
+    }
+
+    /**
+     * Fetch the active roster for a team.
+     */
+    async getTeamRoster(teamId: number): Promise<string[]> {
+        const url = `${this.baseUrl}/teams/${teamId}/roster?rosterType=active`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!data.roster) return [];
+            return data.roster.map((p: any) => p.person.fullName);
+        } catch (e) {
+            console.error(`Failed to fetch roster for team ${teamId}:`, e);
+            return [];
         }
     }
 }

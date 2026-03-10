@@ -69,9 +69,20 @@ export class BodhiAgent {
     private async executePlay(play: any) {
         const isDryRun = process.env.DRY_RUN === 'true';
         const maxStake = parseFloat(process.env.MAX_TEST_STAKE || "1.00");
+        // Safety Circuit Breaker (Pillar #4)
+        // If Bankroll Pillar < 5 (Caution-Range), force 'Stake: Defensive (2%)' regardless of the AI EV score.
+        const bankrollPillar = play.pillars?.find((p: any) => p.pillar === "Technical (Bankroll)");
+        let finalStake = play.suggestedStake || 0;
+
+        if (bankrollPillar && bankrollPillar.score < 5) {
+            console.warn(`🛡️  SAFETY CIRCUIT BREAKER: Bankroll Pillar (${bankrollPillar.score}/10) is in caution range. Forcing Defensive sizing.`);
+            // Recalculate defensive stake (2%) if not already lower
+            const defensiveStake = (play.suggestedStake / (play.overallConfidence / 100)) * 0.02; // Roughly map back to 2%
+            finalStake = Math.min(finalStake, defensiveStake);
+        }
 
         // Final safety cap: Never bet more than $1 in this phase
-        const safeStake = Math.min(play.suggestedStake || 0, maxStake);
+        const safeStake = Math.min(finalStake, maxStake);
 
         if (safeStake <= 0) return;
 
