@@ -6,16 +6,46 @@ Bet Bodhi is a research project focused on **Agentic EV Discovery**. It moves aw
 
 ---
 
+## 📐 System Architecture
+
+```mermaid
+graph TD
+    subgraph "Data Layer"
+        A[External Sports Data] --> D[The Prism]
+        B[Web3 Market Feeds] --> D
+    end
+
+    subgraph "Intelligence"
+        D --> E[Seven Pillars Framework]
+        E --> E1[P1: Performance]
+        E --> E2[P2: Environmental]
+        E --> E3[P3: Situational]
+    end
+
+    subgraph "Guardian"
+        E1 & E2 & E3 --> G[Psychometric Guardian]
+        G --> H{Validation Gate}
+        H -- "Anomaly" --> I[Veto]
+        H -- "Clean" --> J[Executive Layer]
+    end
+
+    subgraph "Execution"
+        J --> K[Web3 Liquidity Bridge]
+    end
+```
+
+---
+
 ## 🏛️ The Seven Pillars Framework
 
 The core of the project is a modular analytical engine that refracts every potential entry through seven distinct dimensions:
 
-| Pillar | Focus Area | Description |
+| Dimension | Focus Area | Philosophy |
 | :--- | :--- | :--- |
 | **1. Technical (Sport)** | Performance | Deep analysis of archetypes and statistical outliers. |
-| **2. Seasonal** | Environment | Factoring in temporal environment and climate variance. |
+| **2. Seasonal** | Environment | Factoring in temporal context and climate variance. |
 | **3. Psych (Players)** | Momentum | Identifying cohesion and situational motivation. |
-| **4. Technical (Market)** | **WEB3** | Comparing internal logic to decentralized market sentiment. |
+| **4. Tech (Market)** | **WEB3** | Comparing internal logic to decentralized market sentiment. |
 | **5. Tech (Bankroll)** | Risk | Systemic risk management and volatility protection. |
 | **6. Psych (User)** | **SENTIMENT** | Measuring the stability and bias of the human-in-the-loop. |
 | **7. Physiological** | Clarity | Resonance of the decision signal. |
@@ -26,22 +56,19 @@ The core of the project is a modular analytical engine that refracts every poten
 
 A unique aspect of Bet Bodhi is its treatment of the user as part of the system. We've developed a **Sentiment Tracker** that audits the "Why" behind every decision:
 
-- **Bias Mitigation**: Automatically identifying "Chase-Win" behaviors or momentum spikes.
+- **Bias Mitigation**: Automatically identifying momentum-driven behaviors like "Chase-Win" cycles.
 - **The 2-Hour Window**: enforcing tactical discipline to eliminate gameday impulse.
-- **Emotional Calibration**: Adjusting system sizing based on reported user stability.
+- **Emotional Calibration**: Adjusting system exposure based on reported user stability and calmness.
 
 ---
 
 ## 📈 Evolution & Optimizations
 
-### Phase 1: Legacy Markets
-The project began by analyzing traditional sportsbooks where market efficiency and "Vig" create a high barrier to entry.
+### From Legacy to Decentralized
+The project migrated from traditional sportsbook analysis to **Web3 Prediction Markets**. This shift optimized for liquidity pockets and price inefficiencies found in decentralized crowd pricing.
 
-### Phase 2: Web3 Pivot
-Migrated to **Decentralized Prediction Markets** (Polymarket / SX Bet). This shift allowed the engine to exploit pricing inefficiencies and liquidity pockets found in the Web3 crowd.
-
-### Phase 3: Integrity Gates
-Overcame "Data Hallucinations" by implementing **Hard-Validation Gates**—ensuring results are verified against live roster states before reaching the execution layer.
+### Hard-Validation & Integrity Gates
+Overcame significant technical challenges regarding "Data Hallucinations." The system now utilizes a **Hard-Validation Gate** to ensure that high-conviction signals are verified against live roster states before reaching execution.
 
 ---
 
@@ -49,8 +76,8 @@ Overcame "Data Hallucinations" by implementing **Hard-Validation Gates**—ensur
 
 Software is not a tool; it is **glass**. The goal of Bet Bodhi is to provide a unified medium for refracting complex sports data and psychological states into high-resolution signals.
 
-*   **Agentic Briefings**: Moving from passive reports to proactive, AI-driven briefings.
-*   **Strategic Redaction**: Protecting proprietary weighting while sharing architectural depth.
+*   **Agentic Briefings**: Moving from passive reports to active, AI-driven briefings.
+*   **Strategic Redaction**: Protecting proprietary weighting while sharing the architectural beauty.
 *   **Execution Guardrails**: Enforcing technical discipline through automated intervention.
 
 ---
@@ -64,15 +91,11 @@ Software is not a tool; it is **glass**. The goal of Bet Bodhi is to provide a u
 
 ---
 
-## 📁 Project Structure (High-Level)
+## 🗺️ Future Roadmap (Aspirations)
 
-```
-bet-bodhi/
-├── src/lib/agent/          # Agent consciousness & Guardians
-├── src/lib/domain/         # Analytical Pillars (Redacted)
-├── scripts/                # Execution & Scanning tools
-└── supabase/               # Psychometric data migrations
-```
+- **Automated Hedging**: Real-time counter-party discovery to lock in risk-free profit.
+- **Multi-Agent Alignment**: Implementing a consensus model where multiple independent agents must align on high-unit entries.
+- **Voice Interventions**: Requiring spoken reasoning to ensure the human user is in a state of high clarity before execution.
 
 ---
 
