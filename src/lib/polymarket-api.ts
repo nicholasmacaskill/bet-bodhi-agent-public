@@ -279,4 +279,64 @@ export class PolymarketApi {
             message: "Order placed successfully on Polymarket CLOB."
         };
     }
+
+    /**
+     * Fetches trade history for the configured wallet.
+     */
+    async getTrades() {
+        const privateKey = process.env.WALLET_PRIVATE_KEY;
+        if (!privateKey || privateKey === 'your_private_key_here') return [];
+
+        try {
+            const { ClobClient } = await import('@polymarket/clob-client');
+            const provider = new ethers.JsonRpcProvider('https://polygon-bor-rpc.publicnode.com');
+            const wallet = new Wallet(privateKey, provider);
+
+            const signerAdapter: any = {
+                getAddress: async () => wallet.address,
+                signMessage: async (message: string | Uint8Array) => wallet.signMessage(typeof message === 'string' ? message : ethers.hexlify(message)),
+                _signTypedData: async (domain: any, types: any, value: any) => {
+                    const { EIP712Domain, ...restTypes } = types;
+                    return await wallet.signTypedData(domain, restTypes, value);
+                },
+                connect: () => signerAdapter
+            };
+
+            const credentials = (process.env.POLY_API_KEY && process.env.POLY_SECRET) ? {
+                key: process.env.POLY_API_KEY,
+                secret: process.env.POLY_SECRET,
+                passphrase: process.env.POLY_PASSPHRASE || ""
+            } : undefined;
+
+            const client = new ClobClient(
+                'https://clob.polymarket.com',
+                137,
+                signerAdapter,
+                credentials,
+                process.env.POLY_PROXY_ADDRESS ? (1 as any) : undefined,
+                process.env.POLY_PROXY_ADDRESS
+            );
+
+            // Fetch filled orders or trades
+            const trades = await (client as any).getTrades({ maker: process.env.POLY_PROXY_ADDRESS || wallet.address });
+            return trades;
+        } catch (error) {
+            console.error("Failed to fetch Polymarket trades:", error);
+            return [];
+        }
+    }
+
+    /**
+     * Resolves market details for a specific conditionId.
+     */
+    async getMarketDetails(conditionId: string) {
+        try {
+            const url = `${this.gammaUrl}/markets?condition_id=${conditionId}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            return data && data.length > 0 ? data[0] : null;
+        } catch (error) {
+            return null;
+        }
+    }
 }

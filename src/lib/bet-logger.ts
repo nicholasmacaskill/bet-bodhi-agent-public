@@ -22,11 +22,13 @@ export interface BetLogEntry {
     odds: number;
     amount: number;
     gameStartTime: Date;      // When the game starts (used to compute time_to_kickoff)
-    motivationTag: MotivationTag;
+    motivationTag: MotivationTag | 'external_sync';
     emotionalPulse?: number;  // 1-10: How "pumped up" you feel (10 = euphoric)
     physiologicalScore?: number; // 1-10: How rested/sharp you feel
     researchLog?: string;
     pillarFocus?: string;
+    platform?: 'manual' | 'polymarket' | 'sx' | 'agent';
+    externalId?: string;
 }
 
 export async function logBet(entry: BetLogEntry): Promise<void> {
@@ -72,6 +74,8 @@ export async function logBet(entry: BetLogEntry): Promise<void> {
             result: 'pending',
             time_to_kickoff_minutes: minutesToKickoff,
             motivation_tag: entry.motivationTag,
+            platform: entry.platform || 'manual',
+            external_id: entry.externalId,
         }]);
 
     if (betError) {

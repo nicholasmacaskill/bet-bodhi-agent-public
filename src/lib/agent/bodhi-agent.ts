@@ -1,4 +1,5 @@
 import { BodhiPrism } from './prism';
+import { SyncService } from './sync-service';
 import { supabaseAdmin } from '../supabase-admin';
 import { PolymarketApi } from '../polymarket-api';
 import { SxBetApi } from '../sx-bet-api';
@@ -19,6 +20,10 @@ export class BodhiAgent {
         console.log(`\n=====================================================`);
         console.log(`   🌅 ${this.identity}: MORNING BRIEFING (${date})   `);
         console.log(`=====================================================\n`);
+
+        // 0. Auto-sync external bets
+        const syncService = new SyncService();
+        await syncService.runSync();
 
         const liveBalance = await this.polyApi.getUSDCBalance();
         const bankroll = liveBalance > 0 ? liveBalance : 464.00;
@@ -105,6 +110,20 @@ export class BodhiAgent {
                     play,
                     result,
                     stake: safeStake
+                });
+
+                // Auto-log to performance tracking table
+                await this.prism.recordBet({
+                    team: play.valueTeam,
+                    sport: play.sport || "Unknown",
+                    odds: 1 / (play.polySharePrice || 0.50),
+                    amount: safeStake,
+                    gameStartTime: new Date(Date.now() + 3600000), // Default 1hr; real logic would use play game object
+                    motivationTag: 'bodhi_signal',
+                    emotionalPulse: 5, // Neutral for auto-agent
+                    physiologicalScore: 10, // AI is always rested
+                    researchLog: `Auto-executed by Bodhi Agent. Confidence: ${play.overallConfidence}%`,
+                    pillarFocus: 'automated_edge'
                 });
             } else {
                 console.log(`   (No Polymarket ID, skipping for now)`);

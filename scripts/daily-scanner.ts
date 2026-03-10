@@ -24,6 +24,7 @@ import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
 import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { MMAPillarAnalyzer } from '../src/lib/mma-pillar-analyzer';
 import { SxBetApi } from '../src/lib/sx-bet-api';
+import { SyncService } from '../src/lib/agent/sync-service';
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -310,6 +311,9 @@ function renderSummary(results: ScanResult[]): void {
 // ─── Scan all sports ──────────────────────────────────────────────────────────
 
 async function runScan(date: string): Promise<void> {
+    const syncService = new SyncService();
+    await syncService.runSync();
+
     const polyApi = new PolymarketApi();
     console.log(`${BOLD}${CYAN}🔄 Syncing Live Bankroll from Polygon...${RESET}`);
     let liveBalance = await polyApi.getUSDCBalance();

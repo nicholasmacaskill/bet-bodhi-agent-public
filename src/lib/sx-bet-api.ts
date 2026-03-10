@@ -89,4 +89,35 @@ export class SxBetApi {
             message: "Order signed. (Broadcasting stubbed for safety until fully verified)"
         };
     }
+
+    /**
+     * Fetches filled orders (trades) for the configured wallet.
+     */
+    async getUserTrades() {
+        const privateKey = process.env.WALLET_PRIVATE_KEY;
+        if (!privateKey || privateKey === 'your_private_key_here') return [];
+
+        try {
+            const wallet = new Wallet(privateKey);
+            const res = await fetch(`${this.apiUrl}/orders?maker=${wallet.address}&status=filled`);
+            const data = await res.json();
+            return data.data?.orders || [];
+        } catch (error) {
+            console.error("Failed to fetch SX Bet trades:", error);
+            return [];
+        }
+    }
+
+    /**
+     * Resolves market details for a specific marketHash.
+     */
+    async getMarketDetails(marketHash: string) {
+        try {
+            const res = await fetch(`${this.apiUrl}/markets/${marketHash}`);
+            const data = await res.json();
+            return data.data?.market || null;
+        } catch (error) {
+            return null;
+        }
+    }
 }
