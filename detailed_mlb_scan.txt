@@ -1,0 +1,775 @@
+
+🔄 BODHI AUTO-SYNC: Checking for external trades...
+✨ No new external trades found.
+
+[1m[36m🔄 Syncing Live Bankroll from Polygon...[0m
+[32m✅ Linked to Live Bankroll: $435.66 USDC.e[0m
+[2m   Using Proxy Wallet: 0x98652277eb9f1164d121c207e7a620710072f6af[0m
+[1m[36m╔════════════════════════════════════════════════════════════════════╗
+║        🔍 BODHI DAILY SCANNER  —  Wednesday, March 11, 2026        ║
+╚════════════════════════════════════════════════════════════════════╝[0m
+  [2mScanning date: 2026-03-11  |  Last updated: 4:41:48 PM[0m
+
+  [36m⟳[0m Fetching Global Web3 Sports Markets & Balance...
+  [32m✓[0m Synced 5431 active conditions
+  [32m✓[0m Live Bankroll: [1m$435.66[0m
+
+  [36m⟳[0m Fetching MLB games & Traditional Odds...  [32m✓[0m MLB: 12 games found
+  [36m⟳[0m Fetching NHL games...  [32m✓[0m NHL: 2 games found
+  [36m⟳[0m Fetching NBA games...  [32m✓[0m NBA: 6 games found
+  [36m⟳[0m Fetching MMA events...  [32m✓[0m MMA: 2 fights found
+
+  [2mTotal: 22 matchups scanned across all sports[0m
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mPittsburgh Pirates @ Baltimore Orioles[0m  [2m1:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Noah Davis (Away) vs. Kyle Bradish (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[██████████] 10/10[0m
+  │      [2mMarginal Technical Edge: Our model gives the Pittsburgh[0m
+  │      [2mPirates a slight +14.0 Strength lead over the Baltimore[0m
+  │      [2mOrioles. With Noah Davis on the mound, this is a[0m
+  │      [2mlow-disparity lean that requires other confirmatory signals[0m
+  │      [2mbefore sizing up.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m85%[0m
+  [1mSIGNAL[0m      [2m⏭  PRESEASON CONVICTION - Bet Pittsburgh Pirates (Implied Edge: +35.0%).[0m
+  [1mSTAKE [Live][0m  [35mAggressive (7.5%)[0m [2m→[0m [32m$32.67[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mSt. Louis Cardinals @ Washington Nationals[0m  [2m1:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Dustin May (Away) vs. Cade Cavalli (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[██████░░░░] 6/10[0m
+  │      [2mMarginal Technical Edge: Our model gives the Washington[0m
+  │      [2mNationals a slight +1.0 Strength lead over the St. Louis[0m
+  │      [2mCardinals. With Cade Cavalli on the mound, this is a[0m
+  │      [2mlow-disparity lean that requires other confirmatory signals[0m
+  │      [2mbefore sizing up.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 65.0%.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [36m[█████████████░░░░░░░][0m [1m65%[0m
+  [1mSIGNAL[0m      [2m⏭  PRESEASON CONVICTION - Bet Washington Nationals (Implied Edge: +15.0%).[0m
+  [1mSTAKE [Live][0m  [35mCaution (2.0%)[0m [2m→[0m [32m$8.71[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mDetroit Tigers @ Minnesota Twins[0m  [2m1:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Tanner Rainey (Away) vs. Taj Bradley (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Minnesota Twins and Detroit[0m
+  │      [2mTigers show comparable strength metrics. This matchup is[0m
+  │      [2mexpected to be decided by situational execution, weather, or[0m
+  │      [2mlate-game management rather than structural advantages in[0m
+  │      [2mour model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mTampa Bay Rays @ Atlanta Braves[0m  [2m1:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Nick Martinez (Away) vs. Spencer Strider (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[██████████] 10/10[0m
+  │      [2mDominant Pitching Advantage: Spencer Strider is one of the[0m
+  │      [2mleague's elite starters (top-10% xERA/Whiff%) and starts for[0m
+  │      [2mthe Atlanta Braves today. Facing Nick Martinez, our model[0m
+  │      [2midentifies a clear +16.0 technical edge in this arms race.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m85%[0m
+  [1mSIGNAL[0m      [2m⏭  PRESEASON CONVICTION - Bet Atlanta Braves (Implied Edge: +35.0%).[0m
+  [1mSTAKE [Live][0m  [35mAggressive (7.5%)[0m [2m→[0m [32m$32.67[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mHouston Astros @ Miami Marlins[0m  [2m1:10 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Tatsuya Imai (Away) vs. Max Meyer (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Miami Marlins and Houston[0m
+  │      [2mAstros show comparable strength metrics. This matchup is[0m
+  │      [2mexpected to be decided by situational execution, weather, or[0m
+  │      [2mlate-game management rather than structural advantages in[0m
+  │      [2mour model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mKansas City Royals @ Chicago Cubs[0m  [2m4:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Mitch Spence (Away) vs. Colin Rea (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Chicago Cubs and Kansas City[0m
+  │      [2mRoyals show comparable strength metrics. This matchup is[0m
+  │      [2mexpected to be decided by situational execution, weather, or[0m
+  │      [2mlate-game management rather than structural advantages in[0m
+  │      [2mour model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mSan Francisco Giants @ Kansas City Royals[0m  [2m4:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Tyler Mahle (Away) vs. Bailey Falter (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Kansas City Royals and San[0m
+  │      [2mFrancisco Giants show comparable strength metrics. This[0m
+  │      [2mmatchup is expected to be decided by situational execution,[0m
+  │      [2mweather, or late-game management rather than structural[0m
+  │      [2madvantages in our model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mLos Angeles Angels @ Chicago White Sox[0m  [2m4:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Alek Manoah (Away) vs. Anthony Kay (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Chicago White Sox and Los[0m
+  │      [2mAngeles Angels show comparable strength metrics. This[0m
+  │      [2mmatchup is expected to be decided by situational execution,[0m
+  │      [2mweather, or late-game management rather than structural[0m
+  │      [2madvantages in our model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mGrapefruit League: Neutral environment.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mMilwaukee Brewers @ Cincinnati Reds[0m  [2m4:05 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Robert Gasser (Away) vs. Andrew Abbott (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[██████████] 10/10[0m
+  │      [2mDominant Pitching Advantage: Andrew Abbott is one of the[0m
+  │      [2mleague's elite starters (top-10% xERA/Whiff%) and starts for[0m
+  │      [2mthe Cincinnati Reds today. Facing Robert Gasser, our model[0m
+  │      [2midentifies a clear +15.0 technical edge in this arms race.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m85%[0m
+  [1mSIGNAL[0m      [2m⏭  PRESEASON CONVICTION - Bet Cincinnati Reds (Implied Edge: +35.0%).[0m
+  [1mSTAKE [Live][0m  [35mAggressive (7.5%)[0m [2m→[0m [32m$32.67[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mAthletics @ Arizona Diamondbacks[0m  [2m4:10 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Luis Morales (Away) vs. Ryne Nelson (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both Arizona Diamondbacks and[0m
+  │      [2mAthletics show comparable strength metrics. This matchup is[0m
+  │      [2mexpected to be decided by situational execution, weather, or[0m
+  │      [2mlate-game management rather than structural advantages in[0m
+  │      [2mour model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mColorado Rockies @ Seattle Mariners[0m  [2m4:10 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Chase Dollander (Away) vs. Luis Castillo (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[██████████] 10/10[0m
+  │      [2mDominant Pitching Advantage: Luis Castillo is one of the[0m
+  │      [2mleague's elite starters (top-10% xERA/Whiff%) and starts for[0m
+  │      [2mthe Seattle Mariners today. Facing Chase Dollander, our[0m
+  │      [2mmodel identifies a clear +15.0 technical edge in this arms[0m
+  │      [2mrace.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [33m[███████░░░] 7/10[0m
+  │      [2mPRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [32m[█████████████████░░░][0m [1m85%[0m
+  [1mSIGNAL[0m      [2m⏭  PRESEASON CONVICTION - Bet Seattle Mariners (Implied Edge: +35.0%).[0m
+  [1mSTAKE [Live][0m  [35mAggressive (7.5%)[0m [2m→[0m [32m$32.67[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m⚾ MLB  [37mToronto Blue Jays @ New York Yankees[0m  [2m6:35 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPitchers:[0m Eric Lauer (Away) vs. Cam Schlittler (Home)
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEven Technical Profile: Both New York Yankees and Toronto[0m
+  │      [2mBlue Jays show comparable strength metrics. This matchup is[0m
+  │      [2mexpected to be decided by situational execution, weather, or[0m
+  │      [2mlate-game management rather than structural advantages in[0m
+  │      [2mour model.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mCactus League: Dry air offensive boost. Watch totals.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 7.5% unit size is sustainable.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mEarly spring motivation is generally neutral unless roster[0m
+  │      [2mbattles are flagged.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mNeutral mindset assumed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [2m[██████░░░░░░░░░░░░░░][0m [1m30%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mMontréal Canadiens @ Ottawa Senators[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Montréal Canadiens [$0.36] | Ottawa Senators [$0.64]
+  [36mCondition ID:[0m [2m0x83ce6ac55f89531c9d8cd849a88d82fd839444b8c259ce63974a41c138f92b45[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+
+  [1mGOALIES[0m
+  ├─ [36mJ. Dobes            [0m [2mSV%: 0.892  GAA: 2.97[0m
+  └─ [36mJ. Reimer           [0m [2mSV%: 0.882  GAA: 2.53[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mThe technical metrics are perfectly balanced. This matchup[0m
+  │      [2mis expected to be a defensive battle decided by special[0m
+  │      [2mteams or late-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard tactical motivation. No extreme rivalry or[0m
+  │      [2m'must-win' outlier detected.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mStable mindset confirmed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mWashington Capitals @ Philadelphia Flyers[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Washington Capitals [$0.56] | Philadelphia Flyers [$0.45]
+  [36mCondition ID:[0m [2m0x74cb923ee08f7f32c7f3e83f296bd2d613b9ab7c850536eceea37c871552e3b7[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+
+  [1mGOALIES[0m
+  ├─ [36mC. Lindgren         [0m [2mSV%: 0.881  GAA: 3.41[0m
+  └─ [36mD. Vladar           [0m [2mSV%: 0.903  GAA: 2.52[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mThe technical metrics are perfectly balanced. This matchup[0m
+  │      [2mis expected to be a defensive battle decided by special[0m
+  │      [2mteams or late-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season consistency: Trend lines favor high-volume[0m
+  │      [2mshooters tonight.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard tactical motivation. No extreme rivalry or[0m
+  │      [2m'must-win' outlier detected.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [33m[████████░░] 8/10[0m
+  │      [2mStable mindset confirmed (8/10).[0m
+  └─ [1mPhysiological/Spiritual [0m [32m[█████████░] 9/10[0m
+         [2mPositive resonance: State of /scan supports high-clarity[0m
+         [2mexecution.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mCleveland Cavaliers @ Orlando Magic[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Cleveland Cavaliers [$0.60] | Orlando Magic [$0.40]
+  [36mCondition ID:[0m [2m0xfeb83d6b0a5cdd4b29d6c2511a143a894f4d93f0acf4e680c3ff7aa26a933eeb[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are perfectly balanced. This matchup is[0m
+  │      [2mexpected to be decided by non-technical variables or[0m
+  │      [2mlate-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mToronto Raptors @ New Orleans Pelicans[0m  [2m8:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Toronto Raptors [$0.56] | New Orleans Pelicans [$0.43]
+  [36mCondition ID:[0m [2m0x4f67296807ad1b64f70297d77a059ab9f00fead8febb757116e772c244247e76[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are perfectly balanced. This matchup is[0m
+  │      [2mexpected to be decided by non-technical variables or[0m
+  │      [2mlate-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mNew York Knicks @ Utah Jazz[0m  [2m9:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m New York Knicks [$0.90] | Utah Jazz [$0.10]
+  [36mCondition ID:[0m [2m0x634878881a85b9d922dad538381b0c6b1047f062a9d73105e5564ed509bc3040[0m
+  [36mBodhi Action:[0m [2mPASS - Negative EV (-16.2%). Crowd hates this bet.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[█████████░] 9/10[0m
+  │      [2mThis is a profile of Pure Efficiency. The undefined maintain[0m
+  │      [2ma dominant +8.7 Net Rating edge, ranking in the top-tier of[0m
+  │      [2mNBA production on both ends of the floor.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [2m[██░░░░░░░░] 2/10[0m
+  │      [2mFading Crowd. Bodhi lean strongly opposed by Polymarket.[0m
+  │      [2mNegative EV (-16.2%).[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m73%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Negative EV (-16.2%). Crowd hates this bet.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mHouston Rockets @ Denver Nuggets[0m  [2m10:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Houston Rockets [$0.29] | Denver Nuggets [$0.70]
+  [36mCondition ID:[0m [2m0xb2285e88b8e91389a8cf706e909b01b7e0f4ae125ac96c85f7bdf41f8a5c1926[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are perfectly balanced. This matchup is[0m
+  │      [2mexpected to be decided by non-technical variables or[0m
+  │      [2mlate-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mCharlotte Hornets @ Sacramento Kings[0m  [2m10:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Charlotte Hornets [$0.86] | Sacramento Kings [$0.14]
+  [36mCondition ID:[0m [2m0x47ee57215a38311986058e54bef61324abce104a493ab5e609d7bdec37b75200[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are perfectly balanced. This matchup is[0m
+  │      [2mexpected to be decided by non-technical variables or[0m
+  │      [2mlate-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mMinnesota Timberwolves @ LA Clippers[0m  [2m10:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Minnesota Timberwolves [$0.47] | LA Clippers [$0.54]
+  [36mCondition ID:[0m [2m0x5ca5cffdbe6ca4ee625dc6d6a4b4e307cb4ae9baeb08c17ba62a0f8e91d4ad45[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░] 5/10[0m
+  │      [2mEfficiency metrics are perfectly balanced. This matchup is[0m
+  │      [2mexpected to be decided by non-technical variables or[0m
+  │      [2mlate-game execution.[0m
+  ├─ [1mSeasonal (Sport)        [0m [33m[███████░░░] 7/10[0m
+  │      [2mMid-season fatigue profiles: Looking for rest advantage and[0m
+  │      [2mpace mismatches.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard rest cycle. No high-frequency travel fatigue[0m
+  │      [2mflagged.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll is healthy. 4% unit size is sustainable.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mBrandon Moreno vs Lone'er Kavanagh[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance) [0m [32m[█████████░] 9/10[0m
+  │      [2mStrike volume differential favors Lone'er Kavanagh (+1.12[0m
+  │      [2mindex).[0m
+  ├─ [1mSeasonal (Environment)  [0m [33m[███████░░░] 7/10[0m
+  │      [2mAltitude baseline: Both fighters show disciplined cardio[0m
+  │      [2mprofiles.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard matchup intent. No championship-level psychological[0m
+  │      [2mmultipliers detected.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll capacity supports MMA variance.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m77%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mMarlon Vera vs David Martinez[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance) [0m [32m[██████████] 10/10[0m
+  │      [2mStrike volume differential favors David Martinez (+2.92[0m
+  │      [2mindex).[0m
+  ├─ [1mSeasonal (Environment)  [0m [2m[████░░░░░░] 4/10[0m
+  │      [2mAltitude warning: Marlon Vera absorbs high volume[0m
+  │      [2m(5.37/min). High risk of gassing in Mexico City.[0m
+  ├─ [1mPsychological (Players) [0m [36m[██████░░░░] 6/10[0m
+  │      [2mStandard matchup intent. No championship-level psychological[0m
+  │      [2mmultipliers detected.[0m
+  ├─ [1mTechnical (Bookies)     [0m [36m[█████░░░░░] 5/10[0m
+  │      [2mNo Polymarket match found. Neutral default.[0m
+  ├─ [1mTechnical (Bankroll)    [0m [32m[█████████░] 9/10[0m
+  │      [2mBankroll capacity supports MMA variance.[0m
+  ├─ [1mPsychological (Bettor)  [0m [32m[██████████] 10/10[0m
+  │      [2mFlow state confirmed. Objective Bodhi signals followed.[0m
+  └─ [1mPhysiological/Spiritual [0m [33m[████████░░] 8/10[0m
+         [2mBio-feedback neutral. Decision crispness high.[0m
+
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m74%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m[33m📊 WEB3 ARBITRAGE SUMMARY[0m  [2m(sorted by Bodhi confidence)[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+  [1m[2m#  Sport  Matchup                              Target             Cost   EV      Stake[0m
+  [2m─────────────────────────────────────────────────────────────────────────────────────[0m
+   1  MLB    Pittsburgh Pirates @ Baltimore Oriol PIRATES            $0.50  [32m+35.0% [0m [32m$32.67[0m
+   2  MLB    Tampa Bay Rays @ Atlanta Braves      BRAVES             $0.50  [32m+35.0% [0m [32m$32.67[0m
+   3  MLB    Milwaukee Brewers @ Cincinnati Reds  REDS               $0.50  [32m+35.0% [0m [32m$32.67[0m
+   4  MLB    Colorado Rockies @ Seattle Mariners  MARINERS           $0.50  [32m+35.0% [0m [32m$32.67[0m
+   5  MLB    St. Louis Cardinals @ Washington Nat NATIONALS          $0.50  [36m+15.0% [0m [32m$8.71[0m
+

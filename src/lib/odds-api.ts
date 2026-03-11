@@ -63,10 +63,25 @@ export class OddsApi {
     public async getOdds(sportKey: string): Promise<OddsData[]> {
         // Try live API if key is present and not the placeholder
         if (this.apiKey && this.apiKey !== 'your_sportsbook_api_key' && !this.apiKey.startsWith('LOCAL_')) {
-            const url = `${this.baseUrl}/${sportKey}/odds/?apiKey=${this.apiKey}&regions=us&markets=h2h&oddsFormat=decimal`;
+            const cleanSportKey = sportKey.replace('_preseason', '');
+            const url = `${this.baseUrl}/${cleanSportKey}/odds/?apiKey=${this.apiKey}&regions=us&markets=h2h&oddsFormat=decimal`;
             try {
                 const response = await fetch(url);
-                if (response.ok) return await response.json();
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data && data.length > 0) {
+                        // Check if any games are for "today" (roughly defined as within the next 24h)
+                        const now = new Date();
+                        const tomorrow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+                        const hasTodayGames = data.some((g: any) => {
+                            const startTime = new Date(g.commence_time);
+                            return startTime >= now && startTime <= tomorrow;
+                        });
+
+                        if (hasTodayGames || data.length > 10) return data;
+                        console.log(`Live API has ${data.length} future games but none for today. Trying ESPN fallback...`);
+                    }
+                }
             } catch (e) {
                 console.warn(`Live API call failed for ${sportKey}, trying fallbacks...`);
             }
@@ -140,12 +155,12 @@ export class OddsApi {
         }
     }
 
-    private americanToDecimal(american: number): number {
-        if (american >= 0) {
-            return (american / 100) + 1;
-        } else {
-            return (100 / Math.abs(american)) + 1;
-        }
+    private americanToDecimal(american: number | string | undefined): number {
+        if (american === undefined || american === null) return 1.91; // Standard vig fallback
+        const num = typeof american === 'string' ? parseFloat(american) : american;
+        if (isNaN(num)) return 1.91;
+        if (num > 0) return (num / 100) + 1;
+        return (100 / Math.abs(num)) + 1;
     }
 
     private getMockOdds(sportKey: string): OddsData[] {

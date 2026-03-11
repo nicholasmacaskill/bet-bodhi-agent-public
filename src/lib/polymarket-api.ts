@@ -69,6 +69,46 @@ export class PolymarketApi {
     }
 
     /**
+     * Searches for a specific matchup market based on team names.
+     */
+    async getMarketByTeams(homeTeam: string, awayTeam: string): Promise<PolyMarket | null> {
+        const homeMascot = homeTeam.split(' ').pop()?.toLowerCase() || "";
+        const awayMascot = awayTeam.split(' ').pop()?.toLowerCase() || "";
+        
+        try {
+            const url = `${this.gammaUrl}/events?active=true&closed=false&limit=50&query=${encodeURIComponent(homeMascot)}`;
+            const response = await fetch(url);
+            if (!response.ok) return null;
+            
+            const data = await response.json();
+            if (!data || !Array.isArray(data)) return null;
+
+            for (const event of data) {
+                const title = event.title.toLowerCase();
+                if (title.includes(homeMascot) && title.includes(awayMascot)) {
+                    if (event.markets && event.markets.length > 0) {
+                        const market = event.markets[0];
+                        return {
+                            conditionId: market.conditionId,
+                            question: market.question,
+                            description: market.description || event.description || "",
+                            outcomes: market.outcomes ? JSON.parse(market.outcomes) : [],
+                            outcomePrices: market.outcomePrices ? JSON.parse(market.outcomePrices) : [],
+                            category: event.category,
+                            active: market.active,
+                            volume: parseFloat(market.volume || "0"),
+                            endDate: market.endDate
+                        };
+                    }
+                }
+            }
+            return null;
+        } catch (error) {
+            return null;
+        }
+    }
+
+    /**
      * Fetches the USDC balance for the configured wallet on Polygon.
      */
     async getUSDCBalance(): Promise<number> {

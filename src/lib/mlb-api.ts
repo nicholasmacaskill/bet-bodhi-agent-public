@@ -154,4 +154,48 @@ export class MLBApi {
             return [];
         }
     }
+
+    /**
+     * Fetch basic person details (handedness, etc).
+     */
+    async getPersonDetails(personId: number): Promise<any> {
+        const url = `${this.baseUrl}/people/${personId}`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.people ? data.people[0] : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * Fetch player stats for a specific group and season.
+     */
+    async getPlayerStats(personId: number, group: 'hitting' | 'pitching', season: string = '2026'): Promise<any> {
+        const url = `${this.baseUrl}/people/${personId}/stats?stats=statsSingleSeason&group=${group}&season=${season}&gameType=S`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!data.stats || data.stats.length === 0) return null;
+            return data.stats[0].splits[0]?.stat || null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * Fetch vs-Handedness splits for a player.
+     */
+    async getHandednessSplits(personId: number, group: 'hitting' | 'pitching'): Promise<any> {
+        const url = `${this.baseUrl}/people/${personId}/stats?stats=statSplits&group=${group}&season=2024&gameType=R`; // Use 2024 Reg Season for deeper samples
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!data.stats) return [];
+            return data.stats[0]?.splits || [];
+        } catch (e) {
+            return [];
+        }
+    }
 }

@@ -113,14 +113,28 @@ bot.on('text', async (ctx, next) => {
         await ctx.reply(`✅ *Sentiment Locked:* ${ctx.session.mood} (${ctx.session.calmness}/10)\nRisk parameters adjusted.`, { parse_mode: 'Markdown' });
 
         if (ctx.session.pendingCommand) {
-            ctx.session.pendingCommand = undefined;
-            return unifiedScan(ctx);
+            return handlePendingCommand(ctx);
         }
         return;
     }
 
     return next();
 });
+
+async function handlePendingCommand(ctx: any) {
+    const cmd = ctx.session.pendingCommand;
+    ctx.session.pendingCommand = undefined;
+
+    if (!cmd) return;
+
+    if (cmd.startsWith('/analyze')) {
+        const team = cmd.replace('/analyze', '').trim();
+        return runDeepDive(ctx, team);
+    } else {
+        // Default to unified scan for /scan or legacy pending commands
+        return unifiedScan(ctx);
+    }
+}
 
 bot.command('sentiment', (ctx) => startSentimentFlow(ctx));
 
@@ -344,8 +358,94 @@ bot.command('balance', async (ctx) => {
     } catch (e: any) { ctx.reply(`❌ Error: ${e.message}`); }
 });
 
+bot.command('analyze', async (ctx) => {
+    const args = ctx.message.text.split(' ');
+    if (args.length < 2) {
+        return ctx.reply("❌ Usage: /analyze [team_name]");
+    }
+    const team = args.slice(1).join(' ');
+    
+    if (await ensureSentiment(ctx, `/analyze ${team}`)) {
+        return runDeepDive(ctx, team);
+    }
+});
+
+async function runDeepDive(ctx: any, team: string) {
+    if (!team) return ctx.reply("❌ No team specified for technical breakdown.");
+    
+    const statusMsg = await ctx.reply(`🔍 *BODHI DEEP DIVE:* Analyzing ${team.toUpperCase()}...`, { parse_mode: 'Markdown' });
+    
+    try {
+        const mood = ctx.session.mood || "sharp";
+        const calmness = ctx.session.calmness || 10;
+        
+        const { stdout } = await execAsync(`npx tsx scripts/analyze-single-matchup.ts "${team}"`);
+        
+        const jsonMatch = stdout.match(/DEEP_DIVE_START\n([\s\S]*?)\nDEEP_DIVE_END/);
+        if (!jsonMatch) {
+            await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
+            return ctx.reply(`❌ Could not find a deep-dive for "${team}" today.`);
+        }
+
+        const data = JSON.parse(jsonMatch[1]);
+        const html = renderDeepDiveHTML(data);
+        
+        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
+        await sendLongMessage(ctx, html, 'HTML');
+
+    } catch (error: any) {
+        await ctx.reply(`❌ Deep Analysis failed: ${error.message}`);
+    }
+}
+
+function renderDeepDiveHTML(data: any) {
+    const { matchup, starterBattle, bullpenHealth, teamBreakdown, killCriteria, pillarAnalysis } = data;
+    
+    let msg = `🏛️ <b>BODHI DEEP DIVE ANALYSIS</b>\n`;
+    msg += `⚾ <b>${matchup}</b>\n`;
+    msg += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    msg += `🤺 <b>STARTER BATTLE</b>\n`;
+    msg += `• <b>AWAY:</b> ${starterBattle.away.name}\n`;
+    msg += `  <i>${starterBattle.away.note}</i>\n`;
+    msg += `• <b>HOME:</b> ${starterBattle.home.name}\n`;
+    msg += `  <i>${starterBattle.home.note}</i>\n\n`;
+
+    msg += `🏥 <b>BULLPEN HEALTH</b>\n`;
+    msg += `• <b>AWAY:</b> ${bullpenHealth.away}\n`;
+    msg += `• <b>HOME:</b> ${bullpenHealth.home}\n\n`;
+
+    msg += `🔥 <b>TEAM BREAKDOWN: AWAY (${teamBreakdown.away.name})</b>\n`;
+    msg += `• <b>Resonance:</b> <i>${teamBreakdown.away.resonance}</i>\n`;
+    msg += `• <b>Advantage:</b> <i>${teamBreakdown.away.advantage}</i>\n\n`;
+
+    msg += `🔥 <b>TEAM BREAKDOWN: HOME (${teamBreakdown.home.name})</b>\n`;
+    msg += `• <b>Resonance:</b> <i>${teamBreakdown.home.resonance}</i>\n`;
+    msg += `• <b>Advantage:</b> <i>${teamBreakdown.home.advantage}</i>\n\n`;
+
+    msg += `📑 <b>CORE PILLAR READ (STABILITY)</b>\n`;
+    pillarAnalysis.pillars.forEach((p: any, i: number) => {
+        const pillarEmoji = i === 0 ? '💪' : i === 1 ? '📅' : i === 2 ? '👥' : i === 3 ? '🏦' : i === 4 ? '📁' : i === 5 ? '🧠' : '✨';
+        msg += `${pillarEmoji} <b>${p.pillar.toUpperCase()}</b>: ${p.score}/10\n`;
+        msg += `<i>${p.reason.replace(/[<>]/g, "")}</i>\n\n`;
+    });
+
+    if (killCriteria && killCriteria.length > 0) {
+        msg += `🚨 <b>KILL CRITERIA (ABORT)</b>\n`;
+        killCriteria.forEach((crit: string) => {
+            msg += `  • <i>${crit}</i>\n`;
+        });
+        msg += `\n`;
+    }
+
+    msg += `🏹 <b>BODHI VERDICT:</b> ${pillarAnalysis.recommendedAction}\n`;
+    msg += `💵 <b>STAKE:</b> ${pillarAnalysis.recommendedSize} ($${pillarAnalysis.suggestedStake?.toFixed(2)})\n`;
+
+    return msg;
+}
+
 bot.start((ctx) => {
-    ctx.reply("🏹 Bodhi Command Center Online.\n/scan - Full Slate Analysis & Picks\n/sentiment - Update Mindset\n/balance - Check Bankroll");
+    ctx.reply("🏹 Bodhi Command Center Online.\n/scan - Full Slate Analysis & Picks\n/analyze [team] - Deep Matchup Dive\n/sentiment - Update Mindset\n/balance - Check Bankroll");
 });
 
 bot.launch();

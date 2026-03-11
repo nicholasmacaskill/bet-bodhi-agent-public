@@ -404,10 +404,15 @@ async function runScan(date: string): Promise<void> {
 
             const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
             const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
-            const condition = polyMarkets.find(m =>
+            let condition = polyMarkets.find(m =>
                 (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
                 (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
+
+            // Fallback: Direct Targeted Search if generic sync missed it
+            if (!condition) {
+                condition = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam) || undefined;
+            }
 
             // Analysis
             const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
@@ -428,6 +433,14 @@ async function runScan(date: string): Promise<void> {
                     awayOdds: h2h?.outcomes.find((o: any) => o.name === tradGame.away_team)?.price,
                     homeSpread: spreader?.outcomes.find((o: any) => o.name === tradGame.home_team)?.point,
                     awaySpread: spreader?.outcomes.find((o: any) => o.name === tradGame.away_team)?.point,
+                };
+            } else if (!tradGame && condition && condition.outcomePrices && condition.outcomePrices.length >= 2) {
+                // Use Polymarket's own prices as the 'traditional' odds if bookies are missing
+                extOdds = {
+                    homeOdds: 1 / parseFloat(condition.outcomePrices[0]), // Simple reciprocal for decimal odds
+                    awayOdds: 1 / parseFloat(condition.outcomePrices[1]),
+                    homeSpread: -1.5,
+                    awaySpread: 1.5,
                 };
             } else if (!tradGame) {
                 // UI Fallback: Ensures formatting is visible for Spring Training
