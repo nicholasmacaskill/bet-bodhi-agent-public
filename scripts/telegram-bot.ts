@@ -5,6 +5,7 @@ import { exec } from 'child_process';
 import { promisify } from 'util';
 import * as fs from 'fs';
 import * as path from 'path';
+import { supabaseAdmin } from '../src/lib/supabase-admin';
 
 const execAsync = promisify(exec);
 
@@ -162,11 +163,52 @@ async function unifiedScan(ctx: any) {
             .filter((r: any) => r.analysis && r.analysis.polyEV && r.analysis.polyEV >= 0.02)
             .sort((a: any, b: any) => (b.analysis.polyEV || 0) - (a.analysis.polyEV || 0));
 
+        // ---- Fetch Performance Metrics ----
+        let perfString = "";
+        try {
+            const { data: bets } = await supabaseAdmin
+                .from('bets')
+                .select('result, emotional_pulse, created_at')
+                .order('created_at', { ascending: false });
+
+            if (bets && bets.length > 0) {
+                const settled = bets.filter(b => b.result === 'win' || b.result === 'loss');
+                const wins = settled.filter(b => b.result === 'win').length;
+                const losses = settled.filter(b => b.result === 'loss').length;
+                const total = wins + losses;
+                const winRate = total > 0 ? ((wins / total) * 100).toFixed(1) : "0.0";
+
+                // Last 10 String
+                const last10 = settled.slice(0, 10).map(b => b.result === 'win' ? '🟢' : '🔴').reverse().join('');
+
+                // Mindset Volatility (last 7 days)
+                const oneWeekAgo = new Date();
+                oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+                const recentBets = bets.filter(b => new Date(b.created_at) >= oneWeekAgo && b.emotional_pulse != null);
+                
+                let volString = "N/A";
+                if (recentBets.length > 0) {
+                    const pulses = recentBets.map(b => Number(b.emotional_pulse));
+                    const maxPulse = Math.max(...pulses);
+                    const minPulse = Math.min(...pulses);
+                    volString = `Swinging from ${maxPulse} (High) to ${minPulse} (Low)`;
+                }
+
+                perfString = `📈 **PERFORMANCE & PSYCHOMETRICS**\n`;
+                perfString += `🎯 *Win Rate:* ${winRate}% (${wins}W - ${losses}L)\n`;
+                perfString += `🔥 *Last 10:* ${last10 || 'N/A'}\n`;
+                perfString += `🧠 *Mindset Volatility:* ${volString}\n\n`;
+            }
+        } catch (err) {
+            console.error("Failed to fetch perf metrics:", err);
+        }
+
         // Message 1: Summary & Picks (Markdown)
         let summaryMsg = `🏛️ **BODHI MASTER SCAN SUMMARY**\n`;
         summaryMsg += `📅 Date: ${new Date().toLocaleDateString()} | 🕒 ${new Date().toLocaleTimeString()}\n`;
         summaryMsg += `👤 *Bettor State:* ${mood} (${calmness}/10)\n`;
         summaryMsg += `📊 *Total Scanned:* ${results.length} matchups\n\n`;
+        if (perfString) summaryMsg += perfString;
 
         if (allPicks.length > 0) {
             summaryMsg += `💎 **ALL VALUE PLAYS DETECTED**\n`;
