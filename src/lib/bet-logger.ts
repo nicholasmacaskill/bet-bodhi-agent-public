@@ -70,7 +70,7 @@ export async function logBet(entry: BetLogEntry): Promise<void> {
             emotional_pulse: entry.emotionalPulse ?? 5,
             physiological_score: entry.physiologicalScore ?? 5,
             research_log: entry.researchLog ?? '',
-            pillar_focus: entry.pillarFocus ?? 'general',
+            pillar_focus: entry.pillarFocus ?? 'technical_sport',
             result: 'pending',
             time_to_kickoff_minutes: minutesToKickoff,
             motivation_tag: entry.motivationTag,
@@ -91,7 +91,7 @@ export async function logBet(entry: BetLogEntry): Promise<void> {
                 emotional_pulse: entry.emotionalPulse ?? 5,
                 physiological_score: entry.physiologicalScore ?? 5,
                 research_log: entry.researchLog ?? '',
-                pillar_focus: entry.pillarFocus ?? 'general',
+                pillar_focus: entry.pillarFocus ?? 'technical_sport',
                 result: 'pending',
             }]);
         } else {
