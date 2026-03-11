@@ -1,440 +1,20 @@
 {
-  "lastUpdated": "2026-03-10T21:04:13.549Z",
-  "date": "2026-03-10",
+  "lastUpdated": "2026-03-11T08:11:55.351Z",
+  "date": "2026-03-11",
   "results": [
     {
       "sport": "MLB",
-      "matchup": "Detroit Tigers @ Boston Red Sox",
+      "matchup": "Pittsburgh Pirates @ Baltimore Orioles",
       "analysis": {
-        "gamePk": 831625,
-        "homeTeam": "Boston Red Sox",
-        "awayTeam": "Detroit Tigers",
-        "overallConfidence": 30,
+        "gamePk": 831507,
+        "homeTeam": "Baltimore Orioles",
+        "awayTeam": "Pittsburgh Pirates",
+        "overallConfidence": 85,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Boston Red Sox and Detroit Tigers show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Sonny Gray",
-        "awayPitcher": "Ty Madden",
-        "matchupNotes": "Ty Madden vs Sonny Gray. Even Technical Profile: Both Boston Red Sox and Detroit Tigers show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T17:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Baltimore Orioles @ Houston Astros",
-      "analysis": {
-        "gamePk": 831617,
-        "homeTeam": "Houston Astros",
-        "awayTeam": "Baltimore Orioles",
-        "overallConfidence": 65,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 6,
-            "reason": "Marginal Technical Edge: Our model gives the Houston Astros a slight +1.0 Strength lead over the Baltimore Orioles. With Lance McCullers Jr. on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
-            "side": "home"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 7,
-            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 65.0%.",
-            "side": "home"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "valueTeam": "Houston Astros",
-        "polySharePrice": 0.5,
-        "polyEV": 0.15000000000000002,
-        "polyOutcomeIndex": -1,
-        "executionRoute": "NONE",
-        "recommendedAction": "PRESEASON CONVICTION - Bet Houston Astros (Implied Edge: +15.0%).",
-        "recommendedSize": "Caution (2.0%)",
-        "suggestedStake": 8.58958092,
-        "homePitcher": "Lance McCullers Jr.",
-        "awayPitcher": "Levi Wells",
-        "matchupNotes": "Levi Wells vs Lance McCullers Jr.. Marginal Technical Edge: Our model gives the Houston Astros a slight +1.0 Strength lead over the Baltimore Orioles. With Lance McCullers Jr. on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "polySharePrice": 0.5,
-      "polyEV": 0.15000000000000002,
-      "startTime": "2026-03-10T17:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Minnesota Twins @ Tampa Bay Rays",
-      "analysis": {
-        "gamePk": 831618,
-        "homeTeam": "Tampa Bay Rays",
-        "awayTeam": "Minnesota Twins",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Tampa Bay Rays and Minnesota Twins show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Steven Matz",
-        "awayPitcher": "Joe Ryan",
-        "matchupNotes": "Joe Ryan vs Steven Matz. Even Technical Profile: Both Tampa Bay Rays and Minnesota Twins show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T17:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "New York Yankees @ Philadelphia Phillies",
-      "analysis": {
-        "gamePk": 831573,
-        "homeTeam": "Philadelphia Phillies",
-        "awayTeam": "New York Yankees",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Philadelphia Phillies and New York Yankees show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Tanner Banks",
-        "awayPitcher": "Luis Gil",
-        "matchupNotes": "Luis Gil vs Tanner Banks. Even Technical Profile: Both Philadelphia Phillies and New York Yankees show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T17:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Atlanta Braves @ Toronto Blue Jays",
-      "analysis": {
-        "gamePk": 831513,
-        "homeTeam": "Toronto Blue Jays",
-        "awayTeam": "Atlanta Braves",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Toronto Blue Jays and Atlanta Braves show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Dylan Cease",
-        "awayPitcher": "JR Ritchie",
-        "matchupNotes": "JR Ritchie vs Dylan Cease. Even Technical Profile: Both Toronto Blue Jays and Atlanta Braves show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T17:07:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "St. Louis Cardinals @ New York Mets",
-      "analysis": {
-        "gamePk": 831473,
-        "homeTeam": "New York Mets",
-        "awayTeam": "St. Louis Cardinals",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both New York Mets and St. Louis Cardinals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "David Peterson",
-        "awayPitcher": "Jared Shuster",
-        "matchupNotes": "Jared Shuster vs David Peterson. Even Technical Profile: Both New York Mets and St. Louis Cardinals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T17:10:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Washington Nationals @ Miami Marlins",
-      "analysis": {
-        "gamePk": 831471,
-        "homeTeam": "Miami Marlins",
-        "awayTeam": "Washington Nationals",
-        "overallConfidence": 75,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 8,
-            "reason": "Lineup Depth Edge: The Washington Nationals, featuring CJ Abrams and James Wood, carry a +3.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Eury Pérez will need to contain across 6+ innings. ",
+            "score": 10,
+            "reason": "Marginal Technical Edge: Our model gives the Pittsburgh Pirates a slight +15.0 Strength lead over the Baltimore Orioles. With Noah Davis on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
             "side": "away"
           },
           {
@@ -445,7 +25,7 @@
           {
             "pillar": "Technical (Bookies)",
             "score": 7,
-            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 75.0%.",
+            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.",
             "side": "away"
           },
           {
@@ -469,27 +49,27 @@
             "reason": "Positive resonance: State of /scan supports high-clarity execution."
           }
         ],
-        "valueTeam": "Washington Nationals",
+        "valueTeam": "Pittsburgh Pirates",
         "polySharePrice": 0.5,
-        "polyEV": 0.25,
+        "polyEV": 0.35,
         "polyOutcomeIndex": -1,
         "executionRoute": "NONE",
-        "recommendedAction": "PRESEASON CONVICTION - Bet Washington Nationals (Implied Edge: +25.0%).",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "homePitcher": "Eury Pérez",
-        "awayPitcher": "Foster Griffin",
-        "matchupNotes": "Foster Griffin vs Eury Pérez. Lineup Depth Edge: The Washington Nationals, featuring CJ Abrams and James Wood, carry a +3.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Eury Pérez will need to contain across 6+ innings. ",
+        "recommendedAction": "PRESEASON CONVICTION - Bet Pittsburgh Pirates (Implied Edge: +35.0%).",
+        "recommendedSize": "Aggressive (7.5%)",
+        "suggestedStake": 33.045743175,
+        "homePitcher": "Kyle Bradish",
+        "awayPitcher": "Noah Davis",
+        "matchupNotes": "Noah Davis vs Kyle Bradish. Marginal Technical Edge: Our model gives the Pittsburgh Pirates a slight +15.0 Strength lead over the Baltimore Orioles. With Noah Davis on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
         "advantages": [
-          "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+          "🎯 Vulnerable Matchup: Facing Kyle Bradish (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
           "🏜️ Cactus League dry air offense boost.",
           "✨ High Confidence Signal: Multiple technical pillars (Technical Sport, Seasonal, and Bookies) have cross-verified this entry, confirming a stable edge."
         ],
         "killCriteria": []
       },
       "polySharePrice": 0.5,
-      "polyEV": 0.25,
-      "startTime": "2026-03-10T17:10:00Z",
+      "polyEV": 0.35,
+      "startTime": "2026-03-11T17:05:00Z",
       "traditionalOdds": {
         "homeOdds": 1.88,
         "awayOdds": 1.95,
@@ -499,18 +79,438 @@
     },
     {
       "sport": "MLB",
-      "matchup": "Arizona Diamondbacks @ Los Angeles Dodgers",
+      "matchup": "St. Louis Cardinals @ Washington Nationals",
       "analysis": {
-        "gamePk": 831956,
-        "homeTeam": "Los Angeles Dodgers",
-        "awayTeam": "Arizona Diamondbacks",
-        "overallConfidence": 75,
+        "gamePk": 831465,
+        "homeTeam": "Washington Nationals",
+        "awayTeam": "St. Louis Cardinals",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Washington Nationals and St. Louis Cardinals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Cade Cavalli",
+        "awayPitcher": "Dustin May",
+        "matchupNotes": "Dustin May vs Cade Cavalli. Even Technical Profile: Both Washington Nationals and St. Louis Cardinals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
+      },
+      "startTime": "2026-03-11T17:05:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Detroit Tigers @ Minnesota Twins",
+      "analysis": {
+        "gamePk": 831619,
+        "homeTeam": "Minnesota Twins",
+        "awayTeam": "Detroit Tigers",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Bullpen Game Stability: With Detroit Tigers going to the 'pen, the Detroit Tigers hold a +0.0 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Twins's available arms for today's slate. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Taj Bradley",
+        "awayPitcher": "TBD / Bullpen",
+        "matchupNotes": "TBD / Bullpen vs Taj Bradley. Bullpen Game Stability: With Detroit Tigers going to the 'pen, the Detroit Tigers hold a +0.0 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Twins's available arms for today's slate. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": [
+          "ABORT IF: Expected starter scratch or transition to unknown opener."
+        ]
+      },
+      "startTime": "2026-03-11T17:05:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Tampa Bay Rays @ Atlanta Braves",
+      "analysis": {
+        "gamePk": 831574,
+        "homeTeam": "Atlanta Braves",
+        "awayTeam": "Tampa Bay Rays",
+        "overallConfidence": 85,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
             "score": 10,
-            "reason": "Dominant Pitching Advantage: Tyler Glasnow is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Dodgers today. Facing Brandon Pfaadt, our model identifies a clear +18.0 technical edge in this arms race. ",
+            "reason": "Dominant Pitching Advantage: Spencer Strider is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Atlanta Braves today. Facing Nick Martinez, our model identifies a clear +15.0 technical edge in this arms race. ",
             "side": "home"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 7,
+            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.",
+            "side": "home"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "valueTeam": "Atlanta Braves",
+        "polySharePrice": 0.5,
+        "polyEV": 0.35,
+        "polyOutcomeIndex": -1,
+        "executionRoute": "NONE",
+        "recommendedAction": "PRESEASON CONVICTION - Bet Atlanta Braves (Implied Edge: +35.0%).",
+        "recommendedSize": "Aggressive (7.5%)",
+        "suggestedStake": 33.045743175,
+        "homePitcher": "Spencer Strider",
+        "awayPitcher": "Nick Martinez",
+        "matchupNotes": "Nick Martinez vs Spencer Strider. Dominant Pitching Advantage: Spencer Strider is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Atlanta Braves today. Facing Nick Martinez, our model identifies a clear +15.0 technical edge in this arms race. ",
+        "advantages": [
+          "🔥 Elite Starting Pitcher: Spencer Strider is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+          "🏜️ Cactus League dry air offense boost.",
+          "✨ High Confidence Signal: Multiple technical pillars (Technical Sport, Seasonal, and Bookies) have cross-verified this entry, confirming a stable edge."
+        ],
+        "killCriteria": []
+      },
+      "polySharePrice": 0.5,
+      "polyEV": 0.35,
+      "startTime": "2026-03-11T17:05:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.68,
+        "awayOdds": 2.22
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Houston Astros @ Miami Marlins",
+      "analysis": {
+        "gamePk": 831561,
+        "homeTeam": "Miami Marlins",
+        "awayTeam": "Houston Astros",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Miami Marlins and Houston Astros show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Max Meyer",
+        "awayPitcher": "Tatsuya Imai",
+        "matchupNotes": "Tatsuya Imai vs Max Meyer. Even Technical Profile: Both Miami Marlins and Houston Astros show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
+      },
+      "startTime": "2026-03-11T17:10:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Kansas City Royals @ Chicago Cubs",
+      "analysis": {
+        "gamePk": 831849,
+        "homeTeam": "Chicago Cubs",
+        "awayTeam": "Kansas City Royals",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Chicago Cubs and Kansas City Royals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Colin Rea",
+        "awayPitcher": "Mitch Spence",
+        "matchupNotes": "Mitch Spence vs Colin Rea. Even Technical Profile: Both Chicago Cubs and Kansas City Royals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
+      },
+      "startTime": "2026-03-11T20:05:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "San Francisco Giants @ Kansas City Royals",
+      "analysis": {
+        "gamePk": 831762,
+        "homeTeam": "Kansas City Royals",
+        "awayTeam": "San Francisco Giants",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Kansas City Royals and San Francisco Giants show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Bailey Falter",
+        "awayPitcher": "Tyler Mahle",
+        "matchupNotes": "Tyler Mahle vs Bailey Falter. Even Technical Profile: Both Kansas City Royals and San Francisco Giants show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
+      },
+      "startTime": "2026-03-11T20:05:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Los Angeles Angels @ Chicago White Sox",
+      "analysis": {
+        "gamePk": 831824,
+        "homeTeam": "Chicago White Sox",
+        "awayTeam": "Los Angeles Angels",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Chicago White Sox and Los Angeles Angels show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
           },
           {
             "pillar": "Seasonal (Sport)",
@@ -519,81 +519,6 @@
           },
           {
             "pillar": "Technical (Bookies)",
-            "score": 7,
-            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 75.0%.",
-            "side": "home"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "valueTeam": "Los Angeles Dodgers",
-        "polySharePrice": 0.5,
-        "polyEV": 0.25,
-        "polyOutcomeIndex": -1,
-        "executionRoute": "NONE",
-        "recommendedAction": "PRESEASON CONVICTION - Bet Los Angeles Dodgers (Implied Edge: +25.0%).",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "homePitcher": "Tyler Glasnow",
-        "awayPitcher": "Brandon Pfaadt",
-        "matchupNotes": "Brandon Pfaadt vs Tyler Glasnow. Dominant Pitching Advantage: Tyler Glasnow is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Dodgers today. Facing Brandon Pfaadt, our model identifies a clear +18.0 technical edge in this arms race. ",
-        "advantages": [
-          "🔥 Elite Starting Pitcher: Tyler Glasnow is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
-          "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
-          "✨ High Confidence Signal: Multiple technical pillars (Technical Sport, Seasonal, and Bookies) have cross-verified this entry, confirming a stable edge."
-        ],
-        "killCriteria": []
-      },
-      "polySharePrice": 0.5,
-      "polyEV": 0.25,
-      "startTime": "2026-03-10T20:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "San Francisco Giants @ Cleveland Guardians",
-      "analysis": {
-        "gamePk": 831758,
-        "homeTeam": "Cleveland Guardians",
-        "awayTeam": "San Francisco Giants",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Cleveland Guardians and San Francisco Giants show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
             "score": 5,
             "reason": "No Polymarket match found. Neutral default.",
             "side": "neutral"
@@ -623,17 +548,16 @@
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
-        "homePitcher": "Tanner Bibee",
-        "awayPitcher": "Carson Seymour",
-        "matchupNotes": "Carson Seymour vs Tanner Bibee. Even Technical Profile: Both Cleveland Guardians and San Francisco Giants show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "homePitcher": "Anthony Kay",
+        "awayPitcher": "Alek Manoah",
+        "matchupNotes": "Alek Manoah vs Anthony Kay. Even Technical Profile: Both Chicago White Sox and Los Angeles Angels show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
         "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
           "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
           "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
         ],
         "killCriteria": []
       },
-      "startTime": "2026-03-10T20:05:00Z",
+      "startTime": "2026-03-11T20:05:00Z",
       "traditionalOdds": {
         "homeOdds": 1.88,
         "awayOdds": 1.95,
@@ -643,17 +567,17 @@
     },
     {
       "sport": "MLB",
-      "matchup": "Chicago Cubs @ Texas Rangers",
+      "matchup": "Milwaukee Brewers @ Cincinnati Reds",
       "analysis": {
-        "gamePk": 831920,
-        "homeTeam": "Texas Rangers",
-        "awayTeam": "Chicago Cubs",
-        "overallConfidence": 65,
+        "gamePk": 831793,
+        "homeTeam": "Cincinnati Reds",
+        "awayTeam": "Milwaukee Brewers",
+        "overallConfidence": 85,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
-            "score": 6,
-            "reason": "Marginal Technical Edge: Our model gives the Texas Rangers a slight +1.0 Strength lead over the Chicago Cubs. With Jacob deGrom on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+            "score": 10,
+            "reason": "Dominant Pitching Advantage: Andrew Abbott is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Cincinnati Reds today. Facing Robert Gasser, our model identifies a clear +15.0 technical edge in this arms race. ",
             "side": "home"
           },
           {
@@ -664,7 +588,7 @@
           {
             "pillar": "Technical (Bookies)",
             "score": 7,
-            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 65.0%.",
+            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 85.0%.",
             "side": "home"
           },
           {
@@ -688,240 +612,27 @@
             "reason": "Positive resonance: State of /scan supports high-clarity execution."
           }
         ],
-        "valueTeam": "Texas Rangers",
+        "valueTeam": "Cincinnati Reds",
         "polySharePrice": 0.5,
-        "polyEV": 0.15000000000000002,
+        "polyEV": 0.35,
         "polyOutcomeIndex": -1,
         "executionRoute": "NONE",
-        "recommendedAction": "PRESEASON CONVICTION - Bet Texas Rangers (Implied Edge: +15.0%).",
-        "recommendedSize": "Caution (2.0%)",
-        "suggestedStake": 8.58958092,
-        "homePitcher": "Jacob deGrom",
-        "awayPitcher": "Cade Horton",
-        "matchupNotes": "Cade Horton vs Jacob deGrom. Marginal Technical Edge: Our model gives the Texas Rangers a slight +1.0 Strength lead over the Chicago Cubs. With Jacob deGrom on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "recommendedAction": "PRESEASON CONVICTION - Bet Cincinnati Reds (Implied Edge: +35.0%).",
+        "recommendedSize": "Aggressive (7.5%)",
+        "suggestedStake": 33.045743175,
+        "homePitcher": "Andrew Abbott",
+        "awayPitcher": "Robert Gasser",
+        "matchupNotes": "Robert Gasser vs Andrew Abbott. Dominant Pitching Advantage: Andrew Abbott is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Cincinnati Reds today. Facing Robert Gasser, our model identifies a clear +15.0 technical edge in this arms race. ",
         "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "polySharePrice": 0.5,
-      "polyEV": 0.15000000000000002,
-      "startTime": "2026-03-10T20:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Chicago White Sox @ Athletics",
-      "analysis": {
-        "gamePk": 831918,
-        "homeTeam": "Athletics",
-        "awayTeam": "Chicago White Sox",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Athletics and Chicago White Sox show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Jeffrey Springs",
-        "awayPitcher": "Shane Smith",
-        "matchupNotes": "Shane Smith vs Jeffrey Springs. Even Technical Profile: Both Athletics and Chicago White Sox show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T20:05:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "Cincinnati Reds @ Colorado Rockies",
-      "analysis": {
-        "gamePk": 831898,
-        "homeTeam": "Colorado Rockies",
-        "awayTeam": "Cincinnati Reds",
-        "overallConfidence": 30,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Even Technical Profile: Both Colorado Rockies and Cincinnati Reds show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "executionRoute": "NONE",
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "homePitcher": "Ryan Feltner",
-        "awayPitcher": "Brandon Williamson",
-        "matchupNotes": "Brandon Williamson vs Ryan Feltner. Even Technical Profile: Both Colorado Rockies and Cincinnati Reds show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
-        "advantages": [
-          "🏜️ Cactus League dry air offense boost.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
-          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
-        ],
-        "killCriteria": []
-      },
-      "startTime": "2026-03-10T20:10:00Z",
-      "traditionalOdds": {
-        "homeOdds": 1.88,
-        "awayOdds": 1.95,
-        "homeSpread": -1.5,
-        "awaySpread": 1.5
-      }
-    },
-    {
-      "sport": "MLB",
-      "matchup": "San Diego Padres @ Los Angeles Angels",
-      "analysis": {
-        "gamePk": 831771,
-        "homeTeam": "Los Angeles Angels",
-        "awayTeam": "San Diego Padres",
-        "overallConfidence": 75,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 8,
-            "reason": "Lineup Depth Edge: The Los Angeles Angels, featuring Mike Trout and Jorge Soler, carry a +3.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Walker Buehler will need to contain across 6+ innings. ",
-            "side": "home"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Cactus League: Dry air offensive boost. Watch totals."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 7,
-            "reason": "PRESEASON MODE: No Web3 Market. Bodhi True Prob hits 75.0%.",
-            "side": "home"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10). Risk parameters adjusted."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "valueTeam": "Los Angeles Angels",
-        "polySharePrice": 0.5,
-        "polyEV": 0.25,
-        "polyOutcomeIndex": -1,
-        "executionRoute": "NONE",
-        "recommendedAction": "PRESEASON CONVICTION - Bet Los Angeles Angels (Implied Edge: +25.0%).",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "homePitcher": "Mitch Farris",
-        "awayPitcher": "Walker Buehler",
-        "matchupNotes": "Walker Buehler vs Mitch Farris. Lineup Depth Edge: The Los Angeles Angels, featuring Mike Trout and Jorge Soler, carry a +3.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Walker Buehler will need to contain across 6+ innings. ",
-        "advantages": [
-          "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+          "🔥 Elite Starting Pitcher: Andrew Abbott is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
           "🏜️ Cactus League dry air offense boost.",
           "✨ High Confidence Signal: Multiple technical pillars (Technical Sport, Seasonal, and Bookies) have cross-verified this entry, confirming a stable edge."
         ],
         "killCriteria": []
       },
       "polySharePrice": 0.5,
-      "polyEV": 0.25,
-      "startTime": "2026-03-10T20:10:00Z",
+      "polyEV": 0.35,
+      "startTime": "2026-03-11T20:05:00Z",
       "traditionalOdds": {
         "homeOdds": 1.88,
         "awayOdds": 1.95,
@@ -931,17 +642,86 @@
     },
     {
       "sport": "MLB",
-      "matchup": "Kansas City Royals @ Seattle Mariners",
+      "matchup": "Athletics @ Arizona Diamondbacks",
       "analysis": {
-        "gamePk": 831836,
+        "gamePk": 831950,
+        "homeTeam": "Arizona Diamondbacks",
+        "awayTeam": "Athletics",
+        "overallConfidence": 30,
+        "pillars": [
+          {
+            "pillar": "Technical Roster Advantage",
+            "score": 5,
+            "reason": "Even Technical Profile: Both Arizona Diamondbacks and Athletics show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Seasonal (Sport)",
+            "score": 7,
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
+          },
+          {
+            "pillar": "Technical (Bookies)",
+            "score": 5,
+            "reason": "No Polymarket match found. Neutral default.",
+            "side": "neutral"
+          },
+          {
+            "pillar": "Technical (Bankroll)",
+            "score": 9,
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
+          },
+          {
+            "pillar": "Psychological (Bettor)",
+            "score": 9,
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
+          },
+          {
+            "pillar": "Physiological/Spiritual",
+            "score": 9,
+            "reason": "Positive resonance: State of /scan supports high-clarity execution."
+          }
+        ],
+        "executionRoute": "NONE",
+        "recommendedAction": "PASS - No clear edge.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "homePitcher": "Ryne Nelson",
+        "awayPitcher": "Luis Morales",
+        "matchupNotes": "Luis Morales vs Ryne Nelson. Even Technical Profile: Both Arizona Diamondbacks and Athletics show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "advantages": [
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
+      },
+      "startTime": "2026-03-11T20:10:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.88,
+        "awayOdds": 1.95,
+        "homeSpread": -1.5,
+        "awaySpread": 1.5
+      }
+    },
+    {
+      "sport": "MLB",
+      "matchup": "Colorado Rockies @ Seattle Mariners",
+      "analysis": {
+        "gamePk": 831861,
         "homeTeam": "Seattle Mariners",
-        "awayTeam": "Kansas City Royals",
+        "awayTeam": "Colorado Rockies",
         "overallConfidence": 30,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
             "score": 5,
-            "reason": "Even Technical Profile: Both Seattle Mariners and Kansas City Royals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+            "reason": "Bullpen Game Stability: With Seattle Mariners going to the 'pen, the Colorado Rockies hold a +0.0 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Mariners's available arms for today's slate. ",
             "side": "neutral"
           },
           {
@@ -980,17 +760,19 @@
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
-        "homePitcher": "Cooper Criswell",
-        "awayPitcher": "Cole Ragans",
-        "matchupNotes": "Cole Ragans vs Cooper Criswell. Even Technical Profile: Both Seattle Mariners and Kansas City Royals show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
+        "homePitcher": "TBD / Bullpen",
+        "awayPitcher": "Chase Dollander",
+        "matchupNotes": "Chase Dollander vs TBD / Bullpen. Bullpen Game Stability: With Seattle Mariners going to the 'pen, the Colorado Rockies hold a +0.0 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Mariners's available arms for today's slate. ",
         "advantages": [
           "🏜️ Cactus League dry air offense boost.",
           "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
           "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
         ],
-        "killCriteria": []
+        "killCriteria": [
+          "ABORT IF: Expected starter scratch or transition to unknown opener."
+        ]
       },
-      "startTime": "2026-03-10T20:10:00Z",
+      "startTime": "2026-03-11T20:10:00Z",
       "traditionalOdds": {
         "homeOdds": 1.88,
         "awayOdds": 1.95,
@@ -999,108 +781,24 @@
       }
     },
     {
-      "sport": "NHL",
-      "matchup": "Los Angeles Kings @ Boston Bruins",
+      "sport": "MLB",
+      "matchup": "Toronto Blue Jays @ New York Yankees",
       "analysis": {
-        "homeTeam": "Boston Bruins",
-        "awayTeam": "Los Angeles Kings",
-        "overallConfidence": 77,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 7,
-            "reason": "A stable Technical Lean for the Boston Bruins. Their superior offensive depth (averaging 3.365079365079365 GFA) provides a predictable scoring baseline compared to the opponent's current configuration. ",
-            "side": "home"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 7,
-            "reason": "Small Web3 edge (+7.2% EV) on Boston Bruins.",
-            "side": "home"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "valueTeam": "Boston Bruins",
-        "polyConditionId": "0x5d9c543c8b0f25f01deef24412377cea69b66f4ae512b420d428af5f863be805",
-        "polySharePrice": 0.595,
-        "polyEV": 0.07166666666666666,
-        "polyOutcomeIndex": 1,
-        "homeOdds": 0.595,
-        "awayOdds": 0.405,
-        "recommendedAction": "LEAN - Small EV edge on Boston Bruins. Buy shares.",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "matchupNotes": "A stable Technical Lean for the Boston Bruins. Their superior offensive depth (averaging 3.365079365079365 GFA) provides a predictable scoring baseline compared to the opponent's current configuration. ",
-        "advantages": [
-          "🏒 Superior Offensive Depth: Boston Bruins averages 3.365079365079365 goals per game, indicating a high-volume scoring unit capable of overwhelming vulnerable defenses.",
-          "📉 Price Inefficiency: Current market pricing under-estimates Boston Bruins by 7.2% based on 2026 possession and scoring metrics.",
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play."
-        ]
-      },
-      "polyConditionId": "0x5d9c543c8b0f25f01deef24412377cea69b66f4ae512b420d428af5f863be805",
-      "polySharePrice": 0.595,
-      "polyEV": 0.07166666666666666,
-      "startTime": "2026-03-10T23:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "J. Korpisalo",
-          "svPct": 0.891775,
-          "gaa": 3.277415
-        },
-        "away": {
-          "name": "D. Kuemper",
-          "svPct": 0.89641,
-          "gaa": 2.721251
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "San Jose Sharks @ Buffalo Sabres",
-      "analysis": {
-        "homeTeam": "Buffalo Sabres",
-        "awayTeam": "San Jose Sharks",
-        "overallConfidence": 71,
+        "gamePk": 831620,
+        "homeTeam": "New York Yankees",
+        "awayTeam": "Toronto Blue Jays",
+        "overallConfidence": 30,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
             "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
+            "reason": "Even Technical Profile: Both New York Yankees and Toronto Blue Jays show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
             "side": "neutral"
           },
           {
             "pillar": "Seasonal (Sport)",
             "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
+            "reason": "Cactus League: Dry air offensive boost. Watch totals."
           },
           {
             "pillar": "Technical (Bookies)",
@@ -1111,12 +809,17 @@
           {
             "pillar": "Technical (Bankroll)",
             "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
+            "reason": "Bankroll is healthy. 7.5% unit size is sustainable."
+          },
+          {
+            "pillar": "Psychological (Players)",
+            "score": 6,
+            "reason": "Early spring motivation is generally neutral unless roster battles are flagged."
           },
           {
             "pillar": "Psychological (Bettor)",
             "score": 9,
-            "reason": "Mindset: good (9/10)."
+            "reason": "Mindset: good (9/10). Risk parameters adjusted."
           },
           {
             "pillar": "Physiological/Spiritual",
@@ -1124,40 +827,32 @@
             "reason": "Positive resonance: State of /scan supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0x6802fbb3c4414f183aaaa53aac9fc8c4e7c847ff42f49df4ed1b7d83f528b2f4",
-        "homeOdds": 0.655,
-        "awayOdds": 0.345,
+        "executionRoute": "NONE",
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
+        "homePitcher": "Cam Schlittler",
+        "awayPitcher": "Eric Lauer",
+        "matchupNotes": "Eric Lauer vs Cam Schlittler. Even Technical Profile: Both New York Yankees and Toronto Blue Jays show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. ",
         "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
+          "🏜️ Cactus League dry air offense boost.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-conviction decision making, reducing the emotional risk of this play.",
+          "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+        ],
+        "killCriteria": []
       },
-      "polyConditionId": "0x6802fbb3c4414f183aaaa53aac9fc8c4e7c847ff42f49df4ed1b7d83f528b2f4",
-      "startTime": "2026-03-10T23:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "C. Ellis",
-          "svPct": 0.896458,
-          "gaa": 3.113903
-        },
-        "away": {
-          "name": "A. Nedeljkovic",
-          "svPct": 0.899582,
-          "gaa": 2.831487
-        }
+      "startTime": "2026-03-11T22:35:00Z",
+      "traditionalOdds": {
+        "homeOdds": 1.7,
+        "awayOdds": 2.2
       }
     },
     {
       "sport": "NHL",
-      "matchup": "Toronto Maple Leafs @ Montréal Canadiens",
+      "matchup": "Montréal Canadiens @ Ottawa Senators",
       "analysis": {
-        "homeTeam": "Montréal Canadiens",
-        "awayTeam": "Toronto Maple Leafs",
+        "homeTeam": "Ottawa Senators",
+        "awayTeam": "Montréal Canadiens",
         "overallConfidence": 71,
         "pillars": [
           {
@@ -1198,7 +893,7 @@
             "reason": "Positive resonance: State of /scan supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0xed3cc85dde0a69ae99e32374d7cf732334fdb63a81ce921c0e6543a874ef56c8",
+        "polyConditionId": "0x83ce6ac55f89531c9d8cd849a88d82fd839444b8c259ce63974a41c138f92b45",
         "homeOdds": 0.605,
         "awayOdds": 0.395,
         "recommendedAction": "PASS - No clear edge.",
@@ -1211,27 +906,27 @@
           "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
         ]
       },
-      "polyConditionId": "0xed3cc85dde0a69ae99e32374d7cf732334fdb63a81ce921c0e6543a874ef56c8",
-      "startTime": "2026-03-10T23:00:00Z",
+      "polyConditionId": "0x83ce6ac55f89531c9d8cd849a88d82fd839444b8c259ce63974a41c138f92b45",
+      "startTime": "2026-03-11T23:30:00Z",
       "goalieStats": {
         "home": {
+          "name": "J. Reimer",
+          "svPct": 0.882353,
+          "gaa": 2.529511
+        },
+        "away": {
           "name": "J. Dobes",
-          "svPct": 0.890683,
-          "gaa": 3.032856
-        },
-        "away": {
-          "name": "J. Woll",
-          "svPct": 0.903571,
-          "gaa": 3.130468
+          "svPct": 0.891859,
+          "gaa": 2.965239
         }
       }
     },
     {
       "sport": "NHL",
-      "matchup": "Columbus Blue Jackets @ Tampa Bay Lightning",
+      "matchup": "Washington Capitals @ Philadelphia Flyers",
       "analysis": {
-        "homeTeam": "Tampa Bay Lightning",
-        "awayTeam": "Columbus Blue Jackets",
+        "homeTeam": "Philadelphia Flyers",
+        "awayTeam": "Washington Capitals",
         "overallConfidence": 71,
         "pillars": [
           {
@@ -1272,9 +967,9 @@
             "reason": "Positive resonance: State of /scan supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0x046c1c0ad8938b771d6063c11a4936668f1871b874d34dff5991bb0fad578fc9",
-        "homeOdds": 0.675,
-        "awayOdds": 0.325,
+        "polyConditionId": "0x74cb923ee08f7f32c7f3e83f296bd2d613b9ab7c850536eceea37c871552e3b7",
+        "homeOdds": 0.465,
+        "awayOdds": 0.535,
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
@@ -1285,691 +980,27 @@
           "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
         ]
       },
-      "polyConditionId": "0x046c1c0ad8938b771d6063c11a4936668f1871b874d34dff5991bb0fad578fc9",
-      "startTime": "2026-03-10T23:00:00Z",
+      "polyConditionId": "0x74cb923ee08f7f32c7f3e83f296bd2d613b9ab7c850536eceea37c871552e3b7",
+      "startTime": "2026-03-11T23:30:00Z",
       "goalieStats": {
         "home": {
-          "name": "A. Vasilevskiy",
-          "svPct": 0.914443,
-          "gaa": 2.276412
+          "name": "D. Vladar",
+          "svPct": 0.903392,
+          "gaa": 2.519901
         },
         "away": {
-          "name": "J. Greaves",
-          "svPct": 0.907313,
-          "gaa": 2.686549
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Detroit Red Wings @ Florida Panthers",
-      "analysis": {
-        "homeTeam": "Florida Panthers",
-        "awayTeam": "Detroit Red Wings",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x6ed75c0a071062d6951c9ebdee79dff33e8958efd20d551a6ebe8677e476b3f0",
-        "homeOdds": 0.495,
-        "awayOdds": 0.505,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0x6ed75c0a071062d6951c9ebdee79dff33e8958efd20d551a6ebe8677e476b3f0",
-      "startTime": "2026-03-10T23:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "D. Tarasov",
-          "svPct": 0.901893,
-          "gaa": 2.80696
-        },
-        "away": {
-          "name": "J. Gibson",
-          "svPct": 0.90746,
-          "gaa": 2.518291
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Calgary Flames @ New York Rangers",
-      "analysis": {
-        "homeTeam": "New York Rangers",
-        "awayTeam": "Calgary Flames",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x37483d20b80848cf7f3a07d42b9656bb6e7a1edb5b288d96ea496cd22867cd46",
-        "homeOdds": 0.535,
-        "awayOdds": 0.465,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0x37483d20b80848cf7f3a07d42b9656bb6e7a1edb5b288d96ea496cd22867cd46",
-      "startTime": "2026-03-10T23:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "J. Quick",
-          "svPct": 0.8879,
-          "gaa": 3.202757
-        },
-        "away": {
-          "name": "D. Wolf",
-          "svPct": 0.898026,
-          "gaa": 2.996883
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Pittsburgh Penguins @ Carolina Hurricanes",
-      "analysis": {
-        "homeTeam": "Carolina Hurricanes",
-        "awayTeam": "Pittsburgh Penguins",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0xf6ec4748faeee881be39102c534e7274d442a3d3448da97c7ee7390176991b61",
-        "homeOdds": 0.645,
-        "awayOdds": 0.355,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0xf6ec4748faeee881be39102c534e7274d442a3d3448da97c7ee7390176991b61",
-      "startTime": "2026-03-10T23:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "P. Kochetkov",
-          "svPct": 0.899471,
-          "gaa": 2.325819
-        },
-        "away": {
-          "name": "S. Skinner",
-          "svPct": 0.890411,
-          "gaa": 2.742415
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "New York Islanders @ St. Louis Blues",
-      "analysis": {
-        "homeTeam": "St. Louis Blues",
-        "awayTeam": "New York Islanders",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x18f56f724cd5a0baf95f9e9701b9a5b60fbb43eeaf8dec332bf7e89c330d60bf",
-        "homeOdds": 0.475,
-        "awayOdds": 0.525,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0x18f56f724cd5a0baf95f9e9701b9a5b60fbb43eeaf8dec332bf7e89c330d60bf",
-      "startTime": "2026-03-10T23:30:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "J. Binnington",
-          "svPct": 0.86839,
-          "gaa": 3.55236
-        },
-        "away": {
-          "name": "I. Sorokin",
-          "svPct": 0.914387,
-          "gaa": 2.498265
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Vegas Golden Knights @ Dallas Stars",
-      "analysis": {
-        "homeTeam": "Dallas Stars",
-        "awayTeam": "Vegas Golden Knights",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x1e5ea2668912b166b3841d6869c78c4f08cf76a04ac33d4ab08800babbdc6ac8",
-        "homeOdds": 0.575,
-        "awayOdds": 0.425,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0x1e5ea2668912b166b3841d6869c78c4f08cf76a04ac33d4ab08800babbdc6ac8",
-      "startTime": "2026-03-11T00:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "C. DeSmith",
-          "svPct": 0.911765,
-          "gaa": 2.282735
-        },
-        "away": {
-          "name": "A. Hill",
-          "svPct": 0.858757,
-          "gaa": 3.397829
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Utah Mammoth @ Minnesota Wild",
-      "analysis": {
-        "homeTeam": "Minnesota Wild",
-        "awayTeam": "Utah Mammoth",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "homeOdds": 0,
-        "awayOdds": 0,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "startTime": "2026-03-11T00:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "J. Wallstedt",
-          "svPct": 0.9125,
-          "gaa": 2.81216
-        },
-        "away": {
-          "name": "V. Vanecek",
-          "svPct": 0.889175,
-          "gaa": 2.73895
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Anaheim Ducks @ Winnipeg Jets",
-      "analysis": {
-        "homeTeam": "Winnipeg Jets",
-        "awayTeam": "Anaheim Ducks",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0xab22a6ebe5e136276790f6a49e40e9cfe0f05895c4b05dd3512471a261021021",
-        "homeOdds": 0.565,
-        "awayOdds": 0.435,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0xab22a6ebe5e136276790f6a49e40e9cfe0f05895c4b05dd3512471a261021021",
-      "startTime": "2026-03-11T00:30:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "C. Hellebuyck",
-          "svPct": 0.901668,
-          "gaa": 2.73167
-        },
-        "away": {
-          "name": "L. Dostal",
-          "svPct": 0.892555,
-          "gaa": 3.060098
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Edmonton Oilers @ Colorado Avalanche",
-      "analysis": {
-        "homeTeam": "Colorado Avalanche",
-        "awayTeam": "Edmonton Oilers",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x356ba7d7c38740713101ca469c9d9bbb8ccbc448fd384236d3d84b0a136138ce",
-        "homeOdds": 0.615,
-        "awayOdds": 0.385,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0x356ba7d7c38740713101ca469c9d9bbb8ccbc448fd384236d3d84b0a136138ce",
-      "startTime": "2026-03-11T02:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "S. Wedgewood",
-          "svPct": 0.916384,
-          "gaa": 2.194019
-        },
-        "away": {
-          "name": "C. Ingram",
-          "svPct": 0.891827,
-          "gaa": 2.780543
-        }
-      }
-    },
-    {
-      "sport": "NHL",
-      "matchup": "Nashville Predators @ Seattle Kraken",
-      "analysis": {
-        "homeTeam": "Seattle Kraken",
-        "awayTeam": "Nashville Predators",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season consistency: Trend lines favor high-volume shooters tonight."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard tactical motivation. No extreme rivalry or 'must-win' outlier detected."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Mindset: good (9/10)."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of /scan supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0xe80969215af31ee9b8c728a29e7730e5bef46f7ea35a25cbd713269f9eafa3b6",
-        "homeOdds": 0.505,
-        "awayOdds": 0.495,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "The technical metrics are perfectly balanced. This matchup is expected to be a defensive battle decided by special teams or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Technical metrics and goalie secondary stats have both cross-verified this entry as a stable play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on 2026 possession (Corsi/Fenwick) and depth-chart distribution."
-        ]
-      },
-      "polyConditionId": "0xe80969215af31ee9b8c728a29e7730e5bef46f7ea35a25cbd713269f9eafa3b6",
-      "startTime": "2026-03-11T02:00:00Z",
-      "goalieStats": {
-        "home": {
-          "name": "P. Grubauer",
-          "svPct": 0.91311,
-          "gaa": 2.526689
-        },
-        "away": {
-          "name": "J. Annunen",
-          "svPct": 0.887712,
-          "gaa": 3.153643
+          "name": "C. Lindgren",
+          "svPct": 0.881262,
+          "gaa": 3.410201
         }
       }
     },
     {
       "sport": "NBA",
-      "matchup": "Memphis Grizzlies @ Philadelphia 76ers",
+      "matchup": "Cleveland Cavaliers @ Orlando Magic",
       "analysis": {
-        "homeTeam": "Philadelphia 76ers",
-        "awayTeam": "Memphis Grizzlies",
+        "homeTeam": "Orlando Magic",
+        "awayTeam": "Cleveland Cavaliers",
         "overallConfidence": 71,
         "pillars": [
           {
@@ -2010,9 +1041,9 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0xa414f00f0e16f393ddfe1d7e5973e12cfde46941be4c72053249f2d6d2270213",
-        "homeOdds": 0.585,
-        "awayOdds": 0.415,
+        "polyConditionId": "0xfeb83d6b0a5cdd4b29d6c2511a143a894f4d93f0acf4e680c3ff7aa26a933eeb",
+        "homeOdds": 0.405,
+        "awayOdds": 0.595,
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
@@ -2023,206 +1054,14 @@
           "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
         ]
       },
-      "polyConditionId": "0xa414f00f0e16f393ddfe1d7e5973e12cfde46941be4c72053249f2d6d2270213",
-      "startTime": "2026-03-10T23:00Z"
+      "polyConditionId": "0xfeb83d6b0a5cdd4b29d6c2511a143a894f4d93f0acf4e680c3ff7aa26a933eeb",
+      "startTime": "2026-03-11T23:30Z"
     },
     {
       "sport": "NBA",
-      "matchup": "Detroit Pistons @ Brooklyn Nets",
+      "matchup": "Toronto Raptors @ New Orleans Pelicans",
       "analysis": {
-        "homeTeam": "Brooklyn Nets",
-        "awayTeam": "Detroit Pistons",
-        "overallConfidence": 83,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 9,
-            "reason": "This is a profile of Pure Efficiency. The undefined maintain a dominant +10.3 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
-            "side": "home"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard rest cycle. No high-frequency travel fatigue flagged."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 9,
-            "reason": "Massive Web3 Arb. Bodhi: 73.3% vs Crowd: 10.5%. +62.8% EV.",
-            "side": "home"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Elite Focus: High calmness (9/10). Objective clarity is peak."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of good supports high-clarity execution."
-          }
-        ],
-        "valueTeam": "Brooklyn Nets",
-        "polyConditionId": "0x3029a3ab02079bf66c2bf8793e7a90526e9f0be0667197b1b4f3622c329cb59b",
-        "polySharePrice": 0.105,
-        "polyEV": 0.6283333333333333,
-        "polyOutcomeIndex": 1,
-        "homeOdds": 0.105,
-        "awayOdds": 0.895,
-        "recommendedAction": "HIGH CONVICTION - Buy Brooklyn Nets Shares on Polymarket (+62.8% EV).",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "matchupNotes": "This is a profile of Pure Efficiency. The undefined maintain a dominant +10.3 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
-        "advantages": [
-          "🏀 Dominant Technical Profile: undefined holds a top-tier seasonal Net Rating (0), indicating superior efficiency on both ends of the floor.",
-          "📈 Strategic Market Edge: Bodhi probability identifies a massive 62.8% discrepancy between our internal model (73.3%) and the current Polymarket crowd price (10.5%).",
-          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play."
-        ]
-      },
-      "polyConditionId": "0x3029a3ab02079bf66c2bf8793e7a90526e9f0be0667197b1b4f3622c329cb59b",
-      "polySharePrice": 0.105,
-      "polyEV": 0.6283333333333333,
-      "startTime": "2026-03-10T23:30Z"
-    },
-    {
-      "sport": "NBA",
-      "matchup": "Washington Wizards @ Miami Heat",
-      "analysis": {
-        "homeTeam": "Miami Heat",
-        "awayTeam": "Washington Wizards",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard rest cycle. No high-frequency travel fatigue flagged."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Elite Focus: High calmness (9/10). Objective clarity is peak."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of good supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x2079d8feb58de3b8a96c7d95cc4be08f09dd907e2dd188e234a93cca7ef52bf8",
-        "homeOdds": 0,
-        "awayOdds": 0,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
-        ]
-      },
-      "polyConditionId": "0x2079d8feb58de3b8a96c7d95cc4be08f09dd907e2dd188e234a93cca7ef52bf8",
-      "startTime": "2026-03-10T23:30Z"
-    },
-    {
-      "sport": "NBA",
-      "matchup": "Dallas Mavericks @ Atlanta Hawks",
-      "analysis": {
-        "homeTeam": "Atlanta Hawks",
-        "awayTeam": "Dallas Mavericks",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard rest cycle. No high-frequency travel fatigue flagged."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Elite Focus: High calmness (9/10). Objective clarity is peak."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of good supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0xb26009a53e04e3f6f435f740fcc85fe67dd1f96ebe161ae7b7f4111e3402d1a5",
-        "homeOdds": 0.785,
-        "awayOdds": 0.215,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
-        ]
-      },
-      "polyConditionId": "0xb26009a53e04e3f6f435f740fcc85fe67dd1f96ebe161ae7b7f4111e3402d1a5",
-      "startTime": "2026-03-10T23:30Z"
-    },
-    {
-      "sport": "NBA",
-      "matchup": "Toronto Raptors @ Houston Rockets",
-      "analysis": {
-        "homeTeam": "Houston Rockets",
+        "homeTeam": "New Orleans Pelicans",
         "awayTeam": "Toronto Raptors",
         "overallConfidence": 71,
         "pillars": [
@@ -2264,69 +1103,7 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0x34fd4a16e5bcf946b8c10016614565f384fa619df44ed8c430455a9af4440f7c",
-        "homeOdds": 0.635,
-        "awayOdds": 0.365,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
-        ]
-      },
-      "polyConditionId": "0x34fd4a16e5bcf946b8c10016614565f384fa619df44ed8c430455a9af4440f7c",
-      "startTime": "2026-03-11T00:00Z"
-    },
-    {
-      "sport": "NBA",
-      "matchup": "Phoenix Suns @ Milwaukee Bucks",
-      "analysis": {
-        "homeTeam": "Milwaukee Bucks",
-        "awayTeam": "Phoenix Suns",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard rest cycle. No high-frequency travel fatigue flagged."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Elite Focus: High calmness (9/10). Objective clarity is peak."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of good supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x63028bf946c1bd922bbe746f95d14d6e9eece676b2e52ad26f122d2698612770",
+        "polyConditionId": "0x4f67296807ad1b64f70297d77a059ab9f00fead8febb757116e772c244247e76",
         "homeOdds": 0.475,
         "awayOdds": 0.525,
         "recommendedAction": "PASS - No clear edge.",
@@ -2339,21 +1116,21 @@
           "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
         ]
       },
-      "polyConditionId": "0x63028bf946c1bd922bbe746f95d14d6e9eece676b2e52ad26f122d2698612770",
-      "startTime": "2026-03-11T00:00Z"
+      "polyConditionId": "0x4f67296807ad1b64f70297d77a059ab9f00fead8febb757116e772c244247e76",
+      "startTime": "2026-03-12T00:00Z"
     },
     {
       "sport": "NBA",
-      "matchup": "Boston Celtics @ San Antonio Spurs",
+      "matchup": "New York Knicks @ Utah Jazz",
       "analysis": {
-        "homeTeam": "San Antonio Spurs",
-        "awayTeam": "Boston Celtics",
-        "overallConfidence": 83,
+        "homeTeam": "Utah Jazz",
+        "awayTeam": "New York Knicks",
+        "overallConfidence": 73,
         "pillars": [
           {
             "pillar": "Technical Roster Advantage",
             "score": 9,
-            "reason": "This is a profile of Pure Efficiency. The undefined maintain a dominant +12.2 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
+            "reason": "This is a profile of Pure Efficiency. The undefined maintain a dominant +8.7 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
             "side": "away"
           },
           {
@@ -2368,9 +1145,9 @@
           },
           {
             "pillar": "Technical (Bookies)",
-            "score": 9,
-            "reason": "Massive Web3 Arb. Bodhi: 73.3% vs Crowd: 41.5%. +31.8% EV.",
-            "side": "away"
+            "score": 2,
+            "reason": "Fading Crowd. Bodhi lean strongly opposed by Polymarket. Negative EV (-14.2%).",
+            "side": "home"
           },
           {
             "pillar": "Technical (Bankroll)",
@@ -2388,34 +1165,32 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "valueTeam": "Boston Celtics",
-        "polyConditionId": "0x69f30e480df12a615246c0deac0fd902b6c78c1c16cd32536f53810b6126459a",
-        "polySharePrice": 0.415,
-        "polyEV": 0.3183333333333333,
-        "polyOutcomeIndex": 0,
-        "homeOdds": 0.585,
-        "awayOdds": 0.415,
-        "recommendedAction": "HIGH CONVICTION - Buy Boston Celtics Shares on Polymarket (+31.8% EV).",
-        "recommendedSize": "Standard (4.0%)",
-        "suggestedStake": 17.17916184,
-        "matchupNotes": "This is a profile of Pure Efficiency. The undefined maintain a dominant +12.2 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
+        "polyConditionId": "0x634878881a85b9d922dad538381b0c6b1047f062a9d73105e5564ed509bc3040",
+        "polySharePrice": 0.875,
+        "polyEV": -0.14166666666666672,
+        "homeOdds": 0.125,
+        "awayOdds": 0.875,
+        "recommendedAction": "PASS - Negative EV (-14.2%). Crowd hates this bet.",
+        "recommendedSize": "Zero (0%)",
+        "suggestedStake": 0,
+        "matchupNotes": "This is a profile of Pure Efficiency. The undefined maintain a dominant +8.7 Net Rating edge, ranking in the top-tier of NBA production on both ends of the floor. ",
         "advantages": [
-          "🏀 Dominant Technical Profile: undefined holds a top-tier seasonal Net Rating (12.2), indicating superior efficiency on both ends of the floor.",
-          "🎯 Shot Quality: AWAY offense is in peak efficiency range (118+), indicating high-quality look generation in half-court sets.",
-          "📈 Strategic Market Edge: Bodhi probability identifies a massive 31.8% discrepancy between our internal model (73.3%) and the current Polymarket crowd price (41.5%)."
+          "🏀 Dominant Technical Profile: undefined holds a top-tier seasonal Net Rating (0), indicating superior efficiency on both ends of the floor.",
+          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play.",
+          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry."
         ]
       },
-      "polyConditionId": "0x69f30e480df12a615246c0deac0fd902b6c78c1c16cd32536f53810b6126459a",
-      "polySharePrice": 0.415,
-      "polyEV": 0.3183333333333333,
-      "startTime": "2026-03-11T00:00Z"
+      "polyConditionId": "0x634878881a85b9d922dad538381b0c6b1047f062a9d73105e5564ed509bc3040",
+      "polySharePrice": 0.875,
+      "polyEV": -0.14166666666666672,
+      "startTime": "2026-03-12T01:00Z"
     },
     {
       "sport": "NBA",
-      "matchup": "Chicago Bulls @ Golden State Warriors",
+      "matchup": "Houston Rockets @ Denver Nuggets",
       "analysis": {
-        "homeTeam": "Golden State Warriors",
-        "awayTeam": "Chicago Bulls",
+        "homeTeam": "Denver Nuggets",
+        "awayTeam": "Houston Rockets",
         "overallConfidence": 71,
         "pillars": [
           {
@@ -2456,9 +1231,9 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0x7b77c70f5497996464715b7f5815b497e3b1097fbbb1975224923c847a0e1a02",
-        "homeOdds": 0.675,
-        "awayOdds": 0.325,
+        "polyConditionId": "0xb2285e88b8e91389a8cf706e909b01b7e0f4ae125ac96c85f7bdf41f8a5c1926",
+        "homeOdds": 0.665,
+        "awayOdds": 0.335,
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
@@ -2469,14 +1244,14 @@
           "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
         ]
       },
-      "polyConditionId": "0x7b77c70f5497996464715b7f5815b497e3b1097fbbb1975224923c847a0e1a02",
-      "startTime": "2026-03-11T02:00Z"
+      "polyConditionId": "0xb2285e88b8e91389a8cf706e909b01b7e0f4ae125ac96c85f7bdf41f8a5c1926",
+      "startTime": "2026-03-12T02:00Z"
     },
     {
       "sport": "NBA",
-      "matchup": "Charlotte Hornets @ Portland Trail Blazers",
+      "matchup": "Charlotte Hornets @ Sacramento Kings",
       "analysis": {
-        "homeTeam": "Portland Trail Blazers",
+        "homeTeam": "Sacramento Kings",
         "awayTeam": "Charlotte Hornets",
         "overallConfidence": 71,
         "pillars": [
@@ -2518,9 +1293,9 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0xa880d611399ee74626e5afd6d8bf683778dbc29dfefabdfe06c5572bc4dfb29e",
-        "homeOdds": 0.415,
-        "awayOdds": 0.585,
+        "polyConditionId": "0x47ee57215a38311986058e54bef61324abce104a493ab5e609d7bdec37b75200",
+        "homeOdds": 0.145,
+        "awayOdds": 0.855,
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
@@ -2531,76 +1306,14 @@
           "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
         ]
       },
-      "polyConditionId": "0xa880d611399ee74626e5afd6d8bf683778dbc29dfefabdfe06c5572bc4dfb29e",
-      "startTime": "2026-03-11T02:00Z"
+      "polyConditionId": "0x47ee57215a38311986058e54bef61324abce104a493ab5e609d7bdec37b75200",
+      "startTime": "2026-03-12T02:00Z"
     },
     {
       "sport": "NBA",
-      "matchup": "Indiana Pacers @ Sacramento Kings",
+      "matchup": "Minnesota Timberwolves @ LA Clippers",
       "analysis": {
-        "homeTeam": "Sacramento Kings",
-        "awayTeam": "Indiana Pacers",
-        "overallConfidence": 71,
-        "pillars": [
-          {
-            "pillar": "Technical Roster Advantage",
-            "score": 5,
-            "reason": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Seasonal (Sport)",
-            "score": 7,
-            "reason": "Mid-season fatigue profiles: Looking for rest advantage and pace mismatches."
-          },
-          {
-            "pillar": "Psychological (Players)",
-            "score": 6,
-            "reason": "Standard rest cycle. No high-frequency travel fatigue flagged."
-          },
-          {
-            "pillar": "Technical (Bookies)",
-            "score": 5,
-            "reason": "No Polymarket match found. Neutral default.",
-            "side": "neutral"
-          },
-          {
-            "pillar": "Technical (Bankroll)",
-            "score": 9,
-            "reason": "Bankroll is healthy. 4% unit size is sustainable."
-          },
-          {
-            "pillar": "Psychological (Bettor)",
-            "score": 9,
-            "reason": "Elite Focus: High calmness (9/10). Objective clarity is peak."
-          },
-          {
-            "pillar": "Physiological/Spiritual",
-            "score": 9,
-            "reason": "Positive resonance: State of good supports high-clarity execution."
-          }
-        ],
-        "polyConditionId": "0x02c035e59003c7af05d380a6a59789225848f9e6c6f5509c06a14ba96e84c389",
-        "homeOdds": 0.585,
-        "awayOdds": 0.415,
-        "recommendedAction": "PASS - No clear edge.",
-        "recommendedSize": "Zero (0%)",
-        "suggestedStake": 0,
-        "matchupNotes": "Efficiency metrics are perfectly balanced. This matchup is expected to be decided by non-technical variables or late-game execution.",
-        "advantages": [
-          "✨ High Confidence Signal: Efficiency metrics and secondary possession data have both cross-verified this entry as a stable technical play.",
-          "⚡ High-Clarity Execution: Your current psychological state (good) supports high-precision decision making, reducing the emotional risk of this entry.",
-          "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
-        ]
-      },
-      "polyConditionId": "0x02c035e59003c7af05d380a6a59789225848f9e6c6f5509c06a14ba96e84c389",
-      "startTime": "2026-03-11T02:00Z"
-    },
-    {
-      "sport": "NBA",
-      "matchup": "Minnesota Timberwolves @ Los Angeles Lakers",
-      "analysis": {
-        "homeTeam": "Los Angeles Lakers",
+        "homeTeam": "LA Clippers",
         "awayTeam": "Minnesota Timberwolves",
         "overallConfidence": 71,
         "pillars": [
@@ -2642,9 +1355,9 @@
             "reason": "Positive resonance: State of good supports high-clarity execution."
           }
         ],
-        "polyConditionId": "0x40597dd88f7917a1a58191fc8f16b19d2dc7a7525921aedb97c7360a5b2cd6b4",
-        "homeOdds": 0.445,
-        "awayOdds": 0.555,
+        "polyConditionId": "0x5ca5cffdbe6ca4ee625dc6d6a4b4e307cb4ae9baeb08c17ba62a0f8e91d4ad45",
+        "homeOdds": 0.555,
+        "awayOdds": 0.445,
         "recommendedAction": "PASS - No clear edge.",
         "recommendedSize": "Zero (0%)",
         "suggestedStake": 0,
@@ -2655,14 +1368,14 @@
           "📋 Statistical Stability: Our internal model favors this side based on seasonal Net Rating and adjusted strength-of-schedule metrics."
         ]
       },
-      "polyConditionId": "0x40597dd88f7917a1a58191fc8f16b19d2dc7a7525921aedb97c7360a5b2cd6b4",
-      "startTime": "2026-03-11T03:00Z"
+      "polyConditionId": "0x5ca5cffdbe6ca4ee625dc6d6a4b4e307cb4ae9baeb08c17ba62a0f8e91d4ad45",
+      "startTime": "2026-03-12T02:30Z"
     },
     {
       "sport": "MMA",
       "matchup": "Brandon Moreno vs Lone'er Kavanagh",
       "analysis": {
-        "gamePk": 9379,
+        "gamePk": 7666,
         "homeTeam": "Lone'er Kavanagh",
         "awayTeam": "Brandon Moreno",
         "overallConfidence": 77,
@@ -2716,7 +1429,7 @@
       "sport": "MMA",
       "matchup": "Marlon Vera vs David Martinez",
       "analysis": {
-        "gamePk": 76791,
+        "gamePk": 27678,
         "homeTeam": "David Martinez",
         "awayTeam": "Marlon Vera",
         "overallConfidence": 74,

@@ -1,0 +1,234 @@
+
+🔄 BODHI AUTO-SYNC: Checking for external trades...
+✨ No new external trades found.
+
+[1m[36m🔄 Syncing Live Bankroll from Polygon...[0m
+[32m✅ Linked to Live Bankroll: $440.61 USDC.e[0m
+[2m   Using Proxy Wallet: 0x98652277eb9f1164d121c207e7a620710072f6af[0m
+[1m[36m╔════════════════════════════════════════════════════════════════════╗
+║        🔍 BODHI DAILY SCANNER  —  Wednesday, March 11, 2026        ║
+╚════════════════════════════════════════════════════════════════════╝[0m
+  [2mScanning date: 2026-03-11  |  Last updated: 5:20:47 AM[0m
+
+  [36m⟳[0m Fetching Global Web3 Sports Markets & Balance...
+  [32m✓[0m Synced 5340 active conditions
+  [32m✓[0m Live Bankroll: [1m$440.61[0m
+
+  [36m⟳[0m Fetching MLB games & Traditional Odds...  [32m✓[0m MLB: 12 games found
+  [36m⟳[0m Fetching NHL games...  [32m✓[0m NHL: 2 games found
+  [36m⟳[0m Fetching NBA games...  [32m✓[0m NBA: 6 games found
+  [36m⟳[0m Fetching MMA events...  [32m✓[0m MMA: 2 fights found
+
+  [2mTotal: 10 matchups scanned across all sports[0m
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mMontréal Canadiens @ Ottawa Senators[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Montréal Canadiens [$0.40] | Ottawa Senators [$0.60]
+  [36mCondition ID:[0m [2m0x83ce6ac55f89531c9d8cd849a88d82fd839444b8c259ce63974a41c138f92b45[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [33m[████████░░]  8/10
+  └─ [1mPhysiological/Spiritual[0m [32m[█████████░]  9/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏒 NHL  [37mWashington Capitals @ Philadelphia Flyers[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Washington Capitals [$0.54] | Philadelphia Flyers [$0.47]
+  [36mCondition ID:[0m [2m0x74cb923ee08f7f32c7f3e83f296bd2d613b9ab7c850536eceea37c871552e3b7[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [33m[████████░░]  8/10
+  └─ [1mPhysiological/Spiritual[0m [32m[█████████░]  9/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m70%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mCleveland Cavaliers @ Orlando Magic[0m  [2m7:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Cleveland Cavaliers [$0.59] | Orlando Magic [$0.41]
+  [36mCondition ID:[0m [2m0xfeb83d6b0a5cdd4b29d6c2511a143a894f4d93f0acf4e680c3ff7aa26a933eeb[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mToronto Raptors @ New Orleans Pelicans[0m  [2m8:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Toronto Raptors [$0.53] | New Orleans Pelicans [$0.47]
+  [36mCondition ID:[0m [2m0x4f67296807ad1b64f70297d77a059ab9f00fead8febb757116e772c244247e76[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mNew York Knicks @ Utah Jazz[0m  [2m9:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m New York Knicks [$0.88] | Utah Jazz [$0.13]
+  [36mCondition ID:[0m [2m0x634878881a85b9d922dad538381b0c6b1047f062a9d73105e5564ed509bc3040[0m
+  [36mBodhi Action:[0m [2mPASS - Negative EV (-14.2%). Crowd hates this bet.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [32m[█████████░]  9/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [2m[██░░░░░░░░]  2/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m73%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - Negative EV (-14.2%). Crowd hates this bet.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mHouston Rockets @ Denver Nuggets[0m  [2m10:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Houston Rockets [$0.34] | Denver Nuggets [$0.67]
+  [36mCondition ID:[0m [2m0xb2285e88b8e91389a8cf706e909b01b7e0f4ae125ac96c85f7bdf41f8a5c1926[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mCharlotte Hornets @ Sacramento Kings[0m  [2m10:00 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Charlotte Hornets [$0.85] | Sacramento Kings [$0.14]
+  [36mCondition ID:[0m [2m0x47ee57215a38311986058e54bef61324abce104a493ab5e609d7bdec37b75200[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🏀 NBA  [37mMinnesota Timberwolves @ LA Clippers[0m  [2m10:30 PM EDT[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m Minnesota Timberwolves [$0.45] | LA Clippers [$0.56]
+  [36mCondition ID:[0m [2m0x5ca5cffdbe6ca4ee625dc6d6a4b4e307cb4ae9baeb08c17ba62a0f8e91d4ad45[0m
+  [36mBodhi Action:[0m [2mPASS - No clear edge.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical Roster Advantage[0m [36m[█████░░░░░]  5/10
+  ├─ [1mSeasonal (Sport)    [0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[██████████████░░░░░░][0m [1m71%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mBrandon Moreno vs Lone'er Kavanagh[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance)[0m [32m[█████████░]  9/10
+  ├─ [1mSeasonal (Environment)[0m [33m[███████░░░]  7/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m77%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m🥊 MMA  [37mMarlon Vera vs David Martinez[0m  [2m7:00 PM EST[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+
+  [1mMATCHUP INFO[0m
+  [36mPolymarket:[0m [2mNo active condition found.[0m
+  [1mPILLARS[0m
+  ├─ [1mTechnical (Performance)[0m [32m[██████████] 10/10
+  ├─ [1mSeasonal (Environment)[0m [2m[████░░░░░░]  4/10
+  ├─ [1mPsychological (Players)[0m [36m[██████░░░░]  6/10
+  ├─ [1mTechnical (Bookies) [0m [36m[█████░░░░░]  5/10
+  ├─ [1mTechnical (Bankroll)[0m [32m[█████████░]  9/10
+  ├─ [1mPsychological (Bettor)[0m [32m[██████████] 10/10
+  └─ [1mPhysiological/Spiritual[0m [33m[████████░░]  8/10
+  [1mCONFIDENCE[0m  [33m[███████████████░░░░░][0m [1m74%[0m
+  [1mSIGNAL[0m      [2m⏭  PASS - No clear edge.[0m
+  [1mSTAKE[0m       [2mNo stake recommended[0m
+
+
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[1m[33m📊 WEB3 ARBITRAGE SUMMARY[0m  [2m(sorted by Bodhi confidence)[0m
+[2m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+  [2mNo Polymarket value plays detected across today's slate.[0m
+
