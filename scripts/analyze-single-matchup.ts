@@ -30,22 +30,35 @@ async function analyzeMatchup(teamQuery: string) {
 
         // 1. Fetch Detailed Rosters & Probables
         const details = await mlb.getGameDetails(game.gamePk);
-        const homeRoster = game.homeId ? await mlb.getTeamRoster(game.homeId) : [];
-        const awayRoster = game.awayId ? await mlb.getTeamRoster(game.awayId) : [];
+        const homeRosterList = game.homeId ? await mlb.getTeamRoster(game.homeId) : [];
+        const awayRosterList = game.awayId ? await mlb.getTeamRoster(game.awayId) : [];
 
-        // 2. Fetch Starter Stats
+        // 2. Fetch Starter Stats & Hot Bats
         const homeStarterName = details?.probables?.home || game.probables?.home;
         const awayStarterName = details?.probables?.away || game.probables?.away;
 
-        // Note: For Spring Training, we often need to search person ID by name if not in feed
-        // For now, let's stick to the names and basic hydration from the game feed
-        const homeStarterInfo = { name: homeStarterName || 'TBD', note: "Spring Rotation: TBD" };
-        const awayStarterInfo = { name: awayStarterName || 'TBD', note: "Spring Rotation: TBD" };
+        const [homeStarterId, awayStarterId, homeHotBats, awayHotBats] = await Promise.all([
+            homeStarterName ? mlb.searchPerson(homeStarterName) : Promise.resolve(null),
+            awayStarterName ? mlb.searchPerson(awayStarterName) : Promise.resolve(null),
+            game.homeId ? mlb.getHotBats(game.homeId) : Promise.resolve([]),
+            game.awayId ? mlb.getHotBats(game.awayId) : Promise.resolve([])
+        ]);
 
-        if (details?.gamePk) {
-            // Placeholder logic for deepening stats - normally we'd match the name to an ID
-            // In a production app, we'd have a mapping layer
-        }
+        const [homeStarterStats, awayStarterStats, homeStarterBio, awayStarterBio] = await Promise.all([
+            homeStarterId ? mlb.getPlayerStats(homeStarterId, 'pitching', '2024') : Promise.resolve(null), // Use 2024 for better baseline
+            awayStarterId ? mlb.getPlayerStats(awayStarterId, 'pitching', '2024') : Promise.resolve(null),
+            homeStarterId ? mlb.getPersonDetails(homeStarterId) : Promise.resolve(null),
+            awayStarterId ? mlb.getPersonDetails(awayStarterId) : Promise.resolve(null)
+        ]);
+
+        const homeStarterInfo = { 
+            name: homeStarterName || 'TBD', 
+            note: homeStarterStats ? `${homeStarterBio?.pitchHand?.code}HP | 2024 ERA: ${homeStarterStats.era}` : "Spring Rotation: TBD" 
+        };
+        const awayStarterInfo = { 
+            name: awayStarterName || 'TBD', 
+            note: awayStarterStats ? `${awayStarterBio?.pitchHand?.code}HP | 2024 ERA: ${awayStarterStats.era}` : "Travel Squad: TBD" 
+        };
 
         // 3. Fetch Market Data
         const [oddsList, polyMarket] = await Promise.all([
@@ -64,31 +77,33 @@ async function analyzeMatchup(teamQuery: string) {
             1000, 
             "sharp",
             8,
-            { home: homeRoster, away: awayRoster }
+            { home: homeRosterList, away: awayRosterList }
         );
 
-        // 5. Output Detailed Format
+        // 5. Output Detailed Format (SIDE-BY-SIDE ANALYTICS)
         const deepDive = {
             matchup: `${game.awayTeam} @ ${game.homeTeam}`,
             startTime: game.date,
+            venue: game.venue,
+            weather: details?.weather ? `${details.weather.temp}°F, ${details.weather.condition} | ${details.weather.wind}` : "Indoor/Cloudy",
             starterBattle: {
                 home: homeStarterInfo,
                 away: awayStarterInfo
             },
             bullpenHealth: {
-                home: `Depth: ${homeRoster.length} active. Spring split-squad distribution in effect.`,
-                away: `Depth: ${awayRoster.length} active. Travel squad pitching carries fatigue risk.`
+                home: `Depth: ${homeRosterList.length} active. Key arms available for late-game splits.`,
+                away: `Depth: ${awayRosterList.length} active. Standard spring distribution.`
             },
             teamBreakdown: {
                 home: {
                     name: game.homeTeam,
-                    resonance: `Technical Rating: ${analysis.pillars.find(p => p.pillar === "Technical Roster Advantage")?.score}/10.`,
-                    advantage: analysis.advantages.find(a => a.includes("Cactus") || a.includes("Grapefruit")) || "Neutral venue advantage."
+                    resonance: homeHotBats.length > 0 ? `Hot Bats (OPS): ${homeHotBats.join(', ')}` : "High technical floor.",
+                    advantage: analysis.advantages?.find(a => a.includes("Cactus") || a.includes("Grapefruit")) || "Neutral venue advantage."
                 },
                 away: {
                     name: game.awayTeam,
-                    resonance: `Roster Depth: ${awayRoster.length} active players.`,
-                    advantage: analysis.advantages.length > 1 ? analysis.advantages[1] : "Standard rotation depth."
+                    resonance: awayHotBats.length > 0 ? `Hot Bats (OPS): ${awayHotBats.join(', ')}` : "Travel roster depth.",
+                    advantage: (analysis.advantages && analysis.advantages.length > 1) ? analysis.advantages[1] : "Standard rotation depth."
                 }
             },
             killCriteria: analysis.killCriteria || ["ABORT IF: Starter scratch or bullpen notification."],

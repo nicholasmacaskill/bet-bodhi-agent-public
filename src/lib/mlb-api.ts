@@ -185,6 +185,36 @@ export class MLBApi {
     }
 
     /**
+     * Search for a person by name to get their ID.
+     */
+    async searchPerson(name: string): Promise<number | null> {
+        const url = `${this.baseUrl}/people/search?names=${encodeURIComponent(name)}`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!data.people || data.people.length === 0) return null;
+            return data.people[0].id;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    /**
+     * Get hot hitters (Top 3 by OPS) for a specific team.
+     */
+    async getHotBats(teamId: number): Promise<string[]> {
+        const url = `${this.baseUrl}/stats/leaders?leaderCategories=onBasePlusSlugging&statGroup=hitting&season=2024&gameType=R&teamId=${teamId}&limit=3`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!data.leagueLeaders || data.leagueLeaders.length === 0) return [];
+            return data.leagueLeaders[0].leaders.map((l: any) => `${l.person.fullName} (${l.value})`);
+        } catch (e) {
+            return [];
+        }
+    }
+
+    /**
      * Fetch vs-Handedness splits for a player.
      */
     async getHandednessSplits(personId: number, group: 'hitting' | 'pitching'): Promise<any> {

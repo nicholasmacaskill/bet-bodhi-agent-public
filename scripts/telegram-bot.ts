@@ -399,10 +399,12 @@ async function runDeepDive(ctx: any, team: string) {
 }
 
 function renderDeepDiveHTML(data: any) {
-    const { matchup, starterBattle, bullpenHealth, teamBreakdown, killCriteria, pillarAnalysis } = data;
+    const { matchup, startTime, venue, weather, starterBattle, bullpenHealth, teamBreakdown, killCriteria, pillarAnalysis } = data;
     
     let msg = `🏛️ <b>BODHI DEEP DIVE ANALYSIS</b>\n`;
     msg += `⚾ <b>${matchup}</b>\n`;
+    msg += `📍 <b>Venue:</b> ${venue || 'Unknown'}\n`;
+    msg += `☁️ <b>Weather:</b> ${weather || 'N/A'}\n`;
     msg += `━━━━━━━━━━━━━━━━━━━━\n\n`;
 
     msg += `🤺 <b>STARTER BATTLE</b>\n`;
