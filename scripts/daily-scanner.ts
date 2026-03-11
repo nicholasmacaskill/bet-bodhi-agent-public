@@ -25,6 +25,7 @@ import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { MMAPillarAnalyzer } from '../src/lib/mma-pillar-analyzer';
 import { SxBetApi } from '../src/lib/sx-bet-api';
 import { SyncService } from '../src/lib/agent/sync-service';
+import { BodhiPrism } from '../src/lib/agent/prism';
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -368,6 +369,13 @@ async function runScan(date: string): Promise<void> {
         console.log(`  ${YELLOW}⚠️${RESET} Using Manual Bankroll: ${BOLD}$${bankroll.toFixed(2)}${RESET} ${DIM}(Live balance failed or $0)${RESET}\n`);
     }
 
+    // ── Check Slump / Psychological State ────────────────────────────────────
+    const prism = new BodhiPrism();
+    const slumpStatus = await prism.checkSlump();
+    if (slumpStatus.isSlump) {
+        console.log(`  ${YELLOW}⚠️  ${slumpStatus.reason}${RESET}\n`);
+    }
+
     // ── MLB ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching MLB games & Traditional Odds...`);
@@ -414,7 +422,7 @@ async function runScan(date: string): Promise<void> {
             );
 
             // Analysis
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, sxMatch, userMood, userCalmness, rosters);
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, sxMatch, userMood, userCalmness, rosters, slumpStatus.multiplier);
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&
@@ -479,7 +487,7 @@ async function runScan(date: string): Promise<void> {
                 (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
 
-            const analysis = nhlAnalyzer.analyzeGame(game, nhlStats, condition, goalieLeaders, goalieSeasonStats, bankroll, userMood, userCalmness);
+            const analysis = nhlAnalyzer.analyzeGame(game, nhlStats, condition, goalieLeaders, goalieSeasonStats, bankroll, userMood, userCalmness, slumpStatus.multiplier);
 
             let resultGoalieStats: any = undefined;
             if (goalieSeasonStats?.goalies) {
@@ -526,7 +534,7 @@ async function runScan(date: string): Promise<void> {
                 (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
 
-            const analysis = nbaAnalyzer.analyzeGame(game, nbaStats, condition, bankroll, userMood, userCalmness);
+            const analysis = nbaAnalyzer.analyzeGame(game, nbaStats, condition, bankroll, userMood, userCalmness, slumpStatus.multiplier);
 
             allResults.push({
                 sport: 'NBA',
@@ -560,7 +568,7 @@ async function runScan(date: string): Promise<void> {
                     (m.question.toLowerCase().includes(fight.fighter2.toLowerCase()) || m.description.toLowerCase().includes(fight.fighter2.toLowerCase()))
                 );
 
-                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, condition, bankroll, userMood, userCalmness);
+                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, condition, bankroll, userMood, userCalmness, slumpStatus.multiplier);
 
                 allResults.push({
                     sport: 'MMA',

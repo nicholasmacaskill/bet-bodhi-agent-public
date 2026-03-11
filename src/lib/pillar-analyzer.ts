@@ -90,7 +90,8 @@ export class PillarAnalyzer {
         sxMarket?: any,
         mood?: string,
         calmness?: number,
-        rosters?: { home: string[], away: string[] }
+        rosters?: { home: string[], away: string[] },
+        slumpMultiplier: number = 1.0
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -356,8 +357,16 @@ export class PillarAnalyzer {
             }
 
             const sizing = this.getSizing(finalConfidence, effectiveBankroll);
-            recommendedSize = calmness !== undefined && calmness < 7 ? "Throttled (Caution)" : sizing.label;
-            suggestedStake = sizing.amount * calmnessModifier;
+            
+            if (slumpMultiplier < 1.0) {
+                recommendedSize = "Throttled (Slump Detection)";
+            } else if (calmness !== undefined && calmness < 7) {
+                recommendedSize = "Throttled (Caution)";
+            } else {
+                recommendedSize = sizing.label;
+            }
+            
+            suggestedStake = sizing.amount * calmnessModifier * slumpMultiplier;
         }
 
         // 4. Stability Score Recalibration

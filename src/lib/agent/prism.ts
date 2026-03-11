@@ -93,4 +93,41 @@ export class BodhiPrism {
 
         return "No immediate high-risk psychological patterns detected.";
     }
+
+    /**
+     * Circuit Breaker: Checks for a recent losing streak to throttle stakes.
+     */
+    async checkSlump(): Promise<{ isSlump: boolean; multiplier: number; reason: string }> {
+        const { data: recentBets } = await supabaseAdmin
+            .from('bets')
+            .select('result')
+            .not('result', 'eq', 'pending')
+            .order('created_at', { ascending: false })
+            .limit(5);
+
+        if (!recentBets || recentBets.length < 3) {
+            return { isSlump: false, multiplier: 1.0, reason: "Insufficient data" };
+        }
+
+        // Check if last 3 are losses
+        const last3Losses = recentBets.slice(0, 3).every(b => b.result === 'loss');
+        // Check if 4 of last 5 are losses
+        const lossCount = recentBets.filter(b => b.result === 'loss').length;
+        const last5Slump = recentBets.length === 5 && lossCount >= 4;
+
+        if (last3Losses || last5Slump) {
+            return {
+                isSlump: true,
+                multiplier: 0.5,
+                reason: `SLUMP DETECTED: ${last3Losses ? "3 consecutive losses" : "4 losses in last 5 bets"}. Stakes throttled by 50%.`
+            };
+        }
+
+        // Check for a win to break the slump
+        if (recentBets[0].result === 'win') {
+             // Slump broken
+        }
+
+        return { isSlump: false, multiplier: 1.0, reason: "Normal operations" };
+    }
 }
