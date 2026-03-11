@@ -195,10 +195,18 @@ async function unifiedScan(ctx: any) {
                     const pulses = recentBets.map(b => Number(b.emotional_pulse));
                     const maxPulse = Math.max(...pulses);
                     const minPulse = Math.min(...pulses);
-                    if (maxPulse === minPulse) {
-                        volString = `Stable (Current: ${maxPulse})`;
-                    } else {
-                        volString = `Swinging from ${maxPulse} (High) to ${minPulse} (Low)`;
+                    
+                    if (pulses.length > 1) {
+                        const mean = pulses.reduce((a, b) => a + b, 0) / pulses.length;
+                        const stdDev = Math.sqrt(pulses.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b, 0) / pulses.length);
+                        
+                        // Map stdDev to 1-10 score (0 dev = 1.0, >3.0 dev = 10.0)
+                        const volScore = Math.min(10, 1 + (stdDev * 3));
+                        const intensity = volScore >= 8 ? "🔥 HIGH" : volScore >= 5 ? "⚠️ MODERATE" : "🟢 LOW";
+                        
+                        volString = `${volScore.toFixed(1)}/10 (${intensity}) | Spread: ${maxPulse} to ${minPulse}`;
+                    } else if (maxPulse === minPulse) {
+                        volString = `1.0/10 (STABLE) | Current: ${maxPulse}`;
                     }
                 }
 
