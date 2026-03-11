@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import { Telegraf, session } from 'telegraf';
 import { PolymarketApi } from '../src/lib/polymarket-api';
-import { SxBetApi } from '../src/lib/sx-bet-api';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import * as fs from 'fs';
@@ -263,10 +262,9 @@ function renderGameDetailHTML(r: any, index: number) {
         msg += `🏹 <b>BODHI:</b> Pass market. No edge found.\n`;
     }
 
-    // Agentic Hidden Ingestion Block
     const agentData = {
         matchup_id: analysis.gamePk,
-        ev: analysis.polyEV || (analysis.sxEV ? analysis.sxEV / 100 : 0),
+        ev: analysis.polyEV || 0,
         stake: analysis.suggestedStake || 0,
         weather_risk: analysis.pillars?.find((p: any) => p.pillar === "Seasonal (Sport)")?.score || 5
     };
@@ -283,9 +281,8 @@ bot.command('balance', async (ctx) => {
     await ctx.reply("💰 Fetching live bankroll...");
     try {
         const polyApi = new PolymarketApi();
-        const sxBetApi = new SxBetApi();
-        const [p, s] = await Promise.all([polyApi.getUSDCBalance(), sxBetApi.getBalance()]);
-        ctx.replyWithMarkdown(`💳 *BODHI BANKROLL*\n\n◈ *Poly:* $${p.toFixed(2)}\n◈ *SX:* $${s.toFixed(2)}\n\n🚀 *Total:* $${(p + s).toFixed(2)}`);
+        const p = await polyApi.getUSDCBalance();
+        ctx.replyWithMarkdown(`💳 *BODHI BANKROLL*\n\n◈ *Poly:* $${p.toFixed(2)}\n\n🚀 *Total:* $${p.toFixed(2)}`);
     } catch (e: any) { ctx.reply(`❌ Error: ${e.message}`); }
 });
 

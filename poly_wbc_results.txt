@@ -1,0 +1,78 @@
+Searching for WBC markets on Polymarket...
+Checking keyword: Canada
+Found 40 markets for Canada:
+- [0x006e3bc30b325c9cd4e4a35e33738e7f49634dc353f8495303d511b875d8ad5b] Will a province schedule a referendum to leave Canada before 2027? (0.575/0.425) vol: 75706.20780000002
+- [0x01677ae80095732d69ef484b859460b69d21714dd370b9e4f377469c35fac05d] Canada recession before 2027? (0.31/0.69) vol: 40737.64827700004
+- [0x20229aac4261bec9fa74c12a244b81f44178575b5849e5411b4860e0348b54e3] Will the Bank of Canada announce no change at the March meeting? (0.9705/0.0295) vol: 32037.967517999983
+- [0x92de756ddfe7977306048806b199b978688d8753284eb21f0ab3d7c33955b582] Will the Bank of Canada announce a 50+ bps decrease at the March meeting? (0.0025/0.9975) vol: 30794.797721999996
+- [0x9c7f7a1b941b251186e480c9c05a9ceba668dbeb2b314818183f3a4c37848cab] Will the Bank of Canada announce a 25 bps decrease at the March meeting? (0.0195/0.9805) vol: 30349.229873999993
+- [0xbb160252586ffd47b286e6a5cb9d6d9bcb3252d010a877b6eec01abce136bf09] Will the Bank of Canada announce an increase at the March meeting? (0.0045/0.9955) vol: 23806.328941000007
+- [0x02e2fa310889978ae5336d5e45033b99895aa1bf0a2b4d0df135818d11a1d0a9] Will Avi Lewis win the Canadian NDP Leadership election? (0.865/0.135) vol: 15487.377089999996
+- [0x132a28d477e53645301b847d71fd1ab73655bf54c72b0d759fdd351480781d6c] Will Canada have the highest unemployment rate since 2016 this year? (0.085/0.915) vol: 4268.307934
+- [0xd193ef852c92856324fe92768d4132fa101943f3f61b3f26ee774e04c307f255] Will Canada’s February 2026 unemployment rate be ≤6.2%? (0.075/0.925) vol: 269.77
+- [0x50c672949cfbc8c2cb7d2437315964031b4792788e49d426e2dd8f9c83433cc1] Will Canada’s 2026 inflation be between 1.5% and 1.9%? (0.29/0.71) vol: 0
+- [0xfd60f6e9e3ee002868e4fd33dc2826d0a27bf9ed3c0bae0be7a9c340b73ead32] Will Canada’s 2026 inflation be less than 1.0%? (0.14/0.86) vol: 0
+- [0x8ce14b22b63640c244c389113499e9f7da4f918b43238e952cfed32fc5e42bac] Will Canada’s 2026 inflation be between 1.0% and 1.4%? (0.131/0.869) vol: 0
+- [0x83859c8ef5712e17bde5a92cb027a9fdc41a7b1b76e6ee06bdd830215b5b1f5f] Will Canada’s 2026 inflation be between 2.0% and 2.4%? (0.39/0.61) vol: 0
+- [0xde3801fcbe45f94ab23ae56c8fdd759b5736d8d92c774688acde561987e6115a] Will Canada’s 2026 inflation be between 2.5% and 2.9%? (0.22/0.78) vol: 0
+- [0xfa681624353bc0ed097d0219e042bcf22c84495b1c15847b308b4d2f5af74364] Will Canada’s 2026 inflation be at least 4.0%? (0.2975/0.7025) vol: 0
+- [0x29c639f7498ae455e756f9f0851f93ea75a746c3c9cf4ed90ef7d1c6ded412bd] Will Canada’s 2026 inflation be between 3.0% and 3.4%? (0.24/0.76) vol: 0
+- [0x67a5802fa8da9dd6309f39cfa09d6c227c9eead16c960cde412b1a402c75d792] Will Canada’s 2026 inflation be between 3.5% and 3.9%? (0.196/0.804) vol: 0
+- [0xa0e876052eefc27fc476193f4c985ec636c24473d03e137033e8bc69ce0e03de] Will Tanille Johnson win the Canadian NDP Leadership election? (0.002/0.998) vol: 0
+- [0x12f09d48c416763db1bbd0dfd7e29e7e459a8759633c09e7fd1fe802255423bc] Will Heather McPherson win the Canadian NDP Leadership election? (0.112/0.888) vol: 0
+- [0xb6926e5dcb187472525275c378da4696bb10a9111f014e17e462a98b5394a60d] Will Bianca Mugyenyi win the Canadian NDP Leadership election? (0.0015/0.9985) vol: 0
+- [0x5f84882f576f42ad29f6cf36e61f941dedf277f9488c5ffb75bfe86773da2b52] Will Rob Ashton win the Canadian NDP Leadership election? (0.0135/0.9865) vol: 0
+- [0x25db9177490d0ff546fcea843ec912fbd2d44e46f07aaa7c22cca74528a9f5ab] Will Tony McQuail win the Canadian NDP Leadership election? (0.0015/0.9985) vol: 0
+- [0xf2d7b887546a29521e563eb88a6b534f4200db86d62a4b61cb9735adbab869ce] Will Canada’s February 2026 unemployment rate be 6.3%? (0.245/0.755) vol: 0
+- [0xb3e22d2c8b263a5135ad0cb5acf264598277519b1cb4ef124d6ae57c08064672] Will Canada’s February 2026 unemployment rate be 6.4%? (0.195/0.805) vol: 0
+- [0x0e5014c8f329a364111a1f60bf8adc728f1570412e3624da96ef233cc9e76b01] Will Canada’s February 2026 unemployment rate be 6.7%? (0.285/0.715) vol: 0
+- [0x85b925873df0560b242d8958901d05c774417395ec554d702429973d8c3eb1f3] Will Canada’s February 2026 unemployment rate be 6.5%? (0.295/0.705) vol: 0
+- [0x1b23cc71e359caee0d47d20e7645bc344a1ed310e86f5ec3733f878ea4b4c413] Will Canada’s February 2026 unemployment rate be 6.6%? (0.1355/0.8645) vol: 0
+- [0x8945c8e880ab26ae06b7deeb794378ad352f06b204818451c28af36a815dc843] Will Canada’s February 2026 unemployment rate be ≥6.8%? (0.1265/0.8735) vol: 0
+- [0x16e9b069866a4a5b56ecbaa09830e480bc172c5ab0ce2fd2e063cc8bb45b330f] Will Canada win on 2026-03-31? (0.46/0.54) vol: 0
+- [0xc0f996d22bdb1c202e15d14ea752d52059f824f359c906086a20aeb64dbe251d] Will Canada vs. Tunisia end in a draw? (0.47/0.53) vol: 0
+- [0x65c616e6b64f840f4b3c97db541c61331712c55d72d5c0b17f4c90b5fda5d2fd] Will Tunisia win on 2026-03-31? (0.46/0.54) vol: 0
+- [0x4770a63178bbac1a65a0b60146ed691a43ea8c8cd34311c1b148994eb83b24b7] Spread: Canada (-1.5) (0.48/0.52) vol: 0
+- [0xae6004b170cdf748d09fa3129d7f7cd15cc4ad69d14b4cb2d6713abfe6117dde] Spread: Tunisia (-1.5) (0.53/0.475) vol: 0
+- [0x735a038a02e35a900cf85ec711524edf429c48d4dcead0b5cf1235f49d597c60] Spread: Canada (-2.5) (0.5/0.5) vol: 0
+- [0xad13781faf5dad491a6ec35c0d5b9a9d6f19dc56236d3e52161470177d5536ed] Spread: Tunisia (-2.5) (0.53/0.47) vol: 0
+- [0xe275da0a287c195c44903ccbbeff2395d7479d7094fced6d8dfbbedc5c73515f] Canada vs. Tunisia: O/U 1.5 (0.525/0.475) vol: 0
+- [0x4db4ea4d9576e51e815243661ee7d37a006fdc5432e972e073c12de008cc5b55] Canada vs. Tunisia: O/U 2.5 (0.48/0.52) vol: 0
+- [0xa37c563551128935015e6c3db36cee9fcb8ff1e9016bc329942e179d362e1293] Canada vs. Tunisia: O/U 3.5 (0.485/0.515) vol: 0
+- [0x5a3fd22d48351f545c1717fa3cd4776afe1a58eed980c4b6999c8a9aff75b39b] Canada vs. Tunisia: O/U 4.5 (0.53/0.47) vol: 0
+- [0x323a123c5f7219d156d5c99965fcd075e252507fb62863d70323152e047f301c] Canada vs. Tunisia: Both Teams to Score (0.5/0.5) vol: 0
+Checking keyword: Puerto Rico
+Checking keyword: World Baseball Classic
+Checking keyword: WBC
+Found 31 markets for WBC:
+- [0x435c034ceafd7c0e1343cbe80fd99a37fd08c63373332021a5f596bbe032cdac] Will Edwin Uceta strike out the most batters while pitching at the 2026 World Baseball Classic? (0.175/0.825) vol: 683.468325
+- [0x201f6218a398fd970449057878049175fb212e038b8b50acab6bad579c65331d] Will Pablo López strike out the most batters while pitching at the 2026 World Baseball Classic? (0.335/0.665) vol: 568.581333
+- [0x72592a21ebd3ac5febb5c92c1ed79b9301e21c9995cddd998e4f47ab162ad47c] Will José Alvarado strike out the most batters while pitching at the 2026 World Baseball Classic? (0.06/0.94) vol: 384.42
+- [0xb62d7bafcc331e15752bd8c646c5104c89286540fd58f10ac6164b277221dc88] Will Aaron Nola strike out the most batters while pitching at the 2026 World Baseball Classic? (0.22/0.78) vol: 0
+- [0xa00a3707313824cbfca870d810e7a992741de610be5e3f7c13b884cde1c59f9b] Will Taijuan Walker strike out the most batters while pitching at the 2026 World Baseball Classic? (0.245/0.755) vol: 0
+- [0x38e111308b8396877f76ddb1bc5ea95c3fae1950f9c09999d80e8ce1ed1b36c6] Will Javier Assad strike out the most batters while pitching at the 2026 World Baseball Classic? (0.185/0.815) vol: 0
+- [0xec8e7ce01b57acabe179a8fa9401f9a619837a5dacfbf01d0fc1382513d735a3] Will Cal Quantrill strike out the most batters while pitching at the 2026 World Baseball Classic? (0.23/0.77) vol: 0
+- [0x746f75ac59a1f87fd4775b649b3f8e74baedb34ffeaca3889be1008ca339a04d] Will Eduard Bazardo strike out the most batters while pitching at the 2026 World Baseball Classic? (0.34/0.66) vol: 0
+- [0xa45e8ef49b1fb93031f4c46e6e4d1f678c3fe24fd5583b488ec74236fad0b419] Will Logan Webb strike out the most batters while pitching at the 2026 World Baseball Classic? (0.0425/0.9575) vol: 0
+- [0x0c60113ae04f495abe40acb3bb9c082dc07cfcaab909e91ad92b6a72bc17e39e] Will Cristopher Sánchez strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0xfc15d264899fc203758d537072733beccd09f26f1708c7dfbbb9ac50d5e48c93] Will Brayan Bello strike out the most batters while pitching at the 2026 World Baseball Classic? (0.17/0.83) vol: 0
+- [0x4e9d30a17b42c73dd067ee5a644b4344f3fbfd547d1af5e9c426ebc5a86a4bcd] Will Michael Lorenzen strike out the most batters while pitching at the 2026 World Baseball Classic? (0.21/0.79) vol: 0
+- [0xb06b8784e28b9cb929c5fa873c86b01ac510192db08810420e2bda8f72fd43f6] Will Edwin Díaz strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0x8a14b171b2ef9b919518d1b9ab7f482527a4bd82de8f36e991e0f8bd87090f8c] Will Tarik Skubal strike out the most batters while pitching at the 2026 World Baseball Classic? (0.11/0.89) vol: 0
+- [0x995ed0f4c792edcb77a31122f62a3a37d806858020883183ae9dee3968209dca] Will Joe Ryan strike out the most batters while pitching at the 2026 World Baseball Classic? (0.34/0.66) vol: 0
+- [0x6dd0e12ae5a6a5ecea22be3a580d16c95d4b64d53ad6ed0e1e201444a784ffab] Will Eduardo Rodríguez strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0x358015baa5aa63dd20cde7a7554a4a929697cab7c3791973e45eaaae065369b7] Will Michael Soroka strike out the most batters while pitching at the 2026 World Baseball Classic? (0.205/0.795) vol: 0
+- [0xb9876857676c00df009acd54f599f1b779e0d90261c5c71fdb36fe65a0e7100a] Will Griffin Jax strike out the most batters while pitching at the 2026 World Baseball Classic? (0.205/0.795) vol: 0
+- [0xba52bbb7d82a2763bd0ea550ccc72ee5673507d89ab24bef3efb220b4e6dfc8e] Will Seranthony Domínguez strike out the most batters while pitching at the 2026 World Baseball Classic? (0.324/0.676) vol: 0
+- [0xe79373a9410fe914a10ee276a3cfe7aac4904ad2d506068b18734edc14f6fb6f] Will Paul Skenes strike out the most batters while pitching at the 2026 World Baseball Classic? (0.355/0.645) vol: 0
+- [0x0340a1e797d1ef3fc28fd5b036176dcce8ad44d200dc1440b216caf255384e05] Will Yoshinobu Yamamoto strike out the most batters while pitching at the 2026 World Baseball Classic? (0.285/0.715) vol: 0
+- [0xf1964f76f3fd9dbb280ce166791c29b94a6d2e70e306099783a36ffae75f2d7d] Will Jameson Taillon strike out the most batters while pitching at the 2026 World Baseball Classic? (0.15/0.85) vol: 0
+- [0x419144a41ec2c30ed4e3ef61b245c5d9129c0f00a11aaa722ac14a18fe0d1da0] Will David Bednar strike out the most batters while pitching at the 2026 World Baseball Classic? (0.26/0.74) vol: 0
+- [0x026ceb2d02567b537fa34fda0daad1bfc1b740876ff3a1100ce3ec2f31de3f82] Will Andrés Muñoz strike out the most batters while pitching at the 2026 World Baseball Classic? (0.34/0.66) vol: 0
+- [0x3fdfa965ede708bdb13838a96f49da1b2819e48117420e383532a8a90b6c48da] Will Camilo Doval strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0xd9cdb4f11e3ec441ea37696a94e60b6ab6fde72da0a45e256c59802226268008] Will Kenley Jansen strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0xbfa435588ff1426e30cc58419f5633b1eda8c7a1989c8bf311cea3306d6521ef] Will Carlos Estévez strike out the most batters while pitching at the 2026 World Baseball Classic? (0.345/0.655) vol: 0
+- [0x19afc632bda18f3672f841f99fbab95eb41c6b551d58d1f3a59f87135ac9a8a7] Will Mexico advance to the Knockout Stages of the 2026 World Baseball Classic final? (0.5/0.5) vol: 0
+- [0x60ab6ad06198939324d770d67b1d9971b8806153acb125bcf8ecd488f18bb163] Will Canada advance to the Knockout Stages of the 2026 World Baseball Classic final? (0.5/0.5) vol: 0
+- [0x6a672f3f42c7d478c9804676b0050ac49f45234a9a4748e6ddb0969ea1d6c39f] Will Italy advance to the Knockout Stages of the 2026 World Baseball Classic final? (0.5/0.5) vol: 0
+- [0xf250f54bfdaa4570a059e187abf92078332cc6771ff92f8474bfeef69e4561b8] Will Cuba advance to the Knockout Stages of the 2026 World Baseball Classic final? (0.5/0.5) vol: 0

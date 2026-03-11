@@ -1,11 +1,9 @@
 import { PolymarketApi } from '../src/lib/polymarket-api';
-import { SxBetApi } from '../src/lib/sx-bet-api';
 import { Wallet } from 'ethers';
 import 'dotenv/config';
 
 async function research() {
     const poly = new PolymarketApi();
-    const sx = new SxBetApi();
     const privateKey = process.env.WALLET_PRIVATE_KEY;
 
     if (!privateKey || privateKey === 'your_private_key_here') {
@@ -49,24 +47,7 @@ async function research() {
         }
     }
 
-    console.log("\n--- Researching SxBet History ---");
-    const sxUrl = 'https://api.sx.bet';
-    const sxEndpoints = [
-        `${sxUrl}/orders?maker=${address}&status=filled`,
-        `${sxUrl}/trades?maker=${address}`
-    ];
 
-    for (const url of sxEndpoints) {
-        console.log(`Trying: ${url}`);
-        try {
-            const res = await fetch(url);
-            const data = await res.json();
-            console.log(`Response: ${res.status}`);
-            console.log("Data:", JSON.stringify(data).slice(0, 500));
-        } catch (e: any) {
-            console.error(`Error: ${e.message}`);
-        }
-    }
 }
 
 research();

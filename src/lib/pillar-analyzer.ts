@@ -29,10 +29,7 @@ export interface BodhiAnalysis {
     polyOutcomeIndex?: number;
     polySharePrice?: number;
     polyEV?: number;
-    sxMarketHash?: string;
-    sxSharePrice?: number;
-    sxEV?: number;
-    executionRoute?: 'POLY' | 'SX' | 'NONE';
+    executionRoute?: 'POLY' | 'NONE';
     homePitcher?: string;
     awayPitcher?: string;
     homeOdds?: number;
@@ -87,7 +84,6 @@ export class PillarAnalyzer {
         weakPitchers: string[] = [],
         playerStats?: Map<string, any>,
         bankroll: number = 464,
-        sxMarket?: any,
         mood?: string,
         calmness?: number,
         rosters?: { home: string[], away: string[] },
@@ -138,10 +134,7 @@ export class PillarAnalyzer {
         let polyConditionId = undefined;
         let polySharePrice = undefined;
         let polyEV = undefined;
-        let sxMarketHash = sxMarket ? sxMarket.marketHash : undefined;
-        let sxSharePrice = undefined;
-        let sxEV = undefined;
-        let executionRoute: 'POLY' | 'SX' | 'NONE' = 'NONE';
+        let executionRoute: 'POLY' | 'NONE' = 'NONE';
         let killCriteria: string[] = [];
 
         let bookieScore: PillarScore = {
@@ -232,41 +225,7 @@ export class PillarAnalyzer {
                 }
             }
 
-            // 3b. Calculate SX Bet EV
-            if (sxMarket && sxMarket.outcomeOneName && sxMarket.outcomeTwoName) {
-                const targetMascot = valueTeam?.split(' ').pop()?.toLowerCase() || '';
-
-                let sxCost = undefined;
-                if (sxMarket.outcomeOneName.toLowerCase().includes(targetMascot)) {
-                    sxCost = sxMarket.outcomeOneOdds ? parseFloat(ethers.formatUnits(sxMarket.outcomeOneOdds, 20)) : undefined;
-                } else if (sxMarket.outcomeTwoName.toLowerCase().includes(targetMascot)) {
-                    sxCost = sxMarket.outcomeTwoOdds ? parseFloat(ethers.formatUnits(sxMarket.outcomeTwoOdds, 20)) : undefined;
-                }
-
-                if (sxCost !== undefined && sxCost > 0 && sxCost < 1.0) {
-                    sxSharePrice = sxCost;
-                    sxEV = (bodhiProb - sxCost) * 100;
-                }
-            }
-
-            // 3c. Determine Execution Route (Waterfall Arb)
-            if (sxEV !== undefined && polyEV !== undefined) {
-                // Arb: Choose highest EV (Lowest Cost)
-                if (sxEV > (polyEV * 100)) {
-                    executionRoute = 'SX';
-                    recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} on SX Bet (+${sxEV.toFixed(1)}% EV).`;
-                    bookieScore.score = 9;
-                    bookieScore.reason = `Cross-chain Arb. SX Bet (+${sxEV.toFixed(1)}% EV) beats Polymarket (+${(polyEV * 100).toFixed(1)}% EV).`;
-                } else {
-                    executionRoute = 'POLY';
-                }
-            } else if (sxEV !== undefined && sxSharePrice !== undefined) {
-                executionRoute = 'SX';
-                recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} on SX Bet (+${sxEV.toFixed(1)}% EV).`;
-                bookieScore.score = 8;
-                bookieScore.reason = `Web3 Edge found on SX Bet. Bodhi: ${(bodhiProb * 100).toFixed(1)}% vs Crowd: ${(sxSharePrice * 100).toFixed(1)}%.`;
-                bookieScore.side = techFavored;
-            } else if (polyEV !== undefined) {
+            if (polyEV !== undefined) {
                 executionRoute = 'POLY';
             } else {
                 recommendedAction = `PASS - Value identified on ${valueTeam}, but no Web3 liquidity found.`;
@@ -372,7 +331,7 @@ export class PillarAnalyzer {
         // 4. Stability Score Recalibration
         // Recalibrate the 'Stability Score' to be EV-dependent. 
         // If EV is negative, the maximum possible Stability Score is 30%.
-        const maxEV = Math.max(polyEV || -1, sxEV || -1);
+        const maxEV = polyEV !== undefined ? polyEV : -1;
         if (maxEV < 0) {
             currentConfidence = Math.min(currentConfidence, 30);
         }
@@ -400,9 +359,6 @@ export class PillarAnalyzer {
             polySharePrice,
             polyEV,
             polyOutcomeIndex: valueTeam ? (valueTeam === homeTeam ? homeIdx : awayIdx) : undefined,
-            sxMarketHash,
-            sxSharePrice,
-            sxEV,
             executionRoute,
             recommendedAction,
             recommendedSize: this.getSizing(currentConfidence, bankroll).label,

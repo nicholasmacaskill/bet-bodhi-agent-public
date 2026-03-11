@@ -27,7 +27,7 @@ export interface BetLogEntry {
     physiologicalScore?: number; // 1-10: How rested/sharp you feel
     researchLog?: string;
     pillarFocus?: string;
-    platform?: 'manual' | 'polymarket' | 'sx' | 'agent';
+    platform?: 'manual' | 'polymarket' | 'agent';
     externalId?: string;
 }
 

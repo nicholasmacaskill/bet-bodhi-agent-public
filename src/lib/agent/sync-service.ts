@@ -1,12 +1,10 @@
 import { PolymarketApi } from '../polymarket-api';
-import { SxBetApi } from '../sx-bet-api';
 import { logBet } from '../bet-logger';
 import { supabaseAdmin } from '../supabase-admin';
 import 'dotenv/config';
 
 export class SyncService {
     private poly = new PolymarketApi();
-    private sx = new SxBetApi();
 
     /**
      * Runs the synchronization logic for both Polymarket and SxBet.
@@ -47,28 +45,6 @@ export class SyncService {
                 }
             }
 
-            // --- SX BET SYNC ---
-            const sxTrades = await this.sx.getUserTrades();
-            for (const trade of sxTrades) {
-                const extId = `sx-${trade.orderHash}`;
-                if (syncedIds.has(extId)) continue;
-
-                const market = await this.sx.getMarketDetails(trade.marketHash);
-                if (market) {
-                    await logBet({
-                        team: market.teamName || "SxBet Event",
-                        sport: market.sportName || "Sports",
-                        odds: parseFloat(trade.odds),
-                        amount: parseFloat(trade.stake) / 1e6,
-                        gameStartTime: market.gameTime ? new Date(market.gameTime * 1000) : new Date(),
-                        motivationTag: 'external_sync',
-                        platform: 'sx',
-                        externalId: extId,
-                        researchLog: `Auto-synced from SxBet. Order: ${trade.orderHash}`
-                    });
-                    syncCount++;
-                }
-            }
 
             if (syncCount > 0) {
                 console.log(`✅ Auto-sync complete. Added ${syncCount} new bets.\n`);

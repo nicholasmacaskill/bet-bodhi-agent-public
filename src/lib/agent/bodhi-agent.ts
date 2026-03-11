@@ -2,7 +2,6 @@ import { BodhiPrism } from './prism';
 import { SyncService } from './sync-service';
 import { supabaseAdmin } from '../supabase-admin';
 import { PolymarketApi } from '../polymarket-api';
-import { SxBetApi } from '../sx-bet-api';
 
 const RESET_ANSI = '\x1b[0m';
 const DIM = '\x1b[2m';
@@ -10,7 +9,6 @@ const DIM = '\x1b[2m';
 export class BodhiAgent {
     private prism = new BodhiPrism();
     private polyApi = new PolymarketApi();
-    private sxApi = new SxBetApi();
     private identity = "Bodhi-Alpha-1";
 
     /**

@@ -1,6 +1,5 @@
 import 'dotenv/config';
 import { PolymarketApi } from '../src/lib/polymarket-api';
-import { SxBetApi } from '../src/lib/sx-bet-api';
 import { logBet, MotivationTag } from '../src/lib/bet-logger';
 import * as readline from 'readline';
 
@@ -28,7 +27,7 @@ async function main() {
 
     if (!market || !id || !outcome || !amount || !price) {
         console.log("\n❌ Missing parameters!");
-        console.log("Usage: npx tsx scripts/place-bet.ts --market <poly/sx> --id <id> --outcome <index> --amount <usd> --price <price> [--slippage <cents>] [--team <name>] [--sport <sport>] [--startTime <iso>]\n");
+        console.log("Usage: npx tsx scripts/place-bet.ts --market poly --id <id> --outcome <index> --amount <usd> --price <price> [--slippage <cents>] [--team <name>] [--sport <sport>] [--startTime <iso>]\n");
         rl.close();
         return;
     }
@@ -59,10 +58,6 @@ async function main() {
             const api = new PolymarketApi();
             const result = await api.placeOrder(id, parseInt(outcome), parseFloat(amount), parseFloat(price), slippageVal);
             success = result.success;
-        } else if (market === 'sx') {
-            const api = new SxBetApi();
-            await api.placeOrder(id, outcome, parseFloat(amount), parseFloat(price));
-            success = true; // SxBet placeOrder is currently stubbed/async in bcast
         } else {
             console.error("❌ Unknown market type.");
         }

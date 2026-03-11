@@ -23,7 +23,6 @@ import { PillarAnalyzer, BodhiAnalysis } from '../src/lib/pillar-analyzer';
 import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
 import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { MMAPillarAnalyzer } from '../src/lib/mma-pillar-analyzer';
-import { SxBetApi } from '../src/lib/sx-bet-api';
 import { SyncService } from '../src/lib/agent/sync-service';
 import { BodhiPrism } from '../src/lib/agent/prism';
 
@@ -255,9 +254,7 @@ function renderGame(result: ScanResult): void {
     // Order Command (Terminal Execution)
     if (analysis.valueTeam && analysis.suggestedStake > 0) {
         let cmd = "";
-        if (analysis.executionRoute === 'SX' && analysis.sxMarketHash) {
-            cmd = `npx tsx scripts/place-bet.ts --market sx --id ${analysis.sxMarketHash} --outcome "${analysis.valueTeam}" --amount ${analysis.suggestedStake.toFixed(2)} --price ${analysis.sxSharePrice?.toFixed(2)}`;
-        } else if (analysis.polyConditionId) {
+        if (analysis.polyConditionId) {
             const outcomeIndex = analysis.polyOutcomeIndex !== undefined ? analysis.polyOutcomeIndex : ((analysis.valueTeam === analysis.homeTeam || analysis.valueTeam.includes(analysis.homeTeam.split(' ').pop() || '')) ? 0 : 1);
             cmd = `npx tsx scripts/place-bet.ts --market poly --id ${analysis.polyConditionId} --outcome ${outcomeIndex} --amount ${analysis.suggestedStake.toFixed(2)} --price ${analysis.polySharePrice?.toFixed(2)}`;
         }
@@ -333,7 +330,6 @@ async function runScan(date: string): Promise<void> {
     const nbaApi = new NBAApi();
     const mmaApi = new MMAApi();
     const polySvc = new PolymarketApi();
-    const sxApi = new SxBetApi();
     const oddsApi = new OddsApi();
 
     const mlbAnalyzer = new PillarAnalyzer();
@@ -352,10 +348,8 @@ async function runScan(date: string): Promise<void> {
     // ── Pre-Fetch Global Web3 Polymarket Conditions & Balance ────────────────
     console.log(`  ${CYAN}⟳${RESET} Fetching Global Web3 Sports Markets & Balance...`);
     let polyMarkets: PolyMarket[] = [];
-    let sxMarkets: any[] = [];
-    [polyMarkets, sxMarkets, liveBalance] = await Promise.all([
+    [polyMarkets, liveBalance] = await Promise.all([
         polyApi.getActiveSportsMarkets("vs."),
-        sxApi.getActiveMarkets(),
         polyApi.getUSDCBalance()
     ]);
 
@@ -415,14 +409,8 @@ async function runScan(date: string): Promise<void> {
                 (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
 
-            // Fuzzy match SX Bet 
-            const sxMatch = sxMarkets?.find(m =>
-                (m.teamOneName.toLowerCase().includes(homeMascot) || m.teamTwoName.toLowerCase().includes(homeMascot)) &&
-                (m.teamOneName.toLowerCase().includes(awayMascot) || m.teamTwoName.toLowerCase().includes(awayMascot))
-            );
-
             // Analysis
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, sxMatch, userMood, userCalmness, rosters, slumpStatus.multiplier);
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&
