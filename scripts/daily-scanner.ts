@@ -409,11 +409,6 @@ async function runScan(date: string): Promise<void> {
                 (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
             );
 
-            // Filter Noise: Only analyze if there's an active Polymarket condition OR if user wants full details
-            if (!condition && !verbose) {
-                continue; 
-            }
-
             // Analysis
             const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
 

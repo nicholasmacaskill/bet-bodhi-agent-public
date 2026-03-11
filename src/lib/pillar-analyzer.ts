@@ -258,6 +258,14 @@ export class PillarAnalyzer {
                     bookieScore.reason = vetoReason;
                     recommendedAction = vetoReason;
                     valueTeam = undefined;
+                } else {
+                    // Mock preseason line logic
+                    polyEV = (currentConfidence / 100) - 0.50;
+                    polySharePrice = 0.50;
+                    bookieScore.score = 7;
+                    bookieScore.reason = `PRESEASON MODE: No Web3 Market. Bodhi True Prob hits ${(currentConfidence).toFixed(1)}%.`;
+                    bookieScore.side = techFavored;
+                    recommendedAction = `PRESEASON CONVICTION - Bet ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
                 }
             }
         }
