@@ -168,7 +168,7 @@ async function unifiedScan(ctx: any) {
         try {
             const { data: bets } = await supabaseAdmin
                 .from('bets')
-                .select('result, emotional_pulse, created_at')
+                .select('result, emotional_pulse, created_at, motivation_tag')
                 .order('created_at', { ascending: false });
 
             if (bets && bets.length > 0) {
@@ -181,17 +181,25 @@ async function unifiedScan(ctx: any) {
                 // Last 10 String
                 const last10 = settled.slice(0, 10).map(b => b.result === 'win' ? '🟢' : '🔴').reverse().join('');
 
-                // Mindset Volatility (last 7 days)
+                // Mindset Volatility (last 7 days, excluding auto-synced defaults)
                 const oneWeekAgo = new Date();
                 oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-                const recentBets = bets.filter(b => new Date(b.created_at) >= oneWeekAgo && b.emotional_pulse != null);
+                const recentBets = bets.filter(b => 
+                    new Date(b.created_at) >= oneWeekAgo && 
+                    b.emotional_pulse != null && 
+                    b.motivation_tag !== 'external_sync'
+                );
                 
-                let volString = "N/A";
+                let volString = "Stable (No manual data)";
                 if (recentBets.length > 0) {
                     const pulses = recentBets.map(b => Number(b.emotional_pulse));
                     const maxPulse = Math.max(...pulses);
                     const minPulse = Math.min(...pulses);
-                    volString = `Swinging from ${maxPulse} (High) to ${minPulse} (Low)`;
+                    if (maxPulse === minPulse) {
+                        volString = `Stable (Current: ${maxPulse})`;
+                    } else {
+                        volString = `Swinging from ${maxPulse} (High) to ${minPulse} (Low)`;
+                    }
                 }
 
                 perfString = `📈 **PERFORMANCE & PSYCHOMETRICS**\n`;
