@@ -1,122 +1,169 @@
 import 'dotenv/config';
 import { MLBApi } from '../src/lib/mlb-api';
+import { NHLApi } from '../src/lib/nhl-api';
+import { NBAApi } from '../src/lib/nba-api';
 import { OddsApi } from '../src/lib/odds-api';
 import { PillarAnalyzer } from '../src/lib/pillar-analyzer';
+import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
+import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { PolymarketApi } from '../src/lib/polymarket-api';
 
 async function analyzeMatchup(teamQuery: string) {
     const mlb = new MLBApi();
+    const nhl = new NHLApi();
+    const nba = new NBAApi();
     const oddsSvc = new OddsApi();
     const polyApi = new PolymarketApi();
-    const analyzer = new PillarAnalyzer();
+    
+    const mlbAnalyzer = new PillarAnalyzer();
+    const nhlAnalyzer = new NHLPillarAnalyzer();
+    const nbaAnalyzer = new NBAPillarAnalyzer();
+    
     const date = new Date().toISOString().split('T')[0];
 
     console.log(`\n🔍 DEEP DIVE ANALYSIS: ${teamQuery.toUpperCase()} Matchup`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
 
     try {
-        const schedule = await mlb.getSchedule(date);
-        const game = schedule.find(g => 
+        // 1. Discover Sport & Game
+        const nbaDate = date.replace(/-/g, '');
+        const [mlbSchedule, nhlSchedule, nbaSchedule] = await Promise.all([
+            mlb.getSchedule(date),
+            nhl.getSchedule(date),
+            nba.getSchedule(nbaDate)
+        ]);
+
+        const mlbGame = mlbSchedule.find(g => 
+            g.homeTeam.toLowerCase().includes(teamQuery.toLowerCase()) || 
+            g.awayTeam.toLowerCase().includes(teamQuery.toLowerCase())
+        );
+        const nhlGame = nhlSchedule.find(g => 
+            g.homeTeam.toLowerCase().includes(teamQuery.toLowerCase()) || 
+            g.awayTeam.toLowerCase().includes(teamQuery.toLowerCase())
+        );
+        const nbaGame = nbaSchedule.find(g => 
             g.homeTeam.toLowerCase().includes(teamQuery.toLowerCase()) || 
             g.awayTeam.toLowerCase().includes(teamQuery.toLowerCase())
         );
 
-        if (!game) {
-            console.log(`❌ No game found for "${teamQuery}" on ${date}`);
+        if (mlbGame) {
+            await handleMLB(mlbGame, mlb, mlbAnalyzer, oddsSvc, polyApi);
+        } else if (nhlGame) {
+            await handleNHL(nhlGame, nhl, nhlAnalyzer, polyApi);
+        } else if (nbaGame) {
+            await handleNBA(nbaGame, nba, nbaAnalyzer, polyApi);
+        } else {
+            console.log(`❌ No game found for "${teamQuery}" on ${date} (MLB, NHL, or NBA)`);
             return;
         }
-
-        console.log(`📍 Found: ${game.awayTeam} @ ${game.homeTeam}`);
-
-        // 1. Fetch Detailed Rosters & Probables
-        const details = await mlb.getGameDetails(game.gamePk);
-        const homeRosterList = game.homeId ? await mlb.getTeamRoster(game.homeId) : [];
-        const awayRosterList = game.awayId ? await mlb.getTeamRoster(game.awayId) : [];
-
-        // 2. Fetch Starter Stats & Hot Bats
-        const homeStarterName = details?.probables?.home || game.probables?.home;
-        const awayStarterName = details?.probables?.away || game.probables?.away;
-
-        const [homeStarterId, awayStarterId, homeHotBats, awayHotBats] = await Promise.all([
-            homeStarterName ? mlb.searchPerson(homeStarterName) : Promise.resolve(null),
-            awayStarterName ? mlb.searchPerson(awayStarterName) : Promise.resolve(null),
-            game.homeId ? mlb.getHotBats(game.homeId) : Promise.resolve([]),
-            game.awayId ? mlb.getHotBats(game.awayId) : Promise.resolve([])
-        ]);
-
-        const [homeStarterStats, awayStarterStats, homeStarterBio, awayStarterBio] = await Promise.all([
-            homeStarterId ? mlb.getPlayerStats(homeStarterId, 'pitching', '2024') : Promise.resolve(null), // Use 2024 for better baseline
-            awayStarterId ? mlb.getPlayerStats(awayStarterId, 'pitching', '2024') : Promise.resolve(null),
-            homeStarterId ? mlb.getPersonDetails(homeStarterId) : Promise.resolve(null),
-            awayStarterId ? mlb.getPersonDetails(awayStarterId) : Promise.resolve(null)
-        ]);
-
-        const homeStarterInfo = { 
-            name: homeStarterName || 'TBD', 
-            note: homeStarterStats ? `${homeStarterBio?.pitchHand?.code}HP | 2024 ERA: ${homeStarterStats.era}` : "Spring Rotation: TBD" 
-        };
-        const awayStarterInfo = { 
-            name: awayStarterName || 'TBD', 
-            note: awayStarterStats ? `${awayStarterBio?.pitchHand?.code}HP | 2024 ERA: ${awayStarterStats.era}` : "Travel Squad: TBD" 
-        };
-
-        // 3. Fetch Market Data
-        const [oddsList, polyMarket] = await Promise.all([
-            oddsSvc.getOdds('baseball_mlb_preseason'),
-            polyApi.getMarketByTeams(game.homeTeam, game.awayTeam)
-        ]);
-
-        // 4. Run Pillar Analysis
-        const analysis = analyzer.analyzeGame(
-            game, 
-            details || { lineups: { home: [], away: [] }, probables: game.probables }, 
-            polyMarket || undefined,
-            [], 
-            [], 
-            new Map(),
-            1000, 
-            "sharp",
-            8,
-            { home: homeRosterList, away: awayRosterList }
-        );
-
-        // 5. Output Detailed Format (SIDE-BY-SIDE ANALYTICS)
-        const deepDive = {
-            matchup: `${game.awayTeam} @ ${game.homeTeam}`,
-            startTime: game.date,
-            venue: game.venue,
-            weather: details?.weather ? `${details.weather.temp}°F, ${details.weather.condition} | ${details.weather.wind}` : "Indoor/Cloudy",
-            starterBattle: {
-                home: homeStarterInfo,
-                away: awayStarterInfo
-            },
-            bullpenHealth: {
-                home: `Depth: ${homeRosterList.length} active. Key arms available for late-game splits.`,
-                away: `Depth: ${awayRosterList.length} active. Standard spring distribution.`
-            },
-            teamBreakdown: {
-                home: {
-                    name: game.homeTeam,
-                    resonance: homeHotBats.length > 0 ? `Hot Bats (OPS): ${homeHotBats.join(', ')}` : "High technical floor.",
-                    advantage: analysis.advantages?.find(a => a.includes("Cactus") || a.includes("Grapefruit")) || "Neutral venue advantage."
-                },
-                away: {
-                    name: game.awayTeam,
-                    resonance: awayHotBats.length > 0 ? `Hot Bats (OPS): ${awayHotBats.join(', ')}` : "Travel roster depth.",
-                    advantage: (analysis.advantages && analysis.advantages.length > 1) ? analysis.advantages[1] : "Standard rotation depth."
-                }
-            },
-            killCriteria: analysis.killCriteria || ["ABORT IF: Starter scratch or bullpen notification."],
-            pillarAnalysis: analysis
-        };
-
-        console.log("DEEP_DIVE_START");
-        console.log(JSON.stringify(deepDive, null, 2));
-        console.log("DEEP_DIVE_END");
 
     } catch (error: any) {
         console.error(`Analysis failed: ${error.message}`);
     }
+}
+
+async function handleMLB(game: any, api: MLBApi, analyzer: PillarAnalyzer, oddsSvc: OddsApi, polyApi: PolymarketApi) {
+    console.log(`📍 Found MLB: ${game.awayTeam} @ ${game.homeTeam}`);
+    
+    const { details, rosters, homeHot, awayHot } = await api.getHydratedAnalysisData(game);
+    const combinedHot = [...homeHot, ...awayHot];
+
+    const [oddsList, polyMarket] = await Promise.all([
+        oddsSvc.getOdds('baseball_mlb_preseason'),
+        polyApi.getMarketByTeams(game.homeTeam, game.awayTeam)
+    ]);
+
+    const homeStarterName = details?.probables?.home || game.probables?.home;
+    const awayStarterName = details?.probables?.away || game.probables?.away;
+
+    const [homeStarterId, awayStarterId] = await Promise.all([
+        api.searchPerson(homeStarterName || ""),
+        api.searchPerson(awayStarterName || ""),
+    ]);
+
+    const [homeStarterStats, awayStarterStats, homeStarterBio, awayStarterBio] = await Promise.all([
+        homeStarterId ? api.getPlayerStats(homeStarterId, 'pitching', '2024') : Promise.resolve(null),
+        awayStarterId ? api.getPlayerStats(awayStarterId, 'pitching', '2024') : Promise.resolve(null),
+        homeStarterId ? api.getPersonDetails(homeStarterId) : Promise.resolve(null),
+        awayStarterId ? api.getPersonDetails(awayStarterId) : Promise.resolve(null)
+    ]);
+
+    const analysis = analyzer.analyzeGame(
+        game, 
+        details || { lineups: { home: [], away: [] }, probables: game.probables }, 
+        polyMarket || undefined,
+        combinedHot,
+        [], 
+        new Map(),
+        464, 
+        "sharp", 
+        8, 
+        rosters, 
+        1.0 
+    );
+
+    const deepDive = {
+        sport: 'MLB',
+        matchup: `${game.awayTeam} @ ${game.homeTeam}`,
+        startTime: game.date,
+        venue: game.venue,
+        weather: details?.weather ? `${details.weather.temp}°F, ${details.weather.condition} | ${details.weather.wind}` : "Indoor/Cloudy",
+        starterBattle: {
+            home: { name: homeStarterName || 'TBD', note: homeStarterStats ? `${homeStarterBio?.pitchHand?.code}HP | 2024 ERA: ${homeStarterStats.era}` : "Rotation: TBD" },
+            away: { name: awayStarterName || 'TBD', note: awayStarterStats ? `${awayStarterBio?.pitchHand?.code}HP | 2024 ERA: ${awayStarterStats.era}` : "Rotation: TBD" }
+        },
+        teamBreakdown: {
+            home: { name: game.homeTeam, resonance: `Hot Bats: ${homeHot.length > 0 ? homeHot.join(', ') : 'None'}` },
+            away: { name: game.awayTeam, resonance: `Hot Bats: ${awayHot.length > 0 ? awayHot.join(', ') : 'None'}` }
+        },
+        pillarAnalysis: analysis
+    };
+
+    console.log("DEEP_DIVE_START");
+    console.log(JSON.stringify(deepDive, null, 2));
+    console.log("DEEP_DIVE_END");
+}
+
+async function handleNHL(game: any, api: NHLApi, analyzer: NHLPillarAnalyzer, polyApi: PolymarketApi) {
+    console.log(`📍 Found NHL: ${game.awayTeam} @ ${game.homeTeam}`);
+    
+    const { teamStats, goalieLeaders } = await api.getHydratedAnalysisData();
+    const polyMarket = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam);
+
+    const analysis = analyzer.analyzeGame(game, teamStats, polyMarket || undefined, goalieLeaders, undefined, 464, "sharp", 8, 1.0);
+
+    const deepDive = {
+        sport: 'NHL',
+        matchup: `${game.awayTeam} @ ${game.homeTeam}`,
+        startTime: game.startTime,
+        venue: game.venue || "TBD",
+        pillarAnalysis: analysis
+    };
+
+    console.log("DEEP_DIVE_START");
+    console.log(JSON.stringify(deepDive, null, 2));
+    console.log("DEEP_DIVE_END");
+}
+
+async function handleNBA(game: any, api: NBAApi, analyzer: NBAPillarAnalyzer, polyApi: PolymarketApi) {
+    console.log(`📍 Found NBA: ${game.awayTeam} @ ${game.homeTeam}`);
+    
+    const { nbaStats } = await api.getHydratedAnalysisData();
+    const polyMarket = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam);
+
+    const analysis = analyzer.analyzeGame(game, nbaStats, polyMarket || undefined, 464, "sharp", 8, 1.0);
+
+    const deepDive = {
+        sport: 'NBA',
+        matchup: `${game.awayTeam} @ ${game.homeTeam}`,
+        startTime: game.startTime,
+        venue: game.venue || "TBD",
+        pillarAnalysis: analysis
+    };
+
+    console.log("DEEP_DIVE_START");
+    console.log(JSON.stringify(deepDive, null, 2));
+    console.log("DEEP_DIVE_END");
 }
 
 const teamName = process.argv[2];

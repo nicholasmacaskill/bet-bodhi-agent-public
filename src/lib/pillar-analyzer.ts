@@ -62,16 +62,15 @@ const WEAK_PITCHERS_STATIC = [
     "José Urquidy",      // 5.97 ERA (2025) — high walk rate, poor secondary stuff
     "Adrian Houser",     // 5.80 ERA — home run prone, weak strikeout rate
     "Michael Lorenzen",  // 5.60 ERA — fly-ball heavy, limited swing-and-miss
-    "Kyle Bradish",      // returning from TJ — velocity/command not yet back
     "Jake Odorizzi",     // 5.50 ERA — diminished velo, soft contact reliant
     "Zach Davies",       // 5.45 ERA — extreme contact pitcher, bullpen game risk
     "Aaron Civale",      // 5.30 ERA — high BABIP, weak xFIP track record
 ];
 
-// Decision Weights - Pitching is paramount
+// Decision Weights - Pitching is paramount but rosters matter
 const WEIGHT_ELITE_PITCHER = 15;
-const WEIGHT_ELITE_BAT = 1;
-const WEIGHT_HOT_BAT = 0.5;
+const WEIGHT_ELITE_BAT = 3;      // Increased from 1
+const WEIGHT_HOT_BAT = 1.5;      // Increased from 0.5
 const WEIGHT_WEAK_PITCHER = -15;
 
 export class PillarAnalyzer {
@@ -236,7 +235,8 @@ export class PillarAnalyzer {
         // 4. Preseason Fallback (No Web3 execution route found)
         if (executionRoute === 'NONE') {
             const techFavored = techSport.side;
-            if (techFavored !== 'neutral' && currentConfidence >= 55) {
+            // Lowered threshold to 51% to catch minor technical edges
+            if (techFavored !== 'neutral' && currentConfidence >= 51) {
                 valueTeam = techFavored === 'home' ? homeTeam : awayTeam;
 
                 // Veto Checks
@@ -259,13 +259,18 @@ export class PillarAnalyzer {
                     recommendedAction = vetoReason;
                     valueTeam = undefined;
                 } else {
-                    // Mock preseason line logic
+                    // Preseason mode: calculate implied edge relative to 50/50 baseline
                     polyEV = (currentConfidence / 100) - 0.50;
                     polySharePrice = 0.50;
                     bookieScore.score = 7;
                     bookieScore.reason = `PRESEASON MODE: No Web3 Market. Bodhi True Prob hits ${(currentConfidence).toFixed(1)}%.`;
                     bookieScore.side = techFavored;
-                    recommendedAction = `PRESEASON CONVICTION - Bet ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
+                    
+                    if (currentConfidence >= 75) {
+                        recommendedAction = `PRESEASON CONVICTION - Bet ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
+                    } else {
+                        recommendedAction = `PRESEASON LEAN - Technical edge on ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
+                    }
                 }
             }
         }
@@ -412,39 +417,47 @@ export class PillarAnalyzer {
         const homeHotNames: string[] = [];
         const awayHotNames: string[] = [];
 
-        (details.lineups?.home || []).forEach((p: string) => {
-            if (ELITE_BATS.includes(p)) {
+        const flexMatch = (playerList: string[], target: string, listName: string) => {
+            if (!target) return false;
+            const t = target.toLowerCase();
+            const match = playerList.find(p => {
+                const lp = p.toLowerCase();
+                return t.includes(lp) || lp.includes(t);
+            });
+            return !!match;
+        };
+
+        const homePlayers = details.lineups?.home?.length > 0 ? details.lineups.home : (rosters?.home || []);
+        const awayPlayers = details.lineups?.away?.length > 0 ? details.lineups.away : (rosters?.away || []);
+
+        homePlayers.forEach((p: string) => {
+            if (flexMatch(ELITE_BATS, p, 'ELITE_BATS')) {
                 homeElite++;
                 homeEliteNames.push(p);
             }
-            if (hotBats.includes(p)) {
+            if (flexMatch(hotBats, p, 'hotBats')) {
                 homeHotCount++;
                 homeHotNames.push(p);
             }
-
-            // v3.0 Metrics Sniper: Check for elite xWOBA (>= .380)
             if (playerStats && playerStats.has(p) && playerStats.get(p).xwoba >= 0.380) {
                 homeMetricBonus += 0.5;
             }
         });
 
-        (details.lineups?.away || []).forEach((p: string) => {
-            if (ELITE_BATS.includes(p)) {
+        awayPlayers.forEach((p: string) => {
+            if (flexMatch(ELITE_BATS, p, 'ELITE_BATS')) {
                 awayElite++;
                 awayEliteNames.push(p);
             }
-            if (hotBats.includes(p)) {
+            if (flexMatch(hotBats, p, 'hotBats')) {
                 awayHotCount++;
                 awayHotNames.push(p);
             }
-
-            // v3.0 Metrics Sniper: Check for elite xWOBA (>= .380)
             if (playerStats && playerStats.has(p) && playerStats.get(p).xwoba >= 0.380) {
                 awayMetricBonus += 0.5;
             }
         });
 
-        // Normalise pitcher: schedule API returns a plain string, game-details API returns { fullName: ... }
         const parsePitcher = (p: any): string => {
             if (!p) return "";
             if (typeof p === 'string') return p;
@@ -453,35 +466,22 @@ export class PillarAnalyzer {
         const homePitcher = parsePitcher(details.probables?.home);
         const awayPitcher = parsePitcher(details.probables?.away);
 
+        let homePitcherElite = flexMatch(ELITE_PITCHERS, homePitcher, 'ELITE_PITCHERS') ? WEIGHT_ELITE_PITCHER : 0;
+        let awayPitcherElite = flexMatch(ELITE_PITCHERS, awayPitcher, 'ELITE_PITCHERS') ? WEIGHT_ELITE_PITCHER : 0;
 
-        let homePitcherElite = ELITE_PITCHERS.includes(homePitcher) ? WEIGHT_ELITE_PITCHER : 0;
-        let awayPitcherElite = ELITE_PITCHERS.includes(awayPitcher) ? WEIGHT_ELITE_PITCHER : 0;
+        const allWeak = [...weakPitchers, ...WEAK_PITCHERS_STATIC];
+        let homePitcherWeak = flexMatch(allWeak, homePitcher, 'WEAK_PITCHERS') ? WEIGHT_WEAK_PITCHER : 0;
+        let awayPitcherWeak = flexMatch(allWeak, awayPitcher, 'WEAK_PITCHERS') ? WEIGHT_WEAK_PITCHER : 0;
 
-        // v4.0 Hallucination Hard-Validation: Double-check if the pitcher is on the active roster
-        if (rosters) {
-            if (homePitcherElite > 0 && !rosters.home.includes(homePitcher)) {
-                homePitcherElite = 0;
-                advantages.push(`⚠️ Adjusted: ${homePitcher} (Home) is an Elite Pitcher but is NOT on the current active team roster. Hallucination guard triggered.`);
-            }
-            if (awayPitcherElite > 0 && !rosters.away.includes(awayPitcher)) {
-                awayPitcherElite = 0;
-                advantages.push(`⚠️ Adjusted: ${awayPitcher} (Away) is an Elite Pitcher but is NOT on the current active team roster. Hallucination guard triggered.`);
-            }
-        }
-
-        let homePitcherWeak = ([...weakPitchers, ...WEAK_PITCHERS_STATIC]).includes(homePitcher) ? WEIGHT_WEAK_PITCHER : 0;
-        let awayPitcherWeak = ([...weakPitchers, ...WEAK_PITCHERS_STATIC]).includes(awayPitcher) ? WEIGHT_WEAK_PITCHER : 0;
-
-        // v3.0 Metrics Sniper: Expected ERA overriding legacy lists
         if (playerStats) {
             if (playerStats.has(homePitcher)) {
                 const xERA = playerStats.get(homePitcher).xera;
-                if (xERA <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER; // Positive Regression Lock
+                if (xERA <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER;
                 if (xERA >= 5.00) homePitcherWeak = WEIGHT_WEAK_PITCHER;
             }
             if (playerStats.has(awayPitcher)) {
                 const xERA = playerStats.get(awayPitcher).xera;
-                if (xERA <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER; // Positive Regression Lock
+                if (xERA <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER;
                 if (xERA >= 5.00) awayPitcherWeak = WEIGHT_WEAK_PITCHER;
             }
         }
@@ -496,7 +496,6 @@ export class PillarAnalyzer {
         const unfavoredPitcher = favored === 'home' ? awayPitcher : homePitcher;
         const favoredEliteCount = favored === 'home' ? homeElite : awayElite;
 
-        // Collect Advantages
         if (favored === 'home') {
             if (homePitcherElite) advantages.push(`🔥 Elite Starting Pitcher: ${homePitcher} is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.`);
             if (homeHotCount >= 2) advantages.push(`⚡ Offensive Surge: ${homeHotCount} players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.`);
@@ -509,7 +508,6 @@ export class PillarAnalyzer {
             if (awayElite >= 2) advantages.push(`💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.`);
         }
 
-        // Hot Offense vs Weak Pitcher Boost
         let mismatchBoost = 0;
         if (favored === 'home' && homeHotCount >= 2 && awayPitcherWeak) {
             mismatchBoost = 2;
@@ -519,7 +517,6 @@ export class PillarAnalyzer {
             advantages.push("🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.");
         }
 
-        // Matchup Archetype Engine
         const homeTeamShort = homeTeam.split(' ').pop();
         const awayTeamShort = awayTeam.split(' ').pop();
         const favoredTeamFull = favored === 'home' ? homeTeam : awayTeam;
@@ -530,7 +527,6 @@ export class PillarAnalyzer {
         const isHomeTBD = homePitcher === "TBD / Bullpen" || !homePitcher;
         const isAwayTBD = awayPitcher === "TBD / Bullpen" || !awayPitcher;
 
-        // Derive who holds the ace
         const favoredPitcherElite = favored === 'home' ? homePitcherElite : awayPitcherElite;
         const unfavoredPitcherElite = favored === 'home' ? awayPitcherElite : homePitcherElite;
         const favoredHotNames = favored === 'home' ? homeHotNames : awayHotNames;
@@ -538,33 +534,25 @@ export class PillarAnalyzer {
         let narrative = "";
 
         if (homePitcherElite && awayPitcherElite) {
-            // Both aces — edge goes to the favored side's support cast
             const supportStar = favored === 'home' ? (homeEliteNames[0] || 'lineup depth') : (awayEliteNames[0] || 'lineup depth');
             narrative = `Pitching Duel: ${homePitcher} vs. ${awayPitcher}. Both starters carry elite xERA metrics, but the ${favoredTeamFull} hold a +${disparity.toFixed(1)} composite edge driven by ${supportStar} providing an offensive cushion the opponent lacks. `;
         } else if (favoredPitcherElite && !unfavoredPitcherElite) {
-            // One dominant ace on the favored side
             narrative = `Dominant Pitching Advantage: ${favoredPitcher} is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the ${favoredTeamFull} today. Facing ${unfavoredPitcher}, our model identifies a clear +${disparity.toFixed(1)} technical edge in this arms race. `;
         } else if (mismatchBoost > 0) {
-            // Hot offense exploiting a weak arm
             const star = favoredHotNames[0] || (favored === 'home' ? homeEliteNames[0] : awayEliteNames[0]) || 'their lineup';
             narrative = `Offense vs. Defense Mismatch: The ${favoredTeamFull}, led by ${star}, are in a peak offensive window and facing ${unfavoredPitcher} — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +${disparity.toFixed(1)} delta signals high scoring probability. `;
         } else if (isHomeTBD || isAwayTBD) {
-            // Bullpen game stability edge
             const tbdSide = isHomeTBD && isAwayTBD ? 'both teams' : (isHomeTBD ? homeTeam : awayTeam);
             narrative = `Bullpen Game Stability: With ${tbdSide} going to the 'pen, the ${favoredTeamFull} hold a +${disparity.toFixed(1)} Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the ${unfavoredTeamS}'s available arms for today's slate. `;
         } else if (favoredEliteCount >= 2) {
-            // Heavy lineup advantage
             const stars = favored === 'home' ? homeEliteNames.slice(0, 2).join(' and ') : awayEliteNames.slice(0, 2).join(' and ');
             narrative = `Lineup Depth Edge: The ${favoredTeamFull}, featuring ${stars || 'multiple elite-tier bats'}, carry a +${disparity.toFixed(1)} roster advantage. Their high-level offensive ceiling creates sustained pressure that ${unfavoredPitcher} will need to contain across 6+ innings. `;
         } else if (disparity === 0) {
-            // True coin-flip — neutral
             narrative = `Even Technical Profile: Both ${homeTeam} and ${awayTeam} show comparable strength metrics. This matchup is expected to be decided by situational execution, weather, or late-game management rather than structural advantages in our model. `;
         } else {
-            // Marginal lean — at least name the players
             narrative = `Marginal Technical Edge: Our model gives the ${favoredTeamFull} a slight +${disparity.toFixed(1)} Strength lead over the ${unfavoredTeamFull}. With ${favoredPitcher !== 'TBD / Bullpen' ? favoredPitcher + ' on the mound' : 'bullpen management in play'}, this is a low-disparity lean that requires other confirmatory signals before sizing up. `;
         }
 
-        // Add dynamic trailing context
         if (playerStats) {
             const hStats = playerStats.get(homePitcher);
             const aStats = playerStats.get(awayPitcher);
@@ -576,12 +564,16 @@ export class PillarAnalyzer {
             }
         }
 
+        // Final score should never be less than 5 (neutral) or more than 10 (max edge)
+        // We use the absolute disparity to represent the strength for the favored side.
+        const finalScore = Math.min(10, Math.max(5, Math.floor(5 + (disparity / 2))));
+
         return {
             score: {
                 pillar: "Technical Roster Advantage",
-                score: Math.min(10, Math.floor(5 + disparity + mismatchBoost)),
+                score: finalScore,
                 reason: narrative,
-                side: disparity === 0 ? 'neutral' : favored
+                side: homeTotalStrength === awayTotalStrength ? 'neutral' : (homeTotalStrength > awayTotalStrength ? 'home' : 'away')
             },
             advantages
         };

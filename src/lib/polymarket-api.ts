@@ -76,32 +76,66 @@ export class PolymarketApi {
         const awayMascot = awayTeam.split(' ').pop()?.toLowerCase() || "";
         
         try {
-            const url = `${this.gammaUrl}/events?active=true&closed=false&limit=50&query=${encodeURIComponent(homeMascot)}`;
+            // 1. Targeted Search (Fast)
+            const query = `${homeMascot} ${awayMascot}`;
+            const url = `${this.gammaUrl}/events?active=true&closed=false&limit=50&query=${encodeURIComponent(query)}`;
             const response = await fetch(url);
-            if (!response.ok) return null;
-            
-            const data = await response.json();
-            if (!data || !Array.isArray(data)) return null;
+            let data = [];
+            if (response.ok) {
+                data = await response.json();
+            }
 
-            for (const event of data) {
-                const title = event.title.toLowerCase();
-                if (title.includes(homeMascot) && title.includes(awayMascot)) {
-                    if (event.markets && event.markets.length > 0) {
-                        const market = event.markets[0];
-                        return {
-                            conditionId: market.conditionId,
-                            question: market.question,
-                            description: market.description || event.description || "",
-                            outcomes: market.outcomes ? JSON.parse(market.outcomes) : [],
-                            outcomePrices: market.outcomePrices ? JSON.parse(market.outcomePrices) : [],
-                            category: event.category,
-                            active: market.active,
-                            volume: parseFloat(market.volume || "0"),
-                            endDate: market.endDate
-                        };
-                    }
+            // Fallback 1: Just home mascot
+            if (!data || data.length === 0) {
+                const fallbackUrl = `${this.gammaUrl}/events?active=true&closed=false&limit=100&query=${encodeURIComponent(homeMascot)}`;
+                const fallbackResp = await fetch(fallbackUrl);
+                if (fallbackResp.ok) {
+                    const fallbackData = await fallbackResp.json();
+                    if (Array.isArray(fallbackData)) data.push(...fallbackData);
                 }
             }
+
+            const match = (marketList: any[]) => {
+                for (const event of marketList) {
+                    if (!event.markets) continue;
+                    for (const market of event.markets) {
+                        const q = market.question.toLowerCase();
+                        const d = (market.description || event.description || "").toLowerCase();
+                        const t = (event.title || "").toLowerCase();
+                        
+                        if ((q.includes(homeMascot) || d.includes(homeMascot) || t.includes(homeMascot)) && 
+                            (q.includes(awayMascot) || d.includes(awayMascot) || t.includes(awayMascot))) {
+                            return {
+                                conditionId: market.conditionId,
+                                question: market.question,
+                                description: market.description || event.description || "",
+                                outcomes: market.outcomes ? (typeof market.outcomes === 'string' ? JSON.parse(market.outcomes) : market.outcomes) : [],
+                                outcomePrices: market.outcomePrices ? (typeof market.outcomePrices === 'string' ? JSON.parse(market.outcomePrices) : market.outcomePrices) : [],
+                                category: event.category,
+                                active: market.active,
+                                volume: parseFloat(market.volume || "0"),
+                                endDate: market.endDate
+                            };
+                        }
+                    }
+                }
+                return null;
+            };
+
+            const directResult = match(data);
+            if (directResult) return directResult;
+
+            // 2. Scanner-Style Fallback (Comprehensive)
+            // If targeted search failed, fetch all sports markets vs. and search manually
+            const allMarkets = await this.getActiveSportsMarkets("vs.");
+            for (const m of allMarkets) {
+                const q = m.question.toLowerCase();
+                const d = m.description.toLowerCase();
+                if ((q.includes(homeMascot) || d.includes(homeMascot)) && (q.includes(awayMascot) || d.includes(awayMascot))) {
+                    return m;
+                }
+            }
+
             return null;
         } catch (error) {
             return null;

@@ -102,4 +102,22 @@ export class NHLApi {
             return null;
         }
     }
+
+    /**
+     * CENTRALIZED HYDRATION: Fetch all data needed for a Pillar Analysis in one call.
+     */
+    async getHydratedAnalysisData(): Promise<{
+        teamStats: Record<string, TeamStats>;
+        goalieLeaders: { elite: string[], weak: string[] };
+    }> {
+        const [teamStats, goalieLeaders] = await Promise.all([
+            this.getTeamStats(),
+            this.getGoalieLeaders()
+        ]);
+
+        return {
+            teamStats,
+            goalieLeaders
+        };
+    }
 }

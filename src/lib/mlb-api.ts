@@ -228,4 +228,51 @@ export class MLBApi {
             return [];
         }
     }
+
+    /**
+     * CENTRALIZED HYDRATION: Fetch all data needed for a Pillar Analysis in one call.
+     * Ensures consistency between bulk scanner and single analyst.
+     */
+    async getHydratedAnalysisData(game: MLBGame): Promise<{
+        details: any;
+        rosters: { home: string[], away: string[] };
+        homeHot: string[];
+        awayHot: string[];
+    }> {
+        const gamePk = game.gamePk;
+        
+        // 1. Details (Lineups + Weather + Probables)
+        const details = await this.getGameDetails(gamePk) || { 
+            probables: game.probables || {}, 
+            lineups: game.lineups || { home: [], away: [] } 
+        };
+
+        // 2. Rosters (Hallucination Guard)
+        let rosters = { home: [] as string[], away: [] as string[] };
+        if (game.homeId && game.awayId) {
+            const [h, a] = await Promise.all([
+                this.getTeamRoster(game.homeId),
+                this.getTeamRoster(game.awayId)
+            ]);
+            rosters = { home: h, away: a };
+        }
+
+        // 3. Hot Bats (Technical Signals)
+        const [homeHotRaw, awayHotRaw] = await Promise.all([
+            game.homeId ? this.getHotBats(game.homeId) : Promise.resolve([]),
+            game.awayId ? this.getHotBats(game.awayId) : Promise.resolve([])
+        ]);
+
+        // Normalize hot bats (remove OPS strings)
+        const cleanHot = (names: string[]) => names.map(n => n.split(' (')[0]);
+        const homeHot = cleanHot(homeHotRaw);
+        const awayHot = cleanHot(awayHotRaw);
+
+        return {
+            details,
+            rosters,
+            homeHot,
+            awayHot
+        };
+    }
 }

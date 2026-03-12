@@ -116,4 +116,14 @@ export class NBAApi {
             }
         };
     }
+
+    /**
+     * CENTRALIZED HYDRATION: Fetch all data needed for a Pillar Analysis in one call.
+     */
+    async getHydratedAnalysisData(): Promise<{
+        nbaStats: Record<string, NBATeamStats>;
+    }> {
+        const nbaStats = await this.getTeamAdvancedStats();
+        return { nbaStats };
+    }
 }

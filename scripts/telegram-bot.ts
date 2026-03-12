@@ -118,6 +118,14 @@ bot.on('text', async (ctx, next) => {
         return;
     }
 
+    // Command override: If a user sends a command starting with '/', break the sentiment flow
+    if (text.startsWith('/')) {
+        console.log(`[${new Date().toISOString()}] Command override: ${text} detected while state was ${state}. Resetting state.`);
+        ctx.session.state = 'IDLE';
+        ctx.session.pendingCommand = undefined;
+        return next();
+    }
+
     return next();
 });
 
@@ -156,10 +164,16 @@ async function unifiedScan(ctx: any) {
     try {
         const mood = ctx.session.mood || "sharp";
         const calmness = ctx.session.calmness || 10;
-        await execAsync(`npx tsx scripts/daily-scanner.ts --json --mood "${mood}" --calmness ${calmness}`);
+        console.log(`[${new Date().toISOString()}] Starting unifiedScan for user ${ctx.from?.id}...`);
+        
+        // Increase maxBuffer to 10MB to handle large slate outputs
+        await execAsync(`npx tsx scripts/daily-scanner.ts --json --mood "${mood}" --calmness ${calmness}`, {
+            maxBuffer: 10 * 1024 * 1024
+        });
 
         const resultsPath = path.join(process.cwd(), 'public', 'scan-results.json');
         if (!fs.existsSync(resultsPath)) {
+            console.error(`[${new Date().toISOString()}] Scanner failed: results file not found at ${resultsPath}`);
             await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
             return ctx.reply("❌ Analysis engine failed to produce results.");
         }
@@ -270,6 +284,7 @@ async function unifiedScan(ctx: any) {
         console.log(`[${new Date().toISOString()}] Delivery complete.`);
 
     } catch (error: any) {
+        console.error(`[${new Date().toISOString()}] Unified scan failed:`, error);
         ctx.reply(`❌ Analysis failed: ${error.message}`);
     }
 }
@@ -446,8 +461,14 @@ function renderDeepDiveHTML(data: any) {
     return msg;
 }
 
+bot.command('reset', (ctx) => {
+    ctx.session.state = 'IDLE';
+    ctx.session.pendingCommand = undefined;
+    ctx.reply("♻️ Bot state reset to IDLE.");
+});
+
 bot.start((ctx) => {
-    ctx.reply("🏹 Bodhi Command Center Online.\n/scan - Full Slate Analysis & Picks\n/analyze [team] - Deep Matchup Dive\n/sentiment - Update Mindset\n/balance - Check Bankroll");
+    ctx.reply("🏹 Bodhi Command Center Online.\n/scan - Full Slate Analysis & Picks\n/analyze [team] - Deep Matchup Dive\n/sentiment - Update Mindset\n/balance - Check Bankroll\n/reset - Reset bot state if stuck");
 });
 
 bot.launch();

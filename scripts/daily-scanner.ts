@@ -384,22 +384,13 @@ async function runScan(date: string): Promise<void> {
         for (const game of mlbGames) {
             let details: any = { probables: game.probables || {}, lineups: game.lineups || { home: [], away: [] } };
             let rosters: { home: string[], away: string[] } | undefined = undefined;
+            let combinedHot: string[] = [];
 
             if (game.gamePk) {
-                const fetched = await mlbApi.getGameDetails(game.gamePk);
-                if (fetched) {
-                    details = { ...details, ...fetched };
-                    game.weather = fetched.weather; // Sync weather back to game object
-                }
-
-                // Fetch Official Roster for Hallucination Guard
-                if (game.homeId && game.awayId) {
-                    const [homeRoster, awayRoster] = await Promise.all([
-                        mlbApi.getTeamRoster(game.homeId),
-                        mlbApi.getTeamRoster(game.awayId)
-                    ]);
-                    rosters = { home: homeRoster, away: awayRoster };
-                }
+                const hydrated = await mlbApi.getHydratedAnalysisData(game);
+                details = hydrated.details || details;
+                rosters = hydrated.rosters;
+                combinedHot = [...hydrated.homeHot, ...hydrated.awayHot];
             }
 
             const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
@@ -414,8 +405,8 @@ async function runScan(date: string): Promise<void> {
                 condition = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam) || undefined;
             }
 
-            // Analysis
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, [], [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
+            // Analysis (Now with technical signals!)
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, combinedHot, [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&
@@ -470,11 +461,11 @@ async function runScan(date: string): Promise<void> {
     // ── NHL ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching NHL games...`);
-        const [nhlGames, nhlStats, goalieLeaders] = await Promise.all([
+        const [nhlGames, hydrated] = await Promise.all([
             nhlApi.getSchedule(date),
-            nhlApi.getTeamStats(),
-            nhlApi.getGoalieLeaders()
+            nhlApi.getHydratedAnalysisData()
         ]);
+        const { teamStats: nhlStats, goalieLeaders } = hydrated;
         process.stdout.write(`\r  ${GREEN}✓${RESET} NHL: ${nhlGames.length} games found\n`);
 
         for (const game of nhlGames) {
@@ -521,10 +512,11 @@ async function runScan(date: string): Promise<void> {
     try {
         const nbaDate = date.replace(/-/g, '');
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching NBA games...`);
-        const [nbaGames, nbaStats] = await Promise.all([
+        const [nbaGames, hydrated] = await Promise.all([
             nbaApi.getSchedule(nbaDate),
-            nbaApi.getTeamAdvancedStats()
+            nbaApi.getHydratedAnalysisData()
         ]);
+        const { nbaStats } = hydrated;
         process.stdout.write(`\r  ${GREEN}✓${RESET} NBA: ${nbaGames.length} games found\n`);
 
         for (const game of nbaGames) {
