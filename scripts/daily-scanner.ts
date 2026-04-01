@@ -561,7 +561,7 @@ async function runScan(date: string): Promise<void> {
                     (m.question.toLowerCase().includes(fight.fighter2.toLowerCase()) || m.description.toLowerCase().includes(fight.fighter2.toLowerCase()))
                 );
 
-                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, condition, bankroll, userMood, userCalmness, slumpStatus.multiplier);
+                const analysis = mmaAnalyzer.analyzeFight(fight, fighterStats, condition, bankroll, userMood, userCalmness, slumpStatus.multiplier, event.location);
 
                 allResults.push({
                     sport: 'MMA',

@@ -1,7 +1,13 @@
 🚀 Bodhi Bot is live.
-[2026-03-10T01:40:56.428Z] User 7934081383 sent: /scan
-[2026-03-10T01:41:02.898Z] User 7934081383 sent: normal
-[2026-03-10T01:41:04.964Z] User 7934081383 sent: 8
-[2026-03-10T01:41:11.204Z] Delivering summary...
-[2026-03-10T01:41:11.494Z] Delivering detailed games (26)...
-[2026-03-10T01:41:22.129Z] Delivery complete.
+[2026-03-12T20:38:55.752Z] User 7934081383 sent: /scan
+[2026-03-12T20:38:55.760Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-03-12T20:38:59.521Z] User 7934081383 sent: normal
+[2026-03-12T20:39:01.736Z] User 7934081383 sent: 8
+[2026-03-12T20:39:02.247Z] Starting unifiedScan for user 7934081383...
+[2026-03-12T20:39:16.791Z] Delivering summary...
+[2026-03-12T20:39:17.051Z] Delivering detailed games (38)...
+[2026-03-12T20:39:31.927Z] Delivery complete.
+[2026-03-12T20:40:25.157Z] User 7934081383 sent: /analyze nationals
+[2026-03-12T20:40:25.159Z] Command override: /analyze nationals detected while state was IDLE. Resetting state.
+[2026-03-12T20:41:58.006Z] User 7934081383 sent: /analyze white sox
+[2026-03-12T20:41:58.010Z] Command override: /analyze white sox detected while state was IDLE. Resetting state.

@@ -297,7 +297,13 @@ function renderGameDetailHTML(r: any, index: number) {
     const timeStr = startTime ? new Date(startTime).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : 'LIVE';
 
     let msg = `━━━━━━━━━━━━━━━━━━━━\n`;
-    msg += `<b>[ ${index + 1} ] ${emoji} ${matchup}</b> (${timeStr})\n\n`;
+    msg += `<b>[ ${index + 1} ] ${emoji} ${matchup}</b> (${timeStr})\n`;
+
+    if (analysis.dataIntegrity === 'incomplete') {
+        const reasons = (analysis.incompleteReasons || []).join(' | ');
+        msg += `⚠️ <b>DATA INCOMPLETE:</b> <i>${reasons}</i>\n`;
+    }
+    msg += `\n`;
 
     if (sport === 'MLB') {
         const hPitch = analysis.homePitcher || 'TBD';
@@ -316,12 +322,13 @@ function renderGameDetailHTML(r: any, index: number) {
     }
 
     msg += `📊 <b>BODHI STABILITY SCORE:</b> ${analysis.overallConfidence}%\n`;
+    msg += `<i>(Objective: Technical + Seasonal + Bookies)</i>\n`;
 
     msg += `\n📑 <b>CORE PILLARS:</b>\n`;
     analysis.pillars.forEach((p: any, i: number) => {
-        // Tag stripping for HTML stability
         const cleanReason = (p.reason || "").replace(/[<>]/g, "");
-        const pillarEmoji = i === 0 ? '💪' : i === 1 ? '📅' : i === 2 ? '👥' : i === 3 ? '🏦' : i === 4 ? '📁' : i === 5 ? '🧠' : '✨';
+        const pillarEmoji = i === 0 ? '💪' : i === 1 ? '📅' : i === 2 ? '📁' : i === 3 ? '🏦' : i === 4 ? '👥' : i === 5 ? '🧠' : '✨';
+        if (i === 3) msg += `<i>── soft pillars (context only) ──</i>\n`;
         msg += `${i + 1}. ${pillarEmoji} <b>${p.pillar.toUpperCase()}</b> (${p.score}/10)\n`;
         msg += `<i>${cleanReason}</i>\n\n`;
     });

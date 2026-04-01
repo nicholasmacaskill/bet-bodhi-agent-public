@@ -37,6 +37,8 @@ export interface BodhiAnalysis {
     matchupNotes?: string;
     advantages?: string[];
     killCriteria?: string[];
+    dataIntegrity?: 'complete' | 'incomplete';
+    incompleteReasons?: string[];
 }
 
 // Map of 2026 Elite MLB Pitchers
@@ -72,6 +74,13 @@ const WEIGHT_ELITE_PITCHER = 15;
 const WEIGHT_ELITE_BAT = 3;      // Increased from 1
 const WEIGHT_HOT_BAT = 1.5;      // Increased from 0.5
 const WEIGHT_WEAK_PITCHER = -15;
+
+export function getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
+    if (confidence >= 80) return { label: "Aggressive (7.5%)", amount: bankroll * 0.075 };
+    if (confidence >= 70) return { label: "Standard (4.0%)", amount: bankroll * 0.04 };
+    if (confidence >= 60) return { label: "Caution (2.0%)", amount: bankroll * 0.02 };
+    return { label: "Zero (0%)", amount: 0 };
+}
 
 export class PillarAnalyzer {
 
@@ -128,8 +137,8 @@ export class PillarAnalyzer {
         // Setup outputs
         let recommendedAction = "PASS - No clear edge.";
         let valueTeam = undefined;
-        let recommendedSize = this.getSizing(currentConfidence, bankroll).label;
-        let suggestedStake = this.getSizing(currentConfidence, bankroll).amount;
+        let recommendedSize = "Zero (0%)";
+        let suggestedStake = 0;
         let polyConditionId = undefined;
         let polySharePrice = undefined;
         let polyEV = undefined;
@@ -307,21 +316,16 @@ export class PillarAnalyzer {
         };
         pillars.push(spiritualScore);
 
-        // Recalculate Final Confidence incorporating psych pillars
-        const finalConfidence = Math.floor((pillars.reduce((acc, p) => acc + p.score, 0) / (pillars.length * 10)) * 100);
+        // Objective confidence: 3 data-driven pillars only (Technical + Seasonal + Bookies)
+        const objectiveConfidence = Math.round(
+            ((techSport.score + seasonalSport.score + bookieScore.score) / 30) * 100
+        );
+        currentConfidence = objectiveConfidence;
 
-        // Finalize sizing
+        // Finalize sizing (objectiveConfidence + soft-pillar modifiers)
         if (valueTeam) {
-            let effectiveBankroll = bankroll;
-            let calmnessModifier = 1.0;
-
-            if (calmness !== undefined && calmness < 7) {
-                // Throttle stake if tilted or anxious
-                calmnessModifier = 0.5; // Half size for lack of flow
-            }
-
-            const sizing = this.getSizing(finalConfidence, effectiveBankroll);
-            
+            const calmnessModifier = calmness !== undefined && calmness < 7 ? 0.5 : 1.0;
+            const sizing = getSizing(objectiveConfidence, bankroll);
             if (slumpMultiplier < 1.0) {
                 recommendedSize = "Throttled (Slump Detection)";
             } else if (calmness !== undefined && calmness < 7) {
@@ -329,16 +333,7 @@ export class PillarAnalyzer {
             } else {
                 recommendedSize = sizing.label;
             }
-            
             suggestedStake = sizing.amount * calmnessModifier * slumpMultiplier;
-        }
-
-        // 4. Stability Score Recalibration
-        // Recalibrate the 'Stability Score' to be EV-dependent. 
-        // If EV is negative, the maximum possible Stability Score is 30%.
-        const maxEV = polyEV !== undefined ? polyEV : -1;
-        if (maxEV < 0) {
-            currentConfidence = Math.min(currentConfidence, 30);
         }
 
         // Generate Kill Criteria
@@ -366,15 +361,16 @@ export class PillarAnalyzer {
             polyOutcomeIndex: valueTeam ? (valueTeam === homeTeam ? homeIdx : awayIdx) : undefined,
             executionRoute,
             recommendedAction,
-            recommendedSize: this.getSizing(currentConfidence, bankroll).label,
-            suggestedStake: this.getSizing(currentConfidence, bankroll).amount,
+            recommendedSize,
+            suggestedStake,
             homePitcher,
             awayPitcher,
             homeOdds: polyMarket ? homePrice : undefined,
             awayOdds: polyMarket ? awayPrice : undefined,
             matchupNotes: `${awayPitcher || '?'} vs ${homePitcher || '?'}. ${techSport.reason}`,
             advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, currentConfidence, mood),
-            killCriteria
+            killCriteria,
+            dataIntegrity: 'complete' as const
         };
     }
 
@@ -392,11 +388,8 @@ export class PillarAnalyzer {
         return backfilled.slice(0, 3);
     }
 
-    private getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
-        if (confidence >= 80) return { label: "Aggressive (7.5%)", amount: bankroll * 0.075 };
-        if (confidence >= 70) return { label: "Standard (4.0%)", amount: bankroll * 0.04 };
-        if (confidence >= 60) return { label: "Caution (2.0%)", amount: bankroll * 0.02 };
-        return { label: "Zero (0%)", amount: 0 };
+    private getSizing(confidence: number, bankroll: number) {
+        return getSizing(confidence, bankroll);
     }
 
     private normalizeTeam(team: string): string {
@@ -583,8 +576,8 @@ export class PillarAnalyzer {
         const venue = game.venue?.toLowerCase() || "";
         const isArizona = venue.includes("stadium") || venue.includes("park") || venue.includes("field") || venue.includes("complex");
 
-        let score = isArizona ? 7 : 5;
-        let reason = isArizona ? "Cactus League: Dry air offensive boost. Watch totals." : "Grapefruit League: Neutral environment.";
+        let score = isArizona ? 6 : 5;
+        let reason = isArizona ? "Cactus League: Slight dry-air offensive boost." : "Grapefruit League: Neutral environment.";
 
         // Integrate Live Weather (Pillar #2)
         if (game.weather?.wind) {

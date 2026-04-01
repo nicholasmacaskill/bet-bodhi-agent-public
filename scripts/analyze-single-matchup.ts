@@ -8,7 +8,7 @@ import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
 import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { PolymarketApi } from '../src/lib/polymarket-api';
 
-async function analyzeMatchup(teamQuery: string) {
+async function analyzeMatchup(teamQuery: string, overrideDate?: string) {
     const mlb = new MLBApi();
     const nhl = new NHLApi();
     const nba = new NBAApi();
@@ -19,7 +19,7 @@ async function analyzeMatchup(teamQuery: string) {
     const nhlAnalyzer = new NHLPillarAnalyzer();
     const nbaAnalyzer = new NBAPillarAnalyzer();
     
-    const date = new Date().toISOString().split('T')[0];
+    const date = overrideDate || new Date().toISOString().split('T')[0];
 
     console.log(`\n🔍 DEEP DIVE ANALYSIS: ${teamQuery.toUpperCase()} Matchup`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
@@ -167,9 +167,11 @@ async function handleNBA(game: any, api: NBAApi, analyzer: NBAPillarAnalyzer, po
 }
 
 const teamName = process.argv[2];
+const dateOverride = process.argv[3];
+
 if (!teamName) {
-    console.error("Usage: npx tsx scripts/analyze-single-matchup.ts (team_name)");
+    console.log("Usage: npx tsx scripts/analyze-single-matchup.ts (team_name) [date]");
     process.exit(1);
 }
 
-analyzeMatchup(teamName);
+analyzeMatchup(teamName, dateOverride);

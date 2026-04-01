@@ -358,6 +358,13 @@ export class PolymarketApi {
      * Fetches trade history for the configured wallet.
      */
     async getTrades() {
+        return this.getTradesForAddress(process.env.POLY_PROXY_ADDRESS || "");
+    }
+
+    /**
+     * Fetches trade history for a specific wallet address from Polymarket CLOB.
+     */
+    async getTradesForAddress(targetAddress: string) {
         const privateKey = process.env.WALLET_PRIVATE_KEY;
         if (!privateKey || privateKey === 'your_private_key_here') return [];
 
@@ -391,11 +398,15 @@ export class PolymarketApi {
                 process.env.POLY_PROXY_ADDRESS
             );
 
-            // Fetch filled orders or trades
-            const trades = await (client as any).getTrades({ maker: process.env.POLY_PROXY_ADDRESS || wallet.address });
+            // If targetAddress is empty, use the configured wallet address
+            const addressToFetch = targetAddress || process.env.POLY_PROXY_ADDRESS || wallet.address;
+
+            // Fetch filled orders or trades for the target address
+            // Note: the CLOB client getTrades takes a market query or maker.
+            const trades = await (client as any).getTrades({ maker: addressToFetch });
             return trades;
         } catch (error) {
-            console.error("Failed to fetch Polymarket trades:", error);
+            console.error(`Failed to fetch Polymarket trades for ${targetAddress}:`, error);
             return [];
         }
     }
