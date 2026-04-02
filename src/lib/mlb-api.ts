@@ -3,6 +3,8 @@
  * Optimized for Spring Training with defensive checks.
  */
 
+import * as fs from 'fs';
+
 export interface MLBGame {
     gamePk: number;
     homeTeam: string;
@@ -25,31 +27,38 @@ export interface MLBGame {
         temp: string;
         wind: string;
     };
+    score?: string;
 }
 
 export class MLBApi {
     private baseUrl = 'https://statsapi.mlb.com/api/v1';
 
     async getSchedule(date: string): Promise<MLBGame[]> {
-        const url = `${this.baseUrl}/schedule?sportId=1&date=${date}&hydrate=team,lineups,probablePitcher,venue`;
+        const url = `${this.baseUrl}/schedule?sportId=1&date=${date}&hydrate=team,lineups,probablePitcher,venue,linescore,boxscore`;
         const response = await fetch(url);
         const data = await response.json();
 
         if (!data.dates || data.dates.length === 0) return [];
 
-        return data.dates[0].games.map((game: any) => {
+        return Promise.all(data.dates[0].games.map(async (game: any) => {
             const homePitcher = game.teams.home.probablePitcher?.fullName;
             const awayPitcher = game.teams.away.probablePitcher?.fullName;
+            const homeTeamName = (game.teams.home.team.name || "").trim();
+            const awayTeamName = (game.teams.away.team.name || "").trim();
+            
+            const manualScore = await this.getManualScore(date, homeTeamName, awayTeamName);
+            const liveScore = game.linescore ? `${game.teams.away.score}-${game.teams.home.score}` : undefined;
 
             return {
                 gamePk: game.gamePk,
-                homeTeam: (game.teams.home.team.name || "").trim(),
+                homeTeam: homeTeamName,
                 homeId: game.teams.home.team.id,
-                awayTeam: (game.teams.away.team.name || "").trim(),
+                awayTeam: awayTeamName,
                 awayId: game.teams.away.team.id,
                 venue: (game.venue.name || "").trim(),
                 status: game.status.detailedState,
                 date: game.gameDate,
+                score: manualScore || liveScore,
                 probables: {
                     home: homePitcher,
                     away: awayPitcher
@@ -59,7 +68,7 @@ export class MLBApi {
                     away: game.lineups?.awayPlayers?.map((p: any) => p.fullName) || []
                 }
             };
-        });
+        }));
     }
 
     /**
@@ -274,5 +283,32 @@ export class MLBApi {
             homeHot,
             awayHot
         };
+    }
+
+    /**
+     * Check for manual score overrides (Data Integrity Guard)
+     */
+    async getManualScore(date: string, homeTeam: string, awayTeam: string): Promise<string | null> {
+        try {
+            // Extract YYYY-MM-DD from full date string if needed
+            const simpleDate = date.split('T')[0];
+            const path = '/Users/nicholasmacaskill/Downloads/bet-bodhi/data/2026_04_01_manual_scores.json';
+            
+            if (!fs.existsSync(path)) return null;
+            
+            const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const dateData = data[simpleDate];
+            if (!dateData) return null;
+            
+            // Search for the match
+            for (const [match, score] of Object.entries(dateData)) {
+                if (match.toLowerCase().includes(homeTeam.toLowerCase()) || match.toLowerCase().includes(awayTeam.toLowerCase())) {
+                    return score as string;
+                }
+            }
+            return null;
+        } catch (e) {
+            return null;
+        }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "strategyA": {
+    "profit": 225,
+    "winRate": 65.57377049180208,
+    "dd": 61.5
+  },
+  "strategyB": {
+    "profit": 30,
+    "winRate": 66.66666666666636,
+    "dd": 15
+  },
+  "strategyC": {
+    "profit": 4.5,
+    "winRate": 50,
+    "dd": 11.25
+  }
+}

@@ -1,0 +1,418 @@
+[
+  {
+    "id": 694973,
+    "name": "Paul Skenes",
+    "teamId": 134,
+    "era": 1.97,
+    "whip": 0.95,
+    "k9": 10.384615384615387
+  },
+  {
+    "id": 669373,
+    "name": "Tarik Skubal",
+    "teamId": 116,
+    "era": 2.21,
+    "whip": 0.89,
+    "k9": 11.117375704766786
+  },
+  {
+    "id": 686613,
+    "name": "Hunter Brown",
+    "teamId": 117,
+    "era": 2.43,
+    "whip": 1.03,
+    "k9": 10.016207455429498
+  },
+  {
+    "id": 808967,
+    "name": "Yoshinobu Yamamoto",
+    "teamId": 119,
+    "era": 2.49,
+    "whip": 0.99,
+    "k9": 10.444572748267898
+  },
+  {
+    "id": 650911,
+    "name": "Cristopher Sánchez",
+    "teamId": 143,
+    "era": 2.5,
+    "whip": 1.06,
+    "k9": 9.445544554455447
+  },
+  {
+    "id": 676979,
+    "name": "Garrett Crochet",
+    "teamId": 111,
+    "era": 2.59,
+    "whip": 1.03,
+    "k9": 11.189663578742078
+  },
+  {
+    "id": 642547,
+    "name": "Freddy Peralta",
+    "teamId": 158,
+    "era": 2.7,
+    "whip": 1.08,
+    "k9": 10.419977298524405
+  },
+  {
+    "id": 608331,
+    "name": "Max Fried",
+    "teamId": 147,
+    "era": 2.86,
+    "whip": 1.1,
+    "k9": 8.718605843157356
+  },
+  {
+    "id": 671096,
+    "name": "Andrew Abbott",
+    "teamId": 113,
+    "era": 2.87,
+    "whip": 1.15,
+    "k9": 8.073449729078868
+  },
+  {
+    "id": 601713,
+    "name": "Nick Pivetta",
+    "teamId": 135,
+    "era": 2.87,
+    "whip": 0.99,
+    "k9": 9.437086092715232
+  },
+  {
+    "id": 693433,
+    "name": "Bryan Woo",
+    "teamId": 136,
+    "era": 2.94,
+    "whip": 0.93,
+    "k9": 9.570354457572504
+  },
+  {
+    "id": 594798,
+    "name": "Jacob deGrom",
+    "teamId": 140,
+    "era": 2.97,
+    "whip": 0.92,
+    "k9": 9.668989547038327
+  },
+  {
+    "id": 668909,
+    "name": "Gavin Williams",
+    "teamId": 114,
+    "era": 3.06,
+    "whip": 1.27,
+    "k9": 9.3122009569378
+  },
+  {
+    "id": 607074,
+    "name": "Carlos Rodón",
+    "teamId": 147,
+    "era": 3.09,
+    "whip": 1.05,
+    "k9": 9.364428498206049
+  },
+  {
+    "id": 571510,
+    "name": "Matthew Boyd",
+    "teamId": 112,
+    "era": 3.21,
+    "whip": 1.09,
+    "k9": 7.734375
+  },
+  {
+    "id": 657277,
+    "name": "Logan Webb",
+    "teamId": 137,
+    "era": 3.22,
+    "whip": 1.24,
+    "k9": 9.73913043478261
+  },
+  {
+    "id": 678394,
+    "name": "Brayan Bello",
+    "teamId": 111,
+    "era": 3.35,
+    "whip": 1.24,
+    "k9": 6.714801444043322
+  },
+  {
+    "id": 657746,
+    "name": "Joe Ryan",
+    "teamId": 142,
+    "era": 3.42,
+    "whip": 1.04,
+    "k9": 10.210526315789474
+  },
+  {
+    "id": 518876,
+    "name": "Merrill Kelly",
+    "teamId": 140,
+    "era": 3.52,
+    "whip": 1.11,
+    "k9": 8.168478260869566
+  },
+  {
+    "id": 605280,
+    "name": "Clay Holmes",
+    "teamId": 121,
+    "era": 3.53,
+    "whip": 1.3,
+    "k9": 7.027845036319613
+  },
+  {
+    "id": 622491,
+    "name": "Luis Castillo",
+    "teamId": 136,
+    "era": 3.54,
+    "whip": 1.18,
+    "k9": 8.09100998890122
+  },
+  {
+    "id": 592332,
+    "name": "Kevin Gausman",
+    "teamId": 141,
+    "era": 3.59,
+    "whip": 1.06,
+    "k9": 8.813471502590675
+  },
+  {
+    "id": 592662,
+    "name": "Robbie Ray",
+    "teamId": 137,
+    "era": 3.65,
+    "whip": 1.21,
+    "k9": 9.192751235584844
+  },
+  {
+    "id": 664285,
+    "name": "Framber Valdez",
+    "teamId": 117,
+    "era": 3.66,
+    "whip": 1.24,
+    "k9": 8.765625
+  },
+  {
+    "id": 641793,
+    "name": "Zack Littell",
+    "teamId": 113,
+    "era": 3.81,
+    "whip": 1.1,
+    "k9": 6.283566058002149
+  },
+  {
+    "id": 608379,
+    "name": "Michael Wacha",
+    "teamId": 118,
+    "era": 3.86,
+    "whip": 1.22,
+    "k9": 6.585365853658537
+  },
+  {
+    "id": 686752,
+    "name": "Ryan Pepiot",
+    "teamId": 139,
+    "era": 3.86,
+    "whip": 1.16,
+    "k9": 8.989234449760767
+  },
+  {
+    "id": 666200,
+    "name": "Jesús Luzardo",
+    "teamId": 143,
+    "era": 3.92,
+    "whip": 1.22,
+    "k9": 10.611353711790393
+  },
+  {
+    "id": 605135,
+    "name": "Chris Bassitt",
+    "teamId": 141,
+    "era": 3.96,
+    "whip": 1.33,
+    "k9": 8.783068783068783
+  },
+  {
+    "id": 579328,
+    "name": "Yusei Kikuchi",
+    "teamId": 108,
+    "era": 3.99,
+    "whip": 1.42,
+    "k9": 8.79281302638967
+  },
+  {
+    "id": 663903,
+    "name": "Brady Singer",
+    "teamId": 113,
+    "era": 4.03,
+    "whip": 1.24,
+    "k9": 8.670212765957448
+  },
+  {
+    "id": 605488,
+    "name": "Jeffrey Springs",
+    "teamId": 133,
+    "era": 4.11,
+    "whip": 1.21,
+    "k9": 7.2631578947368425
+  },
+  {
+    "id": 621244,
+    "name": "José Berríos",
+    "teamId": 141,
+    "era": 4.17,
+    "whip": 1.3,
+    "k9": 7.481927710843374
+  },
+  {
+    "id": 656605,
+    "name": "Mitch Keller",
+    "teamId": 134,
+    "era": 4.19,
+    "whip": 1.26,
+    "k9": 7.666098807495741
+  },
+  {
+    "id": 665152,
+    "name": "Dean Kremer",
+    "teamId": 110,
+    "era": 4.19,
+    "whip": 1.21,
+    "k9": 7.464953271028038
+  },
+  {
+    "id": 656849,
+    "name": "David Peterson",
+    "teamId": 121,
+    "era": 4.22,
+    "whip": 1.37,
+    "k9": 8.026159334126042
+  },
+  {
+    "id": 676440,
+    "name": "Tanner Bibee",
+    "teamId": 114,
+    "era": 4.24,
+    "whip": 1.23,
+    "k9": 8.00658978583196
+  },
+  {
+    "id": 667755,
+    "name": "José Soriano",
+    "teamId": 108,
+    "era": 4.26,
+    "whip": 1.4,
+    "k9": 8.094674556213018
+  },
+  {
+    "id": 543243,
+    "name": "Sonny Gray",
+    "teamId": 138,
+    "era": 4.28,
+    "whip": 1.23,
+    "k9": 10.038845726970033
+  },
+  {
+    "id": 701542,
+    "name": "Will Warren",
+    "teamId": 147,
+    "era": 4.44,
+    "whip": 1.37,
+    "k9": 9.494139420111043
+  },
+  {
+    "id": 607259,
+    "name": "Nick Martinez",
+    "teamId": 113,
+    "era": 4.45,
+    "whip": 1.21,
+    "k9": 6.319612590799032
+  },
+  {
+    "id": 622663,
+    "name": "Luis Severino",
+    "teamId": 133,
+    "era": 4.54,
+    "whip": 1.3,
+    "k9": 6.8803945745992605
+  },
+  {
+    "id": 656302,
+    "name": "Dylan Cease",
+    "teamId": 135,
+    "era": 4.55,
+    "whip": 1.33,
+    "k9": 11.517857142857142
+  },
+  {
+    "id": 543294,
+    "name": "Kyle Hendricks",
+    "teamId": 108,
+    "era": 4.76,
+    "whip": 1.28,
+    "k9": 6.248477466504263
+  },
+  {
+    "id": 668678,
+    "name": "Zac Gallen",
+    "teamId": 109,
+    "era": 4.83,
+    "whip": 1.26,
+    "k9": 8.203125
+  },
+  {
+    "id": 669358,
+    "name": "Shane Baz",
+    "teamId": 139,
+    "era": 4.87,
+    "whip": 1.33,
+    "k9": 9.536423841059603
+  },
+  {
+    "id": 607536,
+    "name": "Kyle Freeland",
+    "teamId": 115,
+    "era": 4.98,
+    "whip": 1.42,
+    "k9": 6.8803945745992605
+  },
+  {
+    "id": 694297,
+    "name": "Brandon Pfaadt",
+    "teamId": 109,
+    "era": 5.25,
+    "whip": 1.33,
+    "k9": 7.5085130533484685
+  },
+  {
+    "id": 669467,
+    "name": "Andre Pallante",
+    "teamId": 138,
+    "era": 5.31,
+    "whip": 1.44,
+    "k9": 6.159062885326757
+  },
+  {
+    "id": 645261,
+    "name": "Sandy Alcantara",
+    "teamId": 146,
+    "era": 5.36,
+    "whip": 1.27,
+    "k9": 7.336394948335247
+  },
+  {
+    "id": 680730,
+    "name": "Mitchell Parker",
+    "teamId": 120,
+    "era": 5.68,
+    "whip": 1.43,
+    "k9": 5.645554202192448
+  },
+  {
+    "id": 663623,
+    "name": "Jake Irvin",
+    "teamId": 120,
+    "era": 5.7,
+    "whip": 1.43,
+    "k9": 6.2
+  }
+]

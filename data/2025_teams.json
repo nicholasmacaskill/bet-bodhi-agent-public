@@ -1,0 +1,182 @@
+[
+  {
+    "id": 140,
+    "name": "Texas Rangers",
+    "era": 3.47,
+    "whip": 1.18
+  },
+  {
+    "id": 158,
+    "name": "Milwaukee Brewers",
+    "era": 3.58,
+    "whip": 1.23
+  },
+  {
+    "id": 135,
+    "name": "San Diego Padres",
+    "era": 3.63,
+    "whip": 1.21
+  },
+  {
+    "id": 114,
+    "name": "Cleveland Guardians",
+    "era": 3.7,
+    "whip": 1.26
+  },
+  {
+    "id": 111,
+    "name": "Boston Red Sox",
+    "era": 3.7,
+    "whip": 1.29
+  },
+  {
+    "id": 118,
+    "name": "Kansas City Royals",
+    "era": 3.73,
+    "whip": 1.24
+  },
+  {
+    "id": 134,
+    "name": "Pittsburgh Pirates",
+    "era": 3.76,
+    "whip": 1.22
+  },
+  {
+    "id": 143,
+    "name": "Philadelphia Phillies",
+    "era": 3.79,
+    "whip": 1.23
+  },
+  {
+    "id": 112,
+    "name": "Chicago Cubs",
+    "era": 3.79,
+    "whip": 1.18
+  },
+  {
+    "id": 137,
+    "name": "San Francisco Giants",
+    "era": 3.82,
+    "whip": 1.3
+  },
+  {
+    "id": 117,
+    "name": "Houston Astros",
+    "era": 3.86,
+    "whip": 1.22
+  },
+  {
+    "id": 113,
+    "name": "Cincinnati Reds",
+    "era": 3.86,
+    "whip": 1.22
+  },
+  {
+    "id": 136,
+    "name": "Seattle Mariners",
+    "era": 3.87,
+    "whip": 1.22
+  },
+  {
+    "id": 147,
+    "name": "New York Yankees",
+    "era": 3.91,
+    "whip": 1.25
+  },
+  {
+    "id": 139,
+    "name": "Tampa Bay Rays",
+    "era": 3.94,
+    "whip": 1.22
+  },
+  {
+    "id": 116,
+    "name": "Detroit Tigers",
+    "era": 3.95,
+    "whip": 1.25
+  },
+  {
+    "id": 119,
+    "name": "Los Angeles Dodgers",
+    "era": 3.95,
+    "whip": 1.26
+  },
+  {
+    "id": 121,
+    "name": "New York Mets",
+    "era": 4.03,
+    "whip": 1.32
+  },
+  {
+    "id": 141,
+    "name": "Toronto Blue Jays",
+    "era": 4.19,
+    "whip": 1.27
+  },
+  {
+    "id": 145,
+    "name": "Chicago White Sox",
+    "era": 4.26,
+    "whip": 1.36
+  },
+  {
+    "id": 138,
+    "name": "St. Louis Cardinals",
+    "era": 4.29,
+    "whip": 1.32
+  },
+  {
+    "id": 144,
+    "name": "Atlanta Braves",
+    "era": 4.36,
+    "whip": 1.31
+  },
+  {
+    "id": 109,
+    "name": "Arizona Diamondbacks",
+    "era": 4.49,
+    "whip": 1.32
+  },
+  {
+    "id": 142,
+    "name": "Minnesota Twins",
+    "era": 4.55,
+    "whip": 1.31
+  },
+  {
+    "id": 146,
+    "name": "Miami Marlins",
+    "era": 4.6,
+    "whip": 1.3
+  },
+  {
+    "id": 110,
+    "name": "Baltimore Orioles",
+    "era": 4.6,
+    "whip": 1.37
+  },
+  {
+    "id": 133,
+    "name": "Athletics",
+    "era": 4.7,
+    "whip": 1.36
+  },
+  {
+    "id": 108,
+    "name": "Los Angeles Angels",
+    "era": 4.89,
+    "whip": 1.43
+  },
+  {
+    "id": 120,
+    "name": "Washington Nationals",
+    "era": 5.35,
+    "whip": 1.45
+  },
+  {
+    "id": 115,
+    "name": "Colorado Rockies",
+    "era": 5.97,
+    "whip": 1.58
+  }
+]
