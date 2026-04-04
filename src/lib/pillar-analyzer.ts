@@ -42,9 +42,7 @@ export interface BodhiAnalysis {
 }
 
 // Map of 2026 Elite MLB Pitchers
-const ELITE_PITCHERS = [
-    "Gerrit Cole", "Zack Wheeler", "Corbin Burnes", "Logan Webb", "Tyler Glasnow",
-    "Luis Castillo", "Kevin Gausman", "Spencer Strider", "Yoshinobu Yamamoto",
+const ELITE_PITCHERS = ["Spencer Strider", "Corbin Burnes", "Zack Wheeler", "Luis Castillo", "Gerrit Cole", "Logan Webb", "Zac Gallen", "George Kirby", "Kevin Gausman", "Bryan Woo", "Yoshinobu Yamamoto",
     "Framber Valdez", "Justin Steele", "Pablo Lopez", "Aaron Nola", "Tarik Skubal", "Paul Skenes",
     "Shota Imanaga", "Michael Soroka", "Andrew Painter", "Andrew Abbott", "Logan Gilbert", "Drew Rasmussen", "Reid Detmers"
 ];
@@ -467,15 +465,27 @@ export class PillarAnalyzer {
         let awayPitcherWeak = flexMatch(allWeak, awayPitcher, 'WEAK_PITCHERS') ? WEIGHT_WEAK_PITCHER : 0;
 
         if (playerStats) {
-            if (playerStats.has(homePitcher)) {
-                const xERA = playerStats.get(homePitcher).xera;
-                if (xERA <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER;
-                if (xERA >= 5.00) homePitcherWeak = WEIGHT_WEAK_PITCHER;
+            const calculateComposite = (name: string) => {
+                const stats = playerStats.get(name);
+                if (!stats) return null;
+                
+                const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : 4.0;
+                const sprEra = stats.spring?.era ? parseFloat(stats.spring.era) : regEra;
+                
+                // 70/30 weighting: 70% Regular Season / 30% Spring Training
+                return (regEra * 0.7) + (sprEra * 0.3);
+            };
+
+            const homeComposite = calculateComposite(homePitcher);
+            if (homeComposite !== null) {
+                if (homeComposite <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER;
+                if (homeComposite >= 5.00) homePitcherWeak = WEIGHT_WEAK_PITCHER;
             }
-            if (playerStats.has(awayPitcher)) {
-                const xERA = playerStats.get(awayPitcher).xera;
-                if (xERA <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER;
-                if (xERA >= 5.00) awayPitcherWeak = WEIGHT_WEAK_PITCHER;
+
+            const awayComposite = calculateComposite(awayPitcher);
+            if (awayComposite !== null) {
+                if (awayComposite <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER;
+                if (awayComposite >= 5.00) awayPitcherWeak = WEIGHT_WEAK_PITCHER;
             }
         }
 

@@ -74,8 +74,8 @@ export class MLBApi {
     /**
      * Fetch statistical leaders for a specific category (e.g., 'onBasePlusSlugging' or 'earnedRunAverage').
      */
-    async getLeaders(category: string, group: 'hitting' | 'pitching'): Promise<string[]> {
-        const url = `${this.baseUrl}/stats/leaders?leaderCategories=${category}&statGroup=${group}&season=2026&gameType=S&limit=10`;
+    async getLeaders(category: string, group: 'hitting' | 'pitching', gameType: string = 'R'): Promise<string[]> {
+        const url = `${this.baseUrl}/stats/leaders?leaderCategories=${category}&statGroup=${group}&season=2024&gameType=${gameType}&limit=10`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -181,8 +181,8 @@ export class MLBApi {
     /**
      * Fetch player stats for a specific group and season.
      */
-    async getPlayerStats(personId: number, group: 'hitting' | 'pitching', season: string = '2026'): Promise<any> {
-        const url = `${this.baseUrl}/people/${personId}/stats?stats=statsSingleSeason&group=${group}&season=${season}&gameType=S`;
+    async getPlayerStats(personId: number, group: 'hitting' | 'pitching', season: string = '2024', gameType: string = 'R'): Promise<any> {
+        const url = `${this.baseUrl}/people/${personId}/stats?stats=statsSingleSeason&group=${group}&season=${season}&gameType=${gameType}`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -247,6 +247,7 @@ export class MLBApi {
         rosters: { home: string[], away: string[] };
         homeHot: string[];
         awayHot: string[];
+        playerStats: Map<string, any>;
     }> {
         const gamePk = game.gamePk;
         
@@ -277,11 +278,34 @@ export class MLBApi {
         const homeHot = cleanHot(homeHotRaw);
         const awayHot = cleanHot(awayHotRaw);
 
+        // 4. Dual-Stream Pitcher Stats (70/30 weighting logic)
+        const playerStats = new Map<string, any>();
+        const hProb = details.probables?.home;
+        const aProb = details.probables?.away;
+
+        const fetchDualStats = async (name: string) => {
+            if (!name) return;
+            const id = await this.searchPerson(name);
+            if (id) {
+                const [reg, spr] = await Promise.all([
+                    this.getPlayerStats(id, 'pitching', '2024', 'R'), // Avg Performance
+                    this.getPlayerStats(id, 'pitching', '2026', 'S')  // Recent Performance
+                ]);
+                playerStats.set(name, { regular: reg, spring: spr });
+            }
+        };
+
+        await Promise.all([
+            hProb ? fetchDualStats(hProb) : Promise.resolve(),
+            aProb ? fetchDualStats(aProb) : Promise.resolve()
+        ]);
+
         return {
             details,
             rosters,
             homeHot,
-            awayHot
+            awayHot,
+            playerStats
         };
     }
 
