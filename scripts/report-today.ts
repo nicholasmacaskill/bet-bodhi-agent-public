@@ -7,7 +7,7 @@ import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
 
 async function generateReport() {
     const agent = new BodhiAgent();
-    const today = '2026-03-02';
+    const today = new Date().toISOString().split('T')[0];
 
     console.log(`\n====================================================`);
     console.log(`   🌅 BET BODHI: DAILY BRIEFING - ${today}   `);

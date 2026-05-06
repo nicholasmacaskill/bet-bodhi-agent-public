@@ -24,14 +24,17 @@ export class SyncService {
 
             // --- POLYMARKET SYNC ---
             const polyTrades = await this.poly.getTrades();
+            console.log(`[poly] Found ${polyTrades.length} trades to process.`);
+            
             for (const trade of polyTrades) {
-                const extId = `poly-${trade.id || trade.order_id}`;
+                // Use a combination of trade ID and side for unique identification
+                const extId = `poly-${trade.id}`;
                 if (syncedIds.has(extId)) continue;
 
-                const market = await this.poly.getMarketDetails(trade.condition_id);
+                const market = await this.poly.getMarketDetails(trade.market);
                 if (market) {
                     await logBet({
-                        team: market.title || "Polymarket Event",
+                        team: trade.outcome || market.question || "Polymarket Event",
                         sport: market.category || "Sports",
                         odds: 1 / parseFloat(trade.price),
                         amount: parseFloat(trade.size) * parseFloat(trade.price),
@@ -39,11 +42,13 @@ export class SyncService {
                         motivationTag: 'external_sync',
                         platform: 'polymarket',
                         externalId: extId,
-                        researchLog: `Auto-synced from Polymarket. Outcome: ${trade.side}`
+                        researchLog: `Auto-synced from Polymarket. Match: ${market.question} | Outcome: ${trade.outcome}`
                     });
                     syncCount++;
+                    syncedIds.add(extId);
                 }
             }
+
 
 
             if (syncCount > 0) {

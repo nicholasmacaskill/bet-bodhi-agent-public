@@ -1,0 +1,74 @@
+
+🔍 DEEP DIVE ANALYSIS: ROCKIES Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: Colorado Rockies @ San Diego Padres
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "Colorado Rockies @ San Diego Padres",
+  "startTime": "2026-04-12T20:10:00Z",
+  "venue": "Petco Park",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Nick Pivetta",
+      "note": "RHP | 2024 ERA: 4.14"
+    },
+    "away": {
+      "name": "Kyle Freeland",
+      "note": "LHP | 2024 ERA: 5.24"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "San Diego Padres",
+      "resonance": "Hot Bats: Jurickson Profar, Jackson Merrill, Manny Machado"
+    },
+    "away": {
+      "name": "Colorado Rockies",
+      "resonance": "Hot Bats: Ezequiel Tovar, Brenton Doyle, Ryan McMahon"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823317,
+    "homeTeam": "San Diego Padres",
+    "awayTeam": "Colorado Rockies",
+    "overallConfidence": 70,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The Colorado Rockies, led by Brenton Doyle, are in a peak offensive window and facing Nick Pivetta — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +11.0 delta signals high scoring probability. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "Colorado Rockies",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on Colorado Rockies, but no Web3 liquidity found.",
+    "recommendedSize": "Standard (4.0%)",
+    "suggestedStake": 18.56,
+    "homePitcher": "Nick Pivetta",
+    "awayPitcher": "Kyle Freeland",
+    "matchupNotes": "Kyle Freeland vs Nick Pivetta. Offense vs. Defense Mismatch: The Colorado Rockies, led by Brenton Doyle, are in a peak offensive window and facing Nick Pivetta — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +11.0 delta signals high scoring probability. ",
+    "advantages": [
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🎯 Vulnerable Matchup: Facing Nick Pivetta (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

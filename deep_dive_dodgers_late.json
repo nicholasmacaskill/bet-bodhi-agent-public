@@ -1,0 +1,74 @@
+
+🔍 DEEP DIVE ANALYSIS: DODGERS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: New York Mets @ Los Angeles Dodgers
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "New York Mets @ Los Angeles Dodgers",
+  "startTime": "2026-04-14T02:10:00Z",
+  "venue": "UNIQLO Field at Dodger Stadium",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Justin Wrobleski",
+      "note": "LHP | 2024 ERA: 5.70"
+    },
+    "away": {
+      "name": "David Peterson",
+      "note": "LHP | 2024 ERA: 2.90"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "Los Angeles Dodgers",
+      "resonance": "Hot Bats: Shohei Ohtani, Mookie Betts, Freddie Freeman"
+    },
+    "away": {
+      "name": "New York Mets",
+      "resonance": "Hot Bats: Francisco Lindor, Pete Alonso, Brandon Nimmo"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823964,
+    "homeTeam": "Los Angeles Dodgers",
+    "awayTeam": "New York Mets",
+    "overallConfidence": 60,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Lineup Depth Edge: The Los Angeles Dodgers, featuring Shohei Ohtani and Kyle Tucker, carry a +4.5 roster advantage. Their high-level offensive ceiling creates sustained pressure that David Peterson will need to contain across 6+ innings. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "Los Angeles Dodgers",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on Los Angeles Dodgers, but no Web3 liquidity found.",
+    "recommendedSize": "Caution (2.0%)",
+    "suggestedStake": 9.28,
+    "homePitcher": "Justin Wrobleski",
+    "awayPitcher": "David Peterson",
+    "matchupNotes": "David Peterson vs Justin Wrobleski. Lineup Depth Edge: The Los Angeles Dodgers, featuring Shohei Ohtani and Kyle Tucker, carry a +4.5 roster advantage. Their high-level offensive ceiling creates sustained pressure that David Peterson will need to contain across 6+ innings. ",
+    "advantages": [
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+      "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

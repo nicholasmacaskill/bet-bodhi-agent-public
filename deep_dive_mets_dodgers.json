@@ -1,0 +1,74 @@
+
+🔍 DEEP DIVE ANALYSIS: DODGERS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: New York Mets @ Los Angeles Dodgers
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "New York Mets @ Los Angeles Dodgers",
+  "startTime": "2026-04-15T02:10:00Z",
+  "venue": "UNIQLO Field at Dodger Stadium",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Yoshinobu Yamamoto",
+      "note": "RHP | 2024 ERA: 3.00"
+    },
+    "away": {
+      "name": "Nolan McLean",
+      "note": "Rotation: TBD"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "Los Angeles Dodgers",
+      "resonance": "Hot Bats: Shohei Ohtani, Mookie Betts, Freddie Freeman"
+    },
+    "away": {
+      "name": "New York Mets",
+      "resonance": "Hot Bats: Francisco Lindor, Pete Alonso, Brandon Nimmo"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823965,
+    "homeTeam": "Los Angeles Dodgers",
+    "awayTeam": "New York Mets",
+    "overallConfidence": 70,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Pitching Duel: Yoshinobu Yamamoto vs. Nolan McLean. Both starters carry elite xERA metrics, but the Los Angeles Dodgers hold a +15.5 composite edge driven by Shohei Ohtani providing an offensive cushion the opponent lacks. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "Los Angeles Dodgers",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on Los Angeles Dodgers, but no Web3 liquidity found.",
+    "recommendedSize": "Standard (4.0%)",
+    "suggestedStake": 18.56,
+    "homePitcher": "Yoshinobu Yamamoto",
+    "awayPitcher": "Nolan McLean",
+    "matchupNotes": "Nolan McLean vs Yoshinobu Yamamoto. Pitching Duel: Yoshinobu Yamamoto vs. Nolan McLean. Both starters carry elite xERA metrics, but the Los Angeles Dodgers hold a +15.5 composite edge driven by Shohei Ohtani providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: Yoshinobu Yamamoto is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

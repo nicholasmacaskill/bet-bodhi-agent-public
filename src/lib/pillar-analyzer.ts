@@ -3,6 +3,7 @@
  * Scores MLB games for +EV by comparing Bodhi Strength Score to Market Odds.
  */
 import { ethers } from 'ethers';
+import { AgentMemory } from './agent/memory';
 
 export interface PillarScore {
     pillar: string;
@@ -68,10 +69,14 @@ const WEAK_PITCHERS_STATIC = [
 ];
 
 // Decision Weights - Pitching is paramount but rosters matter
-const WEIGHT_ELITE_PITCHER = 15;
-const WEIGHT_ELITE_BAT = 3;      // Increased from 1
-const WEIGHT_HOT_BAT = 1.5;      // Increased from 0.5
-const WEIGHT_WEAK_PITCHER = -15;
+const WEIGHT_ELITE_PITCHER = 12;
+const WEIGHT_ELITE_BAT = 4.5;    // Increased from 3 (Harper/Soto should matter more)
+const WEIGHT_HOT_BAT = 2.0;      // Increased from 1.5
+const WEIGHT_WEAK_PITCHER = -8;  // Decreased from -15 (Taijuan Walker shouldn't erase an entire elite lineup)
+const WEIGHT_EXPLOIT_BONUS = 3.0;
+const WEIGHT_VULNERABLE_BULLPEN = -0.5;
+
+const VULNERABLE_BULLPENS = ["Marlins", "Rockies", "Athletics", "Rays", "Pirates", "White Sox"];
 
 export function getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
     if (confidence >= 80) return { label: "Aggressive (7.5%)", amount: bankroll * 0.075 };
@@ -90,10 +95,8 @@ export class PillarAnalyzer {
         weakPitchers: string[] = [],
         playerStats?: Map<string, any>,
         bankroll: number = 464,
-        mood?: string,
-        calmness?: number,
         rosters?: { home: string[], away: string[] },
-        slumpMultiplier: number = 1.0
+        memory?: AgentMemory
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -195,14 +198,36 @@ export class PillarAnalyzer {
                     isVetoed = true; vetoReason = `VETO: +EV on Away, but Away pitcher (${awayPitcher}) is weak.`;
                 }
 
+                if (valueTeam && memory) {
+                    const profile = memory.getTeamProfile(valueTeam);
+                    if (profile && profile.roi < -50 && profile.losses >= 2) {
+                        isVetoed = true;
+                        vetoReason = `VETO: Agent Memory Burn List. ${valueTeam} has cost us historically (${profile.roi.toFixed(1)}% ROI).`;
+                    }
+                }
+
                 if (isVetoed) {
                     bookieScore.score = 2;
                     bookieScore.reason = vetoReason;
                     recommendedAction = vetoReason;
                     valueTeam = undefined;
                 } else if (marketPrice > 0) {
+                    // Favorite Tax: If crowd favors heavily, require bigger edge
+                    let edgeThreshold = 0.03;
+                    if (marketPrice > 0.60) edgeThreshold = 0.08;
+                    if (marketPrice > 0.70) edgeThreshold = 0.12;
+
                     polyEV = bodhiProb - marketPrice;
                     polySharePrice = marketPrice;
+
+                    // Memory alpha boost
+                    if (valueTeam && memory) {
+                        const profile = memory.getTeamProfile(valueTeam);
+                        if (profile && profile.roi > 50 && profile.wins >= 2) {
+                            polyEV += 0.02; // Small 2% boost for proven winners
+                            advantages.push(`🧠 Agent Memory Boost: ${valueTeam} has a proven winning history (${profile.roi.toFixed(1)}% ROI) in our Polymarket history.`);
+                        }
+                    }
 
                     if (polyEV > 0.10) {
                         bookieScore.score = 9;
@@ -210,7 +235,7 @@ export class PillarAnalyzer {
                         bookieScore.side = techFavored;
                         recommendedAction = `HIGH CONVICTION - Buy ${valueTeam} Shares on Polymarket (+${(polyEV * 100).toFixed(1)}% EV).`;
                         advantages.push(`📈 Strategic Market Edge: Bodhi probability identifies a massive ${(polyEV * 100).toFixed(1)}% discrepancy between our internal model (${(bodhiProb * 100).toFixed(1)}%) and the current Polymarket crowd price (${(marketPrice * 100).toFixed(1)}%).`);
-                    } else if (polyEV > 0.03) {
+                    } else if (polyEV > edgeThreshold) {
                         bookieScore.score = 7;
                         bookieScore.reason = `Small Web3 edge (+${(polyEV * 100).toFixed(1)}% EV) on ${valueTeam}.`;
                         bookieScore.side = techFavored;
@@ -242,7 +267,8 @@ export class PillarAnalyzer {
         // 4. Preseason Fallback (No Web3 execution route found)
         if (executionRoute === 'NONE') {
             const techFavored = techSport.side;
-            // Lowered threshold to 51% to catch minor technical edges
+            const isRegularSeason = (new Date(game.date).getMonth() >= 3); // April+
+
             if (techFavored !== 'neutral' && currentConfidence >= 51) {
                 valueTeam = techFavored === 'home' ? homeTeam : awayTeam;
 
@@ -265,8 +291,8 @@ export class PillarAnalyzer {
                     bookieScore.reason = vetoReason;
                     recommendedAction = vetoReason;
                     valueTeam = undefined;
-                } else {
-                    // Preseason mode: calculate implied edge relative to 50/50 baseline
+                } else if (!isRegularSeason) {
+                    // PRESEASON ONLY: calculate implied edge relative to 50/50 baseline
                     polyEV = (currentConfidence / 100) - 0.50;
                     polySharePrice = 0.50;
                     bookieScore.score = 7;
@@ -278,60 +304,25 @@ export class PillarAnalyzer {
                     } else {
                         recommendedAction = `PRESEASON LEAN - Technical edge on ${valueTeam} (Implied Edge: +${(polyEV * 100).toFixed(1)}%).`;
                     }
+                } else {
+                    // Regular Season: No market = No EV.
+                    bookieScore.reason = "Regular Season: No Web3 Market found. No EV calculation possible.";
                 }
             }
         }
 
         pillars.push(bookieScore);
 
-        // 4. Technical (Bankroll)
-        pillars.push({
-            pillar: "Technical (Bankroll)",
-            score: bankroll >= 400 ? 9 : 6,
-            reason: bankroll >= 400 ? "Bankroll is healthy. 7.5% unit size is sustainable." : "Bankroll depth is caution-range."
-        });
-
-        // 5. Psychological (Players)
-        pillars.push({
-            pillar: "Psychological (Players)",
-            score: 6,
-            reason: "Early spring motivation is generally neutral unless roster battles are flagged."
-        });
-
-        // 6. Psychological (Bettor)
-        const psychBettorScore = {
-            pillar: "Psychological (Bettor)",
-            score: calmness ? Math.floor(calmness) : 8,
-            reason: mood ? `Mindset: ${mood} (${calmness}/10). Risk parameters adjusted.` : "Neutral mindset assumed (8/10)."
-        };
-        pillars.push(psychBettorScore);
-
-        // 7. Physiological/Spiritual
-        const spiritualScore = {
-            pillar: "Physiological/Spiritual",
-            score: 9,
-            reason: "Positive resonance: State of /scan supports high-clarity execution."
-        };
-        pillars.push(spiritualScore);
-
-        // Objective confidence: 3 data-driven pillars only (Technical + Seasonal + Bookies)
+        // Objective confidence: 3 data-driven pillars (Technical + Seasonal + Bookies)
         const objectiveConfidence = Math.round(
             ((techSport.score + seasonalSport.score + bookieScore.score) / 30) * 100
         );
         currentConfidence = objectiveConfidence;
 
-        // Finalize sizing (objectiveConfidence + soft-pillar modifiers)
         if (valueTeam) {
-            const calmnessModifier = calmness !== undefined && calmness < 7 ? 0.5 : 1.0;
             const sizing = getSizing(objectiveConfidence, bankroll);
-            if (slumpMultiplier < 1.0) {
-                recommendedSize = "Throttled (Slump Detection)";
-            } else if (calmness !== undefined && calmness < 7) {
-                recommendedSize = "Throttled (Caution)";
-            } else {
-                recommendedSize = sizing.label;
-            }
-            suggestedStake = sizing.amount * calmnessModifier * slumpMultiplier;
+            recommendedSize = sizing.label;
+            suggestedStake = sizing.amount;
         }
 
         // Generate Kill Criteria
@@ -366,19 +357,16 @@ export class PillarAnalyzer {
             homeOdds: polyMarket ? homePrice : undefined,
             awayOdds: polyMarket ? awayPrice : undefined,
             matchupNotes: `${awayPitcher || '?'} vs ${homePitcher || '?'}. ${techSport.reason}`,
-            advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, currentConfidence, mood),
+            advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, currentConfidence),
             killCriteria,
             dataIntegrity: 'complete' as const
         };
     }
 
-    private backfillAdvantages(existing: string[], confidence: number, mood?: string): string[] {
+    private backfillAdvantages(existing: string[], confidence: number): string[] {
         const backfilled = [...existing];
         if (backfilled.length < 3 && confidence > 70) {
             backfilled.push("✨ High Confidence Signal: Multiple technical pillars (Technical Sport, Seasonal, and Bookies) have cross-verified this entry, confirming a stable edge.");
-        }
-        if (backfilled.length < 3 && mood) {
-            backfilled.push(`⚡ High-Clarity Execution: Your current psychological state (${mood}) supports high-conviction decision making, reducing the emotional risk of this play.`);
         }
         if (backfilled.length < 3) {
             backfilled.push("📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor.");
@@ -489,8 +477,17 @@ export class PillarAnalyzer {
             }
         }
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus;
+        const isHomeTBD = homePitcher === "TBD / Bullpen" || !homePitcher;
+        const isAwayTBD = awayPitcher === "TBD / Bullpen" || !awayPitcher;
+
+        const homeBullpenPenalty = (isHomeTBD && flexMatch(VULNERABLE_BULLPENS, homeTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
+        const awayBullpenPenalty = (isAwayTBD && flexMatch(VULNERABLE_BULLPENS, awayTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
+
+        const homeExploitBonus = awayPitcherWeak !== 0 ? WEIGHT_EXPLOIT_BONUS : 0;
+        const awayExploitBonus = homePitcherWeak !== 0 ? WEIGHT_EXPLOIT_BONUS : 0;
+
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "home" : "away";
@@ -503,11 +500,15 @@ export class PillarAnalyzer {
             if (homePitcherElite) advantages.push(`🔥 Elite Starting Pitcher: ${homePitcher} is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.`);
             if (homeHotCount >= 2) advantages.push(`⚡ Offensive Surge: ${homeHotCount} players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.`);
             if (awayPitcherWeak) advantages.push(`🎯 Vulnerable Matchup: Facing ${awayPitcher} (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.`);
+            if (homeExploitBonus) advantages.push(`⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.`);
+            if (awayBullpenPenalty) advantages.push(`🔀 Bullpen Day: ${awayTeam} is running a vulnerable bullpen game today.`);
             if (homeElite >= 2) advantages.push(`💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.`);
         } else {
             if (awayPitcherElite) advantages.push(`🔥 Elite Starting Pitcher: ${awayPitcher} is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.`);
             if (awayHotCount >= 2) advantages.push(`⚡ Offensive Surge: ${awayHotCount} players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.`);
             if (homePitcherWeak) advantages.push(`🎯 Vulnerable Matchup: Facing ${homePitcher} (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.`);
+            if (awayExploitBonus) advantages.push(`⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.`);
+            if (homeBullpenPenalty) advantages.push(`🔀 Bullpen Day: ${homeTeam} is running a vulnerable bullpen game today.`);
             if (awayElite >= 2) advantages.push(`💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.`);
         }
 
@@ -527,8 +528,7 @@ export class PillarAnalyzer {
         const favoredTeamS = favored === 'home' ? homeTeamShort : awayTeamShort;
         const unfavoredTeamS = favored === 'home' ? awayTeamShort : homeTeamShort;
 
-        const isHomeTBD = homePitcher === "TBD / Bullpen" || !homePitcher;
-        const isAwayTBD = awayPitcher === "TBD / Bullpen" || !awayPitcher;
+
 
         const favoredPitcherElite = favored === 'home' ? homePitcherElite : awayPitcherElite;
         const unfavoredPitcherElite = favored === 'home' ? awayPitcherElite : homePitcherElite;

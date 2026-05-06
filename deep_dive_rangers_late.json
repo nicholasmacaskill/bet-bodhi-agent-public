@@ -1,0 +1,72 @@
+
+🔍 DEEP DIVE ANALYSIS: RANGERS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: Texas Rangers @ Athletics
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "Texas Rangers @ Athletics",
+  "startTime": "2026-04-14T01:40:00Z",
+  "venue": "Sutter Health Park",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Luis Severino",
+      "note": "RHP | 2024 ERA: 3.91"
+    },
+    "away": {
+      "name": "Nathan Eovaldi",
+      "note": "RHP | 2024 ERA: 3.80"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "Athletics",
+      "resonance": "Hot Bats: Brent Rooker, JJ Bleday, Shea Langeliers"
+    },
+    "away": {
+      "name": "Texas Rangers",
+      "resonance": "Hot Bats: Corey Seager, Nathaniel Lowe, Wyatt Langford"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 825024,
+    "homeTeam": "Athletics",
+    "awayTeam": "Texas Rangers",
+    "overallConfidence": 60,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Marginal Technical Edge: Our model gives the Texas Rangers a slight +4.5 Strength lead over the Athletics. With Nathan Eovaldi on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "Texas Rangers",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on Texas Rangers, but no Web3 liquidity found.",
+    "recommendedSize": "Caution (2.0%)",
+    "suggestedStake": 9.28,
+    "homePitcher": "Luis Severino",
+    "awayPitcher": "Nathan Eovaldi",
+    "matchupNotes": "Nathan Eovaldi vs Luis Severino. Marginal Technical Edge: Our model gives the Texas Rangers a slight +4.5 Strength lead over the Athletics. With Nathan Eovaldi on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

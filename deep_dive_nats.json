@@ -1,0 +1,74 @@
+
+🔍 DEEP DIVE ANALYSIS: NATIONALS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: Washington Nationals @ Milwaukee Brewers
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "Washington Nationals @ Milwaukee Brewers",
+  "startTime": "2026-04-12T18:10:00Z",
+  "venue": "American Family Field",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Brandon Woodruff",
+      "note": "Rotation: TBD"
+    },
+    "away": {
+      "name": "Zack Littell",
+      "note": "RHP | 2024 ERA: 3.63"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "Milwaukee Brewers",
+      "resonance": "Hot Bats: William Contreras, Willy Adames, Jackson Chourio"
+    },
+    "away": {
+      "name": "Washington Nationals",
+      "resonance": "Hot Bats: Luis García Jr., CJ Abrams, Jacob Young"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823804,
+    "homeTeam": "Milwaukee Brewers",
+    "awayTeam": "Washington Nationals",
+    "overallConfidence": 70,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Lineup Depth Edge: The Washington Nationals, featuring CJ Abrams and James Wood, carry a +13.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Brandon Woodruff will need to contain across 6+ innings. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "Washington Nationals",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on Washington Nationals, but no Web3 liquidity found.",
+    "recommendedSize": "Standard (4.0%)",
+    "suggestedStake": 18.56,
+    "homePitcher": "Brandon Woodruff",
+    "awayPitcher": "Zack Littell",
+    "matchupNotes": "Zack Littell vs Brandon Woodruff. Lineup Depth Edge: The Washington Nationals, featuring CJ Abrams and James Wood, carry a +13.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Brandon Woodruff will need to contain across 6+ innings. ",
+    "advantages": [
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+      "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

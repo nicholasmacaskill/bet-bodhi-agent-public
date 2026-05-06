@@ -25,6 +25,9 @@ import { NBAPillarAnalyzer } from '../src/lib/nba-pillar-analyzer';
 import { MMAPillarAnalyzer } from '../src/lib/mma-pillar-analyzer';
 import { SyncService } from '../src/lib/agent/sync-service';
 import { BodhiPrism } from '../src/lib/agent/prism';
+import { AgentMemory } from '../src/lib/agent/memory';
+import { KBOApi } from '../src/lib/kbo-api';
+import { KBOPillarAnalyzer } from '../src/lib/kbo-pillar-analyzer';
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -370,6 +373,10 @@ async function runScan(date: string): Promise<void> {
         console.log(`  ${YELLOW}⚠️  ${slumpStatus.reason}${RESET}\n`);
     }
 
+    // ── Load Memory ──────────────────────────────────────────────────────────
+    const memory = new AgentMemory();
+    await memory.loadMemory();
+
     // ── MLB ──────────────────────────────────────────────────────────────────
     try {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching MLB games & Traditional Odds...`);
@@ -405,8 +412,8 @@ async function runScan(date: string): Promise<void> {
                 condition = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam) || undefined;
             }
 
-            // Analysis (Now with technical signals!)
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, combinedHot, [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier);
+            // Analysis (Now with technical signals and agent memory!)
+            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, combinedHot, [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier, memory);
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&
@@ -493,6 +500,12 @@ async function runScan(date: string): Promise<void> {
                 }
             }
 
+            if (analysis.overallConfidence < 85) {
+                analysis.recommendedAction = `PASS - Filtered (Strict Threshold: requires 85% confidence for NHL)`;
+                analysis.valueTeam = undefined;
+                analysis.suggestedStake = 0;
+            }
+
             allResults.push({
                 sport: 'NHL',
                 matchup: `${game.awayTeam} @ ${game.homeTeam}`,
@@ -528,6 +541,12 @@ async function runScan(date: string): Promise<void> {
             );
 
             const analysis = nbaAnalyzer.analyzeGame(game, nbaStats, condition, bankroll, userMood, userCalmness, slumpStatus.multiplier);
+
+            if (analysis.overallConfidence < 85) {
+                analysis.recommendedAction = `PASS - Filtered (Strict Threshold: requires 85% confidence for NBA)`;
+                analysis.valueTeam = undefined;
+                analysis.suggestedStake = 0;
+            }
 
             allResults.push({
                 sport: 'NBA',
@@ -579,6 +598,49 @@ async function runScan(date: string): Promise<void> {
         console.log(`  ${RED}✗${RESET} MMA scan failed: ${e.message}`);
     }
 
+    // ── KBO ──────────────────────────────────────────────────────────────────
+    try {
+        process.stdout.write(`  ${CYAN}⟳${RESET} Fetching KBO games...`);
+        const kboApi = new KBOApi();
+        const kboAnalyzer = new KBOPillarAnalyzer();
+        const [kboGames, kboStats] = await Promise.all([
+            kboApi.getSchedule(date),
+            kboApi.getTeamStats()
+        ]);
+        const kboElite = kboApi.getElitePitchers();
+        const kboWeak = kboApi.getWeakPitchers();
+        process.stdout.write(`\r  ${GREEN}✓${RESET} KBO: ${kboGames.length} games found\n`);
+
+        for (const game of kboGames) {
+            const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
+            const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
+            const condition = polyMarkets.find(m =>
+                (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
+                (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
+            );
+
+            // NEW: Fetch starting pitchers for high-fidelity analysis
+            const pitchers = await kboApi.getStartingPitchers(game.id);
+            const extendedGame = { ...game, pitchers };
+
+            const analysis = kboAnalyzer.analyzeGame(extendedGame, kboStats, condition, kboElite, kboWeak, bankroll);
+
+            allResults.push({
+                sport: 'KBO',
+                matchup: `${game.awayTeam} @ ${game.homeTeam}`,
+                analysis: analysis as any,
+                polyConditionId: analysis.polyConditionId,
+                polySharePrice: analysis.polySharePrice,
+                polyEV: analysis.polyEV,
+                startTime: game.startTime,
+                pitchers // Keep reference for the report
+            });
+        }
+
+    } catch (e: any) {
+        console.log(`  ${RED}✗${RESET} KBO scan failed: ${e.message}`);
+    }
+
     // ── Render all games ─────────────────────────────────────────────────────
     const totalGames = allResults.length;
     console.log(`\n  ${DIM}Total: ${totalGames} matchups scanned across all sports${RESET}`);
@@ -589,7 +651,7 @@ async function runScan(date: string): Promise<void> {
     }
 
     // Group by sport for display
-    const sports = ['MLB', 'NHL', 'NBA', 'MMA'];
+    const sports = ['MLB', 'NHL', 'NBA', 'MMA', 'KBO'];
     for (const sport of sports) {
         const sportResults = allResults.filter(r => r.sport === sport);
         if (sportResults.length === 0) continue;

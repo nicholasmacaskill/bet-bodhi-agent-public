@@ -1,0 +1,74 @@
+
+🔍 DEEP DIVE ANALYSIS: CARDINALS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: Boston Red Sox @ St. Louis Cardinals
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "Boston Red Sox @ St. Louis Cardinals",
+  "startTime": "2026-04-11T23:15:00Z",
+  "venue": "Busch Stadium",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "Kyle Leahy",
+      "note": "RHP | 2024 ERA: 4.07"
+    },
+    "away": {
+      "name": "Ranger Suarez",
+      "note": "LHP | 2024 ERA: 3.46"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "St. Louis Cardinals",
+      "resonance": "Hot Bats: Brendan Donovan, Alec Burleson, Masyn Winn"
+    },
+    "away": {
+      "name": "Boston Red Sox",
+      "resonance": "Hot Bats: Rafael Devers, Jarren Duran, Ceddanne Rafaela"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823074,
+    "homeTeam": "St. Louis Cardinals",
+    "awayTeam": "Boston Red Sox",
+    "overallConfidence": 63,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 8,
+        "reason": "Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +7.0 Strength lead over the Boston Red Sox. With Kyle Leahy on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 5,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "St. Louis Cardinals",
+    "polyOutcomeIndex": -1,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on St. Louis Cardinals, but no Web3 liquidity found.",
+    "recommendedSize": "Caution (2.0%)",
+    "suggestedStake": 9.28,
+    "homePitcher": "Kyle Leahy",
+    "awayPitcher": "Ranger Suarez",
+    "matchupNotes": "Ranger Suarez vs Kyle Leahy. Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +7.0 Strength lead over the Boston Red Sox. With Kyle Leahy on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "🎯 Vulnerable Matchup: Facing Ranger Suarez (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

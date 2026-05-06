@@ -1,0 +1,72 @@
+
+🔍 DEEP DIVE ANALYSIS: ASTROS Matchup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📍 Found MLB: Houston Astros @ Seattle Mariners
+DEEP_DIVE_START
+{
+  "sport": "MLB",
+  "matchup": "Houston Astros @ Seattle Mariners",
+  "startTime": "2026-04-13T20:10:00Z",
+  "venue": "T-Mobile Park",
+  "weather": "Indoor/Cloudy",
+  "starterBattle": {
+    "home": {
+      "name": "George Kirby",
+      "note": "RHP | 2024 ERA: 3.53"
+    },
+    "away": {
+      "name": "Mike Burrows",
+      "note": "RHP | 2024 ERA: 2.70"
+    }
+  },
+  "teamBreakdown": {
+    "home": {
+      "name": "Seattle Mariners",
+      "resonance": "Hot Bats: Cal Raleigh, Julio Rodríguez"
+    },
+    "away": {
+      "name": "Houston Astros",
+      "resonance": "Hot Bats: Yordan Alvarez, Jose Altuve, Alex Bregman"
+    }
+  },
+  "pillarAnalysis": {
+    "gamePk": 823153,
+    "homeTeam": "Seattle Mariners",
+    "awayTeam": "Houston Astros",
+    "overallConfidence": 50,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Pitching Duel: George Kirby vs. Mike Burrows. Both starters carry elite xERA metrics, but the Houston Astros hold a +4.5 composite edge driven by Yordan Alvarez providing an offensive cushion the opponent lacks. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Away, but Home has elite pitcher (George Kirby).",
+        "side": "neutral"
+      }
+    ],
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Home has elite pitcher (George Kirby).",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "George Kirby",
+    "awayPitcher": "Mike Burrows",
+    "matchupNotes": "Mike Burrows vs George Kirby. Pitching Duel: George Kirby vs. Mike Burrows. Both starters carry elite xERA metrics, but the Houston Astros hold a +4.5 composite edge driven by Yordan Alvarez providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: Mike Burrows is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor."
+    ],
+    "killCriteria": [],
+    "dataIntegrity": "complete"
+  }
+}
+DEEP_DIVE_END

@@ -65,7 +65,7 @@ async function analyzeMatchup(teamQuery: string, overrideDate?: string) {
 async function handleMLB(game: any, api: MLBApi, analyzer: PillarAnalyzer, oddsSvc: OddsApi, polyApi: PolymarketApi) {
     console.log(`📍 Found MLB: ${game.awayTeam} @ ${game.homeTeam}`);
     
-    const { details, rosters, homeHot, awayHot } = await api.getHydratedAnalysisData(game);
+    const { details, rosters, homeHot, awayHot, playerStats } = await api.getHydratedAnalysisData(game);
     const combinedHot = [...homeHot, ...awayHot];
 
     const [oddsList, polyMarket] = await Promise.all([
@@ -94,12 +94,9 @@ async function handleMLB(game: any, api: MLBApi, analyzer: PillarAnalyzer, oddsS
         polyMarket || undefined,
         combinedHot,
         [], 
-        new Map(),
+        playerStats,
         464, 
-        "sharp", 
-        8, 
-        rosters, 
-        1.0 
+        rosters
     );
 
     const deepDive = {
