@@ -176,7 +176,7 @@ async function main() {
         }
         // ─── END KBO SCAN ───────────────────────────────────────────────────────
 
-        const reportPath = path.join(process.cwd(), `BODHI_SOVEREIGN_REPORT_${today}.md`);
+        const reportPath = path.join(process.cwd(), 'reports', `BODHI_SOVEREIGN_REPORT_${today}.md`);
         fs.writeFileSync(reportPath, report);
         console.log(`✅ Nightly report generated: ${reportPath}`);
 

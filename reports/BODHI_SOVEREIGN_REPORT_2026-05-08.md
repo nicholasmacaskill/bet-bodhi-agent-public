@@ -1,6 +1,6 @@
 # 🛡️ BODHI-8 SOVEREIGN SCAN REPORT: 2026-05-08
 
-Generated at: 5/8/2026, 2:11:48 AM
+Generated at: 5/8/2026, 2:15:39 AM
 
 ## 🌟 SLATE RANKINGS (ALL GAMES)
 
