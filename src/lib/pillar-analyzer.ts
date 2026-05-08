@@ -109,7 +109,8 @@ export class PillarAnalyzer {
         rosters?: { home: string[], away: string[] },
         memory?: AgentMemory,
         platoonSplits?: Map<string, any>,
-        bullpenFatigue?: { home: number, away: number }
+        bullpenFatigue?: { home: number, away: number },
+        lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -117,7 +118,7 @@ export class PillarAnalyzer {
         const pillars: PillarScore[] = [];
 
         // 1. Technical Analysis (Sport-Specific)
-        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue);
+        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue, lineupHandedness);
         const techSport = techResult.score;
         const advantages = techResult.advantages;
         pillars.push(techSport);
@@ -395,7 +396,7 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }): { score: PillarScore, advantages: string[] } {
+    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }, lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }): { score: PillarScore, advantages: string[] } {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
@@ -515,22 +516,38 @@ export class PillarAnalyzer {
         let homePlatoonBonus = 0;
         let awayPlatoonBonus = 0;
 
-        if (platoonSplits) {
+        if (platoonSplits && lineupHandedness) {
             const hSplits = platoonSplits.get(homePitcher);
             const aSplits = platoonSplits.get(awayPitcher);
-            // Just an example platoon heuristic: if ops against one side is > .800, they are vulnerable
+            
             if (hSplits && hSplits.length > 0) {
-                const weakSplit = hSplits.find((s: any) => parseFloat(s.stat.ops) > 0.850);
-                if (weakSplit) {
+                const weakVsL = hSplits.find((s: any) => s.split.code === 'vl' && parseFloat(s.stat.ops) > 0.850);
+                const weakVsR = hSplits.find((s: any) => s.split.code === 'vr' && parseFloat(s.stat.ops) > 0.850);
+                
+                let exploited = false;
+                let count = 0;
+                let hand = '';
+                if (weakVsL && (lineupHandedness.away.L + lineupHandedness.away.S >= 4)) { exploited = true; count = lineupHandedness.away.L + lineupHandedness.away.S; hand = 'Lefties'; }
+                else if (weakVsR && (lineupHandedness.away.R + lineupHandedness.away.S >= 4)) { exploited = true; count = lineupHandedness.away.R + lineupHandedness.away.S; hand = 'Righties'; }
+                
+                if (exploited) {
                     awayPlatoonBonus += 2.0;
-                    advantages.push(`🎯 Platoon Advantage: ${homePitcher} gets crushed by opposite-handed batters (OPS > .850).`);
+                    advantages.push(`🎯 Platoon Advantage: ${homePitcher} gets crushed by ${hand} (OPS > .850) and faces a stacked lineup of ${count} ${hand.toLowerCase().replace('ies', '-handed')} batters.`);
                 }
             }
             if (aSplits && aSplits.length > 0) {
-                const weakSplit = aSplits.find((s: any) => parseFloat(s.stat.ops) > 0.850);
-                if (weakSplit) {
+                const weakVsL = aSplits.find((s: any) => s.split.code === 'vl' && parseFloat(s.stat.ops) > 0.850);
+                const weakVsR = aSplits.find((s: any) => s.split.code === 'vr' && parseFloat(s.stat.ops) > 0.850);
+                
+                let exploited = false;
+                let count = 0;
+                let hand = '';
+                if (weakVsL && (lineupHandedness.home.L + lineupHandedness.home.S >= 4)) { exploited = true; count = lineupHandedness.home.L + lineupHandedness.home.S; hand = 'Lefties'; }
+                else if (weakVsR && (lineupHandedness.home.R + lineupHandedness.home.S >= 4)) { exploited = true; count = lineupHandedness.home.R + lineupHandedness.home.S; hand = 'Righties'; }
+                
+                if (exploited) {
                     homePlatoonBonus += 2.0;
-                    advantages.push(`🎯 Platoon Advantage: ${awayPitcher} gets crushed by opposite-handed batters (OPS > .850).`);
+                    advantages.push(`🎯 Platoon Advantage: ${awayPitcher} gets crushed by ${hand} (OPS > .850) and faces a stacked lineup of ${count} ${hand.toLowerCase().replace('ies', '-handed')} batters.`);
                 }
             }
         }

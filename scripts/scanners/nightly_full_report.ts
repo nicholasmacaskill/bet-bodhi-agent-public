@@ -59,7 +59,7 @@ async function main() {
                 }
             }
 
-            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800, hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue);
+            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800, hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue, hydrated.lineupHandedness);
 
             const evFactor = (analysis.polyEV || 0) * 10;
             const unifiedAlpha = (analysis.overallConfidence / 10) + evFactor;

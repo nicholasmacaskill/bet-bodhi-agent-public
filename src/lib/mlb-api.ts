@@ -121,6 +121,20 @@ export class MLBApi {
                 return lineup;
             };
 
+            const parseHandedness = (teamData: any) => {
+                let L = 0, R = 0, S = 0;
+                if (teamData && teamData.lineup) {
+                    teamData.lineup.forEach((id: number) => {
+                        const player = teamData.players[`ID${id}`];
+                        const batSide = player?.person?.batSide?.code || player?.batSide?.code;
+                        if (batSide === 'L') L++;
+                        if (batSide === 'R') R++;
+                        if (batSide === 'S') S++;
+                    });
+                }
+                return { L, R, S };
+            };
+
             // Try to extract from schedule if it made it into the game feed but not the boxscore
             const activeGameInfo = data.liveData?.plays?.currentPlay?.about || {};
 
@@ -133,6 +147,10 @@ export class MLBApi {
                 lineups: {
                     home: parseLineup(boxscore?.teams?.home, fallbackHomePlayers),
                     away: parseLineup(boxscore?.teams?.away, fallbackAwayPlayers)
+                },
+                lineupHandedness: {
+                    home: parseHandedness(boxscore?.teams?.home),
+                    away: parseHandedness(boxscore?.teams?.away)
                 },
                 probables: {
                     home: homePitcher,
@@ -300,7 +318,8 @@ export class MLBApi {
         // 1. Details (Lineups + Weather + Probables)
         const details = await this.getGameDetails(gamePk) || { 
             probables: game.probables || {}, 
-            lineups: game.lineups || { home: [], away: [] } 
+            lineups: game.lineups || { home: [], away: [] },
+            lineupHandedness: { home: { L: 0, R: 0, S: 0 }, away: { L: 0, R: 0, S: 0 } }
         };
 
         // 2. Rosters (Hallucination Guard)
@@ -363,7 +382,8 @@ export class MLBApi {
             awayHot,
             playerStats,
             platoonSplits,
-            bullpenFatigue
+            bullpenFatigue,
+            lineupHandedness: details.lineupHandedness || { home: { L: 0, R: 0, S: 0 }, away: { L: 0, R: 0, S: 0 } }
         };
     }
 
