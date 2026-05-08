@@ -78,6 +78,17 @@ const WEIGHT_VULNERABLE_BULLPEN = -0.5;
 
 const VULNERABLE_BULLPENS = ["Marlins", "Rockies", "Athletics", "Rays", "Pirates", "White Sox"];
 
+const PARK_FACTORS: Record<string, { type: 'hitter' | 'pitcher' | 'neutral', boost: number }> = {
+    "Coors Field": { type: 'hitter', boost: 2.5 },
+    "Great American Ball Park": { type: 'hitter', boost: 1.5 },
+    "Fenway Park": { type: 'hitter', boost: 1.0 },
+    "Yankee Stadium": { type: 'hitter', boost: 1.0 },
+    "Petco Park": { type: 'pitcher', boost: 1.5 },
+    "T-Mobile Park": { type: 'pitcher', boost: 1.5 },
+    "Oracle Park": { type: 'pitcher', boost: 1.5 },
+    "Citi Field": { type: 'pitcher', boost: 1.0 }
+};
+
 export function getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
     if (confidence >= 80) return { label: "Aggressive (7.5%)", amount: bankroll * 0.075 };
     if (confidence >= 70) return { label: "Standard (4.0%)", amount: bankroll * 0.04 };
@@ -96,7 +107,9 @@ export class PillarAnalyzer {
         playerStats?: Map<string, any>,
         bankroll: number = 464,
         rosters?: { home: string[], away: string[] },
-        memory?: AgentMemory
+        memory?: AgentMemory,
+        platoonSplits?: Map<string, any>,
+        bullpenFatigue?: { home: number, away: number }
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -104,7 +117,7 @@ export class PillarAnalyzer {
         const pillars: PillarScore[] = [];
 
         // 1. Technical Analysis (Sport-Specific)
-        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters);
+        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue);
         const techSport = techResult.score;
         const advantages = techResult.advantages;
         pillars.push(techSport);
@@ -382,7 +395,7 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }): { score: PillarScore, advantages: string[] } {
+    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }): { score: PillarScore, advantages: string[] } {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
@@ -466,28 +479,64 @@ export class PillarAnalyzer {
 
             const homeComposite = calculateComposite(homePitcher);
             if (homeComposite !== null) {
-                if (homeComposite <= 2.80) homePitcherElite = WEIGHT_ELITE_PITCHER;
-                if (homeComposite >= 5.00) homePitcherWeak = WEIGHT_WEAK_PITCHER;
+                // Dynamic stats should be the absolute source of truth if available
+                homePitcherElite = (homeComposite <= 2.80) ? WEIGHT_ELITE_PITCHER : 0;
+                homePitcherWeak = (homeComposite >= 5.00) ? WEIGHT_WEAK_PITCHER : 0;
             }
 
             const awayComposite = calculateComposite(awayPitcher);
             if (awayComposite !== null) {
-                if (awayComposite <= 2.80) awayPitcherElite = WEIGHT_ELITE_PITCHER;
-                if (awayComposite >= 5.00) awayPitcherWeak = WEIGHT_WEAK_PITCHER;
+                // Dynamic stats should be the absolute source of truth if available
+                awayPitcherElite = (awayComposite <= 2.80) ? WEIGHT_ELITE_PITCHER : 0;
+                awayPitcherWeak = (awayComposite >= 5.00) ? WEIGHT_WEAK_PITCHER : 0;
             }
         }
 
         const isHomeTBD = homePitcher === "TBD / Bullpen" || !homePitcher;
         const isAwayTBD = awayPitcher === "TBD / Bullpen" || !awayPitcher;
 
-        const homeBullpenPenalty = (isHomeTBD && flexMatch(VULNERABLE_BULLPENS, homeTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
-        const awayBullpenPenalty = (isAwayTBD && flexMatch(VULNERABLE_BULLPENS, awayTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
+        let homeBullpenPenalty = (isHomeTBD && flexMatch(VULNERABLE_BULLPENS, homeTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
+        let awayBullpenPenalty = (isAwayTBD && flexMatch(VULNERABLE_BULLPENS, awayTeam, 'VULNERABLE_BULLPENS')) ? WEIGHT_VULNERABLE_BULLPEN : 0;
+
+        if (bullpenFatigue) {
+            if (bullpenFatigue.home > 50) {
+                homeBullpenPenalty += -3;
+                advantages.push(`📉 Fatigued Bullpen: ${homeTeam}'s bullpen threw ${bullpenFatigue.home} pitches yesterday, limiting their high-leverage late inning options.`);
+            }
+            if (bullpenFatigue.away > 50) {
+                awayBullpenPenalty += -3;
+                advantages.push(`📉 Fatigued Bullpen: ${awayTeam}'s bullpen threw ${bullpenFatigue.away} pitches yesterday, limiting their high-leverage late inning options.`);
+            }
+        }
 
         const homeExploitBonus = awayPitcherWeak !== 0 ? WEIGHT_EXPLOIT_BONUS : 0;
         const awayExploitBonus = homePitcherWeak !== 0 ? WEIGHT_EXPLOIT_BONUS : 0;
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty;
+        let homePlatoonBonus = 0;
+        let awayPlatoonBonus = 0;
+
+        if (platoonSplits) {
+            const hSplits = platoonSplits.get(homePitcher);
+            const aSplits = platoonSplits.get(awayPitcher);
+            // Just an example platoon heuristic: if ops against one side is > .800, they are vulnerable
+            if (hSplits && hSplits.length > 0) {
+                const weakSplit = hSplits.find((s: any) => parseFloat(s.stat.ops) > 0.850);
+                if (weakSplit) {
+                    awayPlatoonBonus += 2.0;
+                    advantages.push(`🎯 Platoon Advantage: ${homePitcher} gets crushed by opposite-handed batters (OPS > .850).`);
+                }
+            }
+            if (aSplits && aSplits.length > 0) {
+                const weakSplit = aSplits.find((s: any) => parseFloat(s.stat.ops) > 0.850);
+                if (weakSplit) {
+                    homePlatoonBonus += 2.0;
+                    advantages.push(`🎯 Platoon Advantage: ${awayPitcher} gets crushed by opposite-handed batters (OPS > .850).`);
+                }
+            }
+        }
+
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "home" : "away";
@@ -583,11 +632,28 @@ export class PillarAnalyzer {
     }
 
     private scoreSeasonalSport(game: any): PillarScore {
-        const venue = game.venue?.toLowerCase() || "";
-        const isArizona = venue.includes("stadium") || venue.includes("park") || venue.includes("field") || venue.includes("complex");
+        const venue = game.venue || "";
+        const isArizona = venue.toLowerCase().includes("stadium") || venue.toLowerCase().includes("park") || venue.toLowerCase().includes("field") || venue.toLowerCase().includes("complex");
 
         let score = isArizona ? 6 : 5;
         let reason = isArizona ? "Cactus League: Slight dry-air offensive boost." : "Grapefruit League: Neutral environment.";
+
+        // Advanced Park Factors
+        let parkFound = false;
+        for (const [park, factor] of Object.entries(PARK_FACTORS)) {
+            if (venue.includes(park)) {
+                if (factor.type === 'hitter') {
+                    score += factor.boost;
+                    reason = `Hitter's Park: ${park} boosts run environment (+${factor.boost}).`;
+                } else if (factor.type === 'pitcher') {
+                    // Pitcher parks slightly lower variance, penalize overconfidence
+                    score -= factor.boost;
+                    reason = `Pitcher's Park: ${park} suppresses runs (-${factor.boost}).`;
+                }
+                parkFound = true;
+                break;
+            }
+        }
 
         // Integrate Live Weather (Pillar #2)
         if (game.weather?.wind) {
@@ -596,8 +662,22 @@ export class PillarAnalyzer {
             const direction = wind.toLowerCase();
 
             if (speed > 15 && (direction.includes('in') || direction.includes('towards'))) {
-                score = 4; // Penalize 30% from 7 is ~5, but we go to 4 for "hard validation"
-                reason = `WEATHER VETO: Wind ${speed}mph blowing IN. Neutralizing high-altitude offense edge.`;
+                score = Math.max(2, score - 3); // Heavy penalty
+                reason += ` WEATHER VETO: Wind ${speed}mph blowing IN. Neutralizing offense.`;
+            } else if (speed > 15 && direction.includes('out')) {
+                score = Math.min(10, score + 2);
+                reason += ` WEATHER BOOST: Wind ${speed}mph blowing OUT. Great for hot bats.`;
+            }
+        }
+        
+        if (game.weather?.temp) {
+            const temp = parseInt(game.weather.temp);
+            if (temp > 85) {
+                score = Math.min(10, score + 1);
+                reason += ` High Heat (${temp}°): Ball travels further.`;
+            } else if (temp < 50) {
+                score = Math.max(2, score - 1);
+                reason += ` Cold Temp (${temp}°): Ball flight suppressed.`;
             }
         }
 

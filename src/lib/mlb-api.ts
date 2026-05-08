@@ -75,7 +75,8 @@ export class MLBApi {
      * Fetch statistical leaders for a specific category (e.g., 'onBasePlusSlugging' or 'earnedRunAverage').
      */
     async getLeaders(category: string, group: 'hitting' | 'pitching', gameType: string = 'R'): Promise<string[]> {
-        const url = `${this.baseUrl}/stats/leaders?leaderCategories=${category}&statGroup=${group}&season=2024&gameType=${gameType}&limit=10`;
+        const lastSeason = new Date().getFullYear() - 1;
+        const url = `${this.baseUrl}/stats/leaders?leaderCategories=${category}&statGroup=${group}&season=${lastSeason}&gameType=${gameType}&limit=10`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -181,7 +182,7 @@ export class MLBApi {
     /**
      * Fetch player stats for a specific group and season.
      */
-    async getPlayerStats(personId: number, group: 'hitting' | 'pitching', season: string = '2024', gameType: string = 'R'): Promise<any> {
+    async getPlayerStats(personId: number, group: 'hitting' | 'pitching', season: string = (new Date().getFullYear() - 1).toString(), gameType: string = 'R'): Promise<any> {
         const url = `${this.baseUrl}/people/${personId}/stats?stats=statsSingleSeason&group=${group}&season=${season}&gameType=${gameType}`;
         try {
             const response = await fetch(url);
@@ -212,7 +213,8 @@ export class MLBApi {
      * Get hot hitters (Top 3 by OPS) for a specific team.
      */
     async getHotBats(teamId: number): Promise<string[]> {
-        const url = `${this.baseUrl}/stats/leaders?leaderCategories=onBasePlusSlugging&statGroup=hitting&season=2024&gameType=R&teamId=${teamId}&limit=3`;
+        const lastSeason = new Date().getFullYear() - 1;
+        const url = `${this.baseUrl}/stats/leaders?leaderCategories=onBasePlusSlugging&statGroup=hitting&season=${lastSeason}&gameType=R&teamId=${teamId}&limit=3`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -227,7 +229,8 @@ export class MLBApi {
      * Fetch vs-Handedness splits for a player.
      */
     async getHandednessSplits(personId: number, group: 'hitting' | 'pitching'): Promise<any> {
-        const url = `${this.baseUrl}/people/${personId}/stats?stats=statSplits&group=${group}&season=2024&gameType=R`; // Use 2024 Reg Season for deeper samples
+        const lastSeason = new Date().getFullYear() - 1;
+        const url = `${this.baseUrl}/people/${personId}/stats?stats=statSplits&group=${group}&season=${lastSeason}&gameType=R&sitCodes=vl,vr`; // Fetch vs Left and vs Right splits
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -235,6 +238,47 @@ export class MLBApi {
             return data.stats[0]?.splits || [];
         } catch (e) {
             return [];
+        }
+    }
+
+    /**
+     * Fetch yesterday's bullpen usage (pitch count for non-starters).
+     */
+    async getYesterdaysBullpenUsage(teamId: number, today: string): Promise<number> {
+        try {
+            const yesterdayDate = new Date(new Date(today).getTime() - 86400000);
+            const yesterdayStr = yesterdayDate.toISOString().split('T')[0];
+            const url = `${this.baseUrl}/schedule?sportId=1&date=${yesterdayStr}&teamId=${teamId}&hydrate=team,probablePitcher,linescore,boxscore`;
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            if (!data.dates || data.dates.length === 0 || data.dates[0].games.length === 0) return 0;
+            
+            const game = data.dates[0].games[0];
+            const gamePk = game.gamePk;
+            
+            const feedUrl = `${this.baseUrl}/game/${gamePk}/feed/live`;
+            const feedRes = await fetch(feedUrl);
+            const feedData = await feedRes.json();
+            
+            const isHome = game.teams.home.team.id === teamId;
+            const teamData = isHome ? feedData.liveData?.boxscore?.teams?.home : feedData.liveData?.boxscore?.teams?.away;
+            const probables = feedData.gameData?.probablePitchers || {};
+            const starterId = isHome ? probables.home?.id : probables.away?.id;
+            
+            if (!teamData || !teamData.players) return 0;
+            
+            let reliefPitches = 0;
+            for (const [key, player] of Object.entries(teamData.players) as any) {
+                const stats = player.stats?.pitching;
+                if (stats && stats.numberOfPitches > 0 && player.person.id !== starterId) {
+                    reliefPitches += stats.numberOfPitches;
+                }
+            }
+            return reliefPitches;
+        } catch (e) {
+            console.error('Failed to fetch yesterday bullpen usage:', e);
+            return 0;
         }
     }
 
@@ -248,6 +292,8 @@ export class MLBApi {
         homeHot: string[];
         awayHot: string[];
         playerStats: Map<string, any>;
+        platoonSplits: Map<string, any>;
+        bullpenFatigue: { home: number, away: number };
     }> {
         const gamePk = game.gamePk;
         
@@ -283,21 +329,31 @@ export class MLBApi {
         const hProb = details.probables?.home;
         const aProb = details.probables?.away;
 
+        const platoonSplits = new Map<string, any>();
         const fetchDualStats = async (name: string) => {
             if (!name) return;
             const id = await this.searchPerson(name);
             if (id) {
-                const [reg, spr] = await Promise.all([
-                    this.getPlayerStats(id, 'pitching', '2024', 'R'), // Avg Performance
-                    this.getPlayerStats(id, 'pitching', '2026', 'S')  // Recent Performance
+                const currentYear = new Date().getFullYear().toString();
+                const lastYear = (new Date().getFullYear() - 1).toString();
+                const [reg, spr, splits] = await Promise.all([
+                    this.getPlayerStats(id, 'pitching', lastYear, 'R'), // Avg Performance
+                    this.getPlayerStats(id, 'pitching', currentYear, 'S'),  // Recent Performance
+                    this.getHandednessSplits(id, 'pitching')
                 ]);
                 playerStats.set(name, { regular: reg, spring: spr });
+                platoonSplits.set(name, splits);
             }
         };
 
+        const todayDate = game.date.split('T')[0];
+        const bullpenFatigue = { home: 0, away: 0 };
+        
         await Promise.all([
             hProb ? fetchDualStats(hProb) : Promise.resolve(),
-            aProb ? fetchDualStats(aProb) : Promise.resolve()
+            aProb ? fetchDualStats(aProb) : Promise.resolve(),
+            game.homeId ? this.getYesterdaysBullpenUsage(game.homeId, todayDate).then(p => bullpenFatigue.home = p) : Promise.resolve(),
+            game.awayId ? this.getYesterdaysBullpenUsage(game.awayId, todayDate).then(p => bullpenFatigue.away = p) : Promise.resolve()
         ]);
 
         return {
@@ -305,7 +361,9 @@ export class MLBApi {
             rosters,
             homeHot,
             awayHot,
-            playerStats
+            playerStats,
+            platoonSplits,
+            bullpenFatigue
         };
     }
 

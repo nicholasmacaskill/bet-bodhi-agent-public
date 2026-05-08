@@ -24,7 +24,7 @@ export class BodhiAgent {
         await syncService.runSync();
 
         const liveBalance = await this.polyApi.getUSDCBalance();
-        const bankroll = liveBalance > 0 ? liveBalance : 464.00;
+        const bankroll = liveBalance > 0 ? liveBalance : 800.00;
 
         const [mlbOpportunities, nhlOpportunities, biasAlert] = await Promise.all([
             this.prism.scanMLB(date, bankroll),

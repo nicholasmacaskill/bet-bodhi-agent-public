@@ -59,7 +59,7 @@ async function main() {
                 }
             }
 
-            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 464, hydrated.rosters, memory);
+            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800, hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue);
 
             const evFactor = (analysis.polyEV || 0) * 10;
             const unifiedAlpha = (analysis.overallConfidence / 10) + evFactor;
@@ -138,7 +138,7 @@ async function main() {
                     };
                 }
 
-                const analysis = kboAnalyzer.analyzeGame(game, kboTeamStats, polyMarketData, kboElite, kboWeak, 464);
+                const analysis = kboAnalyzer.analyzeGame(game, kboTeamStats, polyMarketData, kboElite, kboWeak, 800);
                 const evFactor = (analysis.polyEV || 0) * 10;
                 const unifiedAlpha = (analysis.overallConfidence / 10) + evFactor;
 
