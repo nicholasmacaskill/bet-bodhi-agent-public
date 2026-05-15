@@ -45,7 +45,8 @@ export interface BodhiAnalysis {
 // Map of 2026 Elite MLB Pitchers
 const ELITE_PITCHERS = ["Spencer Strider", "Corbin Burnes", "Zack Wheeler", "Luis Castillo", "Gerrit Cole", "Logan Webb", "Zac Gallen", "George Kirby", "Kevin Gausman", "Bryan Woo", "Yoshinobu Yamamoto",
     "Framber Valdez", "Justin Steele", "Pablo Lopez", "Aaron Nola", "Tarik Skubal", "Paul Skenes",
-    "Shota Imanaga", "Michael Soroka", "Andrew Painter", "Andrew Abbott", "Logan Gilbert", "Drew Rasmussen", "Reid Detmers"
+    "Shota Imanaga", "Michael Soroka", "Andrew Painter", "Andrew Abbott", "Logan Gilbert", "Drew Rasmussen", "Reid Detmers",
+    "Ranger Suarez", "Max Fried", "Tyler Glasnow", "Chris Sale", "Cole Ragans", "Grayson Rodriguez", "Joe Ryan", "Jesús Luzardo"
 ];
 
 // Map of 2026 Elite MLB Bats
@@ -87,6 +88,19 @@ const PARK_FACTORS: Record<string, { type: 'hitter' | 'pitcher' | 'neutral', boo
     "T-Mobile Park": { type: 'pitcher', boost: 1.5 },
     "Oracle Park": { type: 'pitcher', boost: 1.5 },
     "Citi Field": { type: 'pitcher', boost: 1.0 }
+};
+
+// --- Helper Parsers ---
+const parseProbable = (p: any): string => {
+    if (!p) return "TBD / Bullpen";
+    if (typeof p === 'string') return p;
+    return p.fullName || p.name || "TBD / Bullpen";
+};
+
+const parsePitcher = (p: any): string => {
+    if (!p) return "";
+    if (typeof p === 'string') return p;
+    return p.fullName || p.name || "";
 };
 
 export function getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
@@ -134,11 +148,6 @@ export class PillarAnalyzer {
         let currentConfidence = ((techSport.score + seasonalSport.score) / 20) * 100;
 
         // Veto logic preparation — handle both plain string (schedule API) and { fullName } (live API)
-        const parseProbable = (p: any): string => {
-            if (!p) return "TBD / Bullpen";
-            if (typeof p === 'string') return p;
-            return p.fullName || p.name || "TBD / Bullpen";
-        };
         const homePitcher = parseProbable(details.probables?.home);
         const awayPitcher = parseProbable(details.probables?.away);
 
@@ -410,6 +419,30 @@ export class PillarAnalyzer {
         const homeHotNames: string[] = [];
         const awayHotNames: string[] = [];
 
+        // --- Data Integrity Guard: Home/Away Pitcher Swap Detection ---
+        if (rosters && rosters.home && rosters.away) {
+            const homePitcherName = parsePitcher(details.probables?.home);
+            const awayPitcherName = parsePitcher(details.probables?.away);
+            
+            const isHomeInHome = rosters.home.some(p => p.includes(homePitcherName) || homePitcherName.includes(p));
+            const isAwayInAway = rosters.away.some(p => p.includes(awayPitcherName) || awayPitcherName.includes(p));
+            
+            const isHomeInAway = rosters.away.some(p => p.includes(homePitcherName) || homePitcherName.includes(p));
+            const isAwayInHome = rosters.home.some(p => p.includes(awayPitcherName) || awayPitcherName.includes(p));
+
+            console.log(`🔍 [SWAP_CHECK] ${homeTeam} vs ${awayTeam}:`);
+            console.log(`   Home Probable: ${homePitcherName} (In Home Roster: ${isHomeInHome}, In Away Roster: ${isHomeInAway})`);
+            console.log(`   Away Probable: ${awayPitcherName} (In Away Roster: ${isAwayInAway}, In Home Roster: ${isAwayInHome})`);
+
+            if (homePitcherName && awayPitcherName && !isHomeInHome && !isAwayInAway && isHomeInAway && isAwayInHome) {
+                console.log(`⚠️ DETECTED SWAPPED PROBABLES: Swapping ${homePitcherName} and ${awayPitcherName} for ${homeTeam} @ ${awayTeam} analysis.`);
+                const temp = details.probables.home;
+                details.probables.home = details.probables.away;
+                details.probables.away = temp;
+            }
+        }
+        // ---------------------------------------------------------------
+
         const flexMatch = (playerList: string[], target: string, listName: string) => {
             if (!target) return false;
             const t = target.toLowerCase();
@@ -451,11 +484,6 @@ export class PillarAnalyzer {
             }
         });
 
-        const parsePitcher = (p: any): string => {
-            if (!p) return "";
-            if (typeof p === 'string') return p;
-            return p.fullName || p.name || "";
-        };
         const homePitcher = parsePitcher(details.probables?.home);
         const awayPitcher = parsePitcher(details.probables?.away);
 
@@ -473,23 +501,36 @@ export class PillarAnalyzer {
                 
                 const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : 4.0;
                 const sprEra = stats.spring?.era ? parseFloat(stats.spring.era) : regEra;
+                const sprInnings = stats.spring?.inningsPitched ? parseFloat(stats.spring.inningsPitched) : 0;
                 
+                // Spring Training Guard: Ignore spring stats if sample size is < 10 innings
+                if (sprInnings < 10) return regEra;
+
                 // 70/30 weighting: 70% Regular Season / 30% Spring Training
                 return (regEra * 0.7) + (sprEra * 0.3);
             };
 
             const homeComposite = calculateComposite(homePitcher);
             if (homeComposite !== null) {
-                // Dynamic stats should be the absolute source of truth if available
-                homePitcherElite = (homeComposite <= 2.80) ? WEIGHT_ELITE_PITCHER : 0;
-                homePitcherWeak = (homeComposite >= 5.00) ? WEIGHT_WEAK_PITCHER : 0;
+                // Elite status: Static list OR elite metrics
+                if (homeComposite <= 2.80) {
+                    homePitcherElite = WEIGHT_ELITE_PITCHER;
+                }
+                
+                // Weak status: Metrics-driven, but Elite list acts as a shield
+                if (homeComposite >= 5.00 && homePitcherElite === 0) {
+                    homePitcherWeak = WEIGHT_WEAK_PITCHER;
+                }
             }
 
             const awayComposite = calculateComposite(awayPitcher);
             if (awayComposite !== null) {
-                // Dynamic stats should be the absolute source of truth if available
-                awayPitcherElite = (awayComposite <= 2.80) ? WEIGHT_ELITE_PITCHER : 0;
-                awayPitcherWeak = (awayComposite >= 5.00) ? WEIGHT_WEAK_PITCHER : 0;
+                if (awayComposite <= 2.80) {
+                    awayPitcherElite = WEIGHT_ELITE_PITCHER;
+                }
+                if (awayComposite >= 5.00 && awayPitcherElite === 0) {
+                    awayPitcherWeak = WEIGHT_WEAK_PITCHER;
+                }
             }
         }
 
