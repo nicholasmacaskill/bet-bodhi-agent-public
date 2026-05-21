@@ -59,7 +59,7 @@ async function main() {
                 }
             }
 
-            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800, hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue, hydrated.lineupHandedness);
+            const analysis = analyzer.analyzeGame(game, hydrated.details, polyMarketData, [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800, hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue, hydrated.lineupHandedness, hydrated.teamForm);
 
             const evFactor = (analysis.polyEV || 0) * 10;
             const unifiedAlpha = (analysis.overallConfidence / 10) + evFactor;
@@ -94,10 +94,48 @@ async function main() {
             report += `### ${i+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
             report += `- **Target**: ${r.valueTeam || 'NEUTRAL'} | **Alpha**: ${r.unifiedAlpha.toFixed(2)}\n`;
             report += `- **Analysis**: ${r.recommendedAction}\n`;
+            
+            const confidenceContrib = (r.overallConfidence / 10).toFixed(2);
+            report += `- **Alpha Factors Breakdown**:\n`;
+            report += `  - **Model Base (Confidence):** ${confidenceContrib} (from ${r.overallConfidence}%)\n`;
+            if (r.polyEV !== undefined) {
+                const evContrib = (r.polyEV * 10).toFixed(2);
+                report += `  - **Market EV Premium:** +${evContrib} (from ${(r.polyEV * 100).toFixed(1)}% discrepancy)\n`;
+            }
+            if (r.pillars && r.pillars.length > 0) {
+                const highPillars = r.pillars.filter((p: any) => p.score >= 7).sort((a: any, b: any) => b.score - a.score);
+                if (highPillars.length > 0) {
+                    report += `  - **Core Driving Pillars:**\n`;
+                    highPillars.forEach((p: any) => {
+                        report += `    - *${p.pillar} (${p.score}/10)*: ${p.reason}\n`;
+                    });
+                }
+            }
+
             if (r.advantages && r.advantages.length > 0) {
                 report += `- **Strengths**:\n`;
                 r.advantages.forEach((adv: string) => report += `  - ${adv}\n`);
             }
+            
+            if (r.risks && r.risks.length > 0) {
+                report += `- **Risks / Vulnerabilities**:\n`;
+                r.risks.forEach((risk: string) => report += `  - ${risk}\n`);
+            }
+            
+            if (r.matchupNotes) {
+                report += `- **Matchup Summary**: ${r.matchupNotes}\n`;
+            }
+
+            if (r.valueTeam && r.suggestedStake !== undefined) {
+                report += `- **Execution Strategy**:\n`;
+                report += `  - **Recommended Sizing**: ${r.recommendedSize}\n`;
+                report += `  - **Suggested Stake**: $${r.suggestedStake.toFixed(2)}\n`;
+                report += `  - **Execution Route**: ${r.executionRoute || 'NONE'}\n`;
+                if (r.homeOdds && r.awayOdds) {
+                    report += `  - **Market Pricing**: ${r.awayTeam} (${(r.awayOdds * 100).toFixed(1)}¢) vs ${r.homeTeam} (${(r.homeOdds * 100).toFixed(1)}¢)\n`;
+                }
+            }
+
             if (r.killCriteria && r.killCriteria.length > 0) {
                 report += `- **Kill Criteria**:\n`;
                 r.killCriteria.forEach((kill: string) => report += `  - ${kill}\n`);
@@ -164,10 +202,48 @@ async function main() {
                     report += `### KBO ${i+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
                     report += `- **Target**: ${r.valueTeam || 'NEUTRAL'} | **Alpha**: ${r.unifiedAlpha.toFixed(2)}\n`;
                     report += `- **Analysis**: ${r.recommendedAction}\n`;
+                    
+                    const confidenceContrib = (r.overallConfidence / 10).toFixed(2);
+                    report += `- **Alpha Factors Breakdown**:\n`;
+                    report += `  - **Model Base (Confidence):** ${confidenceContrib} (from ${r.overallConfidence}%)\n`;
+                    if (r.polyEV !== undefined) {
+                        const evContrib = (r.polyEV * 10).toFixed(2);
+                        report += `  - **Market EV Premium:** +${evContrib} (from ${(r.polyEV * 100).toFixed(1)}% discrepancy)\n`;
+                    }
+                    if (r.pillars && r.pillars.length > 0) {
+                        const highPillars = r.pillars.filter((p: any) => p.score >= 7).sort((a: any, b: any) => b.score - a.score);
+                        if (highPillars.length > 0) {
+                            report += `  - **Core Driving Pillars:**\n`;
+                            highPillars.forEach((p: any) => {
+                                report += `    - *${p.pillar} (${p.score}/10)*: ${p.reason}\n`;
+                            });
+                        }
+                    }
+
                     if (r.advantages && r.advantages.length > 0) {
                         report += `- **Strengths**:\n`;
                         r.advantages.forEach((adv: string) => report += `  - ${adv}\n`);
                     }
+
+                    if (r.matchupNotes) {
+                        report += `- **Matchup Summary**: ${r.matchupNotes}\n`;
+                    }
+        
+                    if (r.valueTeam && r.suggestedStake !== undefined) {
+                        report += `- **Execution Strategy**:\n`;
+                        report += `  - **Recommended Sizing**: ${r.recommendedSize}\n`;
+                        report += `  - **Suggested Stake**: $${r.suggestedStake.toFixed(2)}\n`;
+                        report += `  - **Execution Route**: ${r.executionRoute || 'NONE'}\n`;
+                        if (r.homeOdds && r.awayOdds) {
+                            report += `  - **Market Pricing**: ${r.awayTeam} (${(r.awayOdds * 100).toFixed(1)}¢) vs ${r.homeTeam} (${(r.homeOdds * 100).toFixed(1)}¢)\n`;
+                        }
+                    }
+        
+                    if (r.killCriteria && r.killCriteria.length > 0) {
+                        report += `- **Kill Criteria**:\n`;
+                        r.killCriteria.forEach((kill: string) => report += `  - ${kill}\n`);
+                    }
+
                     report += `\n`;
                 });
             }
@@ -179,6 +255,11 @@ async function main() {
         const reportPath = path.join(process.cwd(), 'reports', `BODHI_SOVEREIGN_REPORT_${today}.md`);
         fs.writeFileSync(reportPath, report);
         console.log(`✅ Nightly report generated: ${reportPath}`);
+
+        // Save snapshot for Watchdog
+        const snapshotPath = path.join(process.cwd(), 'data', 'active_slate.json');
+        fs.writeFileSync(snapshotPath, JSON.stringify(results, null, 2));
+        console.log(`💾 Slate snapshot saved for Watchdog: ${snapshotPath}`);
 
         // --- Telegram Notification ---
         if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_ADMIN_ID) {

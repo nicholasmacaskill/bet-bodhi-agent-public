@@ -216,7 +216,8 @@ export class MLBApi {
      * Search for a person by name to get their ID.
      */
     async searchPerson(name: string): Promise<number | null> {
-        const url = `${this.baseUrl}/people/search?names=${encodeURIComponent(name)}`;
+        const cleanName = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        const url = `${this.baseUrl}/people/search?names=${encodeURIComponent(cleanName)}`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -231,8 +232,8 @@ export class MLBApi {
      * Get hot hitters (Top 3 by OPS) for a specific team.
      */
     async getHotBats(teamId: number): Promise<string[]> {
-        const lastSeason = new Date().getFullYear() - 1;
-        const url = `${this.baseUrl}/stats/leaders?leaderCategories=onBasePlusSlugging&statGroup=hitting&season=${lastSeason}&gameType=R&teamId=${teamId}&limit=3`;
+        const currentSeason = new Date().getFullYear().toString();
+        const url = `${this.baseUrl}/stats/leaders?leaderCategories=onBasePlusSlugging&statGroup=hitting&season=${currentSeason}&gameType=R&teamId=${teamId}&limit=3`;
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -300,6 +301,38 @@ export class MLBApi {
         }
     }
 
+    private cachedStandings: any = null;
+
+    async getStandings(): Promise<any> {
+        if (this.cachedStandings) return this.cachedStandings;
+        const url = `${this.baseUrl}/standings?leagueId=103,104`;
+        try {
+            const response = await fetch(url);
+            this.cachedStandings = await response.json();
+            return this.cachedStandings;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    async getTeamForm(teamId: number): Promise<{ streak: string, l10: string, l10Wins: number }> {
+        const standings = await this.getStandings();
+        if (!standings || !standings.records) return { streak: '', l10: '', l10Wins: 0 };
+        
+        for (const record of standings.records) {
+            for (const teamRecord of record.teamRecords) {
+                if (teamRecord.team.id === teamId) {
+                    const streak = teamRecord.streak?.streakCode || '';
+                    const l10Obj = teamRecord.records?.splitRecords?.find((r: any) => r.type === 'lastTen');
+                    const l10 = l10Obj ? `${l10Obj.wins}-${l10Obj.losses}` : '';
+                    const l10Wins = l10Obj ? l10Obj.wins : 0;
+                    return { streak, l10, l10Wins };
+                }
+            }
+        }
+        return { streak: '', l10: '', l10Wins: 0 };
+    }
+
     /**
      * CENTRALIZED HYDRATION: Fetch all data needed for a Pillar Analysis in one call.
      * Ensures consistency between bulk scanner and single analyst.
@@ -312,6 +345,7 @@ export class MLBApi {
         playerStats: Map<string, any>;
         platoonSplits: Map<string, any>;
         bullpenFatigue: { home: number, away: number };
+        teamForm: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } };
     }> {
         const gamePk = game.gamePk;
         
@@ -355,24 +389,31 @@ export class MLBApi {
             if (id) {
                 const currentYear = new Date().getFullYear().toString();
                 const lastYear = (new Date().getFullYear() - 1).toString();
-                const [reg, spr, splits] = await Promise.all([
-                    this.getPlayerStats(id, 'pitching', lastYear, 'R'), // Avg Performance
-                    this.getPlayerStats(id, 'pitching', currentYear, 'S'),  // Recent Performance
+                const [reg, spr, currentReg, splits] = await Promise.all([
+                    this.getPlayerStats(id, 'pitching', lastYear, 'R'), // Avg Performance (Last Year)
+                    this.getPlayerStats(id, 'pitching', currentYear, 'S'),  // Recent Performance (Spring Training)
+                    this.getPlayerStats(id, 'pitching', currentYear, 'R'),  // Active Season Performance (Current Year)
                     this.getHandednessSplits(id, 'pitching')
                 ]);
-                playerStats.set(name, { regular: reg, spring: spr });
+                playerStats.set(name, { regular: reg, spring: spr, currentRegular: currentReg });
                 platoonSplits.set(name, splits);
             }
         };
 
         const todayDate = game.date.split('T')[0];
         const bullpenFatigue = { home: 0, away: 0 };
+        const teamForm = { 
+            home: { streak: '', l10: '', l10Wins: 0 }, 
+            away: { streak: '', l10: '', l10Wins: 0 } 
+        };
         
         await Promise.all([
             hProb ? fetchDualStats(hProb) : Promise.resolve(),
             aProb ? fetchDualStats(aProb) : Promise.resolve(),
             game.homeId ? this.getYesterdaysBullpenUsage(game.homeId, todayDate).then(p => bullpenFatigue.home = p) : Promise.resolve(),
-            game.awayId ? this.getYesterdaysBullpenUsage(game.awayId, todayDate).then(p => bullpenFatigue.away = p) : Promise.resolve()
+            game.awayId ? this.getYesterdaysBullpenUsage(game.awayId, todayDate).then(p => bullpenFatigue.away = p) : Promise.resolve(),
+            game.homeId ? this.getTeamForm(game.homeId).then(f => teamForm.home = f) : Promise.resolve(),
+            game.awayId ? this.getTeamForm(game.awayId).then(f => teamForm.away = f) : Promise.resolve()
         ]);
 
         return {
@@ -383,6 +424,7 @@ export class MLBApi {
             playerStats,
             platoonSplits,
             bullpenFatigue,
+            teamForm,
             lineupHandedness: details.lineupHandedness || { home: { L: 0, R: 0, S: 0 }, away: { L: 0, R: 0, S: 0 } }
         };
     }

@@ -40,6 +40,7 @@ export interface BodhiAnalysis {
     killCriteria?: string[];
     dataIntegrity?: 'complete' | 'incomplete';
     incompleteReasons?: string[];
+    risks?: string[];
 }
 
 // Map of 2026 Elite MLB Pitchers
@@ -68,6 +69,84 @@ const WEAK_PITCHERS_STATIC = [
     "Zach Davies",       // 5.45 ERA — extreme contact pitcher, bullpen game risk
     "Aaron Civale",      // 5.30 ERA — high BABIP, weak xFIP track record
 ];
+
+// Shared Pitcher Status Helpers
+const flexMatch = (playerList: string[], target: string, listName?: string): boolean => {
+    if (!target) return false;
+    const t = target.toLowerCase();
+    const match = playerList.find(p => {
+        const lp = p.toLowerCase();
+        return t.includes(lp) || lp.includes(t);
+    });
+    return !!match;
+};
+
+const calculateComposite = (name: string, playerStats?: Map<string, any>): number | null => {
+    if (!playerStats) return null;
+    const stats = playerStats.get(name);
+    if (!stats) return null;
+    
+    const curRegEra = stats.currentRegular?.era ? parseFloat(stats.currentRegular.era) : null;
+    const curRegInnings = stats.currentRegular?.inningsPitched ? parseFloat(stats.currentRegular.inningsPitched) : 0;
+    
+    // If they have >= 15 innings in the current active regular season, use that as the primary metric
+    if (curRegEra !== null && curRegInnings >= 15) {
+        return curRegEra;
+    }
+    
+    // Fallback to the 70/30 blend of last year's regular season + spring training
+    const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : 4.0;
+    const sprEra = stats.spring?.era ? parseFloat(stats.spring.era) : regEra;
+    const sprInnings = stats.spring?.inningsPitched ? parseFloat(stats.spring.inningsPitched) : 0;
+    
+    // Spring Training Guard: Ignore spring stats if sample size is < 10 innings
+    if (sprInnings < 10) return regEra;
+
+    // 70/30 weighting: 70% Regular Season / 30% Spring Training
+    return (regEra * 0.7) + (sprEra * 0.3);
+};
+
+const getPitcherStatus = (name: string, weakPitchers: string[], playerStats?: Map<string, any>): { isElite: boolean; isWeak: boolean; composite: number | null; trend?: 'slumping' | 'peaking' | 'steady'; delta?: number } => {
+    let isElite = flexMatch(ELITE_PITCHERS, name);
+    const allWeak = [...weakPitchers, ...WEAK_PITCHERS_STATIC];
+    let isWeak = flexMatch(allWeak, name);
+    
+    let trend: 'slumping' | 'peaking' | 'steady' = 'steady';
+    let delta = 0;
+
+    const stats = playerStats ? playerStats.get(name) : undefined;
+    if (stats) {
+        const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : null;
+        const curRegEra = stats.currentRegular?.era ? parseFloat(stats.currentRegular.era) : null;
+        const curRegInnings = stats.currentRegular?.inningsPitched ? parseFloat(stats.currentRegular.inningsPitched) : 0;
+        
+        if (regEra !== null && curRegEra !== null && curRegInnings >= 15) {
+            delta = curRegEra - regEra;
+            if (delta >= 1.0) trend = 'slumping';
+            else if (delta <= -1.0) trend = 'peaking';
+        }
+    }
+
+    const composite = calculateComposite(name, playerStats);
+    if (composite !== null) {
+        if (composite <= 2.80) {
+            isElite = true;
+        } else if (composite > 4.00) {
+            if (isElite) {
+                console.log(`⚠️ Integrity Override: Stripping Elite status from ${name} due to composite ERA of ${composite.toFixed(2)}.`);
+                isElite = false;
+            }
+        }
+        if (composite >= 5.00) {
+            isWeak = true;
+        }
+    }
+    
+    if (trend === 'slumping') isElite = false;
+    if (trend === 'peaking' && composite && composite < 3.5) isElite = true;
+
+    return { isElite, isWeak, composite, trend, delta };
+};
 
 // Decision Weights - Pitching is paramount but rosters matter
 const WEIGHT_ELITE_PITCHER = 12;
@@ -124,7 +203,8 @@ export class PillarAnalyzer {
         memory?: AgentMemory,
         platoonSplits?: Map<string, any>,
         bullpenFatigue?: { home: number, away: number },
-        lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }
+        lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } },
+        teamForm?: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } }
     ): BodhiAnalysis {
         const homeTeam = game.homeTeam;
         const awayTeam = game.awayTeam;
@@ -132,9 +212,10 @@ export class PillarAnalyzer {
         const pillars: PillarScore[] = [];
 
         // 1. Technical Analysis (Sport-Specific)
-        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue, lineupHandedness);
+        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue, lineupHandedness, teamForm);
         const techSport = techResult.score;
         const advantages = techResult.advantages;
+        const risks = techResult.risks;
         pillars.push(techSport);
 
         // 2. Seasonal Sport (Logic: Ramping and Environment)
@@ -151,12 +232,14 @@ export class PillarAnalyzer {
         const homePitcher = parseProbable(details.probables?.home);
         const awayPitcher = parseProbable(details.probables?.away);
 
-        const isHomeElite = homePitcher !== "TBD / Bullpen" && (ELITE_PITCHERS.includes(homePitcher) || hotBats.includes(homePitcher));
-        const isAwayElite = awayPitcher !== "TBD / Bullpen" && (ELITE_PITCHERS.includes(awayPitcher) || hotBats.includes(awayPitcher));
+        const homeStatus = getPitcherStatus(homePitcher, weakPitchers, playerStats);
+        const awayStatus = getPitcherStatus(awayPitcher, weakPitchers, playerStats);
 
-        // Identify weak pitchers (for veto)
-        const isHomeWeak = homePitcher !== "TBD / Bullpen" && (weakPitchers.includes(homePitcher) || (playerStats?.get(homePitcher)?.xera >= 5.00));
-        const isAwayWeak = awayPitcher !== "TBD / Bullpen" && (weakPitchers.includes(awayPitcher) || (playerStats?.get(awayPitcher)?.xera >= 5.00));
+        const isHomeElite = homePitcher !== "TBD / Bullpen" && (homeStatus.isElite || hotBats.includes(homePitcher));
+        const isAwayElite = awayPitcher !== "TBD / Bullpen" && (awayStatus.isElite || hotBats.includes(awayPitcher));
+
+        const isHomeWeak = homePitcher !== "TBD / Bullpen" && homeStatus.isWeak;
+        const isAwayWeak = awayPitcher !== "TBD / Bullpen" && awayStatus.isWeak;
 
         // Setup outputs
         let recommendedAction = "PASS - No clear edge.";
@@ -380,7 +463,8 @@ export class PillarAnalyzer {
             homeOdds: polyMarket ? homePrice : undefined,
             awayOdds: polyMarket ? awayPrice : undefined,
             matchupNotes: `${awayPitcher || '?'} vs ${homePitcher || '?'}. ${techSport.reason}`,
-            advantages: advantages.length >= 3 ? advantages.slice(0, 3) : this.backfillAdvantages(advantages, currentConfidence),
+            advantages: advantages.length > 0 ? advantages : this.backfillAdvantages(advantages, currentConfidence),
+            risks,
             killCriteria,
             dataIntegrity: 'complete' as const
         };
@@ -394,7 +478,7 @@ export class PillarAnalyzer {
         if (backfilled.length < 3) {
             backfilled.push("📋 Roster Stability: Our internal model favors this side based on 2026 depth charts and projected innings distribution, indicating a higher baseline performance floor.");
         }
-        return backfilled.slice(0, 3);
+        return backfilled;
     }
 
     private getSizing(confidence: number, bankroll: number) {
@@ -405,7 +489,7 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }, lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }): { score: PillarScore, advantages: string[] } {
+    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }, lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }, teamForm?: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } }): { score: PillarScore, advantages: string[], risks: string[] } {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
@@ -413,6 +497,7 @@ export class PillarAnalyzer {
         let homeMetricBonus = 0;
         let awayMetricBonus = 0;
         const advantages: string[] = [];
+        const risks: string[] = [];
 
         const homeEliteNames: string[] = [];
         const awayEliteNames: string[] = [];
@@ -443,15 +528,7 @@ export class PillarAnalyzer {
         }
         // ---------------------------------------------------------------
 
-        const flexMatch = (playerList: string[], target: string, listName: string) => {
-            if (!target) return false;
-            const t = target.toLowerCase();
-            const match = playerList.find(p => {
-                const lp = p.toLowerCase();
-                return t.includes(lp) || lp.includes(t);
-            });
-            return !!match;
-        };
+        // Local flexMatch removed in favor of global helper
 
         const homePlayers = details.lineups?.home?.length > 0 ? details.lineups.home : (rosters?.home || []);
         const awayPlayers = details.lineups?.away?.length > 0 ? details.lineups.away : (rosters?.away || []);
@@ -487,52 +564,14 @@ export class PillarAnalyzer {
         const homePitcher = parsePitcher(details.probables?.home);
         const awayPitcher = parsePitcher(details.probables?.away);
 
-        let homePitcherElite = flexMatch(ELITE_PITCHERS, homePitcher, 'ELITE_PITCHERS') ? WEIGHT_ELITE_PITCHER : 0;
-        let awayPitcherElite = flexMatch(ELITE_PITCHERS, awayPitcher, 'ELITE_PITCHERS') ? WEIGHT_ELITE_PITCHER : 0;
+        const homeStatus = getPitcherStatus(homePitcher, weakPitchers, playerStats);
+        const awayStatus = getPitcherStatus(awayPitcher, weakPitchers, playerStats);
 
-        const allWeak = [...weakPitchers, ...WEAK_PITCHERS_STATIC];
-        let homePitcherWeak = flexMatch(allWeak, homePitcher, 'WEAK_PITCHERS') ? WEIGHT_WEAK_PITCHER : 0;
-        let awayPitcherWeak = flexMatch(allWeak, awayPitcher, 'WEAK_PITCHERS') ? WEIGHT_WEAK_PITCHER : 0;
+        let homePitcherElite = homeStatus.isElite ? WEIGHT_ELITE_PITCHER : 0;
+        let awayPitcherElite = awayStatus.isElite ? WEIGHT_ELITE_PITCHER : 0;
 
-        if (playerStats) {
-            const calculateComposite = (name: string) => {
-                const stats = playerStats.get(name);
-                if (!stats) return null;
-                
-                const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : 4.0;
-                const sprEra = stats.spring?.era ? parseFloat(stats.spring.era) : regEra;
-                const sprInnings = stats.spring?.inningsPitched ? parseFloat(stats.spring.inningsPitched) : 0;
-                
-                // Spring Training Guard: Ignore spring stats if sample size is < 10 innings
-                if (sprInnings < 10) return regEra;
-
-                // 70/30 weighting: 70% Regular Season / 30% Spring Training
-                return (regEra * 0.7) + (sprEra * 0.3);
-            };
-
-            const homeComposite = calculateComposite(homePitcher);
-            if (homeComposite !== null) {
-                // Elite status: Static list OR elite metrics
-                if (homeComposite <= 2.80) {
-                    homePitcherElite = WEIGHT_ELITE_PITCHER;
-                }
-                
-                // Weak status: Metrics-driven, but Elite list acts as a shield
-                if (homeComposite >= 5.00 && homePitcherElite === 0) {
-                    homePitcherWeak = WEIGHT_WEAK_PITCHER;
-                }
-            }
-
-            const awayComposite = calculateComposite(awayPitcher);
-            if (awayComposite !== null) {
-                if (awayComposite <= 2.80) {
-                    awayPitcherElite = WEIGHT_ELITE_PITCHER;
-                }
-                if (awayComposite >= 5.00 && awayPitcherElite === 0) {
-                    awayPitcherWeak = WEIGHT_WEAK_PITCHER;
-                }
-            }
-        }
+        let homePitcherWeak = homeStatus.isWeak ? WEIGHT_WEAK_PITCHER : 0;
+        let awayPitcherWeak = awayStatus.isWeak ? WEIGHT_WEAK_PITCHER : 0;
 
         const isHomeTBD = homePitcher === "TBD / Bullpen" || !homePitcher;
         const isAwayTBD = awayPitcher === "TBD / Bullpen" || !awayPitcher;
@@ -593,8 +632,31 @@ export class PillarAnalyzer {
             }
         }
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus;
+        let homeTeamFormBonus = 0;
+        let awayTeamFormBonus = 0;
+        let homeFormStr = "";
+        let awayFormStr = "";
+
+        if (teamForm) {
+            if (teamForm.home.l10Wins >= 7) {
+                homeTeamFormBonus += 2;
+                homeFormStr = `🔥 Team Momentum: ${homeTeam} is surging, winning ${teamForm.home.l10Wins} of their last 10 games (Streak: ${teamForm.home.streak}).`;
+            } else if (teamForm.home.l10Wins <= 3) {
+                homeTeamFormBonus -= 2;
+                homeFormStr = `🥶 Cold Streak: ${homeTeam} is struggling, winning only ${teamForm.home.l10Wins} of their last 10 games (Streak: ${teamForm.home.streak}).`;
+            }
+            
+            if (teamForm.away.l10Wins >= 7) {
+                awayTeamFormBonus += 2;
+                awayFormStr = `🔥 Team Momentum: ${awayTeam} is surging, winning ${teamForm.away.l10Wins} of their last 10 games (Streak: ${teamForm.away.streak}).`;
+            } else if (teamForm.away.l10Wins <= 3) {
+                awayTeamFormBonus -= 2;
+                awayFormStr = `🥶 Cold Streak: ${awayTeam} is struggling, winning only ${teamForm.away.l10Wins} of their last 10 games (Streak: ${teamForm.away.streak}).`;
+            }
+        }
+
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus + homeTeamFormBonus;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus + awayTeamFormBonus;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "home" : "away";
@@ -605,14 +667,26 @@ export class PillarAnalyzer {
 
         if (favored === 'home') {
             if (homePitcherElite) advantages.push(`🔥 Elite Starting Pitcher: ${homePitcher} is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.`);
+            if (homeStatus.trend === 'peaking') advantages.push(`📈 Trend Alert: ${homePitcher} is peaking this season. ERA has dropped by ${Math.abs(homeStatus.delta || 0).toFixed(2)} compared to last year.`);
+            if (homeStatus.trend === 'slumping') risks.push(`📉 Slumping Pitcher: Target's starting pitcher ${homePitcher} is struggling. ERA has spiked by +${(homeStatus.delta || 0).toFixed(2)} compared to last year.`);
+            if (awayStatus.trend === 'slumping') advantages.push(`📉 Target Slumping: ${awayPitcher} is struggling. ERA has spiked by +${(awayStatus.delta || 0).toFixed(2)} compared to last year.`);
             if (homeHotCount >= 2) advantages.push(`⚡ Offensive Surge: ${homeHotCount} players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.`);
+            if (homeFormStr && homeFormStr.includes("🔥")) advantages.push(homeFormStr);
+            if (homeFormStr && homeFormStr.includes("🥶")) risks.push(homeFormStr.replace("Cold Streak", "Target Cold Streak"));
+            if (awayFormStr && awayFormStr.includes("🥶")) advantages.push(awayFormStr.replace("Cold Streak", "Target Cold Streak"));
             if (awayPitcherWeak) advantages.push(`🎯 Vulnerable Matchup: Facing ${awayPitcher} (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.`);
             if (homeExploitBonus) advantages.push(`⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.`);
             if (awayBullpenPenalty) advantages.push(`🔀 Bullpen Day: ${awayTeam} is running a vulnerable bullpen game today.`);
             if (homeElite >= 2) advantages.push(`💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.`);
         } else {
             if (awayPitcherElite) advantages.push(`🔥 Elite Starting Pitcher: ${awayPitcher} is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.`);
+            if (awayStatus.trend === 'peaking') advantages.push(`📈 Trend Alert: ${awayPitcher} is peaking this season. ERA has dropped by ${Math.abs(awayStatus.delta || 0).toFixed(2)} compared to last year.`);
+            if (awayStatus.trend === 'slumping') risks.push(`📉 Slumping Pitcher: Target's starting pitcher ${awayPitcher} is struggling. ERA has spiked by +${(awayStatus.delta || 0).toFixed(2)} compared to last year.`);
+            if (homeStatus.trend === 'slumping') advantages.push(`📉 Target Slumping: ${homePitcher} is struggling. ERA has spiked by +${(homeStatus.delta || 0).toFixed(2)} compared to last year.`);
             if (awayHotCount >= 2) advantages.push(`⚡ Offensive Surge: ${awayHotCount} players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.`);
+            if (awayFormStr && awayFormStr.includes("🔥")) advantages.push(awayFormStr);
+            if (awayFormStr && awayFormStr.includes("🥶")) risks.push(awayFormStr.replace("Cold Streak", "Target Cold Streak"));
+            if (homeFormStr && homeFormStr.includes("🥶")) advantages.push(homeFormStr.replace("Cold Streak", "Target Cold Streak"));
             if (homePitcherWeak) advantages.push(`🎯 Vulnerable Matchup: Facing ${homePitcher} (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.`);
             if (awayExploitBonus) advantages.push(`⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.`);
             if (homeBullpenPenalty) advantages.push(`🔀 Bullpen Day: ${homeTeam} is running a vulnerable bullpen game today.`);
@@ -685,7 +759,8 @@ export class PillarAnalyzer {
                 reason: narrative,
                 side: homeTotalStrength === awayTotalStrength ? 'neutral' : (homeTotalStrength > awayTotalStrength ? 'home' : 'away')
             },
-            advantages
+            advantages,
+            risks
         };
     }
 

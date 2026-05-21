@@ -1,40 +1,36 @@
-# 📊 BODHI PERFORMANCE AUDIT: 5/9/2026
+# 📊 BODHI PERFORMANCE AUDIT: 5/21/2026
 
 ## 📈 EXECUTIVE SUMMARY
-- **Total Recommendations**: 301
-- **Overall Win Rate**: 46.8%
-- **High Alpha (10+) Win Rate**: 43.5% (64/147)
+- **Total Recommendations**: 373
+- **Overall Win Rate**: 47.2%
+- **High Alpha (10+) Win Rate**: 42.1% (75/178)
 
-## 💰 ACTUAL PROFITABILITY BY SPORT (FROM POLYMARKET)
-| Sport | Total Wagered | Net PnL | ROI % | Record (W-L) |
-| :--- | :--- | :--- | :--- | :--- |
-| MLB | $10055.15 | +$465.19 | 4.63% | 61-97 |
-| NHL | $1341.66 | +$173.99 | 12.97% | 8-11 |
-| Non-Sports | $790.32 | $-231.05 | -29.23% | 9-22 |
-| NBA | $203.66 | $-173.51 | -85.20% | 1-5 |
-| KBO | $270.16 | +$70.16 | 25.97% | 4-2 |
-| **TOTAL** | **$12660.95** | **+$304.79** | **2.41%** | **-** |
+## 💰 ON-CHAIN POLYMARKET METRICS
+- **Live USDC Balance (Proxy Wallet)**: $871.76
+- **Simulated MLB Model ROI**: -15.07% (Based on flat $35 staking)
+
+> **Note**: To view exact realized PnL per market, use the Polymarket UI. The historical CSV tracking has been deprecated in favor of live on-chain balances.
 
 ## 🎯 DETAILED LOG (LAST 20 GAMES)
-| Date | Matchup | Alpha | Target | Result | Score | Execution |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-05-08 | Pittsburgh Pirates @ San Francisco Giants | 5.80 | San Francisco Giants | ✅ WIN | 2-5 | TRADED |
-| 2026-05-08 | Atlanta Braves @ Los Angeles Dodgers | 6.45 | Atlanta Braves | ❌ LOSS | 1-3 | TRADED |
-| 2026-05-08 | Colorado Rockies @ Philadelphia Phillies | 9.40 | Philadelphia Phillies | ❌ LOSS | 9-7 | TRADED |
-| 2026-05-08 | Chicago Cubs @ Texas Rangers | 9.79 | Chicago Cubs | ✅ WIN | 7-1 | TRADED |
-| 2026-05-08 | Houston Astros @ Cincinnati Reds | 10.29 | Houston Astros | ✅ WIN | 10-0 | TRADED |
-| 2026-05-08 | Athletics @ Baltimore Orioles | 10.35 | Baltimore Orioles | ❌ LOSS | 4-3 | TRADED |
-| 2026-05-08 | New York Mets @ Arizona Diamondbacks | 10.42 | New York Mets | ✅ WIN | 3-1 | TRADED |
-| 2026-05-08 | Los Angeles Angels @ Toronto Blue Jays | 10.46 | Los Angeles Angels | ❌ LOSS | 0-2 | TRADED |
-| 2026-05-08 | Detroit Tigers @ Kansas City Royals | 10.55 | Kansas City Royals | ✅ WIN | 3-4 | TRADED |
-| 2026-05-08 | Tampa Bay Rays @ Boston Red Sox | 11.28 | Boston Red Sox | ✅ WIN | 0-2 | TRADED |
-| 2026-05-08 | Washington Nationals @ Miami Marlins | 11.49 | Washington Nationals | ✅ WIN | 3-2 | TRADED |
-| 2026-05-08 | Seattle Mariners @ Chicago White Sox | 11.75 | Chicago White Sox | ❌ LOSS | 12-8 | TRADED |
-| 2026-05-06 | Cleveland Guardians @ Kansas City Royals | 8.37 | Cleveland Guardians | ✅ WIN | 3-1 | TRADED |
-| 2026-05-06 | Baltimore Orioles @ Miami Marlins | 8.82 | Miami Marlins | ❌ LOSS | 7-4 | TRADED |
-| 2026-05-06 | Minnesota Twins @ Washington Nationals | 9.24 | Minnesota Twins | ❌ LOSS | 2-15 | TRADED |
-| 2026-05-06 | Athletics @ Philadelphia Phillies | 10.01 | Philadelphia Phillies | ✅ WIN | 3-6 | TRADED |
-| 2026-05-06 | New York Mets @ Colorado Rockies | 10.17 | New York Mets | ✅ WIN | 10-5 | TRADED |
-| 2026-05-06 | Boston Red Sox @ Detroit Tigers | 11.35 | Boston Red Sox | ✅ WIN | 4-0 | TRADED |
-| 2026-05-06 | Texas Rangers @ New York Yankees | 12.13 | Texas Rangers | ✅ WIN | 6-1 | TRADED |
-| 2026-05-04 | Atlanta Braves @ Seattle Mariners | 8.95 | Seattle Mariners | ✅ WIN | 4-5 | TRADED |
+| Date | Matchup | Alpha | Target | Result | Score |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-05-20 | Milwaukee Brewers @ Chicago Cubs | 6.00 | Milwaukee Brewers | ✅ WIN | 5-0 |
+| 2026-05-20 | Pittsburgh Pirates @ St. Louis Cardinals | 14.08 | St. Louis Cardinals | ❌ LOSS | 7-0 |
+| 2026-05-19 | Houston Astros @ Minnesota Twins | 6.00 | Houston Astros | ✅ WIN | 2-1 |
+| 2026-05-19 | Cincinnati Reds @ Philadelphia Phillies | 6.00 | Cincinnati Reds | ✅ WIN | 4-1 |
+| 2026-05-19 | Boston Red Sox @ Kansas City Royals | 7.32 | Boston Red Sox | ✅ WIN | 7-1 |
+| 2026-05-19 | Los Angeles Dodgers @ San Diego Padres | 8.95 | Los Angeles Dodgers | ✅ WIN | 5-4 |
+| 2026-05-19 | Chicago White Sox @ Seattle Mariners | 10.59 | Chicago White Sox | ✅ WIN | 2-1 |
+| 2026-05-19 | Athletics @ Los Angeles Angels | 10.62 | Los Angeles Angels | ❌ LOSS | 14-6 |
+| 2026-05-19 | San Francisco Giants @ Arizona Diamondbacks | 10.65 | San Francisco Giants | ❌ LOSS | 3-5 |
+| 2026-05-19 | Texas Rangers @ Colorado Rockies | 11.10 | Texas Rangers | ✅ WIN | 10-0 |
+| 2026-05-19 | Baltimore Orioles @ Tampa Bay Rays | 13.33 | Baltimore Orioles | ❌ LOSS | 1-4 |
+| 2026-05-17 | Boston Red Sox @ Atlanta Braves | 5.00 | Atlanta Braves | ✅ WIN | 1-8 |
+| 2026-05-17 | San Diego Padres @ Seattle Mariners | 5.20 | Seattle Mariners | ❌ LOSS | 8-3 |
+| 2026-05-17 | Milwaukee Brewers @ Minnesota Twins | 5.70 | Milwaukee Brewers | ❌ LOSS | 4-5 |
+| 2026-05-17 | Toronto Blue Jays @ Detroit Tigers | 6.00 | Toronto Blue Jays | ✅ WIN | 4-1 |
+| 2026-05-17 | Texas Rangers @ Houston Astros | 9.98 | Texas Rangers | ✅ WIN | 8-0 |
+| 2026-05-17 | Kansas City Royals @ St. Louis Cardinals | 10.21 | Kansas City Royals | ✅ WIN | 2-0 |
+| 2026-05-17 | New York Yankees @ New York Mets | 10.39 | New York Mets | ✅ WIN | 6-7 |
+| 2026-05-17 | San Francisco Giants @ Athletics | 10.55 | Athletics | ❌ LOSS | 10-1 |
+| 2026-05-17 | Los Angeles Dodgers @ Los Angeles Angels | 11.75 | Los Angeles Angels | ❌ LOSS | 10-1 |

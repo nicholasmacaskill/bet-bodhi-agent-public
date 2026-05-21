@@ -1,0 +1,378 @@
+[
+  {
+    "gamePk": 824274,
+    "homeTeam": "Detroit Tigers",
+    "awayTeam": "Cleveland Guardians",
+    "overallConfidence": 80,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 9,
+        "reason": "Dominant Pitching Advantage: Casey Mize is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Detroit Tigers today. Facing Joey Cantillo, our model identifies a clear +8.0 technical edge in this arms race. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 75.0% vs Crowd: 22.7%. +52.3% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Detroit Tigers",
+    "polyConditionId": "427339d860a9d7bf7b2075fa02850c56",
+    "polySharePrice": 0.227,
+    "polyEV": 0.523,
+    "polyOutcomeIndex": 1,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Detroit Tigers Shares on Polymarket (+52.3% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Casey Mize",
+    "awayPitcher": "Joey Cantillo",
+    "homeOdds": 0.227,
+    "awayOdds": 0.833,
+    "matchupNotes": "Joey Cantillo vs Casey Mize. Dominant Pitching Advantage: Casey Mize is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Detroit Tigers today. Facing Joey Cantillo, our model identifies a clear +8.0 technical edge in this arms race. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: Casey Mize is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: Casey Mize is peaking this season. ERA has dropped by 1.30 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 52.3% discrepancy between our internal model (75.0%) and the current Polymarket crowd price (22.7%)."
+    ],
+    "risks": [
+      "🥶 Target Cold Streak: Detroit Tigers is struggling, winning only 2 of their last 10 games (Streak: L5)."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-21T17:10:00Z",
+    "structuralMismatch": "8.0",
+    "unifiedAlpha": 13.23
+  },
+  {
+    "gamePk": 822733,
+    "homeTeam": "Washington Nationals",
+    "awayTeam": "New York Mets",
+    "overallConfidence": 83,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The Washington Nationals, led by James Wood, are in a peak offensive window and facing David Peterson — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +20.0 delta signals high scoring probability. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 51.5%. +28.5% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Washington Nationals",
+    "polyConditionId": "6a7d1b1febdcfcc35087e32a118d0e3e",
+    "polySharePrice": 0.515,
+    "polyEV": 0.28500000000000003,
+    "polyOutcomeIndex": 1,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Washington Nationals Shares on Polymarket (+28.5% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Cade Cavalli",
+    "awayPitcher": "David Peterson",
+    "homeOdds": 0.515,
+    "awayOdds": 0.524,
+    "matchupNotes": "David Peterson vs Cade Cavalli. Offense vs. Defense Mismatch: The Washington Nationals, led by James Wood, are in a peak offensive window and facing David Peterson — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +20.0 delta signals high scoring probability. ",
+    "advantages": [
+      "📉 Target Slumping: David Peterson is struggling. ERA has spiked by +1.18 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🎯 Vulnerable Matchup: Facing David Peterson (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 28.5% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (51.5%)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-21T20:05:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 11.150000000000002
+  },
+  {
+    "gamePk": 824031,
+    "homeTeam": "Los Angeles Angels",
+    "awayTeam": "Athletics",
+    "overallConfidence": 83,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Dominant Pitching Advantage: José Soriano is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Luis Severino, our model identifies a clear +23.5 technical edge in this arms race. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 53.8%. +26.2% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Los Angeles Angels",
+    "polyConditionId": "ad313997692fb82ede49e0b3e0c17525",
+    "polySharePrice": 0.538,
+    "polyEV": 0.262,
+    "polyOutcomeIndex": 1,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Los Angeles Angels Shares on Polymarket (+26.2% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "José Soriano",
+    "awayPitcher": "Luis Severino",
+    "homeOdds": 0.538,
+    "awayOdds": 0.505,
+    "matchupNotes": "Luis Severino vs José Soriano. Dominant Pitching Advantage: José Soriano is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Luis Severino, our model identifies a clear +23.5 technical edge in this arms race. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: José Soriano is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: José Soriano is peaking this season. ERA has dropped by 1.85 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 26.2% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (53.8%)."
+    ],
+    "risks": [
+      "🥶 Target Cold Streak: Los Angeles Angels is struggling, winning only 2 of their last 10 games (Streak: L2)."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-22T01:38:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 10.920000000000002
+  },
+  {
+    "gamePk": 823056,
+    "homeTeam": "St. Louis Cardinals",
+    "awayTeam": "Pittsburgh Pirates",
+    "overallConfidence": 70,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 6,
+        "reason": "Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +2.0 Strength lead over the Pittsburgh Pirates. With Dustin May on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 60.0% vs Crowd: 33.3%. +26.7% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "St. Louis Cardinals",
+    "polyConditionId": "6297516eb97ef4842f3fc5b36d64adb2",
+    "polySharePrice": 0.333,
+    "polyEV": 0.26699999999999996,
+    "polyOutcomeIndex": 1,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy St. Louis Cardinals Shares on Polymarket (+26.7% EV).",
+    "recommendedSize": "Standard (4.0%)",
+    "suggestedStake": 32,
+    "homePitcher": "Dustin May",
+    "awayPitcher": "Braxton Ashcraft",
+    "homeOdds": 0.333,
+    "awayOdds": 0.725,
+    "matchupNotes": "Braxton Ashcraft vs Dustin May. Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +2.0 Strength lead over the Pittsburgh Pirates. With Dustin May on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 26.7% discrepancy between our internal model (60.0%) and the current Polymarket crowd price (33.3%)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-21T17:15:00Z",
+    "structuralMismatch": "7.0",
+    "unifiedAlpha": 9.67
+  },
+  {
+    "gamePk": 825083,
+    "homeTeam": "Arizona Diamondbacks",
+    "awayTeam": "Colorado Rockies",
+    "overallConfidence": 83,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Dominant Pitching Advantage: Eduardo Rodriguez is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Arizona Diamondbacks today. Facing Zach Agnos, our model identifies a clear +27.0 technical edge in this arms race. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 67.1%. +12.9% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Arizona Diamondbacks",
+    "polyConditionId": "ba2cf88267a9c181d7eed83a461dbaab",
+    "polySharePrice": 0.671,
+    "polyEV": 0.129,
+    "polyOutcomeIndex": 0,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Arizona Diamondbacks Shares on Polymarket (+12.9% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Eduardo Rodriguez",
+    "awayPitcher": "Zach Agnos",
+    "homeOdds": 0.671,
+    "awayOdds": 0.368,
+    "matchupNotes": "Zach Agnos vs Eduardo Rodriguez. Dominant Pitching Advantage: Eduardo Rodriguez is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Arizona Diamondbacks today. Facing Zach Agnos, our model identifies a clear +27.0 technical edge in this arms race. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: Eduardo Rodriguez is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: Eduardo Rodriguez is peaking this season. ERA has dropped by 2.49 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🔥 Team Momentum: Arizona Diamondbacks is surging, winning 7 of their last 10 games (Streak: W4).",
+      "🥶 Target Cold Streak: Colorado Rockies is struggling, winning only 3 of their last 10 games (Streak: L2).",
+      "🎯 Vulnerable Matchup: Facing Zach Agnos (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 12.9% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (67.1%)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-22T01:40:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 9.59
+  },
+  {
+    "gamePk": 823864,
+    "homeTeam": "Miami Marlins",
+    "awayTeam": "Atlanta Braves",
+    "overallConfidence": 67,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Marginal Technical Edge: Our model gives the Atlanta Braves a slight +4.5 Strength lead over the Miami Marlins. With Spencer Strider on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 7,
+        "reason": "Small Web3 edge (+7.5% EV) on Atlanta Braves.",
+        "side": "away"
+      }
+    ],
+    "valueTeam": "Atlanta Braves",
+    "polyConditionId": "fa85c6e14d2b480b97a6f0004286ec0b",
+    "polySharePrice": 0.575,
+    "polyEV": 0.07500000000000007,
+    "polyOutcomeIndex": 0,
+    "executionRoute": "POLY",
+    "recommendedAction": "LEAN - Small EV edge on Atlanta Braves. Buy shares.",
+    "recommendedSize": "Caution (2.0%)",
+    "suggestedStake": 16,
+    "homePitcher": "Sandy Alcantara",
+    "awayPitcher": "Spencer Strider",
+    "homeOdds": 0.463,
+    "awayOdds": 0.575,
+    "matchupNotes": "Spencer Strider vs Sandy Alcantara. Marginal Technical Edge: Our model gives the Atlanta Braves a slight +4.5 Strength lead over the Miami Marlins. With Spencer Strider on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🔥 Team Momentum: Atlanta Braves is surging, winning 7 of their last 10 games (Streak: W2).",
+      "📉 Price Inefficiency: Current market pricing under-estimates Atlanta Braves by 7.5% based on historical technical performance metrics."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-21T22:40:00Z",
+    "structuralMismatch": "6.7",
+    "unifiedAlpha": 7.450000000000001
+  },
+  {
+    "gamePk": 823545,
+    "homeTeam": "New York Yankees",
+    "awayTeam": "Toronto Blue Jays",
+    "overallConfidence": 53,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Marginal Technical Edge: Our model gives the New York Yankees a slight +4.5 Strength lead over the Toronto Blue Jays. With Carlos Rodón on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 7,
+        "reason": "Hitter's Park: Yankee Stadium boosts run environment (+1)."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "Regular Season: No Web3 Market found. No EV calculation possible.",
+        "side": "neutral"
+      }
+    ],
+    "valueTeam": "New York Yankees",
+    "polyConditionId": "cce976ea22886df248e92176cb5f8f26",
+    "polyOutcomeIndex": 0,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Value identified on undefined, but no Web3 liquidity found.",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Carlos Rodón",
+    "awayPitcher": "Braydon Fisher",
+    "homeOdds": 0.592,
+    "awayOdds": 0.45,
+    "matchupNotes": "Braydon Fisher vs Carlos Rodón. Marginal Technical Edge: Our model gives the New York Yankees a slight +4.5 Strength lead over the Toronto Blue Jays. With Carlos Rodón on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-05-21T23:05:00Z",
+    "structuralMismatch": "5.3",
+    "unifiedAlpha": 5.3
+  }
+]

@@ -154,6 +154,24 @@ export class PolymarketApi {
     async getUSDCBalance(): Promise<number> {
         const privateKey = process.env.WALLET_PRIVATE_KEY;
         if (!privateKey) return 0;
+        
+        // 1. Try to fetch from Polymarket CLOB collateral balance
+        if (process.env.POLY_API_KEY && process.env.POLY_SECRET) {
+            try {
+                const client = await this.initClient();
+                const clobBalance = await client.getBalanceAllowance({
+                    asset_type: "COLLATERAL" as any
+                });
+                if (clobBalance && clobBalance.balance) {
+                    // USDC has 6 decimals on Polygon
+                    return parseFloat(clobBalance.balance) / 1000000;
+                }
+            } catch (e: any) {
+                console.warn(`[poly] Failed to fetch CLOB balance: ${e.message}. Falling back to on-chain wallet balance...`);
+            }
+        }
+
+        // 2. Fallback to raw on-chain USDC / USDC.e wallet balance
         try {
             const provider = new ethers.JsonRpcProvider('https://polygon-bor-rpc.publicnode.com');
             const wallet = new Wallet(privateKey, provider);
@@ -189,9 +207,10 @@ export class PolymarketApi {
         try {
             const client = await this.initClient();
             let allTrades: any[] = [];
+            
+            // Fetch Maker Trades
             let offset = 0;
             const limit = 100;
-            
             while (true) {
                 const trades = await (client as any).getTrades({ 
                     maker: targetAddress,
@@ -204,7 +223,24 @@ export class PolymarketApi {
                 offset += limit;
                 if (offset > 5000) break; 
             }
-            return allTrades;
+
+            // Fetch Taker Trades
+            offset = 0;
+            while (true) {
+                const trades = await (client as any).getTrades({ 
+                    taker: targetAddress,
+                    limit: limit,
+                    offset: offset
+                });
+                if (!trades || trades.length === 0) break;
+                allTrades = allTrades.concat(trades);
+                if (trades.length < limit) break;
+                offset += limit;
+                if (offset > 5000) break; 
+            }
+
+            // Deduplicate by trade ID
+            return Array.from(new Map(allTrades.map(t => [t.id || t.transaction_hash, t])).values());
         } catch (e: any) {
             console.error(`[poly] Error fetching trades for ${targetAddress}:`, e.message);
             return [];
