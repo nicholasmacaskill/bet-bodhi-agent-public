@@ -92,17 +92,7 @@ async function main() {
         } else if (m.return > 0 && m.return <= m.buy) {
             result = '🔄 PARTIAL / HEDGE';
         } else {
-            // If they bought over $20 and it returned $0, we mark it.
-            // But some markets are still "Open". We assume anything older than 2 days is a Loss, anything recent is Open.
-            const dateObj = new Date(m.date);
-            const now = new Date();
-            const diffDays = Math.ceil((now.getTime() - dateObj.getTime()) / (1000 * 3600 * 24));
-            
-            if (diffDays > 3) {
-                result = '❌ LOSS';
-            } else {
-                result = '⏳ OPEN';
-            }
+            result = '❌ LOSS';
         }
         
         report += `| ${m.date} | ${m.name} | $${m.buy.toFixed(2)} | $${m.return.toFixed(2)} | ${result} |\n`;
