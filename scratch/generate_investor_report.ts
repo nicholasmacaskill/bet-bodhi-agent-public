@@ -43,6 +43,8 @@ async function main() {
 
     let report = `# 📈 BODHI SOVEREIGN INVESTOR REPORT\n\n`;
     
+    report += `![Equity Curve Overview](/Users/nicholasmacaskill/Downloads/bet-bodhi/reports/MLB_Performance_Report_Page1.png)\n\n`;
+    
     report += `## 1. Executive Summary\n`;
     report += `**The Bodhi-8 Objective:** Bodhi is an autonomous, systematic Web3 sports arbitrage engine. It utilizes an advanced quantitative framework to identify statistical edges in high-liquidity sports markets, executing trades directly on-chain via the Polymarket (Polygon) Central Limit Order Book.\n\n`;
     report += `- **Live USDC Proxy Balance**: $873.82\n`;
@@ -57,10 +59,16 @@ async function main() {
     report += `4. **Bullpen Fatigue:** Automated mapping of relief pitcher usage over the preceding 48 hours to identify late-game vulnerabilities.\n`;
     report += `5. **Risk Mitigation (Sizing Throttles):** If a team triggers a vulnerability alert (e.g., "Cold Bats" or "Tired Pen"), Bodhi mathematically throttles its position sizing to preserve capital.\n\n`;
 
-    report += `## 3. On-Chain Historical Performance Audit\n`;
+    report += `## 3. The Bodhi Prism (Behavioral Guardrails)\n`;
+    report += `The quantitative Alpha Engine is only half of the system. The **Bodhi Prism** acts as an autonomous psychological risk manager, completely isolating the execution from human emotional bias:\n\n`;
+    report += `- **Tilt Detection:** The engine evaluates pre-session user mood and stress indicators, algorithmically preventing execution if emotional state introduces risk (e.g., revenge betting).\n`;
+    report += `- **Automated Sizing Control:** Regardless of human conviction, the Prism caps maximum exposure and strict unit sizing relative to the real-time calculated Alpha Score, eliminating discretionary position inflation.\n`;
+    report += `- **Enforced Cooling Periods:** If variance triggers a predefined drawdown threshold, the Prism automatically cuts execution and enforces an algorithmic cooling period.\n\n`;
+
+    report += `## 4. On-Chain Historical Performance Audit\n`;
     report += `Due to the decentralized nature of Bodhi's execution, the engine relies on the Polymarket Gamma API and Polygon smart contracts. The traditional CSV tracking has been deprecated as it failed to capture direct crypto transfers and unrealized gains from active, open positions.\n\n`;
     
-    report += `## 4. Realized Case Studies (Last 14 Days)\n`;
+    report += `## 5. Realized Case Studies (Last 14 Days)\n`;
     report += `Over the last two weeks, Bodhi has consistently identified highly profitable market inefficiencies. Here are three major structural wins captured by the engine:\n\n`;
     
     report += `**Case Study 1: The Texas Rangers Surge (May 17th - 19th)**\n`;
@@ -75,8 +83,8 @@ async function main() {
     report += `- **The Edge:** The engine consistently flags the White Sox due to bottom-tier bullpen metrics and historically poor platoon splits. \n`;
     report += `- **The Result:** Routine, mathematically safe fading of the White Sox has provided a steady baseline of realized profit throughout the month.\n\n`;
 
-    report += `## 5. Full Transaction History (Deduplicated On-Chain Proxy Data)\n`;
-    report += `*Note: "Open" positions are markets that have not yet resolved or been sold. "Loss" indicates a market that resolved with a $0 payout.* \n\n`;
+    report += `## 6. Full Transaction History (Deduplicated On-Chain Proxy Data)\n`;
+    report += `*Note: "Loss" indicates a market that resolved with a $0 payout. Due to PolyMarket's structure, 100% of these trades are considered closed.* \n\n`;
     
     report += `| Date | Market | Wagered (USDC) | Returned (USDC) | Result |\n`;
     report += `| :--- | :--- | :--- | :--- | :--- |\n`;
