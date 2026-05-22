@@ -20,7 +20,7 @@ async function checkTodayBets() {
     }
 
     console.log(`\n--- Recent 30 Bets logged in DB ---`);
-    bets.forEach(b => {
+    bets.forEach((b: any) => {
         console.log(`[${b.created_at}] ${b.team} | Stake: $${b.amount} | Odds: ${b.odds} | Result: ${b.result} | Platform: ${b.platform} | Motivation: ${b.motivation_tag}`);
     });
 }

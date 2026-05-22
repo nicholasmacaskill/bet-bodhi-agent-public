@@ -1,11 +1,9 @@
 import 'dotenv/config';
-import { createClient } from '@supabase/supabase-js';
+import { SQLiteQueryBuilder } from './sqlite-client';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-if (!supabaseUrl || !supabaseAnonKey) {
-    console.warn('Supabase credentials missing. UI state will fallback to defaults.');
-}
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Mock client that matches the Supabase query API but routes queries to local SQLite under the hood.
+export const supabase = {
+    from: (table: string) => {
+        return new SQLiteQueryBuilder(table);
+    }
+} as any;

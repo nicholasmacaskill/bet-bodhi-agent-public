@@ -16,6 +16,7 @@
     "@polymarket/clob-client": "^5.7.0",
     "@supabase/supabase-js": "^2.91.0",
     "@types/node-cron": "^3.0.11",
+    "better-sqlite3": "^12.10.0",
     "csv-parse": "^6.2.1",
     "dotenv": "^17.3.1",
     "ethers": "^6.16.0",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@builder.io/sdk": "^6.2.1",
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

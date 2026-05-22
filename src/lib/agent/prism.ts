@@ -75,13 +75,13 @@ export class BodhiPrism {
         const { data: bets } = await supabaseAdmin
             .from('bets')
             .select('*')
-            .order('created_at', { ascending: false });
+            .order('created_at', { ascending: false }) as any;
 
         if (!bets || bets.length === 0) return "No betting history yet.";
 
         // We can add logic here to specifically detect things like 'chase_win'
-        const recentWins = bets.filter(b => b.result === 'win').slice(0, 3);
-        const nextBetAfterWin = bets.find(b => {
+        const recentWins = bets.filter((b: any) => b.result === 'win').slice(0, 3);
+        const nextBetAfterWin = bets.find((b: any) => {
             const winTime = new Date(recentWins[0]?.created_at).getTime();
             const betTime = new Date(b.created_at).getTime();
             return betTime > winTime && (betTime - winTime) < (24 * 60 * 60 * 1000);
@@ -103,16 +103,16 @@ export class BodhiPrism {
             .select('result')
             .not('result', 'eq', 'pending')
             .order('created_at', { ascending: false })
-            .limit(5);
+            .limit(5) as any;
 
         if (!recentBets || recentBets.length < 3) {
             return { isSlump: false, multiplier: 1.0, reason: "Insufficient data" };
         }
 
         // Check if last 3 are losses
-        const last3Losses = recentBets.slice(0, 3).every(b => b.result === 'loss');
+        const last3Losses = recentBets.slice(0, 3).every((b: any) => b.result === 'loss');
         // Check if 4 of last 5 are losses
-        const lossCount = recentBets.filter(b => b.result === 'loss').length;
+        const lossCount = recentBets.filter((b: any) => b.result === 'loss').length;
         const last5Slump = recentBets.length === 5 && lossCount >= 4;
 
         if (last3Losses || last5Slump) {

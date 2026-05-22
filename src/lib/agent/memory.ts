@@ -45,7 +45,7 @@ export class AgentMemory {
                 const cleanContent = fileContent.replace(/^\uFEFF/, '');
                 const records = csv.parse(cleanContent, { columns: true, skip_empty_lines: true });
 
-                for (const row of records) {
+                for (const row of records as any[]) {
                     const action = row['action'];
                     if (action === 'Deposit' || action === 'Withdraw') continue;
 

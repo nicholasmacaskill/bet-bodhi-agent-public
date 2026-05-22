@@ -346,6 +346,7 @@ export class MLBApi {
         platoonSplits: Map<string, any>;
         bullpenFatigue: { home: number, away: number };
         teamForm: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } };
+        lineupHandedness?: any;
     }> {
         const gamePk = game.gamePk;
         

@@ -17,9 +17,9 @@ export class SyncService {
             const { data: existingBets } = await supabaseAdmin
                 .from('bets')
                 .select('external_id')
-                .not('external_id', 'is', null);
+                .not('external_id', 'is', null) as any;
             
-            const syncedIds = new Set((existingBets || []).map(b => b.external_id));
+            const syncedIds = new Set((existingBets || []).map((b: any) => b.external_id));
             let syncCount = 0;
 
             // --- POLYMARKET SYNC ---
