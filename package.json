@@ -10,7 +10,8 @@
     "scan": "tsx scripts/daily-scanner.ts",
     "scan:watch": "tsx scripts/daily-scanner.ts --watch",
     "agent": "tsx scripts/bodhi-daemon.ts",
-    "audit": "tsx scripts/performance_audit.ts"
+    "audit": "tsx scripts/performance_audit.ts",
+    "pnl": "tsx scripts/calculate-live-pnl.ts"
   },
   "dependencies": {
     "@polymarket/clob-client": "^5.7.0",
@@ -25,6 +26,7 @@
     "mlb-stats-api": "^2.0.0",
     "next": "16.1.1",
     "node-cron": "^4.2.1",
+    "puppeteer": "^24.43.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "resend": "^6.9.3",
