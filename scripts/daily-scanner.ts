@@ -242,6 +242,17 @@ function renderGame(result: ScanResult): void {
         }
     });
 
+    if (verbose) {
+        if (analysis.advantages && analysis.advantages.length > 0) {
+            console.log(`\n  ${BOLD}${GREEN}✅ Key Advantages:${RESET}`);
+            analysis.advantages.forEach(adv => console.log(`    ├─ ${adv}`));
+        }
+        if (analysis.risks && analysis.risks.length > 0) {
+            console.log(`\n  ${BOLD}${RED}⚠️ Key Risks:${RESET}`);
+            analysis.risks.forEach(risk => console.log(`    ├─ ${risk}`));
+        }
+    }
+
     // Confidence / Signal / Stake
     const gap = displayCompact ? "" : "\n";
     console.log(`${gap}  ${BOLD}CONFIDENCE${RESET}  ${confidenceBar(analysis.overallConfidence)}`);
@@ -312,8 +323,10 @@ function renderSummary(results: ScanResult[]): void {
 // ─── Scan all sports ──────────────────────────────────────────────────────────
 
 async function runScan(date: string): Promise<void> {
-    const syncService = new SyncService();
-    await syncService.runSync();
+    if (!process.argv.includes('--skip-sync')) {
+        const syncService = new SyncService();
+        await syncService.runSync();
+    }
 
     const polyApi = new PolymarketApi();
     console.log(`${BOLD}${CYAN}🔄 Syncing Live Bankroll from Polygon...${RESET}`);
@@ -392,12 +405,20 @@ async function runScan(date: string): Promise<void> {
             let details: any = { probables: game.probables || {}, lineups: game.lineups || { home: [], away: [] } };
             let rosters: { home: string[], away: string[] } | undefined = undefined;
             let combinedHot: string[] = [];
+            let platoonSplits: Map<string, any> | undefined = undefined;
+            let bullpenFatigue: { home: number, away: number } | undefined = undefined;
+            let lineupHandedness: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } } | undefined = undefined;
+            let teamForm: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } } | undefined = undefined;
 
             if (game.gamePk) {
                 const hydrated = await mlbApi.getHydratedAnalysisData(game);
                 details = hydrated.details || details;
                 rosters = hydrated.rosters;
                 combinedHot = [...hydrated.homeHot, ...hydrated.awayHot];
+                platoonSplits = hydrated.platoonSplits;
+                bullpenFatigue = hydrated.bullpenFatigue;
+                lineupHandedness = hydrated.lineupHandedness;
+                teamForm = hydrated.teamForm;
             }
 
             const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
@@ -413,7 +434,21 @@ async function runScan(date: string): Promise<void> {
             }
 
             // Analysis (Now with technical signals and agent memory!)
-            const analysis = mlbAnalyzer.analyzeGame(game, details, condition, combinedHot, [], mockPlayerStats, bankroll, userMood, userCalmness, rosters, slumpStatus.multiplier, memory);
+            const analysis = mlbAnalyzer.analyzeGame(
+                game,
+                details,
+                condition,
+                combinedHot,
+                [],
+                mockPlayerStats,
+                bankroll,
+                rosters,
+                memory,
+                platoonSplits,
+                bullpenFatigue,
+                lineupHandedness,
+                teamForm
+            );
 
             const tradGame = traditionalOdds.find((t: any) =>
                 (t.home_team.toLowerCase().includes(homeMascot) || homeMascot.includes(t.home_team.toLowerCase().split(' ').pop())) &&

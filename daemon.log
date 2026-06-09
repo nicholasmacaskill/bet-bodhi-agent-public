@@ -1,0 +1,393 @@
+[dotenv@17.3.1] injecting env (15) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI AGENT DAEMON: ACTIVE
+📡 Mode: Sovereign Scan (2:00 AM) + Watchdog (30m) + KBO Scanner (10m)
+──────────────────────────────────────────────────────────────────────
+[2026-06-09T11:10:00.057Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (6) @ Hanwha Eagles (1) - Top 5th
+Checking: NC Dinos (2) @ Kiwoom Heroes (1) - Top 5th
+Checking: Doosan Bears (6) @ Lotte Giants (3) - Bot 5th
+Checking: SSG Landers (1) @ LG Twins (5) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for LG Twins: R
+Woo Kang-hoon
+                  #20 (ERA: 5.04)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: Samsung Lions (1) @ KT Wiz (3) - Bot 6th
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T11:20:00.018Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (6) @ Hanwha Eagles (1) - Bot 5th
+Checking: NC Dinos (5) @ Kiwoom Heroes (1) - Bot 5th
+Checking: Doosan Bears (6) @ Lotte Giants (3) - Top 6th
+Checking: SSG Landers (1) @ LG Twins (5) - Bot 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for LG Twins: R
+Woo Kang-hoon
+                  #20 (ERA: 5.04)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: Samsung Lions (1) @ KT Wiz (3) - Top 7th
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T11:30:00.024Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (6) @ Hanwha Eagles (1) - Top 6th
+Checking: NC Dinos (5) @ Kiwoom Heroes (4) - Bot 5th
+Checking: Doosan Bears (6) @ Lotte Giants (3) - Bot 6th
+Checking: SSG Landers (1) @ LG Twins (6) - Bot 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for LG Twins: R
+Woo Kang-hoon
+                  #20 (ERA: 5.04)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: Samsung Lions (1) @ KT Wiz (3) - Bot 7th
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T11:40:00.018Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (6) @ Hanwha Eagles (1) - Bot 6th
+Checking: NC Dinos (5) @ Kiwoom Heroes (4) - Top 6th
+Checking: Doosan Bears (6) @ Lotte Giants (3) - Top 7th
+Checking: SSG Landers (1) @ LG Twins (8) - Top 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for LG Twins: L
+Wells
+                  #68 (ERA: 1.97)
+  ❌ Abort: Pitcher L
+Wells
+                  #68 is too stable (ERA 1.97).
+Checking: Samsung Lions (1) @ KT Wiz (5) - Top 8th
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T11:50:00.089Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:00:00.121Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (6) @ Hanwha Eagles (1) - Bot 7th
+Checking: NC Dinos (6) @ Kiwoom Heroes (4) - Bot 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for NC Dinos: R
+Toda Natsuki
+                  #11 (ERA: 4.69)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: Doosan Bears (6) @ Lotte Giants (4) - Bot 7th
+Checking: SSG Landers (1) @ LG Twins (8) - Bot 7th
+Checking: Samsung Lions (2) @ KT Wiz (5) - Top 9th
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:10:00.013Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:20:00.035Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:30:00.019Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:40:00.013Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T12:50:00.011Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:00:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:10:00.018Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:20:00.011Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:30:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:40:00.011Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T13:50:00.116Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:00:00.011Z] Running KBO Live Scanner...
+[2026-06-09T14:00:00.048Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:10:00.008Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:20:00.008Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:30:00.012Z] Running KBO Live Scanner...
+[2026-06-09T14:30:00.015Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:40:00.015Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T14:50:00.019Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T15:00:00.016Z] Running KBO Live Scanner...
+[2026-06-09T15:00:00.019Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T15:10:00.012Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T15:20:00.020Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+

@@ -347,6 +347,10 @@ export class MLBApi {
         bullpenFatigue: { home: number, away: number };
         teamForm: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } };
         lineupHandedness?: any;
+        lateInningStats?: {
+            home: { hittingOps: number, pitchingEra: number, pitchingOps: number };
+            away: { hittingOps: number, pitchingEra: number, pitchingOps: number };
+        };
     }> {
         const gamePk = game.gamePk;
         
@@ -407,6 +411,10 @@ export class MLBApi {
             home: { streak: '', l10: '', l10Wins: 0 }, 
             away: { streak: '', l10: '', l10Wins: 0 } 
         };
+        const lateInningStats = {
+            home: { hittingOps: 0.720, pitchingEra: 4.00, pitchingOps: 0.720 },
+            away: { hittingOps: 0.720, pitchingEra: 4.00, pitchingOps: 0.720 }
+        };
         
         await Promise.all([
             hProb ? fetchDualStats(hProb) : Promise.resolve(),
@@ -414,8 +422,12 @@ export class MLBApi {
             game.homeId ? this.getYesterdaysBullpenUsage(game.homeId, todayDate).then(p => bullpenFatigue.home = p) : Promise.resolve(),
             game.awayId ? this.getYesterdaysBullpenUsage(game.awayId, todayDate).then(p => bullpenFatigue.away = p) : Promise.resolve(),
             game.homeId ? this.getTeamForm(game.homeId).then(f => teamForm.home = f) : Promise.resolve(),
-            game.awayId ? this.getTeamForm(game.awayId).then(f => teamForm.away = f) : Promise.resolve()
+            game.awayId ? this.getTeamForm(game.awayId).then(f => teamForm.away = f) : Promise.resolve(),
+            game.homeId ? this.getCompositeTeamLateSplits(game.homeId, todayDate).then(s => lateInningStats.home = s) : Promise.resolve(),
+            game.awayId ? this.getCompositeTeamLateSplits(game.awayId, todayDate).then(s => lateInningStats.away = s) : Promise.resolve()
         ]);
+ 
+        details.lateInningStats = lateInningStats;
 
         return {
             details,
@@ -426,8 +438,77 @@ export class MLBApi {
             platoonSplits,
             bullpenFatigue,
             teamForm,
-            lineupHandedness: details.lineupHandedness || { home: { L: 0, R: 0, S: 0 }, away: { L: 0, R: 0, S: 0 } }
+            lineupHandedness: details.lineupHandedness || { home: { L: 0, R: 0, S: 0 }, away: { L: 0, R: 0, S: 0 } },
+            lateInningStats
         };
+    }
+
+    /**
+     * Fetch team-level late-inning splits (ig07 code: 7th inning or later)
+     * for the current season, blending with last season if sample size is small.
+     */
+    async getCompositeTeamLateSplits(teamId: number, todayDateStr: string): Promise<{ hittingOps: number, pitchingEra: number, pitchingOps: number }> {
+        const currentYear = new Date(todayDateStr).getFullYear().toString();
+        const lastYear = (new Date(todayDateStr).getFullYear() - 1).toString();
+        
+        const currentUrlHit = `${this.baseUrl}/teams/${teamId}/stats?stats=statSplits&group=hitting&season=${currentYear}&sitCodes=ig07`;
+        const currentUrlPitch = `${this.baseUrl}/teams/${teamId}/stats?stats=statSplits&group=pitching&season=${currentYear}&sitCodes=ig07`;
+        
+        const lastUrlHit = `${this.baseUrl}/teams/${teamId}/stats?stats=statSplits&group=hitting&season=${lastYear}&sitCodes=ig07`;
+        const lastUrlPitch = `${this.baseUrl}/teams/${teamId}/stats?stats=statSplits&group=pitching&season=${lastYear}&sitCodes=ig07`;
+        
+        const parseVal = (val: any, fallback: number) => {
+            if (val === undefined || val === null) return fallback;
+            const parsed = parseFloat(val);
+            return isNaN(parsed) ? fallback : parsed;
+        };
+
+        try {
+            const [curHit, curPitch, lastHit, lastPitch] = await Promise.all([
+                fetch(currentUrlHit).then(r => r.json()).catch(() => ({})),
+                fetch(currentUrlPitch).then(r => r.json()).catch(() => ({})),
+                fetch(lastUrlHit).then(r => r.json()).catch(() => ({})),
+                fetch(lastUrlPitch).then(r => r.json()).catch(() => ({}))
+            ]);
+            
+            const curHitStat = curHit.stats?.[0]?.splits?.[0]?.stat;
+            const curPitchStat = curPitch.stats?.[0]?.splits?.[0]?.stat;
+            
+            const lastHitStat = lastHit.stats?.[0]?.splits?.[0]?.stat;
+            const lastPitchStat = lastPitch.stats?.[0]?.splits?.[0]?.stat;
+            
+            const curGames = curHitStat?.gamesPlayed || 0;
+            
+            let hittingOps = 0.720;
+            let pitchingEra = 4.00;
+            let pitchingOps = 0.720;
+            
+            if (curGames >= 15) {
+                hittingOps = parseVal(curHitStat.ops, 0.720);
+                pitchingEra = parseVal(curPitchStat.era, 4.00);
+                pitchingOps = parseVal(curPitchStat.ops, 0.720);
+            } else if (lastHitStat && lastPitchStat) {
+                if (curGames >= 5 && curHitStat && curPitchStat) {
+                    const weight = curGames / 15;
+                    hittingOps = (parseVal(curHitStat.ops, 0.720) * weight) + (parseVal(lastHitStat.ops, 0.720) * (1 - weight));
+                    pitchingEra = (parseVal(curPitchStat.era, 4.00) * weight) + (parseVal(lastPitchStat.era, 4.00) * (1 - weight));
+                    pitchingOps = (parseVal(curPitchStat.ops, 0.720) * weight) + (parseVal(lastPitchStat.ops, 0.720) * (1 - weight));
+                } else {
+                    hittingOps = parseVal(lastHitStat.ops, 0.720);
+                    pitchingEra = parseVal(lastPitchStat.era, 4.00);
+                    pitchingOps = parseVal(lastPitchStat.ops, 0.720);
+                }
+            } else if (curHitStat && curPitchStat) {
+                hittingOps = parseVal(curHitStat.ops, 0.720);
+                pitchingEra = parseVal(curPitchStat.era, 4.00);
+                pitchingOps = parseVal(curPitchStat.ops, 0.720);
+            }
+            
+            return { hittingOps, pitchingEra, pitchingOps };
+        } catch (e) {
+            console.error(`Failed to fetch composite late splits for team ${teamId}:`, e);
+            return { hittingOps: 0.720, pitchingEra: 4.00, pitchingOps: 0.720 };
+        }
     }
 
     /**

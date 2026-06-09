@@ -98,10 +98,11 @@ async function main() {
             runDeficit = game.homeScore - game.awayScore;
         }
 
-        // MACRO FILTER: Is the trailing team actually good, and early enough?
+        // MACRO FILTER: Just ensure we have a trailing team, it's early enough, and they are down by 2+ runs.
+        // We removed the strict >.500 win% check because historical data proves that buying deep dips against bad pitchers is profitable regardless of team standings.
         if (
             trailingTeam && 
-            trailingTeam.winPct > 0.500 && 
+            leadingTeam &&
             game.inning >= 2 && game.inning <= 6 && 
             runDeficit >= 2
         ) {

@@ -63,7 +63,23 @@ cron.schedule('*/30 10-23 * * *', async () => {
     timezone: "America/New_York"
 });
 
+// 3. SCHEDULE: KBO Live Scanner (Every 10 minutes)
+cron.schedule('*/10 * * * *', async () => {
+    console.log(`[${new Date().toISOString()}] Running KBO Live Scanner...`);
+    try {
+        const { stdout, stderr } = await execAsync('npx tsx scripts/kbo-live-scanner.ts');
+        if (stdout.includes("MICRO-EDGE CONFIRMED") || stdout.includes("Macro Edge Found")) {
+            console.log(stdout); // Only log output if it actually found something interesting
+        }
+        if (stderr) console.error(stderr);
+    } catch (error) {
+        console.error("KBO Live Scanner failed:", error);
+    }
+}, {
+    timezone: "America/New_York"
+});
+
 console.log("──────────────────────────────────────────────────────────────────────");
 console.log("🛡️  BODHI AGENT DAEMON: ACTIVE");
-console.log("📡 Mode: Sovereign Scan (2:00 AM) + Watchdog (30m)");
+console.log("📡 Mode: Sovereign Scan (2:00 AM) + Watchdog (30m) + KBO Scanner (10m)");
 console.log("──────────────────────────────────────────────────────────────────────");

@@ -212,7 +212,7 @@ export class PillarAnalyzer {
         const pillars: PillarScore[] = [];
 
         // 1. Technical Analysis (Sport-Specific)
-        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue, lineupHandedness, teamForm);
+        const techResult = this.scoreTechnicalSport(details, homeTeam, awayTeam, hotBats, weakPitchers, playerStats, rosters, platoonSplits, bullpenFatigue, lineupHandedness, teamForm, details.lateInningStats);
         const techSport = techResult.score;
         const advantages = techResult.advantages;
         const risks = techResult.risks;
@@ -489,7 +489,7 @@ export class PillarAnalyzer {
         return team.replace("Los Angeles ", "").replace("Arizona ", "");
     }
 
-    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }, lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }, teamForm?: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } }): { score: PillarScore, advantages: string[], risks: string[] } {
+    private scoreTechnicalSport(details: any, homeTeam: string, awayTeam: string, hotBats: string[] = [], weakPitchers: string[] = [], playerStats?: Map<string, any>, rosters?: { home: string[], away: string[] }, platoonSplits?: Map<string, any>, bullpenFatigue?: { home: number, away: number }, lineupHandedness?: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } }, teamForm?: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } }, lateInningStats?: any): { score: PillarScore, advantages: string[], risks: string[] } {
         let homeElite = 0;
         let awayElite = 0;
         let homeHotCount = 0;
@@ -655,8 +655,60 @@ export class PillarAnalyzer {
             }
         }
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus + homeTeamFormBonus;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus + awayTeamFormBonus;
+        let homeLateInningBonus = 0;
+        let awayLateInningBonus = 0;
+
+        if (lateInningStats) {
+            const hStats = lateInningStats.home;
+            const aStats = lateInningStats.away;
+
+            // 1. Late Hitting
+            if (hStats.hittingOps >= 0.760) {
+                homeLateInningBonus += 1.5;
+                advantages.push(`⚡ Late Power: ${homeTeam} boasts elite late-game hitting (7th+ OPS: ${hStats.hittingOps.toFixed(3)}).`);
+            } else if (hStats.hittingOps < 0.670) {
+                homeLateInningBonus -= 1.5;
+                risks.push(`⚠️ Late Inefficiency: ${homeTeam} struggles in late frames (7th+ OPS: ${hStats.hittingOps.toFixed(3)}).`);
+            }
+
+            if (aStats.hittingOps >= 0.760) {
+                awayLateInningBonus += 1.5;
+                advantages.push(`⚡ Late Power: ${awayTeam} boasts elite late-game hitting (7th+ OPS: ${aStats.hittingOps.toFixed(3)}).`);
+            } else if (aStats.hittingOps < 0.670) {
+                awayLateInningBonus -= 1.5;
+                risks.push(`⚠️ Late Inefficiency: ${awayTeam} struggles in late frames (7th+ OPS: ${aStats.hittingOps.toFixed(3)}).`);
+            }
+
+            // 2. Late Pitching (Bullpen)
+            if (hStats.pitchingEra <= 3.60) {
+                homeLateInningBonus += 1.5;
+                advantages.push(`🥅 Late Lockdown: ${homeTeam} bullpen is highly effective in late frames (7th+ ERA: ${hStats.pitchingEra.toFixed(2)}).`);
+            } else if (hStats.pitchingEra >= 4.50) {
+                homeLateInningBonus -= 1.5;
+                risks.push(`⚠️ Bullpen Vulnerability: ${homeTeam} bullpen is prone to late blowups (7th+ ERA: ${hStats.pitchingEra.toFixed(2)}).`);
+            }
+
+            if (aStats.pitchingEra <= 3.60) {
+                awayLateInningBonus += 1.5;
+                advantages.push(`🥅 Late Lockdown: ${awayTeam} bullpen is highly effective in late frames (7th+ ERA: ${aStats.pitchingEra.toFixed(2)}).`);
+            } else if (aStats.pitchingEra >= 4.50) {
+                awayLateInningBonus -= 1.5;
+                risks.push(`⚠️ Bullpen Vulnerability: ${awayTeam} bullpen is prone to late blowups (7th+ ERA: ${aStats.pitchingEra.toFixed(2)}).`);
+            }
+
+            // 3. Late Mismatch Mismatch Bonus (Comeback/Clinch potential)
+            if (hStats.hittingOps >= 0.760 && aStats.pitchingEra >= 4.50) {
+                homeLateInningBonus += 1.0;
+                advantages.push(`🔥 Late Inning Mismatch: ${homeTeam} has elite late hitting facing a vulnerable ${awayTeam} bullpen (Comeback Potential).`);
+            }
+            if (aStats.hittingOps >= 0.760 && hStats.pitchingEra >= 4.50) {
+                awayLateInningBonus += 1.0;
+                advantages.push(`🔥 Late Inning Mismatch: ${awayTeam} has elite late hitting facing a vulnerable ${homeTeam} bullpen (Comeback Potential).`);
+            }
+        }
+
+        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus + homeTeamFormBonus + homeLateInningBonus;
+        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus + awayTeamFormBonus + awayLateInningBonus;
 
         const disparity = Math.abs(homeTotalStrength - awayTotalStrength);
         const favored = homeTotalStrength > awayTotalStrength ? "home" : "away";
