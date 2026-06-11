@@ -35,7 +35,15 @@ async function calculateLivePnL() {
         totalCost: number
     }>();
 
-    const baseballKeywords = ['KBO:', 'MLB', 'Dodgers', 'Yankees', 'Red Sox', 'Cubs', 'Braves', 'Phillies', 'Astros'];
+    const baseballKeywords = [
+        'KBO', 'MLB', 'Baseball',
+        'Dodgers', 'Yankees', 'Red Sox', 'Cubs', 'Braves', 'Phillies', 'Astros', 'Orioles', 'Padres', 
+        'Nationals', 'Rockies', 'Rays', 'Giants', 'Royals', 'Twins', 'Cardinals', 'Mets', 'White Sox', 
+        'Marlins', 'Guardians', 'Rangers', 'Brewers', 'Blue Jays', 'Angels', 'Diamondbacks', 'Mariners', 
+        'Tigers', 'Athletics', 'Pirates', 'Reds',
+        'LG Twins', 'KT Wiz', 'SSG Landers', 'NC Dinos', 'Doosan Bears', 'KIA Tigers', 'Lotte Giants', 
+        'Samsung Lions', 'Hanwha Eagles', 'Kiwoom Heroes', 'Samsung', 'Hanwha', 'Kiwoom', 'Doosan', 'Lotte'
+    ];
 
     // Map token IDs to their respective markets to track cost-basis and payouts
     for (const t of trades) {

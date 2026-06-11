@@ -1,9 +1,9 @@
 import 'dotenv/config';
 import { PolymarketApi } from '../src/lib/polymarket-api';
 
-async function fetchMarketByTokenId(tokenId: string) {
+async function fetchMarketByConditionId(conditionId: string) {
     try {
-        const url = `https://gamma-api.polymarket.com/markets?clob_token_ids=${tokenId}`;
+        const url = `https://gamma-api.polymarket.com/markets?condition_id=${conditionId}`;
         const res = await fetch(url);
         const data = await res.json();
         return data && data.length > 0 ? data[0] : null;
@@ -26,14 +26,23 @@ async function calculateBaseballPnL() {
         totalCost: number
     }>();
 
-    const baseballKeywords = ['KBO:', 'MLB', 'Dodgers', 'Yankees', 'Red Sox', 'Cubs', 'Braves', 'Phillies', 'Astros'];
+    const baseballKeywords = [
+        'KBO', 'MLB', 'Baseball',
+        'Dodgers', 'Yankees', 'Red Sox', 'Cubs', 'Braves', 'Phillies', 'Astros', 'Orioles', 'Padres', 
+        'Nationals', 'Rockies', 'Rays', 'Giants', 'Royals', 'Twins', 'Cardinals', 'Mets', 'White Sox', 
+        'Marlins', 'Guardians', 'Rangers', 'Brewers', 'Blue Jays', 'Angels', 'Diamondbacks', 'Mariners', 
+        'Tigers', 'Athletics', 'Pirates', 'Reds',
+        'LG Twins', 'KT Wiz', 'SSG Landers', 'NC Dinos', 'Doosan Bears', 'KIA Tigers', 'Lotte Giants', 
+        'Samsung Lions', 'Hanwha Eagles', 'Kiwoom Heroes', 'Samsung', 'Hanwha', 'Kiwoom', 'Doosan', 'Lotte'
+    ];
 
     for (const t of trades) {
         const tokenId = t.asset_id;
-        if (!tokenId) continue;
+        const conditionId = t.market;
+        if (!tokenId || !conditionId) continue;
 
         if (!marketMap.has(tokenId)) {
-            const details = await fetchMarketByTokenId(tokenId);
+            const details = await fetchMarketByConditionId(conditionId);
             if (!details) continue;
 
             const question = details.question || details.title || "Unknown Market";
@@ -57,9 +66,12 @@ async function calculateBaseballPnL() {
         const price = parseFloat(t.price);
         const currentSize = m.positions.get(outcome) || 0;
 
-        // In Polymarket CLOB, if we BUY, we pay (size * price). 
-        // If we SELL, we receive (size * price).
-        if (t.side === 'BUY') {
+        let userAction = t.side;
+        if (t.trader_side === 'MAKER') {
+            userAction = t.side === 'BUY' ? 'SELL' : 'BUY';
+        }
+
+        if (userAction === 'BUY') {
             m.positions.set(outcome, currentSize + size);
             m.totalCost += size * price; // Cost goes up
         } else {

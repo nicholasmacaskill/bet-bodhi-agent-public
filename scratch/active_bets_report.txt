@@ -1,0 +1,3123 @@
+====================================================
+Checking active positions for Polymarket Address: 0x98652277eb9f1164d121c207e7a620710072f6af
+====================================================
+Fetching recent trades from CLOB...
+Fetched 1962 trades.
+
+Resolving market details for active positions...
+
+📌 Market: "Unknown Market"
+   Asset ID:  100474537518760754781383156580080981755593675752439438067238414316949653388533
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    1.34
+   Avg Cost:  $-31.2809 (Total Cost: $-41.79)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $41.79 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  100518261012442259373293518720452343713143015144711036329052910930276246304600
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    83.33
+   Avg Cost:  $0.1200 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  101499848959514781987469251454184285778482373918263765072342787847444890353071
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    437.80
+   Avg Cost:  $0.1006 (Total Cost: $44.03)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-44.03 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  102427642560616812425473506732186160623892697013836116954344836371078839421256
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    118.67
+   Avg Cost:  $0.4213 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  102538499180066170502733509909983778335272130991270201095674135507877075082588
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    765.59
+   Avg Cost:  $0.0967 (Total Cost: $74.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-74.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  10266322376663726726626271999008397349563693274603285322148321501327795711219
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    236.52
+   Avg Cost:  $0.1691 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  102848206932100256323695890864889089026141227009011591443816786871934493616854
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    192.31
+   Avg Cost:  $0.2600 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  102861355288825645896246047556200129815833788821559633794550545996998182950098
+   Outcome:   [Baltimore Orioles]
+   Status:    OPEN
+   Shares:    1.94
+   Avg Cost:  $-32.2523 (Total Cost: $-62.68)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $62.68 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  103012054434597903784484992022655323523956744449978921126360902589601366559868
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    720.41
+   Avg Cost:  $0.0388 (Total Cost: $27.96)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-27.96 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  103043227146536991548916375538113148835799706155937189703041074865195724257449
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    130.43
+   Avg Cost:  $0.2300 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  103542677380095146762966592090862227868640077970661944987692398217219351375213
+   Outcome:   [New York Yankees]
+   Status:    OPEN
+   Shares:    160.93
+   Avg Cost:  $0.2237 (Total Cost: $36.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-36.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  103676207326232433100671423406187047250159068870105162510898090839636278803305
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    153.85
+   Avg Cost:  $0.1300 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  103811771989974959294443036969940181487299171429271996940739314474721928449696
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    273.74
+   Avg Cost:  $0.3024 (Total Cost: $82.78)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-82.78 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  104282259978008763683990681912446989766361284558190027819210037038391009200048
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    30.00
+   Avg Cost:  $0.1700 (Total Cost: $5.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-5.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  104748504773020529689761082385681403331377544079968524258882883024772847059892
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    4.29
+   Avg Cost:  $-28.6817 (Total Cost: $-122.98)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $122.98 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  104985760607030874773517168102136270373816915993551268694466581722759671119050
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    191.67
+   Avg Cost:  $0.2400 (Total Cost: $46.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-46.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  105574672091058515953023332984432598181865306523478594420006435237929682580188
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    120.00
+   Avg Cost:  $0.1500 (Total Cost: $18.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-18.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  105684741723504950912453789025809250312687578664604464888858117271048958482613
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    3.38
+   Avg Cost:  $2.9412 (Total Cost: $9.94)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-9.94 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  105939896835094316761088558115714700309110714662810161845144503874684689473008
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    281.96
+   Avg Cost:  $0.0562 (Total Cost: $15.86)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-15.86 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  106431145580015108253851756291946302960054562933715040910903157990209038482060
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    370.73
+   Avg Cost:  $0.2212 (Total Cost: $82.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-82.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  106727111366808432040493658275924459175212152132354756741188585975898762208706
+   Outcome:   [Canadiens]
+   Status:    OPEN
+   Shares:    141.67
+   Avg Cost:  $0.2400 (Total Cost: $34.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-34.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  108026446302848359622919223793005437163350783172758188645977553244236236706914
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    244.44
+   Avg Cost:  $0.0900 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  10843799981381063572785718304279813020734681499585211738901451175177970695675
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    176.67
+   Avg Cost:  $0.0815 (Total Cost: $14.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  108989281370479497042342165893063468811781033229624251138201715138341448911339
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    250.35
+   Avg Cost:  $0.2477 (Total Cost: $62.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-62.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  10904164366856725228161126547253007912554949719110267607075356796124696168688
+   Outcome:   [Toronto Blue Jays]
+   Status:    OPEN
+   Shares:    160.71
+   Avg Cost:  $0.3733 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  109557367126268717819111945272906830435326174298414952860036852866050973438666
+   Outcome:   [Doosan Bears]
+   Status:    OPEN
+   Shares:    2.56
+   Avg Cost:  $-16.9500 (Total Cost: $-43.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $43.40 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  109578294687236697569482937552598429668249120308619466091840937418942342489984
+   Outcome:   [Jets]
+   Status:    OPEN
+   Shares:    125.00
+   Avg Cost:  $0.2400 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110088321363831383323276060249583658136753620609824786708509580940710369269031
+   Outcome:   [Kia Tigers]
+   Status:    OPEN
+   Shares:    302.29
+   Avg Cost:  $0.0604 (Total Cost: $18.25)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-18.25 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110224784066170306528213883614367161379775275209191221818315596189121209503249
+   Outcome:   [KT Wiz]
+   Status:    OPEN
+   Shares:    306.72
+   Avg Cost:  $0.2734 (Total Cost: $83.86)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-83.86 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110262684193431423840057192745934217483247568571316159188617200888884881147674
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    33.33
+   Avg Cost:  $0.4200 (Total Cost: $14.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110690581719475086435875024309955493645246881626812914874586426730680802716351
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    255.00
+   Avg Cost:  $0.1027 (Total Cost: $26.20)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-26.20 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110703289947439629924933402100241847700293255231121849727652080635823006528049
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    264.70
+   Avg Cost:  $0.2909 (Total Cost: $77.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-77.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  11077801160610636789370905225874132788621582782962159419516926211685740687572
+   Outcome:   [SSG Landers]
+   Status:    OPEN
+   Shares:    205.39
+   Avg Cost:  $0.2489 (Total Cost: $51.12)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-51.12 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  110819580305852538326289510364356969273734206693885991522526230584112044713605
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    422.51
+   Avg Cost:  $0.1569 (Total Cost: $66.29)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-66.29 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  111786419139700670171462679142463145942219418772446445427272691857122101855842
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    280.26
+   Avg Cost:  $0.2070 (Total Cost: $58.01)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.01 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  111898964842132645986397166907803581986428105609389988067706764731634456823222
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    34.48
+   Avg Cost:  $0.2900 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  112737263963869857433996153387955638658953049445790623299571666496145694165788
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    124.56
+   Avg Cost:  $0.3211 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  113449074008582427962342668475487286643686259241240264327858326458493482667041
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    177.71
+   Avg Cost:  $0.3514 (Total Cost: $62.44)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-62.44 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  113585316433123442536791100600311303712932916773596400542759753818685391890060
+   Outcome:   [Utah]
+   Status:    OPEN
+   Shares:    114.29
+   Avg Cost:  $0.2800 (Total Cost: $32.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-32.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  113643966671804669233305748726851028213591455520207240215767370817141801211469
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.66
+   Avg Cost:  $-23.3737 (Total Cost: $-15.34)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $15.34 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  113879856413913776332924685468712043725820912931985350006574436513271970243261
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    171.89
+   Avg Cost:  $0.1781 (Total Cost: $30.62)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.62 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114007211169614830877647133431090153543472557793706639671381858157379114492465
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    129.41
+   Avg Cost:  $0.1700 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114042803841900699768892758369058265588198434939464138899534654919165600022047
+   Outcome:   [Canadiens]
+   Status:    OPEN
+   Shares:    100.00
+   Avg Cost:  $0.5000 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114065495002285861760022523030363025845118607448025839677634630398841289909058
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    251.73
+   Avg Cost:  $0.2860 (Total Cost: $72.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-72.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114090555141983795527345506774288181542533427944259172403974309060515774468675
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    187.50
+   Avg Cost:  $0.4267 (Total Cost: $80.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-80.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114333341533795798781307041621102881420541265030735621543509169000200865043169
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    52.17
+   Avg Cost:  $0.2300 (Total Cost: $12.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114716375882543075625830317286787918527553203653122677612505093095266019146283
+   Outcome:   [Hanwha Eagles]
+   Status:    OPEN
+   Shares:    265.84
+   Avg Cost:  $0.2188 (Total Cost: $58.16)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.16 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  114842310911515009246506961765941473719589033150160765483706067439744030115310
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    61.40
+   Avg Cost:  $0.4900 (Total Cost: $30.09)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.09 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  115211901053300943963252234039992882276073023890170606413154257157886935610355
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    1047.62
+   Avg Cost:  $0.0115 (Total Cost: $12.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  115368361059237022157994642991813188065990548129177372775230184858851775160958
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    115.28
+   Avg Cost:  $0.3296 (Total Cost: $38.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-38.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  115426919512599536133149802114234662968452776342358971977874767705464238419822
+   Outcome:   [Chicago White Sox]
+   Status:    OPEN
+   Shares:    174.60
+   Avg Cost:  $0.2176 (Total Cost: $38.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-38.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  115479456251014083807687727243459822990110122836608893727136940760036044378962
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    38.09
+   Avg Cost:  $0.2600 (Total Cost: $9.90)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-9.90 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  115791803404425564041980803510693090655801500265369150144722052033659869306109
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    4.07
+   Avg Cost:  $-12.2451 (Total Cost: $-49.88)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $49.88 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1167272578235692813726126642705198059586337120484029509681070470407220626146
+   Outcome:   [Ducks]
+   Status:    OPEN
+   Shares:    181.82
+   Avg Cost:  $0.1100 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  11966157217239327472070820230602220981745817087562556869646839645036535603381
+   Outcome:   [Lotte Giants]
+   Status:    OPEN
+   Shares:    153.85
+   Avg Cost:  $0.1300 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  11989369804747893377828849362707182758572966174557506013164717546335191157411
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    271.82
+   Avg Cost:  $0.1821 (Total Cost: $49.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-49.50 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1210318716177438695856159098837195063894481486050002184482168247076440395850
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    2.74
+   Avg Cost:  $-31.6740 (Total Cost: $-86.74)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $86.74 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1219823301056420048843811367999145130505851604649820737947285420969056792117
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    135.21
+   Avg Cost:  $0.3278 (Total Cost: $44.33)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-44.33 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  12425050208243537605048350870022317726746960215673383861770973835747887735477
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    249.17
+   Avg Cost:  $0.1100 (Total Cost: $27.41)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-27.41 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  12616063495965589770512019055526885297172194715904987503358177312648369587257
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.66
+   Avg Cost:  $-30.1045 (Total Cost: $-19.76)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $19.76 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  12880421227541615698950978344051973476567530209287053343103820385806697436335
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    2.59
+   Avg Cost:  $-26.3558 (Total Cost: $-68.33)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $68.33 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  13324507052823691307669665460630127708300982532200276443235090643794546427754
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    0.40
+   Avg Cost:  $-29.6947 (Total Cost: $-11.87)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $11.87 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  13651748497091237808460113623486770193427477134717425380391907960466586656575
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    151.63
+   Avg Cost:  $0.3693 (Total Cost: $56.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-56.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1379217938828709577958859406392462240368306498741750235144466183446877421929
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    551.26
+   Avg Cost:  $0.0487 (Total Cost: $26.84)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-26.84 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14449519483505385785554816605687395231714677528557190579702830145670199497892
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    350.82
+   Avg Cost:  $0.0826 (Total Cost: $28.97)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-28.97 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14523176195235954344472583227568234284089088448147091012658523607097190753191
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    57.14
+   Avg Cost:  $0.1400 (Total Cost: $8.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-8.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14649036281095876766907701774025347450294799172119152513220550318973638568423
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    253.97
+   Avg Cost:  $0.2756 (Total Cost: $70.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1472864401358605644288975251099681884523395832129550468604977462554948586011
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    1.05
+   Avg Cost:  $-18.9007 (Total Cost: $-19.75)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $19.75 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14754202086359880869755168609072000075826224131437508935342098949153191611346
+   Outcome:   [Canadiens]
+   Status:    OPEN
+   Shares:    379.30
+   Avg Cost:  $0.1002 (Total Cost: $38.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-38.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14866752670888453356026043876092287639788865718567224377316740420822027178503
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    296.97
+   Avg Cost:  $0.2088 (Total Cost: $62.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-62.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14882106517673191490895801381963587145068840002364454182964711722247373715857
+   Outcome:   [Boston Red Sox]
+   Status:    OPEN
+   Shares:    69.53
+   Avg Cost:  $0.3200 (Total Cost: $22.25)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.25 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14977302773370719194740864089413740520099108852725425357781064412787995077495
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    14.58
+   Avg Cost:  $0.3100 (Total Cost: $4.52)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-4.52 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  14996001543572315230044859660718815684131382015120699559414938993736518684241
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    267.00
+   Avg Cost:  $0.0200 (Total Cost: $5.34)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-5.34 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  15102450042920970161636474556842600345083161738038583339766325076815339438485
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    125.83
+   Avg Cost:  $0.3408 (Total Cost: $42.88)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.88 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  15635799601251236025603689256245888056567529368175360764959536526607384706762
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    81.11
+   Avg Cost:  $0.0900 (Total Cost: $7.30)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-7.30 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  15955600838261340871945730355872241790496383941417946694968430809979084317648
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    4.46
+   Avg Cost:  $-27.8996 (Total Cost: $-124.44)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $124.44 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  16217042692189579536301106586411247578544122482537687240092809405011242899156
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    3.73
+   Avg Cost:  $-14.4408 (Total Cost: $-53.86)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $53.86 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  16491650256764937541500442479670374348798433353683363209584664602651202177955
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.64
+   Avg Cost:  $-24.8621 (Total Cost: $-15.92)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $15.92 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  17659512025174348931862317678765715102256405158044503989806710804267808896243
+   Outcome:   [Milwaukee Brewers]
+   Status:    OPEN
+   Shares:    183.33
+   Avg Cost:  $0.1200 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  18167915224877900427825095408652110275833383739620995832945056280817854175009
+   Outcome:   [Maple Leafs]
+   Status:    OPEN
+   Shares:    137.93
+   Avg Cost:  $0.2900 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1822436456489952285835649117747936650183046830858712531191754545297873734447
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    187.88
+   Avg Cost:  $0.3300 (Total Cost: $62.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-62.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  18307285433383970199203640748949532642200802667994601663482860097653929941567
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    2.17
+   Avg Cost:  $-18.3469 (Total Cost: $-39.84)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $39.84 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  18533790216271918784564948679877204200405128682170797615051047500927253882027
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    59.26
+   Avg Cost:  $0.2700 (Total Cost: $16.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  19315042556290529223507000952849541993172077992373665537372792927729359136285
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    166.67
+   Avg Cost:  $0.0600 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  19506243454133409978651465891149386453919367684498934141504145790203017273555
+   Outcome:   [Ducks]
+   Status:    OPEN
+   Shares:    3.16
+   Avg Cost:  $-31.6841 (Total Cost: $-100.12)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $100.12 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  1951717359882537761153321426320174280354737046353871122155763463564658425567
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    282.14
+   Avg Cost:  $0.0709 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  19864917728008780169589671230660157481183889222095324713973472684120112283428
+   Outcome:   [Timberwolves]
+   Status:    OPEN
+   Shares:    5.22
+   Avg Cost:  $2.7420 (Total Cost: $14.31)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.31 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  2015410965571012425923867782190388110147394543073232698019655585107631449607
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    106.86
+   Avg Cost:  $0.1680 (Total Cost: $17.95)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-17.95 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  20231811853655481545057633462480601574938055495839824387330267229179183297479
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    159.78
+   Avg Cost:  $0.4029 (Total Cost: $64.38)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-64.38 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  20361690591684701764730781782070662193117711220177153358051274508587497384387
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    313.57
+   Avg Cost:  $0.1668 (Total Cost: $52.30)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-52.30 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  20917078926772397395909145119546936235488318152445401010392576450691700983495
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    200.00
+   Avg Cost:  $0.1700 (Total Cost: $34.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-34.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  21227960390457733582010838831961150976453011410002536824769876836375846729312
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    142.86
+   Avg Cost:  $0.1400 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  21337100341200482070557317060891033680864314822118609409777698884449926328557
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    64.00
+   Avg Cost:  $0.2500 (Total Cost: $16.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  21615219524308715755554330922268390574875791324080753866118808641765465212799
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    70.92
+   Avg Cost:  $0.1410 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  22175911931861505273989902470620138973233177297252605010796587537941104988234
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    121.66
+   Avg Cost:  $0.2455 (Total Cost: $29.86)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-29.86 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  22307182722431130206358794107727621448338448269878425626274781141328215412638
+   Outcome:   [Warriors]
+   Status:    OPEN
+   Shares:    87.29
+   Avg Cost:  $0.2837 (Total Cost: $24.76)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.76 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  22387209209064959406965328112927485127747950171938717319813001790462084524667
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    2.36
+   Avg Cost:  $-17.9122 (Total Cost: $-42.22)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $42.22 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  22436670206763951642373400387177080275831523263319871693913527682109347502192
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    561.71
+   Avg Cost:  $0.1583 (Total Cost: $88.90)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-88.90 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  22550927216826323058125697426817377269508582698208790067897444185879261143156
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    360.00
+   Avg Cost:  $0.1889 (Total Cost: $68.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-68.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  23024721219526089903821058776167991848158115909920228917871513873142894977768
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    58.82
+   Avg Cost:  $0.3400 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  23517549279031422985253595342282538948403795677378182751026197867347371836606
+   Outcome:   [Utah]
+   Status:    OPEN
+   Shares:    243.09
+   Avg Cost:  $0.3702 (Total Cost: $90.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-90.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  23746597279716195071226171476435710741277215392914582190523133472877685893393
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    158.68
+   Avg Cost:  $0.5300 (Total Cost: $84.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-84.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  23959088412983872209299010632556123770260715388906641088869061322102457051785
+   Outcome:   [New York Yankees]
+   Status:    OPEN
+   Shares:    1.13
+   Avg Cost:  $-31.4807 (Total Cost: $-35.68)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $35.68 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  2403260698225660798210860314582701765908836710884735496045246307509277648920
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    139.69
+   Avg Cost:  $0.3064 (Total Cost: $42.80)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.80 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  24574350789299289161945487998432730885766605989629000372133107734007784698509
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    261.03
+   Avg Cost:  $0.2682 (Total Cost: $70.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  24709461503122858665188867964940084934449382280426532086543419668257380266925
+   Outcome:   [Bruins]
+   Status:    OPEN
+   Shares:    166.67
+   Avg Cost:  $0.4200 (Total Cost: $70.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  24801319640263872643012377685051750534076210417460024075461054995078127636011
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    236.36
+   Avg Cost:  $0.1777 (Total Cost: $42.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  24898184046436110250669275099498985798506223894129440955908428327403378583167
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    98.33
+   Avg Cost:  $0.4100 (Total Cost: $40.31)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.31 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  25219574520298238442869763635502721442045650180205248004441011146838449400832
+   Outcome:   [Chicago White Sox]
+   Status:    OPEN
+   Shares:    297.46
+   Avg Cost:  $0.1488 (Total Cost: $44.26)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-44.26 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  25750346986651157696187546689611117461380060510820530466661529285553799693244
+   Outcome:   [Utah]
+   Status:    OPEN
+   Shares:    1.42
+   Avg Cost:  $-31.5454 (Total Cost: $-44.68)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $44.68 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  25810978393091170599669109720207866851917134516432793308746312161927004686094
+   Outcome:   [Oilers]
+   Status:    OPEN
+   Shares:    261.90
+   Avg Cost:  $0.2215 (Total Cost: $58.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  25920909439686975947003900442868445075273174839835538733222409858825582700887
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    78.05
+   Avg Cost:  $0.4100 (Total Cost: $32.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-32.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  26319244200208256951594190886135685887971649499831399834424196334465060451753
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    321.54
+   Avg Cost:  $0.1549 (Total Cost: $49.80)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-49.80 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  26463504003200773479111218892803874365132752229737591857312895382975419218340
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    220.51
+   Avg Cost:  $0.0998 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  26514546853360333930660442794683544779879778509862511725590794774763749078816
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    113.49
+   Avg Cost:  $0.2996 (Total Cost: $34.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-34.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  26617257678475508569589875813098681914678006523866794810982102674295581674743
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    50.00
+   Avg Cost:  $0.4000 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  27642598962039174219718624407527335300354068499003825663843020478530755311040
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    5.86
+   Avg Cost:  $-32.2121 (Total Cost: $-188.72)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $188.72 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  27758079570877473646622033855484036354285881037598184925824155030681778855172
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    6.48
+   Avg Cost:  $-16.0270 (Total Cost: $-103.92)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $103.92 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  28533163042794044025188302720186044095798930251187999587629095688179129634865
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    511.03
+   Avg Cost:  $0.1096 (Total Cost: $56.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-56.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  2861563442217035389858619685835099305397487705154867239524850139616356638520
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    135.81
+   Avg Cost:  $0.4114 (Total Cost: $55.87)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-55.87 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  28633427950947037583551664344694261315167956687768643075189515583596429469561
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    365.71
+   Avg Cost:  $0.1312 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  28649990681830227335787966292598915765350037658015126397942269197258950100014
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    3.27
+   Avg Cost:  $-24.1029 (Total Cost: $-78.72)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $78.72 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  28808842123573342473503585861002372039672574633253507712962848663140504331631
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    756.67
+   Avg Cost:  $0.0502 (Total Cost: $38.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-38.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  2903443641836568979231267708338460037625914913822815579982799322513148370805
+   Outcome:   [Boston Red Sox]
+   Status:    OPEN
+   Shares:    199.52
+   Avg Cost:  $0.2907 (Total Cost: $58.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29066659364798708907745483147497559316848588164220693379735292007873498624417
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    200.00
+   Avg Cost:  $0.0500 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29113880134236219239968340991984855481101809241823842649828380931041732703482
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    88.89
+   Avg Cost:  $0.2700 (Total Cost: $24.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29335321351765355075186691801948793047415965084250746185895674082691769159059
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    217.48
+   Avg Cost:  $0.2720 (Total Cost: $59.16)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-59.16 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29465178905098725477717821580626256963149593454810509261526484537888708710752
+   Outcome:   [Samsung Lions]
+   Status:    OPEN
+   Shares:    204.00
+   Avg Cost:  $0.1382 (Total Cost: $28.20)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-28.20 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29481156984580568373005595337894553271328396703311372194213048686036834570088
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    195.53
+   Avg Cost:  $0.3000 (Total Cost: $58.66)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.66 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29552910636936733124761801095115448120436292651205226913783151622032791704212
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    57.18
+   Avg Cost:  $0.2200 (Total Cost: $12.58)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.58 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29908275945561304580802208117873190369715912591449921790304505095867023608491
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    7.31
+   Avg Cost:  $-15.1045 (Total Cost: $-110.43)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $110.43 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  29938514184970414348155694778671980817991099472183324339505529775105034074937
+   Outcome:   [Jazz]
+   Status:    OPEN
+   Shares:    407.52
+   Avg Cost:  $0.0050 (Total Cost: $2.04)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-2.04 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  30076470316828861520825879645856033803635057445862599226928394919530977317607
+   Outcome:   [Hanwha Eagles]
+   Status:    OPEN
+   Shares:    165.17
+   Avg Cost:  $0.3326 (Total Cost: $54.94)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-54.94 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  30169609195694472374785275829217259937945987354544203606395642968353726752693
+   Outcome:   [Canadiens]
+   Status:    OPEN
+   Shares:    426.82
+   Avg Cost:  $0.0939 (Total Cost: $40.06)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.06 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  30745388018727361566403644542829573705073368991826497809484853685092794356099
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    6.81
+   Avg Cost:  $-2.0742 (Total Cost: $-14.12)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $14.12 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  30937893590952358105619833122440269918476937724830496857703649686264547881763
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    347.08
+   Avg Cost:  $0.1184 (Total Cost: $41.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-41.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31001260396369028425842643495018788732487589092140832993780125093972608458938
+   Outcome:   [Maple Leafs]
+   Status:    OPEN
+   Shares:    128.21
+   Avg Cost:  $0.3900 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31161571961911375864453322387270408526433432698411640504719270635388246383700
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    29.41
+   Avg Cost:  $0.3400 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31223434487585910477114793613002533568814340848955521581949312072147307389224
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    317.77
+   Avg Cost:  $0.1631 (Total Cost: $51.82)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-51.82 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31508733642429538449940491786758969913221308787418853388076606421206614704833
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    75.56
+   Avg Cost:  $0.2600 (Total Cost: $19.64)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-19.64 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31648785551752939806599566596120370647362675228899721296205823820152126504700
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    220.95
+   Avg Cost:  $0.1928 (Total Cost: $42.60)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.60 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  31987824570137006392932740882267235719782230423372276281448197755185945587174
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    284.97
+   Avg Cost:  $0.1825 (Total Cost: $52.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-52.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  32227116885225856957610494661428397035656275254487735683718719662250650998149
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    85.25
+   Avg Cost:  $0.2908 (Total Cost: $24.79)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.79 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  32436986849103293696422597156222307714849886203392286961215122299473522284096
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    162.16
+   Avg Cost:  $0.3700 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  32546273684361315067044166856204679449355248569778542503978268907293032342791
+   Outcome:   [Utah]
+   Status:    OPEN
+   Shares:    155.56
+   Avg Cost:  $0.4500 (Total Cost: $70.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  33218464048919397380714880393266278220506482013788077607834494669880032738474
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    117.65
+   Avg Cost:  $0.1700 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  33254593906740814717395458473013836679975315562354031897100768076592329498377
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    6.96
+   Avg Cost:  $-30.0666 (Total Cost: $-209.36)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $209.36 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  33529772905795333832613530472510573856028389014553647109250932820086906550682
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    344.41
+   Avg Cost:  $0.1336 (Total Cost: $46.03)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-46.03 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  34029302344827176924552482427693191096582361944534514304936212566111186266106
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    37.50
+   Avg Cost:  $0.1600 (Total Cost: $6.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-6.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  34299124939879668321036809315270213509516931141320075020539748240207832191285
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    99.49
+   Avg Cost:  $0.1335 (Total Cost: $13.28)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-13.28 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  34766028347506620602341135095648390809627910354583805333451958624638557719757
+   Outcome:   [Stars]
+   Status:    OPEN
+   Shares:    6.82
+   Avg Cost:  $-13.8225 (Total Cost: $-94.25)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $94.25 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  34930832912588029428833072582477549515516261007827008284839139328012435399312
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    224.24
+   Avg Cost:  $0.2230 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  34971000861537864205775525119736219658261724259114110056964806775832252178945
+   Outcome:   [Toronto Blue Jays]
+   Status:    OPEN
+   Shares:    62.50
+   Avg Cost:  $0.1600 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  35229205131878601484060272567806856170467585812083785054881457223476152726775
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    211.54
+   Avg Cost:  $0.2364 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  36348988882210654327793333821373148284800969268104550207011578943670467241135
+   Outcome:   [Chicago White Sox]
+   Status:    OPEN
+   Shares:    3.78
+   Avg Cost:  $-29.4896 (Total Cost: $-111.47)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $111.47 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  36999196011227856798204295856559032460692212120636553159942886082311660028802
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    2.81
+   Avg Cost:  $-27.8872 (Total Cost: $-78.29)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $78.29 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  37026011763609476164364232957827386709309377684382644434510371684109141805146
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    345.71
+   Avg Cost:  $0.1348 (Total Cost: $46.60)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-46.60 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  370927638764802752396105266205870388582541204893503890405757989982282070957
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    253.82
+   Avg Cost:  $0.2276 (Total Cost: $57.78)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-57.78 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  3713889045079304432368802378989908520171150034756547157883260689292288730043
+   Outcome:   [Toronto Blue Jays]
+   Status:    OPEN
+   Shares:    88.89
+   Avg Cost:  $0.4500 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  37640321208381058989994040150583737245813807770029991223644334709175043888177
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    83.33
+   Avg Cost:  $0.1200 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  37663924074368220395586998072937598316470097338322005985057791894885288305370
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    73.68
+   Avg Cost:  $0.1900 (Total Cost: $14.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  37806748883989218834158945753242980398008409741910360199056980562755117824476
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    140.00
+   Avg Cost:  $0.3571 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  3783289782136448455386882889969148816437664381988365897022235116316098637917
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    310.18
+   Avg Cost:  $0.1610 (Total Cost: $49.93)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-49.93 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  37859260822464119482127655568413343779129503910012975438989702658649786301229
+   Outcome:   [Baltimore Orioles]
+   Status:    OPEN
+   Shares:    2.09
+   Avg Cost:  $-23.7270 (Total Cost: $-49.53)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $49.53 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  38413185475058022267683913338442871085075438927680656195683800055989898562638
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    7.16
+   Avg Cost:  $-0.4453 (Total Cost: $-3.19)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $3.19 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  39334077637596733482892682492790566890761927976399117140241922816298668089188
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    38.11
+   Avg Cost:  $-1.0675 (Total Cost: $-40.68)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $40.68 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  39457235254027315429549250649571610633652196070896141244990675412353119065011
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    300.00
+   Avg Cost:  $0.0200 (Total Cost: $6.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-6.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  39986674946594041127881580314178669432903174152096605379156132684301077003004
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    481.88
+   Avg Cost:  $0.1977 (Total Cost: $95.27)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-95.27 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  40203675251178780407808929173074942793825429239764219587293668173902492479027
+   Outcome:   [Flames]
+   Status:    OPEN
+   Shares:    51.16
+   Avg Cost:  $0.4300 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  40446447523614279845157001660220950484085648632340098236081844789391952312507
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    250.00
+   Avg Cost:  $0.2000 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  41274978906108328170273998440331048191494937995722030413207886660124790973552
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    175.00
+   Avg Cost:  $0.3200 (Total Cost: $56.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-56.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  41323130518655871601092227570907401972975192191457486809131219293978944017692
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    133.33
+   Avg Cost:  $0.0900 (Total Cost: $12.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  4144208824514002346297322470506652099015595884313620293690507536838964521588
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    47.85
+   Avg Cost:  $0.2100 (Total Cost: $10.05)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.05 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  41955560914129893994568780402041281027074902001187291636341983142890141874180
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    97.44
+   Avg Cost:  $0.2053 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  42473252814335643653981815952922498380273050180020711090678320613658355166013
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    372.18
+   Avg Cost:  $0.1239 (Total Cost: $46.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-46.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  4274267118076813495173130758992506070572035574620260536119995252652731576613
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    268.64
+   Avg Cost:  $0.1528 (Total Cost: $41.06)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-41.06 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  44211780052523347000615048569212086801873525071943410763545641849815580441479
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    92.45
+   Avg Cost:  $0.2200 (Total Cost: $20.34)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.34 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  44215997531357607991996895839355146313491844203729075844083349152769120028187
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    118.18
+   Avg Cost:  $0.2200 (Total Cost: $26.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-26.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  44386831355324237040016028575813851337000511240368079206167747242846630305682
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    40.90
+   Avg Cost:  $0.4900 (Total Cost: $20.04)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.04 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  44668185583545088650440138362716962438925445505725783105033404006516374468726
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    73.33
+   Avg Cost:  $0.3000 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  45116025513331382414744070815857686113675684851919592639573525371359483738829
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    162.96
+   Avg Cost:  $0.4786 (Total Cost: $78.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-78.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  45243089423823950697801659866553547043492192282151224320720179483317418130327
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    281.11
+   Avg Cost:  $0.2775 (Total Cost: $78.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-78.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  45387272651516763152712107915926755415980816176821274426335905089657379134416
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    18.52
+   Avg Cost:  $0.5400 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  45507086413678005743283594303196770649728015368302308539996032314734578698453
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    171.43
+   Avg Cost:  $0.3500 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  46151929227493869534074075830957049282811553463010684647378955127816596036302
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    112.50
+   Avg Cost:  $0.1600 (Total Cost: $18.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-18.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  46246722902426149376095796787730647224596703201504542730254048658065611333961
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    350.00
+   Avg Cost:  $0.0571 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  46279366178946002236702991560076753335903017977790180105725986204777757717714
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    253.97
+   Avg Cost:  $0.2362 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  46563697259047708541361760162855399973818712189119186915630625998222985115091
+   Outcome:   [Kings]
+   Status:    OPEN
+   Shares:    150.71
+   Avg Cost:  $0.3583 (Total Cost: $54.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-54.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  47675976458969602013444366251551780380019467847547276161881329610574723326489
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    118.93
+   Avg Cost:  $0.5000 (Total Cost: $59.46)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-59.46 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  48153022965169781893893374813451370342271163900924424849369402818192688161916
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    220.13
+   Avg Cost:  $0.3452 (Total Cost: $76.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-76.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  48720746592891658576402312184575611544906316130020698273201588285038234419046
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    1.00
+   Avg Cost:  $-30.0892 (Total Cost: $-30.18)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $30.18 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  48767430596394356369347642287615463208903494241520662637990375227300225625888
+   Outcome:   [Under]
+   Status:    OPEN
+   Shares:    90.32
+   Avg Cost:  $0.3100 (Total Cost: $28.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-28.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  48951085592846522994166835897175428462855792778020774209445378748573639932428
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    151.52
+   Avg Cost:  $0.3300 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  49217293181309878816171293102995653536325480620480852470106451942638496571273
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    1.83
+   Avg Cost:  $-31.8619 (Total Cost: $-58.28)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $58.28 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  49294837087187920650691599432246349214207845951563741353943402952205859618629
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    131.25
+   Avg Cost:  $0.3200 (Total Cost: $42.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  49535483277090639103043267733617639220968800367240416643936379307808802319578
+   Outcome:   [Milwaukee Brewers]
+   Status:    OPEN
+   Shares:    115.63
+   Avg Cost:  $0.2247 (Total Cost: $25.99)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-25.99 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  49708830718852321310962585279161557621607637317241131866847638041456755741810
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    339.23
+   Avg Cost:  $0.3243 (Total Cost: $110.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-110.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  50142662631503011428795380301870875581192763449089433271930313858823203908911
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    44.00
+   Avg Cost:  $0.1200 (Total Cost: $5.28)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-5.28 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  50636941845327244869714420576141567296524414167641907551421667649372204032353
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    3.89
+   Avg Cost:  $-16.2094 (Total Cost: $-63.09)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $63.09 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  50785904672758323875068754775226184593344258045153965448950436899486248002568
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    1.17
+   Avg Cost:  $-31.3008 (Total Cost: $-36.52)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $36.52 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  50801016592669428214331672536225881551761101938864161687636774230346012546860
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    2.26
+   Avg Cost:  $-3.9448 (Total Cost: $-8.92)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $8.92 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  51008082970694330103597193288819607682398139000864340058953587826612458501415
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    203.21
+   Avg Cost:  $0.3346 (Total Cost: $68.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-68.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  51189855231752448408074396540309557734566466989226855483985695879650402555485
+   Outcome:   [Kiwoom Heroes]
+   Status:    OPEN
+   Shares:    118.06
+   Avg Cost:  $0.4060 (Total Cost: $47.93)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-47.93 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  51607398822371746117459994499952250250075262343163535789391139777593134352920
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    193.04
+   Avg Cost:  $0.2181 (Total Cost: $42.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  52218888047776036576625381852272271290184810051236930377804282742802415601130
+   Outcome:   [NC Dinos]
+   Status:    OPEN
+   Shares:    256.67
+   Avg Cost:  $0.2981 (Total Cost: $76.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-76.50 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  52774742416775258046069749257693567003840440274153054914257642275411021219153
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    166.08
+   Avg Cost:  $0.1200 (Total Cost: $19.93)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-19.93 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  53142945212265016174812790871842636242593429005521761300413012996758813045598
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    2.60
+   Avg Cost:  $-31.6371 (Total Cost: $-82.30)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $82.30 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  53633617438645905989721225587391117959075562008878258934007619608702872708396
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    1.58
+   Avg Cost:  $-31.8532 (Total Cost: $-50.47)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $50.47 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  53721823316439439284664501792494897013721094345239870701517171157374721104370
+   Outcome:   [Under]
+   Status:    OPEN
+   Shares:    181.47
+   Avg Cost:  $0.3400 (Total Cost: $61.70)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-61.70 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  53877112467855719493955719012795480182091315066143436611382298035663756340976
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    520.62
+   Avg Cost:  $0.2364 (Total Cost: $123.08)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-123.08 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  54484665803314820950722430167130916572204102046886506231141512823089871021807
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    164.29
+   Avg Cost:  $0.2800 (Total Cost: $46.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-46.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  54673769943449714674472171962334986774447157033355780710585082389175730665780
+   Outcome:   [Kings]
+   Status:    OPEN
+   Shares:    250.63
+   Avg Cost:  $0.2314 (Total Cost: $58.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  55290734204219272214120687487760544849937669131819863647743216833010039783817
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.37
+   Avg Cost:  $-35.7372 (Total Cost: $-13.21)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $13.21 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  55519922150395868865691138951458361513102946654265704883989197145478617155639
+   Outcome:   [Minnesota Twins]
+   Status:    OPEN
+   Shares:    111.96
+   Avg Cost:  $0.1965 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  55904664014877920628880198101822202936493713045895459959897081829981300282752
+   Outcome:   [Hanwha Eagles]
+   Status:    OPEN
+   Shares:    272.00
+   Avg Cost:  $0.1918 (Total Cost: $52.16)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-52.16 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  55945889835181236448433720511401458737754720649264838387140280709097333689483
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    127.49
+   Avg Cost:  $0.1726 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  55988314417811246993053420566663874994117228386940124015768741385928214857392
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    260.48
+   Avg Cost:  $0.3259 (Total Cost: $84.90)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-84.90 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  56584665390674426345995145175490496864427942373652839377755839221323893854288
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    169.23
+   Avg Cost:  $0.1300 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  56625026225896298071238538050849948863289631124397973785018401943825791903637
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    66.67
+   Avg Cost:  $0.3000 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  56633382215903178187255308976524028047476094056490581863672394526315247258230
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    100.00
+   Avg Cost:  $0.0400 (Total Cost: $4.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-4.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  56689168567456837885776169878470509778234176187579477660559404217938767665883
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    3.08
+   Avg Cost:  $0.3700 (Total Cost: $1.14)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-1.14 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  56740269200252065149040274665634886776014306673323727041795172631914313659985
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    333.79
+   Avg Cost:  $0.2049 (Total Cost: $68.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-68.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  57004219937394418437476801735630813729765109481999629701075748873641606897600
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    114.29
+   Avg Cost:  $0.3500 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  57412669803234576469024632071874871172448498594547431675204200974455490731314
+   Outcome:   [Under]
+   Status:    OPEN
+   Shares:    1.46
+   Avg Cost:  $-31.7388 (Total Cost: $-46.35)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $46.35 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  57447893678691732500013067317309535757556090133849129341870543365835168518293
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    1.38
+   Avg Cost:  $-26.6037 (Total Cost: $-36.59)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $36.59 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  57735845936859825942472787799396106499015841289969649651072216798832269118413
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    177.78
+   Avg Cost:  $0.0900 (Total Cost: $16.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58134011617369062843236786581422358937121952111212296469357125337452216402143
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    72.67
+   Avg Cost:  $0.2200 (Total Cost: $15.99)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-15.99 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58221815139213492021856338723200306709506483736083603515785327148920043305775
+   Outcome:   [Under]
+   Status:    OPEN
+   Shares:    91.33
+   Avg Cost:  $0.2700 (Total Cost: $24.66)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.66 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58308516446555868569619995803369631254442771186836054695857775610526850710405
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.37
+   Avg Cost:  $-4.1314 (Total Cost: $-1.53)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $1.53 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58342717786118171929114635062692572662871318137939337706116443468862566527173
+   Outcome:   [Doosan Bears]
+   Status:    OPEN
+   Shares:    258.71
+   Avg Cost:  $0.3091 (Total Cost: $79.98)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-79.98 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58362091472300853291142371327155565893481674387472951085874055349722371894986
+   Outcome:   [Panthers]
+   Status:    OPEN
+   Shares:    175.95
+   Avg Cost:  $0.4063 (Total Cost: $71.48)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-71.48 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  58570553086734162259979813448588689490036624895315943589991233487477277401624
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    61.54
+   Avg Cost:  $0.2600 (Total Cost: $16.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  59878804012802373716975708306468133433417032218818228497228813992712711388303
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    394.25
+   Avg Cost:  $0.1704 (Total Cost: $67.18)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-67.18 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  61014651420486096445366517902155937853163446306362826890883092735115748305444
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    330.09
+   Avg Cost:  $0.1639 (Total Cost: $54.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-54.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  61126736959622415331437114440669232882534581898052202412411807777168874292524
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    118.73
+   Avg Cost:  $0.1000 (Total Cost: $11.87)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-11.87 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  61728962687939519273527299164013072031905342035248270667065311884067703322994
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    133.35
+   Avg Cost:  $0.1796 (Total Cost: $23.95)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-23.95 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  62061165392285408261686464072126950673235205487636363645214940759243950980438
+   Outcome:   [Baltimore Orioles]
+   Status:    OPEN
+   Shares:    1.72
+   Avg Cost:  $-27.7045 (Total Cost: $-47.58)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $47.58 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  62150012316655028699518745249923309082789731645342980083406909560578447148954
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    302.20
+   Avg Cost:  $0.1390 (Total Cost: $42.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  6237622810428115459749641137806125046739432180151416201201441846144922984031
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    94.26
+   Avg Cost:  $0.4600 (Total Cost: $43.36)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-43.36 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  63113905430580935642046538982037607036261580892858010260562882357728218064336
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    43.89
+   Avg Cost:  $0.3200 (Total Cost: $14.04)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.04 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  63419676361778234736603643621439197953147548307527951704439919452923817134348
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    90.91
+   Avg Cost:  $0.2200 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  63515547575073894921156020232091780472114679597399658300601314130752456054232
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    158.33
+   Avg Cost:  $0.4421 (Total Cost: $70.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  6356528018795901922580928634484372106022524103463351016802731651101812079908
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    3.63
+   Avg Cost:  $-32.2619 (Total Cost: $-117.07)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $117.07 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  64668633930885690183332949398581267894169169744466368223059211633414486757031
+   Outcome:   [Samsung Lions]
+   Status:    OPEN
+   Shares:    130.56
+   Avg Cost:  $0.0734 (Total Cost: $9.58)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-9.58 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  64899718341473730726599678818651148404161814664763421738256818990725371176453
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    66.67
+   Avg Cost:  $0.1500 (Total Cost: $10.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-10.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  64945322553624300384043731319804211537131207650290978333725869519852579744140
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    201.29
+   Avg Cost:  $0.2981 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  65172177534294468202595336902370291831825521000804203164771953618821991693266
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    100.00
+   Avg Cost:  $0.1400 (Total Cost: $14.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-14.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  65448416125570779603115460105805741822778482201477555477702639878705882431575
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    106.10
+   Avg Cost:  $0.4100 (Total Cost: $43.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-43.50 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  65640846031716846832593748107756223213959096686447491408186991589269223777464
+   Outcome:   [Flyers]
+   Status:    OPEN
+   Shares:    133.89
+   Avg Cost:  $0.4332 (Total Cost: $58.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-58.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  65802271227642464692137438049430344387990694817697067793400673835207657482699
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    130.90
+   Avg Cost:  $0.3820 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  66020666250153010726059869334591993003150592180799527755725607319944751118103
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    3.09
+   Avg Cost:  $-29.8128 (Total Cost: $-92.04)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $92.04 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  66374822841627082869008385435751806344078784525722422781225744323250278659792
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    90.73
+   Avg Cost:  $0.1259 (Total Cost: $11.42)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-11.42 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  66516613570626044721640203770219359832444828852819473239486289715391421282460
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    1.87
+   Avg Cost:  $-23.6709 (Total Cost: $-44.29)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $44.29 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  66857105434288814689311613608771763087985391626644277068015770735363126884046
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    2.82
+   Avg Cost:  $-24.9223 (Total Cost: $-70.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $70.40 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  66998574198630274244063764755391238476210847565341173067737991914569070597385
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    2.13
+   Avg Cost:  $-28.4283 (Total Cost: $-60.52)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $60.52 (+0.0%)
+
+📌 Market: "KBO: Doosan Bears vs. Lotte Giants"
+   Asset ID:  67859147006087259174720158743675956871934558895728479297274689970909043177353
+   Outcome:   [Lotte Giants]
+   Status:    OPEN
+   Shares:    413.06
+   Avg Cost:  $0.1939 (Total Cost: $80.10)
+   Current:   $0.0005 (Current Value: $0.21)
+   PnL:       $-79.89 (-99.7%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  68053451334990011197603629872544483447954004844521109710911242937042882125143
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    2.34
+   Avg Cost:  $0.8215 (Total Cost: $1.92)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-1.92 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  68690761144603028028744500864688844478561383218366075604052641833026563740295
+   Outcome:   [Ducks]
+   Status:    OPEN
+   Shares:    75.00
+   Avg Cost:  $0.1600 (Total Cost: $12.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  68804913624612759722882779418135551020749552592577499576375455003184791777623
+   Outcome:   [Cleveland Guardians]
+   Status:    OPEN
+   Shares:    85.71
+   Avg Cost:  $0.0700 (Total Cost: $6.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-6.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  69757471525579989516937698889495926475212834368767913979790802003510545183283
+   Outcome:   [Ducks]
+   Status:    OPEN
+   Shares:    8.88
+   Avg Cost:  $-14.2677 (Total Cost: $-126.64)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $126.64 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  70092182608561891358724910206583666465528109314132864668093004693671364522669
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    92.78
+   Avg Cost:  $0.0100 (Total Cost: $0.93)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-0.93 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  70549755569363497268446013568031243601518844994023463038823454258665602031440
+   Outcome:   [New York Yankees]
+   Status:    OPEN
+   Shares:    126.32
+   Avg Cost:  $0.3800 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  70763411542607647084484513110563017985499294675754331771631318918294383925240
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    142.23
+   Avg Cost:  $0.1800 (Total Cost: $25.60)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-25.60 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  71831018206710859975877867307833144174313005308726086803834558452944445887179
+   Outcome:   [Tampa Bay Rays]
+   Status:    OPEN
+   Shares:    83.33
+   Avg Cost:  $0.3600 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  71916554212627510038228485169557738221362432620916328187156752439193897552518
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    186.26
+   Avg Cost:  $0.2108 (Total Cost: $39.26)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-39.26 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  71959119295560957405003494282047995051013148211901718469572324786820226993773
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    1.25
+   Avg Cost:  $-31.7865 (Total Cost: $-39.82)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $39.82 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  72195511234404898996501377970564523967023928193809494874357749845502441517757
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    274.76
+   Avg Cost:  $0.1342 (Total Cost: $36.88)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-36.88 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  73656493826884677838881517389674607163195511768469423931040893598078860394512
+   Outcome:   [Under]
+   Status:    OPEN
+   Shares:    80.00
+   Avg Cost:  $0.6000 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  74148967575841623293102935797047752053333334003993175083419013681316847598518
+   Outcome:   [Baltimore Orioles]
+   Status:    OPEN
+   Shares:    124.41
+   Avg Cost:  $0.2829 (Total Cost: $35.20)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-35.20 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  74333061402168384269654046203195884113777461499604839540822960217961143725217
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    433.82
+   Avg Cost:  $0.1521 (Total Cost: $66.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-66.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  74565034912220928681209180214340169962168318496648746492037064102004237400014
+   Outcome:   [New York Mets]
+   Status:    OPEN
+   Shares:    600.00
+   Avg Cost:  $0.0500 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  74835519882355583805772343716595301419552900506451796312096053703428888528877
+   Outcome:   [Canadiens]
+   Status:    OPEN
+   Shares:    142.86
+   Avg Cost:  $0.2800 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75035657465320243583033748857319949133077314051423725586021095106704553940345
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    295.97
+   Avg Cost:  $0.1757 (Total Cost: $52.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-52.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75057703953602394371214992633119258380375114122514077668225415867018839818464
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    0.37
+   Avg Cost:  $-22.0318 (Total Cost: $-8.07)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $8.07 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75103355814092755716214520389666138713087324677821187011124025443810691506725
+   Outcome:   [Philadelphia Phillies]
+   Status:    OPEN
+   Shares:    156.67
+   Avg Cost:  $0.1149 (Total Cost: $18.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-18.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75143735593398904968084683396908743632983915788878194420168010632718339882288
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    105.26
+   Avg Cost:  $0.3800 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75382429219667152288541335879263338434373119855928217133689165764324442698956
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    52.67
+   Avg Cost:  $0.1500 (Total Cost: $7.90)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-7.90 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75542239311039669179566278817412023462323472432726094665898882711337662440667
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    234.83
+   Avg Cost:  $0.1800 (Total Cost: $42.27)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.27 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  75591622978535317844118923871365097687468250240003945154268294334875772549333
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    151.73
+   Avg Cost:  $0.3240 (Total Cost: $49.16)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-49.16 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  7741028720313143070063980652499832022975972412443949551518535830489499885715
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    133.33
+   Avg Cost:  $0.1800 (Total Cost: $24.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  78230094086822331361039646612257031577643620122125623028806454200594206789817
+   Outcome:   [Rockets]
+   Status:    OPEN
+   Shares:    88.89
+   Avg Cost:  $0.2700 (Total Cost: $24.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-24.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  78821247268634032891501640646707543082617213848361939806518584977451844230947
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    2.87
+   Avg Cost:  $-27.5539 (Total Cost: $-79.12)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $79.12 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  79077205299758330635910307693610990101974949017537182171962843109525325902247
+   Outcome:   [LG Twins]
+   Status:    OPEN
+   Shares:    120.00
+   Avg Cost:  $0.2500 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  79146652206316360482925580173225678087925377818558533509565008097016038367169
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    2.70
+   Avg Cost:  $-32.2788 (Total Cost: $-87.15)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $87.15 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  79561473622881294498661999744130005814635392180059663946815316976745913290678
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    72.73
+   Avg Cost:  $0.1100 (Total Cost: $8.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-8.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  7962968184914633800224299942638941615795528699804439768853521567944193969786
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    106.67
+   Avg Cost:  $0.4500 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  79681922802692100817271311037786616405645436807941543520826120029971630713458
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    372.47
+   Avg Cost:  $0.2094 (Total Cost: $78.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-78.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  79740716869977147506491697382983222312550616256473247005073391587480118495056
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    124.44
+   Avg Cost:  $0.4500 (Total Cost: $56.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-56.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  80025666670560814410103549501590934015912111473084387867222149327795153139841
+   Outcome:   [Samsung Lions]
+   Status:    OPEN
+   Shares:    148.00
+   Avg Cost:  $0.3000 (Total Cost: $44.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-44.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  80424109888402392221649768958257983740178006937299075674858856194286275238566
+   Outcome:   [SSG Landers]
+   Status:    OPEN
+   Shares:    134.82
+   Avg Cost:  $0.1541 (Total Cost: $20.77)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.77 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  80528760276620113110708388889534702397370529802633396641685581315447134376776
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    9.77
+   Avg Cost:  $-29.0664 (Total Cost: $-284.08)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $284.08 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  80729003654371335358412385917687517154257636519412634184200985170091219160210
+   Outcome:   [Lakers]
+   Status:    OPEN
+   Shares:    120.00
+   Avg Cost:  $0.4000 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  81605744191771903668955687113373328830317800238836703383769664590642916453398
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    125.77
+   Avg Cost:  $0.2386 (Total Cost: $30.01)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.01 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  81868324022365573030890518301906324001163003569843551173422064597291937972925
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    207.14
+   Avg Cost:  $0.1931 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  82074493416507737270634635025839422882287655550901091423630255619513079317109
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    183.33
+   Avg Cost:  $0.2182 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  82153965108591876413942742526961264845301704502066400439303350043877890098862
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    5.21
+   Avg Cost:  $-17.9423 (Total Cost: $-93.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $93.50 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  83964810662594963310720248577927024648399269924464883828050322847250630476154
+   Outcome:   [Down]
+   Status:    OPEN
+   Shares:    32.65
+   Avg Cost:  $0.4900 (Total Cost: $16.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  84001375849718087281669412015132134838949600779107877423166660374659481028956
+   Outcome:   [Toronto Blue Jays]
+   Status:    OPEN
+   Shares:    217.39
+   Avg Cost:  $0.2300 (Total Cost: $50.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-50.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  84559823605774043885036314580705870170540673988992813696463122100073512120164
+   Outcome:   [San Diego Padres]
+   Status:    OPEN
+   Shares:    81.48
+   Avg Cost:  $0.2700 (Total Cost: $22.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  84615304479237441986402330935007530218379705593580261927169599431346842369479
+   Outcome:   [Kiwoom Heroes]
+   Status:    OPEN
+   Shares:    96.77
+   Avg Cost:  $0.3100 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  84688051602976713934005746715956366415388480620737117200427612857264957943520
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    0.30
+   Avg Cost:  $-61.4125 (Total Cost: $-18.17)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $18.17 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  84803944245862070623096907093721422230424461328441347333822574413089913292697
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    133.33
+   Avg Cost:  $0.4500 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  85855868262769459367536286559769851399243527937227450373315083550141030884172
+   Outcome:   [Sharks]
+   Status:    OPEN
+   Shares:    86.53
+   Avg Cost:  $0.4900 (Total Cost: $42.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  8599106080125457931895302308686855889596024434786567007351007816214030903561
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    38.71
+   Avg Cost:  $0.3100 (Total Cost: $12.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-12.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  86173995161304107918962536049565537672152376219695135463711078746942142825904
+   Outcome:   [Detroit Tigers]
+   Status:    OPEN
+   Shares:    212.73
+   Avg Cost:  $0.2126 (Total Cost: $45.23)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-45.23 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  86223530299051740897303617294113320407654118439718265870184200093256137361133
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    243.33
+   Avg Cost:  $0.2795 (Total Cost: $68.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-68.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  86810673268844356832912467670299923789766375345730051600068123024268377919129
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    1.85
+   Avg Cost:  $4.9338 (Total Cost: $9.14)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-9.14 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  87072976201006125782393148176504699648589860622586571853922035161291564021349
+   Outcome:   [St. Louis Cardinals]
+   Status:    OPEN
+   Shares:    1158.32
+   Avg Cost:  $0.0255 (Total Cost: $29.52)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-29.52 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  87109343692172406518990887248406959657282606420084552199350219610350201990984
+   Outcome:   [Toronto Blue Jays]
+   Status:    OPEN
+   Shares:    63.62
+   Avg Cost:  $0.3700 (Total Cost: $23.54)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-23.54 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  87636442223118439171962259226410913396671997631392742967631319178642812338737
+   Outcome:   [Cincinnati Reds]
+   Status:    OPEN
+   Shares:    230.18
+   Avg Cost:  $0.3063 (Total Cost: $70.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-70.50 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  87657988846555122642963808267658549734919476297697946930974463484210748120789
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    130.15
+   Avg Cost:  $0.0230 (Total Cost: $2.99)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-2.99 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  882100742628129671676615757939339954890614411777310587250205225149090978091
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    2.50
+   Avg Cost:  $-32.1246 (Total Cost: $-80.22)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $80.22 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  88437990311655880055045829266982869520216379821191214753920488369140574721418
+   Outcome:   [Miami Marlins]
+   Status:    OPEN
+   Shares:    16.18
+   Avg Cost:  $-20.6533 (Total Cost: $-334.18)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $334.18 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  88580080944693275889740965652044457206780734764445480091651106638935535919638
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    157.81
+   Avg Cost:  $0.2661 (Total Cost: $42.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-42.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  8875639021176165951333448065003914234613628544926519460240489303064597387561
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    136.67
+   Avg Cost:  $0.1200 (Total Cost: $16.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-16.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  8879178704040920150757940025318104241231721371948574902507132210964131352929
+   Outcome:   [Kiwoom Heroes]
+   Status:    OPEN
+   Shares:    159.08
+   Avg Cost:  $0.1142 (Total Cost: $18.16)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-18.16 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  8900646888518016225309471143871432350390068354242348860287031787947164619615
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    1.65
+   Avg Cost:  $-30.3620 (Total Cost: $-50.02)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $50.02 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  89628879983438666693229836095007901844397172691064613302845941791790913354622
+   Outcome:   [Lakers]
+   Status:    OPEN
+   Shares:    340.33
+   Avg Cost:  $0.2233 (Total Cost: $76.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-76.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  90236455235023350523168607842888944659485623725815631531567024211177781292858
+   Outcome:   [Samsung Lions]
+   Status:    OPEN
+   Shares:    171.85
+   Avg Cost:  $0.1200 (Total Cost: $20.62)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.62 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  90250687417506189866561136573806716123195166108416276499427416298511705850910
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    275.23
+   Avg Cost:  $0.1921 (Total Cost: $52.86)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-52.86 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  902507026675979414247485572472259520471863248669426229495870272855733806130
+   Outcome:   [Athletics]
+   Status:    OPEN
+   Shares:    93.75
+   Avg Cost:  $0.3200 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  9090512489941184646051765064923448732564328444649102153608586740393220560515
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    114.25
+   Avg Cost:  $0.1900 (Total Cost: $21.71)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-21.71 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92240844238605871913723540150077167092317826670527459747523478165086200520078
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    36.36
+   Avg Cost:  $0.5500 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92518904663145763258163924661711555405189717901084896431503208535334485807181
+   Outcome:   [San Francisco Giants]
+   Status:    OPEN
+   Shares:    374.31
+   Avg Cost:  $0.1603 (Total Cost: $60.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-60.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92613228884049408303318386867489511086172450225763291481103357829055571119532
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    3.81
+   Avg Cost:  $-1.1515 (Total Cost: $-4.38)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $4.38 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92794253746799737460139341505593291185529532455646996016205709084649609199823
+   Outcome:   [Colorado Rockies]
+   Status:    OPEN
+   Shares:    98.07
+   Avg Cost:  $0.3875 (Total Cost: $38.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-38.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92805019601327532354189435778310311760995995037166951263097013863039394518010
+   Outcome:   [Washington Nationals]
+   Status:    OPEN
+   Shares:    250.00
+   Avg Cost:  $0.0800 (Total Cost: $20.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-20.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  92852364653102984416878519868980228938325706045453116305194113785159537773258
+   Outcome:   [Chicago White Sox]
+   Status:    OPEN
+   Shares:    122.06
+   Avg Cost:  $0.3300 (Total Cost: $40.28)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.28 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  94477751672177338542077267338875040751970852616299093509799472689792216023035
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    150.06
+   Avg Cost:  $0.1837 (Total Cost: $27.56)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-27.56 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  94803555675905872764602840918189015607137417323486747707211061051614903713968
+   Outcome:   [Los Angeles Dodgers]
+   Status:    OPEN
+   Shares:    95.24
+   Avg Cost:  $0.4200 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  95461855217617684335387887292069456362507915113822051894772677360899991928002
+   Outcome:   [Atlanta Braves]
+   Status:    OPEN
+   Shares:    1.13
+   Avg Cost:  $-22.6246 (Total Cost: $-25.49)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $25.49 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  95463995534622690947325217373829470033381578486507686019160950890258639013666
+   Outcome:   [Seattle Mariners]
+   Status:    OPEN
+   Shares:    132.50
+   Avg Cost:  $0.1691 (Total Cost: $22.40)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-22.40 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  95530849225575778009977624369936581118553967479443105065329945405591332545527
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    1.29
+   Avg Cost:  $-29.7454 (Total Cost: $-38.25)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $38.25 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  95937550229390147277883851545837716913555914392332721272595046425392290749111
+   Outcome:   [SSG Landers]
+   Status:    OPEN
+   Shares:    104.40
+   Avg Cost:  $0.2500 (Total Cost: $26.10)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-26.10 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  96865446836511074755141084742965162260333541096125568519119670608459909407235
+   Outcome:   [Arizona Diamondbacks]
+   Status:    OPEN
+   Shares:    3.92
+   Avg Cost:  $-32.0393 (Total Cost: $-125.50)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $125.50 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  96938017585810752412259515452882451485664768632907210340667634174872604901466
+   Outcome:   [Pittsburgh Pirates]
+   Status:    OPEN
+   Shares:    140.26
+   Avg Cost:  $0.2139 (Total Cost: $30.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-30.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  97187805138496900681527248358287201092520043994302256882829180515373898894646
+   Outcome:   [Up]
+   Status:    OPEN
+   Shares:    26.85
+   Avg Cost:  $0.1500 (Total Cost: $4.03)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-4.03 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  97484646035153355030372479205703444236629597241613636608849120190199536930582
+   Outcome:   [Samsung Lions]
+   Status:    OPEN
+   Shares:    272.81
+   Avg Cost:  $0.1802 (Total Cost: $49.17)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-49.17 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  97844153089719065536948655467265403844309371112299944362667909040877345181087
+   Outcome:   [Los Angeles Angels]
+   Status:    OPEN
+   Shares:    341.11
+   Avg Cost:  $0.2921 (Total Cost: $99.64)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-99.64 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  98168010910292455722515621637357798329206043015371272638043120177055403274824
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    240.33
+   Avg Cost:  $0.1649 (Total Cost: $39.62)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-39.62 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  98236031739794985236735750096266421007525282987927802487263311154053568376400
+   Outcome:   [Oilers]
+   Status:    OPEN
+   Shares:    83.33
+   Avg Cost:  $0.4800 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  98485374185351824279633753878897739219316326421405428099510295893725916362397
+   Outcome:   [Chicago Cubs]
+   Status:    OPEN
+   Shares:    8.18
+   Avg Cost:  $-28.4792 (Total Cost: $-232.96)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $232.96 (+0.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  98810759119044408816204494011843967738882436021512369702195075769219925690097
+   Outcome:   [Lakers]
+   Status:    OPEN
+   Shares:    90.91
+   Avg Cost:  $0.4400 (Total Cost: $40.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-40.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  99237965040716747156198706150009093244910918607150806774948813739478780304538
+   Outcome:   [Texas Rangers]
+   Status:    OPEN
+   Shares:    118.23
+   Avg Cost:  $0.4060 (Total Cost: $48.00)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-48.00 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  99541619091457566637034579871894293298838390625145045783102359168712429816413
+   Outcome:   [Kansas City Royals]
+   Status:    OPEN
+   Shares:    87.27
+   Avg Cost:  $0.3358 (Total Cost: $29.30)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-29.30 (-100.0%)
+
+📌 Market: "Unknown Market"
+   Asset ID:  9978173237728483229177169637315213180219279538877826240917630870183646434206
+   Outcome:   [Houston Astros]
+   Status:    OPEN
+   Shares:    262.22
+   Avg Cost:  $0.3340 (Total Cost: $87.58)
+   Current:   $0.0000 (Current Value: $0.00)
+   PnL:       $-87.58 (-100.0%)
+
+====================================================

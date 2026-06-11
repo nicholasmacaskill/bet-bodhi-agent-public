@@ -391,3 +391,895 @@ Checking: Samsung Lions (2) @ KT Wiz (5) - Top 9th
     at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
     at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
 
+[2026-06-09T15:30:00.035Z] Running KBO Live Scanner...
+[2026-06-09T15:30:00.040Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T15:40:00.038Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T15:50:00.019Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:00:00.033Z] Running Watchdog check...
+[2026-06-09T16:00:00.047Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:10:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:20:00.011Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:30:00.030Z] Running Watchdog check...
+[2026-06-09T16:30:00.044Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:40:00.015Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T16:50:00.040Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:00:00.011Z] Running Watchdog check...
+[2026-06-09T17:00:00.019Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:10:00.031Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:20:00.013Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:30:00.017Z] Running KBO Live Scanner...
+[2026-06-09T17:30:00.025Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:40:00.016Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T17:50:00.012Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:00:00.024Z] Running KBO Live Scanner...
+[2026-06-09T18:00:00.028Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:10:00.009Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:20:00.008Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:30:00.018Z] Running KBO Live Scanner...
+[2026-06-09T18:30:00.036Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:40:00.012Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T18:50:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:00:00.015Z] Running KBO Live Scanner...
+[2026-06-09T19:00:00.018Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:10:00.014Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:20:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:30:00.013Z] Running KBO Live Scanner...
+[2026-06-09T19:30:00.017Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:40:00.020Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T19:50:00.015Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-09T20:01:01.485Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T20:01:01.492Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:36.973Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:36.998Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:36.999Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.000Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.002Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.006Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.007Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.008Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.008Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.010Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.011Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.013Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.016Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 17:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.017Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.018Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 18:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:09:37.022Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-09T22:10:00.014Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T00:21:28.032Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.039Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.040Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.041Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.044Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.050Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.051Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.052Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.053Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.054Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.056Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.056Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.058Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.060Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 19:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.061Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.065Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 20:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:21:28.066Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:34:31.030Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:34:31.120Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:40:03.231Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T00:59:12.698Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 21:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T01:00:00.298Z] Running Watchdog check...
+[2026-06-10T01:00:00.348Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T03:03:17.363Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.383Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.385Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.386Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.387Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.388Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.390Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.392Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.393Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.397Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.398Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.401Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.404Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 22:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.405Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.406Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Tue Jun 09 2026 23:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T03:03:17.407Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.408Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.413Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.415Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.416Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.417Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.420Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.421Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.422Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.423Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T04:36:15.426Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 00:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T05:00:30.173Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T05:00:30.178Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 01:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T05:00:30.180Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.886Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.891Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.892Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.893Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.894Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 02:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.899Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:10:27.899Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T06:21:18.690Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.763Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.771Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.773Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 03:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.775Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.777Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.778Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.780Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.781Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.782Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 04:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.784Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.786Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.787Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.795Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.796Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.797Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 05:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.799Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.800Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.801Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.802Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.803Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.804Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 06:50:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:09:27.805Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 07:00:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:10:06.456Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 07:10:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:41:08.206Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 07:20:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:41:08.220Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 07:30:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:41:08.220Z] [PID: 48594] [32m[NODE-CRON][32m [33m[WARN][0m missed execution at Wed Jun 10 2026 07:40:00 GMT-0300 (Atlantic Daylight Time)! Possible blocking IO or high CPU user at the same process used by node-cron.
+[2026-06-10T10:50:00.054Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (0) @ Hanwha Eagles (3) - Bot 4th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for Hanwha Eagles: R
+Yun San-heum
+                  #49 (ERA: 5.73)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: NC Dinos (2) @ Kiwoom Heroes (0) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for NC Dinos: R
+Toda Natsuki
+                  #11 (ERA: 4.69)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: Doosan Bears (0) @ Lotte Giants (0) - Bot 4th
+Checking: SSG Landers (4) @ LG Twins (2) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for SSG Landers: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Samsung Lions (0) @ KT Wiz (3) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for KT Wiz: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:00:00.038Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (0) @ Hanwha Eagles (3) - Bot 4th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for Hanwha Eagles: R
+Yun San-heum
+                  #49 (ERA: 5.73)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: NC Dinos (2) @ Kiwoom Heroes (0) - Bot 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for NC Dinos: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Doosan Bears (0) @ Lotte Giants (0) - Top 5th
+Checking: SSG Landers (5) @ LG Twins (2) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for SSG Landers: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Samsung Lions (0) @ KT Wiz (3) - Top 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for KT Wiz: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:10:00.085Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (0) @ Hanwha Eagles (3) - Top 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for Hanwha Eagles: R
+Yun San-heum
+                  #49 (ERA: 5.73)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: NC Dinos (2) @ Kiwoom Heroes (0) - Top 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for NC Dinos: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Doosan Bears (0) @ Lotte Giants (0) - Bot 5th
+Checking: SSG Landers (5) @ LG Twins (2) - Bot 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for SSG Landers: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Samsung Lions (0) @ KT Wiz (3) - Bot 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for KT Wiz: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:20:00.022Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (0) @ Hanwha Eagles (4) - Bot 5th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for Hanwha Eagles: R
+Yun San-heum
+                  #49 (ERA: 5.73)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: NC Dinos (2) @ Kiwoom Heroes (0) - Top 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for NC Dinos: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+Checking: Doosan Bears (0) @ Lotte Giants (0) - Top 6th
+Checking: SSG Landers (5) @ LG Twins (6) - Bot 5th
+Checking: Samsung Lions (0) @ KT Wiz (3) - Bot 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for KT Wiz: Unknown (ERA: 0)
+  ❌ Abort: Pitcher Unknown is too stable (ERA 0).
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:30:00.084Z] Running KBO Live Scanner...
+🚀 Starting KBO Live Deep-Scanner...
+📊 Fetching team baselines...
+🕸️  Booting Headless Scraper...
+🌐 Fetching live schedule...
+
+⚾ Found 30 games today. 5 are currently LIVE.
+
+Checking: Kia Tigers (0) @ Hanwha Eagles (4) - Bot 6th
+  └ Macro Edge Found! Deep-diving into Box Score for current pitcher...
+  └ Active Pitcher for Hanwha Eagles: R
+Yun San-heum
+                  #49 (ERA: 5.73)
+  ✅ MICRO-EDGE CONFIRMED! Sending Alert.
+Checking: NC Dinos (2) @ Kiwoom Heroes (0) - Top 7th
+Checking: Doosan Bears (0) @ Lotte Giants (1) - Bot 6th
+Checking: SSG Landers (5) @ LG Twins (6) - Top 6th
+Checking: Samsung Lions (0) @ KT Wiz (4) - Top 7th
+✅ Telegram alert sent to admin: 7934081383
+
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:40:00.080Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T11:50:00.024Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:00:00.028Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:10:00.033Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:20:00.040Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:30:00.017Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:40:00.113Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T12:50:00.015Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:00:00.047Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:10:00.037Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:20:00.046Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:30:00.055Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:40:00.019Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T13:50:00.048Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:00:00.021Z] Running Watchdog check...
+[2026-06-10T14:00:00.069Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:10:00.012Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:20:00.050Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:30:00.029Z] Running Watchdog check...
+[2026-06-10T14:30:00.069Z] Running KBO Live Scanner...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:40:00.008Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T14:50:00.032Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T15:00:00.069Z] Running KBO Live Scanner...
+[2026-06-10T15:00:00.074Z] Running Watchdog check...
+✅ Watchdog check clean. No structural changes detected.
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T15:10:00.010Z] Running KBO Live Scanner...
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/kbo-live-scanner.ts:21:23)
+
+[2026-06-10T15:20:00.054Z] Running KBO Live Scanner...
+KBO Live Scanner failed: Error: Command failed: npx tsx scripts/kbo-live-scanner.ts
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1104:16)
+    at Socket.<anonymous> (node:internal/child_process:456:11)
+    at Socket.emit (node:events:524:28)
+    at Pipe.<anonymous> (node:net:343:12) {
+  code: 143,
+  killed: false,
+  signal: null,
+  cmd: 'npx tsx scripts/kbo-live-scanner.ts',
+  stdout: '',
+  stderr: ''
+}
