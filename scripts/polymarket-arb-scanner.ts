@@ -47,7 +47,12 @@ async function getBestPrice(tokenId: string): Promise<{ bid: number; bidSize: nu
   try {
     const url = `https://clob.polymarket.com/book?token_id=${tokenId}`;
     const response = await fetch(url);
-    if (!response.ok) return null;
+    if (!response.ok) {
+      if (response.status === 429) {
+        console.warn(`\n${YELLOW}⚠️ Rate limited (429) on CLOB book fetch for token ${tokenId}${RESET}`);
+      }
+      return null;
+    }
     const book = await response.json();
 
     const asks: any[] = book.asks || [];
@@ -193,12 +198,18 @@ async function main() {
       if (markets.length === 0) {
         console.log(`${YELLOW}No active sports markets found. Sleeping...${RESET}`);
       } else {
-        console.log(`${GRAY}Scanning ${markets.length} markets...${RESET}`);
-        for (const market of markets) {
+        const MAX_SCAN_MARKETS = 20;
+        const scanList = markets.slice(0, MAX_SCAN_MARKETS);
+        console.log(`${GRAY}Scanning top ${scanList.length} highest-volume markets (out of ${markets.length} total)...${RESET}`);
+        let idx = 1;
+        for (const market of scanList) {
+          process.stdout.write(`${GRAY}\r[${idx}/${scanList.length}] Checking: ${market.question.substring(0, 50)}... (Vol: $${market.volume.toLocaleString()})${RESET}`);
           await scanMarket(market);
+          idx++;
           // Wait 300ms between markets to comply with rate limits (100-200 calls/min)
           await sleep(300);
         }
+        process.stdout.write(`\r${GREEN}Finished scanning ${scanList.length} markets.${RESET}\n`);
       }
     } catch (e: any) {
       console.error(`${RED}Scan error: ${e.message}${RESET}`);
