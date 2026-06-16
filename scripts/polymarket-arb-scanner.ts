@@ -28,35 +28,14 @@ const CYAN = "\x1b[36m";
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
- * Fetches token IDs for Yes/No outcomes from the CLOB API.
- * Uses local cache if available.
+ * Extracts token IDs for Yes/No outcomes from the market metadata.
  */
-async function getOrResolveTokens(conditionId: string): Promise<MarketTokens | null> {
-  const cached = tokenCache.get(conditionId.toLowerCase());
-  if (cached) return cached;
-
-  try {
-    const url = `https://clob.polymarket.com/markets/${conditionId}`;
-    const response = await fetch(url);
-    if (!response.ok) {
-      return null;
-    }
-    const data = await response.json();
-    if (data && Array.isArray(data.tokens) && data.tokens.length >= 2) {
-      const yesToken = data.tokens.find((t: any) => t.outcome?.toLowerCase() === 'yes');
-      const noToken = data.tokens.find((t: any) => t.outcome?.toLowerCase() === 'no');
-
-      if (yesToken && noToken) {
-        const tokens: MarketTokens = {
-          yesTokenId: yesToken.token_id,
-          noTokenId: noToken.token_id
-        };
-        tokenCache.set(conditionId.toLowerCase(), tokens);
-        return tokens;
-      }
-    }
-  } catch (err: any) {
-    console.error(`${RED}Error resolving tokens for ${conditionId}: ${err.message}${RESET}`);
+function getOrResolveTokens(market: PolyMarket): MarketTokens | null {
+  if (market.clobTokenIds && market.clobTokenIds.length >= 2) {
+    return {
+      yesTokenId: market.clobTokenIds[0],
+      noTokenId: market.clobTokenIds[1]
+    };
   }
   return null;
 }
@@ -102,7 +81,7 @@ async function getBestPrice(tokenId: string): Promise<{ bid: number; bidSize: nu
  * Main Arbitrage scanning logic for a single market.
  */
 async function scanMarket(market: PolyMarket) {
-  const tokens = await getOrResolveTokens(market.conditionId);
+  const tokens = getOrResolveTokens(market);
   if (!tokens) return;
 
   // Small delay to avoid aggressive rate limits

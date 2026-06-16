@@ -10,6 +10,7 @@ export interface PolyMarket {
     active: boolean;
     volume: number;
     endDate: string;
+    clobTokenIds?: string[];
 }
 
 export class PolymarketApi {
@@ -81,7 +82,8 @@ export class PolymarketApi {
                                         category: event.category,
                                         active: market.active,
                                         volume: parseFloat(market.volume || "0"),
-                                        endDate: market.endDate
+                                        endDate: market.endDate,
+                                        clobTokenIds: market.clobTokenIds ? (typeof market.clobTokenIds === 'string' ? JSON.parse(market.clobTokenIds) : market.clobTokenIds) : []
                                     });
                                 }
                             }
@@ -126,7 +128,8 @@ export class PolymarketApi {
                                 category: event.category,
                                 active: market.active,
                                 volume: parseFloat(market.volume || "0"),
-                                endDate: market.endDate
+                                endDate: market.endDate,
+                                clobTokenIds: market.clobTokenIds ? (typeof market.clobTokenIds === 'string' ? JSON.parse(market.clobTokenIds) : market.clobTokenIds) : []
                             };
                         }
                     }
