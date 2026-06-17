@@ -1,55 +1,120 @@
 import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
 import { PolymarketApi, PolyMarket } from '../src/lib/polymarket-api';
 import { sendTelegramAlert } from '../src/lib/agent/telegram-notify';
 
-// Interface for resolved token mappings
+// ─── Simulation Config ───────────────────────────────────────────────────────
+const SIM_UNIT_SIZE_USD   = 50.00;  // Max capital deployed per trade
+const GAS_FEE_USD         = 0.05;   // Polygon gas fee estimate per transaction
+const LEGGING_FAIL_RATE   = 0.01;   // 1% chance second leg fails
+const LEGGING_SLIP_PCT    = 0.02;   // 2% of trade size lost on failed exit
+const MIN_YIELD_THRESHOLD = 0.001;  // 0.1% — data collection mode (lowered from 0.5%)
+const TELE_ALERT_THRESHOLD= 0.01;   // 1.0% — minimum to send Telegram alert
+const MAX_SCAN_MARKETS    = 50;     // Top N markets by volume to scan per loop
+
+// ─── Simulation Log Path ─────────────────────────────────────────────────────
+const SIM_LOG_PATH = path.resolve(__dirname, '../data/arb_sim_history.json');
+
+// ─── Sim Trade Record Interface ──────────────────────────────────────────────
+export interface SimTrade {
+  timestamp: string;
+  market: string;
+  conditionId: string;
+  type: 'MERGE' | 'SPLIT';
+  yieldPct: number;
+  tradeSize: number;
+  grossProfit: number;
+  gasFee: number;
+  legFailed: boolean;
+  legLoss: number;
+  netProfit: number;
+}
+
+// ─── Interface for resolved token mappings ───────────────────────────────────
 interface MarketTokens {
   yesTokenId: string;
   noTokenId: string;
 }
 
-// Memory cache for token ID lookups to avoid hammering Polymarket APIs
-const tokenCache = new Map<string, MarketTokens>();
-
-// History to throttle Telegram alerts (one alert per market per 5 minutes)
+// ─── Alert throttle cache (5-min cooldown per market) ───────────────────────
 const alertHistory = new Map<string, number>();
-const ALERT_THROTTLE_MS = 5 * 60 * 1000; 
+const ALERT_THROTTLE_MS = 5 * 60 * 1000;
 
-// ANSI Terminal Colors for beautiful logging
-const RESET = "\x1b[0m";
-const BOLD = "\x1b[1m";
-const GREEN = "\x1b[32m";
+// ─── ANSI Terminal Colors ────────────────────────────────────────────────────
+const RESET  = "\x1b[0m";
+const BOLD   = "\x1b[1m";
+const GREEN  = "\x1b[32m";
 const YELLOW = "\x1b[33m";
-const RED = "\x1b[31m";
-const GRAY = "\x1b[90m";
-const CYAN = "\x1b[36m";
+const RED    = "\x1b[31m";
+const GRAY   = "\x1b[90m";
+const CYAN   = "\x1b[36m";
+const MAGENTA= "\x1b[35m";
 
-// Utility sleep helper
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-/**
- * Extracts token IDs for Yes/No outcomes from the market metadata.
- */
+// ─── Simulation Logger ───────────────────────────────────────────────────────
+function logSimTrade(trade: SimTrade) {
+  let history: SimTrade[] = [];
+  if (fs.existsSync(SIM_LOG_PATH)) {
+    try {
+      history = JSON.parse(fs.readFileSync(SIM_LOG_PATH, 'utf-8'));
+    } catch { history = []; }
+  }
+  history.push(trade);
+  fs.writeFileSync(SIM_LOG_PATH, JSON.stringify(history, null, 2));
+}
+
+// ─── Execute a simulated trade ───────────────────────────────────────────────
+function simulateTrade(
+  market: PolyMarket,
+  type: 'MERGE' | 'SPLIT',
+  yieldPct: number,
+  maxCapital: number
+): SimTrade {
+  // Respect depth limit and unit size cap
+  const tradeSize = Math.min(SIM_UNIT_SIZE_USD, maxCapital);
+
+  // 1% chance of legging failure (second leg not filled)
+  const legFailed = Math.random() < LEGGING_FAIL_RATE;
+  const legLoss   = legFailed ? parseFloat((tradeSize * LEGGING_SLIP_PCT).toFixed(4)) : 0;
+  const grossProfit = legFailed ? 0 : parseFloat((tradeSize * yieldPct).toFixed(4));
+  const netProfit   = parseFloat((grossProfit - GAS_FEE_USD - legLoss).toFixed(4));
+
+  return {
+    timestamp:   new Date().toISOString(),
+    market:      market.question,
+    conditionId: market.conditionId,
+    type,
+    yieldPct:    parseFloat((yieldPct * 100).toFixed(3)),
+    tradeSize,
+    grossProfit,
+    gasFee:      GAS_FEE_USD,
+    legFailed,
+    legLoss,
+    netProfit,
+  };
+}
+
+// ─── Token ID Resolution ─────────────────────────────────────────────────────
 function getOrResolveTokens(market: PolyMarket): MarketTokens | null {
   if (market.clobTokenIds && market.clobTokenIds.length >= 2) {
     return {
       yesTokenId: market.clobTokenIds[0],
-      noTokenId: market.clobTokenIds[1]
+      noTokenId:  market.clobTokenIds[1]
     };
   }
   return null;
 }
 
-/**
- * Fetches the order book for a given token ID and calculates the best bid and ask.
- */
+// ─── Order Book Fetch ────────────────────────────────────────────────────────
 async function getBestPrice(tokenId: string): Promise<{ bid: number; bidSize: number; ask: number; askSize: number } | null> {
   try {
     const url = `https://clob.polymarket.com/book?token_id=${tokenId}`;
     const response = await fetch(url);
     if (!response.ok) {
       if (response.status === 429) {
-        console.warn(`\n${YELLOW}⚠️ Rate limited (429) on CLOB book fetch for token ${tokenId}${RESET}`);
+        console.warn(`\n${YELLOW}⚠️  Rate limited (429) on CLOB book fetch${RESET}`);
       }
       return null;
     }
@@ -58,170 +123,158 @@ async function getBestPrice(tokenId: string): Promise<{ bid: number; bidSize: nu
     const asks: any[] = book.asks || [];
     const bids: any[] = book.bids || [];
 
-    // Find best ask (lowest price asks)
-    let bestAsk = 1.0;
-    let askSize = 0;
+    let bestAsk = 1.0, askSize = 0;
     if (asks.length > 0) {
       bestAsk = asks.reduce((min, a) => parseFloat(a.price) < min ? parseFloat(a.price) : min, 1.0);
-      const bestAskObj = asks.find(a => parseFloat(a.price) === bestAsk);
-      askSize = bestAskObj ? parseFloat(bestAskObj.size) : 0;
+      const obj = asks.find(a => parseFloat(a.price) === bestAsk);
+      askSize = obj ? parseFloat(obj.size) : 0;
     }
 
-    // Find best bid (highest price bids)
-    let bestBid = 0.0;
-    let bidSize = 0;
+    let bestBid = 0.0, bidSize = 0;
     if (bids.length > 0) {
       bestBid = bids.reduce((max, b) => parseFloat(b.price) > max ? parseFloat(b.price) : max, 0.0);
-      const bestBidObj = bids.find(b => parseFloat(b.price) === bestBid);
-      bidSize = bestBidObj ? parseFloat(bestBidObj.size) : 0;
+      const obj = bids.find(b => parseFloat(b.price) === bestBid);
+      bidSize = obj ? parseFloat(obj.size) : 0;
     }
 
     return { bid: bestBid, bidSize, ask: bestAsk, askSize };
-  } catch (err: any) {
+  } catch {
     return null;
   }
 }
 
-/**
- * Main Arbitrage scanning logic for a single market.
- */
+// ─── Market Scanner ───────────────────────────────────────────────────────────
 async function scanMarket(market: PolyMarket) {
   const tokens = getOrResolveTokens(market);
   if (!tokens) return;
 
-  // Small delay to avoid aggressive rate limits
   await sleep(150);
 
   const [yesPrice, noPrice] = await Promise.all([
     getBestPrice(tokens.yesTokenId),
     getBestPrice(tokens.noTokenId)
   ]);
-
   if (!yesPrice || !noPrice) return;
 
-  // --- CASE A: MERGE ARBITRAGE (Buy CLOB, Merge on-chain) ---
-  // We buy YES at YesAsk, NO at NoAsk. Total cost = YesAsk + NoAsk.
-  // We merge them on-chain for 1.00 USDC.
-  const mergeCost = yesPrice.ask + noPrice.ask;
-  const mergeProfit = 1.00 - mergeCost;
-  const mergeYield = mergeProfit / mergeCost;
-  const maxMergeShares = Math.min(yesPrice.askSize, noPrice.askSize);
-  const maxMergeCapital = maxMergeShares * mergeCost;
-  const maxMergeProfit = maxMergeShares * mergeProfit;
+  // ── CASE A: MERGE ARBITRAGE ──────────────────────────────────────────────
+  const mergeCost    = yesPrice.ask + noPrice.ask;
+  const mergeProfit  = 1.00 - mergeCost;
+  const mergeYield   = mergeProfit / mergeCost;
+  const maxMergeCap  = Math.min(yesPrice.askSize, noPrice.askSize) * mergeCost;
 
-  // --- CASE B: SPLIT ARBITRAGE (Split on-chain, Sell CLOB) ---
-  // We split 1.00 USDC into YES and NO. We sell YES at YesBid, NO at NoBid.
-  // Total revenue = YesBid + NoBid.
-  const splitRevenue = yesPrice.bid + noPrice.bid;
-  const splitProfit = splitRevenue - 1.00;
-  const splitYield = splitProfit / 1.00; // Cost is 1.00
-  const maxSplitShares = Math.min(yesPrice.bidSize, noPrice.bidSize);
-  const maxSplitCapital = maxSplitShares * 1.00;
-  const maxSplitProfit = maxSplitShares * splitProfit;
+  if (mergeProfit > 0 && mergeYield >= MIN_YIELD_THRESHOLD) {
+    console.log(`\n🎉 ${GREEN}${BOLD}[MERGE ARB] ${market.question}${RESET}`);
+    console.log(`   └ YES ask: $${yesPrice.ask.toFixed(3)} | NO ask: $${noPrice.ask.toFixed(3)} | Sum: $${mergeCost.toFixed(3)}`);
+    console.log(`   └ ${BOLD}Yield: ${(mergeYield * 100).toFixed(2)}% | Max Depth Cap: $${maxMergeCap.toFixed(2)}${RESET}`);
 
-  const minYieldThreshold = 0.005; // 0.5% min yield to output to console
-  const telegramAlertThreshold = 0.01; // 1.0% yield to alert via Telegram
+    const trade = simulateTrade(market, 'MERGE', mergeYield, maxMergeCap);
+    logSimTrade(trade);
 
-  if (mergeProfit > 0 && mergeYield >= minYieldThreshold) {
-    console.log(`\n🎉 ${GREEN}${BOLD}[MERGE ARB FIND] ${market.question}${RESET}`);
-    console.log(`   └ Target: Buy YES @ $${yesPrice.ask.toFixed(2)} | Buy NO @ $${noPrice.ask.toFixed(2)}`);
-    console.log(`   └ Total Cost: $${mergeCost.toFixed(3)} | Profit per share: $${mergeProfit.toFixed(3)}`);
-    console.log(`   └ ${BOLD}Yield: ${(mergeYield * 100).toFixed(2)}%${RESET}`);
-    console.log(`   └ Max Depth: ${maxMergeShares.toFixed(2)} shares (Cap: $${maxMergeCapital.toFixed(2)} | Max Profit: $${maxMergeProfit.toFixed(2)} USDC)`);
-    
-    if (mergeYield >= telegramAlertThreshold) {
-      await triggerTelegramAlert(market, "MERGE", mergeYield, mergeProfit, maxMergeCapital, maxMergeProfit);
+    if (trade.legFailed) {
+      console.log(`   └ ${YELLOW}[SIM] ⚠️  Leg failure simulated! Loss: -$${trade.legLoss.toFixed(2)} | Net: -$${Math.abs(trade.netProfit).toFixed(2)}${RESET}`);
+    } else {
+      console.log(`   └ ${MAGENTA}[SIM] ✅ Trade $${trade.tradeSize.toFixed(2)} | Gross: +$${trade.grossProfit.toFixed(2)} | Gas: -$${trade.gasFee} | Net: ${trade.netProfit >= 0 ? '+' : ''}$${trade.netProfit.toFixed(2)} USDC${RESET}`);
+    }
+
+    if (mergeYield >= TELE_ALERT_THRESHOLD) {
+      await triggerTelegramAlert(market, 'MERGE', mergeYield, trade);
     }
   }
 
-  if (splitProfit > 0 && splitYield >= minYieldThreshold) {
-    console.log(`\n🎉 ${GREEN}${BOLD}[SPLIT ARB FIND] ${market.question}${RESET}`);
-    console.log(`   └ Target: Sell YES @ $${yesPrice.bid.toFixed(2)} | Sell NO @ $${noPrice.bid.toFixed(2)}`);
-    console.log(`   └ Total Rev: $${splitRevenue.toFixed(3)} | Profit per share: $${splitProfit.toFixed(3)}`);
-    console.log(`   └ ${BOLD}Yield: ${(splitYield * 100).toFixed(2)}%${RESET}`);
-    console.log(`   └ Max Depth: ${maxSplitShares.toFixed(2)} shares (Cap: $${maxSplitCapital.toFixed(2)} | Max Profit: $${maxSplitProfit.toFixed(2)} USDC)`);
+  // ── CASE B: SPLIT ARBITRAGE ──────────────────────────────────────────────
+  const splitRevenue = yesPrice.bid + noPrice.bid;
+  const splitProfit  = splitRevenue - 1.00;
+  const splitYield   = splitProfit / 1.00;
+  const maxSplitCap  = Math.min(yesPrice.bidSize, noPrice.bidSize) * 1.00;
 
-    if (splitYield >= telegramAlertThreshold) {
-      await triggerTelegramAlert(market, "SPLIT", splitYield, splitProfit, maxSplitCapital, maxSplitProfit);
+  if (splitProfit > 0 && splitYield >= MIN_YIELD_THRESHOLD) {
+    console.log(`\n🎉 ${GREEN}${BOLD}[SPLIT ARB] ${market.question}${RESET}`);
+    console.log(`   └ YES bid: $${yesPrice.bid.toFixed(3)} | NO bid: $${noPrice.bid.toFixed(3)} | Sum: $${splitRevenue.toFixed(3)}`);
+    console.log(`   └ ${BOLD}Yield: ${(splitYield * 100).toFixed(2)}% | Max Depth Cap: $${maxSplitCap.toFixed(2)}${RESET}`);
+
+    const trade = simulateTrade(market, 'SPLIT', splitYield, maxSplitCap);
+    logSimTrade(trade);
+
+    if (trade.legFailed) {
+      console.log(`   └ ${YELLOW}[SIM] ⚠️  Leg failure simulated! Loss: -$${trade.legLoss.toFixed(2)} | Net: -$${Math.abs(trade.netProfit).toFixed(2)}${RESET}`);
+    } else {
+      console.log(`   └ ${MAGENTA}[SIM] ✅ Trade $${trade.tradeSize.toFixed(2)} | Gross: +$${trade.grossProfit.toFixed(2)} | Gas: -$${trade.gasFee} | Net: ${trade.netProfit >= 0 ? '+' : ''}$${trade.netProfit.toFixed(2)} USDC${RESET}`);
+    }
+
+    if (splitYield >= TELE_ALERT_THRESHOLD) {
+      await triggerTelegramAlert(market, 'SPLIT', splitYield, trade);
     }
   }
 }
 
-/**
- * Dispatches an alert via Telegram if not throttled.
- */
+// ─── Telegram Alert ──────────────────────────────────────────────────────────
 async function triggerTelegramAlert(
   market: PolyMarket,
-  type: "MERGE" | "SPLIT",
+  type: 'MERGE' | 'SPLIT',
   yieldPct: number,
-  profitPerShare: number,
-  maxCapital: number,
-  maxProfit: number
+  trade: SimTrade
 ) {
   const cacheKey = `${market.conditionId.substring(0, 10)}:${type}`;
   const now = Date.now();
-  const lastAlertTime = alertHistory.get(cacheKey) || 0;
-
-  if (now - lastAlertTime < ALERT_THROTTLE_MS) {
-    return; // Throttled
-  }
-
+  if ((now - (alertHistory.get(cacheKey) || 0)) < ALERT_THROTTLE_MS) return;
   alertHistory.set(cacheKey, now);
 
-  const alertMessage = `🚨 *BODHI ARB DETECTED (${type})* 🚨\n\n` +
+  const msg =
+    `🚨 *BODHI ARB [${type}] DETECTED* 🚨\n\n` +
     `*Market:* ${market.question}\n` +
-    `*Category:* ${market.category}\n` +
-    `*Yield:* \`${(yieldPct * 100).toFixed(2)}%\` ($${profitPerShare.toFixed(3)}/share)\n` +
-    `*Max Capacity:* $${maxCapital.toFixed(2)} USDC\n` +
-    `*Estimated Profit:* $${maxProfit.toFixed(2)} USDC\n\n` +
-    `*Condition ID:* \`${market.conditionId}\`\n`;
+    `*Yield:* \`${(yieldPct * 100).toFixed(2)}%\`\n` +
+    `*[SIM] Trade Size:* $${trade.tradeSize.toFixed(2)}\n` +
+    `*[SIM] Net Profit:* $${trade.netProfit.toFixed(2)} USDC\n\n` +
+    `*Condition ID:* \`${market.conditionId}\``;
 
-  await sendTelegramAlert(alertMessage, 'Markdown');
+  await sendTelegramAlert(msg, 'Markdown');
 }
 
-/**
- * Main daemon runner
- */
+// ─── Main Daemon ─────────────────────────────────────────────────────────────
 async function main() {
   console.log(`\n${CYAN}${BOLD}🏹 BODHI SPLIT-MERGE ARBITRAGE SCANNER${RESET}`);
-  console.log(`${GRAY}----------------------------------------${RESET}`);
-  console.log(`${GRAY}Polling active Polymarket sports lines for risk-free edges...${RESET}\n`);
+  console.log(`${GRAY}────────────────────────────────────────────${RESET}`);
+  console.log(`${GRAY}Mode: SIMULATION | Unit Size: $${SIM_UNIT_SIZE_USD} | Markets/Loop: ${MAX_SCAN_MARKETS}${RESET}`);
+  console.log(`${GRAY}Log: ${SIM_LOG_PATH}${RESET}\n`);
+
+  // Ensure data/ directory exists
+  const dataDir = path.resolve(__dirname, '../data');
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
   const api = new PolymarketApi();
   let loopCount = 1;
 
   while (true) {
     try {
-      console.log(`${GRAY}[${new Date().toLocaleTimeString()}] (Loop #${loopCount}) Fetching active markets...${RESET}`);
-      const markets = await api.getActiveSportsMarkets("vs.");
+      console.log(`${GRAY}[${new Date().toLocaleTimeString()}] (Loop #${loopCount}) Fetching markets...${RESET}`);
+      const markets = await api.getAllActiveSportsMarkets();
 
       if (markets.length === 0) {
         console.log(`${YELLOW}No active sports markets found. Sleeping...${RESET}`);
       } else {
-        const MAX_SCAN_MARKETS = 20;
         const scanList = markets.slice(0, MAX_SCAN_MARKETS);
-        console.log(`${GRAY}Scanning top ${scanList.length} highest-volume markets (out of ${markets.length} total)...${RESET}`);
+        console.log(`${GRAY}Scanning top ${scanList.length} of ${markets.length} markets by volume...${RESET}`);
+
         let idx = 1;
         for (const market of scanList) {
-          process.stdout.write(`${GRAY}\r[${idx}/${scanList.length}] Checking: ${market.question.substring(0, 50)}... (Vol: $${market.volume.toLocaleString()})${RESET}`);
+          process.stdout.write(`${GRAY}\r[${idx}/${scanList.length}] ${market.question.substring(0, 55)}...${RESET}`);
           await scanMarket(market);
           idx++;
-          // Wait 300ms between markets to comply with rate limits (100-200 calls/min)
           await sleep(300);
         }
-        process.stdout.write(`\r${GREEN}Finished scanning ${scanList.length} markets.${RESET}\n`);
+        process.stdout.write(`\r${GREEN}✓ Scan complete — ${scanList.length} markets checked.${RESET}\n`);
       }
     } catch (e: any) {
       console.error(`${RED}Scan error: ${e.message}${RESET}`);
     }
 
-    console.log(`\n${GRAY}Scan complete. Sleeping for 45 seconds...${RESET}\n`);
+    console.log(`\n${GRAY}Sleeping 45s before next loop...${RESET}\n`);
     await sleep(45 * 1000);
     loopCount++;
   }
 }
 
 main().catch((err) => {
-  console.error(`${RED}Fatal error: ${err.message}${RESET}`);
+  console.error(`${RED}Fatal: ${err.message}${RESET}`);
   process.exit(1);
 });

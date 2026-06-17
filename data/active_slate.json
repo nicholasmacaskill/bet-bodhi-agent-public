@@ -1,244 +1,6 @@
 [
   {
-    "gamePk": 825071,
-    "homeTeam": "Arizona Diamondbacks",
-    "awayTeam": "Los Angeles Angels",
-    "overallConfidence": 83,
-    "pillars": [
-      {
-        "pillar": "Technical Roster Advantage",
-        "score": 10,
-        "reason": "Dominant Pitching Advantage: Walbert Ureña is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Ryne Nelson, our model identifies a clear +27.0 technical edge in this arms race. ",
-        "side": "away"
-      },
-      {
-        "pillar": "Seasonal (Sport)",
-        "score": 6,
-        "reason": "Cactus League: Slight dry-air offensive boost."
-      },
-      {
-        "pillar": "Technical (Bookies)",
-        "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 47.6%. +32.4% EV.",
-        "side": "away"
-      }
-    ],
-    "valueTeam": "Los Angeles Angels",
-    "polyConditionId": "38a1ef501107d0410c8595f25612567d",
-    "polySharePrice": 0.476,
-    "polyEV": 0.32400000000000007,
-    "polyOutcomeIndex": 1,
-    "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Los Angeles Angels Shares on Polymarket (+32.4% EV).",
-    "recommendedSize": "Aggressive (7.5%)",
-    "suggestedStake": 60,
-    "homePitcher": "Ryne Nelson",
-    "awayPitcher": "Walbert Ureña",
-    "homeOdds": 0.565,
-    "awayOdds": 0.476,
-    "matchupNotes": "Walbert Ureña vs Ryne Nelson. Dominant Pitching Advantage: Walbert Ureña is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Ryne Nelson, our model identifies a clear +27.0 technical edge in this arms race. ",
-    "advantages": [
-      "🥅 Late Lockdown: Arizona Diamondbacks bullpen is highly effective in late frames (7th+ ERA: 3.34).",
-      "🔥 Elite Starting Pitcher: Walbert Ureña is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
-      "📉 Target Slumping: Ryne Nelson is struggling. ERA has spiked by +1.80 compared to last year.",
-      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🎯 Vulnerable Matchup: Facing Ryne Nelson (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
-      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
-      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
-      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 32.4% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (47.6%)."
-    ],
-    "risks": [
-      "⚠️ Bullpen Vulnerability: Los Angeles Angels bullpen is prone to late blowups (7th+ ERA: 5.51)."
-    ],
-    "killCriteria": [
-      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
-    ],
-    "dataIntegrity": "complete",
-    "time": "2026-06-16T01:40:00Z",
-    "structuralMismatch": "8.3",
-    "unifiedAlpha": 11.540000000000001
-  },
-  {
-    "gamePk": 824993,
-    "homeTeam": "Athletics",
-    "awayTeam": "Pittsburgh Pirates",
-    "overallConfidence": 83,
-    "pillars": [
-      {
-        "pillar": "Technical Roster Advantage",
-        "score": 10,
-        "reason": "Dominant Pitching Advantage: J.T. Ginn is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Athletics today. Facing Jared Jones, our model identifies a clear +15.5 technical edge in this arms race. ",
-        "side": "home"
-      },
-      {
-        "pillar": "Seasonal (Sport)",
-        "score": 6,
-        "reason": "Cactus League: Slight dry-air offensive boost."
-      },
-      {
-        "pillar": "Technical (Bookies)",
-        "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 55.2%. +26.8% EV.",
-        "side": "home"
-      }
-    ],
-    "valueTeam": "Athletics",
-    "polyConditionId": "8e54fa4eee405d90f575942ad15b1d52",
-    "polySharePrice": 0.552,
-    "polyEV": 0.268,
-    "polyOutcomeIndex": 0,
-    "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Athletics Shares on Polymarket (+26.8% EV).",
-    "recommendedSize": "Aggressive (7.5%)",
-    "suggestedStake": 60,
-    "homePitcher": "J.T. Ginn",
-    "awayPitcher": "Jared Jones",
-    "homeOdds": 0.552,
-    "awayOdds": 0.485,
-    "matchupNotes": "Jared Jones vs J.T. Ginn. Dominant Pitching Advantage: J.T. Ginn is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Athletics today. Facing Jared Jones, our model identifies a clear +15.5 technical edge in this arms race. ",
-    "advantages": [
-      "🔥 Elite Starting Pitcher: J.T. Ginn is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
-      "📈 Trend Alert: J.T. Ginn is peaking this season. ERA has dropped by 1.93 compared to last year.",
-      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🥶 Target Cold Streak: Pittsburgh Pirates is struggling, winning only 3 of their last 10 games (Streak: L1).",
-      "🧠 Agent Memory Boost: Athletics has a proven winning history (129.0% ROI) in our Polymarket history.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 26.8% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (55.2%)."
-    ],
-    "risks": [
-      "⚠️ Late Inefficiency: Pittsburgh Pirates struggles in late frames (7th+ OPS: 0.668).",
-      "⚠️ Bullpen Vulnerability: Athletics bullpen is prone to late blowups (7th+ ERA: 4.96).",
-      "⚠️ Bullpen Vulnerability: Pittsburgh Pirates bullpen is prone to late blowups (7th+ ERA: 4.72)."
-    ],
-    "killCriteria": [
-      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
-    ],
-    "dataIntegrity": "complete",
-    "time": "2026-06-16T01:40:00Z",
-    "structuralMismatch": "8.3",
-    "unifiedAlpha": 10.98
-  },
-  {
-    "gamePk": 822724,
-    "homeTeam": "Washington Nationals",
-    "awayTeam": "Kansas City Royals",
-    "overallConfidence": 83,
-    "pillars": [
-      {
-        "pillar": "Technical Roster Advantage",
-        "score": 10,
-        "reason": "Offense vs. Defense Mismatch: The Washington Nationals, led by CJ Abrams, are in a peak offensive window and facing Mitch Spence — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +20.0 delta signals high scoring probability. ",
-        "side": "home"
-      },
-      {
-        "pillar": "Seasonal (Sport)",
-        "score": 6,
-        "reason": "Cactus League: Slight dry-air offensive boost."
-      },
-      {
-        "pillar": "Technical (Bookies)",
-        "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 58.1%. +21.9% EV.",
-        "side": "home"
-      }
-    ],
-    "valueTeam": "Washington Nationals",
-    "polyConditionId": "fa294eb768832d8c8870b2c0559291c1",
-    "polySharePrice": 0.581,
-    "polyEV": 0.21900000000000008,
-    "polyOutcomeIndex": 1,
-    "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Washington Nationals Shares on Polymarket (+21.9% EV).",
-    "recommendedSize": "Aggressive (7.5%)",
-    "suggestedStake": 60,
-    "homePitcher": "Andrew Alvarez",
-    "awayPitcher": "Mitch Spence",
-    "homeOdds": 0.581,
-    "awayOdds": 0.459,
-    "matchupNotes": "Mitch Spence vs Andrew Alvarez. Offense vs. Defense Mismatch: The Washington Nationals, led by CJ Abrams, are in a peak offensive window and facing Mitch Spence — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +20.0 delta signals high scoring probability. ",
-    "advantages": [
-      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🎯 Vulnerable Matchup: Facing Mitch Spence (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
-      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
-      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
-      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 21.9% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (58.1%)."
-    ],
-    "risks": [
-      "⚠️ Bullpen Vulnerability: Washington Nationals bullpen is prone to late blowups (7th+ ERA: 4.98).",
-      "⚠️ Bullpen Vulnerability: Kansas City Royals bullpen is prone to late blowups (7th+ ERA: 5.06).",
-      "📉 Slumping Pitcher: Target's starting pitcher Andrew Alvarez is struggling. ERA has spiked by +1.39 compared to last year."
-    ],
-    "killCriteria": [
-      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
-    ],
-    "dataIntegrity": "complete",
-    "time": "2026-06-15T22:45:00Z",
-    "structuralMismatch": "8.3",
-    "unifiedAlpha": 10.490000000000002
-  },
-  {
-    "gamePk": 824666,
-    "homeTeam": "Chicago Cubs",
-    "awayTeam": "Colorado Rockies",
-    "overallConfidence": 83,
-    "pillars": [
-      {
-        "pillar": "Technical Roster Advantage",
-        "score": 10,
-        "reason": "Offense vs. Defense Mismatch: The Chicago Cubs, led by Ian Happ, are in a peak offensive window and facing Michael Lorenzen — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +16.0 delta signals high scoring probability. ",
-        "side": "home"
-      },
-      {
-        "pillar": "Seasonal (Sport)",
-        "score": 6,
-        "reason": "Cactus League: Slight dry-air offensive boost."
-      },
-      {
-        "pillar": "Technical (Bookies)",
-        "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 67.6%. +14.4% EV.",
-        "side": "home"
-      }
-    ],
-    "valueTeam": "Chicago Cubs",
-    "polyConditionId": "9c2784938a40031b48e75139185e2491",
-    "polySharePrice": 0.676,
-    "polyEV": 0.144,
-    "polyOutcomeIndex": 0,
-    "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Chicago Cubs Shares on Polymarket (+14.4% EV).",
-    "recommendedSize": "Aggressive (7.5%)",
-    "suggestedStake": 60,
-    "homePitcher": "Shota Imanaga",
-    "awayPitcher": "Michael Lorenzen",
-    "homeOdds": 0.676,
-    "awayOdds": 0.362,
-    "matchupNotes": "Michael Lorenzen vs Shota Imanaga. Offense vs. Defense Mismatch: The Chicago Cubs, led by Ian Happ, are in a peak offensive window and facing Michael Lorenzen — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +16.0 delta signals high scoring probability. ",
-    "advantages": [
-      "🥅 Late Lockdown: Chicago Cubs bullpen is highly effective in late frames (7th+ ERA: 3.14).",
-      "📉 Target Slumping: Michael Lorenzen is struggling. ERA has spiked by +2.90 compared to last year.",
-      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🥶 Target Cold Streak: Colorado Rockies is struggling, winning only 3 of their last 10 games (Streak: W1).",
-      "🎯 Vulnerable Matchup: Facing Michael Lorenzen (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
-      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
-      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
-      "🧠 Agent Memory Boost: Chicago Cubs has a proven winning history (52.9% ROI) in our Polymarket history.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 14.4% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (67.6%)."
-    ],
-    "risks": [
-      "⚠️ Bullpen Vulnerability: Colorado Rockies bullpen is prone to late blowups (7th+ ERA: 5.09)."
-    ],
-    "killCriteria": [
-      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
-    ],
-    "dataIntegrity": "complete",
-    "time": "2026-06-16T00:05:00Z",
-    "structuralMismatch": "8.3",
-    "unifiedAlpha": 9.74
-  },
-  {
-    "gamePk": 823452,
+    "gamePk": 823451,
     "homeTeam": "Philadelphia Phillies",
     "awayTeam": "Miami Marlins",
     "overallConfidence": 83,
@@ -246,8 +8,8 @@
       {
         "pillar": "Technical Roster Advantage",
         "score": 10,
-        "reason": "Dominant Pitching Advantage: Zack Wheeler is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Philadelphia Phillies today. Facing Ryan Gusto, our model identifies a clear +24.0 technical edge in this arms race. ",
-        "side": "home"
+        "reason": "Dominant Pitching Advantage: Tyler Phillips is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Miami Marlins today. Facing Jesús Luzardo, our model identifies a clear +11.0 technical edge in this arms race. ",
+        "side": "away"
       },
       {
         "pillar": "Seasonal (Sport)",
@@ -257,33 +19,32 @@
       {
         "pillar": "Technical (Bookies)",
         "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 67.6%. +12.4% EV.",
-        "side": "home"
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 33.8%. +48.2% EV.",
+        "side": "away"
       }
     ],
-    "valueTeam": "Philadelphia Phillies",
-    "polyConditionId": "87cc10ad1f5377b838eb240a510a0f9f",
-    "polySharePrice": 0.676,
-    "polyEV": 0.124,
-    "polyOutcomeIndex": 1,
+    "valueTeam": "Miami Marlins",
+    "polyConditionId": "551b1013a4b92bb548f0b5287c15e7d1",
+    "polySharePrice": 0.338,
+    "polyEV": 0.48200000000000004,
+    "polyOutcomeIndex": 0,
     "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Philadelphia Phillies Shares on Polymarket (+12.4% EV).",
+    "recommendedAction": "HIGH CONVICTION - Buy Miami Marlins Shares on Polymarket (+48.2% EV).",
     "recommendedSize": "Aggressive (7.5%)",
     "suggestedStake": 60,
-    "homePitcher": "Zack Wheeler",
-    "awayPitcher": "Ryan Gusto",
-    "homeOdds": 0.676,
-    "awayOdds": 0.362,
-    "matchupNotes": "Ryan Gusto vs Zack Wheeler. Dominant Pitching Advantage: Zack Wheeler is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Philadelphia Phillies today. Facing Ryan Gusto, our model identifies a clear +24.0 technical edge in this arms race. ",
+    "homePitcher": "Jesús Luzardo",
+    "awayPitcher": "Tyler Phillips",
+    "homeOdds": 0.725,
+    "awayOdds": 0.338,
+    "matchupNotes": "Tyler Phillips vs Jesús Luzardo. Dominant Pitching Advantage: Tyler Phillips is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Miami Marlins today. Facing Jesús Luzardo, our model identifies a clear +11.0 technical edge in this arms race. ",
     "advantages": [
-      "🥅 Late Lockdown: Philadelphia Phillies bullpen is highly effective in late frames (7th+ ERA: 3.51).",
-      "🥅 Late Lockdown: Miami Marlins bullpen is highly effective in late frames (7th+ ERA: 3.49).",
-      "🔥 Elite Starting Pitcher: Zack Wheeler is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "🥅 Late Lockdown: Philadelphia Phillies bullpen is highly effective in late frames (7th+ ERA: 3.46).",
+      "🥅 Late Lockdown: Miami Marlins bullpen is highly effective in late frames (7th+ ERA: 3.55).",
+      "🔥 Elite Starting Pitcher: Tyler Phillips is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
       "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🎯 Vulnerable Matchup: Facing Ryan Gusto (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
-      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
-      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 12.4% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (67.6%)."
+      "🔥 Team Momentum: Miami Marlins is surging, winning 7 of their last 10 games (Streak: L1).",
+      "🧠 Agent Memory Boost: Miami Marlins has a proven winning history (58.1% ROI) in our Polymarket history.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 48.2% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (33.8%)."
     ],
     "risks": [
       "⚠️ Late Inefficiency: Philadelphia Phillies struggles in late frames (7th+ OPS: 0.637)."
@@ -292,20 +53,20 @@
       "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
     ],
     "dataIntegrity": "complete",
-    "time": "2026-06-15T22:40:00Z",
+    "time": "2026-06-16T22:40:00Z",
     "structuralMismatch": "8.3",
-    "unifiedAlpha": 9.540000000000001
+    "unifiedAlpha": 13.120000000000001
   },
   {
-    "gamePk": 823938,
-    "homeTeam": "Los Angeles Dodgers",
-    "awayTeam": "Tampa Bay Rays",
-    "overallConfidence": 67,
+    "gamePk": 825070,
+    "homeTeam": "Arizona Diamondbacks",
+    "awayTeam": "Los Angeles Angels",
+    "overallConfidence": 83,
     "pillars": [
       {
         "pillar": "Technical Roster Advantage",
-        "score": 5,
-        "reason": "Dominant Pitching Advantage: Nick Martinez is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Tampa Bay Rays today. Facing Eric Lauer, our model identifies a clear +1.0 technical edge in this arms race. ",
+        "score": 10,
+        "reason": "Dominant Pitching Advantage: Reid Detmers is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Merrill Kelly, our model identifies a clear +29.0 technical edge in this arms race. ",
         "side": "away"
       },
       {
@@ -316,115 +77,56 @@
       {
         "pillar": "Technical (Bookies)",
         "score": 9,
-        "reason": "Massive Web3 Arb. Bodhi: 55.0% vs Crowd: 41.7%. +13.3% EV.",
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 51.5%. +28.5% EV.",
         "side": "away"
       }
     ],
-    "valueTeam": "Tampa Bay Rays",
-    "polyConditionId": "da125dfa2d7fe97d5836e50dd394db59",
-    "polySharePrice": 0.417,
-    "polyEV": 0.13300000000000006,
+    "valueTeam": "Los Angeles Angels",
+    "polyConditionId": "bf1da9404ddeda8aaf631bfc0426ef34",
+    "polySharePrice": 0.515,
+    "polyEV": 0.28500000000000003,
     "polyOutcomeIndex": 1,
     "executionRoute": "POLY",
-    "recommendedAction": "HIGH CONVICTION - Buy Tampa Bay Rays Shares on Polymarket (+13.3% EV).",
-    "recommendedSize": "Caution (2.0%)",
-    "suggestedStake": 16,
-    "homePitcher": "Eric Lauer",
-    "awayPitcher": "Nick Martinez",
-    "homeOdds": 0.625,
-    "awayOdds": 0.417,
-    "matchupNotes": "Nick Martinez vs Eric Lauer. Dominant Pitching Advantage: Nick Martinez is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Tampa Bay Rays today. Facing Eric Lauer, our model identifies a clear +1.0 technical edge in this arms race. ",
+    "recommendedAction": "HIGH CONVICTION - Buy Los Angeles Angels Shares on Polymarket (+28.5% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Merrill Kelly",
+    "awayPitcher": "Reid Detmers",
+    "homeOdds": 0.524,
+    "awayOdds": 0.515,
+    "matchupNotes": "Reid Detmers vs Merrill Kelly. Dominant Pitching Advantage: Reid Detmers is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Los Angeles Angels today. Facing Merrill Kelly, our model identifies a clear +29.0 technical edge in this arms race. ",
     "advantages": [
-      "⚡ Late Power: Los Angeles Dodgers boasts elite late-game hitting (7th+ OPS: 0.775).",
-      "🔥 Late Inning Mismatch: Los Angeles Dodgers has elite late hitting facing a vulnerable Tampa Bay Rays bullpen (Comeback Potential).",
-      "🔥 Elite Starting Pitcher: Nick Martinez is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
-      "📈 Trend Alert: Nick Martinez is peaking this season. ERA has dropped by 2.02 compared to last year.",
-      "📉 Target Slumping: Eric Lauer is struggling. ERA has spiked by +2.29 compared to last year.",
+      "🥅 Late Lockdown: Arizona Diamondbacks bullpen is highly effective in late frames (7th+ ERA: 3.33).",
+      "🔥 Elite Starting Pitcher: Reid Detmers is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📉 Target Slumping: Merrill Kelly is struggling. ERA has spiked by +1.94 compared to last year.",
       "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🎯 Vulnerable Matchup: Facing Eric Lauer (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "🎯 Vulnerable Matchup: Facing Merrill Kelly (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
       "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
       "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
-      "📈 Strategic Market Edge: Bodhi probability identifies a massive 13.3% discrepancy between our internal model (55.0%) and the current Polymarket crowd price (41.7%)."
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 28.5% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (51.5%)."
     ],
     "risks": [
-      "⚠️ Bullpen Vulnerability: Tampa Bay Rays bullpen is prone to late blowups (7th+ ERA: 4.72)."
+      "⚠️ Bullpen Vulnerability: Los Angeles Angels bullpen is prone to late blowups (7th+ ERA: 5.54)."
     ],
     "killCriteria": [
       "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
     ],
     "dataIntegrity": "complete",
-    "time": "2026-06-16T02:10:00Z",
-    "structuralMismatch": "6.7",
-    "unifiedAlpha": 8.030000000000001
+    "time": "2026-06-17T01:40:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 11.150000000000002
   },
   {
-    "gamePk": 824505,
-    "homeTeam": "Cincinnati Reds",
-    "awayTeam": "New York Mets",
-    "overallConfidence": 68,
-    "pillars": [
-      {
-        "pillar": "Technical Roster Advantage",
-        "score": 6,
-        "reason": "Dominant Pitching Advantage: Chase Burns is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Cincinnati Reds today. Facing Tobias Myers, our model identifies a clear +2.0 technical edge in this arms race. ",
-        "side": "home"
-      },
-      {
-        "pillar": "Seasonal (Sport)",
-        "score": 7.5,
-        "reason": "Hitter's Park: Great American Ball Park boosts run environment (+1.5)."
-      },
-      {
-        "pillar": "Technical (Bookies)",
-        "score": 7,
-        "reason": "Small Web3 edge (+8.7% EV) on Cincinnati Reds.",
-        "side": "home"
-      }
-    ],
-    "valueTeam": "Cincinnati Reds",
-    "polyConditionId": "6b47a66c52d27dacd1c7bbcd808713c1",
-    "polySharePrice": 0.588,
-    "polyEV": 0.08700000000000008,
-    "polyOutcomeIndex": 0,
-    "executionRoute": "POLY",
-    "recommendedAction": "LEAN - Small EV edge on Cincinnati Reds. Buy shares.",
-    "recommendedSize": "Caution (2.0%)",
-    "suggestedStake": 16,
-    "homePitcher": "Chase Burns",
-    "awayPitcher": "Tobias Myers",
-    "homeOdds": 0.588,
-    "awayOdds": 0.455,
-    "matchupNotes": "Tobias Myers vs Chase Burns. Dominant Pitching Advantage: Chase Burns is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Cincinnati Reds today. Facing Tobias Myers, our model identifies a clear +2.0 technical edge in this arms race. ",
-    "advantages": [
-      "🥅 Late Lockdown: New York Mets bullpen is highly effective in late frames (7th+ ERA: 3.46).",
-      "🔥 Elite Starting Pitcher: Chase Burns is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
-      "📈 Trend Alert: Chase Burns is peaking this season. ERA has dropped by 2.43 compared to last year.",
-      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "📉 Price Inefficiency: Current market pricing under-estimates Cincinnati Reds by 8.7% based on historical technical performance metrics."
-    ],
-    "risks": [
-      "⚠️ Late Inefficiency: New York Mets struggles in late frames (7th+ OPS: 0.618).",
-      "⚠️ Bullpen Vulnerability: Cincinnati Reds bullpen is prone to late blowups (7th+ ERA: 4.74).",
-      "🥶 Target Cold Streak: Cincinnati Reds is struggling, winning only 2 of their last 10 games (Streak: L1)."
-    ],
-    "killCriteria": [
-      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
-    ],
-    "dataIntegrity": "complete",
-    "time": "2026-06-15T23:10:00Z",
-    "structuralMismatch": "6.8",
-    "unifiedAlpha": 7.670000000000001
-  },
-  {
-    "gamePk": 822887,
+    "gamePk": 822888,
     "homeTeam": "Texas Rangers",
     "awayTeam": "Minnesota Twins",
-    "overallConfidence": 63,
+    "overallConfidence": 83,
     "pillars": [
       {
         "pillar": "Technical Roster Advantage",
-        "score": 8,
-        "reason": "Bullpen Game Stability: With Minnesota Twins going to the 'pen, the Texas Rangers hold a +7.5 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Twins's available arms for today's slate. ",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The Texas Rangers, led by Josh Jung, are in a peak offensive window and facing Zebby Matthews — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +15.5 delta signals high scoring probability. ",
         "side": "home"
       },
       {
@@ -434,49 +136,338 @@
       },
       {
         "pillar": "Technical (Bookies)",
-        "score": 5,
-        "reason": "Bodhi probability accurately mirrors Polymarket share price. No edge.",
-        "side": "neutral"
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 56.5%. +23.5% EV.",
+        "side": "home"
       }
     ],
-    "polyConditionId": "35d9a6cb5c11499a313b0205abf1c1f9",
-    "polySharePrice": 0.633,
-    "polyEV": 0.06699999999999995,
+    "valueTeam": "Texas Rangers",
+    "polyConditionId": "d8a43d2497f4e529a3af914e3256955b",
+    "polySharePrice": 0.565,
+    "polyEV": 0.2350000000000001,
+    "polyOutcomeIndex": 1,
     "executionRoute": "POLY",
-    "recommendedAction": "PASS - Efficient Market. No EV edge.",
-    "recommendedSize": "Zero (0%)",
-    "suggestedStake": 0,
-    "homePitcher": "MacKenzie Gore",
-    "awayPitcher": "TBD / Bullpen",
-    "homeOdds": 0.633,
-    "awayOdds": 0.41,
-    "matchupNotes": "TBD / Bullpen vs MacKenzie Gore. Bullpen Game Stability: With Minnesota Twins going to the 'pen, the Texas Rangers hold a +7.5 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Twins's available arms for today's slate. ",
+    "recommendedAction": "HIGH CONVICTION - Buy Texas Rangers Shares on Polymarket (+23.5% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Kumar Rocker",
+    "awayPitcher": "Zebby Matthews",
+    "homeOdds": 0.565,
+    "awayOdds": 0.476,
+    "matchupNotes": "Zebby Matthews vs Kumar Rocker. Offense vs. Defense Mismatch: The Texas Rangers, led by Josh Jung, are in a peak offensive window and facing Zebby Matthews — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +15.5 delta signals high scoring probability. ",
     "advantages": [
-      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window."
+      "🥅 Late Lockdown: Texas Rangers bullpen is highly effective in late frames (7th+ ERA: 3.60).",
+      "📈 Trend Alert: Kumar Rocker is peaking this season. ERA has dropped by 2.18 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🎯 Vulnerable Matchup: Facing Zebby Matthews (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 23.5% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (56.5%)."
     ],
     "risks": [
-      "⚠️ Late Inefficiency: Minnesota Twins struggles in late frames (7th+ OPS: 0.661).",
-      "⚠️ Bullpen Vulnerability: Minnesota Twins bullpen is prone to late blowups (7th+ ERA: 5.68)."
+      "⚠️ Late Inefficiency: Minnesota Twins struggles in late frames (7th+ OPS: 0.654).",
+      "⚠️ Bullpen Vulnerability: Minnesota Twins bullpen is prone to late blowups (7th+ ERA: 5.60)."
     ],
     "killCriteria": [
-      "ABORT IF: Expected starter scratch or transition to unknown opener.",
       "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
     ],
     "dataIntegrity": "complete",
-    "time": "2026-06-16T00:05:00Z",
-    "structuralMismatch": "6.3",
-    "unifiedAlpha": 6.969999999999999
+    "time": "2026-06-17T00:05:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 10.650000000000002
   },
   {
-    "gamePk": 824181,
-    "homeTeam": "Houston Astros",
-    "awayTeam": "Detroit Tigers",
-    "overallConfidence": 53,
+    "gamePk": 822723,
+    "homeTeam": "Washington Nationals",
+    "awayTeam": "Kansas City Royals",
+    "overallConfidence": 83,
     "pillars": [
       {
         "pillar": "Technical Roster Advantage",
-        "score": 8,
-        "reason": "Marginal Technical Edge: Our model gives the Houston Astros a slight +6.0 Strength lead over the Detroit Tigers. With Kai-Wei Teng on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "score": 10,
+        "reason": "Lineup Depth Edge: The Washington Nationals, featuring James Wood and CJ Abrams, carry a +11.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Michael Wacha will need to contain across 6+ innings. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 59.5%. +20.5% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Washington Nationals",
+    "polyConditionId": "178ad6f5e07c35eef67b4cff64ff1934",
+    "polySharePrice": 0.595,
+    "polyEV": 0.20500000000000007,
+    "polyOutcomeIndex": 1,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Washington Nationals Shares on Polymarket (+20.5% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Foster Griffin",
+    "awayPitcher": "Michael Wacha",
+    "homeOdds": 0.595,
+    "awayOdds": 0.467,
+    "matchupNotes": "Michael Wacha vs Foster Griffin. Lineup Depth Edge: The Washington Nationals, featuring James Wood and CJ Abrams, carry a +11.0 roster advantage. Their high-level offensive ceiling creates sustained pressure that Michael Wacha will need to contain across 6+ innings. ",
+    "advantages": [
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🔥 Team Momentum: Washington Nationals is surging, winning 7 of their last 10 games (Streak: W3).",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 20.5% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (59.5%)."
+    ],
+    "risks": [
+      "⚠️ Bullpen Vulnerability: Washington Nationals bullpen is prone to late blowups (7th+ ERA: 4.92).",
+      "⚠️ Bullpen Vulnerability: Kansas City Royals bullpen is prone to late blowups (7th+ ERA: 5.01)."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T22:45:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 10.350000000000001
+  },
+  {
+    "gamePk": 824912,
+    "homeTeam": "Atlanta Braves",
+    "awayTeam": "San Francisco Giants",
+    "overallConfidence": 83,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The Atlanta Braves, led by Michael Harris II, are in a peak offensive window and facing Adrian Houser — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +10.5 delta signals high scoring probability. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 63.3%. +16.7% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Atlanta Braves",
+    "polyConditionId": "4437949903758512e22e061e7d49dc48",
+    "polySharePrice": 0.633,
+    "polyEV": 0.16700000000000004,
+    "polyOutcomeIndex": 0,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Atlanta Braves Shares on Polymarket (+16.7% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Grant Holmes",
+    "awayPitcher": "Adrian Houser",
+    "homeOdds": 0.633,
+    "awayOdds": 0.41,
+    "matchupNotes": "Adrian Houser vs Grant Holmes. Offense vs. Defense Mismatch: The Atlanta Braves, led by Michael Harris II, are in a peak offensive window and facing Adrian Houser — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +10.5 delta signals high scoring probability. ",
+    "advantages": [
+      "🥅 Late Lockdown: Atlanta Braves bullpen is highly effective in late frames (7th+ ERA: 2.67).",
+      "📉 Target Slumping: Adrian Houser is struggling. ERA has spiked by +2.23 compared to last year.",
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🎯 Vulnerable Matchup: Facing Adrian Houser (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 16.7% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (63.3%)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T23:15:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 9.97
+  },
+  {
+    "gamePk": 824667,
+    "homeTeam": "Chicago Cubs",
+    "awayTeam": "Colorado Rockies",
+    "overallConfidence": 83,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The Chicago Cubs, led by Pete Crow-Armstrong, are in a peak offensive window and facing Ryan Feltner — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +16.0 delta signals high scoring probability. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 80.0% vs Crowd: 67.1%. +14.9% EV.",
+        "side": "home"
+      }
+    ],
+    "valueTeam": "Chicago Cubs",
+    "polyConditionId": "97d8a9970a14f21507c77048dcce6ae9",
+    "polySharePrice": 0.671,
+    "polyEV": 0.149,
+    "polyOutcomeIndex": 0,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Chicago Cubs Shares on Polymarket (+14.9% EV).",
+    "recommendedSize": "Aggressive (7.5%)",
+    "suggestedStake": 60,
+    "homePitcher": "Edward Cabrera",
+    "awayPitcher": "Ryan Feltner",
+    "homeOdds": 0.671,
+    "awayOdds": 0.368,
+    "matchupNotes": "Ryan Feltner vs Edward Cabrera. Offense vs. Defense Mismatch: The Chicago Cubs, led by Pete Crow-Armstrong, are in a peak offensive window and facing Ryan Feltner — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +16.0 delta signals high scoring probability. ",
+    "advantages": [
+      "🥅 Late Lockdown: Chicago Cubs bullpen is highly effective in late frames (7th+ ERA: 3.22).",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🥶 Target Cold Streak: Colorado Rockies is struggling, winning only 3 of their last 10 games (Streak: L1).",
+      "🎯 Vulnerable Matchup: Facing Ryan Feltner (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics.",
+      "🧠 Agent Memory Boost: Chicago Cubs has a proven winning history (71.9% ROI) in our Polymarket history.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 14.9% discrepancy between our internal model (80.0%) and the current Polymarket crowd price (67.1%)."
+    ],
+    "risks": [
+      "⚠️ Bullpen Vulnerability: Colorado Rockies bullpen is prone to late blowups (7th+ ERA: 5.12).",
+      "📉 Slumping Pitcher: Target's starting pitcher Edward Cabrera is struggling. ERA has spiked by +1.33 compared to last year."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-17T00:05:00Z",
+    "structuralMismatch": "8.3",
+    "unifiedAlpha": 9.790000000000001
+  },
+  {
+    "gamePk": 823775,
+    "homeTeam": "Milwaukee Brewers",
+    "awayTeam": "Cleveland Guardians",
+    "overallConfidence": 73,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Marginal Technical Edge: Our model gives the Cleveland Guardians a slight +4.0 Strength lead over the Milwaukee Brewers. With Slade Cecconi on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 9,
+        "reason": "Massive Web3 Arb. Bodhi: 65.0% vs Crowd: 43.5%. +21.5% EV.",
+        "side": "away"
+      }
+    ],
+    "valueTeam": "Cleveland Guardians",
+    "polyConditionId": "4b5e3f0ce8c202d711c9b02b84f156cc",
+    "polySharePrice": 0.435,
+    "polyEV": 0.21500000000000002,
+    "polyOutcomeIndex": 0,
+    "executionRoute": "POLY",
+    "recommendedAction": "HIGH CONVICTION - Buy Cleveland Guardians Shares on Polymarket (+21.5% EV).",
+    "recommendedSize": "Standard (4.0%)",
+    "suggestedStake": 32,
+    "homePitcher": "Robert Gasser",
+    "awayPitcher": "Slade Cecconi",
+    "homeOdds": 0.606,
+    "awayOdds": 0.435,
+    "matchupNotes": "Slade Cecconi vs Robert Gasser. Marginal Technical Edge: Our model gives the Cleveland Guardians a slight +4.0 Strength lead over the Milwaukee Brewers. With Slade Cecconi on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "advantages": [
+      "🥅 Late Lockdown: Cleveland Guardians bullpen is highly effective in late frames (7th+ ERA: 3.58).",
+      "📉 Target Slumping: Robert Gasser is struggling. ERA has spiked by +3.20 compared to last year.",
+      "🎯 Vulnerable Matchup: Facing Robert Gasser (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "📈 Strategic Market Edge: Bodhi probability identifies a massive 21.5% discrepancy between our internal model (65.0%) and the current Polymarket crowd price (43.5%)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T23:40:00Z",
+    "structuralMismatch": "7.3",
+    "unifiedAlpha": 9.45
+  },
+  {
+    "gamePk": 824504,
+    "homeTeam": "Cincinnati Reds",
+    "awayTeam": "New York Mets",
+    "overallConfidence": 65,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Offense vs. Defense Mismatch: The New York Mets, led by Carson Benge, are in a peak offensive window and facing Brady Singer — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +10.0 delta signals high scoring probability. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 7.5,
+        "reason": "Hitter's Park: Great American Ball Park boosts run environment (+1.5)."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Away, but Away pitcher (Kodai Senga) is weak.",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "f6f0e79036206f0a0ae7e8137c0c3096",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Away pitcher (Kodai Senga) is weak.",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Brady Singer",
+    "awayPitcher": "Kodai Senga",
+    "homeOdds": 0.505,
+    "awayOdds": 0.538,
+    "matchupNotes": "Kodai Senga vs Brady Singer. Offense vs. Defense Mismatch: The New York Mets, led by Carson Benge, are in a peak offensive window and facing Brady Singer — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +10.0 delta signals high scoring probability. ",
+    "advantages": [
+      "🥅 Late Lockdown: New York Mets bullpen is highly effective in late frames (7th+ ERA: 3.55).",
+      "📉 Target Slumping: Brady Singer is struggling. ERA has spiked by +1.58 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🥶 Target Cold Streak: Cincinnati Reds is struggling, winning only 3 of their last 10 games (Streak: W1).",
+      "🎯 Vulnerable Matchup: Facing Brady Singer (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics."
+    ],
+    "risks": [
+      "⚠️ Late Inefficiency: New York Mets struggles in late frames (7th+ OPS: 0.615).",
+      "⚠️ Bullpen Vulnerability: Cincinnati Reds bullpen is prone to late blowups (7th+ ERA: 4.67).",
+      "📉 Slumping Pitcher: Target's starting pitcher Kodai Senga is struggling. ERA has spiked by +5.98 compared to last year."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T23:10:00Z",
+    "structuralMismatch": "6.5",
+    "unifiedAlpha": 6.5
+  },
+  {
+    "gamePk": 824182,
+    "homeTeam": "Houston Astros",
+    "awayTeam": "Detroit Tigers",
+    "overallConfidence": 60,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Dominant Pitching Advantage: Hunter Brown is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Houston Astros today. Facing Framber Valdez, our model identifies a clear +18.0 technical edge in this arms race. ",
         "side": "home"
       },
       {
@@ -492,34 +483,87 @@
       }
     ],
     "valueTeam": "Houston Astros",
-    "polyConditionId": "d5349ae869ae1b1c6c38042687a3e57b",
+    "polyConditionId": "c589af707f2d0a0ec73c57d02ee85011",
     "polyOutcomeIndex": 1,
     "executionRoute": "NONE",
     "recommendedAction": "PASS - Value identified on undefined, but no Web3 liquidity found.",
-    "recommendedSize": "Zero (0%)",
-    "suggestedStake": 0,
-    "homePitcher": "Kai-Wei Teng",
-    "awayPitcher": "Troy Melton",
-    "homeOdds": 0.559,
-    "awayOdds": 0.481,
-    "matchupNotes": "Troy Melton vs Kai-Wei Teng. Marginal Technical Edge: Our model gives the Houston Astros a slight +6.0 Strength lead over the Detroit Tigers. With Kai-Wei Teng on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
+    "recommendedSize": "Caution (2.0%)",
+    "suggestedStake": 16,
+    "homePitcher": "Hunter Brown",
+    "awayPitcher": "Framber Valdez",
+    "homeOdds": 0.625,
+    "awayOdds": 0.417,
+    "matchupNotes": "Framber Valdez vs Hunter Brown. Dominant Pitching Advantage: Hunter Brown is one of the league's elite starters (top-10% xERA/Whiff%) and starts for the Houston Astros today. Facing Framber Valdez, our model identifies a clear +18.0 technical edge in this arms race. ",
     "advantages": [
-      "📈 Trend Alert: Kai-Wei Teng is peaking this season. ERA has dropped by 2.66 compared to last year.",
+      "🔥 Elite Starting Pitcher: Hunter Brown is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
       "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window."
     ],
     "risks": [
-      "⚠️ Bullpen Vulnerability: Detroit Tigers bullpen is prone to late blowups (7th+ ERA: 4.76)."
+      "⚠️ Bullpen Vulnerability: Detroit Tigers bullpen is prone to late blowups (7th+ ERA: 4.69)."
     ],
     "killCriteria": [
       "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
     ],
     "dataIntegrity": "complete",
-    "time": "2026-06-16T00:10:00Z",
-    "structuralMismatch": "5.3",
-    "unifiedAlpha": 5.3
+    "time": "2026-06-17T00:10:00Z",
+    "structuralMismatch": "6.0",
+    "unifiedAlpha": 6
   },
   {
-    "gamePk": 823046,
+    "gamePk": 823939,
+    "homeTeam": "Los Angeles Dodgers",
+    "awayTeam": "Tampa Bay Rays",
+    "overallConfidence": 60,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 10,
+        "reason": "Pitching Duel: Justin Wrobleski vs. Drew Rasmussen. Both starters carry elite xERA metrics, but the Los Angeles Dodgers hold a +22.0 composite edge driven by Shohei Ohtani providing an offensive cushion the opponent lacks. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Home, but Away has elite pitcher (Drew Rasmussen).",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "2cbf10f5567633534b11bbd7b8a051cc",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Home, but Away has elite pitcher (Drew Rasmussen).",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Justin Wrobleski",
+    "awayPitcher": "Drew Rasmussen",
+    "homeOdds": 0.595,
+    "awayOdds": 0.446,
+    "matchupNotes": "Drew Rasmussen vs Justin Wrobleski. Pitching Duel: Justin Wrobleski vs. Drew Rasmussen. Both starters carry elite xERA metrics, but the Los Angeles Dodgers hold a +22.0 composite edge driven by Shohei Ohtani providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "⚡ Late Power: Los Angeles Dodgers boasts elite late-game hitting (7th+ OPS: 0.776).",
+      "🔥 Late Inning Mismatch: Los Angeles Dodgers has elite late hitting facing a vulnerable Tampa Bay Rays bullpen (Comeback Potential).",
+      "🔥 Elite Starting Pitcher: Justin Wrobleski is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: Justin Wrobleski is peaking this season. ERA has dropped by 1.37 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ],
+    "risks": [
+      "⚠️ Bullpen Vulnerability: Tampa Bay Rays bullpen is prone to late blowups (7th+ ERA: 4.72)."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-17T02:10:00Z",
+    "structuralMismatch": "6.0",
+    "unifiedAlpha": 6
+  },
+  {
+    "gamePk": 823045,
     "homeTeam": "St. Louis Cardinals",
     "awayTeam": "San Diego Padres",
     "overallConfidence": 53,
@@ -527,7 +571,7 @@
       {
         "pillar": "Technical Roster Advantage",
         "score": 5,
-        "reason": "Bullpen Game Stability: With San Diego Padres going to the 'pen, the St. Louis Cardinals hold a +0.5 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Padres's available arms for today's slate. ",
+        "reason": "Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +0.5 Strength lead over the San Diego Padres. With Andre Pallante on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
         "side": "home"
       },
       {
@@ -542,31 +586,234 @@
         "side": "neutral"
       }
     ],
-    "polyConditionId": "6dc67dec6b0c9f4a591f05d0f5912d23",
-    "polySharePrice": 0.602,
-    "polyEV": -0.051999999999999935,
+    "polyConditionId": "700e234cf77980647981a64907dc17d8",
+    "polySharePrice": 0.541,
+    "polyEV": 0.009000000000000008,
     "executionRoute": "POLY",
     "recommendedAction": "PASS - Efficient Market. No EV edge.",
     "recommendedSize": "Zero (0%)",
     "suggestedStake": 0,
-    "homePitcher": "Dustin May",
-    "awayPitcher": "TBD / Bullpen",
-    "homeOdds": 0.602,
-    "awayOdds": 0.439,
-    "matchupNotes": "TBD / Bullpen vs Dustin May. Bullpen Game Stability: With San Diego Padres going to the 'pen, the St. Louis Cardinals hold a +0.5 Depth Advantage. Their secondary pitching metrics and roster flexibility rank higher than the Padres's available arms for today's slate. ",
+    "homePitcher": "Andre Pallante",
+    "awayPitcher": "Michael King",
+    "homeOdds": 0.541,
+    "awayOdds": 0.5,
+    "matchupNotes": "Michael King vs Andre Pallante. Marginal Technical Edge: Our model gives the St. Louis Cardinals a slight +0.5 Strength lead over the San Diego Padres. With Andre Pallante on the mound, this is a low-disparity lean that requires other confirmatory signals before sizing up. ",
     "advantages": [
-      "🥅 Late Lockdown: San Diego Padres bullpen is highly effective in late frames (7th+ ERA: 3.30).",
+      "🥅 Late Lockdown: San Diego Padres bullpen is highly effective in late frames (7th+ ERA: 3.26).",
+      "📈 Trend Alert: Andre Pallante is peaking this season. ERA has dropped by 1.43 compared to last year.",
       "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
-      "🔥 Team Momentum: St. Louis Cardinals is surging, winning 7 of their last 10 games (Streak: L1)."
+      "🔥 Team Momentum: St. Louis Cardinals is surging, winning 7 of their last 10 games (Streak: W1)."
     ],
     "risks": [],
     "killCriteria": [
-      "ABORT IF: Expected starter scratch or transition to unknown opener.",
       "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
     ],
     "dataIntegrity": "complete",
-    "time": "2026-06-15T23:45:00Z",
+    "time": "2026-06-16T23:45:00Z",
     "structuralMismatch": "5.3",
-    "unifiedAlpha": 4.78
+    "unifiedAlpha": 5.39
+  },
+  {
+    "gamePk": 823535,
+    "homeTeam": "New York Yankees",
+    "awayTeam": "Chicago White Sox",
+    "overallConfidence": 53,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Pitching Duel: Gerrit Cole vs. Davis Martin. Both starters carry elite xERA metrics, but the New York Yankees hold a +5.0 composite edge driven by lineup depth providing an offensive cushion the opponent lacks. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 7,
+        "reason": "Hitter's Park: Yankee Stadium boosts run environment (+1)."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Home, but Away has elite pitcher (Davis Martin).",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "1d3a926b2cba97faaba2228f43c77a47",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Home, but Away has elite pitcher (Davis Martin).",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Gerrit Cole",
+    "awayPitcher": "Davis Martin",
+    "homeOdds": 0.592,
+    "awayOdds": 0.45,
+    "matchupNotes": "Davis Martin vs Gerrit Cole. Pitching Duel: Gerrit Cole vs. Davis Martin. Both starters carry elite xERA metrics, but the New York Yankees hold a +5.0 composite edge driven by lineup depth providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "⚡ Late Power: New York Yankees boasts elite late-game hitting (7th+ OPS: 0.769).",
+      "🥅 Late Lockdown: New York Yankees bullpen is highly effective in late frames (7th+ ERA: 3.53).",
+      "🔥 Elite Starting Pitcher: Gerrit Cole is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Offensive Surge: 2 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🔥 Team Momentum: New York Yankees is surging, winning 7 of their last 10 games (Streak: W2)."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T23:05:00Z",
+    "structuralMismatch": "5.3",
+    "unifiedAlpha": 5.3
+  },
+  {
+    "gamePk": 824750,
+    "homeTeam": "Boston Red Sox",
+    "awayTeam": "Toronto Blue Jays",
+    "overallConfidence": 50,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 6,
+        "reason": "Pitching Duel: Payton Tolle vs. Dylan Cease. Both starters carry elite xERA metrics, but the Boston Red Sox hold a +3.5 composite edge driven by lineup depth providing an offensive cushion the opponent lacks. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 7,
+        "reason": "Hitter's Park: Fenway Park boosts run environment (+1)."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Home, but Away has elite pitcher (Dylan Cease).",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "91665afcba863c3c8347ba9ee65ac461",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Home, but Away has elite pitcher (Dylan Cease).",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Payton Tolle",
+    "awayPitcher": "Dylan Cease",
+    "homeOdds": 0.568,
+    "awayOdds": 0.495,
+    "matchupNotes": "Dylan Cease vs Payton Tolle. Pitching Duel: Payton Tolle vs. Dylan Cease. Both starters carry elite xERA metrics, but the Boston Red Sox hold a +3.5 composite edge driven by lineup depth providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "🥅 Late Lockdown: Boston Red Sox bullpen is highly effective in late frames (7th+ ERA: 2.69).",
+      "🔥 Elite Starting Pitcher: Payton Tolle is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: Payton Tolle is peaking this season. ERA has dropped by 3.41 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window."
+    ],
+    "risks": [],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-16T22:45:00Z",
+    "structuralMismatch": "5.0",
+    "unifiedAlpha": 5
+  },
+  {
+    "gamePk": 824991,
+    "homeTeam": "Athletics",
+    "awayTeam": "Pittsburgh Pirates",
+    "overallConfidence": 47,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 6,
+        "reason": "Offense vs. Defense Mismatch: The Athletics, led by Nick Kurtz, are in a peak offensive window and facing Mitch Keller — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +2.0 delta signals high scoring probability. ",
+        "side": "home"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 6,
+        "reason": "Cactus League: Slight dry-air offensive boost."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Home, but Home pitcher (Jack Perkins) is weak.",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "c20c72e3d1d902b5d151e9b6e7f76995",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Home, but Home pitcher (Jack Perkins) is weak.",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Jack Perkins",
+    "awayPitcher": "Mitch Keller",
+    "homeOdds": 0.581,
+    "awayOdds": 0.459,
+    "matchupNotes": "Mitch Keller vs Jack Perkins. Offense vs. Defense Mismatch: The Athletics, led by Nick Kurtz, are in a peak offensive window and facing Mitch Keller — a pitcher with vulnerable secondary metrics (xERA/ERA > 5.00). A +2.0 delta signals high scoring probability. ",
+    "advantages": [
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window.",
+      "🥶 Target Cold Streak: Pittsburgh Pirates is struggling, winning only 2 of their last 10 games (Streak: L2).",
+      "🎯 Vulnerable Matchup: Facing Mitch Keller (ERA/xERA > 5.00), who has shown consistent vulnerability against high-power offenses in recent starts.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift.",
+      "🚀 Tactical Advantage: Optimized scoring opportunity against a bottom-tier starter with poor secondary metrics."
+    ],
+    "risks": [
+      "⚠️ Bullpen Vulnerability: Athletics bullpen is prone to late blowups (7th+ ERA: 4.94).",
+      "⚠️ Bullpen Vulnerability: Pittsburgh Pirates bullpen is prone to late blowups (7th+ ERA: 4.67).",
+      "📉 Slumping Pitcher: Target's starting pitcher Jack Perkins is struggling. ERA has spiked by +2.06 compared to last year."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-17T01:40:00Z",
+    "structuralMismatch": "4.7",
+    "unifiedAlpha": 4.7
+  },
+  {
+    "gamePk": 823128,
+    "homeTeam": "Seattle Mariners",
+    "awayTeam": "Baltimore Orioles",
+    "overallConfidence": 45,
+    "pillars": [
+      {
+        "pillar": "Technical Roster Advantage",
+        "score": 7,
+        "reason": "Pitching Duel: Logan Gilbert vs. Brandon Young. Both starters carry elite xERA metrics, but the Baltimore Orioles hold a +5.0 composite edge driven by Adley Rutschman providing an offensive cushion the opponent lacks. ",
+        "side": "away"
+      },
+      {
+        "pillar": "Seasonal (Sport)",
+        "score": 4.5,
+        "reason": "Pitcher's Park: T-Mobile Park suppresses runs (-1.5)."
+      },
+      {
+        "pillar": "Technical (Bookies)",
+        "score": 2,
+        "reason": "VETO: +EV on Away, but Home has elite pitcher (Logan Gilbert).",
+        "side": "neutral"
+      }
+    ],
+    "polyConditionId": "cb86c66f7562172318c2e8f571b8fea9",
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Home has elite pitcher (Logan Gilbert).",
+    "recommendedSize": "Zero (0%)",
+    "suggestedStake": 0,
+    "homePitcher": "Logan Gilbert",
+    "awayPitcher": "Brandon Young",
+    "homeOdds": 0.588,
+    "awayOdds": 0.455,
+    "matchupNotes": "Brandon Young vs Logan Gilbert. Pitching Duel: Logan Gilbert vs. Brandon Young. Both starters carry elite xERA metrics, but the Baltimore Orioles hold a +5.0 composite edge driven by Adley Rutschman providing an offensive cushion the opponent lacks. ",
+    "advantages": [
+      "🔥 Elite Starting Pitcher: Brandon Young is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "📈 Trend Alert: Brandon Young is peaking this season. ERA has dropped by 3.20 compared to last year.",
+      "⚡ Offensive Surge: 3 players in the starting lineup are currently on a 72h 'heater' with elevated hard-hit rates, indicating a peak scoring window."
+    ],
+    "risks": [
+      "⚠️ Bullpen Vulnerability: Baltimore Orioles bullpen is prone to late blowups (7th+ ERA: 4.69)."
+    ],
+    "killCriteria": [
+      "ABORT IF: Crowd Price shifts below 45% (Sharp reversal)."
+    ],
+    "dataIntegrity": "complete",
+    "time": "2026-06-17T01:40:00Z",
+    "structuralMismatch": "4.5",
+    "unifiedAlpha": 4.5
   }
 ]

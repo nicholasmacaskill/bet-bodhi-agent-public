@@ -98,6 +98,54 @@ export class PolymarketApi {
         }
     }
 
+    /**
+     * Fetches ALL active Polymarket markets tagged as Sports (soccer, baseball, tennis, MMA etc).
+     * Uses tag_slug rather than a title keyword so it captures every sport regardless of naming format.
+     */
+    async getAllActiveSportsMarkets(): Promise<PolyMarket[]> {
+        const markets: PolyMarket[] = [];
+        const SPORTS_TAG_SLUGS = ['sports', 'soccer', 'baseball', 'basketball', 'tennis', 'mma', 'football', 'golf', 'nfl', 'nba', 'mlb', 'kbo'];
+        const seen = new Set<string>();
+
+        try {
+            for (const tagSlug of SPORTS_TAG_SLUGS) {
+                let offset = 0;
+                for (let page = 0; page < 3; page++) {
+                    const url = `${this.gammaUrl}/events?active=true&closed=false&limit=500&offset=${offset}&tag_slug=${tagSlug}`;
+                    const response = await fetch(url);
+                    if (!response.ok) break;
+                    const data = await response.json();
+                    if (!data || !Array.isArray(data) || data.length === 0) break;
+
+                    for (const event of data) {
+                        if (!event.markets || !Array.isArray(event.markets)) continue;
+                        for (const market of event.markets) {
+                            if (!market.active || market.closed) continue;
+                            if (seen.has(market.conditionId)) continue;
+                            seen.add(market.conditionId);
+                            markets.push({
+                                conditionId: market.conditionId,
+                                question: market.question,
+                                description: market.description || event.description || '',
+                                outcomes: market.outcomes ? (typeof market.outcomes === 'string' ? JSON.parse(market.outcomes) : market.outcomes) : [],
+                                outcomePrices: market.outcomePrices ? (typeof market.outcomePrices === 'string' ? JSON.parse(market.outcomePrices) : market.outcomePrices) : [],
+                                category: (event.tags || []).map((t: any) => t.label).join(', '),
+                                active: market.active,
+                                volume: parseFloat(market.volume || '0'),
+                                endDate: market.endDate,
+                                clobTokenIds: market.clobTokenIds ? (typeof market.clobTokenIds === 'string' ? JSON.parse(market.clobTokenIds) : market.clobTokenIds) : []
+                            });
+                        }
+                    }
+                    offset += 500;
+                }
+            }
+            return markets.sort((a, b) => b.volume - a.volume);
+        } catch (error) {
+            return [];
+        }
+    }
+
     async getMarketByTeams(homeTeam: string, awayTeam: string): Promise<PolyMarket | null> {
         const homeMascot = homeTeam.split(' ').pop()?.toLowerCase() || "";
         const awayMascot = awayTeam.split(' ').pop()?.toLowerCase() || "";

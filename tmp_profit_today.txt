@@ -1,0 +1,83 @@
+
+📡 Fetching all trades from Polymarket...
+[poly] Syncing history for Proxy (0x98652277eb9f1164d121c207e7a620710072f6af) and EOA (0xb1Aa8Ff8CEeB5506044DB7BcB2B2D243Ff680BB1)
+✅ Total trades fetched: 975
+
+📅 Trades on 2026-05-24: 23
+
+══════════════════════════════════════════════════════════
+   MAY 24, 2026 — POLYMARKET TRADE BREAKDOWN
+══════════════════════════════════════════════════════════
+
+  ⏳ LIVE  Baltimore Orioles
+        Token Price: $0.000 | Closed: false
+        Bought: 62.21 shares | Cost: $17.60
+        Held:   62.21 shares × $0.000 = $0.00
+        PnL:    $-17.60
+        Time:   Sun, 24 May 2026 23:21:22 GMT
+
+  ⏳ LIVE  San Diego Padres
+        Token Price: $0.000 | Closed: false
+        Bought: 142.48 shares | Cost: $26.00
+        Held:   142.48 shares × $0.000 = $0.00
+        PnL:    $-26.00
+        Time:   Sun, 24 May 2026 22:26:17 GMT
+
+  ⏳ LIVE  Washington Nationals
+        Token Price: $0.000 | Closed: false
+        Bought: 47.62 shares | Cost: $20.00
+        Held:   47.62 shares × $0.000 = $0.00
+        PnL:    $-20.00
+        Time:   Sun, 24 May 2026 20:50:04 GMT
+
+  ⏳ LIVE  Colorado Rockies
+        Token Price: $0.000 | Closed: false
+        Bought: 135.91 shares | Cost: $24.75
+        Held:   135.91 shares × $0.000 = $0.00
+        PnL:    $-24.75
+        Time:   Sun, 24 May 2026 20:38:24 GMT
+
+  ⏳ LIVE  Tampa Bay Rays
+        Token Price: $0.000 | Closed: false
+        Bought: 41.67 shares | Cost: $15.00
+        Held:   41.67 shares × $0.000 = $0.00
+        PnL:    $-15.00
+        Time:   Sun, 24 May 2026 19:47:48 GMT
+
+  ✅ SOLD +  LG Twins
+        Token Price: $0.000 | Closed: false
+        Bought: 59.29 shares | Cost: $10.08
+        Sold:   59.29 shares | Returned: $58.70
+        PnL:    +$48.62
+        Time:   Sun, 24 May 2026 08:23:32 GMT
+
+  ⏳ LIVE  KT Wiz
+        Token Price: $0.000 | Closed: false
+        Bought: 153.36 shares | Cost: $41.93
+        Held:   153.36 shares × $0.000 = $0.00
+        PnL:    $-41.93
+        Time:   Sun, 24 May 2026 07:28:14 GMT
+
+  ⏳ LIVE  Colorado Rockies
+        Token Price: $0.000 | Closed: false
+        Bought: 29.63 shares | Cost: $8.00
+        Held:   29.63 shares × $0.000 = $0.00
+        PnL:    $-8.00
+        Time:   Sun, 24 May 2026 04:33:21 GMT
+
+══════════════════════════════════════════════════════════
+  TOTAL WAGERED  : $163.36
+  TOTAL RETURNED : $58.70
+  NET PROFIT     : $-104.66
+══════════════════════════════════════════════════════════
+
+
+📋 All asset IDs from today:
+  Baltimore Orioles: 74148967575841623293102935797047752053333334003993175083419013681316847598518
+  San Diego Padres: 31987824570137006392932740882267235719782230423372276281448197755185945587174
+  Washington Nationals: 2109591287620601756011692238467942602916240352469954758217021052426035822444
+  Colorado Rockies: 11989369804747893377828849362707182758572966174557506013164717546335191157411
+  Tampa Bay Rays: 71831018206710859975877867307833144174313005308726086803834558452944445887179
+  LG Twins: 107523806411815543723804986136586392219218361679953116081831061157515240470924
+  KT Wiz: 110224784066170306528213883614367161379775275209191221818315596189121209503249
+  Colorado Rockies: 18533790216271918784564948679877204200405128682170797615051047500927253882027

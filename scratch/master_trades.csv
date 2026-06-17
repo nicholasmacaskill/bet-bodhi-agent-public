@@ -1,0 +1,1158 @@
+marketName,action,usdcAmount,tokenAmount,tokenName,timestamp,hash
+Los Angeles Dodgers vs. Milwaukee Brewers,Sell,42.4215,42.85,Los Angeles Dodgers,1773096759,0x9a644ba6de01b39b44eef24280ba80af1d3dbbab0fe0e95b46bed2573d683938
+Pittsburgh Pirates vs. New York Yankees,Buy,11.999999,31.846828,Pittsburgh Pirates,1773096219,0x47b34a542461e5017d6d36a0f8d80216efdfa2507fa88f1f9b5e25b12d64962a
+Los Angeles Dodgers vs. Milwaukee Brewers,Buy,20.999999,42.857141,Los Angeles Dodgers,1773089903,0xa6dc621b691469f47d946951b5d230e6d221b68a059f1e2b9566d30e89d3cfc5
+Oilers vs. Golden Knights,Sell,40.76919,40.81,Oilers,1773030319,0xfa81535dc6a566d003c07a6f0770056289c71ca30b24bf7d08dcf83352fb02e9
+Oilers vs. Golden Knights,Buy,19.999999,40.816325,Oilers,1773020899,0xabfa8c3806c8d5b1b8e64ca8c42d092e3545387c0ecf6df8a54ebd48595cb7cf
+Withdrew funds,Withdraw,22,22,USDC,1773020521,0xdb49d5a3f875863a2cc56b5e7f6c0c6a1710027af18682d3abaf0ceb18558f10
+Lightning vs. Sabres,Sell,20.5898,26.74,Lightning,1773016109,0x3bda9d7ea685c9771ef4d7aedafdb72708144b5ecfe51dc4fcebb8f2ba528f81
+Withdrew funds,Withdraw,25,25,USDC,1773012941,0x102715359cd1df7811b1f4bd6ca8653b783470c22e020918190ba4e9ebcfc949
+Lightning vs. Sabres,Buy,9.999999,26.732893,Lightning,1773012021,0x1e57d43f1a9931c4dd29f7522ce63782ac9d4346fff6f1d4585f86352c2dc6f4
+Lightning vs. Sabres,Sell,9.8244,27.29,Lightning,1773011861,0x17efa7f37bafaa5c2bbec94a78b610afb4582df7d3f4a488bc03e535ecb6e4e7
+Islanders vs. Sharks,Redeem,0,0,,1773011313,0x7026c8d90f4e65c108af8af640428708b0c1cfa083b921bed9cd843c1893e412
+Arizona Diamondbacks vs. Cincinnati Reds,Sell,52.74852,53.88,Cincinnati Reds,1773010353,0x371c77fd1d064a8619fe14ab4f888bfaebb955e5ddc1bb5a7168ee1dbfdf12ae
+Arizona Diamondbacks vs. Cincinnati Reds,Sell,9.36,10,Cincinnati Reds,1773010205,0xdd8c31ea3b2d43c9df71ee9b17b893ff746e6651aea86265af75aa700cc233fd
+Los Angeles Dodgers vs. Athletics,Sell,59.74206,60.83,Athletics,1773010169,0xc6b47d5738f024c5b130584a327f2b6a97d280d0c7b959baed07969ec9d90575
+Lightning vs. Sabres,Buy,9.999999,27.297296,Lightning,1773009773,0xd2a5ae8e91ac1b3bf6162a24507e129c978a860d18db65a625f55e0eea2f8952
+Los Angeles Dodgers vs. Athletics,Buy,24.999999,60.831729,Athletics,1773007593,0x76f722f445eec1ae1a42a462c9efa362aac17bf205c498efddb20a1e8daf9ae9
+Arizona Diamondbacks vs. Cincinnati Reds,Buy,41.999999,63.880596,Cincinnati Reds,1773001325,0xfe81f0e98e1bfb35837cefe2641355e8aa19369be3a0b517a891fc9ae580ec6f
+Lightning vs. Sabres,Sell,17.180038,34.989996,Sabres,1772961697,0xf70a42f835e68fe375c21299ad188096d697aae2f8bef6d56b9f2f5a82cd557b
+Lightning vs. Sabres,Buy,17.465039,34.999996,Sabres,1772961389,0x88ae4d890ee70efeb45444740379282caab03787ab27180794bbcba62487b8f5
+Hornets vs. Suns,Sell,1.886679,2.989998,Hornets,1772960873,0xe7b1e246525d8307c2e907039fb7b3ad53501051cca3fb28bcaf46a765569faf
+Hornets vs. Suns,Buy,1.916998,2.999995,Hornets,1772960725,0xbc61a432f43d90874083a5d209ad5336b6549fbeeb24c30d721796c7aba9b90a
+Deposited funds,Deposit,182.018311,182.018311,USDC,1772949487,0x743ea42fdbaddfeaedb717269df994d1a6dde8438093bebffb42ebbb6cbac7ee
+Islanders vs. Sharks,Buy,20.999999,43.265305,Sharks,1772946513,0xc6852662658dd13c15831587174adfe0cdd8a52791012b640bc53c68c437437d
+Deposited funds,Deposit,31.824135,31.824135,USDC,1772940855,0xacd59a6dcb599f2edbfc0628e8e3a37442aad59399f27743b9ed48a8c33fd16b
+Withdrew funds,Withdraw,32,32,USDC,1772940683,0x1e3d148b1ce48f33bb68a13af851fe7cdf54dc7d98edb0ef186220c50a4febf5
+Deposited funds,Deposit,182.06378000000004,182.06378000000004,USDC,1772939577,0xfd387391efab776d2fba4c736eb2e60251bf9151171772d41141ee5bf6b3e584
+San Diego Padres vs. Athletics,Sell,96.9064,107.76,San Diego Padres,1773443195,0x5368bd72fcca0a2a5ba643c694f5a6ce7cc611c7d6760654b52058eae028d3bc
+San Diego Padres vs. Athletics,Buy,1.4972,7.88,San Diego Padres,1773441457,0x36a7fae985400dc63289fddaee339c38cebd8f9874e5cbd8b719ea55f5b44d0d
+"Bitcoin Up or Down - March 13, 5:15PM-5:20PM ET",Sell,11.60252,11.72,Up,1773436815,0xfe948cce040d320466d4151c68e85c84b4ff9da8dbfd34c6c8e6a770929afa8a
+"Bitcoin Up or Down - March 13, 5:15PM-5:20PM ET",Buy,4.999999,11.728159999999999,Up,1773436739,0x46fb0d1ea468779db9b81f158d3194acf31e306bfcd5f8bc2b22016a077eda34
+Chicago Cubs vs. Chicago White Sox,Buy,3.999999,26.666665,Chicago Cubs,1773436523,0x30bd92763794758efe2821bd753e69da5910a5a0e14f05ea344227aa882fdf6c
+Chicago Cubs vs. Chicago White Sox,Buy,10.999999,34.162423,Chicago Cubs,1773435973,0xd4b4d968eb9e6c8ba89490c2374ede7300471a1bdfc36203bec071ba8ec2ce23
+San Diego Padres vs. Athletics,Buy,42.999999,99.886362,San Diego Padres,1773428839,0x62ba8fbf53255718547ef83b4d476610e350dc4f437eac309ddb8aadda4eb7d7
+"Solana Up or Down - March 13, 2:45PM-2:50PM ET",Buy,7,49.8188,Up,1773427629,0xeac8c225568e0977906577dbc8ac8d085864561a76fb822220cf889a25f1bd1c
+Minnesota Twins vs. Toronto Blue Jays,Buy,9.999999,25.573657,Minnesota Twins,1773427225,0x8eb56bfb8c5cd9128b317cb73f509074489e676c10ab2e91ed9e222a0c6d7320
+Minnesota Twins vs. Toronto Blue Jays,Buy,11.999999,42.030332,Minnesota Twins,1773426011,0x535382baae9ce6263bbb7e780de2122396c95c11a5e32bc15e8974587f3e8cb3
+"Bitcoin Up or Down - March 13, 6:10AM-6:15AM ET",Buy,6.999999,21.684655,Down,1773396685,0x010a247afc7243421de48b0b911163d1d497d62ccd054c9b874565cf4e94da69
+"Bitcoin Up or Down - March 13, 6:05AM-6:10AM ET",Buy,10,24.64,Up,1773396355,0x25d7b3940c60fca83e3ab6539e0e5db9a77f20acdc156e16b9f42c06a739a9b9
+"Bitcoin Up or Down - March 13, 5:55AM-6:00AM ET",Buy,9.999999,17.903387,Up,1773395841,0x694d83571bd2738fabe64660bfe8879520f6bfa741e65ce2023c0a26e224fa31
+"Bitcoin Up or Down - March 13, 5:50AM-5:55AM ET",Buy,7.999999,16.071639,Down,1773395451,0x3243161795c18f39ff82c55ce18477951ae5a637616196737430e4522d8c0d6d
+"Bitcoin Up or Down - March 13, 5:45AM-5:50AM ET",Buy,0.4639,46.38887,Down,1773395349,0x894705763ee0c554e0cb1b21acb0878ef9be0e41b8abfb067682f7dabe661ae5
+"Bitcoin Up or Down - March 13, 5:40AM-5:45AM ET",Sell,17.641865,20.079998,Up,1773395077,0x4c01bca6346dc3a41512e5f69b30a66b56d6c35a1f9a1db8015acd31af840a6f
+"Bitcoin Up or Down - March 13, 5:40AM-5:45AM ET",Buy,9.999999,20.089542,Up,1773394937,0x56027ee2b43b1eb216a2c5adc0174f2c1745d259df56bfcd83cdb580e99547bb
+"Bitcoin Up or Down - March 13, 5:35AM-5:40AM ET",Buy,4.999999,9.116438,Up,1773394549,0xe1086ff31b5f46cb13d7221cefec145265df8a2b34faab344e4acd9733574e59
+"Bitcoin Up or Down - March 13, 5:30AM-5:35AM ET",Sell,19.898888,20.079998,Up,1773394509,0x9027a3a3afffe144c5141c37c9ca93a27707604270b00879ad445a4324cb2a45
+"Bitcoin Up or Down - March 13, 5:30AM-5:35AM ET",Buy,9.999999,20.089542,Up,1773394225,0xdc496979b5dae940f7612f678ecad4a586e81c148eda860457b0820de27888b1
+"Bitcoin Up or Down - March 13, 5:25AM-5:30AM ET",Sell,18.017199,19.809998,Up,1773394107,0x94d1943276f5a7fba0153e3674fafc82ad86fdc78b2b82265750970752549326
+"Bitcoin Up or Down - March 13, 5:25AM-5:30AM ET",Buy,9.999999,19.815744000000002,Up,1773393971,0x2ff325ab5d4e0cc20328288dedb439e8bfb5e6d3ad349cd43bd2cfb28245b1ea
+"Bitcoin Up or Down - March 13, 5:20AM-5:25AM ET",Buy,1.999999,13.368837,Up,1773393717,0xf5525954584d5027a6ec5fb503914afb0ceba5ff40b6f7d50aea8542ed9f75df
+"Bitcoin Up or Down - March 13, 5:15AM-5:20AM ET",Sell,13.110667,13.229996,Up,1773393609,0xffeb37158c0d56c4af1db1b70e38bee6e47e35e6975f2a401358be1a4064ec77
+"Bitcoin Up or Down - March 13, 5:15AM-5:20AM ET",Buy,3.999999,13.230999,Up,1773393381,0xb29a0406f7696dd8a72e18bbd3afa1013f7acd45fa8fbcd32cef3e6e19c43968
+"Bitcoin Up or Down - March 13, 5:10AM-5:15AM ET",Sell,11.961138,12.069998,Down,1773393313,0xb7fc9f5d07d28912a0f1cb6b1e2357fd7aebb71e2955c6cf79d91f06697a50fa
+"Bitcoin Up or Down - March 13, 5:10AM-5:15AM ET",Buy,5.999999,12.078403999999999,Down,1773393037,0xaf41998d174b9d83ff89d7dc75e23b4c81fb8d96f27525b15022c84a368f7a3e
+"Bitcoin Up or Down - March 13, 5:05AM-5:10AM ET",Sell,8.97656,11.75,Down,1773392897,0xf770a4e6b987899c4b30a1108e4e0b2a18cc59c3f682185a92adae959a396ec2
+"Bitcoin Up or Down - March 13, 5:05AM-5:10AM ET",Buy,4.999999,11.75638,Down,1773392843,0x39d51c89c2f37e67e79e56d6d0bc2ee3c7721d7ab2797a1c43265de4e3ddc949
+"Bitcoin Up or Down - March 13, 2:55AM-3:00AM ET",Buy,9.999999,20.13067,Up,1773385085,0xada95b6ccef9935270ca03f3c6623a48f3d38deed79c0850b94644dae93d04d3
+Chicago White Sox vs. San Francisco Giants,Sell,31.185,62.37,San Francisco Giants,1773374497,0xf92aeaf1639e046e92dadfdd5496925935bdc4d145b62d5e98f63dcb54bb9ba8
+Chicago White Sox vs. San Francisco Giants,Buy,4.999999,13.888887,San Francisco Giants,1773370987,0xb18b85cdad8575d54414637b4738cb2254a4b06020347326031cf27708845670
+Chicago White Sox vs. San Francisco Giants,Buy,19.999999,48.488371,San Francisco Giants,1773367575,0x27930db6d589c823a298ee175d7642aaf2ae59e762dc95e2d74ddcfd338a45a6
+Washington Nationals vs. Houston Astros,Sell,109.0086,112.38,Washington Nationals,1773366975,0xa6a3cfa265d0e59dae181aadc12a2713aff608086ecf075647ec1ce8a800e408
+Washington Nationals vs. Houston Astros,Buy,3.489999,12.464284,Washington Nationals,1773362641,0x515c4c4a0ad2f392dbb95e5b556383860b516bd5a17d39edcadeb581c902060b
+Washington Nationals vs. Houston Astros,Buy,6.999999,22.141141,Washington Nationals,1773359287,0x8f1ee7ba12c828f80f330be3249dead4db255a1aff4c7bf669cd94f948fedcd4
+Atlanta Braves vs. Pittsburgh Pirates,Buy,29.999999,59.462744,Atlanta Braves,1773354869,0x99948abe9200e5f044477703100f5330c5d494d0ccc203a6f0bf0d65210ec08d
+Athletics vs. Texas Rangers,Buy,4.999999,33.333332,Athletics,1773351175,0x94af9800d1d8d17f86d37876fddaa4f86adab46ad73c902af7b8f2a2b137b478
+Washington Nationals vs. Houston Astros,Buy,34.999999,77.777776,Washington Nationals,1773349657,0x20fa7bc013d14b8ba31d4f30747dacecf4f6f3afc14fff929e059ad0a7f84828
+"Bitcoin Up or Down - March 12, 1:30AM-1:35AM ET",Buy,7.999999,36.069198,Down,1773293497,0x06a4364ba668fa4bb27b5c94c02b119d35b090961b89437abf87e7b4e68ada08
+Rockets vs. Nuggets,Buy,11.999999,44.444443,Rockets,1773282353,0x4f6643fa90bfb0707fc42e590c1dbf77cb9cf6a0fda50949690c66b5c11ee0df
+Canadiens vs. Senators,Sell,47.56239,47.61,Canadiens,1773282251,0x54c18705574cdce95bcc838527940822a5c9fd8f827279d750e18ebe8945cdc3
+Canadiens vs. Senators,Buy,19.999999,47.619046,Canadiens,1773278499,0x102d1ae261cbc2e5eed7dc9016e43d3e71ed2115fb0f2511220de2ca27b451aa
+Toronto Blue Jays vs. New York Yankees,Buy,4.999999,20.833332,Toronto Blue Jays,1773272217,0x26929215cc09597a4a8fea74bc9d82daf22d5a0ff5a978390ff540b87219ce86
+Toronto Blue Jays vs. New York Yankees,Buy,24.999999,59.523808,Toronto Blue Jays,1773268575,0xaa650960ea3d688bf0c402f2341895232b24f50ccfd481d5c39163507f1f1ebd
+Milwaukee Brewers vs. Cincinnati Reds,Sell,57.267,63.63,Cincinnati Reds,1773267803,0x6cd196b3d35c30b3c5b30e24ab2815242335e6e45ad2e6303deee7569dbaf613
+Los Angeles Angels vs. Chicago White Sox,Buy,4.999999,20.352757,Chicago White Sox,1773266887,0xbb1546e917fe09b9c4636d24738d098cb7f5d88bf712e7ee514bd4f5a38fca84
+Los Angeles Angels vs. Chicago White Sox,Buy,14.999999,40.675674,Chicago White Sox,1773266831,0x1589ee649f753e80e07fe240ec79cb9aef2a8b5b42a023efee3fec7b245bc348
+Milwaukee Brewers vs. Cincinnati Reds,Buy,34.999999,63.636362,Cincinnati Reds,1773258323,0xa9b1f6019f1e9a7a8f3a3136a4ae093d66a16277747c03729d119b2ed47710e1
+"Bitcoin Up or Down - March 11, 5:00AM-5:05AM ET",Buy,4.999999,23.759414,Up,1773219765,0x1281969d5fd73aa3b21af15965cca3dc8854b667be9e1dee38782eea555ca532
+"Bitcoin Up or Down - March 11, 4:55AM-5:00AM ET",Sell,6.054546,6.06,Up,1773219641,0x900e6238eb7a0b3493c0c90ef9458a498df955f4d07743f587efb8d7626168fa
+"Bitcoin Up or Down - March 11, 4:55AM-5:00AM ET",Buy,5.999994,6.06046,Up,1773219555,0x099a3cfd97abdf4248cc9e56c97ebe85eb9c434dc8f31cc9ec69c8b3bfedc60a
+Timberwolves vs. Lakers,Sell,0.61536,38.46,Timberwolves,1773206351,0x71ab61a597cb25fe540a8223e96e48e45c393d5bcbd5fc7fedcdc7b10155aea7
+Oilers vs. Avalanche,Sell,94.5155,99.49,Oilers,1773204661,0x8c2ffc1dcac9d3cda89a874b4f95653a7986fb40e23ce31937f7388522cd4004
+Timberwolves vs. Lakers,Buy,9.999999,38.461537,Timberwolves,1773204079,0x1c5ddc0e9179a650aa72de808bf1ea409a79a3c02cd4aa02e21a5b2b1d6382ca
+Oilers vs. Avalanche,Buy,4.999999,19.230768,Oilers,1773197139,0x26cd13f5d709ff2ee8c9a3c49eedcbe1e87c46d49961980e97d6158c67235fb8
+Oilers vs. Avalanche,Buy,29.999999,80.263156,Oilers,1773196631,0x0069716f1139240ad1f088237d0321ace105c5354e95a8ffd5a354fccd6b98d9
+Utah vs. Blackhawks,Sell,28.91106,28.94,Blackhawks,1773112709,0xe64b9c23ed9afdcabdb893735ad666896a78fab458e7445d79565912d043da03
+Utah vs. Blackhawks,Buy,10.999999,28.947367,Blackhawks,1773110207,0x03222200e6d6789a59f66f06db8934606757db2331c6084176ac6a3119663670
+Pittsburgh Pirates vs. New York Yankees,Sell,31.5216,31.84,Pittsburgh Pirates,1773105797,0xc7d662a9372f48d5ebb33100de7a5ffa6f1dd64a78e49dce0df05b7e28144d50
+Flames vs. Capitals,Buy,10.999999,25.581394,Flames,1773104387,0x96902f4ba179c87da3aeb94253b070820bd1b1bc16436839d9f5a4c88e053ea8
+Blue Jackets vs. Flyers,Buy,19.999999,49.164633,Flyers,1773539765,0x6e9f4dc4da9b570237d4bb4dfeaa1ada2ca400bcbfc1e328c354c2ff219739e4
+Maple Leafs vs. Sabres,Buy,24.999999,64.102563,Maple Leafs,1773535835,0x6d429f4a879a560f0422256ec8a14b86a7c97f53c4dc52983e43a81c4e77f668
+Boston Red Sox vs. Atlanta Braves,Buy,11.219999,34.766469,Boston Red Sox,1773532957,0xa93dce3b7490d48d8e5aca9b04a53a6ed9293411eacd7269e4362be0c3fe25e3
+New York Mets vs. Houston Astros,Buy,2.2599,7.29,New York Mets,1773529973,0x8887c1a81a98a6d7aeb1d4ddc90914af94725e7e0f316f90ede35aa9a2ef6b8e
+Arizona Diamondbacks vs. San Francisco Giants,Sell,43.82613,43.87,Arizona Diamondbacks,1773529775,0x619e09f8dcae8b2bb942bb13b1fc9213d2db75774de2ad2d4cc11de8e1fb965d
+Arizona Diamondbacks vs. San Francisco Giants,Buy,19.999999,43.874457,Arizona Diamondbacks,1773527493,0xfd158575c6206b74640c8512af7b4a4b72eb7f06bc2f586225d9aa5b05681de0
+Los Angeles Dodgers vs. Chicago White Sox,Buy,0.999999,16.666665,Los Angeles Dodgers,1773526671,0x7f61d62641ffadb49bc1d582d4ab7a3ae542b479fc0a05444bccabbd76d21d45
+Los Angeles Dodgers vs. Chicago White Sox,Buy,2.999999,27.272726,Los Angeles Dodgers,1773522871,0x96e2b94c51e9f05070baa922498c6ad3bb56ec866d019f9f5200fbf2b0503922
+Los Angeles Dodgers vs. Chicago White Sox,Buy,16.999999,66.534614,Los Angeles Dodgers,1773521873,0x94176c8e1516d96b15b0aa3a22fefcc97036bde6fff30de4bc1048f9828227c9
+Arizona Diamondbacks vs. Kansas City Royals,Buy,3.71,14.84,Kansas City Royals,1773458829,0x91bf1b64f1cdd3d4c8d8ba9602a421861a59c2b9a5bc98de2833e883622ecb99
+"Bitcoin Up or Down - March 13, 10:25PM-10:30PM ET",Buy,4.999999,18.864111,Up,1773455133,0x1b9cbb264e101121a5c4b712906a9944cb88c12eed9c5e8859eb5264dbdd5751
+"Bitcoin Up or Down - March 13, 10:20PM-10:25PM ET",Sell,5.67502,12.01,Up,1773455089,0xdf2158f9ccd27296b38cb966643e291a318c304b6097948e8902061eda9c2773
+"Bitcoin Up or Down - March 13, 10:20PM-10:25PM ET",Buy,4.999999,12.01672,Up,1773454961,0x7c9846af58d4480c3fa2a61e2298d1f2a4b4ac6e0e515027d83f15a39588c381
+Arizona Diamondbacks vs. Kansas City Royals,Buy,11,28.794,Kansas City Royals,1773454063,0x4df128351a1db994216eba16b61044003ce2a99e82d94c0d921e6d396569bac9
+Houston Astros vs. St. Louis Cardinals,Sell,34.04592,34.08,St. Louis Cardinals,1773451925,0x045a670555999c63a82e9d5ed00c8e1a14fadb6f024607b2adb6469dcc40fcdd
+Houston Astros vs. St. Louis Cardinals,Sell,4.864,5.12,St. Louis Cardinals,1773451585,0x260567629ff275dd02abf5e792598f207b3cbabec927314b4cbdcc355fe37cb0
+Houston Astros vs. St. Louis Cardinals,Buy,2.4645,7.95,St. Louis Cardinals,1773449289,0xbf2d1b446f7a64e976930f19e3fe11ac0d3e8685df1e3c6e9ec47c8171e2d09b
+Houston Astros vs. St. Louis Cardinals,Buy,3.999999,13.793102,St. Louis Cardinals,1773448243,0x1e154478dc284cfa040496ac207c2c3b9211b2daa7b422d435cd466a9e7b1a9f
+Houston Astros vs. St. Louis Cardinals,Buy,6.201,17.46,St. Louis Cardinals,1773448099,0x9a11378b370544d3c7d255fb7655bfeeb71400a34b3a8d59f5e6261c7bec58dc
+Miami Marlins vs. New York Mets,Sell,27.4273,38.63,Miami Marlins,1773447165,0x45841f47a8f66716868b1c6029c75db882a61f6d404ed02ea76bd933297a36aa
+Miami Marlins vs. New York Mets,Buy,16.999999,38.636362,Miami Marlins,1773443665,0x6e6fb6c8eb427b439685c2ee89db23679caceb7d75c3922533301e613b53e070
+Warriors vs. Knicks,Buy,2.379999,15.866665,Warriors,1773626897,0x646797c90663251b80299d80aedb1bae75f93fbb9f3771adbc5b494e08dc7233
+Maple Leafs vs. Wild,Sell,44.9955,45.45,Maple Leafs,1773626831,0xd405717763ea19074a5bc41f0513e5a906cef31df47ab2edd03454c7eb85dd9f
+Warriors vs. Knicks,Buy,9.999999,27.777776,Warriors,1773622179,0xa35d9dc3ea76076f159e6602e8be6b14f56e6ba8fd8c35597bef8b7dda86ea24
+Maple Leafs vs. Wild,Buy,14.999999,45.454544,Maple Leafs,1773619393,0x1e000138780bc909eccd843414a3b003c346a50031ea1c2b54acf1344f82ce91
+Chicago White Sox vs. Kansas City Royals,Sell,91.49022,92.05,Kansas City Royals,1773616839,0x3fb6ace64387d0915bf02fbe3e88befdc060fc2f64f54913e93b98c9b9248398
+Chicago White Sox vs. Kansas City Royals,Buy,29.999999,92.058822,Kansas City Royals,1773608661,0x148f86bd0dd0c9b32349dfaee99793dface84ad8e56a8b7a9f629d5d82a66790
+"Bitcoin Up or Down - March 15, 1:55AM-2:00AM ET",Buy,6.999999,16.419414999999997,Up,1773554227,0x68db1690d9c39f84a7c4fa18c2f9b32c0912972943596e76a5760e41d54ac411
+"Bitcoin Up or Down - March 15, 1:50AM-1:55AM ET",Buy,3,18.66533,Up,1773553983,0xb7d37bb474f90632b6845dc72048f44dafd6c8c7ffc9a4b0928133e005ab817a
+Arizona Diamondbacks vs. Baltimore Orioles,Sell,30.079320000000003,31.71,Arizona Diamondbacks,1776281024,0x8ce8ec67ff35ca388771af5cbcfbcfaec4f09d141c1c3bbfb2bc4ea6b382ee88
+Arizona Diamondbacks vs. Baltimore Orioles,Buy,10.999999,31.712359999999997,Arizona Diamondbacks,1776279910,0xc45b3723af0647021041a1f83909f9033f2d717f04675dc104ae58a9e3ccfb8a
+Washington Nationals vs. Pittsburgh Pirates,Buy,24.999999,62.929493,Washington Nationals,1776246122,0x9b026b3429bb75e920bb1c892629d652f851e23f6ba8f7cedfaed7109685773e
+Texas Rangers vs. Athletics,Buy,9,58.47,Texas Rangers,1776226646,0x09bcf72d8b26f9d07ca10d5549cff60aa407371f0c8a1afe0c3dbbdbef9d2b5e
+New York Mets vs. Los Angeles Dodgers,Buy,1.439999,10.020342999999999,New York Mets,1776226130,0xf2701163c74dfca75509d70b79aad36e22252d76a695a8a6e9de71d6a280561d
+New York Mets vs. Los Angeles Dodgers,Buy,19.999999,51.652637,New York Mets,1776222688,0x8ab3fa1c929b06d39ebd5300da20539442f6511fc2a5018e0bf6b096b8a07157
+Seattle Mariners vs. San Diego Padres,Buy,22.999999,93.648342,Seattle Mariners,1776220954,0xdd0d1d9501263a85e575680e1776e75d221998d2de53f1dc00003cd2fbcdcd8a
+Cleveland Guardians vs. St. Louis Cardinals,Sell,83.34289000000001,84.21,St. Louis Cardinals,1776220750,0x51025eef02f0607b756c7d9fff3a036bcb590097b1e2ca8b12dbff44ee5ce1f4
+Cleveland Guardians vs. St. Louis Cardinals,Buy,4.999999,10.92778,St. Louis Cardinals,1776212568,0xd784c4c1442f819e02110db1177f8fe841e35069493093949e2af160d9d0cdc0
+Cleveland Guardians vs. St. Louis Cardinals,Buy,34.999999,73.28404400000001,St. Louis Cardinals,1776209692,0xb9754499e1ba551c0db9af3acb267cc4c2742b2a59ff42f25111ac580472e695
+Avalanche vs. Oilers,Buy,19.999999,41.666665,Oilers,1776138669,0x7f4c7c6bbb31f54fb034a51400be58f15f585c03d40932ae2982630fb290c788
+Jets vs. Golden Knights,Buy,15,62.5,Jets,1776137113,0xe61da6577d656b49a395df1d0b4df83ffb98a951f88393d67590e1a703dda1b2
+New York Mets vs. Los Angeles Dodgers,Buy,4.999999,44.240914,New York Mets,1776135875,0x7df824633a3dee812f82f270175f912ef94caa3418bd83a749276b2924880e4a
+New York Mets vs. Los Angeles Dodgers,Buy,19.999999,65.26667499999999,New York Mets,1776134849,0x84ff671b1a4b5901a27debfcf4195802a9eea870ac81743d5b6ef2ed7a139c8a
+"Bitcoin Up or Down - April 13, 9:55PM-10:00PM ET",Redeem,0,0,,1776133801,0x9524a15da80f6a5f5e4ce8aa4c7a558b5ba8f91ca4954b30159dde4504b6f233
+Los Angeles Angels vs. New York Yankees,Sell,96.72034000000001,106.98,Los Angeles Angels,1776133773,0x8437fbd18887590a060e4933db0d6dec95416d0cc6ef8a20ad0a4c602a6f649a
+"Bitcoin Up or Down - April 13, 9:55PM-10:00PM ET",Buy,4.999999,14.007061,Up,1776131801,0x0f8ef19b7f498ade52cdbcbd66e8fa2efaa795e84ed74463363e4901de1aab93
+Miami Marlins vs. Atlanta Braves,Sell,8.381889999999999,42.94,Atlanta Braves,1776127051,0x9eeb5eaa188159a43d86a70e25aff63e4df9dcc5817aa7124a3894ba4539d0cf
+Miami Marlins vs. Atlanta Braves,Buy,12.999999,42.940675,Atlanta Braves,1776125677,0x99d7fd51c3d8c7f073ddfc02a3690e9c67db5ac011746ca60a38a6ec1679c3d0
+Los Angeles Angels vs. New York Yankees,Buy,4.999999,27.094445999999998,Los Angeles Angels,1776122587,0xfd6fce132fad94a151c88911d97be41d4df7c1c01b9231bd12083b0fb70fb56b
+Houston Astros vs. Seattle Mariners,Buy,2,48.56,Houston Astros,1776114165,0x1b16468a82e06f74d2357b3b4025702dba3ff377f82ec0077f7b512778af854f
+Los Angeles Angels vs. New York Yankees,Buy,30.129999,79.893361,Los Angeles Angels,1776112427,0x850a308686b59e48352adb947dd32e667d0321c7dd575da42334489a811e80a2
+"Bitcoin Up or Down - April 13, 12:40AM-12:45AM ET",Buy,4.999999,16.360008,Up,1776055421,0x668f68d6e6a105e4153e0142c723c99abbe180735d6a0e39c3913ba077685a5c
+Canucks vs. Ducks,Sell,40.1346,40.54,Canucks,1776048793,0x165ed6cd289d72bf6c82aa4ff73b4ecb57c058885301ba5f8a1c89e24133ae76
+Canucks vs. Ducks,Buy,14.999999,40.540539,Canucks,1776047053,0x5383d8a26229ad89b433ee03fe50885b49e77dbe9bf9ba0f49cb5bd2753f2b24
+Cleveland Guardians vs. Atlanta Braves,Buy,1.1,26.708,Cleveland Guardians,1776040879,0x2e05d0768bf93afcc7c920a201420c50c4d6cddcdd8271ea7106e51710f45e91
+Cleveland Guardians vs. Atlanta Braves,Buy,12,97.36,Cleveland Guardians,1776039397,0x06376cb2589536c278f986a0d4c0aecb73008fa2085732fa3e1e8e191b8a390a
+Chicago White Sox vs. Kansas City Royals,Sell,82.56336,88.11,Chicago White Sox,1776038261,0x39a77ebab95cf6d346d87e1adaca1042dbba679f61deab7218af37a6235b4a28
+Chicago White Sox vs. Kansas City Royals,Buy,27,88.11,Chicago White Sox,1776031431,0xadd8bc84ba654b1634e48ed477feee4c80cd43accb1febc8f22126271c20d0a5
+Boston Red Sox vs. St. Louis Cardinals,Redeem,0,0,,1776030843,0xd3f0892e2471207f65f7fcb1edb01f202db2c967979f8ef4f4547c17ac9809b4
+Texas Rangers vs. Los Angeles Dodgers,Redeem,0,0,,1776030839,0xe881fd18da935c68b4cd0ed14d969cf34c3952e0a2bdc62cffe4a1208dfcc171
+Washington Nationals vs. Milwaukee Brewers,Sell,92.5346,92.63,Washington Nationals,1776027613,0x3c7e48b0285730959a20a3ee1c3b50fc9559cfa9bf6b7b8a1c1780741761c153
+Washington Nationals vs. Milwaukee Brewers,Buy,33.999999,92.63111300000001,Washington Nationals,1775982721,0xe104f4af031802427cb240c15ef67bb48af242b33bc955c0ee30bcd514e553a2
+Houston Astros vs. Seattle Mariners,Buy,1,97.03,Houston Astros,1775969557,0xd836740defce21f24a7af21c3774e3f5ba329daf4843fc46832426ca1ab91850
+Los Angeles Angels vs. Cincinnati Reds,Redeem,0,0,,1775968919,0xcf2a49cece7523b4aec8d605b50e070daf37f3c43e0e22aade82a18b2c78323f
+Houston Astros vs. Seattle Mariners,Buy,9.999999,18.953848,Houston Astros,1775967385,0x38b53a17baa8c367549baae83948ca95257a37026ad75224ce9883454c736884
+Texas Rangers vs. Los Angeles Dodgers,Buy,9.999999,74.915385,Texas Rangers,1775961817,0x052693c9edf774250f3ddbf98658fb1aac127bb135c3ed0df63db9a565ea55e3
+Colorado Rockies vs. San Diego Padres,Buy,7.999999,66.523342,Colorado Rockies,1775959921,0x16a3cce6c64914c665133c831451fbc8bfa8961b03ed0b331525b2096e05de4e
+Houston Astros vs. Seattle Mariners,Buy,22.589999,76.23736000000001,Houston Astros,1775959069,0x1c4db593c6ae984fab16883d5d93151c67a9de3e84603ae40b44a942cff4e29e
+Pittsburgh Pirates vs. Chicago Cubs,Redeem,0.00101,0.00101,,1775957023,0x2cb2c40a1a1c4d5aa638915d5ea4ab7d2462af4bebeb43e4ff019a82c323d4e2
+Washington Nationals vs. Milwaukee Brewers,Sell,75.02188000000001,88.66,Washington Nationals,1775956973,0x2b3c5145844d57df4a8ae5315a9122bc127817e11fd8e815c0b6c0b8417763df
+Boston Red Sox vs. St. Louis Cardinals,Buy,9.999999,44.390913999999995,St. Louis Cardinals,1775953941,0x6fe79cfc0114c74dff312c7ce67b56888fcc50eb31c3be9bc6da41cb8da71dba
+Washington Nationals vs. Milwaukee Brewers,Buy,10.999999,25.734765,Washington Nationals,1775949459,0x109f1d5262583dd823229184e81cf5528825cd87c3b77c66cd1e40f442b9ea9e
+Washington Nationals vs. Milwaukee Brewers,Buy,24.999999,62.929493,Washington Nationals,1775947957,0xa1c508b2e7e360cb00b4318adf392d0f51323a3bff7fde2f3d445aab5b9535fc
+Los Angeles Angels vs. Cincinnati Reds,Buy,1.819999,19.670161,Los Angeles Angels,1775947059,0x3eb1bef8dafedf65a2ee598cf512dc8c892d7345a3ac16524a0b54f438910ad2
+Pittsburgh Pirates vs. Chicago Cubs,Buy,8,31.28,Chicago Cubs,1775944667,0xa948de267cb4d0acd9b3bf4bc6179486c0b6978cbf4fef7098960c768b762bad
+Pittsburgh Pirates vs. Chicago Cubs,Sell,9.22993,32.52,Pittsburgh Pirates,1775944429,0x07c8c6433f10270b3fb7e1a148bb212b55bca52caa571be37e7eab3eeb829dcf
+Pittsburgh Pirates vs. Chicago Cubs,Buy,13,32.52101,Pittsburgh Pirates,1775942273,0xfde5e40f3002e8144ae2b94da640856e199f9ed0396e83cfa68acbb79ec02796
+Colorado Rockies vs. San Diego Padres,Redeem,0,0,,1775941821,0x3daa4ee26eb994c354261a4e6023324107e34c91508add9b9e9282885e760a36
+Pittsburgh Pirates vs. Chicago Cubs,Sell,63.15006,73.74,Pittsburgh Pirates,1775941735,0x8372d50cae9dad3e80e3b48ae984940159ed4bb9602b2c8a2091a24aa23bffe7
+Los Angeles Angels vs. Cincinnati Reds,Buy,4.999999,44.240914,Los Angeles Angels,1775939895,0x5b05ea1ac5d31e372c4133f0d552879614245735a128fbbbdda8dfb37c59b187
+Los Angeles Angels vs. Cincinnati Reds,Buy,42.999999,103.02170699999999,Los Angeles Angels,1775938845,0x0343885380329aa2177280aa0ad7993d50ecb24a8b91fb71e3789cc7cc2b7e76
+Pittsburgh Pirates vs. Chicago Cubs,Buy,33,73.74,Pittsburgh Pirates,1775925293,0x9bce09977dc3dd8dc31e192fa08b9ebada60d0c0166b49f65adfc24401371ff1
+Miami Marlins vs. Detroit Tigers,Redeem,0,0,,1775884113,0x0094bbb4b1bda03958ac1c5e5a5c2204fe76682d5b6027da679e234efcf80c70
+Texas Rangers vs. Los Angeles Dodgers,Buy,23.999999,58.059909,Texas Rangers,1775883357,0x0a2aaa92869b5238440b2e202631513da28f9da528468f8422d43aa7699f92f5
+Houston Astros vs. Seattle Mariners,Buy,0.999999,16.470681,Houston Astros,1775882173,0x67cceb9f13543e99077c81b74bc4629144bc93a2f07f0d6ad8e8b997336bb224
+Colorado Rockies vs. San Diego Padres,Buy,11.999999,43.471113,Colorado Rockies,1775880585,0x60a7269add4a0c5dc5295837fa47971585a198ac85e1d81ee2212af6b37f4a55
+Houston Astros vs. Seattle Mariners,Buy,2.79,22.6362,Houston Astros,1775879601,0x3d6af367d636371b3d5e5a2a17af7474e6cc9941b7009db8ee7d39805a6153fc
+Washington Nationals vs. Milwaukee Brewers,Sell,32.24424,32.75,Washington Nationals,1775874421,0x3f200d38cb3a2c631f44c32bfefaa829b244b6f4d8a12170e09683420bd5bbd9
+Washington Nationals vs. Milwaukee Brewers,Buy,13.999999,32.753341999999996,Washington Nationals,1775870433,0x3e6f58a0664574bd15d8f542d995802b8825184e1d2bc211747cd3a5dce29b51
+Colorado Rockies vs. San Diego Padres,Redeem,0,0,,1775870363,0xb19d0768a8356f6827de41bf03ad9d2e10931ea9196baf2786af85bd4c7179e1
+Arizona Diamondbacks vs. Philadelphia Phillies,Sell,73.57415,73.65,Arizona Diamondbacks,1775870335,0x92f1e599b37fcbe5873a18ea157144fbda93161611a136eac46f09e9d44f622a
+Houston Astros vs. Seattle Mariners,Buy,39.999999,89.381819,Houston Astros,1775869165,0xbbe9828462c15cd2648b00d33f6856ef323d7597b3fc28da7cbb1b2d8a6c785e
+Miami Marlins vs. Detroit Tigers,Buy,29.999999,84.04286400000001,Miami Marlins,1775863387,0xb1a656dda79e100550336a50a9f4b1c1adaa48041d2a36c1d7af1b3e429bb8dc
+Arizona Diamondbacks vs. Philadelphia Phillies,Buy,30,73.65,Arizona Diamondbacks,1775861097,0x68c94aa487f4e168f64c8768684275c4d401fdbdc412eee5ddeac714ff95b52f
+Cincinnati Reds vs. Miami Marlins,Redeem,0,0,,1775799339,0x5802186a1c7fa645f11284c95a8f1e016b7ec205b889a541ec6fcb6cc0972650
+Colorado Rockies vs. San Diego Padres,Buy,4.999999,11.97927,Colorado Rockies,1775790927,0x4e489cb759b26ff87b8d056181132b7fda58bde7c09223a828533babaa49b7f8
+Colorado Rockies vs. San Diego Padres,Buy,13.999999,36.156844,Colorado Rockies,1775785107,0x4e1a2eab805d291de803818e1164e500b9c76a59d2a4822a5da626fbd46bb74b
+Arizona Diamondbacks vs. New York Mets,Sell,92.73345,93.31,Arizona Diamondbacks,1775784627,0x33ff3569807cdbbb7419645adf21b2a4d32c7d3c8f58fde56ad01617d2f37f60
+Arizona Diamondbacks vs. New York Mets,Buy,4.999999,21.236959,Arizona Diamondbacks,1775779077,0x7c0f4ab5791b0aae02795602348bdd3f37baffc077ebe26d9dc6784c98c00617
+Arizona Diamondbacks vs. New York Mets,Buy,24.999999,72.07353,Arizona Diamondbacks,1775776547,0x0725c4d1d2d5d22c79f660b04d65f8c4c0994329371c95e3a3bae8e65204837a
+Detroit Tigers vs. Minnesota Twins,Sell,31.32883,91.51,Detroit Tigers,1775765253,0xd2d8899c528458624f3b8d948c6d2a9c6774788c11b361291523851cb18ae87d
+Detroit Tigers vs. Minnesota Twins,Buy,4.999999,14.846974000000001,Detroit Tigers,1775761789,0x15ed71c4a1a58519e54003093eead31f39698921442cb0559468c0e1353804e3
+Detroit Tigers vs. Minnesota Twins,Buy,31.999999,76.66731899999999,Detroit Tigers,1775760109,0xb2007d07567316809390c1b7febf3ddbb9855c17f00d314e7d266fb1abccf41f
+Cincinnati Reds vs. Miami Marlins,Buy,1,9.73,Cincinnati Reds,1775754991,0xc6f185d9cbb89f8df513dd5cf3911f804b3cf705c205c6f77297b90372921676
+Cincinnati Reds vs. Miami Marlins,Buy,6.999999,18.078421,Cincinnati Reds,1775752427,0x38bd8c4c7d26c235521f32d658b9284190c39579b2c13e0db85510d3c8cad4c1
+Spread: Seattle Mariners (-1.5),Redeem,0,0,,1775751305,0x0237bc9024fdb5e28f3db82d284f4cdca4d190164020d09d0b4ee2e4cb53c299
+Cincinnati Reds vs. Miami Marlins,Buy,23.999999,50.644459,Cincinnati Reds,1775751291,0x0c9dece4106e0779423b0b8f091076e5944fa8f00cb315d9e54a00cf023146f9
+Detroit Tigers vs. Minnesota Twins,Buy,9.999999,80.84925700000001,Detroit Tigers,1775699923,0xa74748853aaca79a223089fc1f119c6209a89aebaafd6ec14a20920d2250e826
+Athletics vs. New York Yankees,Sell,68.91398,72.65,Athletics,1775699739,0x602e58e1c988e38242a4acb685e8b9dbec45788d88c3b28bd91c35c0b5799ed8
+Athletics vs. New York Yankees,Buy,22.999999,72.657747,Athletics,1775697061,0x5df104b849e3dc39027d6dfff4a1aaabba4d37f1e6eac18c9461bb1bb06978aa
+Cincinnati Reds vs. Miami Marlins,Buy,1.399999,22.675341999999997,Cincinnati Reds,1775696785,0x985ddbba24d594e432baafdb5711463f2ef68e0c76da1ee795a1b4a6bf7c7e31
+Chicago Cubs vs. Tampa Bay Rays,Sell,39.88608,40.19,Chicago Cubs,1775696759,0x47a2f45376bea519b2693250be59b7ad86aef4693b11480ff4b41c6af8b30bca
+Cincinnati Reds vs. Miami Marlins,Buy,19.999999,45.716286,Cincinnati Reds,1775688565,0x1af410a5aaf15692babc8f6406d88e589b9ba304ce3fcb9a6c59f874c4d867ec
+Atlanta Braves vs. Los Angeles Angels,Buy,4.999999,16.316674999999996,Los Angeles Angels,1775680279,0x6e1092dff6bd3740a7627e9da05d75711afeb4da0ceadfdad5f9107968644f3c
+Chicago Cubs vs. Tampa Bay Rays,Buy,19.999999,40.191845,Chicago Cubs,1775679959,0x65452a849d35ffee14ac19716667e6a48fa205fbaf6397f0812573226bb3a9ce
+Atlanta Braves vs. Los Angeles Angels,Buy,10,24.55,Los Angeles Angels,1775679289,0xccd80f9ecd9fa25bdfce5fc93f53cf4903dbbd6e746bc390c16e7d5166c8bf4e
+Atlanta Braves vs. Los Angeles Angels,Buy,24.999999,51.270842,Los Angeles Angels,1775678125,0x3ab959cfb9d8e08e11d80fa63b3a3e6a53f6f6af118ea8aeaaf1adf2dd939657
+Spread: Seattle Mariners (-1.5),Buy,15.999999,38.333659,Seattle Mariners,1775624401,0xa4c45ef34d37ef3565a435c24aff928e6aa36f2839a238d43bc43c2bf49138d8
+Philadelphia Phillies vs. San Francisco Giants,Buy,1,24.28,Philadelphia Phillies,1775619111,0x93ead272b92b45567a9ff4be554d34b0e95a113732a77bd7ed702463ec88b478
+Atlanta Braves vs. Los Angeles Angels,Sell,25.516209999999997,30.9,Atlanta Braves,1775618949,0x120d4e13f165d627b7ed97ed0b2c166a7633e69658355c3973fa79ae08200591
+Philadelphia Phillies vs. San Francisco Giants,Buy,7.999999,51.973341999999995,Philadelphia Phillies,1775617837,0x83622db5db2cff175ec58453de4de43e98a3932fda30d081e2a7561ec2edf5a5
+Atlanta Braves vs. Los Angeles Angels,Buy,12.899999,30.906513,Atlanta Braves,1775613447,0x452f75e1372525c135e94a5c1690b7e1e1651418dbd4f557fca8f67bcd6f0fd3
+Spread: Cincinnati Reds (-1.5),Sell,44.1186,44.54,Cincinnati Reds,1775612607,0x63231cbfdbb001ce10472572061ef159e8b4252d9dbc86b0e8b2bbeb23be116a
+St. Louis Cardinals vs. Washington Nationals,Sell,59.096140000000005,66.62,Washington Nationals,1775610923,0x14ac8d2d7aa438e4cbc2cb0ab26069c6a0ae13da50756eac95aeb2516c4b94f2
+St. Louis Cardinals vs. Washington Nationals,Buy,24.999999,66.62873499999999,Washington Nationals,1775604571,0x167d2ac190f5a15c5b8ba65250b8bc382a091608622efc0bebf906be7119d3c0
+Spread: Cincinnati Reds (-1.5),Buy,14.999999,44.540914,Cincinnati Reds,1775599629,0x338b002f8d10b032f20c8edf44ea403cedcbc3a87d9661d9e66895c69192dee3
+Baltimore Orioles vs. Chicago White Sox,Sell,43.6869,47.6,Baltimore Orioles,1775599177,0x667110e036336ec9db770317044f7c13038440753b57bbfc91366d073f6474ef
+Baltimore Orioles vs. Chicago White Sox,Buy,3.999999,12.636134,Baltimore Orioles,1775592821,0xc798ccb57a3354369f08a49d0f62655de0a3f60309b21bb9152797e520c43c5a
+Baltimore Orioles vs. Chicago White Sox,Buy,15.999999,34.968894,Baltimore Orioles,1775592705,0x2a8089d16b2d60a77ed4cf5432e5b8feef05503b8e72b825f4aa1a9867d52aba
+Arizona Diamondbacks vs. New York Mets,Buy,21.749999,52.109819,Arizona Diamondbacks,1775537715,0x81718055fffd92ade89de38302096b3c77bf0363362bb5a1c29f3104938950f2
+Houston Astros vs. Athletics,Redeem,0,0,,1775537513,0x8945c89b9d16a997fad56237c268940c129f83bf3b025ac408074ab9164c9c6d
+Spread: Philadelphia Phillies (-1.5),Sell,41.81512,50.02,Philadelphia Phillies,1775535875,0x03d549637ec91293a0127ab015eff427c71e5f25b8541adbd421e473d9d0ce3a
+Philadelphia Phillies vs. San Francisco Giants,Sell,23.199559999999998,27.09,Philadelphia Phillies,1775535045,0xf2d84336430481b6e7df555507b170f6721c820dc5c11ed67b4d9e8b624a61af
+Philadelphia Phillies vs. San Francisco Giants,Buy,4.999999,27.094445999999998,Philadelphia Phillies,1775531407,0x2dea3402ad2e386b313ad5674490b001f5e9c8d4ea3ce99bd32583b281910c76
+Predators vs. Kings,Sell,18.6648,66.66,Predators,1775531379,0x85bcf33445fee970fb2c25aeb171a8d7274e20249e3bff9f0a9e6707cf31b698
+Predators vs. Kings,Buy,19.999999,66.666665,Predators,1775530409,0x2284578114b1c3f25b7970a6ab491076b18d367a4f4ff3576f5960ee367219c7
+St. Louis Cardinals vs. Detroit Tigers,Redeem,0.009564,0.009564,,1775523215,0x90185f2e1628f9b9b7fc18a5a8ba06e8244aa09502f664fbd5d73c18372cc941
+Spread: Philadelphia Phillies (-1.5),Buy,20,50.02684,Philadelphia Phillies,1775523205,0x4c04468893c670fd31bf41e48b7cdd196307204b6e4d1b1633884d6d23dc9003
+Cincinnati Reds vs. Miami Marlins,Sell,78.9768,85.1,Cincinnati Reds,1775523129,0x5819656384e6280b77a645087d1b6d6583372096a791eb4dd4b92b2178add64d
+Cincinnati Reds vs. Miami Marlins,Buy,4.999999,10.254175,Cincinnati Reds,1775515541,0xda49b9bc759e029508f123d25875568de29fe4b0ba886e4318650393acb4f3ab
+Cincinnati Reds vs. Miami Marlins,Buy,34.999999,74.854355,Cincinnati Reds,1775456655,0x868d186569b160a8eb5d138b5b7a01d31f09b06d045444006c3b18b14e7e8d45
+St. Louis Cardinals vs. Detroit Tigers,Buy,1,97.03,Detroit Tigers,1775441519,0x68b935852f03bd0b5946b67d3e3f73bb2424abf36cebd8c15bd61241cb34ca5b
+St. Louis Cardinals vs. Detroit Tigers,Buy,9.999999,21.855561,Detroit Tigers,1775438281,0xf7997ee302a4c139452e49ffb0b8b48e36343c2cdc8a13ee9519523648d09513
+St. Louis Cardinals vs. Detroit Tigers,Sell,85.97025000000001,123.93,St. Louis Cardinals,1775437667,0x434fc5725b9e494d41dc7f08b8a2ad237ef254ee34cf84f97be7b191a8410548
+St. Louis Cardinals vs. Detroit Tigers,Buy,9.999999,44.390913999999995,St. Louis Cardinals,1775434259,0xaac2427d361cec5dbf2c99cb5efc23d40b1346fe7318c6e934894c10da35414f
+St. Louis Cardinals vs. Detroit Tigers,Buy,29.999999,79.54865,St. Louis Cardinals,1775434041,0x040baccf0062eab245a2db94bcb9a658d0e74dff9ba43da07221d58848e1a96f
+Houston Astros vs. Athletics,Buy,4.999999,18.112966999999998,Houston Astros,1775426217,0x0767ef14dd1c820c35da7ee1aa617ac217ab2a6dc1fe6c1fd18ff8fc634b076b
+Houston Astros vs. Athletics,Buy,33.999998,62.094080000000005,Houston Astros,1775381823,0x7a6527b206586b312c286fa5b2ad252ea50f9a3ebf15ca0772470f7d6058d527
+Toronto Blue Jays vs. Chicago White Sox,Redeem,0,0,,1775362781,0x245b8d553019902b90abd6252ce31fc65866987b99926505a1fa267662fbe03f
+Seattle Mariners vs. Los Angeles Angels,Sell,44.9675,46.4,Los Angeles Angels,1775362043,0x3695209c708d21f9f392c36b45ee1034fddd0997a098d6828ee80a2344b02045
+Seattle Mariners vs. Los Angeles Angels,Buy,4.999999,10.469156,Los Angeles Angels,1775353625,0x36e23745453d989d0f446c38d4969bd32fe11767d631ae49a5eb4e0bfd730d2a
+Cincinnati Reds vs. Texas Rangers,Sell,59.14475,63.38,Cincinnati Reds,1775352779,0xa1c451bb85fbdb3b6848cccbacb7c85d69fa05c0289ac61a66c3a943a2ad3578
+New York Mets vs. San Francisco Giants,Redeem,0,0,,1775352105,0xa858e155f78ecb884f8d158568a13fd38cf52db5a7c50bd979bfaf807f0e805e
+Seattle Mariners vs. Los Angeles Angels,Buy,14.999999,35.937804,Los Angeles Angels,1775352045,0x67dcbfa923f4e262cf1356a355f41c9fdadc8d1e45db959b7fd223ceaf55dded
+Toronto Blue Jays vs. Chicago White Sox,Buy,19.999999,43.711113,Toronto Blue Jays,1775327685,0x65e9a156f971e29132509c1d3ea8bc6d7996b45c9113f15523f503322dcc8f50
+Cincinnati Reds vs. Texas Rangers,Buy,28.999999,63.381113000000006,Cincinnati Reds,1775283565,0xb062beb05cda38726948dc5f8fd4079f8d0fffb227a4bfa50db06e3d5a82e9e5
+Seattle Mariners vs. Los Angeles Angels,Buy,1.219999,16.942320000000002,Los Angeles Angels,1775278137,0x2d0ca700fa57010a28fcfe4812d87b9de981e6e8544ec04e88fa98f44e63a263
+Seattle Mariners vs. Los Angeles Angels,Buy,4.999999,11.697619999999999,Los Angeles Angels,1775264967,0xb9ef12abd7c551cedf667909334a47953eec4e43ad06a8f81ba658e275f08b20
+Seattle Mariners vs. Los Angeles Angels,Buy,24.999999,58.488098,Los Angeles Angels,1775262195,0x0c9441e0015677495fab2ae100995d4ba147bdd41ab854cf669f0b626ae92a00
+Toronto Blue Jays vs. Chicago White Sox,Buy,11.7874,31.209329999999998,Toronto Blue Jays,1775243823,0x2e810c074b4cd06c66a5585a402136749bf4009bebbf6ad27e36f2ac2c5493db
+New York Mets vs. San Francisco Giants,Buy,2.64,21.4192,New York Mets,1775186539,0x4f0b489527a78e1ed61258d887aee7340525ec1dfd4ade6c4aa4e2d572e76629
+Atlanta Braves vs. Arizona Diamondbacks,Sell,43.88104,44.43,Atlanta Braves,1775186415,0xcc9aed346567dc560a002ae6dcfd4f0e5d3736e83b9f090901f0d2498b968c1a
+Atlanta Braves vs. Arizona Diamondbacks,Buy,22.999999,44.435098,Atlanta Braves,1775178943,0xb8314bb1686ea01a2da80d0230b2a33ddc3542c55df1b34996c449eb7be68210
+San Francisco Giants vs. San Diego Padres,Redeem,0,0,,1775098765,0x3662f710159a06625e9f8fc0f3ba97bf5ebc9e9bb78e3f10dcb1cff77a3b418d
+San Francisco Giants vs. San Diego Padres,Redeem,0,0,,1775096881,0xe393bccfa86a05cc9870a0cbfac0f58a9f1482cbda56f15df8de0fa050231c23
+Cleveland Guardians vs. Los Angeles Dodgers,Buy,10.999999,35.896675,Los Angeles Dodgers,1775093601,0x71436f75a115d8ee9270c15953951ce3eb05131f8f5dc2f30bdcca6ed8b0fb32
+San Francisco Giants vs. San Diego Padres,Redeem,0,0,,1775093455,0x465f9b48c31eacb042ee1f960d3c52ba12d3a3cccb70df0d71bc1a6c6847ad92
+Cleveland Guardians vs. Los Angeles Dodgers,Sell,35.76137,53.1,Cleveland Guardians,1775093447,0x304c4ee229bba00d9960123c4b937ef94115766927396a11bb43f6f98792a8d1
+Cleveland Guardians vs. Los Angeles Dodgers,Buy,4.999999,16.874138000000002,Cleveland Guardians,1775089859,0x518f9d8251ea97577bbad8ab7cfa07ba6b4f2df4ec9e8cae089d85be21b0909c
+Cleveland Guardians vs. Los Angeles Dodgers,Buy,9.999999,36.225926,Cleveland Guardians,1775089317,0xd4c5c1f0d9f17ca8f9361dbc6269e4f8b61530803832ae7e533465bac9fe6bd8
+San Francisco Giants vs. San Diego Padres,Buy,0.999999,12.528084,San Francisco Giants,1775080443,0x427737d57642b24b4a79ba3a4e3010bfd2370f9caf7beaf1e038228715705e4e
+San Francisco Giants vs. San Diego Padres,Buy,14,48.92,San Francisco Giants,1775078403,0xbb7d68623abef2f106e4c02634e1a08d1d9f652740a729de53b731b870d7c1e7
+San Francisco Giants vs. San Diego Padres,Redeem,0,0,,1775077913,0xde4d269872a6d52905f277e977492b363c859f4c66bf510724ccf279231a5c0a
+Cleveland Guardians vs. Los Angeles Dodgers,Redeem,0,0,,1775077911,0x70f3076c961a77392ff41a4a5ca63ba9427a9dd5145328dc19d74409b39d7a2a
+New York Mets vs. St. Louis Cardinals,Sell,28.99807,61.37,St. Louis Cardinals,1775077883,0x3a983e0f05b5555901c32809abe391e2f9031a676c0923598b62176fe6448742
+New York Mets vs. St. Louis Cardinals,Buy,25,61.375,St. Louis Cardinals,1775068787,0x672f8f1700d4a7daaff6ce86b31fad6caf431fb7cf08bcefdc862c1dd880274b
+New York Mets vs. St. Louis Cardinals,Redeem,0,0,,1775023461,0x97a2260a00c5c44cb3f891ee6249a012fd883b44bd2a37da4b4d267ca8ef0d0a
+Cleveland Guardians vs. Los Angeles Dodgers,Buy,10.999999,63.094711000000004,Cleveland Guardians,1775014353,0xaba881168c7b8ced3e81b4095d34b811920f66e5f23c522438a7dc18039790fe
+San Francisco Giants vs. San Diego Padres,Buy,10.999999,39.848518999999996,San Diego Padres,1775011171,0x0b97f60b8a3a2a273e1d67051f9901a6f0b165683927cae0c4ef33061b1ab847
+New York Mets vs. St. Louis Cardinals,Buy,1.639999,22.77492,New York Mets,1775007753,0x8af1943df18442e33f496402da5ea096f941f251fe2a82f6f7b1b80955356398
+New York Mets vs. St. Louis Cardinals,Buy,4.999999,25.676318000000002,New York Mets,1775007125,0x823acf2ccf8eeeac960551759928a2bb7e3348c068edd2df523c81db9d914043
+Los Angeles Angels vs. Chicago Cubs,Sell,22.71886,29.71,Los Angeles Angels,1775006817,0x117c0e15a244dcc3b81f410de3c74d89bfd8f4a64e6e58f0fb9021ac1896274b
+Los Angeles Angels vs. Chicago Cubs,Buy,12.999999,29.715587,Los Angeles Angels,1775006391,0x99a258a42dbfb8bc9f5bc0230282565aa2ae236f0780a5f0ea2e33d683d833bb
+Spread: Texas Rangers (-1.5),Sell,68.92993,79.54,Texas Rangers,1775006057,0x2e640f7c14d116d8e9e53d3d1fe9d9753c5f54ca5c0ea71c0689475a7f547fc6
+Spread: Texas Rangers (-1.5),Buy,33.999999,79.543809,Texas Rangers,1774991787,0x00438a9cd6c3fc2c35cffb8c6c5450761155d922f070a033ebc7f435481c69db
+Cleveland Guardians vs. Los Angeles Dodgers,Redeem,0,0,,1774971233,0xaa724e86f342431e9c4a4d0e7855cdbd3b237a89540185feb2d2171ec4ee9fa8
+Minnesota Twins vs. Kansas City Royals,Redeem,0,0,,1774940295,0xb5ac4e0701b5d96bab89044a4c96b9fd94b5ee2b37f95ad8c1d9c3e9131e0a34
+Minnesota Twins vs. Kansas City Royals,Redeem,0,0,,1774932403,0x3562cfaeab6a2df1cfeacf08c5df1f88a42993caa42940a3a86985f40b05b3fd
+Cleveland Guardians vs. Los Angeles Dodgers,Buy,1.499999,63.169484000000004,Los Angeles Dodgers,1774931685,0xc0d94e34f041e58e1f027dd61b2e27317552c9732f25ac6fbfdc9d93adfc3ece
+New York Yankees vs. Seattle Mariners,Buy,23.999999,62.711503,New York Yankees,1774923981,0x867c686f89de2d0d2f578812f265e12967dcf62eae708d2568d017e108d4aee9
+Minnesota Twins vs. Kansas City Royals,Buy,5.999999,25.948365,Minnesota Twins,1774906569,0x3c80eb8a1cbb233303836875fb330309e97d674d20594fa0e6710c4bf49a35cd
+Cleveland Guardians vs. Seattle Mariners,Redeem,0,0,,1774879611,0x30bee8e93e2091e9785c54123e73553c15350e9c84104eff92a64b88ae26cae1
+Detroit Tigers vs. San Diego Padres,Redeem,0,0,,1774833842,0x303992defbde4762ab745f131708bcc48138cdf8c064c284681538ea77c8a8a8
+Cleveland Guardians vs. Seattle Mariners,Buy,5,100,Cleveland Guardians,1774831536,0xfba21b16d2d5d73f7f06fad877fdd32dd1e481da0d29227625a23de4aeb24530
+Detroit Tigers vs. San Diego Padres,Redeem,0,0,,1774824116,0x028ae0a7d1c0291210063e65969b014e24062a85877aa88202e24ef3d2d1912b
+Tampa Bay Rays vs. St. Louis Cardinals,Buy,3.999999,30.769229,St. Louis Cardinals,1774814304,0x09fd46388c6c333a3477d9e9ac9f995ce380da18431d9713ccf9b3a5bc1a6777
+Tampa Bay Rays vs. St. Louis Cardinals,Buy,21,75,St. Louis Cardinals,1774813996,0x9a5510e446883c46b811e9269f21952af60c1db05dd55668b1f78cded8f1e913
+Texas Rangers vs. Philadelphia Phillies,Buy,30.999999,93.939392,Philadelphia Phillies,1774808210,0xc078cd92e406eba0fa4eb1aace4a7f0d86df4dd67b52cd2d759d5e44d6553ab2
+Cleveland Guardians vs. Seattle Mariners,Buy,9.999999,37.777776,Seattle Mariners,1774757836,0x80a0f0c2aed1a1c7ec2e5b3548282ee43809603265b6a35f17274f769d2ebb21
+Cleveland Guardians vs. Seattle Mariners,Sell,81.1388,114.28,Cleveland Guardians,1774757056,0x6a2af05cda513719ef494dfebac8c2b39c3f94bc3bfa75e82be3c3e45a8de68d
+Colorado Rockies vs. Miami Marlins,Redeem,0,0,,1774755600,0xfefe409f3275de9cad1f92f99ebb292dbbeb540c0e83d4d695a3d48ed36994e7
+Cleveland Guardians vs. Seattle Mariners,Buy,15.999999,114.285713,Cleveland Guardians,1774754316,0x99030418bd9a2cd76be0ff776e83c7ba5eaeb207dc3715d52430194bf84e9885
+Detroit Tigers vs. San Diego Padres,Buy,2.652,26.52,Detroit Tigers,1774749966,0xf907b511d7a8ad06aadff02c350c773cff4348618aa548c980c7e63f6825d376
+Detroit Tigers vs. San Diego Padres,Buy,19.999999,79.846152,Detroit Tigers,1774748304,0xe690cbbf7b3782a7e264fd9d274cf94f7d67575bf0d5313bdc22a738f51341ac
+Los Angeles Angels vs. Houston Astros,Buy,29.999999,66.666665,Los Angeles Angels,1774738412,0xcd9c6ad9fdbb9b7dcf586f203fab2a9aceaec0eeda3b72f714f79fd67e2af20a
+Colorado Rockies vs. Miami Marlins,Buy,1,10,Colorado Rockies,1774737278,0x0b6d33a64d141373d71541bb6138e4c216241449eb557b1f5311a480ef199b15
+Colorado Rockies vs. Miami Marlins,Buy,24,60,Colorado Rockies,1774736468,0x8ddb93d0604e1283404fac502ded08746f4dd70f0162c83840478deac397767c
+Washington Nationals vs. Chicago Cubs,Buy,0.999999,14.285713,Washington Nationals,1774724014,0xfb972ba4f40fda4e0875b946947d98bcf415e3e34e04f0ec7b2c5f325d78e840
+Washington Nationals vs. Chicago Cubs,Buy,4.999999,38.461537,Washington Nationals,1774723583,0xe4978428d6c70a9ee0196e868b5b87b222ef2b44a1ca5cc7d97669dcab36710b
+Washington Nationals vs. Chicago Cubs,Buy,19.999999,95.238094,Washington Nationals,1774723465,0xe5a244dd2a0d8a251ed7257bdd249587981fe4d29c420d99c0003e4d68693fad
+Arizona Diamondbacks vs. Los Angeles Dodgers,Redeem,0,0,,1774707607,0x62c833addc751f5a9b6405aff0ef60b4b1c08347056787ec5649f78e0ee977ce
+Arizona Diamondbacks vs. Los Angeles Dodgers,Buy,3.78,47.25,Arizona Diamondbacks,1774673465,0xd87a57d5673be855906cf129af83e11927d99e2703de49a032d3f2740ab8e567
+Colorado Rockies vs. Miami Marlins,Redeem,0,0,,1774672233,0xe57effaf0da163dd2e3a5b3f864860614b0a650bb8ea01b7f63d15dee0ee5285
+Colorado Rockies vs. Miami Marlins,Redeem,0,0,,1774672231,0x8501629fcd4a0da410a01ae6cf9ca7ded7ea7330d66b51875318b442643d5c78
+Arizona Diamondbacks vs. Los Angeles Dodgers,Buy,9.999999,27.777776,Arizona Diamondbacks,1774671543,0x3594c1bdf0f8d3a72f94f7e53e6557519cd806f654924c5b197227025be7a204
+New York Yankees vs. San Francisco Giants,Redeem,0,0,,1774671455,0xf29c5f70b2d6e3d74a772b95d35c64055eac909af43cbf455950504c4713f26a
+Detroit Tigers vs. San Diego Padres,Sell,78.77818,81.89,Detroit Tigers,1774671341,0xa8e32c0b8e4a084aea69bb09fee60b0865fd0183c884a9916253a26c127bfa1e
+Detroit Tigers vs. San Diego Padres,Buy,4.999999,13.513512,Detroit Tigers,1774666039,0x91a184338a2e8aadd22f076977d140c3d4ee97f8a2738aff3112924ce0f9c03f
+Detroit Tigers vs. San Diego Padres,Buy,9.999999,20.75959,Detroit Tigers,1774663841,0x7b29a86e8fc38c0702199a2a3cd961c56ea7fb6942d1bd74ae32f2ce894c1c17
+Detroit Tigers vs. San Diego Padres,Buy,19.999999,47.619046,Detroit Tigers,1774662687,0xfa9025aec5f1257584309f1f1eab1f0f35c174ce4aa21a9cac1daad119d3bcec
+Washington Nationals vs. Chicago Cubs,Redeem,0.002856,0.002856,,1774661895,0x42457ee65aeb669bc91344beb559a8fd42bda547c0cdaa613a3f16c60d4e0f6a
+Colorado Rockies vs. Miami Marlins,Buy,9.999999,55.555554,Colorado Rockies,1774654881,0x833353bb4e9defdacf33f5807047394d354058bb3a9ef79765aa78e3a7e39c27
+Colorado Rockies vs. Miami Marlins,Buy,24.999999,71.42857,Colorado Rockies,1774653611,0x3592b4f5c5ea9e835f6cf5752a0250f1b8e9f2d3982efe62e2403602946f5d5a
+New York Yankees vs. San Francisco Giants,Buy,4.999999,71.42857,San Francisco Giants,1774650129,0xa9b9115dfb7153032e749ec9e1c4af757f7efe5aa0fea56ee2d01fcb7a05c3f7
+New York Yankees vs. San Francisco Giants,Buy,24.999999,55.555554,San Francisco Giants,1774648575,0xeffc81205988768a30d916089ecf3ba5f83eabf08ac5481f07c683a1e032df5c
+Boston Red Sox vs. Cincinnati Reds,Buy,4.999999,18.518517,Cincinnati Reds,1774563465,0xe73ab46a0bb859d34eb5b7322a730439c6ec8307734fbf304947506468896686
+Boston Red Sox vs. Cincinnati Reds,Buy,19.999999,40.816325,Cincinnati Reds,1774557425,0x0ad4fc39338ba33dd11974f57e66e84c266952e01c5857454619621b0c57e0cd
+Washington Nationals vs. Chicago Cubs,Buy,3.949999,26.333332,Chicago Cubs,1774554403,0x1dede856af879ca2afe51d0884c210e9cae3758aee05c37dbcf28d66186f3761
+Cleveland Guardians vs. Arizona Diamondbacks,Redeem,0,0,,1774553707,0x4c5ebf8c8f56433caea01c79a6f3ca26463755e4579953b2ccc7c012b4ab848a
+Washington Nationals vs. Chicago Cubs,Sell,68.9533,77.14,Washington Nationals,1774553693,0x995456dd2a6241ca281b9a1aaa59e24685b5890b6a94377dffaddeb63b76637a
+Washington Nationals vs. Chicago Cubs,Buy,26.999999,77.142856,Washington Nationals,1774543333,0xb1a4ac1ecd437ad04a3a0ed30488d9cfe7dfbc0569f008966eb3f85db6f2ba94
+Cleveland Guardians vs. Arizona Diamondbacks,Buy,3,30,Arizona Diamondbacks,1774384083,0x54a936e9d7d8127078c8bf94c4c319b529775b7dba355977cfd0e0233731c744
+Cleveland Guardians vs. Arizona Diamondbacks,Buy,12.139999,55.946955,Arizona Diamondbacks,1774383151,0x768ee4185ef55b1f98fa6f94148a1d2e315377c33023647dba823aa4f159ebf0
+Boston Red Sox vs. Minnesota Twins,Sell,49.5131,51.9,Minnesota Twins,1774379381,0xb2e874bf7b6cdbc540fffa8054d3afeca2e738da8ca8d3c6d0b881e1c9d054db
+Boston Red Sox vs. Minnesota Twins,Buy,3,15.5,Minnesota Twins,1774374449,0xab76a2742d26fd9ce7d07af511c3facc25a60fc7fc0a6ab6a7461b21c0539cf5
+Boston Red Sox vs. Minnesota Twins,Buy,18,36.4,Minnesota Twins,1774372887,0x1c80a7b07a6e689c5ab28e35d2c3a02d96c7d88b1b0ddf3ada098ed22b907023
+Baltimore Orioles vs. Washington Nationals,Redeem,0,0,,1774363937,0x19109fb10c919b2db9c0c8ac08a1b793a6462173c26dd77269f1513d0e5626e9
+Washington Nationals vs. Baltimore Orioles,Redeem,0,0,,1774296889,0x7d3b755370db8f5885224b6346f77af5bbd0213cfcefd543553f33ebfdf99f27
+Minnesota Twins vs. Boston Red Sox,Sell,63.56637,63.63,Minnesota Twins,1774296781,0xdd9fc3b91c802be5445dcb6276c782b8757193dd22f26dc1696529b6afb30a39
+Washington Nationals vs. Baltimore Orioles,Redeem,0,0,,1774295027,0x0f2e34e4f22efafaa82f51e196fdd088a3cb9375e7dbd3aedd9d32c4f8951d73
+Baltimore Orioles vs. Washington Nationals,Buy,15,30.7,Washington Nationals,1774291245,0x03bd0beb42baf352d8057821a8200cea40928f1dee4465cf6f6dc357dda05bf7
+Minnesota Twins vs. Boston Red Sox,Buy,27.999999,63.636362,Minnesota Twins,1774289175,0xb4f12d576e56da5b621ca994e0359eda86122c3f33a7bedaaecd40ed38a22f6f
+Milwaukee Brewers vs. Chicago Cubs,Buy,1.999999,11.074735,Milwaukee Brewers,1774209273,0x90c0e3635ba283e57a6e3d557b210e84e92c5af7b4309b8c9c3b5eccf555d18d
+San Diego Padres vs. Milwaukee Brewers,Redeem,0,0,,1774208355,0xe9db6da2b2978b90c442e83661f936729160a3ec74fd6451a338c2da240dc433
+Miami Marlins vs. St. Louis Cardinals,Redeem,0,0,,1774208355,0xa438d2fd9b47a47e4ddeac995032aedf7cb2f4bfd377edb76b8795c3f790eaa4
+Milwaukee Brewers vs. Chicago Cubs,Buy,4.999999,21.739129,Milwaukee Brewers,1774208343,0xd5a8f8b12b338574505fa678fd1ae5bffb3f6f78f72c0c0e0aafd5893192ca65
+Atlanta Braves vs. Minnesota Twins,Sell,51.30864,51.36,Minnesota Twins,1774208283,0x274a4775306b3760e15c91df020f3bcf62da55ecd07db73635555039999017e4
+Milwaukee Brewers vs. Chicago Cubs,Buy,6,25,Milwaukee Brewers,1774208273,0x410693fe33e0740435d931da13871200f57b75acb2598b3f85bc1734c9791894
+Washington Nationals vs. Baltimore Orioles,Buy,11,57.125,Washington Nationals,1774204693,0x8502710ae376a51c04d4d9998fb9b97df41de4b968101bc2bf4ce05642564d00
+Atlanta Braves vs. Minnesota Twins,Buy,10.999999,51.363635,Minnesota Twins,1774202187,0xe7dd41bc7e1734caac071a4b4f414792726811968112b1cad5dcd13776cead30
+San Diego Padres vs. Milwaukee Brewers,Buy,19.999999,142.857141,San Diego Padres,1774127257,0x4f403cc1f0efe3e0d1dd4d1e6b2fee34164cc820f93245fd8c35386feb27aed4
+San Diego Padres vs. Milwaukee Brewers,Buy,3.3,30,San Diego Padres,1774127009,0xd2b063b7c03cff2f36caba94c288a970751e08b27740540b0096f2ad40675165
+Athletics vs. Los Angeles Dodgers,Sell,54.8214,115.32,Los Angeles Dodgers,1774126729,0xdbc612bb0685cae0be795e33a271aba7a3dee5f747a55aad78d5a23bf5374c58
+Athletics vs. Los Angeles Dodgers,Buy,25,100.3268,Los Angeles Dodgers,1774119501,0x9605df1a72fa1027919cad30a117524e29daea146f5ace635edacfe1df03a30f
+Athletics vs. Los Angeles Dodgers,Buy,5.5,15,Los Angeles Dodgers,1774119407,0xfb250d77e6afbf8c1f21157c9e34d85e31d39a46a48c72dd9058df3e6ca0c7d9
+Miami Marlins vs. St. Louis Cardinals,Buy,20.999999,117.416314,Miami Marlins,1774116473,0x3fa125f3e3bd9b030cbdec261cde4ad9e5539f233b9dcf65046d5732b31b9d31
+Washington Nationals vs. Miami Marlins,Redeem,0,0,,1774097385,0x59929ace25f11ddafea983918d5c7d4f147a0b49ed35e94eb977d6cbcf3bbed9
+Ducks vs. Utah,Redeem,0,0,,1774096929,0x10080b65a7ee47206fb56041a71ba2ec71b78a5b2d2008ab576cb7e51e4f379b
+Washington Nationals vs. Miami Marlins,Redeem,0,0,,1774072293,0xe8a29f4a7087ccc9f2f170d1ab73877777d23ee91eb7647fa007f668bb579bb8
+Ducks vs. Utah,Buy,15.999999,57.142856,Utah,1774065925,0x84ece1aa91a9ff08b779678c3ae62c5f58d6348677a63098a392370d64356a18
+Milwaukee Brewers vs. Arizona Diamondbacks,Sell,0.09818,49.09,Milwaukee Brewers,1774065377,0xcadfc37e15426dac900399da3e26871518bda6b19b0c8b882348af8f32ca8980
+Cincinnati Reds vs. Chicago Cubs,Sell,3.158,50,Chicago Cubs,1774065375,0xd6540c7b2ad6b59a7e29672a63b2948056b784587355e698ccc9b4d62babf95d
+San Diego Padres vs. Los Angeles Dodgers,Buy,3.999999,36.363635,San Diego Padres,1774062069,0xf65770d11b5f6a53b3bf8d097267815ea2374fb9efa78cff3f67962e6ede08d4
+San Diego Padres vs. Los Angeles Dodgers,Buy,1.71,9,San Diego Padres,1774061451,0x5003504673cdcfaa7d2e55f4373527fd2f7ab80dc6e3872fe6b86a41d506f430
+San Francisco Giants vs. Texas Rangers,Sell,72.66384,79.24,San Francisco Giants,1774061087,0x1971cb7388ac5002a51cd0f01bd5d3eb37cecdbd6d47f121283567bef8eee589
+Milwaukee Brewers vs. Arizona Diamondbacks,Buy,22.5814,49.09,Milwaukee Brewers,1774059335,0xf87c1d5d37196b401b55d4fe3233b77608d91b5e3a8eb96849ac083a535fbb99
+Cincinnati Reds vs. Chicago Cubs,Buy,8,50,Chicago Cubs,1774058951,0x29d8fd63b49ef7550226ae224897cbb0427294ed1a5e599e8fd33068767575bb
+San Francisco Giants vs. Texas Rangers,Buy,41.999999,79.245282,San Francisco Giants,1774057149,0x1a6c3967781633ecd8a43a922324967ad6c03841b3b1c12dc965f424abbeb54d
+Minnesota Twins vs. Boston Red Sox,Redeem,0,0,,1774032031,0x0034190ba1e3138c2ff93eb137a4ced000f6e14741ab48ff3c6a99fc9bba85a6
+Minnesota Twins vs. Boston Red Sox,Redeem,0,0,,1774032027,0x588e3444013ca16aad5ddf6be2fac012685fe2790b0ff0441e6672d813b0ff89
+Washington Nationals vs. Miami Marlins,Buy,41.999999,79.339621,Washington Nationals,1774032007,0xa728d22b4bde59025d1f155a23a37fb9256e0aeffc9b7bf229754eefb6095d4c
+Deposited funds,Deposit,44.59993,44.59993,USDC,1773962319,0x17d8dc83b5599092dc549f021e2397487a878f5446eaf172cf2681e808f679ec
+Minnesota Twins vs. Boston Red Sox,Buy,2.5,15,Minnesota Twins,1773962153,0x6973f79548d4318aafa9c407c9e43e16ae3c3b920742afd3859dec48a58d4942
+Withdrew funds,Withdraw,100,100,USDC,1773870715,0x311426097075fa9fb861975b1f19593c373c08f7889beacfc87b434afb0ee16c
+Islanders vs. Maple Leafs,Redeem,0,0,,1773831243,0x2b144020d24b5b3bef77b06e50b4c11240ff2462a48da08c9bb1393bb61b564a
+Panthers vs. Canucks,Buy,5.739999,19.793102,Panthers,1773801907,0xfce4dd187ab4f2404eebde47bbbc2313f61e0de0803179cd32dfae133c986e37
+Panthers vs. Canucks,Buy,29.999999,68.181817,Panthers,1773800495,0x8e488dc52f936eb23d28e7fbc83d078d33ebf7a0b6d57a26113de98cc4a14d9f
+"Bitcoin Up or Down - March 17, 3:45AM-3:50AM ET",Redeem,0,0,,1773798565,0xb96c946502e89e59cba7ca9bd2a7b416712ab8e439333ab899c46d9ccf892c29
+Bruins vs. Canadiens,Buy,34.999999,83.333332,Bruins,1773792621,0x2ff6a59f26793f648fe29fa8ccd20325a22b776c404d77361279db7884431f43
+Islanders vs. Maple Leafs,Buy,19.999999,68.965516,Maple Leafs,1773789531,0x7db2955acc8f72eb5f2a93bc18847bb65f3ac5daa2e88e0520960ac77c03136c
+Seattle Mariners vs. Colorado Rockies,Buy,9.999999,71.42857,Colorado Rockies,1773786563,0x480329db48125db6a21f89ffe0edd40a8d863588afec157f8eab94e9345607a1
+San Diego Padres vs. Seattle Mariners,Buy,23.999999,53.333332,Seattle Mariners,1773782181,0x405df63ff1f5270fc82f101821d2227378ecfeff328a69658d1edd2b84b99a65
+"Bitcoin Up or Down - March 17, 3:45AM-4:00AM ET",Buy,4.999999,41.550515000000004,Up,1773733853,0xa0b8676b26280a9f17957d5b7ea5b8f72a2cb89cd98249556a8db2936a2235be
+"Bitcoin Up or Down - March 17, 3:45AM-3:50AM ET",Buy,5.999999,19.133457,Up,1773733589,0x82914adb4da911898448ecde46a5fb120d2e8d1123153547c8a45fca5e38ed08
+"Bitcoin Up or Down - March 17, 1:50AM-1:55AM ET",Buy,3,149.9856,Down,1773726787,0x474e35d2d1a24c1b3fe1dfd1b18cb9f118cedf56cdab525dcf3124a1a29be855
+"Bitcoin Up or Down - March 17, 12:30AM-12:45AM ET",Redeem,0,0,,1773723269,0x0a095d660f32c631b0fa96a098f5bd7cff86114d60caacdc263ba60a2b897435
+"Bitcoin Up or Down - March 17, 12:30AM-12:45AM ET",Redeem,0,0,,1773723269,0x4b01f34c85629754db4ce54a19401ad7b52058566471a7c66fe01551ac67cfa7
+"Bitcoin Up or Down - March 17, 12:30AM-12:45AM ET",Buy,1,499.99951,Up,1773722479,0xb187f2bb76af7588d0bb886950532acb27f6c0088daa077ad75843287f7a8863
+"Bitcoin Up or Down - March 17, 12:30AM-12:45AM ET",Buy,4.999999,23.645702,Up,1773721969,0xd06c063303afdd41f61a67f9e79208108e267e42864705af7a2b89f95ceb6c3b
+Chicago Cubs vs. Cleveland Guardians,Sell,11.9184,15.28,Chicago Cubs,1773713483,0x41724f3ebf9b5d75f4291581022207cf95c767cfed86fe2a9b58580d3833a1b6
+Cincinnati Reds vs. Arizona Diamondbacks,Redeem,0,0,,1773713443,0x889ecc997f1255596781867fe71398dea281727db213211aa9b211a8bfafe177
+Chicago Cubs vs. Cleveland Guardians,Sell,9.7948,11.72,Chicago Cubs,1773713397,0x5a043b14fa984c05a1ca0c03c67f7ad926b16baa30944e157b0d98468d56d7d5
+Suns vs. Celtics,Sell,10.615,21.23,Suns,1773711923,0xe7df5acb89663e2729b4fd5fc4cf11d56c5528c76b6bdb1d1a7deb0599f151de
+Chicago Cubs vs. Cleveland Guardians,Buy,12.59,27,Chicago Cubs,1773710917,0xa264687b4008fc0cdd4aa46deb144f3905ed84b88fab049c0c3769f0e81621ab
+Suns vs. Celtics,Buy,2.759999,21.230768,Suns,1773709277,0xbf394d83aff2577547f4c10f56e92da96d5712d858f440195db03cde93e7a4e3
+"Bitcoin Up or Down - March 16, 4:00AM-4:15AM ET",Redeem,0,0,,1773709071,0x1c76477cfe41ae1e9ee2790edd307304003496fd89902749d1d66db5fea0998e
+Washington Nationals vs. New York Mets,Sell,87.7644,95.07,Washington Nationals,1773708509,0x520fbb803fae32982ad5d2563b37768b0f09cb1a1571d21f80b8ced1f0ea6f15
+Washington Nationals vs. New York Mets,Buy,24.999999,95.074073,Washington Nationals,1773702449,0xa33cfe12f3c13169c2bcefa4a29e5f53068ef9364cc24d65f868ed2ff3fbb24f
+Cincinnati Reds vs. Arizona Diamondbacks,Buy,3.7,40.641,Cincinnati Reds,1773696065,0x48e1ea10678eb75ccc5aac6d73d19dafb64a0836d245787d8aae3b1d6139b438
+Cincinnati Reds vs. Arizona Diamondbacks,Buy,1.3,10,Cincinnati Reds,1773695255,0xb6165646826fb3293771a10d2e20a9f9529c4855c861594bfe18a90e1a59f1af
+Cincinnati Reds vs. Arizona Diamondbacks,Buy,29.999999,64.446807,Cincinnati Reds,1773694311,0x3b07e75c2572328c0f3d370bbaefd107f522d017c5da2fbb12a64ac129c1aaf7
+"Bitcoin Up or Down - March 16, 4:00AM-4:15AM ET",Buy,3.999999,28.467887,Down,1773648127,0x8e58aa8b539339174f07803ff130728468479100ed53a8422690a651ba8f28a2
+Jazz vs. Kings,Buy,1,203.758332,Jazz,1773634645,0x45f6e3c84301187008ada7f3c59680875cbb55658ae55734cc4fd6f61df6a11c
+New York Mets vs. Houston Astros,Redeem,0,0,,1773629295,0xce0a8e5442fa497e8c4c5de6d56a41727501e2ae842ac24466ca4f04189aa757
+Los Angeles Dodgers vs. Chicago White Sox,Redeem,0,0,,1773542727,0x434aee915541a8f690127fa5841f122c4272366ac563046a4bc2305590a52e28
+Deposited funds,Deposit,375.895002,375.895002,USDC,1773542655,0x029c8e0f7e043f05dced09796f2a9d058ddc75be1b31e891b9d84301d6e0e155
+"Bitcoin Up or Down - March 13, 10:25PM-10:30PM ET",Redeem,0,0,,1773536813,0xdede6bd7cbdb0dffb38661b19a6922d1e7046de485bcd52fdc7a92d02003f6bd
+Deposited funds,Deposit,43.63350400000001,43.63350400000001,USDC,1773523199,0x6315b722b7e7d7c210519861b54db39c528f97adab8cfa77674128518954050f
+Deposited funds,Deposit,87.022223,87.022223,USDC,1773461459,0x2405395fc923412faef60e33999320fdf35df733543b60314fa4896f7fc0f8b0
+"Bitcoin Up or Down - March 13, 10:20PM-10:25PM ET",Redeem,0.00672,0.00672,,1773455361,0x95b034785764fad080fee9fab931894f0af54d476da333a9440febd6dc574887
+Chicago Cubs vs. Chicago White Sox,Redeem,0,0,,1773452567,0x3c4d2e560853893c99cd767e9ef002a3388c893a38439c1068f1fcff11071759
+Minnesota Twins vs. Toronto Blue Jays,Redeem,0,0,,1773447219,0x620ef9b0781080cbed6d6e251557acf5ef55bf67b540e00744e49ce31096ed88
+Minnesota Twins vs. Toronto Blue Jays,Redeem,0,0,,1773443365,0x176945c0c49da2955ecc90fac6fe700a0c6b556848c6c0d13d47a8a0a75563ed
+"Bitcoin Up or Down - March 13, 6:05AM-6:10AM ET",Redeem,0,0,,1773440665,0x3a9d07b5d9290656b99c58e6d7cb9febb8fc1c45b2274f015727d126b90e8f2d
+"Bitcoin Up or Down - March 13, 5:35AM-5:40AM ET",Redeem,0,0,,1773440665,0xfec5387f544d7a17ddf8cb92bbc6d13199c1bf8ef8ed9985c8c47311fcad04df
+Withdrew funds,Withdraw,200,200,USDC,1773410761,0x65d0690bb7710e8a346bf33988c904b5e856892ae7e6ddd93d688ecf69f06bad
+Withdrew funds,Withdraw,39,39,USDC,1773180471,0x4e1437972302ec545545738de420fe73b4480792bb7fd2f0fd96d1b9900e62f8
+Arizona Diamondbacks vs. Milwaukee Brewers,Redeem,0,0,,1777438890,0x2e1f8bca66f528c6f31f7a5aa7c2af72afe22a8707bdbb8d49c251a11d27aea2
+"Bitcoin Up or Down - April 29, 12:55AM-1:00AM ET",Buy,9.54432,56.25,Up,1777438722,0x4914fb1173a01498d38e717ddf14de9d66a0523676329e37a6a8ec6503213c14
+Miami Marlins vs. Los Angeles Dodgers,Buy,6.694989,31.142856,Los Angeles Dodgers,1777437256,0x0db997df893104cbbbaefbd7ca4706117cba79a4ccb5cf22a858e6b553602523
+Miami Marlins vs. Los Angeles Dodgers,Buy,10.252,62.5,Los Angeles Dodgers,1777435670,0xd2e21681c57ac8a2b9f00b3406b48561f6a2fc8e9f7a42d7921d1a7aa2fcd68b
+Ducks vs. Oilers,Sell,11.63343,299.46,Ducks,1777435592,0x67bcf1080cb43e7fdf18489ab8193e016fc281a81b44944efe134f42be4a74c2
+Miami Marlins vs. Los Angeles Dodgers,Buy,5.109489,18.518517,Los Angeles Dodgers,1777435182,0x3efec388ef01dcf883f65adbd41122369e2ad4a01629f6ef1ae0095af4dcfe08
+Miami Marlins vs. Los Angeles Dodgers,Buy,5.109489,18.518517,Los Angeles Dodgers,1777435152,0x8c732f7cb00012298a8a37ffbb6ec043f276932304aee77e3e6ec55960f9b9db
+Miami Marlins vs. Los Angeles Dodgers,Buy,35.766489,129.629628,Los Angeles Dodgers,1777435046,0xa6b3acf44b795d9d316b5ac100382988b8a9c7524e626e57ee012839c1012ebe
+Los Angeles Angels vs. Chicago White Sox,Redeem,0,0,,1777435014,0x09d355d91eebb018d595320b3ac9dd5a2d15bfba83a465f90cefd637464bd52c
+Ducks vs. Oilers,Sell,1.34942,27.78,Ducks,1777435002,0x3f52da7b4fb03372fcdba5c346d640d2be9b9e0bcaf7f15335b33e27dd9dfda9
+Kansas City Royals vs. Athletics,Sell,70.20213000000001,171.42,Kansas City Royals,1777434942,0x5e038da6cc5bf6f2e64167856505aad3900fe3be5fd80a140b1827b8454b31df
+"Bitcoin Up or Down - April 28, 2:45AM-2:50AM ET",Redeem,0,0,,1777434076,0xe04f3ad24746805c21c48db19c233606b79af4b998bb25228b1a8a508abc05d7
+Kansas City Royals vs. Athletics,Buy,61.169989,171.42857,Kansas City Royals,1777433868,0xba54be46b87d905be1a51c6addce03db47b32942165b2e7a4ce4540fcd3f18fa
+Ducks vs. Oilers,Buy,4.109189,44.444443,Ducks,1777432386,0x2ed30fdccde392cc76170c82719cd691054daddeaca52c854f5426705fb7cf98
+Ducks vs. Oilers,Buy,4.735849,51.222221,Ducks,1777432070,0x2d8e4e94e5ece66ab38660d3af40fbc92221279bae5723fd3df7e13178fa3fcf
+Ducks vs. Oilers,Buy,45.069189,231.578946,Ducks,1777430208,0x44684465fba4a075f1de8b81d4fc1113cb130ac655dc9279ec99c08ef6457e06
+Los Angeles Angels vs. Chicago White Sox,Buy,10.248989,58.823528,Los Angeles Angels,1777426240,0x1ab1d93e71164427341ef575568e078f365879c374d400584134efb1c5350e44
+Arizona Diamondbacks vs. Milwaukee Brewers,Buy,3.586089,19.444443,Arizona Diamondbacks,1777425668,0x019c4cd141689b72c8cd17e5a1ada1db00bd5ec8c92a7820e2ffb51b9f331389
+Washington Nationals vs. New York Mets,Buy,1.02939,49.315237,Washington Nationals,1777422638,0x91582f5dd33c5df8c6a22bfbb3ae02273baa157f5ac9ffb42334bd9ad4423673
+Arizona Diamondbacks vs. Milwaukee Brewers,Buy,35.724489000000005,112.903224,Arizona Diamondbacks,1777422464,0xd5e04c05db0af6daec5f49d398a76419b81c76ce058c172d20e97266b3cbda0e
+Washington Nationals vs. New York Mets,Buy,4.1152,100,Washington Nationals,1777422014,0x13fe5b8e148d2f0710d0dc029a7a6dd9a1367fe6a2c79507cac8e7b7ccf79556
+Spread: Los Angeles Angels (-1.5),Buy,29.945919,97.766665,Los Angeles Angels,1777421840,0x08abc905d6232789cd729a31c5ecbb95a4e0a1fb7a08f8d941f056d20ebd3ea7
+Washington Nationals vs. New York Mets,Buy,40.835079,131.537418,Washington Nationals,1777420910,0xe576f1b813c1cd9c6d75604e0cb4a208a6d271509d1d6107717bda7c78c5a87d
+"Bitcoin Up or Down - April 28, 2:45AM-2:50AM ET",Buy,9.999999,33.333332,Down,1777358750,0x666584b130b8681a8519eb9e79b70cf87d9c9eb4f8247f4583f3a6fb17f37a13
+Golden Knights vs. Utah,Redeem,0,0,,1777358052,0x4662017cc7857a63aa5e92f4d2c2d2b21280565f8e68c1c9c3c88c20f767d19c
+Los Angeles Angels vs. Chicago White Sox,Redeem,0,0,,1777358048,0xe40ea748218a17092b212979dcef2bc1a604ffeefb17f051e7847166249f4570
+Oilers vs. Ducks: O/U 6.5,Redeem,0,0,,1777354628,0x040a17d4b8d4e3349c3fa668233874c33be63857e31886a2541b98cb118e1239
+Golden Knights vs. Utah,Buy,34.999999,77.777776,Utah,1777353038,0x5df0e95677a8935c6e5f8d09eb17811c451f0f9536b839fc09e4c278ca2ab5dc
+Los Angeles Angels vs. Chicago White Sox,Buy,13.999999,124.583332,Los Angeles Angels,1777352740,0xae4319d0ac4e8ddd27155a91ec1079e35425a48f096390e51ce880cd1d29950e
+Miami Marlins vs. Los Angeles Dodgers,Sell,90.2169,152.91,Los Angeles Dodgers,1777352596,0xeec80b65f9e40fffe09568d0cb0e508fb9654ade72eb348fb0df9b7236aebbf5
+Miami Marlins vs. Los Angeles Dodgers,Buy,4.999999,45.454544,Los Angeles Dodgers,1777351660,0x68823a2bc731dfbc08a4b3c17a3eabb2107392ac6aa71b150b68a19409656d0d
+Miami Marlins vs. Los Angeles Dodgers,Buy,29.999999,111.11111,Los Angeles Dodgers,1777349684,0x80292f1c6296b6f5d9ef1a2da8ec56dc331a69bdb4c28479b3439e65c937df56
+Timberwolves vs. Nuggets,Sell,5.8434,97.39,Timberwolves,1777349442,0x64a66a0b8a7e79891f5fae5b11e2a8ca9e0c0023e2902dea8cef474929fc9337
+Timberwolves vs. Nuggets,Buy,13,100,Timberwolves,1777348716,0x0fa71e18d091a4860f0da443793edbdcba785fea6fd2738239c48956c1c4b5a4
+Miami Marlins vs. Los Angeles Dodgers,Sell,209.2908,303.32,Miami Marlins,1777347662,0x408397fef824487622235bea5424b63b08552111d2e085eef4bc923b0880363b
+Miami Marlins vs. Los Angeles Dodgers,Buy,5,25,Miami Marlins,1777346340,0xb0c4a4dbf14f351e3959620039d3a70956249f11d6d821b8cc7e2b9955673d24
+Miami Marlins vs. Los Angeles Dodgers,Buy,9.999999,83.333332,Miami Marlins,1777344522,0xced2581880e810509a48803e7be7f61295628de4b8ab04be063cafa151803b6b
+Miami Marlins vs. Los Angeles Dodgers,Buy,11,80,Miami Marlins,1777343802,0xc6c4cba320a6c33a2ed3c72028cf4c4fa68607b2fde87ee22f73c13db3a982d2
+Chicago Cubs vs. San Diego Padres,Sell,111.962,164.65,Chicago Cubs,1777343722,0xda23c3108eb1998fecbef8157cc93d85bf1fd4a28d0b573fe1de3e47578dc1b7
+Miami Marlins vs. Los Angeles Dodgers,Buy,15.999999,123.076922,Miami Marlins,1777343568,0x4422be636bfc55fc70840c14419e170cb2290f022d1e454bb150ceaf2a0dac81
+Chicago Cubs vs. San Diego Padres,Buy,4.999999,20.833332,Chicago Cubs,1777342750,0x48d580b9782f88016502bb4b8ffaa9072b51ea435264f741b2bdbf85f8116c91
+Chicago Cubs vs. San Diego Padres,Buy,9.999999,58.823528,Chicago Cubs,1777341814,0xdee3478439ffd1c938e3a43986e783e0ec852176a69c1951a701d4fee09a5e6f
+Chicago Cubs vs. San Diego Padres,Buy,44.999999,88.235293,Chicago Cubs,1777340682,0xd464181114297c22b78e1cf11e9be7879e06def3a40e971abcecbec5fdf2291c
+Flyers vs. Penguins,Buy,5,20,Flyers,1777338594,0x83095b00bc26ae1aef3db9fa65a235f8915b68ed2a38e080f8b4c17cb03653dd
+Seattle Mariners vs. Minnesota Twins,Buy,1.999999,40.816325,Seattle Mariners,1777338054,0xf911e70b663238b359f816758384c7d5a7dcd55678908a2224558a08c9b76e10
+Seattle Mariners vs. Minnesota Twins,Buy,5.999999,66.666665,Seattle Mariners,1777336586,0xa2d559a837a4da00a7e7c06332f19392384cd6cd0994b3cb70edf2d88ae0a2ef
+Seattle Mariners vs. Minnesota Twins,Buy,4.999999,21.739129,Seattle Mariners,1777336472,0x745a65a2fb16ba963f75a33ed36c96f91452c14bd1be0e17c6c76fa35e0df6bf
+Seattle Mariners vs. Minnesota Twins,Buy,35,111.71875,Seattle Mariners,1777336422,0x1e49a8074d64cb68cdb3a542c51c090621964f219b7e07eeabe1a7b45627bc29
+Spread: Los Angeles Angels (-1.5),Sell,29.4026,79.54,Los Angeles Angels,1777336230,0x217c89bcc3a43b58bcdca9fdd3c854219e5c8ea486ec9e96c6f2ba36507cefa2
+Flyers vs. Penguins,Buy,24.999999,80.64516,Flyers,1777334164,0x952f13f4b9cdf2ffd4bb171b7f98ffda507cc2d39d8fb3a3a928c821b7f934c9
+Spread: Los Angeles Angels (-1.5),Buy,4.999999,13.513512,Los Angeles Angels,1777332168,0x1a592b072719505d5ed5db9abb14e3f38ebab71cb7278ded04ef8959f4964c1d
+Spread: Los Angeles Angels (-1.5),Buy,24.999999,67.567566,Los Angeles Angels,1777332004,0x905565547a7b9a647026685c47950d5bb2b689c0753b313e9cd2aadb5f33488c
+Philadelphia Phillies vs. Atlanta Braves,Redeem,0,0,,1777268038,0xf8fe3666eeec0d7a64db7c2192e4b0dcaf7d1e047ecda8dbbd67f64649ba97bb
+Oilers vs. Ducks,Sell,115.12476,115.24,Ducks,1777265354,0x26b4a72a9f593e054ca74ee515ab0d98bbd01a93fdc8ffddc4a879c7541c722e
+Oilers vs. Ducks,Buy,19.999999,40.816325,Ducks,1777264496,0x584249ec012f5b4e0ee1b012a76925dd5981fd23c6a366bb1544c3f6bb5c5d30
+Oilers vs. Ducks: O/U 6.5,Buy,13.999999,45.161289,Under,1777262450,0xd03e4af396ef4743b127ed6de89f1cdb72c40c304ca0d151251fb0c4504b2dac
+Lakers vs. Rockets,Buy,1,50,Lakers,1777260426,0x7dbf91e01c92356563af8378dd3ede41b61d1b0700503bc6bd0dd6e8b8acde3a
+Oilers vs. Ducks,Buy,22.999999,76.666665,Ducks,1777260072,0x3a292eb539e40801b813f3db4a1cc6f745dacef2b5175371a80f069fb2c5f600
+Lakers vs. Rockets,Buy,1.999999,15.384614,Lakers,1777259460,0x24bc316d33ec554e4e87b0c4995e2403a4baba36fbc0fec87d986046828d205b
+Oilers vs. Ducks: O/U 5.5,Buy,30.799999,90.735293,Under,1777258432,0x07abe4e4a4542d20d35dcf8f3762a3abe0a455ea8355eab9600db806e163f30e
+Lakers vs. Rockets,Buy,10,31.25,Lakers,1777257690,0xcdfcf340ecd120c2263d299cd221871fd91febfaa28c3c3ea58b28ede6a1a570
+Lakers vs. Rockets,Buy,24.999999,73.52941,Lakers,1777256156,0xc00896d22bdffc3f81ab7f1da62d0cc5d9716a08aba857d482f3bf50d0851ab2
+Oilers vs. Ducks,Sell,20.9328,100.93,Ducks,1777256076,0xc5378c84a6679221d9b42e715ace92635181b160433bbcfe1de90262455e3807
+Oilers vs. Ducks,Buy,5,25,Ducks,1777255522,0x8c9ee50487d9b5d85fb8cca939c6c4fee9db822033f6ca1000286d21390b3ff9
+Oilers vs. Ducks,Buy,25,78.125,Ducks,1777255292,0xddecf08daf26fa9229c7d174b898e3949005fe4ef4b963cc24234ef2a917b218
+Lightning vs. Canadiens: O/U 5.5,Sell,45.28467,45.33,Under,1777255212,0x7ddc442727d81ba89185cbb4207caf23d81df1f40b609fa7473ab767b98ff8a6
+Lightning vs. Canadiens: O/U 5.5,Buy,21.999999,46.060203,Under,1777253042,0xc7116475ec93777aacdda4a2dfddc8a4c781e9c294eee95da3eed30fa301cda6
+Los Angeles Angels vs. Kansas City Royals,Sell,42.2577,42.3,Kansas City Royals,1777252840,0x190d5c4c60d71f1dfd03b001c8e5682748b1794d24c72ff3304d8781a0d02b6a
+Los Angeles Angels vs. Kansas City Royals,Buy,17,43.092266,Kansas City Royals,1777251930,0xc7108a7fe1b7e6b6751af1f3090a2e5f0bf1393b558afc46a9806f51e12aadee
+Colorado Rockies vs. New York Mets,Buy,0.999999,27.777776,New York Mets,1777245334,0xd1673108ab73586dea13e0aec477aef405358cbc44dc46570b862a8c6e1dfb2f
+Colorado Rockies vs. New York Mets,Buy,1,12.5,New York Mets,1777244324,0x509706375d85418941771e5c28b9e964ac6a5ec85e11fedd554748cee9ee2073
+Colorado Rockies vs. New York Mets,Buy,0.999999,8.333332,New York Mets,1777243372,0x99123f10afa315238dd9e748b1bd37d6aebe94f12a223dc7194346cbc1006d25
+Colorado Rockies vs. New York Mets,Buy,4.999999,29.411763,New York Mets,1777242586,0x72167a9299d9d4ccfc030e9c7d7151e0e081dc39d652e28f73193f0a16353caf
+Colorado Rockies vs. New York Mets,Buy,24.999999,138.888887,New York Mets,1777241780,0xf9acf7d4ef2f799de204583c6d7b8191d478c67df918f15e0881f15e645a09f3
+Miami Marlins vs. San Francisco Giants,Buy,24.999999,75.757574,Miami Marlins,1777240132,0x5fea2d02cb101e1a313d4dfaa9e41b36717b1e10ecd965e447dc7dadee3606be
+Chicago Cubs vs. Los Angeles Dodgers,Buy,4,40,Chicago Cubs,1777239130,0xa6d7326122863e2dbc27a7f8940c8cf40bdaae4b1eaeccc628640ae177db04b6
+KBO: LG Twins vs. Doosan Bears,Redeem,0,0,,1777238900,0xc6500bf2cb61a0dd2cc84f8d87f59ffe81aa6ef87745917267067b6de51dd4a2
+KBO: LG Twins vs. Doosan Bears,Redeem,0,0,,1777238876,0xf45ebeaaa0ff202fa5c962837010a29fd520b4b1f4e2e6b12e0cb9c58eb294d5
+Athletics vs. Texas Rangers,Buy,0.999999,9.090908,Texas Rangers,1777238256,0x4dccf6980c932b7193b597e24849a5bfb1d83740dd181009fc4176798597282e
+Chicago Cubs vs. Los Angeles Dodgers,Buy,19.999999,142.857141,Chicago Cubs,1777237950,0xdc7ccf26cebcdb473b6e0dd32a895aab628e283001414f26b6ee8358a5ef4bee
+Athletics vs. Texas Rangers,Buy,5,20,Texas Rangers,1777236820,0xe77ff87a47a0d54ca711e7fec006a3cc20d951591197360a0b197fe48c59a2dc
+Athletics vs. Texas Rangers,Buy,29.999999,96.774192,Texas Rangers,1777231270,0xa5e985880ac01251d274239b13760f0857f1f6b69eb50729788318eaeee2ce89
+Philadelphia Phillies vs. Atlanta Braves,Buy,19.999999,57.142856,Philadelphia Phillies,1777224368,0x983a84c5a026ea88464afbb8677d50c93293d0a5146d2101042368c0e785b52b
+KBO: NC Dinos vs. Hanwha Eagles,Buy,4.999999,22.035216,Hanwha Eagles,1777188540,0x1141697ddaf382fdc3b28086434fd3dc44767a022e8f1d0735e6267306fd5879
+KBO: LG Twins vs. Doosan Bears,Buy,15,60,LG Twins,1777183188,0x6b3e663d9f5055e2073a2d2841f0f8ba036dd10ba0ec7506fb46f140c4b0cc33
+Penguins vs. Flyers: O/U 5.5,Redeem,0,0,,1777181886,0x364f8957e5914adc632c1b1f28b94f614244d47d080ba94033f33c2a688e5004
+Philadelphia Phillies vs. Atlanta Braves,Redeem,0,0,,1777181882,0xb3a24657f4fab715f4a3a9c5e05c5ba296ffb69021e8fe4ff19391b26b48cf88
+Los Angeles Angels vs. Kansas City Royals,Redeem,0,0,,1777181880,0x48bffd5e65fbb9c8ace1e6604a61e77f3774c8a7ac3b554a7dc2a2c810213c9b
+Penguins vs. Flyers: O/U 5.5,Redeem,0,0,,1777181874,0x947971c20b022b7357245335132f23150037b98cedb0bc61698656f9579b71f8
+KBO: NC Dinos vs. Hanwha Eagles,Buy,22.329999,60.547566,Hanwha Eagles,1777180398,0x7047b5b584bf176a45552e809c6e55a11d489ec2ac9d386a75dae5dc18240562
+Philadelphia Phillies vs. Atlanta Braves,Buy,2.67,133.5,Atlanta Braves,1777172284,0x9300ceca379e0786b5dadbc47734a74780db2aeac800396c65a1c2b2a76ceb4e
+Penguins vs. Flyers: O/U 5.5,Buy,12.329999,45.666665,Under,1777171332,0x7eee2e9d41504d41c53212364fc0014115fd9359ae364f045faf0733145ab554
+Penguins vs. Flyers,Sell,21.0579,123.87,Flyers,1777171106,0xc12b65bb5722cd676527bcb65fa6566472f05ab6c928af0223a33d67f8cd3a20
+Penguins vs. Flyers,Buy,13.999999,127.272726,Flyers,1777170486,0x6584154854840f037e9c32e2e97f31a11573d65347399d89590f6fa193584bb2
+Pittsburgh Pirates vs. Milwaukee Brewers,Sell,70.10982,70.18,Pittsburgh Pirates,1777169218,0x78dc250b2dbb7adb83034b4f1e738c79b2f04686bf26a9ad7b5baf55848bf891
+Pittsburgh Pirates vs. Milwaukee Brewers,Buy,29.999999,71.42857,Pittsburgh Pirates,1777166926,0xdb3889562fa344bf444eeb96f1ee7ed3151db6e73330bf21c648e07606a66d23
+Los Angeles Angels vs. Kansas City Royals,Buy,4.999999,35.714284,Los Angeles Angels,1777163558,0x99ac1b364aded8cb117a1dd70c4a54a5c61b0560367129d2f99829f552a75fec
+Los Angeles Angels vs. Kansas City Royals,Buy,28,100,Los Angeles Angels,1777161080,0x1b8fd83bb4616bdb89d15602dfa7e637e49821153886fd17d6d17cf92c059d96
+Los Angeles Angels vs. Kansas City Royals,Sell,18.6093,64.17,Los Angeles Angels,1777160726,0x988ae1e35831672083eea254b1f704e171001e0173700fdede18c7be6c086e6a
+Los Angeles Angels vs. Kansas City Royals,Buy,4.999999,15.151514,Los Angeles Angels,1777160376,0xdae186af44a5d7371596788ead9eef66c290e0894126a2bc0f86339faf2b23d3
+Los Angeles Angels vs. Kansas City Royals,Buy,4.999999,10.638296,Los Angeles Angels,1777159862,0x4f3ae4181192cce9f9d4a054cc586b13bb98c8d09e545ab12e60c81a943f6ed8
+Los Angeles Angels vs. Kansas City Royals,Buy,16.999999,39.534882,Los Angeles Angels,1777158968,0xd373ac69bd33a754a4e8be76af156fc7c2ac077e66b8a09872daacbdd1921bf5
+Washington Nationals vs. Chicago White Sox,Sell,27.08755,28.07,Washington Nationals,1777158058,0xae0877c0909439d4c278c2df702c612c8d9918a701b29bd19c48c493c64db916
+Washington Nationals vs. Chicago White Sox,Buy,11.999999,28.571427,Washington Nationals,1777156032,0x1e7fce0323aed27412b382ddb3f9d1acae361508e88f9dc92878d48ca2d5d1f6
+Miami Marlins vs. San Francisco Giants,Sell,67.5584,74.24,San Francisco Giants,1777155138,0x89c84a099012d76c98539867ab37257d4e0df8b75b829aced2adb7d66d6d0197
+Miami Marlins vs. San Francisco Giants,Buy,27.999999,75.675674,San Francisco Giants,1777151590,0x396c9fbfbcf154ef91b96013ded61297701efd73b72220ffdc8f99ac9d4dd246
+KBO: Samsung Lions vs. Kiwoom Heroes,Redeem,47.385485,47.385485,,1777121026,0x57d836b198207c4c41e02c9669db09c0bbf9035785feb72c369ec8dafe2877bd
+KBO: Samsung Lions vs. Kiwoom Heroes,Buy,14.999999,48.387095,Kiwoom Heroes,1777104848,0xbc48741c9708f1efdda5a5092985a993edc08ab10c3ffc2a521e7834ffc83959
+Miami Marlins vs. San Francisco Giants,Redeem,0,0,,1777098042,0x82d838e5327fa467b78df7289c9b7676c1201dd2d0d809dcff72282330b63ec3
+KBO: LG Twins vs. Doosan Bears,Sell,36.036,55.44,Doosan Bears,1777098024,0x9a0b10a19a791528d099f043163fd307ff550989ae9f2a607a30911f11907225
+KBO: LG Twins vs. Doosan Bears,Buy,4.999999,14.285713,Doosan Bears,1777095796,0xf88134f57ef4cb3611eca7e46c094cd2f9ff881ecba7262afe419960067bbd69
+KBO: LG Twins vs. Doosan Bears,Buy,9.269999,42.434544,Doosan Bears,1777094220,0x09ecb3b4feee4651a66feb4c8f8169c21988ec3860d28b9d604be0e22df4798f
+Miami Marlins vs. San Francisco Giants,Buy,1,111.11111,San Francisco Giants,1777093618,0x077496f1c0c85e775402d3fe5e8fb5ed2d48ace78cddb030e200a5de4aaf7c96
+Washington Nationals vs. Chicago White Sox,Redeem,0,0,,1777093578,0xbbac144a3ac985d8af174fadb894f2f0613556ea88f3b64de688059aa90d8733
+Chicago Cubs vs. Los Angeles Dodgers,Sell,123.6799,138.91,Chicago Cubs,1777092662,0x41d5a66fb32263513b79d8041547db03522560325c83d4075492d025bde63171
+Miami Marlins vs. San Francisco Giants,Buy,1,111.11111,San Francisco Giants,1777091878,0xdbc2417b3ace0c2dcd2cea198ba59d930361e386a5b2dd9c75a4900add7b726b
+Chicago Cubs vs. Los Angeles Dodgers,Buy,2,40,Chicago Cubs,1777089540,0xfe229bc61d79d006f7c4a04b0fedd6bcfe318195ffe973c5c3fb98b9a59508c5
+Chicago Cubs vs. Los Angeles Dodgers,Buy,5,103,Chicago Cubs,1777089158,0x66f634a24dfb2483d8492779775f020717708d4096e0e0cd3b55a47960320636
+Miami Marlins vs. San Francisco Giants,Buy,1.999999,28.571427,San Francisco Giants,1777086192,0xbad4c254b1d7348af65370852b85d0b6d06770d1c3d3158155d2ecd77f66afda
+Miami Marlins vs. San Francisco Giants,Buy,33,132,San Francisco Giants,1777084104,0x57c57bc2db68f9bb0926e1ad2c75c9b76784a595c42e9edfc4f27c022d02617e
+Washington Nationals vs. Chicago White Sox,Buy,6.289999,28.590908,Washington Nationals,1777083250,0xca1e245f2d502781b6ef26e6592f854dd8629e3844487e47f7034a43fcd05dec
+Colorado Rockies vs. New York Mets,Sell,86.4892,94.01,Colorado Rockies,1777079930,0x471745a781ac451f754798ae76c2b2b9a3e882c3b71d665cd730abcc145f485f
+New York Yankees vs. Houston Astros,Buy,5,50,Houston Astros,1777079852,0xc7a949b05d61c223881d35aa9f8a56c844b48e8c06dcf2d430b74fc7cdc337d9
+New York Yankees vs. Houston Astros,Buy,14.999999,53.571427,Houston Astros,1777079364,0xfe1be1572e1c899c415d965c2c2ce48f639718cc0c9de9c2506f9607618bb880
+Colorado Rockies vs. New York Mets,Buy,24.999999,96.153845,Colorado Rockies,1777074884,0x34686d240947e6a2f34c424812ef228336a625edaf707f803edaa2f1a5f362c3
+Avalanche vs. Kings,Buy,1.999999,25.316454,Kings,1777005090,0x88a9fd34e83c9e1210db61b92e976b1d81af744eff2249c81a078b43e390b2f6
+Avalanche vs. Kings,Buy,2.999999,14.285713,Kings,1777002830,0x36bea419eff1a98ebecae4d1f3e746c784ed93aff95e4b06a7c53692da19e93f
+Avalanche vs. Kings,Buy,23.999999,85.714284,Kings,1776997124,0xd53b6fe54a59a7d118beb88b8b64f331342f62eb530c9f07f74cbe7cc408772e
+Minnesota Twins vs. New York Mets,Buy,1,37.037037,Minnesota Twins,1776996826,0x57506053427663c9e282a6545d6fe286929e6bd16552b60230dd7939cadba44e
+Pittsburgh Pirates vs. Texas Rangers,Buy,4,20,Pittsburgh Pirates,1776992714,0x67134d92c22ee003d9b7b29c6b9aa2166243f4d82789ac57fc91d0097696b904
+Minnesota Twins vs. New York Mets,Buy,0.999999,19.230768,Minnesota Twins,1776992636,0xcb4e0230d3664fe1cb95204e403838b13430ca6812db2b280cd3a8c8015b2614
+Pittsburgh Pirates vs. Texas Rangers,Buy,23.999999,55.813952,Pittsburgh Pirates,1776990478,0x620bca5b53f0994cc4bb5dd74f5db8d0839ad6e9caca3d13407e81dddcd425bb
+Minnesota Twins vs. New York Mets,Buy,5.929999,84.714284,Minnesota Twins,1776990466,0x6f605a0f89c3917bc887bb369f6b85ec98e7b1175a119c6862073d9703af8162
+San Diego Padres vs. Colorado Rockies,Sell,129.36051,129.49,San Diego Padres,1776986128,0xb20773e28253c611b8bc823230ed573f229a2416cb24cef0d172e821d9a8611e
+San Diego Padres vs. Colorado Rockies,Redeem,0,0,,1776977052,0x781a91d435fd9c8b433a408fdfbb819a8ec3e19e48af3336c0267a52691e769e
+Chicago White Sox vs. Arizona Diamondbacks,Redeem,0,0,,1776977050,0x3ebf00e2b911acb2994827997f4945c53a18fbfddeb7ecad0b9130b342268014
+San Diego Padres vs. Colorado Rockies,Buy,11,55,San Diego Padres,1776976996,0x8f3044a5597e343e8c9ffd8ce9b06c78ccebe45eb81a3822d9f79c1d41323ab6
+Philadelphia Phillies vs. Chicago Cubs,Sell,17.0248,130.96,Philadelphia Phillies,1776976622,0xb2572f1719672e090a8433c445dd8df0bc9b6de26b3afa2cfceac7edc0d5b3a8
+San Diego Padres vs. Colorado Rockies,Buy,23.999999,77.419353,San Diego Padres,1776974290,0x8ab2bad5f8e855b274a9b07e95040241b6cbb021fa27ba3bd951023770a7caa8
+Philadelphia Phillies vs. Chicago Cubs,Buy,1.43,17.875,Philadelphia Phillies,1776973508,0xb39bd41b0360354318fe0b430a1f0b44228186e9bed662ff337231e262820e67
+Philadelphia Phillies vs. Chicago Cubs,Buy,13.999999,116.666665,Philadelphia Phillies,1776972522,0xc263174f0affd54f516ca38cb70fd13fff374964114301172453c74f97fea5a8
+Stars vs. Wild,Sell,54.3114,54.86,Stars,1776923780,0x87dd86030bbbe941a1e98622b646a7970277d851efa6bd7451da0f44066a0333
+Stars vs. Wild,Buy,23.999999,55.813952,Stars,1776921778,0xc1bcf39d6df6457c2807d98ddf6119d18af1deadd9ccebda2555e0e3ad862fdd
+Philadelphia Phillies vs. Chicago Cubs,Redeem,0,0,,1776920902,0x5e4977b2dc84a8226890f2d8c8d6ee55e1af02dbfff5ad2ea5561ba675676dbd
+Stars vs. Wild,Sell,39.8151,102.09,Stars,1776920886,0x172be89a655d46b8952ffc07d77d0d34551e741484b31ee4c8da959dbfc5d433
+Ducks vs. Oilers,Sell,85.0608,85.92,Ducks,1776919390,0xf8cb7250ba3a047862c825fe8915a48df48477e95ce838398239c910bb0414e2
+Stars vs. Wild,Buy,22.999999,104.545453,Stars,1776915814,0x745ad10ac53ed092abd545f2c1c054d1f4414c507cc6a9402c51b703cf33d630
+Chicago White Sox vs. Arizona Diamondbacks,Buy,0.999999,16.666665,Chicago White Sox,1776915434,0x932f4de0f684af1fcd3bb290d8e1d75bdf9d2086a62c6c4dc37a811439ca91f4
+San Diego Padres vs. Colorado Rockies,Buy,1,25,San Diego Padres,1776914460,0x1c2ae1c024b15dd9cdbb85d59b8360f06626df613a03c3271c8c8dc298f5ce0c
+Ducks vs. Oilers,Buy,35,87.5,Ducks,1776913548,0xf58d4aaa4944ca946d0f924c882bd3bfda9ba71182f3d1cf0e6cab2ab69e4a5e
+Chicago White Sox vs. Arizona Diamondbacks,Buy,21.13,132.0625,Chicago White Sox,1776912748,0x4bd031f3c0cca3318b2740772d9910383f8c6f023a3eefdfef7f532ef48809fc
+Pittsburgh Pirates vs. Texas Rangers,Sell,71.1513,71.87,Pittsburgh Pirates,1776911988,0x8de0408969089dbbb04f44548e58e71b1142b31e746a6a8bffb0d3c6ecde15f9
+San Diego Padres vs. Colorado Rockies,Buy,3.999999,33.333332,San Diego Padres,1776911040,0xd87ed7d41270f80ad53194fd08863b8639bc19cac59a1928a4c3ab48d4bb4028
+San Diego Padres vs. Colorado Rockies,Buy,19.999999,66.666665,San Diego Padres,1776907882,0x40cb13ea4ab3cb74504c2a970e2e3d233e81a45dfa4dccd05049a92ec06d7ac9
+Wild vs. Stars: O/U 5.5,Redeem,0,0,,1776907844,0x70f35bfa71a461ea2ab15fe2c1a6504710b2d2773c1eb0d37875d0d5d38740e5
+Philadelphia Phillies vs. Chicago Cubs,Buy,1.579999,26.333332,Philadelphia Phillies,1776907488,0xf639a0e9e9298bf9c1667424805a89e744c0912be395638422f9acc76b8c0335
+Pittsburgh Pirates vs. Texas Rangers,Buy,29.999999,73.17073,Pittsburgh Pirates,1776906758,0x37ce8e559cc1089d338973773a88144d13d639340336e864238fd4218ef220b0
+Atlanta Braves vs. Washington Nationals,Buy,10,125,Washington Nationals,1776903492,0x172e9024e4d741460096eb9da3aef3c5e2bfc83f90799f2e0c3f216e7a63c03f
+Philadelphia Phillies vs. Chicago Cubs,Buy,4.999999,18.518517,Philadelphia Phillies,1776902152,0x2888c9930f012679de02b9f1618bd7e0ad25dd44449d27d56c850d15b22d3f24
+Philadelphia Phillies vs. Chicago Cubs,Buy,22.999999,63.888887,Philadelphia Phillies,1776901462,0xe2ecf3313fe11383afaf8de0eb427e5a3e14172fb20f37e22df84935f9cbe981
+Atlanta Braves vs. Washington Nationals,Sell,53.9391,94.63,Atlanta Braves,1776901350,0x5e8a7a2c8f4b5f766251e49558aee595e7289d1866cd2dce605221ee1b41d0d4
+Atlanta Braves vs. Washington Nationals,Buy,28.999999,96.666665,Atlanta Braves,1776899560,0x854e2566948f89e4c46702d108bf192ca2a66ae51358ec97a9c23510bb28ddc4
+Baltimore Orioles vs. Kansas City Royals,Sell,51.33861,51.39,Baltimore Orioles,1776895388,0xca09cefe452cf19e19b51be9f2be4d4040030942f5b7b8c0b87a0e0cf4dafabc
+Houston Astros vs. Cleveland Guardians,Buy,2.999999,42.857141,Cleveland Guardians,1776886970,0x890e50186293e0403cd8e93afba4f850edc1208d64cf3332ca7fc61e4e05aa7e
+Baltimore Orioles vs. Kansas City Royals,Buy,3.999999,10.256409,Baltimore Orioles,1776885688,0x0878dd0d80f1def02c1441fb91018a92f867b04e681ffc081b0ac6af98279d91
+Baltimore Orioles vs. Kansas City Royals,Buy,15.999999,42.105262,Baltimore Orioles,1776885652,0x0735942a5a917d151cc33c00c625e8a2f825011e5fcf099bdaa3d030fd37c3c6
+Cincinnati Reds vs. Tampa Bay Rays,Buy,3.439999,49.142856,Cincinnati Reds,1776882946,0xc9db7b040a0fbd4dc9441c9868b1edb4840c644ec50f73cf3228be896f0a04df
+St. Louis Cardinals vs. Miami Marlins,Buy,0.999999,23.809522,St. Louis Cardinals,1776882474,0x2ca28d139fa2628a19fcd12b8655fa777f40bb5d4e03c6efd37f4c00fb3bb58e
+Cincinnati Reds vs. Tampa Bay Rays,Buy,14.999999,88.235293,Cincinnati Reds,1776881718,0x19f6cef3f2cf78c00650beb1220a027569a588fc19c9b10da31ba07c40824b2a
+St. Louis Cardinals vs. Miami Marlins,Buy,9.999999,43.478259,St. Louis Cardinals,1776875996,0xe62d5dc4a08de0df897a5990293ec320b8daa5b19a75c88755f78dda4e45485f
+St. Louis Cardinals vs. Miami Marlins,Buy,43.999999,102.32558,St. Louis Cardinals,1776875004,0x8ccf30275b033f382ae592c9727cc03d15abad36bb9aa6aefd5d4607c8f941e8
+Kings vs. Avalanche,Buy,5,12.5,Kings,1776836910,0xe476ef5ac672e6b529500456edf8d05672e49c93af58d5cf0f3c3daa64e8b0bf
+Kings vs. Avalanche,Buy,21.999999,62.857141,Kings,1776832872,0x301e8cae93193c447b82e1a683ca1ffb70ff38b63f30f11b08932ec968370ac9
+Athletics vs. Seattle Mariners,Sell,0.03883,38.83,Seattle Mariners,1776832790,0xa7500d23512ce07ff32ab3e8d428482c23e49fb5429d7fd724f580503ba496f8
+Athletics vs. Seattle Mariners,Buy,1,40,Seattle Mariners,1776832582,0x132e751656e92e0e84da25a7b66f1429f65b2c354a8fc3ae795da08dc0bf48b2
+Utah vs. Golden Knights,Sell,42.3423,42.77,Utah,1776832518,0x7e87b84affdd645609dcd92d46af2bdeb5e1c0679e6a1b8ba0f5555d8c2cac3d
+Utah vs. Golden Knights,Buy,19.999999,43.478259,Utah,1776831346,0x1727727cc7b52c39be3959d490b5c09b143915ecb54bed6ecb7e10819efc2efc
+Los Angeles Dodgers vs. San Francisco Giants,Buy,1.999999,11.764704,Los Angeles Dodgers,1776828742,0x3093f7368eb53216ca759f2620b1958a8a57e75cf6e0e145b60ee79220d539b7
+Los Angeles Dodgers vs. San Francisco Giants,Buy,2.999999,11.11111,Los Angeles Dodgers,1776827614,0xa871fba31cc9b37df6ecadc21f88b9b68ccac53db556aeb3e4545463c8f1d19c
+Los Angeles Dodgers vs. San Francisco Giants,Buy,6,18.75,Los Angeles Dodgers,1776826168,0xa2806d5c36392d7590988bee0fb099ec94ed787e8b9273fa51c008c6bd1ad65b
+Los Angeles Dodgers vs. San Francisco Giants,Buy,23.999999,88.888887,Los Angeles Dodgers,1776824364,0xf0229b7b902591cc9b333100544bf7f9a58b1f0f70e7f37cd384d2aa8cb4e36f
+Atlanta Braves vs. Washington Nationals,Buy,19.999999,52.631577,Atlanta Braves,1776815780,0x5b1f67eac1492e9718abc0f0da89cd122d844c5e89d785b6cd156db6ce0c6541
+Philadelphia Phillies vs. Chicago Cubs,Redeem,0,0,,1776745930,0xfeed8dbef2f57c4a0d4ec840301edc476fb69f2b58866f0f5ee771fd5c245ae2
+Wild vs. Stars: O/U 5.5,Buy,24,40,Under,1776745154,0xf46737c516ea7a4e40993d52384d2d6f3aed481624155b92a5d6c590679b5746
+Toronto Blue Jays vs. Los Angeles Angels,Buy,0.999999,33.333332,Los Angeles Angels,1776745074,0x02049742165f34f9b5532e2533c60cabe6321430e5076e6a24abf9be8f2f40c0
+Toronto Blue Jays vs. Los Angeles Angels,Buy,9.999999,76.923075,Los Angeles Angels,1776744444,0x9f5d3c665d7c3d85f21fdbafbb5fc3c053d2d170667254dc0e4f24f83c69468c
+Detroit Tigers vs. Boston Red Sox,Redeem,0,0,,1776744148,0xbe7b7a3adc085a4b7e54d7bf06c585b0d3e7822fcd569e96d972cc75b02840df
+Athletics vs. Seattle Mariners,Sell,180.5197,196.78,Athletics,1776743972,0xa43694d23a79d479cca101fbbebfc8ee2da85400f051a96392db9d70e643cec3
+Athletics vs. Seattle Mariners,Buy,3.999999,26.666665,Athletics,1776737652,0xde0f90efab2375bac42914e05f14fb85e207361ea306b5601a0af4cc65a45546
+Athletics vs. Seattle Mariners,Buy,35,175,Athletics,1776737462,0xf7e6bd61630c43e3c355cba0547e7273b09988c13c8e2d2d2c8bf487d9bc302b
+Philadelphia Phillies vs. Chicago Cubs,Buy,1,25,Philadelphia Phillies,1776734822,0x3c6c9e67796ef53012bf79f00a1ed7c7427e03370b5a483acd7b726eaaf71ccc
+Philadelphia Phillies vs. Chicago Cubs,Buy,9,150,Philadelphia Phillies,1776733172,0x0af578c3c9fc3d08675298cf06220a3c6906fd245d04789d325d2b810bf88c6f
+Atlanta Braves vs. Washington Nationals,Buy,0.999999,16.666665,Washington Nationals,1776730812,0xe82c742c9f93d23c97ff1d14cd35ffc8c7320548575a4954818b7783392f53df
+Atlanta Braves vs. Washington Nationals,Buy,4.999999,83.333332,Washington Nationals,1776730384,0x8e320b903688c06c208f6c24e6fc2b805bbbc2a0a9fc41ecba5ef1bca4bba277
+Atlanta Braves vs. Washington Nationals,Buy,34.999999,85.365852,Washington Nationals,1776723064,0xc6dbdb7f4ef214a281e427a2761e459a1ed90c1a1370a3a01771f39b5835aa06
+Detroit Tigers vs. Boston Red Sox,Buy,27.999999,62.222221,Detroit Tigers,1776695712,0x3189515a59cba4b53b169d5ee629caf2c7f3490b8772e72102d6b12a53be7dd1
+Atlanta Braves vs. Philadelphia Phillies,Buy,2,40,Philadelphia Phillies,1776651020,0x7e6c2943f2f5cabb4f17fd7b73cc85be425cf86b50f2f0eb6bd6b61d62caf619
+Atlanta Braves vs. Philadelphia Phillies,Buy,17.999999,78.260868,Philadelphia Phillies,1776646674,0xf5bee9c4450b943aab4252cd334e757db5c73e4c1bdd44d691e14143696a7192
+Texas Rangers vs. Seattle Mariners,Redeem,0,0,,1776573220,0x399cf9d77be2e64cf05973c412003c94a8763ea88898e5518025e0acc6192029
+San Diego Padres vs. Los Angeles Angels,Buy,1,19.607842,Los Angeles Angels,1776572952,0x0aafb13e29fb2681555c692f2efe947874bdc5068d90e499c531e43098a7e9d7
+Atlanta Braves vs. Philadelphia Phillies,Redeem,0,0,,1776570716,0xe634997f8f4b07b13cf4025e8747464bb7e80f929ee1848670bb3ea74124c4f3
+Atlanta Braves vs. Philadelphia Phillies,Redeem,0,0,,1776570708,0x30258a48f8a8342a39761ee8cf4e419159be5d12c7a2fe863ce39b92133ac4aa
+San Diego Padres vs. Los Angeles Angels,Buy,1.45,29,Los Angeles Angels,1776570390,0x254dbf9583e904b35a11fee2a4b435c98f603afb52292836dfcabc9affc52879
+San Diego Padres vs. Los Angeles Angels,Buy,39.999999,81.632652,Los Angeles Angels,1776567872,0xd66508a283cf11a66b0d113c7bd0eca4cbc01a9ca7f84d716fadcc391dbebc03
+Kansas City Royals vs. New York Yankees,Redeem,0,0,,1776567016,0xcad23c966376f4af916bda7b13252b2c3ced5820196c60934b6174c1f7ba4da3
+Los Angeles Dodgers vs. Colorado Rockies,Buy,19.999999,47.619046,Los Angeles Dodgers,1776565466,0xa675787b55f9f1e9b1318be2ebd571d3b24596ca83ae21ac3699d234249b4bc3
+Atlanta Braves vs. Philadelphia Phillies,Buy,12.999999,71.113683,Philadelphia Phillies,1776559776,0x1ee9457b669ec0bd67184e6e329f1a708c6e3221cf98731ce01c3389d6015eb3
+Texas Rangers vs. Seattle Mariners,Buy,2.55,21.25,Texas Rangers,1776558918,0xb00018646086fd7093e2108277334a24db3d78fd3a93d0808de262ea1b2ed1d3
+Texas Rangers vs. Seattle Mariners,Buy,18.45,57.65625,Texas Rangers,1776555612,0x081f4811c380abc46f3e3c60883b2191556ca2a77aac44f68f0468fab744d8ba
+Texas Rangers vs. Seattle Mariners,Redeem,0,0,,1776546544,0x5d085ae5ac25785bec1dbc0ce9a62eb98ebf78a8cc4fd2ae4cb15eb52a7da465
+Cincinnati Reds vs. Minnesota Twins,Sell,149.682,157.56,Cincinnati Reds,1776546518,0x6352262dd2870f386026123c420e0b3f86a5f736ff7068126f57fc7a90ace19c
+Cincinnati Reds vs. Minnesota Twins,Buy,3.999999,26.666665,Cincinnati Reds,1776544010,0x895766a2234855c4f6c4958271761d807b841967f6dbbc470740257547789b87
+Cincinnati Reds vs. Minnesota Twins,Buy,6,25,Cincinnati Reds,1776539316,0x87cb4b3d50fbcee73281ea08f367c2e84763dd168adfe3d7807fa3f379013055
+Cincinnati Reds vs. Minnesota Twins,Buy,35,109.375,Cincinnati Reds,1776537678,0xeb070903db4822e17ad5c5eba6b0f4a6ebe4734cbd10108f63804585729b6004
+Kansas City Royals vs. New York Yankees,Buy,4.999999,55.555554,Kansas City Royals,1776536290,0xf643a90a0fb6089ed07bb10843447b91801f973b990a532a021661d9591274fb
+Kansas City Royals vs. New York Yankees,Buy,34,85,Kansas City Royals,1776535638,0x0a4aa2106be7e3d445691d4dd5de66a9a513114e05ba9ad1bac05ce49109e365
+Texas Rangers vs. Seattle Mariners,Buy,1.429999,47.666665,Seattle Mariners,1776486954,0x9bcb13702b33e88b88b7731dbe10008b0617597d2d770238c438be5872362ec4
+Texas Rangers vs. Seattle Mariners,Buy,4.999999,18.518517,Seattle Mariners,1776484070,0x1964656a51e07f98d0fd6242a9b4244b92cfbbc240027e0d7b3a47187c671adc
+Texas Rangers vs. Seattle Mariners,Buy,19.999999,71.42857,Seattle Mariners,1776481924,0x3b8d8a9074da83d43202f8e17c55a1ad39eaa5c86b5d6074ebd08f4d3937b161
+Chicago White Sox vs. Athletics,Buy,24.999999,96.153845,Athletics,1776479398,0xf1235a5a018aa92f8da72f31f18eb11d6072b6b7d5c844ce388c515726888b77
+Miami Marlins vs. Atlanta Braves,Redeem,0,0,,1776479056,0x372b01f0a388f01407282f184ba6fea33c32fc538fce3ba9b22536f265b563a8
+Cincinnati Reds vs. Minnesota Twins,Sell,76.5451,107.81,Cincinnati Reds,1776479036,0x63027e101491a9ef9e1d9d7475903f5554d2b7fc6961eb5fa21b0175037ef256
+Baltimore Orioles vs. Cleveland Guardians,Sell,49.76648,58.48,Baltimore Orioles,1776473826,0xed8221377f9b47c431d0124bf4c7ac9173423516508baeb44baf0a8351d0a02d
+Cincinnati Reds vs. Minnesota Twins,Buy,44.999999,109.756096,Cincinnati Reds,1776472532,0x6d8fe83e195cdcd443f97c911f716b8e0a9954e8940acce0d5e3ffb0e74e78ef
+Baltimore Orioles vs. Cleveland Guardians,Buy,24.999999,59.523808,Baltimore Orioles,1776464806,0x5f234cbd5921cfaec2160350bef13cc74c247bd3de2f7bb11708a7aa4dd49f5b
+New York Mets vs. Chicago Cubs,Buy,1,200,New York Mets,1776458202,0xe9102b5fdfa893235d31566e37dc846422f34009907183f39521e69a2786235f
+New York Mets vs. Chicago Cubs,Buy,3.999999,44.444443,New York Mets,1776454748,0xcc49f3077e64471a35686330b7353701e9376bb4f213bb7f3ccc010bdf343b64
+New York Mets vs. Chicago Cubs,Buy,9.999999,55.555554,New York Mets,1776451522,0x670d34a10e10ad18cb873a3ae8a58419195a45befbd2e00c9896b38ff8a9ea24
+Texas Rangers vs. Athletics,Buy,4.579999,21.809522,Athletics,1776374242,0x9eb6eb0146c4e9b78638d94671e4627ec4dece9efed671376d718927ee6ea671
+Texas Rangers vs. Athletics,Buy,19.999999,54.054053,Athletics,1776369116,0x6728b1b19674874a23c36e01182b803e39228dd37708c8ceca00a9d7458bdf31
+Washington Nationals vs. Pittsburgh Pirates,Sell,44.9175,59.89,Washington Nationals,1776368844,0x463ab07f6bd2efdc63f4d46692dc8aad567d29abc6790df4ccaed6207f47bba2
+Washington Nationals vs. Pittsburgh Pirates,Buy,24.999999,60.975608,Washington Nationals,1776326646,0xe87b6e4bb794bc7f6e6f09c9bbd51844362a0d1202e16057b29f4638a0fc415e
+Washington Nationals vs. Pittsburgh Pirates,Redeem,0,0,,1776314892,0xf7a42b79b4fe0269d3e79fc5888e70eb722223b3b115f3d5045e843e1b163baf
+New York Mets vs. Los Angeles Dodgers,Buy,5.529999,46.083332,New York Mets,1776311780,0x47d00ac90580e55e9c86d4762b831d3c315f85d5337a59bb20313c7ce3799e12
+New York Mets vs. Los Angeles Dodgers,Buy,14.999999,88.235293,New York Mets,1776309878,0x951b618cc9f70902d6ce823abfd6500558bd595d7216a777aad30b08a674f12b
+Texas Rangers vs. Athletics,Sell,36.2912,95.24,Texas Rangers,1776309574,0xeceb5bd661f03eb2e2ee94ac5641c9d82595437330fb6a009fe767a6bd634630
+Texas Rangers vs. Athletics,Buy,33.999999,97.142856,Texas Rangers,1776305612,0xd9a7948c38d571ecc5a79782e28f4ea272ab731e4d1e7518db40784eb2c4ec5a
+Colorado Rockies vs. Houston Astros,Buy,17,100,Colorado Rockies,1776303768,0x21baa0108a1353672dfa88e3c32acda222ddfcba9dccf04c298f32504d8ff6a6
+Los Angeles Angels vs. New York Yankees,Sell,25.839,26.1,New York Yankees,1776303100,0x906775764bba6f9f7655390c2e3e258884442bbe63c1123ee8362e668326c583
+Los Angeles Angels vs. New York Yankees,Buy,7.999999,26.666665,New York Yankees,1776302730,0xedc431f06dff4ceb47477732d7c0d2503d7c3c68b231c815ed149e439ccdf032
+Miami Marlins vs. Atlanta Braves,Buy,11.999999,66.666665,Miami Marlins,1776298468,0x5232455d75c8739b25c752bab9d9b9e8aadbb4466ff23f64b2b66dc93daf745c
+Washington Nationals vs. Pittsburgh Pirates,Buy,9,37.5,Washington Nationals,1776294242,0x88fceb6adfdd31447f9bf47252b07d374167d455896d116b4288f2c99e5e4459
+Avalanche vs. Oilers,Redeem,0,0,,1776281246,0x611b8b425bd18f6c63cb82c88cdd90c6d027f98b703ac18e2e3d4ed427a72409
+Kansas City Royals vs. Seattle Mariners,Buy,5.09,12.5,Kansas City Royals,1777776762,0x34ff45555c65a8b54bf6fc746fefd0d3226b394198ddecb7172336093e6c204d
+New York Mets vs. Los Angeles Angels,Buy,17.842859,75.826085,New York Mets,1777776102,0xb4eb311866ac56b98116436ba74fc36b4d6b8e30ac7e73a2be374b8ed02022a8
+Chicago White Sox vs. San Diego Padres,Sell,67.38377000000001,70.96,Chicago White Sox,1777775978,0x1d9599d36e422387614c3e9eb144e6bbcf460dfaf07a8011234821278ffd3b40
+Kansas City Royals vs. Seattle Mariners,Buy,5.104989,16.666665,Kansas City Royals,1777775522,0x356e0c7a06c44c8baaf3a2d52acd0802e6bd2c93b56da353c06565a1e18b4474
+Kansas City Royals vs. Seattle Mariners,Buy,14.289789,45.161289,Kansas City Royals,1777774528,0xd4b4bf5a4729f8e54d2aaa15336416e5fbb30bf9eba8720b772c876b3c5c605b
+KBO: Lotte Giants vs. SSG Landers,Redeem,0.004867,0.004867,,1777774406,0xc0f646c8708f2635df7357d850d5a3ddb523ee7b56c12760b67a681006c9a9f3
+Chicago White Sox vs. San Diego Padres,Buy,22.455389,70.96774,Chicago White Sox,1777772880,0x3994ac9aa076e3e574bb0b98a3e2c0209a05fd45f9e1d50caf43a4fb3581cfca
+Flyers vs. Hurricanes,Buy,1.029089,33.333332,Flyers,1777772798,0xcde7f2dba141a8b353b6a15065b2092dfe8c53f3de58d32bb6627f44729373fc
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,1.0285,20,Los Angeles Dodgers,1777772388,0x1f13a8e27f8c477d125e3573f3a1f33db43c1a67e7b2a54f1133d2309c54fc44
+Flyers vs. Hurricanes,Buy,1.59278,19.375,Flyers,1777770688,0xdc9800b1699a4e4af41b90dff65cb785e860d6f721903264bf7b64c6059f362e
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,6.158569,50.416665,Los Angeles Dodgers,1777769488,0xb90f356663c599e14dd5ed950bb735a655bc78ea7f3634b7be14fb625572c6b1
+Flyers vs. Hurricanes,Buy,3.0828,37.5,Flyers,1777768344,0xa98b72c23a14b375fc2ec72cfe0ceeb54f8e38fef501a931f389915da30a60a7
+Flyers vs. Hurricanes,Buy,15.368989000000001,83.333332,Flyers,1777768008,0x6b9ee3befdf542208cb50786af173e7920313ed55a7783bd24dcd63bf986a3a5
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,5.124489,29.411763,Los Angeles Dodgers,1777767854,0x7246167306299c631fd793784e70e49890fb63074e3e3ca3a46014f378ca3135
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,15.346489,65.21739,Los Angeles Dodgers,1777767748,0xa528c0dfcbefb2b5cb19dd394083063646a265b7ced9b57fef2ef66063f8b07a
+San Francisco Giants vs. Tampa Bay Rays,Buy,4.112789,66.666665,San Francisco Giants,1777765566,0x6dc087a96fb492ee947d97711c0dcb345da42f184bb3d7730a980ba4c96a4935
+San Francisco Giants vs. Tampa Bay Rays,Buy,27.542689,81.81818,San Francisco Giants,1777763976,0xd5ad709151e5d16d9a70f8fd825838c8575fe9e6c1aea8d74bc173d83dd113ac
+Milwaukee Brewers vs. Washington Nationals,Buy,3.0846,50,Washington Nationals,1777760306,0x22d215049c0766beb4ddb69779a50d6b4dadfc5940df2ede410e4474e11fd6e2
+Milwaukee Brewers vs. Washington Nationals,Buy,4.101989,26.666665,Washington Nationals,1777758066,0x020bc89fb06ee5c9804c048fa51df5d9ba061452f390534fd574198711f6d69e
+Milwaukee Brewers vs. Washington Nationals,Buy,18.991099000000002,82.21739,Washington Nationals,1777757858,0x1df00b5cef341a56bfccbaa9f88860189383c45fdb4abbf6f638c46263f7994e
+KBO: Doosan Bears vs. Kiwoom Heroes,Redeem,59.028363,59.028363,,1777727312,0x6bb04ed206a19d96e504b9ac9d792efa872dcab6feb485ad7f5b2edf72f1f337
+KBO: Doosan Bears vs. Kiwoom Heroes,Buy,5.095609,13.790269,Kiwoom Heroes,1777712446,0x9589dd8bf371fed99c4562ba1f43d9be5f8e06af26a162cafbdad87d21dbfd4a
+KBO: Doosan Bears vs. Kiwoom Heroes,Buy,19.330589,45.238094,Kiwoom Heroes,1777708788,0x7580a1a029ad9ac7e056ddf9c6b914410e5c55e00e3a6836c8449ef74eaa6884
+KBO: Lotte Giants vs. SSG Landers,Buy,0.90349,8,SSG Landers,1777706976,0xa788456c98c66b6489ccf1417558974c155e0d8f8dd9c6b7fd2e419ba32bcc8e
+KBO: Lotte Giants vs. SSG Landers,Buy,9.780239,59.411763,SSG Landers,1777706394,0x3c606d0ea74866e68b2049a8779e6cd6ae82b0ba9d64252bc7b83fa3c9912d9d
+KBO: Lotte Giants vs. SSG Landers,Sell,69.41483000000001,80.73,Lotte Giants,1777706268,0x5c0729cd4f6fb5e64200aa475a7298d2dbb0ae9ce55c2c52231382d6d3ee8402
+Cleveland Guardians vs. Athletics,Redeem,0,0,,1777704842,0x7d93a396b5c8e7345096e6bc285c1220a760ff9e52c4eddd65598caf90c80dc3
+KBO: Lotte Giants vs. SSG Landers,Buy,5.118489,23.809522,Lotte Giants,1777701768,0x5d6c90d3f417f83a9677bad2229b63f91b10f60c7e684352516917547638076b
+KBO: Lotte Giants vs. SSG Landers,Buy,5.107989,17.857141,Lotte Giants,1777699722,0x7a4bb4ddf5c15d7bc2148c11fff099a410dfc7ff806568397e064e46d0d4cfd9
+KBO: Lotte Giants vs. SSG Landers,Buy,15.277219,39.068204,Lotte Giants,1777699224,0x92372bcb777385688ec35b733b53dec01f9ec99ad730c78ee32c2058751dcbf1
+Los Angeles Dodgers vs. St. Louis Cardinals,Redeem,0,0,,1777698042,0x47b2a7e227630f3a906f77d145e10e2e4503571180715542421baad11dd1c5f1
+Cleveland Guardians vs. Athletics,Buy,9.224519,53.431951,Athletics,1777696332,0xab80b6b1e43783dce0d0860a3e2c4546a61808c298b93df91ab6929962694fb9
+Kansas City Royals vs. Seattle Mariners,Buy,9.2268,56.25,Seattle Mariners,1777695510,0xed7dc85aa5436c254315a1c28a913aae59a779177a79d529cec90e9eb4780a7b
+Kansas City Royals vs. Seattle Mariners,Buy,2.2514800000000004,10,Seattle Mariners,1777695156,0xb9c68572d49b49c90e5e75df2cff7634e7fb458239e96106225cfa2f4bbcc35a
+Golden Knights vs. Utah,Sell,6.53947,74.7,Utah,1777695122,0xcbaef4a1869e2ea52afacd6575811cf77929e8cdccb9d0f9f50ce2d7c9e0d945
+Golden Knights vs. Utah,Buy,7.67169,74.7,Utah,1777695002,0xc8f900c1a3d34608241ed0e19717668b531e9c87c5c5aac2550768ee184bb477
+New York Mets vs. Los Angeles Angels,Sell,96.69129,123.17,New York Mets,1777694840,0x0158b744ba4ef6fd7a1c449cd09a1a8a085f50d21e79c94dfc65acf19422584c
+Lightning vs. Canadiens,Redeem,0,0,,1777694652,0x53b959d2eea3908193311b4a66a6754007724e6d95be0c5617f3161e41c20197
+New York Mets vs. Los Angeles Angels,Buy,4.099589,23.52941,New York Mets,1777689804,0x629b44b4afded669145b0753a056b0fd456a124207ceb5909f58416a805712a5
+New York Mets vs. Los Angeles Angels,Buy,4.944349,34.42857,New York Mets,1777689454,0x9699cafc89bcac11219d791d4f3e718661dce96f816444733592238d38bea9e0
+New York Mets vs. Los Angeles Angels,Buy,15.346489,65.21739,New York Mets,1777689042,0xb1312ba7808243ce9745b6a3ad4b3f9e54e79bfeeb6ce88c92b3c2d0bc04ae51
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,5.12,25,Los Angeles Dodgers,1777688150,0x79969746789e70800b0be049807b65c3ed8534e8bcaa3b91d134dcf175e2f012
+Los Angeles Dodgers vs. St. Louis Cardinals,Buy,29.608988999999998,96.666665,Los Angeles Dodgers,1777682384,0x417b5b92ec0234ebeed35b09797cf9f0d13915a042206f9ff2bfa9b9effbb5f6
+Milwaukee Brewers vs. Washington Nationals,Buy,3.99736,48.625,Washington Nationals,1777681106,0x975e999947a57adb1d99d3291aa764870a5c5b20cdbc99335c66cbfe81ac25c5
+Lightning vs. Canadiens,Buy,25.375,50,Canadiens,1777680254,0xa19a2891bb1f99073502e76c3fe23b000231465a2f6f69b1896fee7a5e606264
+Milwaukee Brewers vs. Washington Nationals,Buy,5.116989,22.727271,Washington Nationals,1777679278,0xd6746b93ec7ae1574daf7bd6ccaf2f4864c95609bb3c3718c9fe59522d8102bd
+Milwaukee Brewers vs. Washington Nationals,Buy,20.383989,55.555554,Washington Nationals,1777677224,0xfe2d924b4e0860dcde662909210efc2f0d1cb2e8bcf1ce46b35227b66dbe31e0
+Deposited funds,Deposit,438.99609,438.99609,USDC,1777676670,0xe26f54d15863aa58ae4318c6b667716703d7255b67d2eab124caaa5f89f3a974
+Arizona Diamondbacks vs. Chicago Cubs,Buy,4.115429,105.263156,Arizona Diamondbacks,1777666620,0xa9872d8f357bcd0623efce57186cfe95fa9bc688a141afff1ed5b4a79c3c4521
+Arizona Diamondbacks vs. Chicago Cubs,Buy,30.461899,61.630203,Arizona Diamondbacks,1777659980,0x4abf69770369570b81ac7fb03c91f1e2571b1375fde392245b53a89759b7ef6c
+KBO: NC Dinos vs. LG Twins,Buy,3.0846,50,NC Dinos,1777627332,0x40c82808716ce7ef846d5e73de9c3b36d5740b7833240902cc840306ae97461c
+KBO: NC Dinos vs. LG Twins,Buy,35.58085,78.334375,NC Dinos,1777623732,0x3f19a8e536c4108fa39a6361950defddede57ef2d804383b377373a41a8b5cf0
+Oilers vs. Ducks,Buy,1.027889,14.285713,Oilers,1777607710,0x5bfeaff23d292380ba32f3a54ffe909d77b8c8b180d8a5401a6b8a75ec85419d
+Oilers vs. Ducks,Buy,5.113989,20.833332,Oilers,1777604668,0x6991b224c3a789cf90d89947d4356abebd40deee748a3aed10a81411b31339c8
+Oilers vs. Ducks,Buy,23.524389,95.833332,Oilers,1777604650,0x9824fc1344663d496f83778cf227ee48c9c596026a908c694de70a7fce7e65e0
+New York Mets vs. Washington Nationals,Sell,97.90707,111.66,Washington Nationals,1779238231,0x65dc7fe6b11caa81c506e1d96dd4cda8ca000c7e5d6d5d036ed6c462090f4ce2
+New York Mets vs. Washington Nationals,Buy,0.92457,10,Washington Nationals,1779235167,0x25676c1d2451898c9252aa540b19b505633dfe09b1780229042ba8407fce7523
+New York Mets vs. Washington Nationals,Buy,3.0737889999999997,16.666665,Washington Nationals,1779234785,0x06e790a6a326d9ecbae72a9204427ff017d8e334d38722abd09bd931c32efd33
+New York Mets vs. Washington Nationals,Buy,17.408,85,Washington Nationals,1779234231,0x19b1ecf048cd18af7dbd755abce869286c38cafac3dc875f20c7f25cf816588d
+San Francisco Giants vs. Athletics,Redeem,0,0,,1779230934,0xef119458d0d83f48c46a67e880fd734960a9ce2fe431d058104ebb2418511245
+Atlanta Braves vs. Miami Marlins,Sell,57.1242,60.88,Atlanta Braves,1779230913,0x6ba97c39c69eb426260253ececa42b66c456a8e293011eb8c1aefe61e77c3f99
+Atlanta Braves vs. Miami Marlins,Buy,5.09,12.5,Atlanta Braves,1779225866,0x370ac0a2ec15ccf06d55fa1bf7d4682a055cfe88e4b9d5199ffea4b5a1b333ea
+Atlanta Braves vs. Miami Marlins,Buy,15.310489,48.387095,Atlanta Braves,1779224728,0xf77410df66058a918ea438cdae28e54fc81fc70fc7354e3678f9a60168dd4415
+San Diego Padres vs. Seattle Mariners,Buy,1.028819,25.641024,Seattle Mariners,1779067666,0x4fc152b1e58a58ffb3fa95f250568e65673585dfd77788998f9397e96c3d28fb
+San Diego Padres vs. Seattle Mariners,Buy,1.029539,66.666665,Seattle Mariners,1779065791,0x714cbfd6daf209e250ec404e75eff5a8a5c23d13919251b79452e4e0a36751e4
+San Diego Padres vs. Seattle Mariners,Buy,1.028189,16.666665,Seattle Mariners,1779064971,0x21261ea5c2eac3e10bb541a1e59407affd7f1bc0ef366c7586be5eb46cc3a532
+San Diego Padres vs. Seattle Mariners,Buy,20.444378999999998,77.115383,Seattle Mariners,1779064120,0x82559a44c7410f8c2fc206a8ae26b9d1efc9d2d3682eeb63b3f9070df9070142
+San Francisco Giants vs. Athletics,Buy,23.496789,82.142856,Athletics,1779052955,0xef6aecc9ef324ef650f75e9523e8ecc285db3a51dacded8d2894be130993ccf9
+Baltimore Orioles vs. Washington Nationals,Buy,1.027,10,Washington Nationals,1779044300,0xf185525fab98d60c4f3139ac943486b3c2fa3eedfee87b72e107af493eafe209
+Baltimore Orioles vs. Washington Nationals,Buy,5.118489,23.809522,Washington Nationals,1779043622,0xa30ffaa33cec20812d79842a084a43d3fc3e251b5e62785bebe9a702bdb2df92
+Baltimore Orioles vs. Washington Nationals,Buy,15.342349,62.708332,Washington Nationals,1779042193,0xd291a72558e4a03d4ed406f7e417774cf3cd8cf9e60cf5e6c24b457a7b6f66c6
+KBO: Kia Tigers vs. Samsung Lions,Buy,1.028,15,Samsung Lions,1779003000,0x4481a1c851acfb7c29555d3a8633fc2bf4982e234c0d171eb36a17be508471cf
+KBO: Kia Tigers vs. Samsung Lions,Buy,13.33172,87,Samsung Lions,1779000642,0x80645867fd8fc7b6cf7e7c2b2990f6ebb68155284d05aad4299a88ba8179083b
+San Francisco Giants vs. Athletics,Buy,1.5423,25,Athletics,1778987780,0x81a133845889e2f7abaafb95d6d150d152edefad20958b49e5de5347f248e3f8
+San Francisco Giants vs. Athletics,Buy,3.081889,33.333332,Athletics,1778987215,0xdba77f417e80a4a14623f87e2e2f095939e7120eeb1dc2aed506042bf489f493
+Los Angeles Dodgers vs. Los Angeles Angels,Buy,4.112789,66.666665,Los Angeles Angels,1778987206,0x64e3f5c8c83612f967d8292f14cc0eb437be0c0b93fa41962187f77f592a8daf
+San Francisco Giants vs. Athletics,Buy,2.82493,30,Athletics,1778987162,0x7396ee45e0da0a80a50ded636a37f7cd2e1a51330fc66600f5f7044215d2a85b
+Los Angeles Dodgers vs. Los Angeles Angels,Sell,10.69511,47.6,Los Angeles Angels,1778986677,0xd69105bbe17277a1e49cf88d1f19cb97beb5841536ecfe3d3f2035a7b2933bc2
+Ducks vs. Golden Knights,Redeem,0,0,,1778986669,0xafdf40f13cab15c119bfde745fc3866bcdeda1fe2a3062aee314bb380e0a137c
+Los Angeles Dodgers vs. Los Angeles Angels,Buy,4.082789,12.903224,Los Angeles Angels,1778983904,0x7f143a044510db3d87bef9eb04f8be73da8a7e499f8162a89962157f5485d78c
+Los Angeles Dodgers vs. Los Angeles Angels,Buy,15.255499,34.704544,Los Angeles Angels,1778983559,0xac89cdfe307c4fa42edd38b1fd1dec81b819f366934da6a8d544e49729cbebf3
+New York Yankees vs. New York Mets,Buy,1.0276,12.5,New York Yankees,1778983356,0x5d3e4c80bf3457d330555a7b8edc53415e57e8f1336c17b9e37cd8274d7e1915
+Withdrew funds,Withdraw,150,150,USDC,1778982712,0xdc4c57dec0cc225da0dafee67f4d6413b6c11f309ece16cfe7c2677194bec851
+Withdrew funds,Withdraw,90,90,USDC,1778981716,0x2e212913c2bdf64025876a8e53f59ee48c1d9a963415af75597409cfa6aa0382
+New York Yankees vs. New York Mets,Buy,4.1031889999999995,28.571427,New York Yankees,1778980314,0xe6ab7251f27ab5a8a49343bf008b5f632a99612e8f33bcb098529882d76923b7
+New York Yankees vs. New York Mets,Buy,13.261289000000001,39.393938,New York Yankees,1778979128,0x992ad9192e45b85573e1ed84056916dad018e12383d67014fb0bf1b1bdb4a9e4
+Texas Rangers vs. Houston Astros,Buy,2.0521890000000003,15.384614,Texas Rangers,1778976790,0x0fe214a8699e5f0da12c478627a6f9536e85f6a28030bab974011b7c27c03e02
+Texas Rangers vs. Houston Astros,Buy,8.182389,33.333332,Texas Rangers,1778975497,0x9a7871e38a9d1de5d8b6b8a14e816344368825fb9017cc273c5bdef55fca91d9
+Cincinnati Reds vs. Cleveland Guardians,Sell,35.4397,47.61,Cincinnati Reds,1778974721,0x4f99ef9178bfbdcd12193b9bb65103c9ace1330e6c131a78f193be7cc9e272a5
+Spread: Cincinnati Reds (-1.5),Sell,22.86014,48.38,Cincinnati Reds,1778974618,0xea204f9b13205f164ec5e85eed51bd7741997fa150c5be7e14343bc50a04ea27
+Cincinnati Reds vs. Cleveland Guardians,Buy,10.236989000000001,47.619046,Cincinnati Reds,1778971598,0xa98bc6768506e84c2f962f82bd7c24752911047e0ff2def09b167c686f023f5e
+Spread: Cincinnati Reds (-1.5),Buy,15.310489,48.387095,Cincinnati Reds,1778968635,0x1cdc6740d2843f5f7ccef8b3211fc11870a839cf5afa2d794f68a070e65c02bb
+Toronto Blue Jays vs. Detroit Tigers,Sell,39.95881,40,Toronto Blue Jays,1778965334,0x1908bbfef80992f75d53717a4e1eb82868c2224eb14d432ec716de48062bb8b2
+Toronto Blue Jays vs. Detroit Tigers,Buy,20.3,40,Toronto Blue Jays,1778951544,0xd80eaf2e7ed5cda66e52e60ad975f5c19591164cae1acaa597a115b0acdb307a
+San Francisco Giants vs. Athletics,Redeem,46.875,46.875,,1778910834,0xa12640d13bcaf05b27836ce0e85749bbf954a6a51d6c2269de0633c54e3dae2d
+San Francisco Giants vs. Athletics,Buy,15.306,46.875,Athletics,1778899863,0xd773c7d8ea9774fb9771f58614e5c7eaef8041b3617e257f919c3c3e0e28e6c2
+Philadelphia Phillies vs. Pittsburgh Pirates,Sell,30.08898,30.12,Philadelphia Phillies,1778899807,0x80f2b008e184b9d887612be493b4eb9ced2a0c221651f0091c9637fb11f6d681
+Philadelphia Phillies vs. Pittsburgh Pirates,Buy,15.225889,30.12048,Philadelphia Phillies,1778894890,0x15f680f4b4f5cce5eec7a96da87a4d9bd11e1be8bb67bb22b06991bf6b3cc2ef
+San Francisco Giants vs. Los Angeles Dodgers,Buy,1.0288,25,San Francisco Giants,1778818319,0x69271fe0945a2ddc38b8a3dc9002a3a4c1c85953e5a6ed48a9c8318135b0c9c2
+San Francisco Giants vs. Los Angeles Dodgers,Buy,4.105589,33.333332,San Francisco Giants,1778817914,0x34a6fa6b4ce7c1bf0fc43cf4c79edca1489ca18a87d4ffa47d450490fd600ce0
+San Francisco Giants vs. Los Angeles Dodgers,Buy,1.026089,7.692306,San Francisco Giants,1778814778,0x94217f41f91fa56fb9fb53dbff303dabdaa974634a04552e3f65b61712ad7435
+San Francisco Giants vs. Los Angeles Dodgers,Buy,5.130489,38.461537,San Francisco Giants,1778813599,0x87ac8617f58d334d83b13d10e1cef53bdc091e933bbd6b49d700da1b6e581175
+Kansas City Royals vs. Chicago White Sox,Redeem,0,0,,1778813410,0x262131714c36df4c5b1a2a5345c481817e6642da23849a0041e4abc43407bf84
+San Francisco Giants vs. Los Angeles Dodgers,Buy,5.12,25,San Francisco Giants,1778812631,0xe9de9624a1bf04936fb04e8bcf7127f423f4be01eba893c3ab3c468a7033916e
+San Francisco Giants vs. Los Angeles Dodgers,Buy,4.09,16,San Francisco Giants,1778811945,0xaf588e14dc6808eca7a012f339e1467d917a9bc5f4a772dac3e5bd871768fb53
+San Francisco Giants vs. Los Angeles Dodgers,Buy,10.227989,41.666665,San Francisco Giants,1778811530,0x5a80a2a69ba33419140480ce80ba7ca6c061d9e34bfe6e5f04eb28344525f2a1
+Kansas City Royals vs. Chicago White Sox,Buy,11.287089,84.615383,Kansas City Royals,1778806266,0xb8ed6c7a571d2eaa8e3894f5fd746d42c07ca48135372bdc44e10f438d8bf37d
+Chicago Cubs vs. Atlanta Braves,Sell,45.33142,76.47,Chicago Cubs,1778806065,0xb890251472d2766f5542eec1dd65e3cd0facaac7b5c7286f540d4b56a13aaa58
+Canadiens vs. Sabres,Sell,26.56801,30.3,Canadiens,1778805878,0x303010a16229dca3f788f48e2f3dcd595d32537628dee9fb93eec4d69376d912
+Canadiens vs. Sabres,Buy,10.200989,30.303029,Canadiens,1778802126,0x242d0be2c9571c3c03947ec16a82609d7b68b1f999cc766f974184ab8f64803c
+Chicago Cubs vs. Atlanta Braves,Buy,26.514789,76.470587,Chicago Cubs,1778801254,0x4a06b959488e2b1f2fa40a77628181da33085a09becd94b994ff4fdef31781bd
+St. Louis Cardinals vs. Athletics,Sell,76.84078,76.92,St. Louis Cardinals,1778796718,0x7965367f2410ff64b0329380e38217e4a0096e4f259760346a6e1118388408b4
+St. Louis Cardinals vs. Athletics,Buy,30.548989,76.923075,St. Louis Cardinals,1778787662,0x59f1bf8640b45668b56d84b151a9dab9f07670f1e36e167fe94baa29ec14e41c
+Washington Nationals vs. Cincinnati Reds,Buy,5.115489,21.739129,Washington Nationals,1778778571,0xccef4625142927d9572800f05098f158b5f2750b1af86a08351ac0935c5f3eb8
+Washington Nationals vs. Cincinnati Reds,Buy,15.283489000000001,40.540539,Washington Nationals,1778778427,0x1ace731ce8d31f3a71c922aa5a170aa05f18f7d6ff88ad093a8f815a847329df
+San Francisco Giants vs. Los Angeles Dodgers,Buy,3.08552,60.3,San Francisco Giants,1778731128,0x7237d362e8c460a95fd7d08c3d69928077350f17e472c8738309c7566d2a4b07
+San Francisco Giants vs. Los Angeles Dodgers,Buy,7.1806,50,San Francisco Giants,1778727397,0x6315f92e8190a84baef7e5b00391c449055a0dd66db7735057adcad0cf578fb4
+San Francisco Giants vs. Los Angeles Dodgers,Buy,13.308089,61.90476,San Francisco Giants,1778727299,0x9863730f3cf2fff7a7b596053959a5261036b045f61bfc8a880b634b871c8fbb
+Seattle Mariners vs. Houston Astros,Sell,38.4867,50.33,Houston Astros,1778726897,0x19373092dc7eb04f78d27a919f105f7611d678a71e03f6dcabf42aba2ebb221a
+Seattle Mariners vs. Houston Astros,Buy,15.315889,50.333332,Houston Astros,1778724100,0x97a6572ac9787b2c92203e41750bfdf84b7aba6f362d192d3e9207f7064e47df
+Washington Nationals vs. Cincinnati Reds,Sell,65.71225,65.78,Washington Nationals,1778723990,0x9e2056eed46c79fce8fd8aedcaeb9a606e591f1ba5c1b8543ca51b800e796b5c
+Washington Nationals vs. Cincinnati Reds,Buy,25.464989,65.789472,Washington Nationals,1778718271,0x7108fd49684f90b3c18902aa9a35db83ece7f6802268b0b9b88221666a1482b6
+KBO: Samsung Lions vs. LG Twins,Redeem,0,0,,1778647165,0x88c67d08827ce87c330082bab6536fcb597ac5cb3893aec84ce9b15682574073
+Hurricanes vs. Flyers,Redeem,0,0,,1778647165,0x3a57305105db35fb1b86d818c3768d16a30c5c2e91f3689d8d8684a5e710da51
+St. Louis Cardinals vs. Athletics,Buy,5.131989,41.666665,Athletics,1778645699,0x506c8ea4bdebb22cb07d13119ed419c9dc72f9bcf14f2cc04f27e1b878583020
+Ducks vs. Golden Knights,Buy,6.1512,37.5,Ducks,1778644941,0x20132bd8ab13407891553bc582d04ea658a92f9f3e83c392a52dce6f91f84d35
+San Francisco Giants vs. Los Angeles Dodgers,Sell,157.31464,175.32,San Francisco Giants,1778644897,0x0c13f2df2468c1fc5e851b4184640c5e5f4470cef15ff44b372cca36ed981777
+San Francisco Giants vs. Los Angeles Dodgers,Buy,6.145789,31.578946,San Francisco Giants,1778641919,0x2659979612ca9ca91d1adf7a64748da1a2e37bf1d70aa19a4cbc922fc7d8d703
+San Francisco Giants vs. Los Angeles Dodgers,Buy,7.1764,43.75,San Francisco Giants,1778641581,0x854960fa7c0ce599b7567c0b57e689a1d9b598c4c522e941208e6b7c5ce2c32e
+San Francisco Giants vs. Los Angeles Dodgers,Buy,20.48,100,San Francisco Giants,1778639446,0x02784e982b8b5f38f851f650fd03ac77d39890d9caf2263b4ee3694ab4264348
+San Diego Padres vs. Milwaukee Brewers,Buy,2.057,40,San Diego Padres,1778636994,0x5eeec73d9aee6fbfaa327051a3faf8681a6606bbc36c5c9ce93fcc43b67ed4d9
+Sabres vs. Canadiens,Buy,17.387589,70.833332,Canadiens,1778636466,0xe346f49a061f2ce62391e5c7a2d31c5b731dc045f8872ebfcfae48826c14382a
+San Diego Padres vs. Milwaukee Brewers,Buy,2.0563890000000002,33.333332,San Diego Padres,1778634278,0x5e99ac51af99f80d7f5b9b934c778dd77e3d93f999041d0aec4895c173c88719
+San Diego Padres vs. Milwaukee Brewers,Buy,35.724489000000005,112.903224,San Diego Padres,1778632105,0xacc57492fa48c1ffe5f4f03fb1ba0267c560bfa6c25d3942c262118f7e8bebf6
+Los Angeles Angels vs. Cleveland Guardians,Buy,5.104989,16.666665,Los Angeles Angels,1778626958,0x67fe9d0374ca21297b4c10faeb6e3801bde6030316f4d4be584a271df36b023c
+Los Angeles Angels vs. Cleveland Guardians,Buy,5.09,12.5,Los Angeles Angels,1778624550,0x77c5dd5505ad629f0dfbf2859190bfcdff8de2cabd2418907311f141f327044d
+Los Angeles Angels vs. Cleveland Guardians,Buy,25.375,50,Los Angeles Angels,1778624343,0xa840e22a3e3f3c4c68383c53263db9ade8901d3d101c12331cb9e6718adb01fe
+KBO: Samsung Lions vs. LG Twins,Buy,8.177589,30.769229,LG Twins,1778585525,0xc6e849027e7c298dd071111499096f382b62e93f2358fa5857a7c60808dcf74f
+KBO: Doosan Bears vs. Kia Tigers,Sell,48.70545,54.28,Doosan Bears,1778585280,0x4dde4535fc8929511d6fa41a4d3c4072d0b0891d79498da3f53cb51bd74f048c
+KBO: Doosan Bears vs. Kia Tigers,Buy,19.370489,54.285713,Doosan Bears,1778580546,0x8b17939b0c6e8b1ff007b10e3daf28adeaa5131a860f768c06653d93ce0e8e1a
+Thunder vs. Lakers,Buy,20.335988999999998,45.454544,Lakers,1778561485,0x57460ffad94b286ba8288bb464e9133a5ce4e3eede99a44aedfa833b628fed28
+San Francisco Giants vs. Los Angeles Dodgers,Buy,6.1637889999999995,66.666665,Los Angeles Dodgers,1778560785,0xdd65ff7c461d18e16fa9ba6c2a25626132da40dd05fa8b2d3062022713d1baea
+San Francisco Giants vs. Los Angeles Dodgers,Sell,115.61676,128.57,San Francisco Giants,1778560481,0x87e181ae52595061baf54f047ada0f887e6b8a1766a7ab7fccc4eb9669b634b7
+San Francisco Giants vs. Los Angeles Dodgers,Buy,27.639889,128.571427,San Francisco Giants,1778555990,0xf926b3b69638ef899e1311c934347f2c662a2f69d0ab962418efa5a443f215fb
+Seattle Mariners vs. Houston Astros,Buy,1.8610389999999999,30.166665,Houston Astros,1778552767,0xc985f4039dc78ca3f8073cd53416d36b1b92798fcb32374eccc872737a7d3d5e
+Seattle Mariners vs. Houston Astros,Buy,18.432,90,Houston Astros,1778550646,0x7797a861ea8509dc6cf402f3ed2ed0ac3b970f731103633208eee95f10bd190e
+Detroit Tigers vs. Kansas City Royals,Buy,2.052789,16.666665,Kansas City Royals,1778464955,0x3719a980f725dea3b0d1d7570f9a5a96db9c7080886a7c872cbcd0c20ac3dadd
+Detroit Tigers vs. Kansas City Royals,Buy,18.4104,75,Kansas City Royals,1778458548,0xe01b3acfb18fdd9a2a95a544171b6a4f72570c8caba1bdc417f8ff0a54c18ea9
+KBO: LG Twins vs. Hanwha Eagles,Buy,1.44353,9.29,LG Twins,1778309756,0x8f7e464fb068c379d836ce6c860041794ceb07be64e2a1a919e6306d84746643
+KBO: LG Twins vs. Hanwha Eagles,Buy,11.221089000000001,33.333332,LG Twins,1778308061,0x14622dd22497e8907139e01348929b49a6a9678e00ce4f827a6cec60f204537e
+KBO: LG Twins vs. Hanwha Eagles,Sell,36.64743,48.57,Hanwha Eagles,1778307767,0xeebca798ee4dfaaf4e1492f11c03edd83a80a75407c5797a01779a947d339039
+KBO: LG Twins vs. Hanwha Eagles,Buy,17.331488999999998,48.571427,Hanwha Eagles,1778305777,0xc198796cc3a5fa5482935f1a7bdcbe58ab4e83d05336709e2aa2b556fc2f88ac
+Atlanta Braves vs. Los Angeles Dodgers,Buy,1.028219,16.949151,Atlanta Braves,1778301335,0x79173a75d557ffcf68326b42b2059400a0158c86d6cc4dd150f0f848c7874dd8
+Atlanta Braves vs. Los Angeles Dodgers,Buy,12.297899000000001,69.571427,Atlanta Braves,1778300891,0x0de293970566095e37fbd3d72a7b65a3b757ca415629147c07e65e20332d9097
+Atlanta Braves vs. Los Angeles Dodgers,Buy,12.296989,68.571427,Atlanta Braves,1778300882,0x0e12e351616d843c07f176b1d1b6770be52ba3098db4396ce7e27cb9c9ec334f
+Spread: New York Mets (-1.5),Sell,93.30919999999999,94.28,New York Mets,1778300716,0xad41c2126b41a77cc56fe6658e74889ea98e0d38a6b2c3ec4bb23924988f08cd
+Spread: New York Mets (-1.5),Buy,33.643489,94.285713,New York Mets,1778293665,0x3641f580bb11370aa37548d990c9ffee451844500b661691e1161d59e7b3c30d
+Los Angeles Angels vs. Toronto Blue Jays,Buy,2.053389,18.181817,Los Angeles Angels,1778289656,0x01434973fef82eee590af9623fb7546840ba6ceeca7335c9229fa8067adb3c78
+Los Angeles Angels vs. Toronto Blue Jays,Buy,19.4617,100,Los Angeles Angels,1778285223,0x311e012e6ecf57bb41876aedd4fcc76a3f7ec847d91b31462d8c83969ef157d9
+Houston Astros vs. Cincinnati Reds,Buy,28.5712,87.5,Cincinnati Reds,1778280062,0x480ac6f92a2ceb235495d9be8796ba6350518a9431276a4e69938c8374c53999
+St. Louis Cardinals vs. San Diego Padres,Sell,78.2014,108,St. Louis Cardinals,1778213530,0x201b6dec0da348eab34c45d7bf270e4f0304a85bf8f6de4e74ef65a43ae077f7
+Pittsburgh Pirates vs. Arizona Diamondbacks,Redeem,0,0,,1778209487,0x49c577a171228aafa3ff8e81d5e6873f27cbbc438610b3f3c2940bd66ced4d32
+St. Louis Cardinals vs. San Diego Padres,Buy,27.6075,108,St. Louis Cardinals,1778207933,0x6d4cc22149818559a2e8e9039f938446c67b60263d910055989f3235d7b663db
+Hurricanes vs. Flyers,Buy,15.346489,65.21739,Flyers,1778204374,0xa1ce4bdd981bebce5adbaf05bc238cf2bc32c3a993546d7bd3d76ae23c3eab07
+Tampa Bay Rays vs. Boston Red Sox,Buy,2.0552,25,Boston Red Sox,1778203781,0x77f74a9758c275d546e5200e67f2c862d6adf978a2d54956316091963d11c9ec
+Tampa Bay Rays vs. Boston Red Sox,Buy,4.096,20,Boston Red Sox,1778201411,0x20b6d01606a3acc2bd6b59d2c97901871ce0b30e54ac80691855e8f6e5de5b23
+Athletics vs. Philadelphia Phillies,Buy,1.0291489999999999,35.714284,Philadelphia Phillies,1778198093,0x209660a544d2c2217c356f776b1ab4caaaac6c81d93b0ab4577b0e153312fc4f
+Tampa Bay Rays vs. Boston Red Sox,Buy,23.400188999999997,54.761903,Boston Red Sox,1778197701,0x422fada585ac84cc9818e4b88d1bc38b7c22383000a6ef778d82e1d6b19a506b
+Athletics vs. Philadelphia Phillies,Buy,2.0521890000000003,15.384614,Philadelphia Phillies,1778195993,0x2f1115aed74bbf23d842af54ab6d77d8baa7979bbc152d8e5d02b91c279e18a7
+Athletics vs. Philadelphia Phillies,Buy,18.4428,100,Philadelphia Phillies,1778194418,0xe21259bb17c98268f826464873561418a76926eba5e75854ceff07955898a611
+New York Mets vs. Colorado Rockies,Sell,74.2982,75.86,Colorado Rockies,1778190271,0x2cd676c4adbecb855ecd0ea708ede7a63763d526738a512f0787af71df07ea69
+New York Mets vs. Colorado Rockies,Buy,22.468588999999998,75.862067,Colorado Rockies,1778183736,0xa249d331ac92b78b94b5927aeab593d54eb9722216d3711b525b44c07f3f4114
+Minnesota Twins vs. Washington Nationals,Sell,77.11537000000001,83.33,Washington Nationals,1778183663,0x3770a8cde0d54258eb320da1cfd40f22c15bab95908c13fa4b1af2c88702674a
+Minnesota Twins vs. Washington Nationals,Buy,25.524988999999998,83.333332,Washington Nationals,1778175747,0x6ba0359f6f869871e93ed865d1f1a83980db885a2cc22db32aec75452cba3e12
+Pittsburgh Pirates vs. Arizona Diamondbacks,Buy,21.4284,65.625,Arizona Diamondbacks,1778119854,0x94de7770305fb48907ae12742a4cd470f4b04e5f800550e63a81d7c3190f9137
+Athletics vs. Philadelphia Phillies,Sell,63.346689999999995,66.66,Philadelphia Phillies,1778116484,0xba303aaf03a078bc50074bd31bc60d12ad66f31ceae4c7d70e1456429f8ab2bf
+Athletics vs. Philadelphia Phillies,Buy,20.419988999999998,66.666665,Philadelphia Phillies,1778111503,0x0243c46960d39f1ac0986b0cf5be35c7dfbeb6cfd8b93dd6d47e39736678071c
+Texas Rangers vs. New York Yankees,Sell,19.12396,51.28,Texas Rangers,1778107713,0xbab006009425fb0ae6ce6bd54b7a88acbf2056efed88079b005389aa897369af
+Texas Rangers vs. New York Yankees,Buy,20.365989,51.28205,Texas Rangers,1778107664,0x8d50ffca5eff5c814990fabf4b9fafff455798316cb46823889c47bb91f427b0
+Pittsburgh Pirates vs. Arizona Diamondbacks,Buy,13.304189000000001,59.090908,Pittsburgh Pirates,1778032846,0xaa1d27d6161ff477fa5f523bc0d2a032a6b7a80ff8cbf5e67d5ef0c6c28763dd
+KBO: NC Dinos vs. SSG Landers,Sell,2.45113,4.28,SSG Landers,1777972706,0xeff4d66409e9d78a28032370a169393fe4d09b4baa88d4de6d0753809c6f5726
+KBO: NC Dinos vs. SSG Landers,Sell,7.83791,15,SSG Landers,1777972566,0x41a94d3b7d134915160ec8327ba47de5b0dbd3837dc71838ce291535f0a89199
+KBO: NC Dinos vs. SSG Landers,Sell,62.711,98.56,SSG Landers,1777972442,0xee4f75a153b5227501b33e9d9162df0ffbe31ed8da91e5960807245ac85295d7
+KBO: NC Dinos vs. SSG Landers,Buy,4.10218,26.93625,SSG Landers,1777970892,0x17f2b5f9b06035a169c2fe7a8c3a2bcdc9de21ca12d0b3980750875cfe884acc
+KBO: NC Dinos vs. SSG Landers,Buy,10.266989,90.909089,SSG Landers,1777970620,0x736d38d26a1dd916e55568301194db90061eb3279d83d946afe29ff8f1b58493
+KBO: Doosan Bears vs. LG Twins,Buy,3.0184889999999998,26.727271,Doosan Bears,1777967514,0x23b71db21468215af1252320fa41e731c75abbeffad2c0ff15a52191f2a7cc18
+KBO: Kiwoom Heroes vs. Samsung Lions,Sell,0.08084,83.33,Kiwoom Heroes,1777967488,0x4ef7e9d7b0f72d2dd7174456c62a7e205e0a27beda65a00625be60c2f0386f7d
+KBO: Hanwha Eagles vs. Kia Tigers,Sell,2.32389,59.82,Hanwha Eagles,1777967460,0x24887e27e925e2b720080b90474f0b75ee3bec4fd1d086e06b811a9cdb5985a6
+KBO: Doosan Bears vs. LG Twins,Buy,3.070189,13.636362,Doosan Bears,1777967142,0xd8f82f0bd19b117f3b47a407fb911c406086ec83463127c6fdf66461a420d204
+KBO: Hanwha Eagles vs. Kia Tigers,Buy,1.07488,5,Hanwha Eagles,1777966794,0xf8078f33d48bdcf3939bf833be0bb4891e16bc920621c500ca59d48fe913645f
+KBO: Hanwha Eagles vs. Kia Tigers,Buy,5.092989,13.157893,Hanwha Eagles,1777965198,0x3b0d7f5ef5f6a216c00cc775b70618ca42a93149890305e40eaa5d4f810217dd
+KBO: Hanwha Eagles vs. Kia Tigers,Buy,10.227989,41.666665,Hanwha Eagles,1777964430,0xd407b4a007b61ac6e2c3e13181293e18aadcbcdcacd46af4ab4409eaf0cf0b44
+KBO: Kiwoom Heroes vs. Samsung Lions,Buy,10.263989,83.333332,Kiwoom Heroes,1777962938,0x2f1c3098532b523e96a6b21c953bcd61b4751e2068f3cbead791e3f50a37729a
+Spread: Toronto Blue Jays (-1.5),Redeem,0,0,,1777961532,0xa8baa544ff302a134e0891ef6895ff557d4b6e44023a1e251d27d2648c460269
+KBO: Doosan Bears vs. LG Twins,Buy,9.165259,23.202379,Doosan Bears,1777961500,0x2f99315cddae9c04ddf8b8e05266ac8f4e02a1700325d58942a2cd5c859a8a09
+KBO: Doosan Bears vs. LG Twins,Buy,25.464989,65.789472,Doosan Bears,1777960934,0xb0ac8c66f30e51e67cade52f28f55616af7efae382e91bc1b1816ea5b1639f6a
+Ducks vs. Golden Knights,Buy,10.266989,90.909089,Ducks,1777954796,0x9dd62c618740a5897b1d0d760a6184d3170ff563f21d4c16f8789224241336cf
+Atlanta Braves vs. Seattle Mariners,Buy,10.235099,46.227271,Atlanta Braves,1777953314,0x07178407a7b71dae9ab4e145299f8bc19577271341effdb7614b54a1869bc166
+Atlanta Braves vs. Seattle Mariners,Sell,55.487989999999996,73.54,Seattle Mariners,1777953280,0x28407c74a38273cd37e78196a369c3982fc8afd22ec8a07445153a400b36ab3a
+San Diego Padres vs. San Francisco Giants,Buy,3.749639,40.555554,San Diego Padres,1777953068,0x55f1df7584d645e6141132a382e5e72ff1298b224635012793b4b6977c4d00b9
+Atlanta Braves vs. Seattle Mariners,Buy,25.495048999999998,73.545141,Seattle Mariners,1777951578,0x60d4b4171345aaa1fa47f17c4578275fb3079d245a4b59d8ca7a1329e186d6f2
+Cincinnati Reds vs. Chicago Cubs,Buy,5.091489,12.820511,Cincinnati Reds,1777946930,0xa5ea69068dc9b1a6bc38a67a5e83cf6c6bebc058b6b229fa25c7a06a85ce9571
+Cincinnati Reds vs. Chicago Cubs,Buy,20.371989,52.631577,Cincinnati Reds,1777946000,0xb5b945ca291bbba075079d7555e3bfe04f4010c26b62fcc121f5c35151fb2112
+Flyers vs. Hurricanes,Buy,10.182989000000001,25.641024,Flyers,1777945968,0x1a7976db2228cfc20e0b3f47c5f7201b9c7af1d6e2ccd2f4ae1f195a9e4e3871
+Flyers vs. Hurricanes,Buy,19.307789,41.304346,Flyers,1777937554,0xdc190665f5a21f5886dbc9a8ffb349d50d55547255f805a0381f07dcbbe4a14c
+Spread: Toronto Blue Jays (-1.5),Buy,5.126,31.25,Toronto Blue Jays,1777937146,0x425c0e15133be5d565a522dd509754c62b21c3d6eb7bfdbd15c5a52abfe2a2a1
+Toronto Blue Jays vs. Tampa Bay Rays,Buy,25.577489,108.695651,Toronto Blue Jays,1777936968,0x123fc17226c451b014ffba762d580aaf62c6e114cc0fdc6446be0c56f4c16a6f
+Texas Rangers vs. Detroit Tigers,Buy,5.128839,35.460991,Texas Rangers,1777856490,0x3b8d57f603fc92fc11c41f5218447b55447b31aff1ff9298b4b9570f9b9c83a1
+Chicago White Sox vs. San Diego Padres,Buy,4.109189,44.444443,Chicago White Sox,1777847864,0x164c8614707fc25a4f3abcddd574cbc7e03dd52e1d3998d88133240c083a6c3d
+Chicago White Sox vs. San Diego Padres,Buy,15.292489000000002,42.857141,Chicago White Sox,1777846776,0xd9e0b4dbddf7a2be1073a4872a2428d93fa62ae9996501ff9fab651f1241ca20
+KBO: NC Dinos vs. LG Twins,Sell,0.01932,19.32,LG Twins,1777795670,0x12adeb0b03beddce612cfa682b3a3e7a72c615d5c296848484a2843f93a6278f
+KBO: NC Dinos vs. LG Twins,Sell,0.00626,6.26,LG Twins,1777795334,0xea0c808c924bab5caf56f2a951ea8970f2ae66ecea36ae63df0f3a677c823da6
+KBO: NC Dinos vs. LG Twins,Sell,0.02127,21.27,LG Twins,1777795262,0x05882f70cd9c696a54a588dfbe4578a6191b9b3d463132cc9ae4f7e9bd991cf1
+KBO: NC Dinos vs. LG Twins,Sell,0.01,10,LG Twins,1777795044,0x6d30dca5dcf4631bd64c2d273a89ea8ded1f96792b06992cf037c3ce2ad87dec
+KBO: NC Dinos vs. LG Twins,Sell,0.00949,9.49,LG Twins,1777794656,0x8861fc6af9d2db5c01686aef6187cd1a940562f6fa60c0a7987ccd22f15b1469
+KBO: NC Dinos vs. LG Twins,Sell,0.00156,1.56,LG Twins,1777794456,0xa169867f0ee00faba5d03d21e5afb14043cadeb7c7c931f2bc2c0f9c44f82604
+KBO: NC Dinos vs. LG Twins,Sell,0.06694,69,LG Twins,1777794124,0x5694b724d58356185af4b134cd9168ed8a08948f9e05a9e3893803e527269dc4
+KBO: Hanwha Eagles vs. Samsung Lions,Sell,44.6825,55.55,Hanwha Eagles,1777794066,0x6b6256b628a6f808f1f237509c42fd217183a0a95599f95b1af676b823155660
+KBO: Hanwha Eagles vs. Samsung Lions,Buy,20.383989,55.555554,Hanwha Eagles,1777792604,0x58e75348ef6e8811c87b16925e76f81196ca56239a8dac24c40c3d5c6098aa13
+KBO: NC Dinos vs. LG Twins,Buy,3.842099,41.555554,LG Twins,1777791044,0x6a5c44586d37abc2b8f174e28590a8bb3a19e40258c433191e62ab951431cc13
+KBO: NC Dinos vs. LG Twins,Buy,2.05365,18.912,LG Twins,1777790804,0xa743f751be7fe0ed4e9d1b3a2cb952bad28ec32b2f166c37a2bb20e4d371e27b
+KBO: KT Wiz vs. Kia Tigers,Sell,98.54557,120.83,KT Wiz,1777790762,0xd2a8e325afcb4146e98baa906fd7fa2ecdb6bd3fcd4a8aac0fa148bde1912c8c
+KBO: NC Dinos vs. LG Twins,Buy,1.026089,7.692306,LG Twins,1777788704,0x8671c5567648b1e6a624068a6d61159fa9c2eea19c85a55af66273acbec2c86f
+KBO: NC Dinos vs. LG Twins,Buy,1.3010499999999998,12.17,LG Twins,1777788680,0xca84095d54760cf59d859d390ad99a6d15d98679be98556c8e3c7802bc01d50e
+KBO: NC Dinos vs. LG Twins,Buy,5.103489,16.129031,LG Twins,1777788158,0x9b21cd729e7a88fd3f262aa72442dc9fc9b72f61bafb00a25e23b4fe8045a90d
+KBO: NC Dinos vs. LG Twins,Buy,15.283109000000001,40.447178,LG Twins,1777787952,0x328b7e0b1c82b0b7c11ecf1dc529499c5e42bfa0f5e0cbac14c3a2b2f74a9035
+KBO: KT Wiz vs. Kia Tigers,Buy,29.661189,120.833332,KT Wiz,1777785564,0xd6dedde7e2d1eea8c3cf302f2cc3a05a1fa58f3c5fdb280b3ca678b8a824a0e5
+Los Angeles Dodgers vs. St. Louis Cardinals,Redeem,0,0,,1777783116,0x2cfe47fbc7a3c977316e858d6b0b81967277f15a9cc5a833c0f343b71cf847dd
+Kansas City Royals vs. Seattle Mariners,Sell,80.16114999999999,92.5,Kansas City Royals,1777782950,0xee25bd922c22889928f302e3425ff92797be77723609afa675c0c5ef7e6dd7ba
+New York Mets vs. Los Angeles Angels,Sell,14.05574,75.82,New York Mets,1777782346,0x85b739c805d429d207687e5051a97f00b6b506e3fdf2b432a5946dc54ed62c20
+Kansas City Royals vs. Seattle Mariners,Buy,4.093589,18.181817,Kansas City Royals,1777779672,0x7d8cc8d1dd6f70e5d720440012b6706389e06bb926908e1b7ef6d21eb3e55350
+San Francisco Giants vs. Philadelphia Phillies,Sell,33.79837,157.31,San Francisco Giants,1777591014,0x619fde6874ab0733f4a9a9fc00dadce1be8907637d61c0a50be7adf8ba139375
+San Francisco Giants vs. Philadelphia Phillies,Buy,4.875659,25.05263,San Francisco Giants,1777590546,0x59c0831bb1c7f419fd25ed4c831b8f4c50abcaab4cd87daf77e5ba398f56436b
+San Francisco Giants vs. Philadelphia Phillies,Buy,10.479609,46.545453,San Francisco Giants,1777586538,0xf021ca3f698446d2f31b05e3ac1b6253f8d31d1d4d864993cd3de7320a7e2088
+Utah vs. Golden Knights,Redeem,0,0,,1777585966,0x180e6c1dad76711158e5ab766c53fcb68155ca02f93990ea760528c307d09f82
+San Francisco Giants vs. Philadelphia Phillies,Buy,24.518389,85.714284,San Francisco Giants,1777585942,0xc2b2a4fa2a41c0998a0e51f8fd1b170dd62a5ce4904a89f5c67467740091ddf7
+Kansas City Royals vs. Athletics,Buy,8.693359999999998,211.25,Kansas City Royals,1777584464,0xdd17d7d3ff6ae3738704a3e29ed790ab62fba1b5194cfccad50ef97b59c19d7c
+Kansas City Royals vs. Athletics,Sell,33.554159999999996,287.2,Kansas City Royals,1777583362,0x4792002d66a7d1d9befa4835e6eb6bfffc993171e608ad9a701b558a600a6739
+Kansas City Royals vs. Athletics,Buy,3.980099,27.714284,Kansas City Royals,1777580850,0x404c3344c4b37a9c8e594877c9a7b76489a4f9b55d51a82967c764b4443fbe79
+Kansas City Royals vs. Athletics,Buy,4.94146,30.125,Kansas City Royals,1777578882,0x830756e241a3e758a30c9853b58ba8fd677bcbcbbbf9429c494bea65e2a2b094
+Kansas City Royals vs. Athletics,Buy,51.640759,229.363635,Kansas City Royals,1777578666,0xb858b80659bb074350e9650c04374a2cd77f4eeccfdad935a058ec63c95cc910
+Washington Nationals vs. New York Mets,Sell,85.54535,104.89,Washington Nationals,1777577372,0xea54abe7b7d92f8ecda73cce24b1d032999ee743590c1c62817df98bc76f9b59
+Washington Nationals vs. New York Mets,Buy,5.118489,23.809522,Washington Nationals,1777574708,0x3a7035d944ccf8a8990b1e7c8a30aa97bf16e59f53b11c3f49faa4cf01854114
+Washington Nationals vs. New York Mets,Buy,30.566989,81.08108,Washington Nationals,1777574550,0xf16041488ce227bb84bf4b656cd15b85b09b486acdaef83eb3231e62dce199fa
+Rockets vs. Lakers,Redeem,0,0,,1777529918,0x8d54e2c0aa4bf14069663fef48734d1792482fef6de35e3a9f6e7f0215a559f7
+Utah vs. Golden Knights,Buy,10.164989,22.222221,Utah,1777525160,0x9f8787f699f8036da61108e014ab78f13cb749b1c00268aaad901408471b3b57
+Utah vs. Golden Knights,Buy,9.197089,33.333332,Utah,1777522886,0x4818ad1ec18f7b66dd1db2a5f0641830dd4e0550dc96f761855bb7e9d73a8142
+Utah vs. Golden Knights,Buy,3.0684,12.5,Utah,1777521334,0xebb1e1678c236d35601306de464bac9a5b29a5bce1cce1ebfe332d3f39ee33e1
+Rockets vs. Lakers,Buy,24.432,60,Lakers,1777521116,0x1ce67936956c2b76d58323719e143b0c09b68b1fc55e0baee5fb03ebb74d8dab
+Kansas City Royals vs. Athletics,Buy,3.0855,60,Kansas City Royals,1777519308,0x2cc1d6078edd3a4f8f9da6fcb7547df45e8d555f70591f27042664583b0445af
+Utah vs. Golden Knights,Buy,23.393289,53.488371,Utah,1777519012,0xf1d8fd74855e2784dd8b5706b5b7c713c2a8b46c9767d833114234c63508ecdd
+Kansas City Royals vs. Athletics,Buy,5.131989,41.666665,Kansas City Royals,1777518414,0xb4bf2fbe6a3ada44e54ecc124c10cfbeff81e7e15f21f6811bb20d264cbaa844
+Penguins vs. Flyers,Sell,41.1276,41.17,Flyers,1777517446,0xd54f755d153aa563dec9607bdc4a4cf926886a01fc64fed8100d492556ccf841
+Kansas City Royals vs. Athletics,Buy,20.521988999999998,153.846152,Kansas City Royals,1777517300,0xf28c723dca22bf9dcf87f6b89c5f7da2935e3ffac7cb993858cd7ed437ff077e
+Penguins vs. Flyers,Buy,21.308688999999998,41.176469,Flyers,1777515388,0x6d9f104415b55ca4713c17f0bce10acc7416a910c55cf363f17c902ce6ed53fa
+Arizona Diamondbacks vs. Milwaukee Brewers,Buy,11.290389000000001,91.666665,Milwaukee Brewers,1777514628,0x3985f1a4c7ee6731febef1b56cf6f501579a6b05255290bd6d9c1645dfcea703
+Arizona Diamondbacks vs. Milwaukee Brewers,Sell,80.81026999999999,102.94,Arizona Diamondbacks,1777514070,0x46a1bb54eeda009273b8f5affc6e90fc171bac30c1064bc6fa4c35714595e779
+Spread: Washington Nationals (-1.5),Sell,30.63131,30.95,Washington Nationals,1777513966,0x2d4b1788c6295fad2c3dc0e74fcd21febb9c6710a36e2e4fd08dfb4b1bf9dcea
+Canadiens vs. Lightning,Sell,47.64706,54.34,Canadiens,1777513230,0x80d8153b6ae98754e2c8065b0851b703d77e31ceb55b1fcc26bf97c42b60290c
+Canadiens vs. Lightning,Buy,25.404989,54.347825,Canadiens,1777511482,0x97d0bb744bd5bf6090c5588d46166f58b0174ae26eaea1f70e81bcaaccacff8f
+Chicago Cubs vs. San Diego Padres,Redeem,0,0,,1777509786,0x7ed51b716eac2d2123a83e4e5bbc94f966b01b3e0f1fa151fa793f50331c0ff3
+Washington Nationals vs. New York Mets,Sell,84.21747,85.36,Washington Nationals,1777509500,0xdfdd2a873fe764ad7291bd94e70ee16628995614e81cd315556203bca7cbffef
+Los Angeles Angels vs. Chicago White Sox,Redeem,0,0,,1777509336,0x9cda3ce82d0d44f6dea4e2083efabca3f452f84520d26459906184318e09626e
+Arizona Diamondbacks vs. Milwaukee Brewers,Buy,35.692989000000004,102.941175,Arizona Diamondbacks,1777509290,0x6bcbc59d22fc81e9679d16bebd69468ba054cd2d85becd60e820d2a9bd35402d
+Colorado Rockies vs. Cincinnati Reds,Sell,10.6831,219.93,Cincinnati Reds,1777509214,0x5514ca1bee5d808208990d9165dc8b03b41fd0783ff17ffbaf9640fac4096276
+Colorado Rockies vs. Cincinnati Reds,Buy,2.0552,25,Cincinnati Reds,1777508372,0x178192c9cf9b786dbd8005b272efbdf6febcb89dad2a952209c3ddd54b1983cb
+Spread: Washington Nationals (-1.5),Buy,13.226189000000002,30.952379,Washington Nationals,1777507496,0x3f5f694f34a37e03565c1134b33beea2d760024d8c795080fc7231a1e17c56bc
+Colorado Rockies vs. Cincinnati Reds,Buy,35.861469,194.934443,Cincinnati Reds,1777505982,0xfef8c6bf8f879b257ed3dc4cb20452a36e61f9dd7764605971238d7006806f30
+Washington Nationals vs. New York Mets,Buy,35.619489,85.365852,Washington Nationals,1777503556,0x22c1d5134296b713d46174901d88bf69ab7050d664e40f6140ec17c34ca961f6
+Chicago Cubs vs. San Diego Padres,Buy,3.9953190000000003,21.05263,San Diego Padres,1777501736,0x3abb9bffe2a472b7823b92b7d04e46dbb33596cf176f7c919985ad1144790e84
+Chicago Cubs vs. San Diego Padres,Buy,15.265489,36.585364,San Diego Padres,1777499672,0x4d11fa8abb17435303183b030df57bf86bb96a1016dd4766095e9f73e0a6c7ce
+Miami Marlins vs. Los Angeles Dodgers,Sell,115.25092,116.45,Miami Marlins,1777499594,0x5cfd35faa2d4ff914baa217ade754199187cdfaee995e7b3f1099428ccaffedc
+Miami Marlins vs. Los Angeles Dodgers,Buy,5.094489,13.513512,Miami Marlins,1777496586,0x5afd50282d261e145665962fd2ad150eaf42bbf56b298eae7c25d753aa76cad3
+Miami Marlins vs. Los Angeles Dodgers,Buy,35.692989000000004,102.941175,Miami Marlins,1777493944,0xe42c8f6207c6bb1ecbaa0ee7aab689380d78c18b213cb0ad6cd4b297e507bb54
+Los Angeles Angels vs. Chicago White Sox,Buy,30.566989,81.08108,Los Angeles Angels,1777486040,0xee3307be385d6da0f2350dbe48694c6d7225edb5eb90600ab23bace0d95225e0
+"Bitcoin Up or Down - April 29, 12:55AM-1:00AM ET",Redeem,0,0,,1777485830,0x7d95504d2f534ce4a6fd382d65059bd4f4ceac05044592178e7b27603bef2341
+Deposited funds,Deposit,690.161903,690.161903,USDC,1777420874,0x01fd77ef7b941df6a08717ad01570162230dc655ac7aa76276a1abb2a57bb044
+KBO: Hanwha Eagles vs. NC Dinos,Buy,3.89234,20,Hanwha Eagles,1781613550,0x5e1fa7a0a06fbbabb4c4edc2514f19c1b99177da9862f9a4d367b105bbe2d711
+KBO: Hanwha Eagles vs. NC Dinos,Buy,10.248989,58.823528,Hanwha Eagles,1781608330,0x4783e484b694e7d7dd3c2d2944e43f50e5ec895c5d1b42f2376065bc6145de55
+KBO: Lotte Giants vs. SSG Landers,Sell,45.10145,56,Lotte Giants,1781608110,0x9db64461c2dd143733a7fafd937aeb92c5657c2f763a985aea9371903b50d487
+KBO: Lotte Giants vs. SSG Landers,Buy,14.315,56,Lotte Giants,1781606739,0x8c051c5047ce3f28a8b10bb0c33e96d47f3dde9142214e9259d60521ecb6a03f
+Texas Rangers vs. Boston Red Sox,Buy,5.127489,33.333332,Boston Red Sox,1781483988,0xd92e952551a8505f60c6efa96ea24c514d94bfba37a567761a336b53c4fb7fb9
+Texas Rangers vs. Boston Red Sox,Buy,20.485989,105.263156,Boston Red Sox,1781480860,0x1bc9b04f0a7cffb081e106e85fa4266aa67795f1ea3966e0c3d9dc0aadd4a4fe
+KBO: SSG Landers vs. Samsung Lions,Redeem,0.008887,0.008887,,1781470387,0x226c9fcbfdcb17cb284b99c10a16a5dc06234fdf9ce43de593acbc3afb680eec
+Chicago Cubs vs. San Francisco Giants,Buy,13.347089,118.181817,Chicago Cubs,1781470356,0x5d6a693f2c6860bf717d79c98c6d6d3f9a8679acf76c797d7212fab8e1942d22
+Atlanta Braves vs. New York Mets,Buy,6.171,120,Atlanta Braves,1781464519,0x8951495e630806db5deca9be857bf4b68f3d08c8ab8bfa3c0b2ce84bdc901f03
+Atlanta Braves vs. New York Mets,Buy,14.3528,87.5,Atlanta Braves,1781461534,0x530a87799ecd32720caa50f918d5e11c19db8d7c11c3dd84bf005a0262ab0c06
+Miami Marlins vs. Pittsburgh Pirates,Redeem,0,0,,1781437903,0x572f067beb683f7954bdbdc86db598a48f830344a5c7f19750b1849f9a95e4df
+KBO: SSG Landers vs. Samsung Lions,Sell,53.824510000000004,53.88,Samsung Lions,1781437878,0x62d6272b49573e4bdca71eda8b7c795909fccf7c7919a6c27854abf2389afd50
+KBO: SSG Landers vs. Samsung Lions,Buy,8.208789,61.53846,SSG Landers,1781434107,0xde642e53ed7ca81bcbf0ff7f5f07a62ae3f7e9d99b7b098102f4b165ce4bfaea
+KBO: SSG Landers vs. Samsung Lions,Buy,19.369028999999998,53.888887,Samsung Lions,1781431884,0x63aac976bc9fa190da1e505dc511fff839a66e4bf760a70264538be0f5fd14ba
+Miami Marlins vs. Pittsburgh Pirates,Buy,2.053389,18.181817,Miami Marlins,1781390890,0x6bf6fbb9158ca24938297bbfb5f8083a47ce02595b932c64b1a8fee43b6544e1
+KBO: NC Dinos vs. KT Wiz,Redeem,0,0,,1781386257,0xacb7eaf6ed352430755e36cbd2f90a430be1b06085b36c12eb9b82c3cc7cfaba
+Miami Marlins vs. Pittsburgh Pirates,Buy,4.076789,11.11111,Miami Marlins,1781385610,0x7259a92f814d6380cf38ca6649fde07d6af1a4399607482864f3ad16efd41c57
+Miami Marlins vs. Pittsburgh Pirates,Buy,6.096089,12.872339,Miami Marlins,1781383393,0x982afe1fafb0c99f1ff10c7b02fd40142aadfa11959cffb747de3c4297378e17
+Miami Marlins vs. Pittsburgh Pirates,Buy,19.336289,46.341462,Miami Marlins,1781382514,0xa8a24a20ec0d01738ac8136a52dd3e9e02511496b5f722efa38e6b72d1c2dae4
+St. Louis Cardinals vs. Minnesota Twins,Buy,6.144,30,Minnesota Twins,1781380612,0x82bd0d1a6c0745b739550b1437acd96f0ac568df0a8fd64bd33415a70a6b84b5
+St. Louis Cardinals vs. Minnesota Twins,Buy,14.344389000000001,77.777776,Minnesota Twins,1781377857,0x03896fc25ec39a1c6ea6457ecbbc1753356a22ad6a49a2d15297b8c49b84dd31
+KBO: NC Dinos vs. KT Wiz,Buy,6.149719,35.676469,NC Dinos,1781349816,0x4d64a72a2bfbfb6284a2ec2f2da44394a3d22f0eb943764a4d7061c6e82362a6
+KBO: Lotte Giants vs. LG Twins,Redeem,0,0,,1781348964,0xbac9134e5923809cdb03faec1002bace94137260b7da9cc4827e87d7c761ee00
+KBO: NC Dinos vs. KT Wiz,Sell,30.62999,38.83,NC Dinos,1781347888,0x2dc14c86f217caa526f15925c60eff0aefde4990339f57c1b1b94688c66bcf44
+KBO: NC Dinos vs. KT Wiz,Buy,8.190549,38.83495,NC Dinos,1781347362,0xdd6f90f887b06265cc24661a375b1bdc0a5832912b2f16eccbe95027397016e5
+KBO: SSG Landers vs. Samsung Lions,Sell,43.07632,50.3,Samsung Lions,1781347092,0x4296d2436e492fde8f6bfe4eb87efde767361eeaeb9bd967d8f9880396ebd955
+KBO: SSG Landers vs. Samsung Lions,Buy,18.346778999999998,50.305554,Samsung Lions,1781345734,0x1474b759413722e13609695153e2e0b6f37ca013b5645d1b024438d1f31d567a
+KBO: Samsung Lions vs. KT Wiz,Redeem,0,0,,1781271015,0x48ea0312eb0ecd828a5a92c9a56f5019e76969c514061b2ae34514f226df44d8
+KBO: Lotte Giants vs. LG Twins,Buy,0.99561,46.41,LG Twins,1781266674,0x9bfb20049884a1e15076e66db27600bdeed0076de2c93fe22357d083845d5c32
+KBO: Lotte Giants vs. LG Twins,Buy,3.078559,23.622046,LG Twins,1781265600,0x21cced5b0dce094dd724aa3275ff8eee3fa011e64a74daec6045d55999d578cd
+KBO: Lotte Giants vs. LG Twins,Buy,1.2634990000000001,13.369564,LG Twins,1781264005,0x66eb6074eba3951520ba26e8e94424723be8d214f53521f5ec4682a8138f55df
+KBO: Lotte Giants vs. LG Twins,Buy,1.02833,18,LG Twins,1781263221,0x44960a00687e3df65dbf919265555a9b1922b84c3e8ffa0ed6bb0b4c03afc85d
+KBO: Lotte Giants vs. LG Twins,Buy,3.08123,30.8,LG Twins,1781262750,0x9ad3c7cadc2f8a2ced928c944e92dc8700d616d3610c5d99bdef76d9ffb0ce77
+KBO: Lotte Giants vs. LG Twins,Buy,6.160189,54.545453,LG Twins,1781262520,0xbe2fbbad2cf1bdd78527f3ee402a61df45f36f6eb41951336b41ce2e60b0a3fc
+KBO: Lotte Giants vs. LG Twins,Buy,24.482388999999998,72.727271,LG Twins,1781260615,0xbc5db1dd68dc976a5823e8048639209fb73bd129bdedbd3385c0bce576ff1cb0
+KBO: Doosan Bears vs. Lotte Giants,Buy,1.0285,20,Lotte Giants,1781183607,0xb3b9d11121577417eb5d6441fb7b9a40212ce6b844f445d2426b17b2aa575110
+KBO: Doosan Bears vs. Lotte Giants,Buy,5.130689,38.846152,Lotte Giants,1781182521,0x2c6b9b2f71530a37ee5a3e3f9f8c0eeb511cdfe8f5cf6ad702036f8af9da71c5
+KBO: Doosan Bears vs. Lotte Giants,Buy,5.126,31.25,Lotte Giants,1781180889,0x1eb5ac226d04a767416a12192508357f05659d70b7e59e8f2533b4da01eb0e4d
+KBO: Doosan Bears vs. Lotte Giants,Buy,4.09,16,Lotte Giants,1781180376,0xb785ccada2dd8bed31684ad15cd905cc59a0082dbb73e141e0660b98601d4594
+KBO: Doosan Bears vs. Lotte Giants,Buy,6.154789,42.857141,Lotte Giants,1781178754,0xa567bfa814792748de9abb2486991cdcae2dbc8650c6efeddca3377d3ce4118b
+KBO: Doosan Bears vs. Lotte Giants,Buy,19.381888999999997,57.575756,Lotte Giants,1781175402,0x42373d67eb0506082e886f17b05ddd96e6b3a838f0ce19e4ef91e9770ac0aeb6
+KBO: Samsung Lions vs. KT Wiz,Redeem,0,0,,1781098098,0xdc62cb833f130781f3472f2e758ad4cb258837a43877007c5a42511e372ad016
+KBO: Samsung Lions vs. KT Wiz,Buy,3.069289,13.043477,Samsung Lions,1781095255,0xfe2cdbbcdf9796dde518480f460d7d02fdca604356c2edcafc49004c091abcf1
+KBO: Samsung Lions vs. KT Wiz,Buy,1.374499,9.466665,Samsung Lions,1781093292,0x69d183821ed041948c0a3e44f1b6d162bc1152003d52a433c93eedd3cf81b21e
+KBO: Samsung Lions vs. KT Wiz,Buy,5.109489,18.518517,Samsung Lions,1781091927,0x461d65ded5eedf9c42c1766d52191f502f5531f6d2637404263e81319f9c2306
+KBO: Samsung Lions vs. KT Wiz,Buy,15.37922,95.375,Samsung Lions,1781089801,0x7e6890fe3522cbe1ce0606dba007f2df798cd9e672cdc9ddbd9e3189b8527265
+KBO: Doosan Bears vs. Lotte Giants,Buy,10.260989,76.923075,Lotte Giants,1781009244,0xd9fff68ffebfb4c843aa7399046fb69c648475e6202fbbbc834d5e4322cc69ea
+Colorado Rockies vs. Los Angeles Angels,Redeem,0.003214,0.003214,,1781007838,0xa6298cd23df49382ba5085ca4c9dad16042ca0d96084fa1e631d3743b8ab3209
+KBO: Samsung Lions vs. Kia Tigers,Redeem,0,0,,1781007837,0xe00f30b75ef3df5b541623a9a39a489910b1f60d5c203eb8f6fe9e22b32ca371
+KBO: SSG Landers vs. Hanwha Eagles,Redeem,0,0,,1781007835,0x405b47dfe7ef12c1bb4d5b80e341aafa1f92739c0e282d9f6b2972731b7453c2
+KBO: Kia Tigers vs. Hanwha Eagles,Buy,1.0288,25,Hanwha Eagles,1781007162,0xd72a63a161ec435398dd1c65da059c8e4beea4b34add1c75a3076b245dbabac8
+KBO: Samsung Lions vs. KT Wiz,Buy,4.111129,54.166665,Samsung Lions,1781005326,0x07521d49e2f0928ef53f4c42766a84eca1610774dba6f394e23d01446e05c02d
+KBO: Samsung Lions vs. KT Wiz,Buy,1.027289,11.11111,Samsung Lions,1781005257,0x8ba216f5f5a6c569973b771d1394c742d97ffa6355237cd5ae96de5f339c6b52
+KBO: Kia Tigers vs. Hanwha Eagles,Buy,8.2016,50,Hanwha Eagles,1781002279,0x6a1fc5ea4e66a59b7fc929832d30f45a551a2d8b83626a612e9608eaba1d2a9a
+KBO: Kia Tigers vs. Hanwha Eagles,Buy,17.36786,61,Hanwha Eagles,1781000379,0x48e8b46940b063ddbd62ba73c5d336394dac6c0f2114fec106b0093254111088
+Pittsburgh Pirates vs. Atlanta Braves,Buy,3.080089,27.272726,Pittsburgh Pirates,1780862020,0x8eb3455c887b49a09018497ae5aa7dbc05581ce4d99927e51f06911554a7ea40
+Pittsburgh Pirates vs. Atlanta Braves,Buy,12.259189000000001,42.857141,Pittsburgh Pirates,1780861282,0xfa1ec7946184820dcebe79137e13518bc5ef761c7f6586866cc06cbb0ef5f456
+Kansas City Royals vs. Minnesota Twins,Sell,52.17705,58.82,Kansas City Royals,1780861033,0x103224b9c248bac3e419ab8def1480d2255eb8469ceccb2aa29700616738f179
+Pittsburgh Pirates vs. Atlanta Braves,Sell,15.88088,70.68,Atlanta Braves,1780859601,0x75ade8276144b5c1e0e97a285fc41fb1bb77d87f266663703b79c781b3655d53
+Kansas City Royals vs. Minnesota Twins,Buy,20.395989,58.823528,Kansas City Royals,1780859056,0xf0894873f624bbdd9f6c0c1b24e54902bd22d15c35de5d4955ce03a0db98faca
+Pittsburgh Pirates vs. Atlanta Braves,Buy,6.127789,20.689654,Atlanta Braves,1780858794,0x919e46345627f9c9b298898135a9069154c46d41f6bec26ce75d01ed97e9dbaf
+Pittsburgh Pirates vs. Atlanta Braves,Buy,19.3534,50,Atlanta Braves,1780856547,0x712d1499f1168ac0291d5a89f5ee985a4fe28dd1c7b9d88655f725040c3cc442
+KBO: LG Twins vs. NC Dinos,Buy,5.103489,16.129031,LG Twins,1780827585,0x84605fa09929ea7cabd3d6a625c71bf21dc733c001f215a1b40542016323ad4b
+KBO: LG Twins vs. NC Dinos,Buy,15.36233,77,LG Twins,1780825678,0x698ed6a497a1542ea0ebecc6d139cd013b82d7dbd87674b93ac45dc92f04381a
+Withdrew funds,Withdraw,70,70,USDC,1780763718,0xc4cd48a9906d9de1196f206991f8d32f9e17970e808432c4b2d3bc11860e7682
+KBO: LG Twins vs. NC Dinos,Buy,6.161799,59.363635,LG Twins,1780743637,0xb609a826eb7a7d1d4f8480e3c736d4cc223ab094db8e016c4bebbfd48f225ae5
+KBO: Hanwha Eagles vs. Lotte Giants,Sell,75.91423,77.51,Hanwha Eagles,1780742946,0x3b186b7520635e9ed35ac96feeb6f19b7166f4d09852d1cb7c4edde7de99abe7
+KBO: Hanwha Eagles vs. Lotte Giants,Buy,5.09,12.5,Hanwha Eagles,1780741038,0x3ccb52c9e2bb19ee8b7c1e801dbdf0a94b75c67a0c1691d06ae3135a6b633916
+KBO: Hanwha Eagles vs. Lotte Giants,Buy,4.085189,13.793102,Hanwha Eagles,1780737271,0x750b2b6e803f3c513748936730abd02ef95a9b70801b2e6e6b5a6cd7341ef586
+KBO: Hanwha Eagles vs. Lotte Giants,Buy,21.371689,51.219511,Hanwha Eagles,1780736833,0xf1e8582d8785356ed1cd073b8cd883735edbc7ad1dcd68743d189e59f05f9882
+Withdrew funds,Withdraw,42,42,USDC,1780694551,0x46f4f21a4a763980f15452eb2ca9b35e56f9bce9c1482bd9f5b448541b6b48a5
+Deposited funds,Deposit,42.99637400000001,42.99637400000001,USDC,1780694514,0x40841fc2c5dadb50d957b4cba0d0af3f6ef2f94f30a4ab0b09a62b71a9f562fc
+Withdrew funds,Withdraw,43,43,USDC,1780694439,0x55be0dca98aa7fe3610b4665b1c3196b7626a3757bef07d9bee8e0b4dbc0bd64
+KBO: LG Twins vs. NC Dinos,Sell,107.90732,109.03,LG Twins,1780664340,0xe951cb5f84500f4bbb9ea82c20fb0035c202113368f8b9269d6ae49d35ceea8b
+KBO: Samsung Lions vs. Kia Tigers,Buy,10.265079,85.923075,Samsung Lions,1780657002,0x68af52494f57632df9714d2014a3ed8c2f8d29d56deea10b6736ce48fa91d372
+KBO: LG Twins vs. NC Dinos,Buy,4.085189,13.793102,LG Twins,1780655151,0x9bfc841a2c000128d0b5c2cb214e4e6d91693dc1bb0cdb514702b18ca772bac1
+KBO: LG Twins vs. NC Dinos,Buy,20.473989,95.238094,LG Twins,1780653697,0x9e797f9a6ebbce0df40ab4c5095e990b6b29761c0b54339a6afd02836fb04940
+Withdrew funds,Withdraw,84,84,USDC,1780639902,0x372e9a58898b249794db26ba0ef5232129642eafc0dc595ff38547233be72eaf
+KBO: NC Dinos vs. Samsung Lions,Buy,22.77751,74,Samsung Lions,1780568340,0xb68f9b38130793afc9f32d5bb4887c6d324a972a38fd3fcd3b460e7cccc19794
+Los Angeles Dodgers vs. Arizona Diamondbacks,Buy,1.02925,40,Arizona Diamondbacks,1780543110,0x7aec4d4407114d3ab509dc630b09a6fecb1f6b8e08ea132f90d023d2d54d2508
+Los Angeles Dodgers vs. Arizona Diamondbacks,Buy,1.46136,48.965516,Arizona Diamondbacks,1780542547,0xd465df6c37e5a878edb4cf795f1ff2aaf3284b3940df48cef6105db92e69be36
+Los Angeles Dodgers vs. Arizona Diamondbacks,Buy,1.0285,20,Arizona Diamondbacks,1780540402,0xe76a56ac01a77ffe887c8c4ea29e78077ab9ddf7b7a8e9c85e7da6432b7316f2
+Los Angeles Dodgers vs. Arizona Diamondbacks,Buy,10.281989000000001,166.666665,Arizona Diamondbacks,1780539627,0xf4e3931ee1cbff59ec6595bb76a99421b16457a8013b379485e28059ee72b1f3
+KBO: NC Dinos vs. Samsung Lions,Sell,35.09487,35.46,NC Dinos,1780487811,0x3790a8f1eb16a83e95c9ba4e1374aaef37dfe0a683658352f5c86c53bb1da815
+KBO: NC Dinos vs. Samsung Lions,Buy,15.259669,35.465115,NC Dinos,1780482835,0x15d78df4339993be618ab97ca430bc0c1cca27543db4598d1c70077e18aeb618
+Withdrew funds,Withdraw,70,70,USDC,1780407661,0x40b0d58ffe23b2f4552b9014ecc53fabc48c49e3e3095c3e90dacacb53dbdc40
+KBO: NC Dinos vs. Samsung Lions,Sell,91.176,91.27,Samsung Lions,1780406443,0x71c08cf1f473432173710495af55244fffb0f78b0887fca88d1cbf6834c92421
+KBO: NC Dinos vs. Samsung Lions,Buy,20.468519,91.272726,Samsung Lions,1780401312,0xfdf42d5c55bd2c334442431033f7652bd8378fe65aac4d5edab2528097902dd5
+KBO: Hanwha Eagles vs. Doosan Bears,Buy,3.0773889999999997,21.42857,Hanwha Eagles,1780398771,0x65563e653d3eeda8e23aa9e287bb68ca8b781c59ee21a8bf39c38074dcf79387
+KBO: Hanwha Eagles vs. Doosan Bears,Buy,1.027289,11.11111,Hanwha Eagles,1780397761,0x9432626dae75c2dea0346e0fd199d6516917bdc15e953d20dd3352d382e303fa
+KBO: Hanwha Eagles vs. Doosan Bears,Buy,7.166389,33.714284,Hanwha Eagles,1780395409,0x82fc7f97768f812f273f4f49b4294dbdf37fa09465052569287f77655dadb692
+KBO: Hanwha Eagles vs. Doosan Bears,Buy,18.394188999999997,66.666665,Hanwha Eagles,1780395195,0xf05a039337c046d6dcc7f107aa531400fd949f11ea4bb23f0935cde7d66d0a1f
+Colorado Rockies vs. Los Angeles Angels,Buy,4.094789,19.047618,Los Angeles Angels,1780375408,0x1800563c026d5d05e9256312bf7db8f406d8403e35c4453077428627477e87ee
+Colorado Rockies vs. Los Angeles Angels,Sell,34.12495,43.47,Los Angeles Angels,1780374892,0xeee4437314194a1873c200f8f25afe01d63ccd2b8fd1dbc72d02097d1b985c41
+Colorado Rockies vs. Los Angeles Angels,Buy,10.230989000000001,43.478259,Los Angeles Angels,1780374428,0x67039fa07dc13db10c3a6a77059ac59d5be2bb65a2f9eab197cbf3d40d338113
+New York Mets vs. Seattle Mariners,Buy,7.170089,36.842104,New York Mets,1780373592,0xd30f1355f052f5604d20352b34a9b8dec006236700a277bb272f065e25656335
+Colorado Rockies vs. Los Angeles Angels,Sell,73.43107,86.78,Colorado Rockies,1780373492,0x0e8df8b364dc682714104c94d852ebd0d93bcb4d50a73300fa24c80f22763be4
+Colorado Rockies vs. Los Angeles Angels,Buy,1.026689,9.090908,Colorado Rockies,1780372816,0x3b576a41db2d059f87d5f2d2fd1df6c0c24e6bb2209fe8f3e16b71b8c426970d
+Colorado Rockies vs. Los Angeles Angels,Buy,10.261379000000002,77.692306,Colorado Rockies,1780370153,0x3f5b662fb4eec18497dd43b8327cfa1fd94e9edc9a7aa78222f8c6dbeea75ecc
+Texas Rangers vs. St. Louis Cardinals,Buy,5.095988999999999,13.888887,St. Louis Cardinals,1780364357,0x286bee07adde20acfa6c0e8a728b6b3496c0a0d81ce0d15ffff3bf71e40ab8e4
+Texas Rangers vs. St. Louis Cardinals,Buy,12.259189000000001,42.857141,St. Louis Cardinals,1780362878,0xa5bd4564b176758bb6a87bed4e894e0fded79fbd777127b3d32546623bdb3284
+Chicago Cubs vs. St. Louis Cardinals,Buy,1.029459,56.402222,Chicago Cubs,1780278427,0x14690d2ae3beb8a0f25adff85e8cfb501c95f3d2a6a1b8a15cbf6a51edf12c08
+Chicago Cubs vs. St. Louis Cardinals,Buy,1.028189,16.666665,Chicago Cubs,1780276157,0xb7055e44886b01617ba3ebf96efdbeb62db14dd9158d6172eb87201c4554f3b0
+Chicago Cubs vs. St. Louis Cardinals,Buy,5.140989,83.333332,Chicago Cubs,1780274508,0x4343bb11d7c141471d52fb9b2578433d1c3ec3472a3d0ea91f3d84eace2d7b5e
+Chicago Cubs vs. St. Louis Cardinals,Buy,15.342,62.5,Chicago Cubs,1780273240,0x4ce6bbf14cee814dc5c3ba6cff1cdca74b42965baf8b54b41acb978b5a6abdc6
+Philadelphia Phillies vs. Los Angeles Dodgers,Buy,2.054589,22.222221,Philadelphia Phillies,1780263401,0xead1635d093fa4e2b8aebba483257b388d22935f2fbca32c19a81fee394df85d
+Philadelphia Phillies vs. Los Angeles Dodgers,Buy,1.027889,14.285713,Philadelphia Phillies,1780263170,0x9952860509c15a2a23328af903182f03345beb2b5eb3159bb95f21a9b1d2f62f
+Philadelphia Phillies vs. Los Angeles Dodgers,Buy,1.9512999999999998,19,Philadelphia Phillies,1780262965,0xec3e3076494a911ce6b85ebf1db6b347383dfac2d044b51e108a433e67e011e2
+Philadelphia Phillies vs. Los Angeles Dodgers,Buy,20.485989,105.263156,Philadelphia Phillies,1780262502,0x89502e0f1fee3a693966251429bb0b97421b38f7d1d95b2ce03ba52a7670e939
+KBO: Kia Tigers vs. LG Twins,Buy,3.0864,75,Kia Tigers,1780215836,0x1f125b4dd1f02ab77eef08d426fea615e4b5e5022130e4992c68d54210fdcae6
+KBO: Kia Tigers vs. LG Twins,Buy,1.02835,18.2575,Kia Tigers,1780215470,0x4aea958f28c6973aaf7cf279453a40be687d1879d025330fba9187c44c360d9b
+KBO: Kia Tigers vs. LG Twins,Buy,5.137039,57.888887,Kia Tigers,1780213838,0xa967753b3a0e83a3ce8798ab0ac22c256e9dd7b095bc77f211ff23218cf8aa86
+KBO: SSG Landers vs. Hanwha Eagles,Buy,1.026689,9.090908,SSG Landers,1780212898,0x5f6b95a0620ee3c4b8bb1289e3e05af734eebcc486bb53ce221d74371260bbe5
+KBO: SSG Landers vs. Hanwha Eagles,Buy,0.90349,8,SSG Landers,1780212166,0x6a60e76740c193d66cb6f6aba49cd70bf0fd3969ff97d5e943d0ea04f9f317ea
+KBO: SSG Landers vs. Hanwha Eagles,Buy,5.6287,25,SSG Landers,1780207916,0x09bf7528792f4d91bacec328a2870797bdb1264cc2dd2db4cc92a4e66768cc68
+KBO: SSG Landers vs. Hanwha Eagles,Buy,18.379609,60.603332,SSG Landers,1780205112,0xedc400d4738af073076bf2d90b5a2393f1ca67b3a191829c1823b762954e1a76
+San Francisco Giants vs. Colorado Rockies,Buy,4.114,80,San Francisco Giants,1780195291,0xdc53feba7893c837c1ad7cf85411e0565a79cd285c85f4e6e7ee9337b5a4805c
+San Francisco Giants vs. Colorado Rockies,Buy,30.63,100,San Francisco Giants,1780193093,0x0b300ff7ecb8c995a97607d043e9b7ebb2eda1bb4e09fbb4335def2ddb179ad1
+KBO: SSG Landers vs. Hanwha Eagles,Buy,13.29287,52.2,SSG Landers,1780130739,0xc0c48317470002256f45a06b1d2a5451a1267fe75ceb824a183af90185eae05e
+KBO: Doosan Bears vs. Samsung Lions,Sell,61.38275,141.89,Doosan Bears,1780126803,0x02db1871c7a2ac86ba3f5a56d29dc6133b670f967b8f55c0f01219e5d6f841e1
+KBO: Doosan Bears vs. Samsung Lions,Sell,46.46754,95,Doosan Bears,1780125092,0x4751c25b880b9f0a49b5747f3959c379378eb9f73408417fcd519dd69352c437
+KBO: Doosan Bears vs. Samsung Lions,Buy,1.0276,12.5,Doosan Bears,1780123891,0xbc3b22d73e70d008266be3c0adf6c5a00fe18d481f642116d39c07780e6ba0ba
+KBO: Doosan Bears vs. Samsung Lions,Buy,1.02822,16.875,Doosan Bears,1780123844,0x5ab9564b0e1429f414382af2ea4e1895e68b9fd24183900b149136b7831f1bfe
+KBO: Doosan Bears vs. Samsung Lions,Buy,1.02777,13.5,Doosan Bears,1780123727,0x6761190f648ab5360f032bb2316bb288fcc134bc164a7cf544b97021d1252b26
+KBO: Doosan Bears vs. Samsung Lions,Buy,4.1068,36.37,Doosan Bears,1780123011,0xa568296a671be87bff8c3280c382b2a67f9138bffded883f847a155fb13e4b6d
+KBO: Doosan Bears vs. Samsung Lions,Buy,1.027889,14.285713,Doosan Bears,1780123004,0x452679828b3b6c4be14cb063642e0f602b056200283d400a02927403b1efcdd4
+KBO: Doosan Bears vs. Samsung Lions,Buy,12.312189,90.36842,Doosan Bears,1780122845,0xa4fdcc89d7036dd3d875e454da1c01a586ee82e90e51213c22f52b7c0c7369cc
+KBO: Doosan Bears vs. Samsung Lions,Buy,0.66696,5,Doosan Bears,1780121401,0x6b88ced48c93e03ae87257f437ed69d366ec088e9b94167e77f0da7317d82929
+KBO: Doosan Bears vs. Samsung Lions,Buy,12.70633,48,Doosan Bears,1780120951,0xd528485d38d9c29a4ebeab074ad0258f36ec0bdb67e16b83b688b79f798e2e8a
+Canadiens vs. Hurricanes,Buy,5.144,125,Canadiens,1780102408,0x155a1cbe91714079ac6951e3779ea70e4339677c76801509947c5aaf3c0c59ae
+Canadiens vs. Hurricanes,Buy,15.373639,88.407646,Canadiens,1780101512,0xe48346674e335860dfb1c7bba037ec8fcbf335c2c28f17f02102115730e07079
+Withdrew funds,Withdraw,70,70,USDC,1780026302,0x2f722c1e90f784f17e54042e2e9c68b7f109c0a6a55fced74f4d8c00dc278cec
+Houston Astros vs. Texas Rangers,Buy,1.0297,100,Texas Rangers,1780022484,0x674bcd8d91c34bea58058124d52fd741583f7850b056ccd2808bae67653469fc
+Houston Astros vs. Texas Rangers,Buy,1.0297,100,Texas Rangers,1780022207,0x9f3b4744e20f5f1803e17cdca77fe665ebdee343f123b1f5a0ae65b7061b8097
+Houston Astros vs. Texas Rangers,Buy,1.0288,25,Texas Rangers,1780020681,0x5909c1635b0f577f82c80b72d221bc0512a3e3a267a8d6b63a1025ea0f256b6b
+Houston Astros vs. Texas Rangers,Buy,1.0285,20,Texas Rangers,1780020123,0xa18260a42ab208ed4b69ebbe44e9a1e7a082759cf5598c1827b46962d243600f
+Houston Astros vs. Texas Rangers,Buy,5.135,50,Texas Rangers,1780017169,0xca3e75f634c96634465d0a47deffd1d82eaa1613ea18dab16fc5de3ef97b9dd2
+Houston Astros vs. Texas Rangers,Buy,10.263989,83.333332,Texas Rangers,1780016548,0x7342d1f267a40a25a365b54f54c03455036578ac00b2fd44cf6e53798ebb1704
+Chicago Cubs vs. Pittsburgh Pirates,Buy,10.197989000000002,29.411763,Pittsburgh Pirates,1780015990,0xa39444938a23dac855f7d64dd0494a817b838cd8ffef1833bda69d71a83d74c8
+Colorado Rockies vs. Los Angeles Dodgers,Buy,8.218389,88.888887,Colorado Rockies,1779936436,0xe53392bb346aaa6e408d4d061cc978fc90d973914e1ee719e06a153ec988071b
+Houston Astros vs. Texas Rangers,Sell,39.4509,43.47,Houston Astros,1779934342,0xf5087765e296a6e4143039a63f084d24769a2b1c2049d493574c313e5ca4d41d
+Detroit Tigers vs. Baltimore Orioles,Redeem,0,0,,1779934014,0x07dcee836389b7acff0b4ef914d67c66e2514664f5d8c7e467ac1cba04336270
+Hurricanes vs. Canadiens,Buy,1.0288,25,Canadiens,1779932151,0x356b05880a02a53e72aced70ba49d025ce3f335b561e645e0c2850a2c8dc299c
+Houston Astros vs. Texas Rangers,Buy,20.323988999999997,43.478259,Houston Astros,1779931097,0x7080c23ac7e9cf6b85ca6a68d16474f0d98c8031974780d9edac7ab3ed177f37
+Hurricanes vs. Canadiens,Buy,2.0563890000000002,33.333332,Canadiens,1779930894,0x7302bdc34e1f249bbe115d94c95b07727fa0b99857dac5691c89a8808be63893
+Hurricanes vs. Canadiens,Buy,1.028189,16.666665,Canadiens,1779930877,0x8e862692a60c62c898c0489870e913022649bafe7dac6b77dc4d13f9f5ee5cb5
+Hurricanes vs. Canadiens,Buy,1.028189,16.666665,Canadiens,1779930381,0xdfb5e3fba7ce0230bc7c906fbad51fae30ff828b27b0f439d5539dd6ccc380a8
+Hurricanes vs. Canadiens,Buy,1.028189,16.666665,Canadiens,1779930210,0x50220a0e1f031bfc52426c757f250dcc25af958cae03f7b07dd8b42309c9081e
+Hurricanes vs. Canadiens,Buy,3.0836889999999997,42.857141,Canadiens,1779929919,0x0c84412b99c7d6e25d57477a72118ab9b7a42aaf4e2361fdd85a98eb469fada9
+Minnesota Twins vs. Chicago White Sox,Buy,1.0276,12.5,Minnesota Twins,1779929688,0x54f9c31afc89f4e501f897b86466ce92978f4e6ee602cd13febf60b8c1b38b1e
+Hurricanes vs. Canadiens,Buy,10.221989,38.461537,Canadiens,1779929538,0x6b26fd17d3b992859212907004c153c75ceb3c7e09aa33ab5903a32683d756a3
+Minnesota Twins vs. Chicago White Sox,Buy,10.230989000000001,43.478259,Minnesota Twins,1779928101,0x58ef68ab41e9fbc520cad6d0e4c4bd052e12d00959184eb1f21e0a820e6767ca
+Chicago Cubs vs. Pittsburgh Pirates,Sell,50.2503,100,Pittsburgh Pirates,1779927935,0x0c86d4e685f6ded462b9f3a41683cdb1691c0407f974d0af0ae93abb0504b647
+Chicago Cubs vs. Pittsburgh Pirates,Buy,25.5625,100,Pittsburgh Pirates,1779923724,0x193c850daa094f26bc335a3d348d5c90f4853c1f0ea4b6f46b752afc1bcb3f23
+Philadelphia Phillies vs. San Diego Padres,Buy,5.140989,83.333332,San Diego Padres,1779920111,0x72be0b0281297cd381a03b8573df22d8f44565c746be7c9492779fe8d5749b81
+Arizona Diamondbacks vs. San Francisco Giants,Sell,50.13326,74.44,Arizona Diamondbacks,1779918686,0x34f316ef27f6099291f3ab2dba582c1712a00a6f26307bc9b8183dae7e5188b6
+Arizona Diamondbacks vs. San Francisco Giants,Buy,20.438799,74.444443,Arizona Diamondbacks,1779913823,0x3d97bff93a7cde505387305bcd499567b4d4bc0ba37497eb8410683ec29e4075
+KBO: LG Twins vs. Lotte Giants,Sell,86.49015,87.39,LG Twins,1779886026,0x80da48d05102282648849a6b6c9f79a623cbde132155a7ab6fe004271d73ccf5
+KBO: LG Twins vs. Lotte Giants,Buy,5.0974889999999995,14.285713,LG Twins,1779881922,0x1529c304abbb1418b0220ed022c21a3d0affb8b69c5297805e9ce9dfad2a67ac
+KBO: LG Twins vs. Lotte Giants,Buy,25.493548999999998,73.114284,LG Twins,1779877400,0x8518f484da5bbe5329ced31eea34fb4dc978182841b2c7dce27710101ae27360
+Philadelphia Phillies vs. San Diego Padres,Buy,1.0285,20,San Diego Padres,1779855443,0x21f1fad11e122d907140350a6b2def8c27145d15fc733817bbd5216061233198
+Philadelphia Phillies vs. San Diego Padres,Buy,4.1104,50,San Diego Padres,1779853619,0x5f83afedc2e5f8d623f45998b309702b13e3aaa53265cdd302b4f15e77dcdaf0
+Philadelphia Phillies vs. San Diego Padres,Buy,10.27153,105.41,San Diego Padres,1779849234,0x6283460097b8f9ea306084a37fa1b3e09cbf35b89430fd788274573fef9e71ce
+Hurricanes vs. Canadiens,Buy,20.431988999999998,71.42857,Canadiens,1779755589,0x5c765be3920e3880825bad843c54f119e0e597555390c2ac23478c20cd7d6a56
+Philadelphia Phillies vs. San Diego Padres,Buy,3.080089,27.272726,San Diego Padres,1779754819,0x766be654071bfad8692c728cfc7c2aba9965e4dd9a0379338dc70a3ed1e1ba25
+Philadelphia Phillies vs. San Diego Padres,Buy,2.039589,5.882351,San Diego Padres,1779753748,0x4ad77116c536c48a8a26682f2fd73b9779fdc07eae32b63faf24797f0ddb5f1c
+Philadelphia Phillies vs. San Diego Padres,Buy,3.052189,7.142856,San Diego Padres,1779752145,0xbfd5f454bef9c11c36d0b7a8848885610636f491f7eebb7b49afff4887bf9650
+Philadelphia Phillies vs. San Diego Padres,Buy,30.512988999999997,69.76744,San Diego Padres,1779750496,0xf3e4badbe4df65f7b251b4333c493ce6bceb2faaa1d9f889f28d4a15fd79e6aa
+Washington Nationals vs. Cleveland Guardians,Buy,1.027289,11.11111,Cleveland Guardians,1779748916,0x425a1114df8a9e97616dfb3c0870cd399d766683a9d226276a171e52013b5dd7
+Washington Nationals vs. Cleveland Guardians,Buy,10.242989000000001,52.631577,Cleveland Guardians,1779748853,0xb8244bc9bbae905c08cf7b597291385e83770f94d050f5442641e6897791bdaa
+Arizona Diamondbacks vs. San Francisco Giants,Sell,56.23965,60.6,Arizona Diamondbacks,1779748808,0x6bcf7574e3a46d34e61989684000d82ed25268d1ed59af7b796b656ceb9b8ae8
+Arizona Diamondbacks vs. San Francisco Giants,Buy,20.401989,60.606059,Arizona Diamondbacks,1779747408,0xc991ba33c147e30db212a9c394b95034c50cdbdde83c9775898533c16143471b
+Minnesota Twins vs. Chicago White Sox,Buy,1.027889,14.285713,Minnesota Twins,1779738999,0xd3e632dbe8699b6634a59ff893d7343565c12ac05459c6f244d138c8be593936
+Minnesota Twins vs. Chicago White Sox,Buy,4.1008,25,Minnesota Twins,1779737749,0x065d08dc4311750aadd13dfaf33513fc69b9f7d91604acbe3af985c38609bf6e
+Minnesota Twins vs. Chicago White Sox,Buy,21.5174,117.5,Minnesota Twins,1779736363,0x5399222434696c768863062f70e4d7a07531248d75a692fd09b661193f83e275
+Withdrew funds,Withdraw,81,81,USDC,1779735404,0x4964c8adc26c7c8ba4f32a0b721c61566954f3f07275dc5597491228ff473083
+Colorado Rockies vs. Arizona Diamondbacks,Redeem,0,0,,1779680397,0x06666b275b47418c158b386810cf3274a0470166418fad00d90cecda3da30ceb
+Avalanche vs. Golden Knights,Sell,65.2511,75,Golden Knights,1779677521,0x529130723c430ecec28c5f8794e224a537842fe1656e06e89d376d9a0b99293f
+Avalanche vs. Golden Knights,Sell,57.35153,75,Golden Knights,1779676806,0x5ce7e1fa6320a52fca53baf8aa1dbba9e563438c8c57e534e7bd97f3119630f1
+Avalanche vs. Golden Knights,Buy,12.3312,150,Golden Knights,1779670070,0xa219207a0ab112f09ef2885716fc535113811216ce81c83ad9e9d42fcfc92f01
+Washington Nationals vs. Atlanta Braves,Sell,47.11976,47.61,Washington Nationals,1779669599,0x80d354f8f2315b19e930e145de6abc5aaa50bd4d9ec4eead1f4504e3fd112318
+Detroit Tigers vs. Baltimore Orioles,Buy,1.0254889999999999,6.666665,Baltimore Orioles,1779664885,0x15dad53a95ab713bb0a77642a1291db6796936aba3ee062b63d010f0dc2e4875
+Tampa Bay Rays vs. New York Yankees,Redeem,0,0,,1779664745,0x6ede8b4e93b2b0062917050a75b0fb226be149f656512d39bbdac3104d7bde14
+Detroit Tigers vs. Baltimore Orioles,Buy,1.64032,10,Baltimore Orioles,1779664704,0x5fb81c6a8f46911d9a8dd5d5dee70af83c14aeaaef77b67db7a2f33b38ec172e
+Detroit Tigers vs. Baltimore Orioles,Buy,5.103489,16.129031,Baltimore Orioles,1779662942,0xcb15d162a609d01e70c1b56f7ccc9f41b59b8e2093aeae0aba8c0f1e2f8c874a
+Detroit Tigers vs. Baltimore Orioles,Buy,10.197989000000002,29.411763,Baltimore Orioles,1779661964,0xeca5be82955a3ea786e63ee609371c2721825d5fb0bb0198ee0afd0e3a480343
+Athletics vs. San Diego Padres,Buy,1.027,10,San Diego Padres,1779661581,0x3a4f94efbac816a42f4d99af49fe2fda1c2304d36634fc4c9a8a71e3ade77aaa
+Athletics vs. San Diego Padres,Buy,1.026689,9.090908,San Diego Padres,1779660930,0x4d523381bf2b5bb81143ffc1ebf7d0397b39e2f22c1bac24eb73e0bdb4ae09b3
+Athletics vs. San Diego Padres,Buy,1.027289,11.11111,San Diego Padres,1779659190,0xfa672f1ba1713edb061b72fe6ffad415fb91f10a7636e03112a5c5d2dcc5c8bb
+Athletics vs. San Diego Padres,Buy,1.026689,9.090908,San Diego Padres,1779658187,0x00620597dde00d2236ea18b8ad83ce2a8ff6882088973802b41ef5fb26d97903
+Athletics vs. San Diego Padres,Buy,1.026689,9.090908,San Diego Padres,1779658187,0x26ab7976f42eceec66e6f1de3e9f6c3c2e5dad6f699a372943891b60a604fc41
+Athletics vs. San Diego Padres,Buy,1.025789,7.142856,San Diego Padres,1779657668,0xce34c7a54ef196a4d1b12cb78b308f4ba38991f157ce3ee4bd997847ea17dfe0
+Athletics vs. San Diego Padres,Buy,20.461989,86.95652,San Diego Padres,1779656248,0x26bdbbf0b49b2413c3140bfd47865858258779b47acc3439aede428bc0dd3509
+Washington Nationals vs. Atlanta Braves,Buy,20.347989,47.619046,Washington Nationals,1779655806,0x62da37959b5bf25c8c1fd54bc5aeae209b8a99edc840e64d06293378c4bcc6bf
+Colorado Rockies vs. Arizona Diamondbacks,Buy,1.0285,20,Colorado Rockies,1779655107,0xf62bddccc199ee5f1993b725aac5c577431991c89b9c143b67cca3b8548abe30
+Colorado Rockies vs. Arizona Diamondbacks,Buy,3.84562,25,Colorado Rockies,1779654581,0xb1608353ce24852c558a94606e334959c45e3bb63e97665f3c651a63e6d88ae9
+Colorado Rockies vs. Arizona Diamondbacks,Buy,20.467989,90.909089,Colorado Rockies,1779654157,0x88943e71c8b3552dbeafb747f9cf615dc49ca69f45fa3554b6c07983b33029a1
+Colorado Rockies vs. Arizona Diamondbacks,Redeem,0,0,,1779652901,0xde3c4a90a406ba0b33563aa724c9d6444461a75615dabf470a654ed5defb7e00
+Tampa Bay Rays vs. New York Yankees,Buy,15.287989000000001,41.666665,Tampa Bay Rays,1779652071,0xb7ac3dfcd8b06599fdd321e954db598f6b8a727122a7ff6cc77dde9e7a5f764a
+KBO: Kiwoom Heroes vs. LG Twins,Sell,58.6795,59.29,LG Twins,1779611016,0x424cfa3f5daeab3605b914699ff648c109ad8afec72fd0180ea0ac55ebb83ca3
+KBO: Kiwoom Heroes vs. LG Twins,Buy,10.249399,59.294116,LG Twins,1779609147,0x1dbd4f4089da721e4c8c8fab9888c68784982ef96cb9fedecc10b41859debcca
+KBO: NC Dinos vs. KT Wiz,Buy,1.027289,11.11111,KT Wiz,1779607698,0xe534a21d6422de4400ff10f7fdc14877db6b1bf431017164063c49e00d2e5778
+KBO: NC Dinos vs. KT Wiz,Buy,1.02666,9,KT Wiz,1779607028,0xaf0835e833d1468a95f1109e6b0da06399854ede791a0c971badb0cf968cfb2b
+KBO: NC Dinos vs. KT Wiz,Buy,6.13999,27,KT Wiz,1779603617,0x41fda4221f693283610f93a84b5422b5faf65d14397b970a64658b43731e91b8
+KBO: NC Dinos vs. KT Wiz,Buy,34.6936,106.25,KT Wiz,1779602569,0xd04ab1c3058737735528bb59fb73bf9c05016cebba46c79e09fb084d8def08db
+Colorado Rockies vs. Arizona Diamondbacks,Buy,8.175189,29.629628,Colorado Rockies,1779597203,0xd3e021c641b60a545706254f8666015e78efb30a95dcaf7a8794e0fa92af7b35
+Pittsburgh Pirates vs. Toronto Blue Jays,Buy,7.186889,63.636362,Pittsburgh Pirates,1779570007,0xcd4d348f9ec25fb224da19a4f96f359645033ea2cb9bd5c645e35ec614342b1e
+Pittsburgh Pirates vs. Toronto Blue Jays,Buy,24.439189,61.53846,Pittsburgh Pirates,1779566041,0x4b6e45ddffa13b3c1633d22ff19bc69aa8dd37e9c180472a4abdc1222bab9e7e
+KBO: Kiwoom Heroes vs. LG Twins,Buy,1.02833,18,Kiwoom Heroes,1779521252,0x60db43398afdbbc083b8b9dfdead1c421e8a0877c5509e2e1652b7ed68480180
+KBO: Kiwoom Heroes vs. LG Twins,Buy,8.208789,61.53846,Kiwoom Heroes,1779518996,0x16a8a298d144922c6859c3a17e31aade524c00f27a0b5b0ee615dcfd04aab5c3
+Athletics vs. Los Angeles Angels,Sell,81.15565000000001,82,Athletics,1779424498,0x3b03271a57178e95e423602fba88262eac3138cfe441db42efd663a4e44e4de1
+Athletics vs. Los Angeles Angels,Buy,2.048,10,Athletics,1779417585,0xa038675f8c70addf23eba4405ab5e5308507d0dbbc4f2cd80ddb3c8172cf4f62
+Athletics vs. Los Angeles Angels,Buy,18.405,72,Athletics,1779415550,0x44c8b985d90c32081cfb76ffdd8d1525bb9229dcc210c7542d6678a903df873c
+Atlanta Braves vs. Miami Marlins,Buy,1.02976,125,Miami Marlins,1779412676,0x35314a9f0303e532a6ea95d44447f5ec05ceed52421ed67b7a050bb31d2d4e5d
+Atlanta Braves vs. Miami Marlins,Buy,1.02972,108.89,Miami Marlins,1779411359,0xf26466d5d6fa9ffbcf91749378f68f166bf9f37b3f728d1650d8c167e87a78b9
+Atlanta Braves vs. Miami Marlins,Buy,12.325789,126.315788,Miami Marlins,1779410303,0x5bf64b19631f6727bcf59213683a76ce28aec10200d7296999a982e21c0ca1f2
+New York Mets vs. Washington Nationals,Buy,4.106789,36.363635,Washington Nationals,1779402526,0xcde8a45dc837ae2df45cd38db27695e0d537f7049187afd1db6c8623abe61e18
+Cleveland Guardians vs. Detroit Tigers,Buy,1.02898,29.5,Detroit Tigers,1779393012,0x7dec8978a4a6f9c86356253260601b2141281d91732d98ec78f1ed0af28690c2
+Cleveland Guardians vs. Detroit Tigers,Buy,1.028309,17.857141,Detroit Tigers,1779392733,0xa770fc30e5e85b48b3ba995207dda25550766a13f8aebbc2e5de4ce190d90a07
+Cleveland Guardians vs. Detroit Tigers,Buy,2.049789,11.764704,Detroit Tigers,1779389869,0xb017d3c98be8f46e5bb3ae2b30c5be167e2f54644997d834d58d4870a4145f50
+Cleveland Guardians vs. Detroit Tigers,Buy,4.088789,15.384614,Detroit Tigers,1779386594,0x199c34f696e5f12512384124eacf67be66af6b2de2500f17142635b766416f2c
+Cleveland Guardians vs. Detroit Tigers,Buy,21.4284,65.625,Detroit Tigers,1779386447,0xeff038b562a3fe8b4f6f1949249b5ff50c8f8b2c3b63c3168a9a79ba79e68c76
+Athletics vs. Los Angeles Angels,Redeem,0,0,,1779338331,0xc27b332ba9314fde5b8e8d9756a1c9055762fd707316e47b85b45acc0dd8ad01
+Athletics vs. Los Angeles Angels,Sell,40.54025,47.91,Athletics,1779337558,0x3a4c46f6e63c031365f4b1cb393ddf7c89d1e38e315e2af222be35fec37835d3
+Athletics vs. Los Angeles Angels,Buy,1.0252,6.25,Athletics,1779335020,0x4538ae03ecc80a0109b8853d69ad8b379de0e227f709142d124bfed567e192b0
+Athletics vs. Los Angeles Angels,Buy,10.227989,41.666665,Athletics,1779332192,0x7d7f3a343407a6cd09d4b2abb888cc29d1fcff5bdd6c0e29a33a09583f8f3657
+Pittsburgh Pirates vs. St. Louis Cardinals,Buy,1.02994,500,St. Louis Cardinals,1779330566,0x3f70eb6a34d8a607bdcbf772aed88d7aab7010b7702a9c9f8287710ae5ed2fcb
+Pittsburgh Pirates vs. St. Louis Cardinals,Buy,1.80699,16,St. Louis Cardinals,1779327173,0x1724a5cf4850b35bf7ce8437843bd588c02b3c237d6b10f07570fdb1bc389085
+Pittsburgh Pirates vs. St. Louis Cardinals,Buy,12.291589,63.157893,St. Louis Cardinals,1779326701,0xcb1459ea20d146151a642f68b97f58f1e8e52e5a340918ecba5921495338cf64
+San Francisco Giants vs. Arizona Diamondbacks,Sell,42.33635,42.38,Arizona Diamondbacks,1779250805,0x0822fbfbe9906fd8310e149896039c7f48c033cc4c48cce9877b879e0f0dfd4e
+San Francisco Giants vs. Arizona Diamondbacks,Buy,4.10867,42.388,Arizona Diamondbacks,1779250066,0xfa2aaee5dd308c15eeed6e2c38329d2224069d3cba999e8d049fe364d4839d95
+Athletics vs. Los Angeles Angels,Buy,1.0276,12.5,Los Angeles Angels,1779248213,0x97e70432d32b4ad16f26af2dc01c2f248327e47301cebe6f2217ef8cc41e52e1
+Athletics vs. Los Angeles Angels,Buy,9.251089,128.571427,Los Angeles Angels,1779244179,0x6ddd7c0264015be8c87669b9ccc7c76eee5ac75e8e9a83997d4d67c92caab6e9

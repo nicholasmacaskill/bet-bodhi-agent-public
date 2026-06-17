@@ -1,0 +1,21 @@
+{
+  "lastUpdated": "2026-06-10",
+  "history": [
+    {
+      "date": "2026-06-08",
+      "games": 8,
+      "lateLeadChanges": 2
+    },
+    {
+      "date": "2026-06-09",
+      "games": 15,
+      "lateLeadChanges": 0
+    },
+    {
+      "date": "2026-06-10",
+      "games": 15,
+      "lateLeadChanges": 4
+    }
+  ],
+  "currentRollingAvg": 2
+}

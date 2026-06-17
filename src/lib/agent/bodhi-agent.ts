@@ -159,10 +159,19 @@ export class BodhiAgent {
     /**
      * Internal Memory Logging: Stores the agent's thought process.
      */
-    private async logInternal(type: string, content: string, metadata: any = {}) {
+    async logInternal(type: string, content: string, metadata: any = {}) {
         await supabaseAdmin
             .from('agent_internal_logs')
             .insert([{ action_type: type, content, metadata }])
             .select();
+    }
+
+    async getCurrentState() {
+        const state = await supabaseAdmin
+            .from('agent_state')
+            .select('*')
+            .limit(1)
+            .single();
+        return state?.data || {};
     }
 }

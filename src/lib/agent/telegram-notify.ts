@@ -1,5 +1,14 @@
-import { Telegraf } from 'telegraf';
+import { Telegraf, Context } from 'telegraf';
 import 'dotenv/config';
+import { QueryHandler } from './query-handler';
+
+const queryHandler = new QueryHandler();
+
+async function setupQueryHandler() {
+    await queryHandler.initVectorStore();
+}
+
+setupQueryHandler();
 
 export async function sendTelegramAlert(message: string, parseMode: 'Markdown' | 'HTML' = 'Markdown') {
     const token = process.env.TELEGRAM_BOT_TOKEN;
