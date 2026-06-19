@@ -84,6 +84,16 @@ export function initDb() {
             away_run_line_odds REAL,
             recorded_at TEXT DEFAULT (datetime('now'))
         );
+
+        CREATE TABLE IF NOT EXISTS token_usage_logs (
+            id TEXT PRIMARY KEY,
+            timestamp TEXT DEFAULT (datetime('now')),
+            prompt_tokens INTEGER NOT NULL,
+            completion_tokens INTEGER NOT NULL,
+            total_tokens INTEGER NOT NULL,
+            cost REAL NOT NULL,
+            model TEXT NOT NULL
+        );
     `);
 }
 
