@@ -6,29 +6,47 @@ import { db } from '../sqlite-client';
  */
 export function compressContext(
     text: string,
-    keywords: string[] = ["drawdown", "rules", "limits", "payouts", "error"],
+    query: string = "",
     maxChars: number = 4000
 ): string {
     if (!text) return "";
+
+    // Broad set of relevant domain/command keywords
+    const defaultKeywords = [
+        "drawdown", "rules", "limits", "payouts", "error",
+        "stats", "history", "performance", "analysis", "kelly", "stake", "edge",
+        "mlb", "nhl", "kbo", "betting", "win", "loss", "profit"
+    ];
+
+    // Dynamically extract words from user query as keywords
+    const queryKeywords = query
+        ? query.toLowerCase().split(/[^a-z0-9]+/gi).filter(w => w.length > 3)
+        : [];
+
+    const keywords = Array.from(new Set([...defaultKeywords, ...queryKeywords]));
+    const lowercaseKeywords = keywords.map(kw => kw.toLowerCase());
 
     // Split by newlines, sentence bounds, or HTML tags
     const chunks = text.split(/(?:\r?\n|\. |\<[^\>]+\>)/g)
         .map(c => c.trim())
         .filter(c => c.length > 0);
 
-    const lowercaseKeywords = keywords.map(kw => kw.toLowerCase());
     const filteredChunks = chunks.filter(chunk => {
         const lowerChunk = chunk.toLowerCase();
         return lowercaseKeywords.some(kw => lowerChunk.includes(kw));
     });
 
+    // Fallback: if nothing matched but the original text had content, keep original text
     let compressed = filteredChunks.join("\n");
+    if (!compressed) {
+        compressed = text;
+    }
 
     if (compressed.length > maxChars) {
         compressed = compressed.slice(0, maxChars) + "\n... [TRUNCATED DUE TO LIMIT] ...";
     }
 
-    return compressed || "... [NO RELEVANT KEYWORDS FOUND IN CONTEXT] ...";
+    return compressed;
 }
 
 // Pricing definitions (per token)

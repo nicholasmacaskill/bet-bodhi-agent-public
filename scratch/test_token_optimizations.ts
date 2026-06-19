@@ -9,9 +9,11 @@ async function runTest() {
         Another irrelevant sentence about sports.
         Make sure you follow the rules regarding payouts and withdrawal limits.
         An error occurred during transaction execution.
+        Special sentence about Yankees that has no other keywords.
     `;
-    const compressed = compressContext(rawContext);
-    console.log("Compressed Context:\n", compressed);
+    console.log("Compressed Context (default keywords only):\n", compressContext(rawContext));
+    console.log("\nCompressed Context (query matching 'Yankees'):\n", compressContext(rawContext, "Deep analysis for Yankees"));
+    console.log("\nCompressed Context (fallback, no matches):\n", compressContext("Some text with no matching words at all"));
 
     console.log("\n=== Testing SQLite Token Tracker Logging & Budget Check ===");
     

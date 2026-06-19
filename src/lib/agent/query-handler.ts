@@ -34,7 +34,7 @@ export class QueryHandler {
             const rawContext = await this.getStrategyContext();
             
             // Apply zero-overhead input context compression
-            const context = compressContext(rawContext);
+            const context = compressContext(rawContext, query);
 
             // 2. Generate augmented prompt
             const prompt = `Available Strategy Context:\n${context}\n\n` +
