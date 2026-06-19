@@ -95,13 +95,26 @@ export class TokenTracker {
 
             const todayCost = todayCostRow?.total_cost || 0;
             if (todayCost >= this.BUDGET_LIMIT) {
-                console.error(
-                    `🛑 BUDGET CRITICAL WARNING: Daily token usage cost ($${todayCost.toFixed(4)}) has exceeded the daily ceiling limit of $${this.BUDGET_LIMIT.toFixed(2)}!`
-                );
+                const alertMsg = `🛑 *BUDGET CRITICAL WARNING* 🛑\nDaily Gemini token usage cost ($${todayCost.toFixed(4)}) has exceeded the daily limit of $${this.BUDGET_LIMIT.toFixed(2)}!`;
+                console.error(alertMsg);
+                
+                // Dynamically import to prevent circular dependency at startup
+                import('./telegram-notify')
+                    .then(({ sendTelegramAlert }) => {
+                        sendTelegramAlert(alertMsg, 'Markdown').catch(err => 
+                            console.error("Failed to deliver budget Telegram alert:", err)
+                        );
+                    })
+                    .catch(() => {});
             } else if (todayCost >= this.BUDGET_LIMIT * 0.8) {
-                console.warn(
-                    `⚠️ BUDGET WARNING: Daily token usage cost ($${todayCost.toFixed(4)}) is at 80%+ of the daily limit ($${this.BUDGET_LIMIT.toFixed(2)}).`
-                );
+                const warnMsg = `⚠️ *BUDGET WARNING* ⚠️\nDaily Gemini token usage cost ($${todayCost.toFixed(4)}) has reached 80%+ of the daily limit ($${this.BUDGET_LIMIT.toFixed(2)}).`;
+                console.warn(warnMsg);
+
+                import('./telegram-notify')
+                    .then(({ sendTelegramAlert }) => {
+                        sendTelegramAlert(warnMsg, 'Markdown').catch(() => {});
+                    })
+                    .catch(() => {});
             }
         } catch (error) {
             console.error("❌ TokenTracker failed to log usage to SQLite:", error);
