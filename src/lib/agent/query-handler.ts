@@ -1,51 +1,60 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { MemoryVectorStore } from 'langchain/vectorstores/memory';
-import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { TelegramContext } from 'telegraf';
 import { supabaseAdmin } from '../supabase-admin';
 import { BodhiAgent } from './bodhi-agent';
+import { compressContext, TokenTracker } from './token-tracker';
 
 export class QueryHandler {
     private genAI: GoogleGenerativeAI;
-    private vectorStore: MemoryVectorStore;
     private agent: BodhiAgent;
 
     constructor() {
         this.genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-        this.vectorStore = new MemoryVectorStore(new OpenAIEmbeddings());
         this.agent = new BodhiAgent();
     }
 
-    async initVectorStore() {
+    async getStrategyContext() {
         // Load strategy docs from Supabase
         const { data } = await supabaseAdmin
             .from('strategy_docs')
             .select('content,metadata');
 
-        if (data) {
-            await this.vectorStore.addDocuments(data.map(doc => ({
-                pageContent: doc.content,
-                metadata: doc.metadata
-            })));
-        }
+        return data?.map((doc: { content: string }) => doc.content).join('\n\n') || '';
     }
 
-    async handleQuery(ctx: TelegramContext, query: string) {
+    async handleQuery(
+        ctx: {
+            message: { text: string; chat: { id: number } };
+            reply: (text: string, extra?: { parse_mode?: string }) => Promise<void>;
+        },
+        query: string
+    ) {
         try {
-            // 1. Retrieve relevant strategy context
-            const relevantDocs = await this.vectorStore.similaritySearch(query, 3);
-            const context = relevantDocs.map(d => d.pageContent).join('\n\n');
+            // 1. Get all strategy context (no longer filtering by similarity)
+            const rawContext = await this.getStrategyContext();
+            
+            // Apply zero-overhead input context compression
+            const context = compressContext(rawContext);
 
             // 2. Generate augmented prompt
             const prompt = `Available Strategy Context:\n${context}\n\n` +
                 `Current Market State:\n${JSON.stringify(await this.agent.getCurrentState(), null, 2)}\n\n` +
                 `User Query: ${query}`;
 
-            // 3. Get Gemini response
-            const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+            // 3. Get Gemini response with gated max_output_tokens
+            const modelName = "gemini-pro";
+            const model = this.genAI.getGenerativeModel({ 
+                model: modelName,
+                generationConfig: {
+                    maxOutputTokens: 800 // Restricted token limit for JSON/standard responses
+                }
+            });
             const result = await model.generateContent(prompt);
             const response = result.response;
             const text = response.text();
+
+            // Track usage using the SQLite token tracker
+            TokenTracker.trackUsage(modelName, response.usageMetadata);
 
             // 4. Format and send response
             await ctx.reply(text, { parse_mode: 'Markdown' });
@@ -53,7 +62,7 @@ export class QueryHandler {
             // 5. Log interaction
             await this.agent.logInternal('telegram_query', `Handled query: ${query}`, {
                 response: text,
-                contextUsed: relevantDocs.map(d => d.metadata.source)
+                contextUsed: 'Full strategy context'
             });
 
         } catch (error) {
