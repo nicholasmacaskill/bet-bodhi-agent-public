@@ -5,11 +5,39 @@ import { QueryHandler } from './query-handler';
 const queryHandler = new QueryHandler();
 
 async function setupQueryHandler() {
-    await queryHandler.initVectorStore();
+    // Vector store initialization removed - using Gemini directly
 }
 
 // Initialize and start Telegram bot
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN!);
+console.log('Attempting to initialize Telegram bot...');
+const token = process.env.TELEGRAM_BOT_TOKEN;
+if (!token) {
+    console.error('⚠️ TELEGRAM_BOT_TOKEN is not defined in environment variables');
+    process.exit(1);
+}
+console.log('✅ Found TELEGRAM_BOT_TOKEN in environment variables');
+const bot = new Telegraf(token);
+
+// Add debug log for checking environment variables
+console.log('Verifying environment variables:', {
+    TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN ? '****' + process.env.TELEGRAM_BOT_TOKEN.slice(-4) : 'undefined',
+    TELEGRAM_ADMIN_ID: process.env.TELEGRAM_ADMIN_ID
+});
+
+// Add debug log for checking environment variables
+console.log('Verifying environment variables:', {
+    TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN ? '****' + process.env.TELEGRAM_BOT_TOKEN.slice(-4) : 'undefined',
+    TELEGRAM_ADMIN_ID: process.env.TELEGRAM_ADMIN_ID
+});
+
+bot.catch((err) => {
+    console.error('⚠️ Telegram bot error:', err);
+});
+
+bot.use(async (ctx, next) => {
+    console.log('Received Telegram update:', ctx.update);
+    return next();
+});
 
 // Initialize query handler
 setupQueryHandler();
@@ -23,7 +51,17 @@ bot.command('analyze', (ctx) => {
     const team = ctx.message.text.split(' ')[1];
     queryHandler.handleQuery(ctx, `Deep analysis for ${team || 'no team specified'}`);
 });
-bot.on('text', (ctx) => queryHandler.handleQuery(ctx, ctx.message.text));
+bot.on('text', (ctx) => {
+    if ('text' in ctx.message) {
+        queryHandler.handleQuery({
+            message: {
+                text: ctx.message.text,
+                chat: ctx.message.chat
+            },
+            reply: ctx.reply
+        }, ctx.message.text);
+    }
+});
 
 // Launch bot
 bot.launch().then(() => {
@@ -42,12 +80,14 @@ bot.launch().then(() => {
             if (currentContext.length >= 3) {
                 currentContext.shift();
             }
-            currentContext.push(ctx.message.text);
-            chatContext.set(userId, currentContext);
+            if ('text' in ctx.message) {
+                currentContext.push(ctx.message.text);
+                chatContext.set(userId, currentContext);
 
-            // Handle message normally
-            if (!ctx.message.text.startsWith('/')) {
-                await queryHandler.handleQuery(ctx, currentContext.join('\n'));
+                // Handle message normally
+                if (!ctx.message.text.startsWith('/')) {
+                    await queryHandler.handleQuery(ctx, currentContext.join('\n'));
+                }
             }
         } catch (error) {
             console.error('Interactive chat failed:', error);

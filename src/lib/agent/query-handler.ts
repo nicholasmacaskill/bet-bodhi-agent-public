@@ -23,10 +23,7 @@ export class QueryHandler {
     }
 
     async handleQuery(
-        ctx: {
-            message: { text: string; chat: { id: number } };
-            reply: (text: string, extra?: { parse_mode?: string }) => Promise<void>;
-        },
+        ctx: any,
         query: string
     ) {
         try {
