@@ -1,3 +1,4 @@
+import '../src/lib/sentry';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as path from 'path';

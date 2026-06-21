@@ -1,3 +1,4 @@
+import '../src/lib/sentry';
 import cron from 'node-cron';
 import { exec } from 'child_process';
 import { promisify } from 'util';

@@ -44,7 +44,7 @@ export class PolymarketApi {
 
         const proxyAddress = process.env.POLY_PROXY_ADDRESS;
 
-        return new ClobClient(
+        let client = new ClobClient(
             'https://clob.polymarket.com',
             137,
             signerAdapter,
@@ -52,6 +52,24 @@ export class PolymarketApi {
             proxyAddress ? (1 as any) : undefined,
             proxyAddress
         );
+
+        if (!credentials) {
+            try {
+                const derived = await client.createOrDeriveApiKey();
+                client = new ClobClient(
+                    'https://clob.polymarket.com',
+                    137,
+                    signerAdapter,
+                    derived,
+                    proxyAddress ? (1 as any) : undefined,
+                    proxyAddress
+                );
+            } catch (e: any) {
+                console.warn("[poly] Failed to automatically derive API credentials:", e.message);
+            }
+        }
+
+        return client;
     }
 
     async getActiveSportsMarkets(keyword: string = "vs."): Promise<PolyMarket[]> {

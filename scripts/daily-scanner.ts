@@ -12,6 +12,7 @@
  */
 
 import 'dotenv/config';
+import '../src/lib/sentry';
 
 import { MLBApi } from '../src/lib/mlb-api';
 import { NHLApi } from '../src/lib/nhl-api';
