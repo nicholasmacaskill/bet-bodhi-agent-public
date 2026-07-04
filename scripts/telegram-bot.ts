@@ -6,6 +6,7 @@ import { promisify } from 'util';
 import * as fs from 'fs';
 import * as path from 'path';
 import { supabaseAdmin } from '../src/lib/supabase-admin';
+import { SQLiteQueryBuilder } from '../src/lib/sqlite-client';
 
 const execAsync = promisify(exec);
 
@@ -110,6 +111,25 @@ bot.on('text', async (ctx, next) => {
         ctx.session.calmness = val;
         ctx.session.sentimentTimestamp = Date.now();
         ctx.session.state = 'IDLE';
+
+        // Log sentiment entry to remote Supabase and local SQLite databases
+        try {
+            const logEntry = {
+                action_type: 'user_sentiment',
+                content: `User sentiment update: mood="${ctx.session.mood}", calmness=${ctx.session.calmness}`,
+                metadata: {
+                    mood: ctx.session.mood,
+                    calmness: ctx.session.calmness,
+                    source: 'telegram_bot'
+                }
+            };
+            await supabaseAdmin.from('agent_internal_logs').insert(logEntry);
+            await new SQLiteQueryBuilder('agent_internal_logs').insert(logEntry);
+            console.log(`[sentiment] Logged user sentiment: mood=${ctx.session.mood}, calmness=${ctx.session.calmness}`);
+        } catch (dbErr: any) {
+            console.error("Failed to log user sentiment to database:", dbErr.message);
+        }
+
         await ctx.reply(`✅ *Sentiment Locked:* ${ctx.session.mood} (${ctx.session.calmness}/10)\nRisk parameters adjusted.`, { parse_mode: 'Markdown' });
 
         if (ctx.session.pendingCommand) {
