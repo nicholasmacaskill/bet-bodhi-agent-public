@@ -691,23 +691,11 @@ function parseMarkdownToTelegraph(markdown: string): TelegraphNode[] {
 
         if (line.startsWith('|')) {
             if (currentList) { nodes.push(currentList); currentList = null; }
-            if (line.includes('---')) continue;
             
             if (!currentTable) {
-                currentTable = { tag: 'table', children: [] };
+                currentTable = { tag: 'pre', children: [''] };
             }
-            
-            const cols = line.split('|').map(c => c.trim()).filter((c, idx, arr) => idx > 0 && idx < arr.length - 1);
-            const isHeader = currentTable.children!.length === 0;
-            
-            const rowNode: TelegraphNode = {
-                tag: 'tr',
-                children: cols.map(col => ({
-                    tag: isHeader ? 'th' : 'td',
-                    children: parseInline(col)
-                }))
-            };
-            currentTable.children!.push(rowNode);
+            currentTable.children![0] = (currentTable.children![0] as string) + line + '\n';
             continue;
         }
 
