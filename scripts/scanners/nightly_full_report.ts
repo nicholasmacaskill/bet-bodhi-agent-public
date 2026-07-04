@@ -541,10 +541,27 @@ async function main() {
                 const chatId = process.env.TELEGRAM_ADMIN_ID;
                 // Create Telegraph page
                 const contentNodes = parseMarkdownToTelegraph(report);
+                let accessToken = process.env.TELEGRAPH_ACCESS_TOKEN;
+                if (!accessToken) {
+                    const createAccountResponse = await fetch('https://api.telegra.ph/createAccount', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            short_name: 'BetBodhi',
+                            author_name: 'Bet Bodhi'
+                        })
+                    });
+                    const accountData = await createAccountResponse.json();
+                    if (accountData.ok) {
+                        accessToken = accountData.result.access_token;
+                    }
+                }
+
                 const tResponse = await fetch('https://api.telegra.ph/createPage', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
+                        access_token: accessToken,
                         title: `🛡️ BODHI-8 DAILY SOVEREIGN REPORT: ${today}`,
                         author_name: 'Bet Bodhi',
                         content: contentNodes,
