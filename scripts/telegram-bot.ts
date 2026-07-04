@@ -188,7 +188,7 @@ async function unifiedScan(ctx: any) {
 
         // Identify All Significant Picks (EV >= 2%)
         const allPicks = results
-            .filter((r: any) => r.analysis && r.analysis.polyEV && r.analysis.polyEV >= 0.02)
+            .filter((r: any) => r.analysis && r.analysis.valueTeam && r.analysis.valueTeam !== 'NEUTRAL' && r.analysis.polyEV && r.analysis.polyEV >= 0.02)
             .sort((a: any, b: any) => (b.analysis.polyEV || 0) - (a.analysis.polyEV || 0));
 
         // ---- Fetch Performance Metrics ----
@@ -259,7 +259,7 @@ async function unifiedScan(ctx: any) {
             allPicks.forEach((r: any, i: number) => {
                 const emoji = r.sport === 'MLB' ? '⚾' : r.sport === 'NHL' ? '🏒' : r.sport === 'NBA' ? '🏀' : '🥊';
                 summaryMsg += `${i + 1}. ${emoji} *${r.matchup}* (${(r.analysis.polyEV * 100).toFixed(1)}% EV)\n`;
-                summaryMsg += `   └ **PICK: ${r.analysis.valueTeam.toUpperCase()}**\n`;
+                summaryMsg += `   └ **PICK: ${(r.analysis.valueTeam || 'NEUTRAL').toUpperCase()}**\n`;
             });
             summaryMsg += `\n`;
         } else {
