@@ -167,7 +167,7 @@ async function unifiedScan(ctx: any) {
         console.log(`[${new Date().toISOString()}] Starting unifiedScan for user ${ctx.from?.id}...`);
         
         // Increase maxBuffer to 10MB to handle large slate outputs
-        await execAsync(`npx tsx scripts/daily-scanner.ts --json --mood "${mood}" --calmness ${calmness}`, {
+        await execAsync(`npx tsx scripts/daily-scanner.ts --json --skip-sync --mood "${mood}" --calmness ${calmness}`, {
             maxBuffer: 10 * 1024 * 1024
         });
 
