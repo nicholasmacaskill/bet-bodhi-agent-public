@@ -160,131 +160,32 @@ async function ensureSentiment(ctx: any, command: string) {
 // ─── Unified Analysis Flow ──────────────────────────────────────────────────
 
 async function unifiedScan(ctx: any) {
-    const statusMsg = await ctx.reply("📄 *BODHI IS ANALYZING THE SLATE*...\nSyncing liquidity and calculating technical pillars...", { parse_mode: 'Markdown' });
+    const statusMsg = await ctx.reply("🛡️ *BODHI IS GENERATING SOVEREIGN SCAN REPORT*...\nRunning core pillars and loading slate...", { parse_mode: 'Markdown' });
     try {
-        const mood = ctx.session.mood || "sharp";
-        const calmness = ctx.session.calmness || 10;
-        console.log(`[${new Date().toISOString()}] Starting unifiedScan for user ${ctx.from?.id}...`);
+        console.log(`[${new Date().toISOString()}] Starting nightly_full_report scan for user ${ctx.from?.id}...`);
         
-        // Increase maxBuffer to 10MB to handle large slate outputs
-        await execAsync(`npx tsx scripts/daily-scanner.ts --json --skip-sync --mood "${mood}" --calmness ${calmness}`, {
-            maxBuffer: 10 * 1024 * 1024
-        });
+        const { stdout, stderr } = await execAsync(`npx tsx scripts/scanners/nightly_full_report.ts`);
+        console.log(stdout);
+        if (stderr) console.error(stderr);
 
-        const resultsPath = path.join(process.cwd(), 'public', 'scan-results.json');
-        if (!fs.existsSync(resultsPath)) {
-            console.error(`[${new Date().toISOString()}] Scanner failed: results file not found at ${resultsPath}`);
-            await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
-            return ctx.reply("❌ Analysis engine failed to produce results.");
-        }
+        // Find Telegraph URL in stdout
+        const match = stdout.match(/📡 Telegram report link sent to admin:\s*(https:\/\/telegra\.ph\/[^\s]+)/);
+        const telegraphUrl = match ? match[1] : null;
 
-        const resultsRaw = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
-        const results = resultsRaw.results || [];
+        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id).catch(() => {});
 
-        if (results.length === 0) {
-            await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
-            return ctx.reply("✅ Scan Complete. No games found for the current slate.");
-        }
-
-        // Identify All Significant Picks (EV >= 2%)
-        const allPicks = results
-            .filter((r: any) => r.analysis && r.analysis.valueTeam && r.analysis.valueTeam !== 'NEUTRAL' && r.analysis.polyEV && r.analysis.polyEV >= 0.02)
-            .sort((a: any, b: any) => (b.analysis.polyEV || 0) - (a.analysis.polyEV || 0));
-
-        // ---- Fetch Performance Metrics ----
-        let perfString = "";
-        try {
-            const { data: bets } = await supabaseAdmin
-                .from('bets')
-                .select('result, emotional_pulse, created_at, motivation_tag')
-                .order('created_at', { ascending: false });
-
-            if (bets && bets.length > 0) {
-                const settled = bets.filter(b => b.result === 'win' || b.result === 'loss');
-                const wins = settled.filter(b => b.result === 'win').length;
-                const losses = settled.filter(b => b.result === 'loss').length;
-                const total = wins + losses;
-                const winRate = total > 0 ? ((wins / total) * 100).toFixed(1) : "0.0";
-
-                // Last 10 String
-                const last10 = settled.slice(0, 10).map(b => b.result === 'win' ? '🟢' : '🔴').reverse().join('');
-
-                // Mindset Volatility (last 7 days, excluding auto-synced defaults)
-                const oneWeekAgo = new Date();
-                oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-                const recentBets = bets.filter(b => 
-                    new Date(b.created_at) >= oneWeekAgo && 
-                    b.emotional_pulse != null && 
-                    b.motivation_tag !== 'external_sync'
-                );
-                
-                let volString = "Stable (No manual data)";
-                if (recentBets.length > 0) {
-                    const pulses = recentBets.map(b => Number(b.emotional_pulse));
-                    const maxPulse = Math.max(...pulses);
-                    const minPulse = Math.min(...pulses);
-                    
-                    if (pulses.length > 1) {
-                        const mean = pulses.reduce((a, b) => a + b, 0) / pulses.length;
-                        const stdDev = Math.sqrt(pulses.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b, 0) / pulses.length);
-                        
-                        // Map stdDev to 1-10 score (0 dev = 1.0, >3.0 dev = 10.0)
-                        const volScore = Math.min(10, 1 + (stdDev * 3));
-                        const intensity = volScore >= 8 ? "🔥 HIGH" : volScore >= 5 ? "⚠️ MODERATE" : "🟢 LOW";
-                        
-                        volString = `${volScore.toFixed(1)}/10 (${intensity}) | Spread: ${maxPulse} to ${minPulse}`;
-                    } else if (maxPulse === minPulse) {
-                        volString = `1.0/10 (STABLE) | Current: ${maxPulse}`;
-                    }
-                }
-
-                perfString = `📈 **PERFORMANCE & PSYCHOMETRICS**\n`;
-                perfString += `🎯 *Win Rate:* ${winRate}% (${wins}W - ${losses}L)\n`;
-                perfString += `🔥 *Last 10:* ${last10 || 'N/A'}\n`;
-                perfString += `🧠 *Mindset Volatility:* ${volString}\n\n`;
-            }
-        } catch (err) {
-            console.error("Failed to fetch perf metrics:", err);
-        }
-
-        // Message 1: Summary & Picks (Markdown)
-        let summaryMsg = `🏛️ **BODHI MASTER SCAN SUMMARY**\n`;
-        summaryMsg += `📅 Date: ${new Date().toLocaleDateString()} | 🕒 ${new Date().toLocaleTimeString()}\n`;
-        summaryMsg += `👤 *Bettor State:* ${mood} (${calmness}/10)\n`;
-        summaryMsg += `📊 *Total Scanned:* ${results.length} matchups\n\n`;
-        if (perfString) summaryMsg += perfString;
-
-        if (allPicks.length > 0) {
-            summaryMsg += `💎 **ALL VALUE PLAYS DETECTED**\n`;
-            allPicks.forEach((r: any, i: number) => {
-                const emoji = r.sport === 'MLB' ? '⚾' : r.sport === 'NHL' ? '🏒' : r.sport === 'NBA' ? '🏀' : '🥊';
-                summaryMsg += `${i + 1}. ${emoji} *${r.matchup}* (${(r.analysis.polyEV * 100).toFixed(1)}% EV)\n`;
-                summaryMsg += `   └ **PICK: ${(r.analysis.valueTeam || 'NEUTRAL').toUpperCase()}**\n`;
+        if (telegraphUrl) {
+            await ctx.reply(`🛡️ *BODHI DAILY SOVEREIGN SCAN COMPLETE*\n\n👉 [Open Daily Sovereign Report](${telegraphUrl})`, {
+                parse_mode: 'Markdown',
+                disable_web_page_preview: false
             });
-            summaryMsg += `\n`;
         } else {
-            summaryMsg += `💎 *VALUE PLAYS:* No high-EV edges detected.\n\n`;
+            await ctx.reply("❌ Report generation completed, but Telegraph link could not be resolved. Please check the logs.");
         }
-
-        summaryMsg += `📑 _Delivering full technical breakdown in follow-up messages..._\n`;
-
-        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
-
-        // Delivery Sequence
-        console.log(`[${new Date().toISOString()}] Delivering summary...`);
-        await sendLongMessage(ctx, summaryMsg, 'Markdown');
-
-        console.log(`[${new Date().toISOString()}] Delivering detailed games (${results.length})...`);
-        // Send games in smaller batches or individually to avoid massive string issues
-        for (let i = 0; i < results.length; i++) {
-            const gameMsg = renderGameDetailHTML(results[i], i);
-            await sendLongMessage(ctx, gameMsg, 'HTML');
-            if (i % 5 === 0) await new Promise(r => setTimeout(r, 500)); // Extra throttle
-        }
-        console.log(`[${new Date().toISOString()}] Delivery complete.`);
 
     } catch (error: any) {
-        console.error(`[${new Date().toISOString()}] Unified scan failed:`, error);
+        console.error(`[${new Date().toISOString()}] Sovereign scan failed:`, error);
+        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id).catch(() => {});
         ctx.reply(`❌ Analysis failed: ${error.message}`);
     }
 }
