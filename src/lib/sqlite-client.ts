@@ -58,6 +58,10 @@ export function initDb() {
             detected_value_team TEXT,
             status TEXT DEFAULT 'pending',
             actual_bet_id TEXT,
+            alpha_score REAL,
+            underdog_play_rank INTEGER,
+            scan_type TEXT DEFAULT 'PRE_GAME',
+            scan_time TEXT,
             created_at TEXT DEFAULT (datetime('now')),
             FOREIGN KEY(actual_bet_id) REFERENCES bets(id) ON DELETE SET NULL
         );
@@ -94,7 +98,84 @@ export function initDb() {
             cost REAL NOT NULL,
             model TEXT NOT NULL
         );
+
+        CREATE TABLE IF NOT EXISTS gamma_market_cache (
+            condition_id TEXT PRIMARY KEY,
+            payload TEXT,
+            closed INTEGER DEFAULT 0,
+            cached_at TEXT DEFAULT (datetime('now'))
+        );
+
+        CREATE TABLE IF NOT EXISTS trade_enrichment (
+            trade_id TEXT PRIMARY KEY,
+            condition_id TEXT,
+            question TEXT NOT NULL,
+            sport TEXT,
+            outcome TEXT,
+            side TEXT,
+            entry_price REAL,
+            amount REAL,
+            match_time TEXT,
+            kickoff_time TEXT,
+            minutes_to_kickoff INTEGER,
+            game_phase TEXT,
+            inning INTEGER,
+            inning_half TEXT,
+            away_score INTEGER,
+            home_score INTEGER,
+            bet_team_deficit INTEGER,
+            replay_source TEXT,
+            espn_event_id TEXT,
+            enriched_at TEXT DEFAULT (datetime('now'))
+        );
+
+        -- Dedicated trader psychometric state table.
+        -- Captures mood + calmness before each scan. Used to correlate
+        -- emotional state against bet results (sentiment vs win-rate analysis).
+        CREATE TABLE IF NOT EXISTS user_sentiment (
+            id TEXT PRIMARY KEY,
+            created_at TEXT DEFAULT (datetime('now')),
+            session_id TEXT NOT NULL,
+            mood TEXT NOT NULL,
+            calmness INTEGER NOT NULL CHECK (calmness >= 1 AND calmness <= 10),
+            risk_multiplier REAL NOT NULL,
+            source TEXT NOT NULL DEFAULT 'telegram_bot',
+            report_date TEXT NOT NULL
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_user_sentiment_created_at ON user_sentiment(created_at);
+        CREATE INDEX IF NOT EXISTS idx_user_sentiment_mood ON user_sentiment(mood);
+        CREATE INDEX IF NOT EXISTS idx_user_sentiment_calmness ON user_sentiment(calmness);
     `);
+
+    migrateSchema();
+}
+
+function migrateSchema() {
+    const betCols = db.prepare(`PRAGMA table_info(bets)`).all() as { name: string }[];
+    if (!betCols.some(c => c.name === 'match_time_unix')) {
+        db.exec(`ALTER TABLE bets ADD COLUMN match_time_unix INTEGER`);
+    }
+
+    const oppCols = db.prepare(`PRAGMA table_info(betting_opportunities)`).all() as { name: string }[];
+    if (!oppCols.some(c => c.name === 'alpha_score')) {
+        db.exec(`ALTER TABLE betting_opportunities ADD COLUMN alpha_score REAL`);
+    }
+    if (!oppCols.some(c => c.name === 'underdog_play_rank')) {
+        db.exec(`ALTER TABLE betting_opportunities ADD COLUMN underdog_play_rank INTEGER`);
+    }
+    if (!oppCols.some(c => c.name === 'scan_type')) {
+        db.exec(`ALTER TABLE betting_opportunities ADD COLUMN scan_type TEXT DEFAULT 'PRE_GAME'`);
+    }
+    if (!oppCols.some(c => c.name === 'scan_time')) {
+        db.exec(`ALTER TABLE betting_opportunities ADD COLUMN scan_time TEXT`);
+    }
+    // sentiment_id — FK to user_sentiment for correlation analysis
+    if (!oppCols.some(c => c.name === 'sentiment_id')) {
+        db.exec(`ALTER TABLE betting_opportunities ADD COLUMN sentiment_id TEXT`);
+    }
+    db.exec(`CREATE INDEX IF NOT EXISTS idx_opportunities_scan ON betting_opportunities(game_pk, game_date, scan_type)`);
+    db.exec(`CREATE INDEX IF NOT EXISTS idx_opportunities_sentiment ON betting_opportunities(sentiment_id)`);
 }
 
 // Call schema creation on startup

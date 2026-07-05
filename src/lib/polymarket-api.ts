@@ -16,6 +16,8 @@ export interface PolyMarket {
 export class PolymarketApi {
     private gammaUrl = 'https://gamma-api.polymarket.com';
     private clobUrl = 'https://clob.polymarket.com';
+    private closedSportsCache: PolyMarket[] | null = null;
+    private closedSportsByDate: Map<string, PolyMarket[]> | null = null;
 
     private async initClient() {
         const { ClobClient } = await import('@polymarket/clob-client');
@@ -164,55 +166,256 @@ export class PolymarketApi {
         }
     }
 
-    async getMarketByTeams(homeTeam: string, awayTeam: string): Promise<PolyMarket | null> {
-        const homeMascot = homeTeam.split(' ').pop()?.toLowerCase() || "";
-        const awayMascot = awayTeam.split(' ').pop()?.toLowerCase() || "";
-        
-        try {
-            const query = `${homeMascot} ${awayMascot}`;
-            const url = `${this.gammaUrl}/events?active=true&closed=false&limit=50&query=${encodeURIComponent(query)}`;
-            const response = await fetch(url);
-            let data = [];
-            if (response.ok) data = await response.json();
+    /**
+     * Closed sports moneylines for historical backtests (2025+ per-game MLB format).
+     * Cached in-memory for the process lifetime — call clearClosedSportsCache() to refresh.
+     */
+    async getClosedSportsMarkets(forceRefresh = false): Promise<PolyMarket[]> {
+        if (this.closedSportsCache && !forceRefresh) return this.closedSportsCache;
 
-            const match = (marketList: any[]) => {
-                for (const event of marketList) {
-                    if (!event.markets) continue;
-                    for (const market of event.markets) {
-                        const q = market.question.toLowerCase();
-                        const d = (market.description || event.description || "").toLowerCase();
-                        const t = (event.title || "").toLowerCase();
-                        
-                        if ((q.includes(homeMascot) || d.includes(homeMascot) || t.includes(homeMascot)) && 
-                            (q.includes(awayMascot) || d.includes(awayMascot) || t.includes(awayMascot))) {
-                            return {
-                                conditionId: market.conditionId,
-                                question: market.question,
-                                description: market.description || event.description || "",
-                                outcomes: market.outcomes ? (typeof market.outcomes === 'string' ? JSON.parse(market.outcomes) : market.outcomes) : [],
-                                outcomePrices: market.outcomePrices ? (typeof market.outcomePrices === 'string' ? JSON.parse(market.outcomePrices) : market.outcomePrices) : [],
-                                category: event.category,
-                                active: market.active,
-                                volume: parseFloat(market.volume || "0"),
-                                endDate: market.endDate,
-                                clobTokenIds: market.clobTokenIds ? (typeof market.clobTokenIds === 'string' ? JSON.parse(market.clobTokenIds) : market.clobTokenIds) : []
-                            };
+        const markets: PolyMarket[] = [];
+        const SPORTS_TAG_SLUGS = ['mlb', 'sports', 'baseball'];
+        const seen = new Set<string>();
+
+        for (const tagSlug of SPORTS_TAG_SLUGS) {
+            for (let offset = 0; offset < 15000; offset += 100) {
+                const url = `${this.gammaUrl}/events?closed=true&limit=100&offset=${offset}&tag_slug=${tagSlug}`;
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) break;
+                    const data = await response.json();
+                    if (!Array.isArray(data) || data.length === 0) break;
+
+                    for (const event of data) {
+                        if (!event.markets || !Array.isArray(event.markets)) continue;
+                        for (const market of event.markets) {
+                            if (!market.closed) continue;
+                            if (seen.has(market.conditionId)) continue;
+                            const parsed = this.parseGammaMarket(market, event);
+                            if (!PolymarketApi.isMoneylineMarket(parsed)) continue;
+                            seen.add(market.conditionId);
+                            markets.push(parsed);
                         }
                     }
+                    if (data.length < 100) break;
+                } catch {
+                    break;
                 }
-                return null;
-            };
+            }
+        }
 
-            const directResult = match(data);
-            if (directResult) return directResult;
+        this.closedSportsCache = markets.sort((a, b) => b.volume - a.volume);
+        this.closedSportsByDate = new Map();
+        for (const m of this.closedSportsCache) {
+            const d = m.endDate?.slice(0, 10);
+            if (!d) continue;
+            const bucket = this.closedSportsByDate.get(d) || [];
+            bucket.push(m);
+            this.closedSportsByDate.set(d, bucket);
+        }
+        return this.closedSportsCache;
+    }
 
-            const allMarkets = await this.getActiveSportsMarkets("vs.");
-            for (const m of allMarkets) {
-                const q = m.question.toLowerCase();
-                const d = m.description.toLowerCase();
-                if ((q.includes(homeMascot) || d.includes(homeMascot)) && (q.includes(awayMascot) || d.includes(awayMascot))) {
-                    return m;
+    /** Subset of closed moneylines whose endDate matches gameDate — avoids scanning full cache. */
+    getClosedSportsMarketsForDate(gameDate: string): PolyMarket[] {
+        if (!this.closedSportsByDate || !this.closedSportsCache) return [];
+        return this.closedSportsByDate.get(gameDate) || [];
+    }
+
+    clearClosedSportsCache(): void {
+        this.closedSportsCache = null;
+        this.closedSportsByDate = null;
+    }
+
+    private static readonly AMBIGUOUS_TEAM_TOKENS = new Set([
+        'new', 'los', 'san', 'st', 'city', 'red', 'blue', 'white', 'north', 'south', 'east', 'west', 'port', 'bay', 'lake'
+    ]);
+
+    /** True when market is a head-to-head moneyline (not O/U, spread, or prop). */
+    static isMoneylineMarket(market: PolyMarket): boolean {
+        const q = market.question || '';
+        if (!q || !market.outcomes || market.outcomes.length !== 2) return false;
+        if (/[:?]/.test(q)) return false;
+        if (/O\/U|Spread|1st 5|extra innings|score first|run scored|end in a draw|neither team|corner|to score|to win by|Series Winner|Wild Card|NLDS|ALDS|World Series|Championship|Doubleheader/i.test(q)) return false;
+        if (market.outcomes.some(o => /^(Over|Under|Yes|No)$/i.test(o))) return false;
+        return /^.+\s+vs\.?\s+.+$/i.test(q.trim());
+    }
+
+    /** Check if both teams appear in the market question (strict mascot match). */
+    static teamsMatchMarket(homeTeam: string, awayTeam: string, market: PolyMarket): boolean {
+        const text = market.question.toLowerCase();
+        const mascot = (team: string) => team.split(' ').pop()?.toLowerCase() || '';
+        const aliases = (team: string): string[] => {
+            const lower = team.toLowerCase();
+            const m = mascot(team);
+            const tokens: string[] = [m];
+            if (lower.startsWith('los angeles ')) tokens.push(lower.replace('los angeles ', ''));
+            if (m === 'athletics') tokens.push('athletics');
+            return [...new Set(tokens.filter(t => t.length > 2 && !PolymarketApi.AMBIGUOUS_TEAM_TOKENS.has(t)))];
+        };
+        const homeHits = aliases(homeTeam).some(a => text.includes(a));
+        const awayHits = aliases(awayTeam).some(a => text.includes(a));
+        return homeHits && awayHits;
+    }
+
+    /** Score how well a market matches a specific game date (from description or endDate). */
+    static scoreMarketForGame(market: PolyMarket, gameDate?: string, gameStartIso?: string): number {
+        let score = market.volume || 0;
+        const desc = (market.description || '').toLowerCase();
+
+        if (gameDate) {
+            const q = (market.question || '').toLowerCase();
+            if (q.includes(gameDate)) score += 200_000_000;
+            if (market.endDate?.startsWith(gameDate)) score += 150_000_000;
+
+            const [y, m, d] = gameDate.split('-').map(Number);
+            const monthNames = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+            const monthShort = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+            const monthName = monthNames[m - 1];
+            const monthAbbr = monthShort[m - 1];
+            const datePatterns = [
+                `${monthName} ${d}`,
+                `${monthAbbr} ${d}`,
+                `${m}/${d}`,
+                gameDate,
+            ];
+            if (datePatterns.some(p => desc.includes(p))) score += 100_000_000;
+        }
+
+        if (gameStartIso && market.endDate) {
+            const gameMs = new Date(gameStartIso).getTime();
+            const endMs = new Date(market.endDate).getTime();
+            const deltaHours = Math.abs(endMs - gameMs) / (1000 * 60 * 60);
+            if (deltaHours <= 6) score += 50_000_000;
+            else if (deltaHours <= 48) score += 10_000_000 - deltaHours * 100_000;
+        }
+
+        if ((market.category || '').toLowerCase().includes('mlb')) score += 1_000;
+
+        return score;
+    }
+
+    /** Find the best moneyline market for a matchup from a pre-fetched list. */
+    findMoneylineInMarkets(
+        markets: PolyMarket[],
+        homeTeam: string,
+        awayTeam: string,
+        gameDate?: string,
+        gameStartIso?: string
+    ): PolyMarket | null {
+        const candidates = markets
+            .filter(m => PolymarketApi.isMoneylineMarket(m) && PolymarketApi.teamsMatchMarket(homeTeam, awayTeam, m))
+            .map(m => ({ m, score: PolymarketApi.scoreMarketForGame(m, gameDate, gameStartIso) }))
+            .sort((a, b) => b.score - a.score);
+
+        return candidates.length > 0 ? candidates[0].m : null;
+    }
+
+    private parseGammaMarket(market: any, event: any): PolyMarket {
+        return {
+            conditionId: market.conditionId,
+            question: market.question,
+            description: market.description || event.description || '',
+            outcomes: market.outcomes ? (typeof market.outcomes === 'string' ? JSON.parse(market.outcomes) : market.outcomes) : [],
+            outcomePrices: market.outcomePrices ? (typeof market.outcomePrices === 'string' ? JSON.parse(market.outcomePrices) : market.outcomePrices) : [],
+            category: event.category || (event.tags || []).map((t: any) => t.label).join(', '),
+            active: market.active,
+            volume: parseFloat(market.volume || '0'),
+            endDate: market.endDate,
+            clobTokenIds: market.clobTokenIds ? (typeof market.clobTokenIds === 'string' ? JSON.parse(market.clobTokenIds) : market.clobTokenIds) : []
+        };
+    }
+
+    /** Legacy daily-group format (2023-era): mlb-dailies-YYYY-MM-DD */
+    private async searchMlbDailiesGroup(
+        homeTeam: string,
+        awayTeam: string,
+        gameDate: string,
+        gameStartIso?: string
+    ): Promise<PolyMarket | null> {
+        const url = `${this.gammaUrl}/events?slug=mlb-dailies-${gameDate}`;
+        try {
+            const response = await fetch(url);
+            if (!response.ok) return null;
+            const data = await response.json();
+            if (!Array.isArray(data) || data.length === 0) return null;
+            const candidates: { m: PolyMarket; score: number }[] = [];
+            for (const event of data) {
+                if (!event.markets) continue;
+                for (const market of event.markets) {
+                    const parsed = this.parseGammaMarket(market, event);
+                    if (!PolymarketApi.isMoneylineMarket(parsed) || !PolymarketApi.teamsMatchMarket(homeTeam, awayTeam, parsed)) continue;
+                    candidates.push({ m: parsed, score: PolymarketApi.scoreMarketForGame(parsed, gameDate, gameStartIso) });
                 }
+            }
+            candidates.sort((a, b) => b.score - a.score);
+            return candidates.length > 0 ? candidates[0].m : null;
+        } catch {
+            return null;
+        }
+    }
+
+    private async searchGammaByTeams(
+        homeTeam: string,
+        awayTeam: string,
+        gameDate?: string,
+        gameStartIso?: string,
+        closed = false
+    ): Promise<PolyMarket | null> {
+        if (closed) {
+            if (gameDate) {
+                const legacy = await this.searchMlbDailiesGroup(homeTeam, awayTeam, gameDate, gameStartIso);
+                if (legacy) return legacy;
+            }
+            await this.getClosedSportsMarkets();
+            const dated = gameDate ? this.getClosedSportsMarketsForDate(gameDate) : [];
+            const pool = dated.length > 0 ? dated : (this.closedSportsCache || []);
+            return this.findMoneylineInMarkets(pool, homeTeam, awayTeam, gameDate, gameStartIso);
+        }
+
+        const homeMascot = homeTeam.split(' ').pop()?.toLowerCase() || '';
+        const awayMascot = awayTeam.split(' ').pop()?.toLowerCase() || '';
+        const query = `${homeMascot} ${awayMascot}`;
+        const url = `${this.gammaUrl}/events?active=true&closed=false&limit=50&query=${encodeURIComponent(query)}`;
+        try {
+            const response = await fetch(url);
+            if (!response.ok) return null;
+            const data = await response.json();
+            const candidates: { m: PolyMarket; score: number }[] = [];
+            for (const event of data) {
+                if (!event.markets) continue;
+                for (const market of event.markets) {
+                    const parsed = this.parseGammaMarket(market, event);
+                    if (!PolymarketApi.isMoneylineMarket(parsed) || !PolymarketApi.teamsMatchMarket(homeTeam, awayTeam, parsed)) continue;
+                    candidates.push({ m: parsed, score: PolymarketApi.scoreMarketForGame(parsed, gameDate, gameStartIso) });
+                }
+            }
+            candidates.sort((a, b) => b.score - a.score);
+            return candidates.length > 0 ? candidates[0].m : null;
+        } catch {
+            return null;
+        }
+    }
+
+    async getMarketByTeams(
+        homeTeam: string,
+        awayTeam: string,
+        gameDate?: string,
+        gameStartIso?: string,
+        opts?: { includeClosed?: boolean }
+    ): Promise<PolyMarket | null> {
+        try {
+            if (!opts?.includeClosed) {
+                const allMarkets = await this.getAllActiveSportsMarkets();
+                const match = this.findMoneylineInMarkets(allMarkets, homeTeam, awayTeam, gameDate, gameStartIso);
+                if (match) return match;
+            }
+
+            const active = await this.searchGammaByTeams(homeTeam, awayTeam, gameDate, gameStartIso, false);
+            if (active) return active;
+
+            if (opts?.includeClosed) {
+                return this.searchGammaByTeams(homeTeam, awayTeam, gameDate, gameStartIso, true);
             }
             return null;
         } catch (error) {

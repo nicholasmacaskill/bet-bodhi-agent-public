@@ -5,31 +5,45 @@ import { exec } from 'child_process';
 import { promisify } from 'util';
 import * as fs from 'fs';
 import * as path from 'path';
+import crypto from 'crypto';
 import { supabaseAdmin } from '../src/lib/supabase-admin';
-import { SQLiteQueryBuilder } from '../src/lib/sqlite-client';
+import { SQLiteQueryBuilder, db } from '../src/lib/sqlite-client';
+import { computeRiskMultiplier } from '../src/lib/pillar-analyzer';
+import { askBodhi } from '../src/lib/agent/openrouter-handler';
 
 const execAsync = promisify(exec);
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const adminId = process.env.TELEGRAM_ADMIN_ID;
 
+// Path where sentiment is written so the scanner subprocess can read it
+const SENTIMENT_FILE = path.join(process.cwd(), 'data', 'session_sentiment.json');
+
 if (!token) {
     console.error("❌ TELEGRAM_BOT_TOKEN is missing in .env");
     process.exit(1);
 }
 
+// ─── Session Types ────────────────────────────────────────────────────────────
+
 interface BotSession {
     mood?: string;
     calmness?: number;
+    riskMultiplier?: number;
+    riskLabel?: string;
+    sentimentId?: string;
     sentimentTimestamp?: number;
     state?: 'IDLE' | 'AWAITING_MOOD' | 'AWAITING_CALMNESS';
     pendingCommand?: string;
 }
 
+// ─── Bot Setup ────────────────────────────────────────────────────────────────
+
 const bot = new Telegraf<any>(token);
 bot.use(session());
 
-// Utility: Chunk message for Telegram limit (4096 chars)
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
 async function sendLongMessage(ctx: any, text: string, parseMode: 'Markdown' | 'HTML' = 'Markdown') {
     const CHUNK_LIMIT = 3500;
     if (text.length <= CHUNK_LIMIT) {
@@ -53,16 +67,16 @@ async function sendLongMessage(ctx: any, text: string, parseMode: 'Markdown' | '
         try {
             if (parseMode === 'Markdown') await ctx.replyWithMarkdown(chunk);
             else await ctx.replyWithHTML(chunk);
-            // Throttle slightly to respect Telegram rate limits
             await new Promise(r => setTimeout(r, 450));
         } catch (e: any) {
             console.error(`Chunk delivery failed: ${e.message}`);
-            await ctx.reply(chunk); // Fallback to plain text
+            await ctx.reply(chunk);
         }
     }
 }
 
-// Middleware: Log everything + Admin check + Session init
+// ─── Middleware ───────────────────────────────────────────────────────────────
+
 bot.use(async (ctx, next) => {
     const userId = ctx.from?.id.toString();
     const text = ctx.message && 'text' in ctx.message ? ctx.message.text : 'non-text';
@@ -80,57 +94,167 @@ bot.use(async (ctx, next) => {
     return next();
 });
 
-bot.command('ping', (ctx) => {
-    console.log(`[${new Date().toISOString()}] Ping received from ${ctx.from.id}`);
-    ctx.reply(`🏓 Pong! Admin ID: ${adminId}, Your ID: ${ctx.from.id}`);
-});
+// ─── Sentiment Flow ───────────────────────────────────────────────────────────
 
-// Sentiment Flow Logic
+/**
+ * Starts the sentiment check flow.
+ * Always re-asks — no time-based short-circuit for reports.
+ * Sets pendingCommand so the triggered command runs after answers collected.
+ */
 async function startSentimentFlow(ctx: any, nextCommand?: string) {
     ctx.session.state = 'AWAITING_MOOD';
     ctx.session.pendingCommand = nextCommand;
-    await ctx.reply("🧠 *BODHI SENTIMENT CHECK*\n\nHow are you feeling right now? (e.g. focused, tired, stressed, sharp)", { parse_mode: 'Markdown' });
+
+    await ctx.reply(
+        "🧠 *BODHI SENTIMENT CHECK*\n\n" +
+        "Before I generate the report, I need to calibrate your risk parameters.\n\n" +
+        "1️⃣ *How are you feeling right now?*\n" +
+        "_(e.g. focused, sharp, tired, stressed, anxious, calm, excited)_",
+        { parse_mode: 'Markdown' }
+    );
 }
+
+/**
+ * Writes the current session's sentiment to a temp file so the nightly scanner
+ * subprocess can read it without needing an IPC channel.
+ */
+function writeSentimentFile(sentimentId: string, mood: string, calmness: number, riskMultiplier: number) {
+    try {
+        const data = {
+            sentimentId,
+            mood,
+            calmness,
+            riskMultiplier,
+            capturedAt: new Date().toISOString(),
+            reportDate: new Date().toISOString().split('T')[0]
+        };
+        fs.mkdirSync(path.dirname(SENTIMENT_FILE), { recursive: true });
+        fs.writeFileSync(SENTIMENT_FILE, JSON.stringify(data, null, 2));
+        console.log(`[sentiment] Session file written: ${SENTIMENT_FILE}`);
+    } catch (err: any) {
+        console.error(`[sentiment] Failed to write session file: ${err.message}`);
+    }
+}
+
+/**
+ * Logs the sentiment entry to both the dedicated user_sentiment table
+ * (Supabase + SQLite) and the legacy agent_internal_logs for backward compat.
+ */
+async function logSentimentToDb(
+    sentimentId: string,
+    sessionId: string,
+    mood: string,
+    calmness: number,
+    riskMultiplier: number,
+    reportDate: string
+) {
+    const row = {
+        id: sentimentId,
+        session_id: sessionId,
+        mood,
+        calmness,
+        risk_multiplier: riskMultiplier,
+        source: 'telegram_bot',
+        report_date: reportDate
+    };
+
+    // ── Remote Supabase ──────────────────────────────────────────────────────
+    try {
+        const { error } = await supabaseAdmin.from('user_sentiment').insert(row);
+        if (error) throw error;
+        console.log(`[sentiment] Logged to Supabase user_sentiment: ${sentimentId}`);
+    } catch (err: any) {
+        console.error(`[sentiment] Supabase write failed: ${err.message}`);
+    }
+
+    // ── Local SQLite ─────────────────────────────────────────────────────────
+    try {
+        db.prepare(`
+            INSERT INTO user_sentiment (id, session_id, mood, calmness, risk_multiplier, source, report_date)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        `).run(sentimentId, sessionId, mood, calmness, riskMultiplier, 'telegram_bot', reportDate);
+        console.log(`[sentiment] Logged to SQLite user_sentiment: ${sentimentId}`);
+    } catch (err: any) {
+        console.error(`[sentiment] SQLite write failed: ${err.message}`);
+    }
+
+    // ── Legacy agent_internal_logs (backward compat) ─────────────────────────
+    try {
+        const logEntry = {
+            action_type: 'user_sentiment',
+            content: `mood="${mood}", calmness=${calmness}/10, risk=${riskMultiplier}x`,
+            metadata: { mood, calmness, riskMultiplier, sentimentId, source: 'telegram_bot' }
+        };
+        await supabaseAdmin.from('agent_internal_logs').insert(logEntry);
+        await new SQLiteQueryBuilder('agent_internal_logs').insert(logEntry);
+    } catch (err: any) {
+        console.error(`[sentiment] Legacy log failed: ${err.message}`);
+    }
+}
+
+// ─── Text Message Handler (State Machine) ─────────────────────────────────────
 
 bot.on('text', async (ctx, next) => {
     const state = ctx.session.state;
     const text = ctx.message.text;
 
+    // Command override — break out of any flow
+    if (text.startsWith('/')) {
+        if (state !== 'IDLE') {
+            console.log(`[${new Date().toISOString()}] Command override: ${text} detected while state=${state}. Resetting.`);
+            ctx.session.state = 'IDLE';
+            ctx.session.pendingCommand = undefined;
+        }
+        return next();
+    }
+
     if (state === 'AWAITING_MOOD') {
-        ctx.session.mood = text;
+        ctx.session.mood = text.trim().toLowerCase();
         ctx.session.state = 'AWAITING_CALMNESS';
-        await ctx.reply("On a scale of 1-10, how *calm* do you feel?", { parse_mode: 'Markdown' });
+        await ctx.reply(
+            "2️⃣ On a scale of *1–10*, how *calm and composed* do you feel?\n" +
+            "_(10 = fully in control, 1 = highly emotional or reactive)_",
+            { parse_mode: 'Markdown' }
+        );
         return;
     }
 
     if (state === 'AWAITING_CALMNESS') {
         const val = parseInt(text, 10);
         if (isNaN(val) || val < 1 || val > 10) {
-            return ctx.reply("Please provide a number between 1 and 10.");
+            return ctx.reply("⚠️ Please enter a number between *1* and *10*.", { parse_mode: 'Markdown' });
         }
+
         ctx.session.calmness = val;
         ctx.session.sentimentTimestamp = Date.now();
         ctx.session.state = 'IDLE';
 
-        // Log sentiment entry to remote Supabase and local SQLite databases
-        try {
-            const logEntry = {
-                action_type: 'user_sentiment',
-                content: `User sentiment update: mood="${ctx.session.mood}", calmness=${ctx.session.calmness}`,
-                metadata: {
-                    mood: ctx.session.mood,
-                    calmness: ctx.session.calmness,
-                    source: 'telegram_bot'
-                }
-            };
-            await supabaseAdmin.from('agent_internal_logs').insert(logEntry);
-            await new SQLiteQueryBuilder('agent_internal_logs').insert(logEntry);
-            console.log(`[sentiment] Logged user sentiment: mood=${ctx.session.mood}, calmness=${ctx.session.calmness}`);
-        } catch (dbErr: any) {
-            console.error("Failed to log user sentiment to database:", dbErr.message);
-        }
+        // Compute risk multiplier using the shared BayesianPivot formula
+        const { multiplier, label } = computeRiskMultiplier(ctx.session.mood!, val);
+        ctx.session.riskMultiplier = multiplier;
+        ctx.session.riskLabel = label;
 
-        await ctx.reply(`✅ *Sentiment Locked:* ${ctx.session.mood} (${ctx.session.calmness}/10)\nRisk parameters adjusted.`, { parse_mode: 'Markdown' });
+        // Generate a stable sentiment ID for this session
+        const sentimentId = crypto.randomUUID();
+        const sessionId = String(ctx.session.sentimentTimestamp);
+        ctx.session.sentimentId = sentimentId;
+        const reportDate = new Date().toISOString().split('T')[0];
+
+        // Persist to DB + write session file for the scanner subprocess
+        await logSentimentToDb(sentimentId, sessionId, ctx.session.mood!, val, multiplier, reportDate);
+        writeSentimentFile(sentimentId, ctx.session.mood!, val, multiplier);
+
+        // Visual risk indicator
+        const riskEmoji = multiplier >= 1.0 ? '🟢' : multiplier >= 0.75 ? '🟡' : '🔴';
+
+        await ctx.reply(
+            `✅ *Sentiment Locked*\n\n` +
+            `📝 Mood: *${ctx.session.mood}*\n` +
+            `🧘 Calmness: *${val}/10*\n` +
+            `${riskEmoji} Risk Multiplier: *${label}*\n\n` +
+            `_Stake sizing for this report will be adjusted accordingly._`,
+            { parse_mode: 'Markdown' }
+        );
 
         if (ctx.session.pendingCommand) {
             return handlePendingCommand(ctx);
@@ -138,16 +262,10 @@ bot.on('text', async (ctx, next) => {
         return;
     }
 
-    // Command override: If a user sends a command starting with '/', break the sentiment flow
-    if (text.startsWith('/')) {
-        console.log(`[${new Date().toISOString()}] Command override: ${text} detected while state was ${state}. Resetting state.`);
-        ctx.session.state = 'IDLE';
-        ctx.session.pendingCommand = undefined;
-        return next();
-    }
-
     return next();
 });
+
+// ─── Pending Command Dispatcher ───────────────────────────────────────────────
 
 async function handlePendingCommand(ctx: any) {
     const cmd = ctx.session.pendingCommand;
@@ -159,14 +277,29 @@ async function handlePendingCommand(ctx: any) {
         const team = cmd.replace('/analyze', '').trim();
         return runDeepDive(ctx, team);
     } else {
-        // Default to unified scan for /scan or legacy pending commands
         return unifiedScan(ctx);
     }
 }
 
-bot.command('sentiment', (ctx) => startSentimentFlow(ctx));
+// ─── Sentiment Guard ──────────────────────────────────────────────────────────
 
-async function ensureSentiment(ctx: any, command: string) {
+/**
+ * Always re-asks for sentiment before generating a report.
+ * The nightly report needs fresh trader state each time to be meaningful.
+ * Returns false and starts the flow; returns true if already collected this call.
+ *
+ * Note: Unlike /analyze which uses a 4-hour window, reports always re-ask.
+ */
+async function ensureSentimentForReport(ctx: any, command: string): Promise<boolean> {
+    // Always re-ask — every new report request needs fresh sentiment
+    await startSentimentFlow(ctx, command);
+    return false;
+}
+
+/**
+ * For /analyze: uses a 4-hour calmness window (less critical than full report).
+ */
+async function ensureSentiment(ctx: any, command: string): Promise<boolean> {
     const lastCheck = ctx.session.sentimentTimestamp || 0;
     const hoursSince = (Date.now() - lastCheck) / (1000 * 60 * 60);
 
@@ -177,28 +310,122 @@ async function ensureSentiment(ctx: any, command: string) {
     return true;
 }
 
-// ─── Unified Analysis Flow ──────────────────────────────────────────────────
+// ─── Commands ─────────────────────────────────────────────────────────────────
+
+bot.command('ping', (ctx) => {
+    console.log(`[${new Date().toISOString()}] Ping received from ${ctx.from.id}`);
+    ctx.reply(`🏓 Pong! Admin ID: ${adminId}, Your ID: ${ctx.from.id}`);
+});
+
+bot.command('sentiment', (ctx) => startSentimentFlow(ctx));
+
+// /scan, /picks, /report — always re-ask sentiment before running
+bot.command(['scan', 'picks', 'report'], async (ctx) => {
+    if (await ensureSentimentForReport(ctx, '/scan')) unifiedScan(ctx);
+});
+
+bot.command('analyze', async (ctx) => {
+    const args = ctx.message.text.split(' ');
+    if (args.length < 2) {
+        return ctx.reply("❌ Usage: /analyze [team_name]");
+    }
+    const team = args.slice(1).join(' ');
+
+    if (await ensureSentiment(ctx, `/analyze ${team}`)) {
+        return runDeepDive(ctx, team);
+    }
+});
+
+bot.command('balance', async (ctx) => {
+    await ctx.reply("💰 Fetching live bankroll...");
+    try {
+        const polyApi = new PolymarketApi();
+        const p = await polyApi.getUSDCBalance();
+        ctx.replyWithMarkdown(`💳 *BODHI BANKROLL*\n\n◈ *Poly:* $${p.toFixed(2)}\n\n🚀 *Total:* $${p.toFixed(2)}`);
+    } catch (e: any) { ctx.reply(`❌ Error: ${e.message}`); }
+});
+
+bot.command('ask', async (ctx) => {
+    const query = ctx.message.text.replace('/ask', '').trim();
+    if (!query) {
+        return ctx.reply(
+            "🧠 Ask Bodhi anything about your data.\n\n" +
+            "Examples:\n" +
+            "• /ask what's my win rate this month?\n" +
+            "• /ask which sport is performing best?\n" +
+            "• /ask should I bet tonight given my sentiment?\n" +
+            "• /ask what was my best pick last week?"
+        );
+    }
+
+    const thinking = await ctx.reply("🧠 Bodhi is thinking...");
+    try {
+        const answer = await askBodhi(query);
+        await bot.telegram.deleteMessage(ctx.chat.id, thinking.message_id).catch(() => {});
+
+        // Send as plain text to avoid Telegram Markdown parse failures
+        // Claude's responses often contain characters that break MarkdownV1
+        const CHUNK = 4000;
+        if (answer.length <= CHUNK) {
+            await ctx.reply(answer);
+        } else {
+            const chunks = [];
+            let remaining = answer;
+            while (remaining.length > 0) {
+                chunks.push(remaining.slice(0, CHUNK));
+                remaining = remaining.slice(CHUNK);
+            }
+            for (const chunk of chunks) {
+                await ctx.reply(chunk);
+                await new Promise(r => setTimeout(r, 400));
+            }
+        }
+    } catch (e: any) {
+        console.error(`[ask] OpenRouter error:`, e);
+        await bot.telegram.deleteMessage(ctx.chat.id, thinking.message_id).catch(() => {});
+        ctx.reply(`❌ Ask failed: ${e.message}`);
+    }
+});
+
+bot.command('reset', (ctx) => {
+    ctx.session.state = 'IDLE';
+    ctx.session.pendingCommand = undefined;
+    ctx.reply("♻️ Bot state reset to IDLE.");
+});
+
+// ─── Unified Analysis Flow ────────────────────────────────────────────────────
 
 async function unifiedScan(ctx: any) {
-    const statusMsg = await ctx.reply("🛡️ *BODHI IS GENERATING SOVEREIGN SCAN REPORT*...\nRunning core pillars and loading slate...", { parse_mode: 'Markdown' });
+    const mood = ctx.session.mood || 'unknown';
+    const calmness = ctx.session.calmness || 10;
+    const riskLabel = ctx.session.riskLabel || '1.0x (Full Sizing)';
+
+    const statusMsg = await ctx.reply(
+        "🛡️ *BODHI IS GENERATING SOVEREIGN SCAN REPORT*...\n" +
+        `🧠 Trader State: ${mood} | Calmness: ${calmness}/10 | Risk: ${riskLabel}\n` +
+        "Running core pillars and loading slate...",
+        { parse_mode: 'Markdown' }
+    );
+
     try {
         console.log(`[${new Date().toISOString()}] Starting nightly_full_report scan for user ${ctx.from?.id}...`);
-        
+
         const { stdout, stderr } = await execAsync(`npx tsx scripts/scanners/nightly_full_report.ts`);
         console.log(stdout);
         if (stderr) console.error(stderr);
 
-        // Find Telegraph URL in stdout
         const match = stdout.match(/📡 Telegram report link sent to admin:\s*(https:\/\/telegra\.ph\/[^\s]+)/);
         const telegraphUrl = match ? match[1] : null;
 
         await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id).catch(() => {});
 
         if (telegraphUrl) {
-            await ctx.reply(`🛡️ *BODHI DAILY SOVEREIGN SCAN COMPLETE*\n\n👉 [Open Daily Sovereign Report](${telegraphUrl})`, {
-                parse_mode: 'Markdown',
-                disable_web_page_preview: false
-            });
+            await ctx.reply(
+                `🛡️ *BODHI DAILY SOVEREIGN SCAN COMPLETE*\n\n` +
+                `🧠 Sentiment: ${mood} (${calmness}/10) | Risk: ${riskLabel}\n\n` +
+                `👉 [Open Daily Sovereign Report](${telegraphUrl})`,
+                { parse_mode: 'Markdown', disable_web_page_preview: false }
+            );
         } else {
             await ctx.reply("❌ Report generation completed, but Telegraph link could not be resolved. Please check the logs.");
         }
@@ -209,6 +436,35 @@ async function unifiedScan(ctx: any) {
         ctx.reply(`❌ Analysis failed: ${error.message}`);
     }
 }
+
+// ─── Deep Dive ────────────────────────────────────────────────────────────────
+
+async function runDeepDive(ctx: any, team: string) {
+    if (!team) return ctx.reply("❌ No team specified for technical breakdown.");
+
+    const statusMsg = await ctx.reply(`🔍 *BODHI DEEP DIVE:* Analyzing ${team.toUpperCase()}...`, { parse_mode: 'Markdown' });
+
+    try {
+        const { stdout } = await execAsync(`npx tsx scripts/analyze-single-matchup.ts "${team}"`);
+
+        const jsonMatch = stdout.match(/DEEP_DIVE_START\n([\s\S]*?)\nDEEP_DIVE_END/);
+        if (!jsonMatch) {
+            await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
+            return ctx.reply(`❌ Could not find a deep-dive for "${team}" today.`);
+        }
+
+        const data = JSON.parse(jsonMatch[1]);
+        const html = renderDeepDiveHTML(data);
+
+        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
+        await sendLongMessage(ctx, html, 'HTML');
+
+    } catch (error: any) {
+        await ctx.reply(`❌ Deep Analysis failed: ${error.message}`);
+    }
+}
+
+// ─── Render Helpers ───────────────────────────────────────────────────────────
 
 function renderGameDetailHTML(r: any, index: number) {
     const { analysis, sport, matchup, startTime } = r;
@@ -288,62 +544,9 @@ function renderGameDetailHTML(r: any, index: number) {
     return msg + `\n`;
 }
 
-bot.command(['scan', 'picks', 'report'], async (ctx) => {
-    if (await ensureSentiment(ctx, '/scan')) unifiedScan(ctx);
-});
-
-bot.command('balance', async (ctx) => {
-    await ctx.reply("💰 Fetching live bankroll...");
-    try {
-        const polyApi = new PolymarketApi();
-        const p = await polyApi.getUSDCBalance();
-        ctx.replyWithMarkdown(`💳 *BODHI BANKROLL*\n\n◈ *Poly:* $${p.toFixed(2)}\n\n🚀 *Total:* $${p.toFixed(2)}`);
-    } catch (e: any) { ctx.reply(`❌ Error: ${e.message}`); }
-});
-
-bot.command('analyze', async (ctx) => {
-    const args = ctx.message.text.split(' ');
-    if (args.length < 2) {
-        return ctx.reply("❌ Usage: /analyze [team_name]");
-    }
-    const team = args.slice(1).join(' ');
-    
-    if (await ensureSentiment(ctx, `/analyze ${team}`)) {
-        return runDeepDive(ctx, team);
-    }
-});
-
-async function runDeepDive(ctx: any, team: string) {
-    if (!team) return ctx.reply("❌ No team specified for technical breakdown.");
-    
-    const statusMsg = await ctx.reply(`🔍 *BODHI DEEP DIVE:* Analyzing ${team.toUpperCase()}...`, { parse_mode: 'Markdown' });
-    
-    try {
-        const mood = ctx.session.mood || "sharp";
-        const calmness = ctx.session.calmness || 10;
-        
-        const { stdout } = await execAsync(`npx tsx scripts/analyze-single-matchup.ts "${team}"`);
-        
-        const jsonMatch = stdout.match(/DEEP_DIVE_START\n([\s\S]*?)\nDEEP_DIVE_END/);
-        if (!jsonMatch) {
-            await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
-            return ctx.reply(`❌ Could not find a deep-dive for "${team}" today.`);
-        }
-
-        const data = JSON.parse(jsonMatch[1]);
-        const html = renderDeepDiveHTML(data);
-        
-        await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id);
-        await sendLongMessage(ctx, html, 'HTML');
-
-    } catch (error: any) {
-        await ctx.reply(`❌ Deep Analysis failed: ${error.message}`);
-    }
-}
-
 function renderDeepDiveHTML(data: any) {
     const { matchup, startTime, venue, weather, starterBattle, bullpenHealth, teamBreakdown, killCriteria, pillarAnalysis } = data;
-    
+
     let msg = `🏛️ <b>BODHI DEEP DIVE ANALYSIS</b>\n`;
     msg += `⚾ <b>${matchup}</b>\n`;
     msg += `📍 <b>Venue:</b> ${venue || 'Unknown'}\n`;
@@ -389,14 +592,19 @@ function renderDeepDiveHTML(data: any) {
     return msg;
 }
 
-bot.command('reset', (ctx) => {
-    ctx.session.state = 'IDLE';
-    ctx.session.pendingCommand = undefined;
-    ctx.reply("♻️ Bot state reset to IDLE.");
-});
+// ─── Bot Start ────────────────────────────────────────────────────────────────
 
 bot.start((ctx) => {
-    ctx.reply("🏹 Bodhi Command Center Online.\n/scan - Full Slate Analysis & Picks\n/analyze [team] - Deep Matchup Dive\n/sentiment - Update Mindset\n/balance - Check Bankroll\n/reset - Reset bot state if stuck");
+    ctx.reply(
+        "🏹 *Bodhi Command Center Online.*\n\n" +
+        "/scan — Full Slate Analysis & Picks _(sentiment required)_\n" +
+        "/analyze [team] — Deep Matchup Dive\n" +
+        "/ask [question] — Ask Bodhi about your data\n" +
+        "/sentiment — Update Mindset Manually\n" +
+        "/balance — Check Bankroll\n" +
+        "/reset — Reset bot state if stuck",
+        { parse_mode: 'Markdown' }
+    );
 });
 
 bot.launch();

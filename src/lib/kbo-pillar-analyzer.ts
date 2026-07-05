@@ -9,7 +9,7 @@
  * - Polymarket crowd tends to be less sharp on KBO → larger exploitable EV gaps
  */
 
-import { PillarScore, BodhiAnalysis, getSizing } from './pillar-analyzer';
+import { PillarScore, BodhiAnalysis, getSizing, applyAuditFilters, computeRiskMultiplier } from './pillar-analyzer';
 import { KBOTeamStats } from './kbo-api';
 
 const KBO_WEAK_PITCHER_ERA_THRESHOLD = 5.50;
@@ -190,18 +190,24 @@ export class KBOPillarAnalyzer {
         }
         pillars.push({ pillar: 'Physiological/Spiritual', score: spiritualScore, reason: spiritualReason });
 
-        // Sizing
+        // Sizing — apply shared BayesianPivot risk multiplier from trader sentiment
         let recommendedSize = 'Zero (0%)';
         let suggestedStake = 0;
         if (valueTeam) {
-            const calmnessModifier = calmness !== undefined && calmness < 7 ? 0.5 : 1.0;
             const sizing = getSizing(objectiveConfidence, bankroll);
+            const sentimentRisk = (mood !== undefined && calmness !== undefined)
+                ? computeRiskMultiplier(mood, calmness)
+                : { multiplier: 1.0, label: '1.0x (Full Sizing)' };
+            const throttled = sentimentRisk.multiplier < 1.0;
             recommendedSize = slumpMultiplier < 1.0 ? 'Throttled (Slump Detection)' :
-                (calmness !== undefined && calmness < 7) ? 'Throttled (Caution)' : sizing.label;
-            suggestedStake = sizing.amount * calmnessModifier * slumpMultiplier;
+                throttled ? `Throttled [${sentimentRisk.label} — Sentiment]` : sizing.label;
+            suggestedStake = sizing.amount * sentimentRisk.multiplier * slumpMultiplier;
         }
 
-        return {
+        const executionRoute: BodhiAnalysis['executionRoute'] =
+            polyEV !== undefined ? 'POLY' : 'NONE';
+
+        const result: BodhiAnalysis = {
             gamePk: game.id,
             homeTeam,
             awayTeam,
@@ -212,6 +218,7 @@ export class KBOPillarAnalyzer {
             polySharePrice,
             polyEV,
             polyOutcomeIndex: valueTeam ? (valueTeam === homeTeam ? homeIdx : awayIdx) : undefined,
+            executionRoute,
             homeOdds: homePrice || undefined,
             awayOdds: awayPrice || undefined,
             recommendedAction,
@@ -222,6 +229,9 @@ export class KBOPillarAnalyzer {
             dataIntegrity: incompleteReasons.length > 0 ? 'incomplete' : 'complete',
             incompleteReasons: incompleteReasons.length > 0 ? incompleteReasons : undefined
         };
+
+        // KBO is net profitable on-chain — execution gate only, no MLB alpha ceiling
+        return applyAuditFilters(result, { requireExecution: true });
     }
 
     private backfillAdvantages(existing: string[], confidence: number, mood?: string): string[] {

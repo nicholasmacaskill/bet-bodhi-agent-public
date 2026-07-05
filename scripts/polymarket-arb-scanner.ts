@@ -252,8 +252,17 @@ async function main() {
       if (markets.length === 0) {
         console.log(`${YELLOW}No active sports markets found. Sleeping...${RESET}`);
       } else {
-        const scanList = markets.slice(0, MAX_SCAN_MARKETS);
-        console.log(`${GRAY}Scanning top ${scanList.length} of ${markets.length} markets by volume...${RESET}`);
+        // Prioritize match-up specific markets (e.g., contains 'vs' or '@') and exclude static season-long futures
+        const matchupMarkets = markets.filter(m => {
+          const q = m.question.toLowerCase();
+          if (q.includes('2025') || q.includes('2026') || q.includes('2027')) return false;
+          if (q.includes("drivers' champion") || q.includes("championship") || q.includes("winner of the") || q.includes("super bowl") || q.includes("stanley cup") || q.includes("world cup")) return false;
+          return q.includes(' vs ') || q.includes(' vs. ') || q.includes(' @ ');
+        });
+
+        const finalMarketsList = matchupMarkets.length > 0 ? matchupMarkets : markets;
+        const scanList = finalMarketsList.slice(0, MAX_SCAN_MARKETS);
+        console.log(`${GRAY}Scanning top ${scanList.length} matchup markets (filtered from ${markets.length} sports markets)...${RESET}`);
 
         let idx = 1;
         for (const market of scanList) {

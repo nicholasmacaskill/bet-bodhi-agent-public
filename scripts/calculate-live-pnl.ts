@@ -1,6 +1,8 @@
 import 'dotenv/config';
 import { PolymarketApi } from '../src/lib/polymarket-api';
 import { PolymarketGateway } from '../src/lib/gateway/PolymarketGateway';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function calculateLivePnL() {
     console.log("====================================================");
@@ -24,6 +26,10 @@ async function calculateLivePnL() {
 
     console.log("Processing trades and calculating PnL via Gateway...");
     const report = await gateway.calculatePnL(trades as any);
+
+    const dataPath = path.join(process.cwd(), 'data', 'latest_pnl.json');
+    fs.mkdirSync(path.dirname(dataPath), { recursive: true });
+    fs.writeFileSync(dataPath, JSON.stringify(report, null, 2));
 
     console.log("\n====================================================");
     console.log("   DETAILED AUDIT: RESOLVED BASEBALL POSITIONS     ");

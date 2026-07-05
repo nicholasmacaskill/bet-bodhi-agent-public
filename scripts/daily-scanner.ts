@@ -19,6 +19,7 @@ import { NHLApi } from '../src/lib/nhl-api';
 import { NBAApi } from '../src/lib/nba-api';
 import { MMAApi } from '../src/lib/mma-api';
 import { PolymarketApi, PolyMarket } from '../src/lib/polymarket-api';
+import { loadSlateBook } from '../src/lib/gateway/slate-book';
 import { OddsApi } from '../src/lib/odds-api';
 import { PillarAnalyzer, BodhiAnalysis } from '../src/lib/pillar-analyzer';
 import { NHLPillarAnalyzer } from '../src/lib/nhl-pillar-analyzer';
@@ -329,7 +330,7 @@ async function runScan(date: string): Promise<void> {
         await syncService.runSync();
     }
 
-    const polyApi = new PolymarketApi();
+    const { api: polyApi, resolver: slateResolver } = loadSlateBook();
     console.log(`${BOLD}${CYAN}🔄 Syncing Live Bankroll from Polygon...${RESET}`);
     let liveBalance = await polyApi.getUSDCBalance();
 
@@ -346,7 +347,6 @@ async function runScan(date: string): Promise<void> {
     const nhlApi = new NHLApi();
     const nbaApi = new NBAApi();
     const mmaApi = new MMAApi();
-    const polySvc = new PolymarketApi();
     const oddsApi = new OddsApi();
 
     const mlbAnalyzer = new PillarAnalyzer();
@@ -366,7 +366,7 @@ async function runScan(date: string): Promise<void> {
     console.log(`  ${CYAN}⟳${RESET} Fetching Global Web3 Sports Markets & Balance...`);
     let polyMarkets: PolyMarket[] = [];
     [polyMarkets, liveBalance] = await Promise.all([
-        polyApi.getActiveSportsMarkets("vs."),
+        slateResolver.loadSportsMarkets(),
         polyApi.getUSDCBalance()
     ]);
 
@@ -396,7 +396,7 @@ async function runScan(date: string): Promise<void> {
         process.stdout.write(`  ${CYAN}⟳${RESET} Fetching MLB games & Traditional Odds...`);
         const [mlbGames, traditionalOdds] = await Promise.all([
             mlbApi.getSchedule(date),
-            oddsApi.getOdds('baseball_mlb_preseason')
+            oddsApi.getOdds('baseball_mlb')
         ]);
         process.stdout.write(`\r  ${GREEN}✓${RESET} MLB: ${mlbGames.length} games found\n`);
 
@@ -410,9 +410,10 @@ async function runScan(date: string): Promise<void> {
             let bullpenFatigue: { home: number, away: number } | undefined = undefined;
             let lineupHandedness: { home: { L: number, R: number, S: number }, away: { L: number, R: number, S: number } } | undefined = undefined;
             let teamForm: { home: { streak: string, l10: string, l10Wins: number }, away: { streak: string, l10: string, l10Wins: number } } | undefined = undefined;
+            let hydrated: Awaited<ReturnType<MLBApi['getHydratedAnalysisData']>> | undefined;
 
             if (game.gamePk) {
-                const hydrated = await mlbApi.getHydratedAnalysisData(game);
+                hydrated = await mlbApi.getHydratedAnalysisData(game);
                 details = hydrated.details || details;
                 rosters = hydrated.rosters;
                 combinedHot = [...hydrated.homeHot, ...hydrated.awayHot];
@@ -424,15 +425,13 @@ async function runScan(date: string): Promise<void> {
 
             const homeMascot = game.homeTeam.split(' ').pop()?.toLowerCase() || "";
             const awayMascot = game.awayTeam.split(' ').pop()?.toLowerCase() || "";
-            let condition = polyMarkets.find(m =>
-                (m.question.toLowerCase().includes(homeMascot) || m.description.toLowerCase().includes(homeMascot)) &&
-                (m.question.toLowerCase().includes(awayMascot) || m.description.toLowerCase().includes(awayMascot))
-            );
 
-            // Fallback: Direct Targeted Search if generic sync missed it
-            if (!condition) {
-                condition = await polyApi.getMarketByTeams(game.homeTeam, game.awayTeam) || undefined;
-            }
+            const condition = await slateResolver.resolveMoneyline(
+                game.homeTeam,
+                game.awayTeam,
+                date,
+                game.date
+            ) || undefined;
 
             // Analysis (Now with technical signals and agent memory!)
             const analysis = mlbAnalyzer.analyzeGame(
@@ -448,7 +447,12 @@ async function runScan(date: string): Promise<void> {
                 platoonSplits,
                 bullpenFatigue,
                 lineupHandedness,
-                teamForm
+                teamForm,
+                game.series,
+                hydrated?.seasonSeries,
+                hydrated?.playoffContext,
+                userMood,
+                userCalmness
             );
 
             const tradGame = traditionalOdds.find((t: any) =>

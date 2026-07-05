@@ -1,14 +1,26 @@
 /**
  * PolymarketGateway - Standalone Decoupled Data Resolution Middleware
- * 
- * This module isolates the complexity of interacting with the Polymarket Gamma API, 
- * resolving discrepancies between CLOB trade records (which log literal baseball team outcomes)
- * and binary contract outcomes (which represent resolved YES/NO status).
+ *
+ * Owns Gamma API rate limiting, in-memory cache, and optional SQLite persistence
+ * so sync / PnL / enrichment scripts do not each re-fetch the same market metadata.
  */
+
+import { db } from '../sqlite-client';
 
 export interface GatewayConfig {
     delayMs?: number;
     gammaUrl?: string;
+    overrides?: { [question: string]: number };
+    /** Persist resolved market metadata to SQLite (default: true) */
+    persistCache?: boolean;
+    /** Re-fetch open markets after this many ms (default: 1 hour) */
+    openMarketTtlMs?: number;
+}
+
+interface DiskCacheRow {
+    payload: string | null;
+    closed: number;
+    cached_at: string;
 }
 
 export interface RawClobTrade {
@@ -20,6 +32,27 @@ export interface RawClobTrade {
     price: string;
     outcome: string;     // Literal target outcome name (e.g. "Washington Nationals")
     trader_side: string; // TAKER or MAKER
+    match_time?: string; // Unix seconds when fill occurred
+    transaction_hash?: string;
+}
+
+export interface NormalizedTrade extends RawClobTrade {
+    userAction: 'BUY' | 'SELL';
+    matchTimeUnix: number;
+    tradeId: string;
+}
+
+/**
+ * Resolves the user's true action (MAKER side is inverted) and canonical trade id/timestamp.
+ */
+export function normalizeTrade(raw: RawClobTrade): NormalizedTrade {
+    let userAction: 'BUY' | 'SELL' = raw.side === 'SELL' ? 'SELL' : 'BUY';
+    if (raw.trader_side === 'MAKER') {
+        userAction = raw.side === 'BUY' ? 'SELL' : 'BUY';
+    }
+    const matchTimeUnix = parseInt(raw.match_time || '0', 10);
+    const tradeId = raw.id || raw.transaction_hash || '';
+    return { ...raw, userAction, matchTimeUnix, tradeId };
 }
 
 export interface MarketPnLDetails {
@@ -44,11 +77,141 @@ export interface PolymarketPnLReport {
 export class PolymarketGateway {
     private delayMs: number;
     private gammaUrl: string;
+    private overrides: { [question: string]: number };
+    private persistCache: boolean;
+    private openMarketTtlMs: number;
     private detailsCache: Map<string, any> = new Map();
 
     constructor(config: GatewayConfig = {}) {
         this.delayMs = config.delayMs ?? 120;
         this.gammaUrl = config.gammaUrl ?? "https://gamma-api.polymarket.com";
+        this.overrides = config.overrides ?? {};
+        this.persistCache = config.persistCache !== false;
+        this.openMarketTtlMs = config.openMarketTtlMs ?? 60 * 60 * 1000;
+    }
+
+    private loadFromDisk(conditionId: string): any | undefined {
+        if (!this.persistCache) return undefined;
+        const row = db.prepare(
+            `SELECT payload, closed, cached_at FROM gamma_market_cache WHERE condition_id = ?`
+        ).get(conditionId) as DiskCacheRow | undefined;
+        if (!row) return undefined;
+
+        if (row.closed === 1) {
+            return row.payload ? JSON.parse(row.payload) : null;
+        }
+
+        const ageMs = Date.now() - new Date(row.cached_at).getTime();
+        if (ageMs < this.openMarketTtlMs) {
+            return row.payload ? JSON.parse(row.payload) : null;
+        }
+        return undefined;
+    }
+
+    private saveToDisk(conditionId: string, details: any | null): void {
+        if (!this.persistCache) return;
+        const closed = details?.closed ? 1 : 0;
+        db.prepare(`
+            INSERT INTO gamma_market_cache (condition_id, payload, closed, cached_at)
+            VALUES (?, ?, ?, datetime('now'))
+            ON CONFLICT(condition_id) DO UPDATE SET
+                payload = excluded.payload,
+                closed = excluded.closed,
+                cached_at = excluded.cached_at
+        `).run(conditionId, details ? JSON.stringify(details) : null, closed);
+    }
+
+    private chunkArray<T>(array: T[], size: number): T[][] {
+        const chunks: T[][] = [];
+        for (let i = 0; i < array.length; i += size) {
+            chunks.push(array.slice(i, i + size));
+        }
+        return chunks;
+    }
+
+    /**
+     * Batch-warm metadata for all markets referenced by trades.
+     * Closed markets are served from SQLite on subsequent runs (no Gamma calls).
+     */
+    public async ensureMarketsCached(
+        trades: RawClobTrade[],
+        concurrency = 15
+    ): Promise<{ total: number; fromCache: number; fetched: number }> {
+        const conditionIds = Array.from(new Set(trades.map(t => t.market).filter(Boolean)));
+        return this.prefetchMarkets(conditionIds, concurrency);
+    }
+
+    public async prefetchMarkets(
+        conditionIds: string[],
+        concurrency = 15
+    ): Promise<{ total: number; fromCache: number; fetched: number }> {
+        let fromCache = 0;
+        const toFetch: string[] = [];
+
+        for (const id of conditionIds) {
+            if (this.detailsCache.has(id)) {
+                fromCache++;
+                continue;
+            }
+            const disk = this.loadFromDisk(id);
+            if (disk !== undefined) {
+                this.detailsCache.set(id, disk);
+                fromCache++;
+                continue;
+            }
+            toFetch.push(id);
+        }
+
+        let fetched = 0;
+        const chunks = this.chunkArray(toFetch, concurrency);
+        for (const chunk of chunks) {
+            await Promise.all(chunk.map(async (id) => {
+                await this.fetchMarketMetadata(id);
+                fetched++;
+            }));
+            console.log(
+                `[PolymarketGateway] Metadata ${fromCache + fetched}/${conditionIds.length}` +
+                ` (${fromCache} cached, ${fetched} fetched)`
+            );
+        }
+
+        return { total: conditionIds.length, fromCache, fetched };
+    }
+
+    private async fetchMarketMetadata(conditionId: string): Promise<any | null> {
+        try {
+            await this.sleep(this.delayMs);
+
+            let url = `${this.gammaUrl}/markets?condition_ids=${conditionId}`;
+            let res = await fetch(url);
+            let data = await res.json();
+
+            if (data && data.length > 0) {
+                const details = data[0];
+                this.detailsCache.set(conditionId, details);
+                this.saveToDisk(conditionId, details);
+                return details;
+            }
+
+            await this.sleep(this.delayMs);
+            url = `${this.gammaUrl}/markets?condition_ids=${conditionId}&closed=true`;
+            res = await fetch(url);
+            data = await res.json();
+
+            if (data && data.length > 0) {
+                const details = data[0];
+                this.detailsCache.set(conditionId, details);
+                this.saveToDisk(conditionId, details);
+                return details;
+            }
+
+            this.detailsCache.set(conditionId, null);
+            this.saveToDisk(conditionId, null);
+            return null;
+        } catch (error) {
+            console.error(`[PolymarketGateway] Failed to retrieve metadata for condition ${conditionId}:`, error);
+            return null;
+        }
     }
 
     /**
@@ -63,45 +226,22 @@ export class PolymarketGateway {
      * Uses `condition_ids` (plural) parameter to prevent Gamma from silently ignoring the filter.
      * Tries active markets first, then queries with closed=true filter fallback.
      */
-    public async getMarketMetadata(conditionId: string): Promise<any | null> {
-        // Return cached payload if available (includes null payloads for negative caching)
-        if (this.detailsCache.has(conditionId)) {
-            return this.detailsCache.get(conditionId);
-        }
-
-        try {
-            await this.sleep(this.delayMs);
-            
-            // 1. Try querying the active markets first
-            let url = `${this.gammaUrl}/markets?condition_ids=${conditionId}`;
-            let res = await fetch(url);
-            let data = await res.json();
-
-            if (data && data.length > 0) {
-                const details = data[0];
-                this.detailsCache.set(conditionId, details);
-                return details;
+    public async getMarketMetadata(conditionId: string, forceRefresh = false): Promise<any | null> {
+        if (!forceRefresh) {
+            if (this.detailsCache.has(conditionId)) {
+                return this.detailsCache.get(conditionId);
             }
 
-            // 2. Fallback to inactive/closed markets if active lookup returned empty
-            await this.sleep(this.delayMs);
-            url = `${this.gammaUrl}/markets?condition_ids=${conditionId}&closed=true`;
-            res = await fetch(url);
-            data = await res.json();
-
-            if (data && data.length > 0) {
-                const details = data[0];
-                this.detailsCache.set(conditionId, details);
-                return details;
+            const disk = this.loadFromDisk(conditionId);
+            if (disk !== undefined) {
+                this.detailsCache.set(conditionId, disk);
+                return disk;
             }
-
-            // Store negative cache to prevent infinite retries on unresolvable markets
-            this.detailsCache.set(conditionId, null);
-            return null;
-        } catch (error) {
-            console.error(`[PolymarketGateway] Failed to retrieve metadata for condition ${conditionId}:`, error);
-            return null;
+        } else {
+            this.detailsCache.delete(conditionId);
         }
+
+        return this.fetchMarketMetadata(conditionId);
     }
 
     /**
@@ -189,10 +329,7 @@ export class PolymarketGateway {
                 m.positions[outcome] = 0;
             }
 
-            let userAction = t.side;
-            if (t.trader_side === 'MAKER') {
-                userAction = t.side === 'BUY' ? 'SELL' : 'BUY';
-            }
+            const { userAction } = normalizeTrade(t);
 
             if (userAction === 'BUY') {
                 m.positions[outcome] += size;
@@ -214,7 +351,10 @@ export class PolymarketGateway {
 
             let pnl = 0;
 
-            if (m.closed) {
+            if (this.overrides[m.question] !== undefined) {
+                pnl = this.overrides[m.question];
+                m.realizedPnL = pnl;
+            } else if (m.closed) {
                 let payout = 0;
                 for (const [outcome, size] of Object.entries(m.positions)) {
                     // Match outcome team string directly against the resolved team winner string

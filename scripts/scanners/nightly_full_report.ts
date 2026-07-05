@@ -1,6 +1,6 @@
 
 import { MLBApi } from '../../src/lib/mlb-api';
-import { PillarAnalyzer, computeUnifiedAlpha } from '../../src/lib/pillar-analyzer';
+import { PillarAnalyzer, computeUnifiedAlpha, computeRiskMultiplier } from '../../src/lib/pillar-analyzer';
 import { PolymarketApi } from '../../src/lib/polymarket-api';
 import { loadSlateBook } from '../../src/lib/gateway/slate-book';
 import { OddsComparison } from '../../src/lib/gateway/slate-resolver';
@@ -28,15 +28,65 @@ function formatOddsDelta(comparison?: OddsComparison): string {
     return `${sign}${(comparison.evDelta! * 100).toFixed(1)}%`;
 }
 
+// ─── Session Sentiment Loader ─────────────────────────────────────────────────
+// Reads the sentiment file written by the Telegram bot before invoking this
+// scanner. If the file is missing or stale (> 6h), returns neutral defaults.
+
+interface SessionSentiment {
+    sentimentId: string;
+    mood: string;
+    calmness: number;
+    riskMultiplier: number;
+    capturedAt: string;
+    reportDate: string;
+}
+
+function loadSessionSentiment(): SessionSentiment | null {
+    const filePath = path.join(process.cwd(), 'data', 'session_sentiment.json');
+    try {
+        if (!fs.existsSync(filePath)) return null;
+        const raw = fs.readFileSync(filePath, 'utf8');
+        const data: SessionSentiment = JSON.parse(raw);
+        // Reject if older than 6 hours
+        const ageMs = Date.now() - new Date(data.capturedAt).getTime();
+        if (ageMs > 6 * 60 * 60 * 1000) {
+            console.log(`[sentiment] Session file is stale (${(ageMs / 3600000).toFixed(1)}h old) — using neutral defaults.`);
+            return null;
+        }
+        console.log(`[sentiment] Loaded session sentiment: mood=${data.mood}, calmness=${data.calmness}/10, risk=${data.riskMultiplier}x`);
+        return data;
+    } catch (e) {
+        return null;
+    }
+}
+
+
 async function main() {
     const mlb = new MLBApi();
     const analyzer = new PillarAnalyzer();
     const { api: polyApi, resolver } = loadSlateBook();
-    const today = process.argv[2] || new Date().toISOString().split('T')[0]; // Auto-detect or use arg
+    const today = process.argv[2] || new Date().toISOString().split('T')[0];
+
+    // ── Load trader sentiment from Telegram session ───────────────────────────
+    const sentiment = loadSessionSentiment();
+    const userMood = sentiment?.mood;
+    const userCalmness = sentiment?.calmness;
+    const sessionSentimentId = sentiment?.sentimentId || null;
+    const riskResult = (userMood && userCalmness !== undefined)
+        ? computeRiskMultiplier(userMood, userCalmness)
+        : { multiplier: 1.0, label: '1.0x (No Sentiment on File)' };
+    const riskMultiplier = riskResult.multiplier;
+    const riskLabel = riskResult.label;
 
     console.log(`\n──────────────────────────────────────────────────────────────────────`);
     console.log(`🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: ${today}`);
+    if (userMood) {
+        console.log(`🧠 TRADER STATE: mood=${userMood} | calmness=${userCalmness}/10 | risk=${riskLabel}`);
+    } else {
+        console.log(`🧠 TRADER STATE: No sentiment on file — neutral defaults applied.`);
+    }
     console.log(`──────────────────────────────────────────────────────────────────────\n`);
+
 
     try {
         const memory = new AgentMemory();
@@ -67,8 +117,15 @@ async function main() {
                 [...hydrated.homeHot, ...hydrated.awayHot], [], hydrated.playerStats, 800,
                 hydrated.rosters, memory, hydrated.platoonSplits, hydrated.bullpenFatigue,
                 hydrated.lineupHandedness, hydrated.teamForm,
-                game.series ?? hydrated.currentSeries, hydrated.seasonSeries, hydrated.playoffContext
+                game.series ?? hydrated.currentSeries, hydrated.seasonSeries, hydrated.playoffContext,
+                userMood, userCalmness  // sentiment-aware sizing
             );
+
+            // Apply the session risk multiplier to the stake computed by analyzeGame()
+            if (analysis.suggestedStake && analysis.suggestedStake > 0 && riskMultiplier < 1.0) {
+                analysis.suggestedStake = analysis.suggestedStake * riskMultiplier;
+                analysis.recommendedSize = `${analysis.recommendedSize} [Throttled ${riskLabel}]`;
+            }
 
             const unifiedAlpha = computeUnifiedAlpha(analysis.overallConfidence, analysis.polyEV);
 
@@ -214,6 +271,25 @@ async function main() {
 
         let report = reportTitle;
         report += `Generated at: ${new Date().toLocaleString()}\n\n`;
+
+        // ── Sentiment Banner ──────────────────────────────────────────────────
+        report += `## 🧠 TRADER STATE AT SCAN TIME\n\n`;
+        if (userMood && userCalmness !== undefined) {
+            const riskEmoji = riskMultiplier >= 1.0 ? '🟢' : riskMultiplier >= 0.75 ? '🟡' : '🔴';
+            report += `| Field | Value |\n| :--- | :--- |\n`;
+            report += `| Mood | **${userMood}** |\n`;
+            report += `| Calmness | **${userCalmness}/10** |\n`;
+            report += `| Risk Multiplier | ${riskEmoji} **${riskLabel}** |\n`;
+            report += `\n`;
+            if (riskMultiplier < 1.0) {
+                report += `> ⚠️ **All stake sizes in this report have been throttled to ${riskMultiplier}x due to your current sentiment.**\n\n`;
+            } else {
+                report += `> ✅ **Sentiment green-light: full sizing active.**\n\n`;
+            }
+        } else {
+            report += `_No sentiment data on file for this scan. Run /scan via Telegram to enable sentiment-aware sizing._\n\n`;
+        }
+        report += `---\n\n`;
 
         if (underdogPlays.length > 0) {
             report += `## 🐶 TOP UNDERDOG UPSET PLAYS OF THE DAY\n\n`;
@@ -386,8 +462,17 @@ async function main() {
                     };
                 }
 
-                const analysis = kboAnalyzer.analyzeGame(game, kboTeamStats, polyMarketData, kboElite, kboWeak, 800);
+                const analysis = kboAnalyzer.analyzeGame(
+                    game, kboTeamStats, polyMarketData, kboElite, kboWeak, 800,
+                    userMood, userCalmness  // pass trader sentiment for risk-adjusted sizing
+                );
                 const unifiedAlpha = computeUnifiedAlpha(analysis.overallConfidence, analysis.polyEV);
+
+                // Apply session risk multiplier to KBO stakes as well
+                if (analysis.suggestedStake && analysis.suggestedStake > 0 && riskMultiplier < 1.0) {
+                    analysis.suggestedStake = analysis.suggestedStake * riskMultiplier;
+                    analysis.recommendedSize = `${analysis.recommendedSize} [Throttled ${riskLabel}]`;
+                }
 
                 kboResults.push({ ...analysis, time: game.startTime, unifiedAlpha });
             }
@@ -512,20 +597,21 @@ async function main() {
                             detected_value_team = ?,
                             alpha_score = ?,
                             underdog_play_rank = ?,
-                            scan_time = ?
+                            scan_time = ?,
+                            sentiment_id = ?
                         WHERE id = ?
-                    `).run(r.overallConfidence, pillarJson, homeOdds, awayOdds, targetTeam, alphaScore, underdogRank, scanTime, existing.id);
+                    `).run(r.overallConfidence, pillarJson, homeOdds, awayOdds, targetTeam, alphaScore, underdogRank, scanTime, sessionSentimentId, existing.id);
                 } else {
                     const oppId = crypto.randomUUID();
                     db.prepare(`
                         INSERT INTO betting_opportunities (
                             id, game_pk, game_date, matchup, confidence_score,
                             pillar_breakdown, home_ml_odds, away_ml_odds,
-                            detected_value_team, alpha_score, underdog_play_rank, scan_type, scan_time, status
-                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending')
+                            detected_value_team, alpha_score, underdog_play_rank, scan_type, scan_time, status, sentiment_id
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?)
                     `).run(
                         oppId, r.gamePk, today, `${r.awayTeam} @ ${r.homeTeam}`, r.overallConfidence,
-                        pillarJson, homeOdds, awayOdds, targetTeam, alphaScore, underdogRank, scanType, scanTime
+                        pillarJson, homeOdds, awayOdds, targetTeam, alphaScore, underdogRank, scanType, scanTime, sessionSentimentId
                     );
                 }
                 console.log(`   ✓ Logged to SQLite [${scanType}]: ${r.awayTeam} @ ${r.homeTeam} | Alpha: ${alphaScore.toFixed(2)} | Target: ${targetTeam}`);
