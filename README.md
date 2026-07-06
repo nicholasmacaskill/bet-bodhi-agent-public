@@ -228,8 +228,23 @@ With the following override rules:
 - **Integrity Promotion**: Elevates pitcher to "Elite" if composite ERA **≤ 2.80**.
 - **Weak Classification**: Triggered if pitcher is on `WEAK_PITCHERS_STATIC` list OR composite ERA **≥ 5.00**.
 
+### Agent Memory — Polymarket CSV Ingestion Pipeline (`src/lib/agent/memory.ts`)
+`AgentMemory` builds team ROI profiles by **parsing raw Polymarket trade export CSVs** from the `~/Downloads` directory at boot time — no manual data entry required:
+
+```
+Polymarket-History-XXXXXX.csv
+  → Filter Deposits/Withdrawals
+  → Group by marketName (per-market position)
+  → Accumulate Buy volume vs Sell/Redeem proceeds
+  → Compute PnL = proceeds - buy_vol
+  → Build TeamPerformanceProfile { pnl, wagered, roi, wins, losses }
+  → Fuzzy name match: "Dodgers" resolves to "Los Angeles Dodgers"
+```
+
+At scan time, each recommended team is checked against the loaded profiles. The fuzzy matcher (`team.toLowerCase().includes(key.toLowerCase())`) ensures partial team name references (e.g. from KBO markets) still resolve to the correct profile.
+
 ### Agent Memory Burn List Veto
-The system maintains a persistent Agent Memory layer (via Supabase) tracking per-team historical ROI. If a target team has generated **negative ROI** over at least 2 tracked trades, the engine auto-vetoes with:
+If a target team has generated **negative ROI** over at least 2 tracked trades in the loaded profiles, the engine auto-vetoes with:
 > `VETO: Agent Memory Burn List. [Team] has cost us historically (-XX.X% ROI).`
 
 ### Lineup Integrity (`[SWAP_CHECK]`)
@@ -245,6 +260,26 @@ Even after a trade is recommended and staged, the system emits explicit **kill c
 | **Wind Threshold Breach** | Weather API returns wind speed > 20mph blowing in at ballpark |
 | **Allowance Failure** | CLOB client returns an `"allowance"` error — ERC-20 approval must be re-submitted before any trades execute |
 | **PRISM Full Veto** | Trader calmness drops below 5 in a subsequent check — system halts all output regardless of model score |
+
+### BodhiWatchdog — Live Drift Monitor (`src/lib/agent/watchdog.ts`)
+After the pre-game scan is committed and `active_slate.json` is written, `BodhiWatchdog` runs as a background polling loop that re-queries the MLB Stats API against the saved snapshot to detect post-scan reality drift:
+
+```typescript
+// Only monitors high-signal games (Alpha > 7.5 or clear value direction)
+if (game.unifiedAlpha < 7.5 && game.valueTeam === 'NEUTRAL') continue;
+
+// Pitcher scratch detection — normalizes names before comparing
+if (normalize(game.homePitcher) !== normalize(liveHomePitcher)) {
+    vetos.push(`🚨 VETO ALERT: ${matchup} — Home Pitcher changed: ${game.homePitcher} ➔ ${liveHomePitcher}`);
+}
+
+// Lineup data integrity check
+if (snapshotLineupCount > 0 && liveLineupCount === 0) {
+    vetos.push(`⚠️ DATA DRIFT: ${matchup} — Lineups disappeared from API feed.`);
+}
+```
+
+All detected vetoes are immediately dispatched as `🚨 VETO ALERT` Telegram messages, giving the trader a real-time anomaly signal with the specific structural change that invalidates the original edge.
 
 ---
 
@@ -284,13 +319,22 @@ Monitors rolling trade outcomes in Supabase. Triggers if:
 
 **Action:** All stake sizes throttled by an additional `0.5x` multiplier until a winning trade breaks the streak.
 
-### 2. Macro Regime Telemetry (`macro-regime-daemon.ts`)
-A background service that monitors **league-wide volatility** via rolling 3-day lead-change averages across MLB games:
+### 2. MLB Macro Regime Telemetry (`macro-regime-daemon.ts`)
+A background service monitoring **league-wide volatility** via rolling 3-day lead-change averages across all MLB games:
 - **Normal regime**: ~1.8 average late-game lead changes per slate
 - **Danger signal**: Drops below 0.5 over a 48-hour window → triggers `REGIME_FLATLINED` Telegram alert
 - **Automated Response**: Pre-emptively scales unit sizing before individual team selection
 
-### 3. Closing Line Value (CLV) Drift Monitoring
+### 3. KBO Regime Daemon (`kbo-regime-daemon.ts`)
+A dedicated, parallel regime monitor for the **Korean Baseball Organization** using `api-sports.io` (League ID: `21`). Computes the same rolling late-inning lead-change averages independently of the MLB daemon:
+- Tracks inning-by-inning score deltas for all completed KBO games (`status: FT` or `AOT`)
+- Persists rolling state to `data/kbo_macro_regime_state.json` between runs
+- Fires the same `REGIME_FLATLINED` threshold (`< 0.5`) with KBO-specific context
+- Runs independently so an MLB volatility spike does not mask a calm KBO regime (or vice versa)
+
+The existence of **separate, sport-specific regime daemons** means unit sizing decisions for each league are made from that league's own volatility baseline — not a blended global signal.
+
+### 4. Closing Line Value (CLV) Drift Monitoring
 The system compares odds locked in at scan time against final kickoff prices. Sustained negative CLV drift signals that the alpha is being front-run by sharp/algorithmic competitors — a fundamental regime shift requiring model recalibration.
 
 ---
@@ -404,6 +448,123 @@ All OpenRouter completions are intercepted and logged to `token_usage_logs`:
 
 ---
 
+## 🔭 Historical Backtesting Framework (`mlb-historical-backtest.ts`)
+
+The backtester **replays the current live model weights** against full past MLB seasons using the MLB Stats API — with strict no-lookahead hydration (all data resolved as-of first pitch). Agent memory is disabled to remove any discretionary overrides from historical picks.
+
+### CLI Interface
+```bash
+# Single season sample
+npx tsx scripts/mlb-historical-backtest.ts --season 2024 --sample 14
+
+# Multi-season run
+npx tsx scripts/mlb-historical-backtest.ts --season 2024 --season 2025
+
+# Date range
+npx tsx scripts/mlb-historical-backtest.ts --from 2024-06-01 --to 2024-06-07
+
+# High-throughput mode with parallel workers
+npx tsx scripts/mlb-historical-backtest.ts --season 2025 --fast --concurrency 4 --quiet
+
+# Ignore row cache (force full recompute)
+FORCE_BACKTEST=1 npx tsx scripts/mlb-historical-backtest.ts --season 2025
+```
+
+### Output Schema (`BacktestRow`)
+Each game processed produces a structured record:
+
+| Field | Description |
+|-------|-------------|
+| `date`, `gamePk`, `matchup` | Game identity |
+| `winner` | Actual game winner |
+| `valueTeam` | Model's recommended team (or `null` = PASS) |
+| `alpha`, `confidence`, `polyEV` | Raw model scores at evaluation time |
+| `executionRoute` | `POLY_ROUTE` (Polymarket match found) or `NO_MARKET` |
+| `recommendedAction` | Full action string (e.g. `BET_AGGRESSIVE`, `PASS`) |
+| `pickWon` | Boolean — was the pick correct? |
+| `polyMatched` | Whether a closed Polymarket contract was found for this game |
+| `flags` | List of triggered vetoes or special conditions |
+
+### Summary Statistics
+The backtester produces a `BacktestSummary` with breakdowns by:
+- **Alpha Band** (`< 5`, `5–7`, `7–9`, `9–11`, `11+`) — win rate and pick count per tier
+- **Action Prefix** (`BET_AGGRESSIVE`, `BET_STANDARD`, `PASS`) — profitability per sizing mode
+- **Poly-Route Picks** — subset of picks where a live Polymarket market was matched
+- **High-Conviction Picks** — confidence ≥ 80% isolated win rate
+- **Simulated PnL / ROI** — flat-stake simulation across all picks
+
+Results are cached to `data/backtest_cache/` per game to allow incremental season runs without re-fetching already-processed games.
+
+---
+
+## 📊 Psychometric Bias Engine (`scripts/bias-report.ts`)
+
+A dedicated weekly analytics tool that surfaces **behavioural betting patterns** by mining the Supabase `bets` table. Runs independently of the scanner on demand.
+
+### 1. Performance by Motivation Tag
+Every bet is tagged at placement time with one of:
+
+| Tag | Meaning | Risk Flag |
+|-----|---------|----------|
+| `bodhi_signal` | System-generated recommendation | ✅ Baseline |
+| `analysis` | Manual research-backed | ✅ Baseline |
+| `line_value` | Pure odds-value play | ✅ Baseline |
+| `fade_public` | Contrarian crowd fade | ⚠️ Monitor |
+| `gut_feel` | Intuition-driven | ⚠️ Flagged |
+| `chase_win` | Tilt / loss recovery | 🔴 High Risk |
+
+The report computes **win rate and ROI per tag**, automatically flagging `chase_win` and `gut_feel` with warning symbols to surface discretionary bleeding.
+
+### 2. Pre-Game Rush Analysis
+Bets are bucketed by `time_to_kickoff_minutes` to measure the performance cost of last-minute decisions:
+
+| Window | Label |
+|--------|-------|
+| < 30 min | ⚠️ Rush Zone |
+| 30–120 min | Caution |
+| 2–6 hrs | Optimal |
+| 6+ hrs | Early |
+
+### 3. The Bodhi 2-Hour Rule Verdict
+Computes a head-to-head comparison between bets placed **≥ 2 hours before kickoff** vs. **< 2 hours before kickoff** — quantifying whether late urgency materially hurts performance.
+
+---
+
+## 🧬 Trade Attribution Engine (`scripts/enrich-trade-context.ts`)
+
+Enriches every historical CLOB BUY fill with the exact **game state at the moment of execution** by replaying ESPN play-by-play wallclock data:
+
+```
+CLOB Fill (trade_id, match_time_unix, market_question)
+  → PolymarketGateway.getMarketMetadata() → resolve question string
+  → inferSport() → MLB or KBO detection
+  → GameStateReplayer.resolveMLBGameState(question, match_time_unix, outcome, date)
+      → ESPN API play-by-play lookup
+      → Find the play with wallclock nearest to match_time_unix
+      → Extract: inning, inning_half, away_score, home_score
+  → Compute: bet_team_deficit (score of opposing team - bet team at entry)
+  → Upsert into trade_enrichment table (safe to re-run)
+```
+
+### `trade_enrichment` Schema
+
+| Column | Description |
+|--------|-------------|
+| `trade_id` | CLOB fill unique ID (PK) |
+| `sport` | `MLB` or `KBO` |
+| `entry_price` | CLOB execution price |
+| `kickoff_time` | Scheduled first pitch |
+| `minutes_to_kickoff` | Negative = entered during live game |
+| `game_phase` | `PRE_GAME`, `LIVE`, or `POST_GAME` |
+| `inning` / `inning_half` | Exact inning at entry (e.g. `7 / TOP`) |
+| `away_score` / `home_score` | Score at the moment of fill |
+| `bet_team_deficit` | Positive = bet team was trailing at entry |
+| `replay_source` | `ESPN_PLAYBYPLAY` or `ESTIMATED` |
+
+This enables **trade attribution queries** like: *"What is my win rate when I enter live games where the bet team is trailing by ≥ 2 runs in the 7th inning or later?"*
+
+---
+
 ## 🗄️ Database Architecture
 
 ### SQLite Local Schema (9 Tables)
@@ -461,6 +622,7 @@ ALTER TABLE betting_opportunities
 │   ├── OPTIMIZATIONS.md              # Token compression, SQLite budget limits, selective sync
 │   ├── SCANNER_FILTERS.md            # Full veto logic, pitcher classification, situational weights
 │   ├── MACRO_REGIME_SHIFT_BLUEPRINT.md # CLV monitoring, volatility telemetry blueprints
+│   ├── MID_SEASON_DIP_ANALYSIS.md   # Regime shift root-cause analysis & mitigations
 │   └── ENGINEERING_CASE_STUDIES.md  # LLM FinOps, Web3 low-latency, circuit breaker studies
 ├── reports/                          # Generated daily markdown reports (PRE_GAME & LIVE_UPDATE)
 ├── scripts/
@@ -471,9 +633,15 @@ ALTER TABLE betting_opportunities
 │   ├── trigger-arbitrage-example.ts # BodhiArbitrageRouter.sol interaction example
 │   ├── calculate-live-pnl.ts        # On-chain USDC.e PnL sync to JSON cache
 │   ├── place-bet.ts                 # Manual/automated CLOB order submission
-│   ├── macro-regime-daemon.ts       # Rolling volatility telemetry monitor
+│   ├── macro-regime-daemon.ts       # MLB rolling volatility telemetry monitor
+│   ├── kbo-regime-daemon.ts         # KBO-specific regime daemon (api-sports.io)
+│   ├── kbo-regime-backtest.ts       # KBO regime strategy backtester
+│   ├── mlb-historical-backtest.ts   # MLB model replay on past seasons with concurrency
+│   ├── bias-report.ts               # Psychometric bias engine (motivation tags, 2hr rule)
+│   ├── enrich-trade-context.ts      # ESPN play-by-play trade attribution enrichment
 │   ├── performance_audit.ts         # SQLite win-rate/ROI audit tool
-│   └── mlb-historical-backtest.ts   # Historical MLB strategy backtesting
+│   ├── view-sim-pnl.ts              # Arb simulation PnL dashboard
+│   └── underdog-report.ts           # Standalone underdog upset play ranker
 ├── scratch/                         # Sandbox diagnostics
 │   ├── check_active_bets.ts         # Active open position checker (no blockchain query)
 │   └── quick_trades.ts              # CLOB trade history (last 20 fills)
@@ -482,15 +650,32 @@ ALTER TABLE betting_opportunities
         ├── mlb-api.ts               # MLB Stats API wrapper (live boxscore pitcher fallbacks)
         ├── kbo-api.ts               # KBO stats client & HTML scraper fallbacks
         ├── polymarket-api.ts        # Ethers v6 CLOB SDK wrapper + signer adapter
-        ├── pillar-analyzer.ts       # MLB 7-pillar model
+        ├── pillar-analyzer.ts       # MLB 7-pillar model (61KB — primary quant core)
+        ├── kbo-pillar-analyzer.ts   # KBO-specific pillar scorer
         ├── nhl-pillar-analyzer.ts   # NHL scorer
         ├── nba-pillar-analyzer.ts   # NBA scorer
         ├── mma-pillar-analyzer.ts   # MMA scorer
+        ├── odds-api.ts              # Traditional bookmaker odds ingestion (DraftKings, etc.)
         ├── sqlite-client.ts         # Local DB schema initialization & query helpers
+        ├── bet-logger.ts            # Structured bet logging with motivation tag capture
+        ├── trade-context/
+        │   └── GameStateReplayer.ts # ESPN play-by-play wallclock replay engine
+        ├── gateway/
+        │   ├── PolymarketGateway.ts # Normalized CLOB fill reader & market metadata cache
+        │   ├── slate-book.ts        # Daily game slate loader
+        │   ├── slate-resolver.ts    # Market-to-game matching via Gamma API
+        │   └── trade-book.ts        # Historical CLOB trade aggregator
         └── agent/
             ├── bodhi-agent.ts       # Core agent orchestrator
-            ├── memory.ts            # Team performance memory layer
-            └── prism.ts             # PRISM unified facade
+            ├── memory.ts            # CSV-ingested Polymarket history → team ROI profiles
+            ├── prism.ts             # PRISM unified facade
+            ├── watchdog.ts          # Live post-scan pitcher scratch & lineup drift monitor
+            ├── openrouter-handler.ts # LLM request handler with token cost interception
+            ├── token-tracker.ts     # SQLite token budget logger & circuit breaker
+            ├── wallet-monitor.ts    # On-chain USDC.e balance watcher
+            ├── query-handler.ts     # /ask command natural language query processor
+            ├── sync-service.ts      # Background Supabase sync agent
+            └── telegram-notify.ts  # Outbound Telegram alert dispatcher
 ```
 
 ---
@@ -557,6 +742,9 @@ npx tsx scratch/check_active_bets.ts              # Check open positions
 | Real-Time On-Chain State Sync | Web3 / Low-Latency Data Pipelines | Latency reduced from **11 minutes → <5 seconds** (99.2% improvement) |
 | Algorithmic Capital Safeguards | Risk Management / System Resilience | Automated **50% unit throttle** during variance regimes; macro CLV telemetry |
 | Cross-DEX Atomic Arbitrage Router | Smart Contract / DeFi | Custom Solidity router with V2/V3/generic calldata support and Gnosis Safe proxy integration |
+| Trade Attribution via ESPN Replay | Data Engineering / Behavioural Finance | Game state (inning, score, deficit) resolved at exact fill timestamp via play-by-play wallclock replay |
+| Psychometric Bias Engine | Behavioural Analytics | Motivation-tag and time-to-kickoff win-rate segmentation; 2-Hour Rule empirical verdict |
+| Historical Backtesting Framework | Quantitative Research | No-lookahead season replay with per-alpha-band win rates, Poly-route isolation, and parallel concurrency |
 
 ---
 
