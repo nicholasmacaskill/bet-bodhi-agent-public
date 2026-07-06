@@ -417,15 +417,25 @@ async function unifiedScan(ctx: any) {
         const match = stdout.match(/📡 Telegram report link sent to admin:\s*(https:\/\/telegra\.ph\/[^\s]+)/);
         const telegraphUrl = match ? match[1] : null;
 
+        const originalMatch = stdout.match(/📡 Original Telegram report link:\s*(https:\/\/telegra\.ph\/[^\s]+)/);
+        const originalTelegraphUrl = originalMatch ? originalMatch[1] : null;
+
         await bot.telegram.deleteMessage(ctx.chat.id, statusMsg.message_id).catch(() => {});
 
         if (telegraphUrl) {
-            await ctx.reply(
-                `🛡️ *BODHI DAILY SOVEREIGN SCAN COMPLETE*\n\n` +
-                `🧠 Sentiment: ${mood} (${calmness}/10) | Risk: ${riskLabel}\n\n` +
-                `👉 [Open Daily Sovereign Report](${telegraphUrl})`,
-                { parse_mode: 'Markdown', disable_web_page_preview: false }
-            );
+            if (originalTelegraphUrl) {
+                await ctx.reply(
+                    `🧠 Sentiment: ${mood} (${calmness}/10) | Risk: ${riskLabel}`,
+                    { parse_mode: 'Markdown' }
+                );
+            } else {
+                await ctx.reply(
+                    `🛡️ *BODHI DAILY SOVEREIGN SCAN COMPLETE*\n\n` +
+                    `🧠 Sentiment: ${mood} (${calmness}/10) | Risk: ${riskLabel}\n\n` +
+                    `👉 [Open Daily Sovereign Report](${telegraphUrl})`,
+                    { parse_mode: 'Markdown', disable_web_page_preview: false }
+                );
+            }
         } else {
             await ctx.reply("❌ Report generation completed, but Telegraph link could not be resolved. Please check the logs.");
         }

@@ -351,9 +351,9 @@ async function main() {
 
         report += `\n---\n\n## 🎯 DETAILED ANALYSIS\n\n`;
 
-        results.forEach((r, i) => {
+        const renderDetailedGame = (r: any, index: number, prefix: string = '') => {
             const startTime = new Date(r.time).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-            report += `### ${i+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
+            report += `### ${prefix}${index+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
             if (r.underdogPlayRank === 1) {
                 report += `**🥇 PRIMARY UNDERDOG UPSET PLAY OF THE DAY (+1.5 Alpha Boost)**\n`;
             } else if (r.underdogPlayRank === 2) {
@@ -375,10 +375,12 @@ async function main() {
             if (r.pillars && r.pillars.length > 0) {
                 const highPillars = r.pillars.filter((p: any) => p.score >= 7).sort((a: any, b: any) => b.score - a.score);
                 if (highPillars.length > 0) {
+                    report += `<!-- TELEGRAM_EXCLUDE_START -->\n`;
                     report += `  - **Core Driving Pillars:**\n`;
                     highPillars.forEach((p: any) => {
                         report += `    - *${p.pillar} (${p.score}/10)*: ${p.reason}\n`;
                     });
+                    report += `<!-- TELEGRAM_EXCLUDE_END -->\n`;
                 }
             }
 
@@ -427,7 +429,20 @@ async function main() {
                 r.killCriteria.forEach((kill: string) => report += `  - ${kill}\n`);
             }
             report += `\n`;
-        });
+        };
+
+        const upcomingGames = results.filter((r: any) => !r.inProgress);
+        const liveGames = results.filter((r: any) => r.inProgress);
+
+        if (upcomingGames.length > 0) {
+            report += `### 🚨 Actionable: Upcoming Games\n\n`;
+            upcomingGames.forEach((r: any, idx: number) => renderDetailedGame(r, idx));
+        }
+
+        if (liveGames.length > 0) {
+            report += `### 📊 Live Tracking: In-Progress & Completed\n\n`;
+            liveGames.forEach((r: any, idx: number) => renderDetailedGame(r, idx, 'Live-'));
+        }
 
         // ─── KBO SCAN ───────────────────────────────────────────────────────────
         try {
@@ -491,9 +506,9 @@ async function main() {
                 });
 
                 report += `\n`;
-                kboResults.slice(0, 3).forEach((r: any, i: number) => {
+                const renderKboGame = (r: any, index: number, prefix: string = '') => {
                     const startTime = new Date(r.time).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-                    report += `### KBO ${i+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
+                    report += `### KBO ${prefix}${index+1}. ${r.awayTeam} @ ${r.homeTeam} (${startTime} UTC)\n`;
                     report += `- **Target**: ${r.valueTeam || 'NEUTRAL'} | **Alpha**: ${r.unifiedAlpha.toFixed(2)}\n`;
                     report += `- **Analysis**: ${r.recommendedAction}\n`;
                     
@@ -507,10 +522,12 @@ async function main() {
                     if (r.pillars && r.pillars.length > 0) {
                         const highPillars = r.pillars.filter((p: any) => p.score >= 7).sort((a: any, b: any) => b.score - a.score);
                         if (highPillars.length > 0) {
+                            report += `<!-- TELEGRAM_EXCLUDE_START -->\n`;
                             report += `  - **Core Driving Pillars:**\n`;
                             highPillars.forEach((p: any) => {
                                 report += `    - *${p.pillar} (${p.score}/10)*: ${p.reason}\n`;
                             });
+                            report += `<!-- TELEGRAM_EXCLUDE_END -->\n`;
                         }
                     }
 
@@ -544,7 +561,20 @@ async function main() {
                     }
 
                     report += `\n`;
-                });
+                };
+
+                const upcomingKbo = kboResults.slice(0, 3).filter((r: any) => !r.inProgress);
+                const liveKbo = kboResults.slice(0, 3).filter((r: any) => r.inProgress);
+
+                if (upcomingKbo.length > 0) {
+                    report += `### 🚨 Actionable: Upcoming Games\n\n`;
+                    upcomingKbo.forEach((r: any, idx: number) => renderKboGame(r, idx));
+                }
+
+                if (liveKbo.length > 0) {
+                    report += `### 📊 Live Tracking: In-Progress & Completed\n\n`;
+                    liveKbo.forEach((r: any, idx: number) => renderKboGame(r, idx, 'Live-'));
+                }
             }
         } catch (kboErr) {
             console.error('KBO scan failed (non-fatal):', kboErr);
@@ -626,7 +656,6 @@ async function main() {
                 const token = process.env.TELEGRAM_BOT_TOKEN;
                 const chatId = process.env.TELEGRAM_ADMIN_ID;
                 // Create Telegraph page
-                const contentNodes = parseMarkdownToTelegraph(report);
                 let accessToken = process.env.TELEGRAPH_ACCESS_TOKEN;
                 if (!accessToken) {
                     const createAccountResponse = await fetch('https://api.telegra.ph/createAccount', {
@@ -642,6 +671,38 @@ async function main() {
                         accessToken = accountData.result.access_token;
                     }
                 }
+
+                let originalPageUrl = '';
+                if (baseReportExists && gamesHaveStarted) {
+                    try {
+                        const originalReportPath = path.join(process.cwd(), 'reports', `BODHI_SOVEREIGN_REPORT_${today}.md`);
+                        if (fs.existsSync(originalReportPath)) {
+                            const originalReportContent = fs.readFileSync(originalReportPath, 'utf8');
+                            const originalTelegramContent = originalReportContent.replace(/<!-- TELEGRAM_EXCLUDE_START -->[\s\S]*?<!-- TELEGRAM_EXCLUDE_END -->\n?/g, '');
+                            const originalContentNodes = parseMarkdownToTelegraph(originalTelegramContent);
+                            const oResponse = await fetch('https://api.telegra.ph/createPage', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    access_token: accessToken,
+                                    title: `🛡️ BODHI-8 DAILY SOVEREIGN REPORT: ${today} (Original)`,
+                                    author_name: 'Bet Bodhi',
+                                    content: originalContentNodes,
+                                    return_content: false
+                                })
+                            });
+                            const oData = await oResponse.json();
+                            if (oData.ok) {
+                                originalPageUrl = oData.result.url;
+                            }
+                        }
+                    } catch (e) {
+                        console.error('Failed to generate original report telegraph page:', e);
+                    }
+                }
+
+                const currentTelegramContent = report.replace(/<!-- TELEGRAM_EXCLUDE_START -->[\s\S]*?<!-- TELEGRAM_EXCLUDE_END -->\n?/g, '');
+                const contentNodes = parseMarkdownToTelegraph(currentTelegramContent);
 
                 const tResponse = await fetch('https://api.telegra.ph/createPage', {
                     method: 'POST',
@@ -661,22 +722,49 @@ async function main() {
                 } else {
                     console.error('Telegraph page creation failed:', tData);
                 }
-                // Send Telegram message with the page URL
-                const tgResponse = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `[Daily Sovereign Report](${pageUrl})`,
-                        parse_mode: 'Markdown',
-                        disable_web_page_preview: false
-                    })
-                });
-                const tgData = await tgResponse.json();
-                if (!tgData.ok) {
-                    console.error('Telegram sendMessage failed:', tgData);
+
+                if (originalPageUrl) {
+                    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: `🚨 **LIVE UPDATE SCAN COMPLETE** 🚨\n\n[Original Pre-Game Report](${originalPageUrl})`,
+                            parse_mode: 'Markdown',
+                            disable_web_page_preview: false
+                        })
+                    });
+                    
+                    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: `[Updated Live Report](${pageUrl})`,
+                            parse_mode: 'Markdown',
+                            disable_web_page_preview: false
+                        })
+                    });
                 } else {
-                    console.log(`📡 Telegram report link sent to admin: ${pageUrl}`);
+                    const tgResponse = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: `[Daily Sovereign Report](${pageUrl})`,
+                            parse_mode: 'Markdown',
+                            disable_web_page_preview: false
+                        })
+                    });
+                    const tgData = await tgResponse.json();
+                    if (!tgData.ok) {
+                        console.error('Telegram sendMessage failed:', tgData);
+                    }
+                }
+                
+                console.log(`📡 Telegram report link sent to admin: ${pageUrl}`);
+                if (originalPageUrl) {
+                    console.log(`📡 Original Telegram report link: ${originalPageUrl}`);
                 }
             } catch (err) {
                 console.error('❌ Telegram push failed:', err);

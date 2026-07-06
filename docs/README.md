@@ -53,3 +53,10 @@ launchctl load ~/Library/LaunchAgents/com.betbodhi.telegrambot.plist
 ```bash
 npx tsx scripts/calculate-live-pnl.ts
 ```
+
+**Nightly Sovereign Scanner:**
+* **Manual Execution**: Run `npx tsx scripts/scanners/nightly_full_report.ts` to trigger a full slate analysis.
+* **Scan Types**:
+  * `PRE_GAME`: Run before game kickoffs. Generates a baseline report containing the 7-pillar model breakdown.
+  * `LIVE_UPDATE`: Triggers automatically if games have started and a baseline report exists. It groups games into `Upcoming` and `Live Tracking` sections, and generates two distinct links (Original vs. Updated Live Report) pushed via separate Telegram messages for Instant View preview support.
+

@@ -346,8 +346,20 @@ export class MLBApi {
             if (!data.gameData || !data.liveData) return null;
 
             const boxscore = data.liveData.boxscore;
-            const homePitcher = data.gameData.probablePitchers?.home?.fullName;
-            const awayPitcher = data.gameData.probablePitchers?.away?.fullName;
+            let homePitcher = data.gameData.probablePitchers?.home?.fullName;
+            let awayPitcher = data.gameData.probablePitchers?.away?.fullName;
+            
+            // For live games where probablePitchers are removed, get the current active pitcher
+            if (!homePitcher && boxscore?.teams?.home?.pitchers?.length > 0) {
+                const pIds = boxscore.teams.home.pitchers;
+                const currentId = pIds[pIds.length - 1];
+                homePitcher = boxscore.teams.home.players[`ID${currentId}`]?.person?.fullName;
+            }
+            if (!awayPitcher && boxscore?.teams?.away?.pitchers?.length > 0) {
+                const pIds = boxscore.teams.away.pitchers;
+                const currentId = pIds[pIds.length - 1];
+                awayPitcher = boxscore.teams.away.players[`ID${currentId}`]?.person?.fullName;
+            }
 
             // Boxscore format sometimes fails to hydrate linepus in spring, try to fall back to the live gameData format if boxscore lineup is empty
             const parseLineup = (teamData: any, fallbackPlayers: any[]) => {
