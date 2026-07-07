@@ -1,6 +1,6 @@
 # 🧠 Bet Bodhi: Sovereign AI Sports Trading Agent & Execution Engine
 
-**Bet Bodhi** is a production-grade, fully autonomous **Sovereign AI Trading Agent** and **On-Chain Arbitrage Execution Infrastructure** running live daily across professional sports slates (MLB, KBO, NHL, NBA, MMA).
+**Bet Bodhi** is a production-grade, fully autonomous **Sovereign AI Trading Agent** and **On-Chain Arbitrage Execution Infrastructure** running live daily across professional sports slates.
 
 The system continuously scans the **Polymarket Central Limit Order Book (CLOB)** and **SX Bet on-chain markets**, evaluates matchups through a proprietary **7-Pillar Quantitative Model**, routes capital through a **Psychological Risk Intelligence & Sentiment Module (PRISM)**, and guards against regime shifts via automated slump circuit breakers, macro volatility telemetry, and live arbitrage detection.
 
