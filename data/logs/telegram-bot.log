@@ -1,0 +1,586 @@
+🚀 Bodhi Bot is live.
+[2026-07-04T23:29:45.977Z] User 7934081383 sent: /scan
+[2026-07-04T23:29:45.978Z] User 7934081383 sent: /report
+[2026-07-04T23:29:45.978Z] User 7934081383 sent: /picks
+[2026-07-04T23:29:45.979Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-07-04T23:29:45.979Z] Command override: /report detected while state was IDLE. Resetting state.
+[2026-07-04T23:29:45.979Z] Command override: /picks detected while state was IDLE. Resetting state.
+[2026-07-04T23:32:59.809Z] User 7934081383 sent: /scan
+[2026-07-04T23:33:03.206Z] User 7934081383 sent: /scan
+[2026-07-04T23:33:07.100Z] User 7934081383 sent: 7
+[2026-07-04T23:33:07.597Z] Starting unifiedScan for user 7934081383...
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+[2026-07-04T23:41:07.728Z] User 7934081383 sent: /scan
+[2026-07-04T23:41:07.733Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-07-04T23:41:11.065Z] User 7934081383 sent: /scan
+[2026-07-04T23:41:14.825Z] User 7934081383 sent: 7
+[2026-07-04T23:41:15.330Z] Starting unifiedScan for user 7934081383...
+🚀 Bodhi Bot is live.
+[2026-07-04T23:43:28.892Z] User 7934081383 sent: /scan
+[2026-07-04T23:43:28.896Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-07-04T23:43:31.604Z] User 7934081383 sent: 7
+[2026-07-04T23:43:34.471Z] User 7934081383 sent: 7
+[2026-07-04T23:43:34.972Z] Starting unifiedScan for user 7934081383...
+[2026-07-04T23:43:49.870Z] Delivering summary...
+[2026-07-04T23:43:50.136Z] Delivering detailed games (17)...
+[2026-07-04T23:43:56.630Z] Delivery complete.
+🚀 Bodhi Bot is live.
+[2026-07-04T23:46:27.658Z] User 7934081383 sent: /scan
+[2026-07-04T23:46:27.660Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-07-04T23:46:31.211Z] User 7934081383 sent: tired
+[2026-07-04T23:46:33.479Z] User 7934081383 sent: 9
+[2026-07-04T23:46:33.981Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-04
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9960 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Cincinnati Reds vs Baltimore Orioles:
+   Home Probable: Hunter Greene (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Young (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Houston Astros vs Tampa Bay Rays:
+   Home Probable: Hunter Brown (In Home Roster: true, In Away Roster: false)
+   Away Probable: Drew Rasmussen (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Parker Messick (In Home Roster: true, In Away Roster: false)
+   Away Probable: Sean Burke (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Chicago Cubs vs St. Louis Cardinals:
+   Home Probable: Shota Imanaga (In Home Roster: true, In Away Roster: false)
+   Away Probable: Kyle Leahy (In Away Roster: true, In Home Roster: false)
+⚠️ Integrity Override: Stripping Elite status from Shota Imanaga due to composite ERA of 4.30.
+⚠️ Integrity Override: Stripping Elite status from Shota Imanaga due to composite ERA of 4.30.
+🔍 [SWAP_CHECK] Atlanta Braves vs New York Mets:
+   Home Probable: Chris Sale (In Home Roster: true, In Away Roster: false)
+   Away Probable: Sean Manaea (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Sean Sullivan (In Home Roster: true, In Away Roster: false)
+   Away Probable: Robbie Ray (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Kansas City Royals vs Philadelphia Phillies:
+   Home Probable: Michael Wacha (In Home Roster: true, In Away Roster: false)
+   Away Probable: Jesús Luzardo (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Sam Aldegheri (In Home Roster: true, In Away Roster: false)
+   Away Probable: Sonny Gray (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Aaron Civale (In Home Roster: true, In Away Roster: false)
+   Away Probable: Sandy Alcantara (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Merrill Kelly (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Woodruff (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Yoshinobu Yamamoto (In Home Roster: true, In Away Roster: false)
+   Away Probable: Wandy Peralta (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-04_UPDATE_2046.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Francisco Giants @ Colorado Rockies | Alpha: 13.10 | Target: San Francisco Giants
+   ✓ Logged to SQLite [LIVE_UPDATE]: Miami Marlins @ Athletics | Alpha: 11.05 | Target: Miami Marlins
+   ✓ Logged to SQLite [LIVE_UPDATE]: Philadelphia Phillies @ Kansas City Royals | Alpha: 10.35 | Target: Philadelphia Phillies
+   ✓ Logged to SQLite [LIVE_UPDATE]: Chicago White Sox @ Cleveland Guardians | Alpha: 10.15 | Target: Chicago White Sox
+   ✓ Logged to SQLite [LIVE_UPDATE]: New York Mets @ Atlanta Braves | Alpha: 9.95 | Target: Atlanta Braves
+   ✓ Logged to SQLite [LIVE_UPDATE]: St. Louis Cardinals @ Chicago Cubs | Alpha: 6.65 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Baltimore Orioles @ Cincinnati Reds | Alpha: 6.55 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Tampa Bay Rays @ Houston Astros | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Diego Padres @ Los Angeles Dodgers | Alpha: 5.70 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-04-07-04-3
+
+🚀 Bodhi Bot is live.
+[2026-07-05T15:00:38.665Z] User 7934081383 sent: /scan
+[2026-07-05T15:00:38.685Z] Command override: /scan detected while state was IDLE. Resetting state.
+[2026-07-05T15:00:47.312Z] User 7934081383 sent: rested
+[2026-07-05T15:00:50.304Z] User 7934081383 sent: 8
+[sentiment] Logged user sentiment: mood=rested, calmness=8
+[2026-07-05T15:00:50.878Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-05
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9721 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Atlanta Braves vs New York Mets:
+   Home Probable: Martín Pérez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Nolan McLean (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Washington Nationals vs Pittsburgh Pirates:
+   Home Probable: Cade Cavalli (In Home Roster: true, In Away Roster: false)
+   Away Probable: Bubba Chandler (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Cincinnati Reds vs Baltimore Orioles:
+   Home Probable: Nick Lodolo (In Home Roster: true, In Away Roster: false)
+   Away Probable: Kyle Bradish (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] New York Yankees vs Minnesota Twins:
+   Home Probable: Ryan Weathers (In Home Roster: true, In Away Roster: false)
+   Away Probable: Joe Ryan (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Tanner Bibee (In Home Roster: true, In Away Roster: false)
+   Away Probable: Chris Murphy (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Chicago Cubs vs St. Louis Cardinals:
+   Home Probable: Javier Assad (In Home Roster: true, In Away Roster: false)
+   Away Probable: Matthew Liberatore (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Kansas City Royals vs Philadelphia Phillies:
+   Home Probable: Luinder Avila (In Home Roster: true, In Away Roster: false)
+   Away Probable: Aaron Nola (In Away Roster: true, In Home Roster: false)
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 6.04.
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 6.04.
+🔍 [SWAP_CHECK] Houston Astros vs Tampa Bay Rays:
+   Home Probable: Peter Lambert (In Home Roster: true, In Away Roster: false)
+   Away Probable:  (In Away Roster: true, In Home Roster: true)
+🔍 [SWAP_CHECK] Texas Rangers vs Detroit Tigers:
+   Home Probable: Kumar Rocker (In Home Roster: true, In Away Roster: false)
+   Away Probable: Casey Mize (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Tanner Gordon (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tyler Mahle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Eduardo Rodriguez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Sproat (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Gage Jump (In Home Roster: true, In Away Roster: false)
+   Away Probable: Eury Pérez (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Seattle Mariners vs Toronto Blue Jays:
+   Home Probable: Emerson Hancock (In Home Roster: true, In Away Roster: false)
+   Away Probable: Trey Yesavage (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Emmet Sheehan (In Home Roster: true, In Away Roster: false)
+   Away Probable: JP Sears (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Ryan Johnson (In Home Roster: true, In Away Roster: false)
+   Away Probable: Ranger Suarez (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-05.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [PRE_GAME]: Baltimore Orioles @ Cincinnati Reds | Alpha: 13.72 | Target: Baltimore Orioles
+   ✓ Logged to SQLite [PRE_GAME]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 11.63 | Target: Arizona Diamondbacks
+   ✓ Logged to SQLite [PRE_GAME]: St. Louis Cardinals @ Chicago Cubs | Alpha: 11.08 | Target: Chicago Cubs
+   ✓ Logged to SQLite [PRE_GAME]: Pittsburgh Pirates @ Washington Nationals | Alpha: 10.08 | Target: Washington Nationals
+   ✓ Logged to SQLite [PRE_GAME]: Miami Marlins @ Athletics | Alpha: 10.08 | Target: Miami Marlins
+   ✓ Logged to SQLite [PRE_GAME]: Minnesota Twins @ New York Yankees | Alpha: 9.85 | Target: Minnesota Twins
+   ✓ Logged to SQLite [PRE_GAME]: Detroit Tigers @ Texas Rangers | Alpha: 9.78 | Target: Detroit Tigers
+   ✓ Logged to SQLite [PRE_GAME]: Chicago White Sox @ Cleveland Guardians | Alpha: 9.28 | Target: Chicago White Sox
+   ✓ Logged to SQLite [PRE_GAME]: New York Mets @ Atlanta Braves | Alpha: 8.28 | Target: Atlanta Braves
+   ✓ Logged to SQLite [PRE_GAME]: San Diego Padres @ Los Angeles Dodgers | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Tampa Bay Rays @ Houston Astros | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: San Francisco Giants @ Colorado Rockies | Alpha: 5.50 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Philadelphia Phillies @ Kansas City Royals | Alpha: 4.30 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Toronto Blue Jays @ Seattle Mariners | Alpha: 4.20 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-07-05
+
+[2026-07-05T15:30:32.066Z] User 7934081383 sent: /ask
+[2026-07-05T15:30:32.067Z] Command override: /ask detected while state was IDLE. Resetting state.
+[2026-07-05T15:30:43.431Z] User 7934081383 sent: /ask what's my win rate this month?
+[2026-07-05T15:30:43.432Z] Command override: /ask what's my win rate this month? detected while state was IDLE. Resetting state.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+[2026-07-05T15:53:10.707Z] User 7934081383 sent: /ask whats my win rate this month
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+[2026-07-05T16:39:03.762Z] User 7934081383 sent: /ask what is my precise on-chain polymarket PnL?
+[2026-07-05T16:39:19.312Z] User 7934081383 sent: /ask what is my precise polymarket on chain pnl
+[trade-book] Fetching on-chain trade history (once)...
+[poly] Syncing history for Proxy (0x98652277eb9f1164d121c207e7a620710072f6af) and EOA (0xb1Aa8Ff8CEeB5506044DB7BcB2B2D243Ff680BB1)
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+[2026-07-05T16:44:42.390Z] User 7934081383 sent: /ask what is my polymarket on chain pnl
+[2026-07-05T16:46:55.429Z] User 7934081383 sent: /ask what is my net pnl
+[2026-07-05T16:47:42.852Z] User 7934081383 sent: /ask what is my net pnl
+[2026-07-05T21:06:06.427Z] User 7934081383 sent: /scan
+[2026-07-05T21:06:15.905Z] User 7934081383 sent: dialed in
+[2026-07-05T21:06:18.807Z] User 7934081383 sent: 8
+[sentiment] Logged to Supabase user_sentiment: 1c5340b4-8318-4fc9-9d89-7886850576bf
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T21:06:19.609Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+[sentiment] Loaded session sentiment: mood=dialed in, calmness=8/10, risk=1x
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-05
+🧠 TRADER STATE: mood=dialed in | calmness=8/10 | risk=1.0x (Full Sizing)
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9357 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Atlanta Braves vs New York Mets:
+   Home Probable: Martín Pérez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Nolan McLean (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Tanner Bibee (In Home Roster: true, In Away Roster: false)
+   Away Probable: Chris Murphy (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Chicago Cubs vs St. Louis Cardinals:
+   Home Probable: Javier Assad (In Home Roster: true, In Away Roster: false)
+   Away Probable: Matthew Liberatore (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Kansas City Royals vs Philadelphia Phillies:
+   Home Probable: Luinder Avila (In Home Roster: true, In Away Roster: false)
+   Away Probable: Aaron Nola (In Away Roster: true, In Home Roster: false)
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 5.87.
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 5.87.
+🔍 [SWAP_CHECK] Houston Astros vs Tampa Bay Rays:
+   Home Probable: Peter Lambert (In Home Roster: true, In Away Roster: false)
+   Away Probable: Mason Englert (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Texas Rangers vs Detroit Tigers:
+   Home Probable: Kumar Rocker (In Home Roster: true, In Away Roster: false)
+   Away Probable: Casey Mize (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Tanner Gordon (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tyler Mahle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Eduardo Rodriguez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Sproat (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Gage Jump (In Home Roster: true, In Away Roster: false)
+   Away Probable: Eury Pérez (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Seattle Mariners vs Toronto Blue Jays:
+   Home Probable: Emerson Hancock (In Home Roster: true, In Away Roster: false)
+   Away Probable: Trey Yesavage (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Emmet Sheehan (In Home Roster: true, In Away Roster: false)
+   Away Probable: JP Sears (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Ryan Johnson (In Home Roster: true, In Away Roster: false)
+   Away Probable: Ranger Suarez (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-05_UPDATE_1806.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [LIVE_UPDATE]: New York Mets @ Atlanta Braves | Alpha: 14.61 | Target: Atlanta Braves
+   ✓ Logged to SQLite [LIVE_UPDATE]: Chicago White Sox @ Cleveland Guardians | Alpha: 11.95 | Target: Cleveland Guardians
+   ✓ Logged to SQLite [LIVE_UPDATE]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 10.08 | Target: Arizona Diamondbacks
+   ✓ Logged to SQLite [LIVE_UPDATE]: St. Louis Cardinals @ Chicago Cubs | Alpha: 6.28 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Miami Marlins @ Athletics | Alpha: 5.88 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Tampa Bay Rays @ Houston Astros | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Diego Padres @ Los Angeles Dodgers | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Francisco Giants @ Colorado Rockies | Alpha: 5.50 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Philadelphia Phillies @ Kansas City Royals | Alpha: 4.30 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Toronto Blue Jays @ Seattle Mariners | Alpha: 4.20 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Detroit Tigers @ Texas Rangers | Alpha: 3.03 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-07-05-2
+
+[2026-07-05T21:19:23.980Z] User 7934081383 sent: /scan
+[2026-07-05T21:19:31.066Z] User 7934081383 sent: slightly annoyed
+[2026-07-05T21:19:35.574Z] User 7934081383 sent: 8
+[sentiment] Logged to Supabase user_sentiment: dfb88188-2ea3-4d04-b734-f076e57b7bd3
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T21:19:36.130Z] Starting nightly_full_report scan for user 7934081383...
+[2026-07-05T21:21:43.108Z] User 7934081383 sent: /scan
+[2026-07-05T21:21:51.952Z] User 7934081383 sent: slightly annoyed
+[2026-07-05T21:21:53.302Z] User 7934081383 sent: 8
+[sentiment] Logged to Supabase user_sentiment: 4316d5bd-1a9a-49ff-b0ad-2bad57993ec7
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T21:21:53.856Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[sentiment] Loaded session sentiment: mood=slightly annoyed, calmness=8/10, risk=1x
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-05
+🧠 TRADER STATE: mood=slightly annoyed | calmness=8/10 | risk=1.0x (Full Sizing)
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9321 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Tanner Bibee (In Home Roster: true, In Away Roster: false)
+   Away Probable: Chris Murphy (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Kansas City Royals vs Philadelphia Phillies:
+   Home Probable: Luinder Avila (In Home Roster: true, In Away Roster: false)
+   Away Probable: Aaron Nola (In Away Roster: true, In Home Roster: false)
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 5.87.
+⚠️ Integrity Override: Stripping Elite status from Aaron Nola due to composite ERA of 5.87.
+🔍 [SWAP_CHECK] Houston Astros vs Tampa Bay Rays:
+   Home Probable: Peter Lambert (In Home Roster: true, In Away Roster: false)
+   Away Probable: Mason Englert (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Texas Rangers vs Detroit Tigers:
+   Home Probable: Kumar Rocker (In Home Roster: true, In Away Roster: false)
+   Away Probable: Casey Mize (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Tanner Gordon (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tyler Mahle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Eduardo Rodriguez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Sproat (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Gage Jump (In Home Roster: true, In Away Roster: false)
+   Away Probable: Eury Pérez (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Seattle Mariners vs Toronto Blue Jays:
+   Home Probable: Emerson Hancock (In Home Roster: true, In Away Roster: false)
+   Away Probable: Trey Yesavage (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Emmet Sheehan (In Home Roster: true, In Away Roster: false)
+   Away Probable: JP Sears (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Ryan Johnson (In Home Roster: true, In Away Roster: false)
+   Away Probable: Ranger Suarez (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-05_UPDATE_1822.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [LIVE_UPDATE]: Chicago White Sox @ Cleveland Guardians | Alpha: 10.35 | Target: Cleveland Guardians
+   ✓ Logged to SQLite [LIVE_UPDATE]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 7.58 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Tampa Bay Rays @ Houston Astros | Alpha: 6.45 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Philadelphia Phillies @ Kansas City Royals | Alpha: 5.80 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Miami Marlins @ Athletics | Alpha: 5.73 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Diego Padres @ Los Angeles Dodgers | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Francisco Giants @ Colorado Rockies | Alpha: 5.50 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Toronto Blue Jays @ Seattle Mariners | Alpha: 4.20 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Detroit Tigers @ Texas Rangers | Alpha: 3.33 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-07-05-3
+
+🚀 Bodhi Bot is live.
+[2026-07-05T21:31:58.627Z] User 7934081383 sent: /scan
+[2026-07-05T21:32:05.776Z] User 7934081383 sent: annoyed, frustrated
+[2026-07-05T21:32:08.198Z] User 7934081383 sent: 7
+[sentiment] Logged to Supabase user_sentiment: c133fc50-1685-4809-a476-2fa900095713
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T21:32:09.367Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[sentiment] Loaded session sentiment: mood=annoyed, frustrated, calmness=7/10, risk=0.5x
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-05
+🧠 TRADER STATE: mood=annoyed, frustrated | calmness=7/10 | risk=0.5x (Negative Mood Override)
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9290 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Tanner Bibee (In Home Roster: true, In Away Roster: false)
+   Away Probable: Chris Murphy (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Houston Astros vs Tampa Bay Rays:
+   Home Probable: Peter Lambert (In Home Roster: true, In Away Roster: false)
+   Away Probable: Mason Englert (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Texas Rangers vs Detroit Tigers:
+   Home Probable: Kumar Rocker (In Home Roster: true, In Away Roster: false)
+   Away Probable: Casey Mize (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Tanner Gordon (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tyler Mahle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Eduardo Rodriguez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Sproat (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Gage Jump (In Home Roster: true, In Away Roster: false)
+   Away Probable: Eury Pérez (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Seattle Mariners vs Toronto Blue Jays:
+   Home Probable: Emerson Hancock (In Home Roster: true, In Away Roster: false)
+   Away Probable: Trey Yesavage (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Emmet Sheehan (In Home Roster: true, In Away Roster: false)
+   Away Probable: JP Sears (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Ryan Johnson (In Home Roster: true, In Away Roster: false)
+   Away Probable: Ranger Suarez (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-05_UPDATE_1832.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [LIVE_UPDATE]: Chicago White Sox @ Cleveland Guardians | Alpha: 10.65 | Target: Cleveland Guardians
+   ✓ Logged to SQLite [LIVE_UPDATE]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 10.18 | Target: Arizona Diamondbacks
+   ✓ Logged to SQLite [LIVE_UPDATE]: Tampa Bay Rays @ Houston Astros | Alpha: 6.45 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Diego Padres @ Los Angeles Dodgers | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Francisco Giants @ Colorado Rockies | Alpha: 5.50 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Toronto Blue Jays @ Seattle Mariners | Alpha: 4.20 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Detroit Tigers @ Texas Rangers | Alpha: 3.28 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Miami Marlins @ Athletics | Alpha: 3.18 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-07-05-4
+📡 Original Telegram report link: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-Original-07-05-2
+
+[2026-07-05T22:01:08.853Z] User 7934081383 sent: /scan
+[2026-07-05T22:01:11.188Z] User 7934081383 sent: angry
+[2026-07-05T22:01:12.574Z] User 7934081383 sent: 7
+[sentiment] Logged to Supabase user_sentiment: b37252bb-7bc9-4939-8406-7feb5e5a6875
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T22:01:13.154Z] Starting nightly_full_report scan for user 7934081383...
+[2026-07-05T22:07:03.176Z] User 7934081383 sent: /scan
+[2026-07-05T22:07:09.853Z] User 7934081383 sent: angry
+[2026-07-05T22:07:12.215Z] User 7934081383 sent: 7
+[sentiment] Logged to Supabase user_sentiment: 0a412ce1-5f41-4fd8-851d-219c6bc59fcc
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T22:07:12.786Z] Starting nightly_full_report scan for user 7934081383...
+[2026-07-05T22:34:56.330Z] User 7934081383 sent: /scan
+[2026-07-05T22:34:58.350Z] User 7934081383 sent: angry
+[2026-07-05T22:35:00.490Z] User 7934081383 sent: 5
+[sentiment] Logged to Supabase user_sentiment: b6fe2f6d-a8e3-4967-9a8d-43d030bcd7da
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-05T22:35:01.070Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[sentiment] Loaded session sentiment: mood=angry, calmness=5/10, risk=0.5x
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-05
+🧠 TRADER STATE: mood=angry | calmness=5/10 | risk=0.5x (Negative Mood Override)
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9175 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] Cleveland Guardians vs Chicago White Sox:
+   Home Probable: Tanner Bibee (In Home Roster: true, In Away Roster: false)
+   Away Probable: Chris Murphy (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Colorado Rockies vs San Francisco Giants:
+   Home Probable: Tanner Gordon (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tyler Mahle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Arizona Diamondbacks vs Milwaukee Brewers:
+   Home Probable: Eduardo Rodriguez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Brandon Sproat (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Athletics vs Miami Marlins:
+   Home Probable: Gage Jump (In Home Roster: true, In Away Roster: false)
+   Away Probable: Eury Pérez (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Seattle Mariners vs Toronto Blue Jays:
+   Home Probable: Emerson Hancock (In Home Roster: true, In Away Roster: false)
+   Away Probable: Trey Yesavage (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs San Diego Padres:
+   Home Probable: Emmet Sheehan (In Home Roster: true, In Away Roster: false)
+   Away Probable: JP Sears (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Los Angeles Angels vs Boston Red Sox:
+   Home Probable: Ryan Johnson (In Home Roster: true, In Away Roster: false)
+   Away Probable: Ranger Suarez (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-05_UPDATE_1935.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [LIVE_UPDATE]: Milwaukee Brewers @ Arizona Diamondbacks | Alpha: 14.58 | Target: Arizona Diamondbacks
+   ✓ Logged to SQLite [LIVE_UPDATE]: Chicago White Sox @ Cleveland Guardians | Alpha: 12.85 | Target: Cleveland Guardians
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Francisco Giants @ Colorado Rockies | Alpha: 6.25 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Boston Red Sox @ Los Angeles Angels | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: San Diego Padres @ Los Angeles Dodgers | Alpha: 5.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Toronto Blue Jays @ Seattle Mariners | Alpha: 4.20 | Target: NEUTRAL
+   ✓ Logged to SQLite [LIVE_UPDATE]: Miami Marlins @ Athletics | Alpha: 2.60 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-05-07-05-6
+
+🚀 Bodhi Bot is live.
+[2026-07-07T00:30:17.247Z] User 7934081383 sent: /scan
+[2026-07-07T00:30:21.459Z] User 7934081383 sent: good
+[2026-07-07T00:30:22.509Z] User 7934081383 sent: 9
+[sentiment] Logged to Supabase user_sentiment: b7ef62cb-b8a4-4c76-aae1-b11dc150e029
+[sentiment] Session file written: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/session_sentiment.json
+[2026-07-07T00:30:23.086Z] Starting nightly_full_report scan for user 7934081383...
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[sentiment] Loaded session sentiment: mood=good, calmness=9/10, risk=1x
+
+──────────────────────────────────────────────────────────────────────
+🛡️  BODHI-8 NIGHTLY SOVEREIGN SCAN: 2026-07-07
+🧠 TRADER STATE: mood=good | calmness=9/10 | risk=1.0x (Full Sizing)
+──────────────────────────────────────────────────────────────────────
+
+📂 Loading 10 Polymarket history files...
+  ✓ Synced 9402 Polymarket sports markets (via SlateResolver + Gateway)
+🔍 [SWAP_CHECK] St. Louis Cardinals vs Milwaukee Brewers:
+   Home Probable:  (In Home Roster: true, In Away Roster: true)
+   Away Probable: Jacob Misiorowski (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] St. Louis Cardinals vs Milwaukee Brewers:
+   Home Probable:  (In Home Roster: true, In Away Roster: true)
+   Away Probable:  (In Away Roster: true, In Home Roster: true)
+🔍 [SWAP_CHECK] Baltimore Orioles vs Chicago Cubs:
+   Home Probable: Shane Baz (In Home Roster: true, In Away Roster: false)
+   Away Probable: Matthew Boyd (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Detroit Tigers vs Athletics:
+   Home Probable: Tarik Skubal (In Home Roster: true, In Away Roster: false)
+   Away Probable: J.T. Ginn (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Pittsburgh Pirates vs Atlanta Braves:
+   Home Probable: Paul Skenes (In Home Roster: true, In Away Roster: false)
+   Away Probable: Hurston Waldrep (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Miami Marlins vs Seattle Mariners:
+   Home Probable: Max Meyer (In Home Roster: true, In Away Roster: false)
+   Away Probable:  (In Away Roster: true, In Home Roster: true)
+🔍 [SWAP_CHECK] Tampa Bay Rays vs New York Yankees:
+   Home Probable:  (In Home Roster: true, In Away Roster: true)
+   Away Probable: Will Warren (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Washington Nationals vs Houston Astros:
+   Home Probable: Andrew Alvarez (In Home Roster: true, In Away Roster: false)
+   Away Probable: Tatsuya Imai (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] New York Mets vs Kansas City Royals:
+   Home Probable:  (In Home Roster: true, In Away Roster: true)
+   Away Probable: Seth Lugo (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Cincinnati Reds vs Philadelphia Phillies:
+   Home Probable: Andrew Abbott (In Home Roster: true, In Away Roster: false)
+   Away Probable:  (In Away Roster: true, In Home Roster: true)
+🔍 [SWAP_CHECK] Minnesota Twins vs Cleveland Guardians:
+   Home Probable: Taj Bradley (In Home Roster: true, In Away Roster: false)
+   Away Probable: Joey Cantillo (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Chicago White Sox vs Boston Red Sox:
+   Home Probable: Noah Schultz (In Home Roster: true, In Away Roster: false)
+   Away Probable: Payton Tolle (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] Texas Rangers vs Los Angeles Angels:
+   Home Probable: Jacob deGrom (In Home Roster: true, In Away Roster: false)
+   Away Probable: José Soriano (In Away Roster: true, In Home Roster: false)
+🔍 [SWAP_CHECK] San Diego Padres vs Arizona Diamondbacks:
+   Home Probable:  (In Home Roster: true, In Away Roster: true)
+   Away Probable: Zac Gallen (In Away Roster: true, In Home Roster: false)
+⚠️ Integrity Override: Stripping Elite status from Zac Gallen due to composite ERA of 6.36.
+⚠️ Integrity Override: Stripping Elite status from Zac Gallen due to composite ERA of 6.36.
+🔍 [SWAP_CHECK] San Francisco Giants vs Toronto Blue Jays:
+   Home Probable: Trevor McDonald (In Home Roster: true, In Away Roster: false)
+   Away Probable:  (In Away Roster: true, In Home Roster: true)
+🔍 [SWAP_CHECK] Los Angeles Dodgers vs Colorado Rockies:
+   Home Probable: Justin Wrobleski (In Home Roster: true, In Away Roster: false)
+   Away Probable: Michael Lorenzen (In Away Roster: true, In Home Roster: false)
+✅ Nightly report generated: /Users/nicholasmacaskill/Downloads/bet-bodhi/reports/BODHI_SOVEREIGN_REPORT_2026-07-07.md
+💾 Slate snapshot saved for Watchdog: /Users/nicholasmacaskill/Downloads/bet-bodhi/data/active_slate.json
+
+💾 Persisting daily predictions to local SQLite database...
+   ✓ Logged to SQLite [PRE_GAME]: Chicago Cubs @ Baltimore Orioles | Alpha: 13.10 | Target: Baltimore Orioles
+   ✓ Logged to SQLite [PRE_GAME]: Seattle Mariners @ Miami Marlins | Alpha: 12.02 | Target: Miami Marlins
+   ✓ Logged to SQLite [PRE_GAME]: Atlanta Braves @ Pittsburgh Pirates | Alpha: 11.48 | Target: Atlanta Braves
+   ✓ Logged to SQLite [PRE_GAME]: Houston Astros @ Washington Nationals | Alpha: 10.87 | Target: Washington Nationals
+   ✓ Logged to SQLite [PRE_GAME]: Los Angeles Angels @ Texas Rangers | Alpha: 10.23 | Target: Los Angeles Angels
+   ✓ Logged to SQLite [PRE_GAME]: Arizona Diamondbacks @ San Diego Padres | Alpha: 9.72 | Target: San Diego Padres
+   ✓ Logged to SQLite [PRE_GAME]: Philadelphia Phillies @ Cincinnati Reds | Alpha: 9.03 | Target: Philadelphia Phillies
+   ✓ Logged to SQLite [PRE_GAME]: Colorado Rockies @ Los Angeles Dodgers | Alpha: 7.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Cleveland Guardians @ Minnesota Twins | Alpha: 6.86 | Target: Cleveland Guardians
+   ✓ Logged to SQLite [PRE_GAME]: Toronto Blue Jays @ San Francisco Giants | Alpha: 6.26 | Target: San Francisco Giants
+   ✓ Logged to SQLite [PRE_GAME]: Milwaukee Brewers @ St. Louis Cardinals | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Boston Red Sox @ Chicago White Sox | Alpha: 6.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Kansas City Royals @ New York Mets | Alpha: 5.00 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Milwaukee Brewers @ St. Louis Cardinals | Alpha: 4.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: Athletics @ Detroit Tigers | Alpha: 4.70 | Target: NEUTRAL
+   ✓ Logged to SQLite [PRE_GAME]: New York Yankees @ Tampa Bay Rays | Alpha: 4.70 | Target: NEUTRAL
+📡 Telegram report link sent to admin: https://telegra.ph/BODHI-8-DAILY-SOVEREIGN-REPORT-2026-07-07-07-07
+
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.
+🚀 Bodhi Bot is live.

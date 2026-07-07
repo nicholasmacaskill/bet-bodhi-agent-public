@@ -1,0 +1,5399 @@
+{
+  "kboProfit": 312.29114347799987,
+  "mlbProfit": 224.27747053299976,
+  "otherProfit": -335.09386201100006,
+  "totalRealizedProfit": 201.47475199999963,
+  "totalOpenValue": 15,
+  "markets": {
+    "31131787929193685342682710189110277097489101031247519380037247849823139317838": {
+      "question": "Milwaukee Brewers vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": false,
+      "winner": "",
+      "positions": {
+        "Milwaukee Brewers": 60
+      },
+      "totalCost": 15,
+      "realizedPnL": 0
+    },
+    "45465648306812742178071383146798692092551693687233217755748738400663007491721": {
+      "question": "Boston Red Sox vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "Los Angeles Angels": 219.507588
+      },
+      "totalCost": 22.504999500000004,
+      "realizedPnL": -22.504999500000004
+    },
+    "14293311601055920122849220169171076750540838072676104600079776183035373221351": {
+      "question": "Boston Red Sox vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "Los Angeles Angels": 157.142854
+      },
+      "totalCost": 20.999999650000003,
+      "realizedPnL": -20.999999650000003
+    },
+    "45622053424272621325856787176165488752726511972300362230521765441220323332025": {
+      "question": "Baltimore Orioles vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Cincinnati Reds": 107.142856
+      },
+      "totalCost": 14.999999840000001,
+      "realizedPnL": -14.999999840000001
+    },
+    "81990441143965995787933075588649686316877974637646137606886527009807513123431": {
+      "question": "Detroit Tigers vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Texas Rangers": 63
+      },
+      "totalCost": 4.41,
+      "realizedPnL": -4.41
+    },
+    "50900538483086726401843006956236657458188081486995290850926568297475322543016": {
+      "question": "KBO: NC Dinos vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "Kia Tigers": 44.5
+      },
+      "totalCost": 9.790000000000001,
+      "realizedPnL": -9.790000000000001
+    },
+    "103278713344513422765117628743777149051207313224961498103726032171396266252863": {
+      "question": "KBO: Lotte Giants vs. KT Wiz",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "KT Wiz": 51.5
+      },
+      "totalCost": 9.785,
+      "realizedPnL": -9.785
+    },
+    "50424538010424703054582151727582014409830160356443418760386416613741547778174": {
+      "question": "KBO: Samsung Lions vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Samsung Lions": 0.0069550000000049295
+      },
+      "totalCost": -50.75440035,
+      "realizedPnL": 50.75440035
+    },
+    "46871126783696347463427489543292645652297754357767499503183297044368346505623": {
+      "question": "KBO: Hanwha Eagles vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "LG Twins": 199.2
+      },
+      "totalCost": 9.96,
+      "realizedPnL": -9.96
+    },
+    "87579644578600419937586648377260055802469164903073289145545727755532017447010": {
+      "question": "San Diego Padres vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "San Diego Padres": 83.333332
+      },
+      "totalCost": 4.99999992,
+      "realizedPnL": -4.99999992
+    },
+    "33429291283387752848255110376769806732097000985430827015845379386457709466747": {
+      "question": "Los Angeles Angels vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Los Angeles Angels": 86.36363399999999
+      },
+      "totalCost": 22.99999962,
+      "realizedPnL": -22.99999962
+    },
+    "99649132098413906871031828445604198709028586962322431946131405304069548927539": {
+      "question": "Detroit Tigers vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Detroit Tigers": 45.454544
+      },
+      "totalCost": 4.99999984,
+      "realizedPnL": -4.99999984
+    },
+    "51160567442690150303376414603922189574918103948619459551235625770818577580382": {
+      "question": "KBO: SSG Landers vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "Kia Tigers": 0.0058810000000022455
+      },
+      "totalCost": -53.053000229999995,
+      "realizedPnL": 53.053000229999995
+    },
+    "33114575013722905597263913385145272197193523726885294851762261537824071323833": {
+      "question": "Atlanta Braves vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Atlanta Braves": 70.5
+      },
+      "totalCost": 5.5600000000000005,
+      "realizedPnL": -5.5600000000000005
+    },
+    "9700770335380031261548870690920646659918785795514148635918047660822128508459": {
+      "question": "Baltimore Orioles vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Los Angeles Angels": 214.666665
+      },
+      "totalCost": 15.839999899999999,
+      "realizedPnL": -15.839999899999999
+    },
+    "78377097558148322357664537163565753183909330751891064923783676605928692175931": {
+      "question": "Philadelphia Phillies vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Philadelphia Phillies": 144.166665
+      },
+      "totalCost": 29.99999945,
+      "realizedPnL": -29.99999945
+    },
+    "31925040506596685502309235558344446053159620512761413919181174255961581582503": {
+      "question": "New York Yankees vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "New York Yankees": 107.871062
+      },
+      "totalCost": 19.99999936,
+      "realizedPnL": -19.99999936
+    },
+    "51090219614592647721294515605515405001403450473000511976102484255298399709677": {
+      "question": "New York Mets vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "New York Mets": 109.690473
+      },
+      "totalCost": 7.3699997900000005,
+      "realizedPnL": -7.3699997900000005
+    },
+    "25632789537444169747860124707788707627092861784778315801821725177524001127448": {
+      "question": "Los Angeles Angels vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "Los Angeles Angels": 0.001665000000002692
+      },
+      "totalCost": -30.959210399999996,
+      "realizedPnL": 30.959210399999996
+    },
+    "47582509695779086043990453335409690764929819164372185512693557517365481814516": {
+      "question": "Pittsburgh Pirates vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Pittsburgh Pirates": 37.142856
+      },
+      "totalCost": 12.9999996,
+      "realizedPnL": -12.9999996
+    },
+    "111710563063507487620960064747055390650249755243297934528740230972415970533579": {
+      "question": "Washington Nationals vs. Tampa Bay Rays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.006664999999998145
+      },
+      "totalCost": -33.886000599999996,
+      "realizedPnL": 33.886000599999996
+    },
+    "22935545290729144434308196525445828829404098473988644165850579852271521281879": {
+      "question": "Cincinnati Reds vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "New York Yankees": 147.794116
+      },
+      "totalCost": 18.46999972,
+      "realizedPnL": -18.46999972
+    },
+    "108385264783285336039115811550327783378659883192164007083342428662429320133581": {
+      "question": "Los Angeles Angels vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Los Angeles Angels": 0
+      },
+      "totalCost": -93.5,
+      "realizedPnL": 93.5
+    },
+    "112144517480834982538335403869801763968829226757840648632610273315260319671511": {
+      "question": "Los Angeles Angels vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Los Angeles Angels": 218.33333199999998
+      },
+      "totalCost": 11.44999996,
+      "realizedPnL": -11.44999996
+    },
+    "20452567927199702921054359949205827630855522650277327680812289611264881506404": {
+      "question": "Baltimore Orioles vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Baltimore Orioles": 64.285713
+      },
+      "totalCost": 8.999999820000001,
+      "realizedPnL": -8.999999820000001
+    },
+    "29236777826692850827951765379604536828600300522468700033625246933161518543130": {
+      "question": "Minnesota Twins vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Texas Rangers": 291.875
+      },
+      "totalCost": 11.47,
+      "realizedPnL": -11.47
+    },
+    "102202515550668412724623556257792682143347433924235445251909849582499589486865": {
+      "question": "San Francisco Giants vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Atlanta Braves": 127.52113299999999
+      },
+      "totalCost": 32.99999891,
+      "realizedPnL": -32.99999891
+    },
+    "52477734327425616069256682633696687481745411335858228028319337105800603402109": {
+      "question": "KBO: Lotte Giants vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "SSG Landers": 40.108694
+      },
+      "totalCost": 18.44999924,
+      "realizedPnL": -18.44999924
+    },
+    "65394698414191454126487696793334391261308442294199101685695385319006852776796": {
+      "question": "KBO: LG Twins vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "LG Twins": 110.01587
+      },
+      "totalCost": 25.515555000000003,
+      "realizedPnL": -25.515555000000003
+    },
+    "80224234413033851114951572125987779839495709093771662482721115437023673085878": {
+      "question": "Minnesota Twins vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Texas Rangers": 116.785713
+      },
+      "totalCost": 24.99999955,
+      "realizedPnL": -24.99999955
+    },
+    "51315217904423049645200746851050778877345251578767941106065258361860892591543": {
+      "question": "Miami Marlins vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Miami Marlins": 216.28571
+      },
+      "totalCost": 21.27999968,
+      "realizedPnL": -21.27999968
+    },
+    "16247588415544711372178124413392463028467340283588404285439048761195875099087": {
+      "question": "KBO: Hanwha Eagles vs. NC Dinos",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "Hanwha Eagles": 78.82352800000001
+      },
+      "totalCost": 13.799999760000002,
+      "realizedPnL": -13.799999760000002
+    },
+    "69818524595137951298251844610488089003418224051019112983075457658907680699598": {
+      "question": "KBO: Lotte Giants vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "Lotte Giants": 0
+      },
+      "totalCost": -31.36,
+      "realizedPnL": 31.36
+    },
+    "63895832171922786430686702620759519277506715478689823059441065885067228477301": {
+      "question": "Texas Rangers vs. Boston Red Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Boston Red Sox": 138.596488
+      },
+      "totalCost": 24.999999439999996,
+      "realizedPnL": -24.999999439999996
+    },
+    "8950745035238671551556820405821976035859105475355502183171042767000730944552": {
+      "question": "Chicago Cubs vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Chicago Cubs": 118.181817
+      },
+      "totalCost": 12.99999987,
+      "realizedPnL": -12.99999987
+    },
+    "74429768041824312169228259722984703480926744124117441744664102301207755965156": {
+      "question": "Atlanta Braves vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "Atlanta Braves": 207.5
+      },
+      "totalCost": 20,
+      "realizedPnL": -20
+    },
+    "93106748534541864660405541677712784607308328622062659684945819784665859946190": {
+      "question": "KBO: SSG Landers vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Samsung Lions": 0.008886999999994316
+      },
+      "totalCost": -34.965009550000005,
+      "realizedPnL": 34.965009550000005
+    },
+    "3210078141136635962849779897756715110270866019173451617879982764751117399573": {
+      "question": "KBO: SSG Landers vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "SSG Landers": 61.53846
+      },
+      "totalCost": 7.9999998,
+      "realizedPnL": -7.9999998
+    },
+    "47304086095692117159312440159834069497181070497147731642246509352958486754591": {
+      "question": "Miami Marlins vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Miami Marlins": 88.50672800000001
+      },
+      "totalCost": 31.04999822,
+      "realizedPnL": -31.04999822
+    },
+    "111052798432435427508841304343333888671577585940663572225823644179547853018080": {
+      "question": "St. Louis Cardinals vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Minnesota Twins": 107.777776
+      },
+      "totalCost": 19.999999680000002,
+      "realizedPnL": -19.999999680000002
+    },
+    "107189349512551215006625904123035897072918632240020745097724590038481944225341": {
+      "question": "KBO: NC Dinos vs. KT Wiz",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "KT Wiz",
+      "positions": {
+        "NC Dinos": 35.681419
+      },
+      "totalCost": -16.837373508,
+      "realizedPnL": 16.837373508
+    },
+    "100791618883789655550126300034072339625906247559548732741521263600585566464574": {
+      "question": "KBO: SSG Landers vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Samsung Lions": 0.005554000000003612
+      },
+      "totalCost": -25.148000559999996,
+      "realizedPnL": 25.148000559999996
+    },
+    "13894617436861496779662351261548823861518503693543321950916993868224926965208": {
+      "question": "KBO: Lotte Giants vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "LG Twins": 259.474334
+      },
+      "totalCost": 39.36460899000001,
+      "realizedPnL": -39.36460899000001
+    },
+    "67859147006087259174720158743675956871934558895728479297274689970909043177353": {
+      "question": "KBO: Doosan Bears vs. Lotte Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "Lotte Giants": 206.529049
+      },
+      "totalCost": 40.04999898,
+      "realizedPnL": -40.04999898
+    },
+    "97484646035153355030372479205703444236629597241613636608849120190199536930582": {
+      "question": "KBO: Samsung Lions vs. KT Wiz",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "KT Wiz",
+      "positions": {
+        "Samsung Lions": 136.403659
+      },
+      "totalCost": 24.5853324,
+      "realizedPnL": -24.5853324
+    },
+    "11966157217239327472070820230602220981745817087562556869646839645036535603381": {
+      "question": "KBO: Doosan Bears vs. Lotte Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "Lotte Giants": 76.923075
+      },
+      "totalCost": 9.99999975,
+      "realizedPnL": -9.99999975
+    },
+    "55904664014877920628880198101822202936493713045895459959897081829981300282752": {
+      "question": "KBO: Kia Tigers vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "Hanwha Eagles": 136
+      },
+      "totalCost": 26.080000000000002,
+      "realizedPnL": -26.080000000000002
+    },
+    "64668633930885690183332949398581267894169169744466368223059211633414486757031": {
+      "question": "KBO: Samsung Lions vs. KT Wiz",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "KT Wiz",
+      "positions": {
+        "Samsung Lions": 65.277775
+      },
+      "totalCost": 4.79166645,
+      "realizedPnL": -4.79166645
+    },
+    "96938017585810752412259515452882451485664768632907210340667634174872604901466": {
+      "question": "Pittsburgh Pirates vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Pittsburgh Pirates": 70.12986699999999
+      },
+      "totalCost": 14.999999340000002,
+      "realizedPnL": -14.999999340000002
+    },
+    "50141795426818119987918825906365331841586890609816311877895912297466437556721": {
+      "question": "Kansas City Royals vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Kansas City Royals": 0.003528000000002862
+      },
+      "totalCost": -32.34980048,
+      "realizedPnL": 32.34980048
+    },
+    "38146399496763115786871940487019050816320253319289719327994591725975200222438": {
+      "question": "Pittsburgh Pirates vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Atlanta Braves": 0.009653999999997609
+      },
+      "totalCost": 8.743599659999997,
+      "realizedPnL": -8.743599659999997
+    },
+    "71916554212627510038228485169557738221362432620916328187156752439193897552518": {
+      "question": "KBO: LG Twins vs. NC Dinos",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "LG Twins": 93.129031
+      },
+      "totalCost": 19.629999610000002,
+      "realizedPnL": -19.629999610000002
+    },
+    "61126736959622415331437114440669232882534581898052202412411807777168874292524": {
+      "question": "KBO: LG Twins vs. NC Dinos",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "LG Twins": 59.363635
+      },
+      "totalCost": 5.936363500000001,
+      "realizedPnL": -5.936363500000001
+    },
+    "56658338928234466999094064598503896890634848503670223177182812282751531061155": {
+      "question": "KBO: Hanwha Eagles vs. Lotte Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "Hanwha Eagles": 0.0026129999999895404
+      },
+      "totalCost": -45.95980091000001,
+      "realizedPnL": 45.95980091000001
+    },
+    "46342940930327241992078711091503990685671121196588934462531237591874945928785": {
+      "question": "KBO: LG Twins vs. NC Dinos",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "LG Twins": 0.0011960000000073023
+      },
+      "totalCost": -83.93970068000002,
+      "realizedPnL": 83.93970068000002
+    },
+    "90236455235023350523168607842888944659485623725815631531567024211177781292858": {
+      "question": "KBO: Samsung Lions vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "Samsung Lions": 85.923075
+      },
+      "totalCost": 10.310768999999999,
+      "realizedPnL": -10.310768999999999
+    },
+    "80025666670560814410103549501590934015912111473084387867222149327795153139841": {
+      "question": "KBO: NC Dinos vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "Samsung Lions": 74
+      },
+      "totalCost": 22.2,
+      "realizedPnL": -22.2
+    },
+    "1379217938828709577958859406392462240368306498741750235144466183446877421929": {
+      "question": "Los Angeles Dodgers vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Arizona Diamondbacks": 275.632182
+      },
+      "totalCost": 13.419999893,
+      "realizedPnL": -13.419999893
+    },
+    "60932663059907947229285564497673080799098810802975148123694626285439742002881": {
+      "question": "KBO: NC Dinos vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "NC Dinos": 0.005114999999996428
+      },
+      "totalCost": -20.210051700000005,
+      "realizedPnL": 20.210051700000005
+    },
+    "98448878358997347422613723291257580323464307625264593275012382726852012003459": {
+      "question": "KBO: NC Dinos vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Samsung Lions": 0.002726000000009776
+      },
+      "totalCost": -71.09873028,
+      "realizedPnL": 71.09873028
+    },
+    "114716375882543075625830317286787918527553203653122677612505093095266019146283": {
+      "question": "KBO: Hanwha Eagles vs. Doosan Bears",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "Hanwha Eagles": 132.920629
+      },
+      "totalCost": 29.07999889,
+      "realizedPnL": -29.07999889
+    },
+    "39334077637596733482892682492790566890761927976399117140241922816298668089188": {
+      "question": "Colorado Rockies vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Los Angeles Angels": 19.055877000000002
+      },
+      "totalCost": -20.341300650000004,
+      "realizedPnL": 20.341300650000004
+    },
+    "37663924074368220395586998072937598316470097338322005985057791894885288305370": {
+      "question": "New York Mets vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "New York Mets": 36.842104
+      },
+      "totalCost": 6.99999976,
+      "realizedPnL": -6.99999976
+    },
+    "49409301582714658027206092984142534227900803711206935858898409269112097627273": {
+      "question": "Colorado Rockies vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Colorado Rockies": 0.003213999999999828
+      },
+      "totalCost": -62.663000339999996,
+      "realizedPnL": 62.663000339999996
+    },
+    "26514546853360333930660442794683544779879778509862511725590794774763749078816": {
+      "question": "Texas Rangers vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "St. Louis Cardinals": 56.746027999999995
+      },
+      "totalCost": 16.9999988,
+      "realizedPnL": -16.9999988
+    },
+    "101499848959514781987469251454184285778482373918263765072342787847444890353071": {
+      "question": "Chicago Cubs vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Chicago Cubs": 218.902219
+      },
+      "totalCost": 22.015239815999998,
+      "realizedPnL": -22.015239815999998
+    },
+    "26319244200208256951594190886135685887971649499831399834424196334465060451753": {
+      "question": "Philadelphia Phillies vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Philadelphia Phillies": 160.77109
+      },
+      "totalCost": 24.89999944,
+      "realizedPnL": -24.89999944
+    },
+    "110088321363831383323276060249583658136753620609824786708509580940710369269031": {
+      "question": "KBO: Kia Tigers vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "Kia Tigers": 151.146387
+      },
+      "totalCost": 9.122874829999999,
+      "realizedPnL": -9.122874829999999
+    },
+    "11077801160610636789370905225874132788621582782962159419516926211685740687572": {
+      "question": "KBO: SSG Landers vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "SSG Landers": 102.69424000000001
+      },
+      "totalCost": 25.56099948,
+      "realizedPnL": -25.56099948
+    },
+    "22550927216826323058125697426817377269508582698208790067897444185879261143156": {
+      "question": "San Francisco Giants vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "San Francisco Giants": 180
+      },
+      "totalCost": 34,
+      "realizedPnL": -34
+    },
+    "95937550229390147277883851545837716913555914392332721272595046425392290749111": {
+      "question": "KBO: SSG Landers vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "SSG Landers": 52.2
+      },
+      "totalCost": 13.05,
+      "realizedPnL": -13.05
+    },
+    "51508193880536129816619215977554727945084164235482266187331616907298651972534": {
+      "question": "KBO: Doosan Bears vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "Doosan Bears": 0.009133000000005609
+      },
+      "totalCost": -77.09550549000001,
+      "realizedPnL": 77.09550549000001
+    },
+    "30169609195694472374785275829217259937945987354544203606395642968353726752693": {
+      "question": "Canadiens vs. Hurricanes",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Canadiens": 213.407646
+      },
+      "totalCost": 20.02929982,
+      "realizedPnL": -20.02929982
+    },
+    "28808842123573342473503585861002372039672574633253507712962848663140504331631": {
+      "question": "Houston Astros vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Texas Rangers": 378.333332
+      },
+      "totalCost": 18.99999984,
+      "realizedPnL": -18.99999984
+    },
+    "23024721219526089903821058776167991848158115909920228917871513873142894977768": {
+      "question": "Chicago Cubs vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Pittsburgh Pirates": 29.411763
+      },
+      "totalCost": 9.999999420000002,
+      "realizedPnL": -9.999999420000002
+    },
+    "57735845936859825942472787799396106499015841289969649651072216798832269118413": {
+      "question": "Colorado Rockies vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Colorado Rockies": 88.888887
+      },
+      "totalCost": 7.999999829999999,
+      "realizedPnL": -7.999999829999999
+    },
+    "35541875658527963138875403053152095390487821153542119742030765493097298929409": {
+      "question": "Houston Astros vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Houston Astros": 0.008259000000002459
+      },
+      "totalCost": -19.557700859999997,
+      "realizedPnL": 19.557700859999997
+    },
+    "14754202086359880869755168609072000075826224131437508935342098949153191611346": {
+      "question": "Hurricanes vs. Canadiens",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Canadiens": 189.65200499999997
+      },
+      "totalCost": 18.999999109999997,
+      "realizedPnL": -18.999999109999997
+    },
+    "55519922150395868865691138951458361513102946654265704883989197145478617155639": {
+      "question": "Minnesota Twins vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Minnesota Twins": 55.978259
+      },
+      "totalCost": 10.99999957,
+      "realizedPnL": -10.99999957
+    },
+    "51119980023188187923162097385876334497831347900636879025113500119157827421530": {
+      "question": "Chicago Cubs vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Pittsburgh Pirates": 0
+      },
+      "totalCost": -26,
+      "realizedPnL": 26
+    },
+    "19315042556290529223507000952849541993172077992373665537372792927729359136285": {
+      "question": "Philadelphia Phillies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "San Diego Padres": 83.333332
+      },
+      "totalCost": 4.99999992,
+      "realizedPnL": -4.99999992
+    },
+    "85555559386164758414749699659567145028948218333512494515052027901757755311964": {
+      "question": "Arizona Diamondbacks vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.004443000000009079
+      },
+      "totalCost": -30.519200389999995,
+      "realizedPnL": 30.519200389999995
+    },
+    "1696330052587833025248457678324840295120731054720451542045321015679764192819": {
+      "question": "KBO: LG Twins vs. Lotte Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "LG Twins": 0.00999699999999848
+      },
+      "totalCost": -56.65724389,
+      "realizedPnL": 56.65724389
+    },
+    "14449519483505385785554816605687395231714677528557190579702830145670199497892": {
+      "question": "Philadelphia Phillies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "San Diego Padres": 175.41
+      },
+      "totalCost": 14.486899999999999,
+      "realizedPnL": -14.486899999999999
+    },
+    "74835519882355583805772343716595301419552900506451796312096053703428888528877": {
+      "question": "Hurricanes vs. Canadiens",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Canadiens": 71.42857
+      },
+      "totalCost": 19.9999996,
+      "realizedPnL": -19.9999996
+    },
+    "48153022965169781893893374813451370342271163900924424849369402818192688161916": {
+      "question": "Philadelphia Phillies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "San Diego Padres": 110.065373
+      },
+      "totalCost": 37.99999792,
+      "realizedPnL": -37.99999792
+    },
+    "55945889835181236448433720511401458737754720649264838387140280709097333689483": {
+      "question": "Washington Nationals vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Cleveland Guardians": 63.742687000000004
+      },
+      "totalCost": 10.99999953,
+      "realizedPnL": -10.99999953
+    },
+    "12606045356314178137795243180410859769940487222498652421259394342199106087722": {
+      "question": "Arizona Diamondbacks vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.006059000000000481
+      },
+      "totalCost": -36.35800053,
+      "realizedPnL": 36.35800053
+    },
+    "20361690591684701764730781782070662193117711220177153358051274508587497384387": {
+      "question": "Minnesota Twins vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Minnesota Twins": 156.785713
+      },
+      "totalCost": 26.14999991,
+      "realizedPnL": -26.14999991
+    },
+    "8810658929600034757874345131013502493005033567315164724621005698501399107957": {
+      "question": "Avalanche vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Golden Knights": 0
+      },
+      "totalCost": -111,
+      "realizedPnL": 111
+    },
+    "2109591287620601756011692238467942602916240352469954758217021052426035822444": {
+      "question": "Washington Nationals vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.009045999999997889
+      },
+      "totalCost": -27.13390068,
+      "realizedPnL": 27.13390068
+    },
+    "74148967575841623293102935797047752053333334003993175083419013681316847598518": {
+      "question": "Detroit Tigers vs. Baltimore Orioles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Baltimore Orioles": 62.20745900000001
+      },
+      "totalCost": 17.599998780000004,
+      "realizedPnL": -17.599998780000004
+    },
+    "31987824570137006392932740882267235719782230423372276281448197755185945587174": {
+      "question": "Athletics vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "San Diego Padres": 142.48320999999999
+      },
+      "totalCost": 25.99999898,
+      "realizedPnL": -25.99999898
+    },
+    "11989369804747893377828849362707182758572966174557506013164717546335191157411": {
+      "question": "Colorado Rockies vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Colorado Rockies": 135.909089
+      },
+      "totalCost": 24.749999579999997,
+      "realizedPnL": -24.749999579999997
+    },
+    "71831018206710859975877867307833144174313005308726086803834558452944445887179": {
+      "question": "Tampa Bay Rays vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "Tampa Bay Rays": 41.666665
+      },
+      "totalCost": 14.9999994,
+      "realizedPnL": -14.9999994
+    },
+    "107523806411815543723804986136586392219218361679953116081831061157515240470924": {
+      "question": "KBO: Kiwoom Heroes vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "LG Twins": 0.004116000000003339
+      },
+      "totalCost": -48.617100279999995,
+      "realizedPnL": 48.617100279999995
+    },
+    "110224784066170306528213883614367161379775275209191221818315596189121209503249": {
+      "question": "KBO: NC Dinos vs. KT Wiz",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "KT Wiz": 153.36111
+      },
+      "totalCost": 41.9299999,
+      "realizedPnL": -41.9299999
+    },
+    "18533790216271918784564948679877204200405128682170797615051047500927253882027": {
+      "question": "Colorado Rockies vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Colorado Rockies": 29.629628
+      },
+      "totalCost": 7.999999560000001,
+      "realizedPnL": -7.999999560000001
+    },
+    "108989281370479497042342165893063468811781033229624251138201715138341448911339": {
+      "question": "Pittsburgh Pirates vs. Toronto Blue Jays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Toronto Blue Jays",
+      "positions": {
+        "Pittsburgh Pirates": 125.174822
+      },
+      "totalCost": 30.99999922,
+      "realizedPnL": -30.99999922
+    },
+    "8879178704040920150757940025318104241231721371948574902507132210964131352929": {
+      "question": "KBO: Kiwoom Heroes vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "Kiwoom Heroes": 79.53846
+      },
+      "totalCost": 9.0799998,
+      "realizedPnL": -9.0799998
+    },
+    "30188509811206524077633266056903564842323831537996031011532590285333716989392": {
+      "question": "Athletics vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 0
+      },
+      "totalCost": -61.17999999999999,
+      "realizedPnL": 61.17999999999999
+    },
+    "103012054434597903784484992022655323523956744449978921126360902589601366559868": {
+      "question": "Atlanta Braves vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Miami Marlins": 360.205788
+      },
+      "totalCost": 13.98000986,
+      "realizedPnL": -13.98000986
+    },
+    "79561473622881294498661999744130005814635392180059663946815316976745913290678": {
+      "question": "New York Mets vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "Washington Nationals": 36.363635
+      },
+      "totalCost": 3.9999998500000005,
+      "realizedPnL": -3.9999998500000005
+    },
+    "111786419139700670171462679142463145942219418772446445427272691857122101855842": {
+      "question": "Cleveland Guardians vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Detroit Tigers": 140.131459
+      },
+      "totalCost": 29.002999216,
+      "realizedPnL": -29.002999216
+    },
+    "46988584173078792813725253241784415765875499524250346336868715397109245675540": {
+      "question": "Athletics vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 0.00666500000000525
+      },
+      "totalCost": -29.723500399999992,
+      "realizedPnL": 29.723500399999992
+    },
+    "87072976201006125782393148176504699648589860622586571853922035161291564021349": {
+      "question": "Pittsburgh Pirates vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "St. Louis Cardinals": 579.1578930000001
+      },
+      "totalCost": 14.759999670000001,
+      "realizedPnL": -14.759999670000001
+    },
+    "103326349435312123272706542515955178931076138599452428746851215937386157657469": {
+      "question": "San Francisco Giants vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.007999999999995566
+      },
+      "totalCost": -38.5227,
+      "realizedPnL": 38.5227
+    },
+    "1951717359882537761153321426320174280354737046353871122155763463564658425567": {
+      "question": "Athletics vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Los Angeles Angels": 141.071427
+      },
+      "totalCost": 9.999999890000002,
+      "realizedPnL": -9.999999890000002
+    },
+    "112531442232812306361113214775987759049236045652951163649182033431542276451445": {
+      "question": "New York Mets vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.006664999999998145
+      },
+      "totalCost": -77.3608003,
+      "realizedPnL": 77.3608003
+    },
+    "35897145766259317849531537649732979331853484456543966713822507439506839868603": {
+      "question": "Atlanta Braves vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Atlanta Braves": 0.007094999999999629
+      },
+      "totalCost": -37.22720054999999,
+      "realizedPnL": 37.22720054999999
+    },
+    "42473252814335643653981815952922498380273050180020711090678320613658355166013": {
+      "question": "San Diego Padres vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Seattle Mariners": 186.08973699999999
+      },
+      "totalCost": 23.049999390999997,
+      "realizedPnL": -23.049999390999997
+    },
+    "54484665803314820950722430167130916572204102046886506231141512823089871021807": {
+      "question": "San Francisco Giants vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Athletics": 82.142856
+      },
+      "totalCost": 22.999999680000002,
+      "realizedPnL": -22.999999680000002
+    },
+    "51607398822371746117459994499952250250075262343163535789391139777593134352920": {
+      "question": "Baltimore Orioles vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Washington Nationals": 96.517854
+      },
+      "totalCost": 21.0499993,
+      "realizedPnL": -21.0499993
+    },
+    "29465178905098725477717821580626256963149593454810509261526484537888708710752": {
+      "question": "KBO: Kia Tigers vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "Samsung Lions": 102
+      },
+      "totalCost": 14.1,
+      "realizedPnL": -14.1
+    },
+    "10843799981381063572785718304279813020734681499585211738901451175177970695675": {
+      "question": "San Francisco Giants vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Athletics": 88.333332
+      },
+      "totalCost": 7.19999988,
+      "realizedPnL": -7.19999988
+    },
+    "61728962687939519273527299164013072031905342035248270667065311884067703322994": {
+      "question": "Los Angeles Dodgers vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Los Angeles Angels": 66.674433
+      },
+      "totalCost": 11.97495326,
+      "realizedPnL": -11.97495326
+    },
+    "103542677380095146762966592090862227868640077970661944987692398217219351375213": {
+      "question": "New York Yankees vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "New York Yankees": 80.46536499999999
+      },
+      "totalCost": 17.99999932,
+      "realizedPnL": -17.99999932
+    },
+    "41955560914129893994568780402041281027074902001187291636341983142890141874180": {
+      "question": "Texas Rangers vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Texas Rangers": 48.717946
+      },
+      "totalCost": 9.9999995,
+      "realizedPnL": -9.9999995
+    },
+    "78172587044079397658451745769457331817296167957995974125255737096976288186254": {
+      "question": "Cincinnati Reds vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Cincinnati Reds": 0.009045999999997889
+      },
+      "totalCost": -25.707500339999996,
+      "realizedPnL": 25.707500339999996
+    },
+    "89048106941033952408467111519888737006437254447265296604863549592330511361650": {
+      "question": "Spread: Cincinnati Reds (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Cincinnati Reds": 0.007094999999999629
+      },
+      "totalCost": -8.22240055,
+      "realizedPnL": 8.22240055
+    },
+    "35942406907991262607562906507502934427268236590424912042350388196406687484985": {
+      "question": "Toronto Blue Jays vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Toronto Blue Jays",
+      "positions": {
+        "Toronto Blue Jays": 0
+      },
+      "totalCost": -19.96,
+      "realizedPnL": 19.96
+    },
+    "902507026675979414247485572472259520471863248669426229495870272855733806130": {
+      "question": "San Francisco Giants vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 46.875
+      },
+      "totalCost": 15,
+      "realizedPnL": 31.875
+    },
+    "9877460381806967353473895730818159162772420348230368323676110923140496131424": {
+      "question": "Philadelphia Phillies vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Philadelphia Phillies": 0.00047999999999959186
+      },
+      "totalCost": -15.08988096,
+      "realizedPnL": 15.08988096
+    },
+    "92518904663145763258163924661711555405189717901084896431503208535334485807181": {
+      "question": "San Francisco Giants vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "San Francisco Giants": 187.15384
+      },
+      "totalCost": 29.999999029999998,
+      "realizedPnL": -29.999999029999998
+    },
+    "56584665390674426345995145175490496864427942373652839377755839221323893854288": {
+      "question": "Kansas City Royals vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Kansas City Royals": 84.615383
+      },
+      "totalCost": 10.99999979,
+      "realizedPnL": -10.99999979
+    },
+    "9154582366652584142787753119399835808241228594093979483499084925524984019382": {
+      "question": "Chicago Cubs vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Chicago Cubs": 0.0005869999999958964
+      },
+      "totalCost": -19.882000419999997,
+      "realizedPnL": 19.882000419999997
+    },
+    "81455758923796874035517528625684278787495366868711110781715395315914631314843": {
+      "question": "Canadiens vs. Sabres",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canadiens",
+      "positions": {
+        "Canadiens": 0.00302899999999795
+      },
+      "totalCost": -16.66400043,
+      "realizedPnL": 16.66400043
+    },
+    "86513480113553103621902477839552624198269148005399701289889945586283559520829": {
+      "question": "St. Louis Cardinals vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 0.003074999999995498
+      },
+      "totalCost": -46.84308075,
+      "realizedPnL": 46.84308075
+    },
+    "112737263963869857433996153387955638658953049445790623299571666496145694165788": {
+      "question": "Washington Nationals vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Washington Nationals": 62.279668
+      },
+      "totalCost": 19.9999991,
+      "realizedPnL": -19.9999991
+    },
+    "33529772905795333832613530472510573856028389014553647109250932820086906550682": {
+      "question": "San Francisco Giants vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "San Francisco Giants": 172.20476
+      },
+      "totalCost": 23.014999600000003,
+      "realizedPnL": -23.014999600000003
+    },
+    "63760573396625962084830190317597849755041825315499198779769471428143037915864": {
+      "question": "Seattle Mariners vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Houston Astros": 0.0033320000000003347
+      },
+      "totalCost": -23.654100400000004,
+      "realizedPnL": 23.654100400000004
+    },
+    "17656988827925453729612113154528264509430823067303544398533266178797318267473": {
+      "question": "Washington Nationals vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.009472000000002367
+      },
+      "totalCost": -40.71422063999999,
+      "realizedPnL": 40.71422063999999
+    },
+    "100518261012442259373293518720452343713143015144711036329052910930276246304600": {
+      "question": "St. Louis Cardinals vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Athletics": 41.666665
+      },
+      "totalCost": 4.9999998,
+      "realizedPnL": -4.9999998
+    },
+    "68690761144603028028744500864688844478561383218366075604052641833026563740295": {
+      "question": "Ducks vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Ducks": 37.5
+      },
+      "totalCost": 6,
+      "realizedPnL": -6
+    },
+    "5289934760819270845891224714488721722480355533039059805824898151869669642916": {
+      "question": "San Francisco Giants vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "San Francisco Giants": 0.00894600000000878
+      },
+      "totalCost": -124.78800026000002,
+      "realizedPnL": 124.78800026000002
+    },
+    "79681922802692100817271311037786616405645436807941543520826120029971630713458": {
+      "question": "San Diego Padres vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Milwaukee Brewers",
+      "positions": {
+        "San Diego Padres": 186.236556
+      },
+      "totalCost": 38.99999936,
+      "realizedPnL": -38.99999936
+    },
+    "106727111366808432040493658275924459175212152132354756741188585975898762208706": {
+      "question": "Sabres vs. Canadiens",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Sabres",
+      "positions": {
+        "Canadiens": 70.833332
+      },
+      "totalCost": 16.99999968,
+      "realizedPnL": -16.99999968
+    },
+    "63515547575073894921156020232091780472114679597399658300601314130752456054232": {
+      "question": "Los Angeles Angels vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Los Angeles Angels": 79.166665
+      },
+      "totalCost": 34.9999995,
+      "realizedPnL": -34.9999995
+    },
+    "58570553086734162259979813448588689490036624895315943589991233487477277401624": {
+      "question": "KBO: Samsung Lions vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "LG Twins": 30.769229
+      },
+      "totalCost": 7.99999954,
+      "realizedPnL": -7.99999954
+    },
+    "61527339522712090002307488567406325051393364920858378476102165417096699331487": {
+      "question": "KBO: Doosan Bears vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "Doosan Bears": 0.005713000000000079
+      },
+      "totalCost": -29.852000450000006,
+      "realizedPnL": 29.852000450000006
+    },
+    "98810759119044408816204494011843967738882436021512369702195075769219925690097": {
+      "question": "Thunder vs. Lakers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Thunder",
+      "positions": {
+        "Lakers": 45.454544
+      },
+      "totalCost": 19.99999936,
+      "realizedPnL": -19.99999936
+    },
+    "41323130518655871601092227570907401972975192191457486809131219293978944017692": {
+      "question": "San Francisco Giants vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Los Angeles Dodgers": 66.666665
+      },
+      "totalCost": 5.999999849999999,
+      "realizedPnL": -5.999999849999999
+    },
+    "9274494121671548370001303405267131266505957214166859957858351924460933667681": {
+      "question": "San Francisco Giants vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "San Francisco Giants": 0.0014270000000067284
+      },
+      "totalCost": -88.71300033,
+      "realizedPnL": 88.71300033
+    },
+    "98168010910292455722515621637357798329206043015371272638043120177055403274824": {
+      "question": "Seattle Mariners vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Houston Astros": 120.166665
+      },
+      "totalCost": 19.8099999,
+      "realizedPnL": -19.8099999
+    },
+    "82074493416507737270634635025839422882287655550901091423630255619513079317109": {
+      "question": "Detroit Tigers vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Kansas City Royals": 91.666665
+      },
+      "totalCost": 19.9999998,
+      "realizedPnL": -19.9999998
+    },
+    "32227116885225856957610494661428397035656275254487735683718719662250650998149": {
+      "question": "KBO: LG Twins vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "LG Twins": 42.623332
+      },
+      "totalCost": 12.39349956,
+      "realizedPnL": -12.39349956
+    },
+    "79423896206817593634550817891952606991382001765804416868052983858125566621424": {
+      "question": "KBO: LG Twins vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Hanwha Eagles",
+      "positions": {
+        "Hanwha Eagles": 0.001426999999999623
+      },
+      "totalCost": -19.913200550000006,
+      "realizedPnL": 19.913200550000006
+    },
+    "3783289782136448455386882889969148816437664381988365897022235116316098637917": {
+      "question": "Atlanta Braves vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Atlanta Braves": 155.092005
+      },
+      "totalCost": 24.966285078,
+      "realizedPnL": -24.966285078
+    },
+    "107633231268250978387975255896312420752306758258132705449335856195520214312746": {
+      "question": "Spread: New York Mets (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "New York Mets": 0.005713000000000079
+      },
+      "totalCost": -60.33720045,
+      "realizedPnL": 60.33720045
+    },
+    "24801319640263872643012377685051750534076210417460024075461054995078127636011": {
+      "question": "Los Angeles Angels vs. Toronto Blue Jays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Toronto Blue Jays",
+      "positions": {
+        "Los Angeles Angels": 118.181817
+      },
+      "totalCost": 20.99999987,
+      "realizedPnL": -20.99999987
+    },
+    "41274978906108328170273998440331048191494937995722030413207886660124790973552": {
+      "question": "Houston Astros vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Cincinnati Reds": 87.5
+      },
+      "totalCost": 28,
+      "realizedPnL": -28
+    },
+    "32650408953655790803966866311263113634723412181981549050983493380966522185175": {
+      "question": "St. Louis Cardinals vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 0
+      },
+      "totalCost": -51.84,
+      "realizedPnL": 51.84
+    },
+    "103043227146536991548916375538113148835799706155937189703041074865195724257449": {
+      "question": "Hurricanes vs. Flyers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Flyers": 65.21739
+      },
+      "totalCost": 14.9999997,
+      "realizedPnL": -14.9999997
+    },
+    "2903443641836568979231267708338460037625914913822815579982799322513148370805": {
+      "question": "Tampa Bay Rays vs. Boston Red Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "Boston Red Sox": 99.76190299999999
+      },
+      "totalCost": 28.99999926,
+      "realizedPnL": -28.99999926
+    },
+    "62150012316655028699518745249923309082789731645342980083406909560578447148954": {
+      "question": "Athletics vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Philadelphia Phillies": 151.098898
+      },
+      "totalCost": 20.999999772,
+      "realizedPnL": -20.999999772
+    },
+    "104907570574314432288366314193325601890020618345982583579609171116631289299839": {
+      "question": "New York Mets vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Colorado Rockies": 0.0020669999999967104
+      },
+      "totalCost": -52.342800569999994,
+      "realizedPnL": 52.342800569999994
+    },
+    "36394241680164386371201540537051782422503265035690271746133971482965283533023": {
+      "question": "Minnesota Twins vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.0033320000000003347
+      },
+      "totalCost": -52.4969004,
+      "realizedPnL": 52.4969004
+    },
+    "49294837087187920650691599432246349214207845951563741353943402952205859618629": {
+      "question": "Pittsburgh Pirates vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Arizona Diamondbacks": 65.625
+      },
+      "totalCost": 21,
+      "realizedPnL": -21
+    },
+    "96524095018615378531227881226531591927817621193329352552084258137092931432703": {
+      "question": "Athletics vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Philadelphia Phillies": 0.006664999999998145
+      },
+      "totalCost": -43.460320499999995,
+      "realizedPnL": 43.460320499999995
+    },
+    "14048990428524140609802697852915593177161858481958934322425624773165032847981": {
+      "question": "Texas Rangers vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Texas Rangers": 0.0020499999999969987
+      },
+      "totalCost": 0.5135995000000015,
+      "realizedPnL": -0.5135995000000015
+    },
+    "44215997531357607991996895839355146313491844203729075844083349152769120028187": {
+      "question": "Pittsburgh Pirates vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Pittsburgh Pirates": 59.090908
+      },
+      "totalCost": 12.99999976,
+      "realizedPnL": -12.99999976
+    },
+    "107975052422450635722139580804721918136414464544838914248993824388140056090164": {
+      "question": "KBO: NC Dinos vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "",
+      "positions": {
+        "SSG Landers": 0.005338999999992211
+      },
+      "totalCost": -59.47036271000001,
+      "realizedPnL": 59.47036271000001
+    },
+    "58342717786118171929114635062692572662871318137939337706116443468862566527173": {
+      "question": "KBO: Doosan Bears vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "Doosan Bears": 129.355484
+      },
+      "totalCost": 39.98892662,
+      "realizedPnL": -39.98892662
+    },
+    "78101662746895087697097122028553325603186325273198207640767170377900144839699": {
+      "question": "KBO: Kiwoom Heroes vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Kiwoom Heroes": 0.0033320000000003347
+      },
+      "totalCost": 9.916669839999999,
+      "realizedPnL": -9.916669839999999
+    },
+    "82159206048721962923280443202075736017849039920490323543954852173601045705479": {
+      "question": "KBO: Hanwha Eagles vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kia Tigers",
+      "positions": {
+        "Hanwha Eagles": 0.004558000000002949
+      },
+      "totalCost": 13.65719894,
+      "realizedPnL": -13.65719894
+    },
+    "1167272578235692813726126642705198059586337120484029509681070470407220626146": {
+      "question": "Ducks vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Ducks": 90.909089
+      },
+      "totalCost": 9.999999789999999,
+      "realizedPnL": -9.999999789999999
+    },
+    "44211780052523347000615048569212086801873525071943410763545641849815580441479": {
+      "question": "Atlanta Braves vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Atlanta Braves": 46.227271
+      },
+      "totalCost": 10.16999962,
+      "realizedPnL": -10.16999962
+    },
+    "101785095408788416241766871176841176089353336736032794331112226394081557994089": {
+      "question": "Atlanta Braves vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Seattle Mariners": 0.005140999999994733
+      },
+      "totalCost": -30.885052060000003,
+      "realizedPnL": 30.885052060000003
+    },
+    "15635799601251236025603689256245888056567529368175360764959536526607384706762": {
+      "question": "San Diego Padres vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "San Diego Padres": 40.555554
+      },
+      "totalCost": 3.64999986,
+      "realizedPnL": -3.64999986
+    },
+    "65802271227642464692137438049430344387990694817697067793400673835207657482699": {
+      "question": "Cincinnati Reds vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Cincinnati Reds": 65.452088
+      },
+      "totalCost": 24.99999855,
+      "realizedPnL": -24.99999855
+    },
+    "65640846031716846832593748107756223213959096686447491408186991589269223777464": {
+      "question": "Flyers vs. Hurricanes",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Flyers": 66.94537
+      },
+      "totalCost": 28.999998520000002,
+      "realizedPnL": -28.999998520000002
+    },
+    "34971000861537864205775525119736219658261724259114110056964806775832252178945": {
+      "question": "Spread: Toronto Blue Jays (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "Toronto Blue Jays": 31.25
+      },
+      "totalCost": 5,
+      "realizedPnL": -5
+    },
+    "84001375849718087281669412015132134838949600779107877423166660374659481028956": {
+      "question": "Toronto Blue Jays vs. Tampa Bay Rays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "Toronto Blue Jays": 108.695651
+      },
+      "totalCost": 24.99999973,
+      "realizedPnL": -24.99999973
+    },
+    "21615219524308715755554330922268390574875791324080753866118808641765465212799": {
+      "question": "Texas Rangers vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Texas Rangers": 35.460991
+      },
+      "totalCost": 4.999999731,
+      "realizedPnL": -4.999999731
+    },
+    "115426919512599536133149802114234662968452776342358971977874767705464238419822": {
+      "question": "Chicago White Sox vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Chicago White Sox": 87.30158399999999
+      },
+      "totalCost": 18.99999922,
+      "realizedPnL": -18.99999922
+    },
+    "84329310197043563070670730650889774954646085595020495604338162239202941329127": {
+      "question": "KBO: NC Dinos vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "NC Dinos": 720.5999999999999
+      },
+      "totalCost": 719.8794,
+      "realizedPnL": 0.7205999999998767
+    },
+    "2861563442217035389858619685835099305397487705154867239524850139616356638520": {
+      "question": "KBO: NC Dinos vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "LG Twins": 67.906069
+      },
+      "totalCost": 27.93377511,
+      "realizedPnL": -27.93377511
+    },
+    "54129459318409347108287068634975103332056565624617923301499914472093597892644": {
+      "question": "KBO: Hanwha Eagles vs. Samsung Lions",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Samsung Lions",
+      "positions": {
+        "Hanwha Eagles": 0.005554000000003612
+      },
+      "totalCost": -24.99550056,
+      "realizedPnL": 24.99550056
+    },
+    "20252702021400546953550454905953177985179143381374590396446954908500868084019": {
+      "question": "KBO: KT Wiz vs. Kia Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "KT Wiz",
+      "positions": {
+        "KT Wiz": 0.0033320000000003347
+      },
+      "totalCost": -70.08060031999999,
+      "realizedPnL": 70.08060031999999
+    },
+    "55565569456588652766962160803018716813419989621709710595958504474626583841961": {
+      "question": "Kansas City Royals vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Kansas City Royals": 0.00977099999998643
+      },
+      "totalCost": -52.47500117,
+      "realizedPnL": 52.47500117
+    },
+    "39554233372221201896137432046709697727024334006027136603501465898144438522212": {
+      "question": "New York Mets vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "New York Mets": 0.006085000000012997
+      },
+      "totalCost": 3.034199550000004,
+      "realizedPnL": -3.034199550000004
+    },
+    "100853571757140812280671110198192425605881076226125913129671152565564322425899": {
+      "question": "Chicago White Sox vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Chicago White Sox": 0.007740000000012515
+      },
+      "totalCost": -45.48296059999999,
+      "realizedPnL": 45.48296059999999
+    },
+    "30937893590952358105619833122440269918476937724830496857703649686264547881763": {
+      "question": "Flyers vs. Hurricanes",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Hurricanes",
+      "positions": {
+        "Flyers": 173.541664
+      },
+      "totalCost": 20.54999972,
+      "realizedPnL": -20.54999972
+    },
+    "61014651420486096445366517902155937853163446306362826890883092735115748305444": {
+      "question": "Los Angeles Dodgers vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Los Angeles Dodgers": 165.045818
+      },
+      "totalCost": 27.049999210000003,
+      "realizedPnL": -27.049999210000003
+    },
+    "14866752670888453356026043876092287639788865718567224377316740420822027178503": {
+      "question": "San Francisco Giants vs. Tampa Bay Rays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "San Francisco Giants": 148.484845
+      },
+      "totalCost": 30.9999993,
+      "realizedPnL": -30.9999993
+    },
+    "31223434487585910477114793613002533568814340848955521581949312072147307389224": {
+      "question": "Milwaukee Brewers vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Milwaukee Brewers",
+      "positions": {
+        "Washington Nationals": 158.884055
+      },
+      "totalCost": 25.90999945,
+      "realizedPnL": -25.90999945
+    },
+    "51189855231752448408074396540309557734566466989226855483985695879650402555485": {
+      "question": "KBO: Doosan Bears vs. Kiwoom Heroes",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kiwoom Heroes",
+      "positions": {
+        "Kiwoom Heroes": 59.028363
+      },
+      "totalCost": 23.96449632,
+      "realizedPnL": 35.063866680000004
+    },
+    "80424109888402392221649768958257983740178006937299075674858856194286275238566": {
+      "question": "KBO: Lotte Giants vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "SSG Landers": 67.41176300000001
+      },
+      "totalCost": 10.385882080000002,
+      "realizedPnL": -10.385882080000002
+    },
+    "25239445213145425735275055989572791771588868045381643002935662506372204878699": {
+      "question": "KBO: Lotte Giants vs. SSG Landers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Lotte Giants",
+      "positions": {
+        "Lotte Giants": 0.00486699999999729
+      },
+      "totalCost": -44.58188338000001,
+      "realizedPnL": 44.58188338000001
+    },
+    "2015410965571012425923867782190388110147394543073232698019655585107631449607": {
+      "question": "Cleveland Guardians vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Athletics": 53.431951
+      },
+      "totalCost": 8.976567768,
+      "realizedPnL": -8.976567768
+    },
+    "95463995534622690947325217373829470033381578486507686019160950890258639013666": {
+      "question": "Kansas City Royals vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Seattle Mariners": 66.25
+      },
+      "totalCost": 11.2,
+      "realizedPnL": -11.2
+    },
+    "36813881240488016634552737072579866279617463229694126681639005914627289108266": {
+      "question": "Golden Knights vs. Utah",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Utah": 0
+      },
+      "totalCost": 0.7470000000000008,
+      "realizedPnL": -0.7470000000000008
+    },
+    "114266128256600010837044648715273100791434487537188568518312860910963909512984": {
+      "question": "New York Mets vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "New York Mets": 0.005369999999999209
+      },
+      "totalCost": -73.4843008,
+      "realizedPnL": 73.4843008
+    },
+    "86223530299051740897303617294113320407654118439718265870184200093256137361133": {
+      "question": "Los Angeles Dodgers vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Los Angeles Dodgers": 121.666665
+      },
+      "totalCost": 33.9999995,
+      "realizedPnL": -33.9999995
+    },
+    "370927638764802752396105266205870388582541204893503890405757989982282070957": {
+      "question": "Milwaukee Brewers vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Milwaukee Brewers",
+      "positions": {
+        "Washington Nationals": 126.907825
+      },
+      "totalCost": 28.88999906,
+      "realizedPnL": -28.88999906
+    },
+    "114042803841900699768892758369058265588198434939464138899534654919165600022047": {
+      "question": "Lightning vs. Canadiens",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Lightning",
+      "positions": {
+        "Canadiens": 50
+      },
+      "totalCost": 25,
+      "realizedPnL": -25
+    },
+    "56740269200252065149040274665634886776014306673323727041795172631914313659985": {
+      "question": "Arizona Diamondbacks vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Arizona Diamondbacks": 166.893359
+      },
+      "totalCost": 34.198799398,
+      "realizedPnL": -34.198799398
+    },
+    "52218888047776036576625381852272271290184810051236930377804282742802415601130": {
+      "question": "KBO: NC Dinos vs. LG Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "NC Dinos": 128.334375
+      },
+      "totalCost": 38.250468749999996,
+      "realizedPnL": -38.250468749999996
+    },
+    "25810978393091170599669109720207866851917134516432793308746312161927004686094": {
+      "question": "Oilers vs. Ducks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Ducks",
+      "positions": {
+        "Oilers": 130.952377
+      },
+      "totalCost": 28.999999269999996,
+      "realizedPnL": -28.999999269999996
+    },
+    "74021801986449855155584333618899516290292960360292595102339044077461842741988": {
+      "question": "San Francisco Giants vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "San Francisco Giants": 0.0023670000000066693
+      },
+      "totalCost": 4.391798880000003,
+      "realizedPnL": -4.391798880000003
+    },
+    "110819580305852538326289510364356969273734206693885991522526230584112044713605": {
+      "question": "Kansas City Royals vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Kansas City Royals": 211.252919
+      },
+      "totalCost": 33.14599946,
+      "realizedPnL": -33.14599946
+    },
+    "80822510211803081873376768370711937062741180136834418052712928260068216066147": {
+      "question": "Washington Nationals vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.0006020000000006576
+      },
+      "totalCost": -51.009800780000006,
+      "realizedPnL": 51.009800780000006
+    },
+    "23517549279031422985253595342282538948403795677378182751026197867347371836606": {
+      "question": "Utah vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Utah": 121.543924
+      },
+      "totalCost": 44.99999862,
+      "realizedPnL": -44.99999862
+    },
+    "80729003654371335358412385917687517154257636519412634184200985170091219160210": {
+      "question": "Rockets vs. Lakers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Rockets",
+      "positions": {
+        "Lakers": 60
+      },
+      "totalCost": 24,
+      "realizedPnL": -24
+    },
+    "28533163042794044025188302720186044095798930251187999587629095688179129634865": {
+      "question": "Kansas City Royals vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Kansas City Royals": 255.51281699999998
+      },
+      "totalCost": 27.99999956,
+      "realizedPnL": -27.99999956
+    },
+    "49669050907193796541312337308194643354290905032647761424693436529776599364540": {
+      "question": "Penguins vs. Flyers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Flyers",
+      "positions": {
+        "Flyers": 0.006468999999995617
+      },
+      "totalCost": -20.12883081,
+      "realizedPnL": 20.12883081
+    },
+    "17659512025174348931862317678765715102256405158044503989806710804267808896243": {
+      "question": "Arizona Diamondbacks vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Milwaukee Brewers": 91.666665
+      },
+      "totalCost": 10.9999998,
+      "realizedPnL": -10.9999998
+    },
+    "32971801472116146865713006505614510255534738838264616730278083598597684691878": {
+      "question": "Arizona Diamondbacks vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.0011750000000034788
+      },
+      "totalCost": -46.32260050000001,
+      "realizedPnL": 46.32260050000001
+    },
+    "7466766586711339018695978870071145501124958916579234088600546044619040997861": {
+      "question": "Spread: Washington Nationals (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.0023790000000012412
+      },
+      "totalCost": -17.64050082,
+      "realizedPnL": 17.64050082
+    },
+    "78861433980812072231401629120325997123786665902751002514954674922124206499190": {
+      "question": "Canadiens vs. Lightning",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canadiens",
+      "positions": {
+        "Canadiens": 0.007824999999996862
+      },
+      "totalCost": -22.8192005,
+      "realizedPnL": 22.8192005
+    },
+    "96827480293410824692140570694852267713277333476069567387757897478839958958185": {
+      "question": "Washington Nationals vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.005852000000004409
+      },
+      "totalCost": -49.25032068,
+      "realizedPnL": 49.25032068
+    },
+    "88526486016118855930632581142718924081205788917172213677357226333952767019149": {
+      "question": "Colorado Rockies vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Cincinnati Reds": 0.004442999999980657
+      },
+      "totalCost": 26.091699739999992,
+      "realizedPnL": -26.091699739999992
+    },
+    "115368361059237022157994642991813188065990548129177372775230184858851775160958": {
+      "question": "Chicago Cubs vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "San Diego Padres": 57.637994
+      },
+      "totalCost": 18.999998939999998,
+      "realizedPnL": -18.999998939999998
+    },
+    "96210653889775607907187482356915115173203627431319036283617760935646062870266": {
+      "question": "Miami Marlins vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Miami Marlins": 0.0046870000000041045
+      },
+      "totalCost": -75.28550106,
+      "realizedPnL": 75.28550106
+    },
+    "32436986849103293696422597156222307714849886203392286961215122299473522284096": {
+      "question": "Los Angeles Angels vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Angels": 81.08108
+      },
+      "totalCost": 29.9999996,
+      "realizedPnL": -29.9999996
+    },
+    "46151929227493869534074075830957049282811553463010684647378955127816596036302": {
+      "question": "Bitcoin Up or Down - April 29, 12:55AM-1:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 56.25
+      },
+      "totalCost": 9,
+      "realizedPnL": -9
+    },
+    "53877112467855719493955719012795480182091315066143436611382298035663756340976": {
+      "question": "Miami Marlins vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Los Angeles Dodgers": 260.309518
+      },
+      "totalCost": 61.5399985,
+      "realizedPnL": -61.5399985
+    },
+    "96862858153419745448652216048039358304355088607501609917037890273651321050946": {
+      "question": "Ducks vs. Oilers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Oilers",
+      "positions": {
+        "Ducks": 0.005609999999961701
+      },
+      "totalCost": 39.2425995,
+      "realizedPnL": -39.2425995
+    },
+    "26809829822656943204068271266894119420652677761017094613850637129605625504191": {
+      "question": "Kansas City Royals vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Kansas City Royals": 0.008570000000020173
+      },
+      "totalCost": -11.996400499999993,
+      "realizedPnL": 11.996400499999993
+    },
+    "33218464048919397380714880393266278220506482013788077607834494669880032738474": {
+      "question": "Los Angeles Angels vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Angels": 58.823528
+      },
+      "totalCost": 9.999999760000001,
+      "realizedPnL": -9.999999760000001
+    },
+    "110703289947439629924933402100241847700293255231121849727652080635823006528049": {
+      "question": "Arizona Diamondbacks vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Milwaukee Brewers",
+      "positions": {
+        "Arizona Diamondbacks": 132.347667
+      },
+      "totalCost": 38.499999179999996,
+      "realizedPnL": -38.499999179999996
+    },
+    "22436670206763951642373400387177080275831523263319871693913527682109347502192": {
+      "question": "Washington Nationals vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "Washington Nationals": 280.852656
+      },
+      "totalCost": 44.44753016,
+      "realizedPnL": -44.44753016
+    },
+    "29481156984580568373005595337894553271328396703311372194213048686036834570088": {
+      "question": "Spread: Los Angeles Angels (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Angels": 97.766665
+      },
+      "totalCost": 29.3299995,
+      "realizedPnL": -29.3299995
+    },
+    "56625026225896298071238538050849948863289631124397973785018401943825791903637": {
+      "question": "Bitcoin Up or Down - April 28, 2:45AM-2:50AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 33.333332
+      },
+      "totalCost": 9.999999599999999,
+      "realizedPnL": -9.999999599999999
+    },
+    "32546273684361315067044166856204679449355248569778542503978268907293032342791": {
+      "question": "Golden Knights vs. Utah",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Utah": 77.777776
+      },
+      "totalCost": 34.999999200000005,
+      "realizedPnL": -34.999999200000005
+    },
+    "12425050208243537605048350870022317726746960215673383861770973835747887735477": {
+      "question": "Los Angeles Angels vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Angels": 124.583332
+      },
+      "totalCost": 13.70416652,
+      "realizedPnL": -13.70416652
+    },
+    "29908275945561304580802208117873190369715912591449921790304505095867023608491": {
+      "question": "Miami Marlins vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Los Angeles Dodgers": 3.6556539999999984
+      },
+      "totalCost": -55.21690045999999,
+      "realizedPnL": 58.87255445999999
+    },
+    "19864917728008780169589671230660157481183889222095324713973472684120112283428": {
+      "question": "Timberwolves vs. Nuggets",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Nuggets",
+      "positions": {
+        "Timberwolves": 2.6099999999999994
+      },
+      "totalCost": 7.1566,
+      "realizedPnL": -7.1566
+    },
+    "88437990311655880055045829266982869520216379821191214753920488369140574721418": {
+      "question": "Miami Marlins vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Miami Marlins": 8.090253999999987
+      },
+      "totalCost": -167.0908003,
+      "realizedPnL": 167.0908003
+    },
+    "27758079570877473646622033855484036354285881037598184925824155030681778855172": {
+      "question": "Chicago Cubs vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Chicago Cubs": 3.242153000000016
+      },
+      "totalCost": -51.962001130000004,
+      "realizedPnL": 51.962001130000004
+    },
+    "64945322553624300384043731319804211537131207650290978333725869519852579744140": {
+      "question": "Flyers vs. Penguins",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Penguins",
+      "positions": {
+        "Flyers": 100.64516
+      },
+      "totalCost": 29.999999600000002,
+      "realizedPnL": -29.999999600000002
+    },
+    "39986674946594041127881580314178669432903174152096605379156132684301077003004": {
+      "question": "Seattle Mariners vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Seattle Mariners": 240.940869
+      },
+      "totalCost": 47.632811945,
+      "realizedPnL": -47.632811945
+    },
+    "56689168567456837885776169878470509778234176187579477660559404217938767665883": {
+      "question": "Spread: Los Angeles Angels (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Angels": 1.5410779999999988
+      },
+      "totalCost": 0.5701988599999943,
+      "realizedPnL": -0.5701988599999943
+    },
+    "69757471525579989516937698889495926475212834368767913979790802003510545183283": {
+      "question": "Oilers vs. Ducks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Ducks",
+      "positions": {
+        "Ducks": 4.437989999999985
+      },
+      "totalCost": -63.320061249999995,
+      "realizedPnL": 67.75805124999998
+    },
+    "48767430596394356369347642287615463208903494241520662637990375227300225625888": {
+      "question": "Oilers vs. Ducks: O/U 6.5",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Over",
+      "positions": {
+        "Under": 45.161289
+      },
+      "totalCost": 13.999999589999998,
+      "realizedPnL": -13.999999589999998
+    },
+    "89628879983438666693229836095007901844397172691064613302845941791790913354622": {
+      "question": "Lakers vs. Rockets",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Rockets",
+      "positions": {
+        "Lakers": 170.16402399999998
+      },
+      "totalCost": 37.99999922,
+      "realizedPnL": -37.99999922
+    },
+    "53721823316439439284664501792494897013721094345239870701517171157374721104370": {
+      "question": "Oilers vs. Ducks: O/U 5.5",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Over",
+      "positions": {
+        "Under": 90.735293
+      },
+      "totalCost": 30.849999620000002,
+      "realizedPnL": -30.849999620000002
+    },
+    "57412669803234576469024632071874871172448498594547431675204200974455490731314": {
+      "question": "Lightning vs. Canadiens: O/U 5.5",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Under",
+      "positions": {
+        "Under": 0.730203000000003
+      },
+      "totalCost": -23.17577256,
+      "realizedPnL": 23.90597556
+    },
+    "53633617438645905989721225587391117959075562008878258934007619608702872708396": {
+      "question": "Los Angeles Angels vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Kansas City Royals": 0.7922670000000025
+      },
+      "totalCost": -25.236254535,
+      "realizedPnL": 26.028521535000003
+    },
+    "74333061402168384269654046203195884113777461499604839540822960217961143725217": {
+      "question": "Colorado Rockies vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "New York Mets": 216.91175800000002
+      },
+      "totalCost": 32.999999146,
+      "realizedPnL": -32.999999146
+    },
+    "48951085592846522994166835897175428462855792778020774209445378748573639932428": {
+      "question": "Miami Marlins vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Miami Marlins": 75.757574
+      },
+      "totalCost": 24.99999942,
+      "realizedPnL": -24.99999942
+    },
+    "28633427950947037583551664344694261315167956687768643075189515583596429469561": {
+      "question": "Chicago Cubs vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Chicago Cubs": 182.857141
+      },
+      "totalCost": 23.999999740000003,
+      "realizedPnL": -23.999999740000003
+    },
+    "114065495002285861760022523030363025845118607448025839677634630398841289909058": {
+      "question": "Athletics vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Texas Rangers": 125.8651
+      },
+      "totalCost": 35.9999994,
+      "realizedPnL": -35.9999994
+    },
+    "57004219937394418437476801735630813729765109481999629701075748873641606897600": {
+      "question": "Philadelphia Phillies vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Philadelphia Phillies": 57.142856
+      },
+      "totalCost": 19.9999996,
+      "realizedPnL": -19.9999996
+    },
+    "30076470316828861520825879645856033803635057445862599226928394919530977317607": {
+      "question": "KBO: NC Dinos vs. Hanwha Eagles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "NC Dinos",
+      "positions": {
+        "Hanwha Eagles": 82.58278200000001
+      },
+      "totalCost": 27.4706991,
+      "realizedPnL": -27.4706991
+    },
+    "79077205299758330635910307693610990101974949017537182171962843109525325902247": {
+      "question": "KBO: LG Twins vs. Doosan Bears",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Doosan Bears",
+      "positions": {
+        "LG Twins": 60
+      },
+      "totalCost": 15,
+      "realizedPnL": -15
+    },
+    "14996001543572315230044859660718815684131382015120699559414938993736518684241": {
+      "question": "Philadelphia Phillies vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Atlanta Braves": 133.5
+      },
+      "totalCost": 2.67,
+      "realizedPnL": -2.67
+    },
+    "58221815139213492021856338723200306709506483736083603515785327148920043305775": {
+      "question": "Penguins vs. Flyers: O/U 5.5",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Over",
+      "positions": {
+        "Under": 45.666665
+      },
+      "totalCost": 12.329999550000002,
+      "realizedPnL": -12.329999550000002
+    },
+    "30745388018727361566403644542829573705073368991826497809484853685092794356099": {
+      "question": "Penguins vs. Flyers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Penguins",
+      "positions": {
+        "Flyers": 3.4027260000000012
+      },
+      "totalCost": -7.057900140000003,
+      "realizedPnL": 7.057900140000003
+    },
+    "882100742628129671676615757939339954890614411777310587250205225149090978091": {
+      "question": "Pittsburgh Pirates vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Pittsburgh Pirates": 1.2485699999999866
+      },
+      "totalCost": -40.10982060000002,
+      "realizedPnL": 41.35839060000001
+    },
+    "103811771989974959294443036969940181487299171429271996940739314474721928449696": {
+      "question": "Los Angeles Angels vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Los Angeles Angels": 136.868976
+      },
+      "totalCost": 41.39069776000001,
+      "realizedPnL": -41.39069776000001
+    },
+    "48720746592891658576402312184575611544906316130020698273201588285038234419046": {
+      "question": "Washington Nationals vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.5014269999999996
+      },
+      "totalCost": -15.087550660000002,
+      "realizedPnL": 15.588977660000001
+    },
+    "78821247268634032891501640646707543082617213848361939806518584977451844230947": {
+      "question": "Miami Marlins vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "San Francisco Giants": 1.435674000000006
+      },
+      "totalCost": -39.55840061999999,
+      "realizedPnL": 40.99407462
+    },
+    "84615304479237441986402330935007530218379705593580261927169599431346842369479": {
+      "question": "KBO: Samsung Lions vs. Kiwoom Heroes",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kiwoom Heroes",
+      "positions": {
+        "Kiwoom Heroes": 48.387095
+      },
+      "totalCost": 14.99999945,
+      "realizedPnL": 33.38709555
+    },
+    "109557367126268717819111945272906830435326174298414952860036852866050973438666": {
+      "question": "KBO: LG Twins vs. Doosan Bears",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "LG Twins",
+      "positions": {
+        "Doosan Bears": 1.280257000000006
+      },
+      "totalCost": -21.70040077,
+      "realizedPnL": 21.70040077
+    },
+    "102538499180066170502733509909983778335272130991270201095674135507877075082588": {
+      "question": "Miami Marlins vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "San Francisco Giants": 382.79364899999996
+      },
+      "totalCost": 36.999999888,
+      "realizedPnL": -36.999999888
+    },
+    "98485374185351824279633753878897739219316326421405428099510295893725916362397": {
+      "question": "Chicago Cubs vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Chicago Cubs": 4.090000000000003
+      },
+      "totalCost": -116.47989999999999,
+      "realizedPnL": 120.56989999999999
+    },
+    "29552910636936733124761801095115448120436292651205226913783151622032791704212": {
+      "question": "Washington Nationals vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Washington Nationals": 28.590908
+      },
+      "totalCost": 6.28999976,
+      "realizedPnL": -6.28999976
+    },
+    "104748504773020529689761082385681403331377544079968524258882883024772847059892": {
+      "question": "Colorado Rockies vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Colorado Rockies": 2.143844999999999
+      },
+      "totalCost": -61.48920030000001,
+      "realizedPnL": 63.633045300000006
+    },
+    "81868324022365573030890518301906324001163003569843551173422064597291937972925": {
+      "question": "New York Yankees vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "Houston Astros": 103.571427
+      },
+      "totalCost": 19.99999956,
+      "realizedPnL": -19.99999956
+    },
+    "54673769943449714674472171962334986774447157033355780710585082389175730665780": {
+      "question": "Avalanche vs. Kings",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Avalanche",
+      "positions": {
+        "Kings": 125.316451
+      },
+      "totalCost": 28.999999116000005,
+      "realizedPnL": -28.999999116000005
+    },
+    "105939896835094316761088558115714700309110714662810161845144503874684689473008": {
+      "question": "Minnesota Twins vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "Minnesota Twins": 140.982089
+      },
+      "totalCost": 7.929999815000001,
+      "realizedPnL": -7.929999815000001
+    },
+    "13651748497091237808460113623486770193427477134717425380391907960466586656575": {
+      "question": "Pittsburgh Pirates vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Pittsburgh Pirates": 75.813952
+      },
+      "totalCost": 27.99999936,
+      "realizedPnL": -27.99999936
+    },
+    "27642598962039174219718624407527335300354068499003825663843020478530755311040": {
+      "question": "San Diego Padres vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "San Diego Padres": 2.929352999999992
+      },
+      "totalCost": -94.36051057,
+      "realizedPnL": 97.28986357
+    },
+    "38413185475058022267683913338442871085075438927680656195683800055989898562638": {
+      "question": "Philadelphia Phillies vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Philadelphia Phillies": 3.5816649999999868
+      },
+      "totalCost": -1.5948002000000034,
+      "realizedPnL": 1.5948002000000034
+    },
+    "34766028347506620602341135095648390809627910354583805333451958624638557719757": {
+      "question": "Stars vs. Wild",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Stars",
+      "positions": {
+        "Stars": 3.4094049999999925
+      },
+      "totalCost": -47.12650098,
+      "realizedPnL": 50.535905979999995
+    },
+    "19506243454133409978651465891149386453919367684498934141504145790203017273555": {
+      "question": "Ducks vs. Oilers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Ducks",
+      "positions": {
+        "Ducks": 1.5799999999999983
+      },
+      "totalCost": -50.0608,
+      "realizedPnL": 51.6408
+    },
+    "25219574520298238442869763635502721442045650180205248004441011146838449400832": {
+      "question": "Chicago White Sox vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Chicago White Sox": 148.729165
+      },
+      "totalCost": 22.129999899999998,
+      "realizedPnL": -22.129999899999998
+    },
+    "40446447523614279845157001660220950484085648632340098236081844789391952312507": {
+      "question": "San Diego Padres vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "San Diego Padres": 124.999997
+      },
+      "totalCost": 24.999999339999995,
+      "realizedPnL": -24.999999339999995
+    },
+    "53142945212265016174812790871842636242593429005521761300413012996758813045598": {
+      "question": "Pittsburgh Pirates vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Pittsburgh Pirates": 1.3007300000000015
+      },
+      "totalCost": -41.15130070000001,
+      "realizedPnL": 42.45203070000001
+    },
+    "29335321351765355075186691801948793047415965084250746185895674082691769159059": {
+      "question": "Philadelphia Phillies vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Philadelphia Phillies": 108.740736
+      },
+      "totalCost": 29.579998829999997,
+      "realizedPnL": -29.579998829999997
+    },
+    "92805019601327532354189435778310311760995995037166951263097013863039394518010": {
+      "question": "Atlanta Braves vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Washington Nationals": 125
+      },
+      "totalCost": 10,
+      "realizedPnL": -10
+    },
+    "115791803404425564041980803510693090655801500265369150144722052033659869306109": {
+      "question": "Atlanta Braves vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Atlanta Braves": 2.0366649999999993
+      },
+      "totalCost": -24.9391005,
+      "realizedPnL": 26.975765499999998
+    },
+    "102861355288825645896246047556200129815833788821559633794550545996998182950098": {
+      "question": "Baltimore Orioles vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Baltimore Orioles": 0.9716710000000006
+      },
+      "totalCost": -31.33861093,
+      "realizedPnL": 32.31028193
+    },
+    "68804913624612759722882779418135551020749552592577499576375455003184791777623": {
+      "question": "Houston Astros vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Cleveland Guardians": 42.857141
+      },
+      "totalCost": 2.9999998700000003,
+      "realizedPnL": -2.9999998700000003
+    },
+    "72195511234404898996501377970564523967023928193809494874357749845502441517757": {
+      "question": "Cincinnati Reds vs. Tampa Bay Rays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "Cincinnati Reds": 137.378149
+      },
+      "totalCost": 18.43999973,
+      "realizedPnL": -18.43999973
+    },
+    "49708830718852321310962585279161557621607637317241131866847638041456755741810": {
+      "question": "St. Louis Cardinals vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "St. Louis Cardinals": 169.613361
+      },
+      "totalCost": 54.999998894,
+      "realizedPnL": -54.999998894
+    },
+    "46563697259047708541361760162855399973818712189119186915630625998222985115091": {
+      "question": "Kings vs. Avalanche",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Avalanche",
+      "positions": {
+        "Kings": 75.357141
+      },
+      "totalCost": 26.99999935,
+      "realizedPnL": -26.99999935
+    },
+    "68053451334990011197603629872544483447954004844521109710911242937042882125143": {
+      "question": "Athletics vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Seattle Mariners": 1.1700000000000017
+      },
+      "totalCost": 0.96117,
+      "realizedPnL": -0.96117
+    },
+    "25750346986651157696187546689611117461380060510820530466661529285553799693244": {
+      "question": "Utah vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Utah",
+      "positions": {
+        "Utah": 0.7082589999999982
+      },
+      "totalCost": -22.34230086,
+      "realizedPnL": 23.05055986
+    },
+    "24574350789299289161945487998432730885766605989629000372133107734007784698509": {
+      "question": "Los Angeles Dodgers vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Los Angeles Dodgers": 130.514701
+      },
+      "totalCost": 34.99999887,
+      "realizedPnL": -34.99999887
+    },
+    "75143735593398904968084683396908743632983915788878194420168010632718339882288": {
+      "question": "Atlanta Braves vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Atlanta Braves": 52.631577
+      },
+      "totalCost": 19.99999926,
+      "realizedPnL": -19.99999926
+    },
+    "73656493826884677838881517389674607163195511768469423931040893598078860394512": {
+      "question": "Wild vs. Stars: O/U 5.5",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Over",
+      "positions": {
+        "Under": 40
+      },
+      "totalCost": 24,
+      "realizedPnL": -24
+    },
+    "26463504003200773479111218892803874365132752229737591857312895382975419218340": {
+      "question": "Toronto Blue Jays vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Toronto Blue Jays",
+      "positions": {
+        "Los Angeles Angels": 110.256407
+      },
+      "totalCost": 10.99999971,
+      "realizedPnL": -10.99999971
+    },
+    "80528760276620113110708388889534702397370529802633396641685581315447134376776": {
+      "question": "Athletics vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 4.886664999999994
+      },
+      "totalCost": -142.03760025,
+      "realizedPnL": 146.92426525
+    },
+    "46246722902426149376095796787730647224596703201504542730254048658065611333961": {
+      "question": "Philadelphia Phillies vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Philadelphia Phillies": 175
+      },
+      "totalCost": 10,
+      "realizedPnL": -10
+    },
+    "106431145580015108253851756291946302960054562933715040910903157990209038482060": {
+      "question": "Atlanta Braves vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Washington Nationals": 185.365849
+      },
+      "totalCost": 40.99999914,
+      "realizedPnL": -40.99999914
+    },
+    "79740716869977147506491697382983222312550616256473247005073391587480118495056": {
+      "question": "Detroit Tigers vs. Boston Red Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "Detroit Tigers": 62.222221
+      },
+      "totalCost": 27.99999945,
+      "realizedPnL": -27.99999945
+    },
+    "10266322376663726726626271999008397349563693274603285322148321501327795711219": {
+      "question": "Atlanta Braves vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Philadelphia Phillies": 118.260868
+      },
+      "totalCost": 19.999999640000002,
+      "realizedPnL": -19.999999640000002
+    },
+    "55988314417811246993053420566663874994117228386940124015768741385928214857392": {
+      "question": "San Diego Padres vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Los Angeles Angels": 130.240495
+      },
+      "totalCost": 42.44999947299999,
+      "realizedPnL": -42.44999947299999
+    },
+    "94803555675905872764602840918189015607137417323486747707211061051614903713968": {
+      "question": "Los Angeles Dodgers vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Colorado Rockies",
+      "positions": {
+        "Los Angeles Dodgers": 47.619046
+      },
+      "totalCost": 19.999999319999997,
+      "realizedPnL": -19.999999319999997
+    },
+    "70763411542607647084484513110563017985499294675754331771631318918294383925240": {
+      "question": "Atlanta Braves vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Philadelphia Phillies": 71.113683
+      },
+      "totalCost": 12.80046294,
+      "realizedPnL": -12.80046294
+    },
+    "88580080944693275889740965652044457206780734764445480091651106638935535919638": {
+      "question": "Texas Rangers vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Texas Rangers": 78.90625
+      },
+      "totalCost": 21,
+      "realizedPnL": -21
+    },
+    "33254593906740814717395458473013836679975315562354031897100768076592329498377": {
+      "question": "Cincinnati Reds vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 3.4816649999999925
+      },
+      "totalCost": -104.68200024999999,
+      "realizedPnL": 108.16366524999998
+    },
+    "45243089423823950697801659866553547043492192282151224320720179483317418130327": {
+      "question": "Kansas City Royals vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "Kansas City Royals": 140.555554
+      },
+      "totalCost": 38.99999986,
+      "realizedPnL": -38.99999986
+    },
+    "90250687417506189866561136573806716123195166108416276499427416298511705850910": {
+      "question": "Texas Rangers vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Seattle Mariners": 137.61375199999998
+      },
+      "totalCost": 26.42999914,
+      "realizedPnL": -26.42999914
+    },
+    "102848206932100256323695890864889089026141227009011591443816786871934493616854": {
+      "question": "Chicago White Sox vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Athletics": 96.153845
+      },
+      "totalCost": 24.999999700000004,
+      "realizedPnL": -24.999999700000004
+    },
+    "50636941845327244869714420576141567296524414167641907551421667649372204032353": {
+      "question": "Cincinnati Reds vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 1.9460959999999972
+      },
+      "totalCost": -31.545100639999994,
+      "realizedPnL": 33.49119663999999
+    },
+    "37859260822464119482127655568413343779129503910012975438989702658649786301229": {
+      "question": "Baltimore Orioles vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Baltimore Orioles": 1.0438080000000056
+      },
+      "totalCost": -24.766480639999994,
+      "realizedPnL": 25.81028864
+    },
+    "74565034912220928681209180214340169962168318496648746492037064102004237400014": {
+      "question": "New York Mets vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "New York Mets": 299.999997
+      },
+      "totalCost": 14.99999959,
+      "realizedPnL": -14.99999959
+    },
+    "75591622978535317844118923871365097687468250240003945154268294334875772549333": {
+      "question": "Texas Rangers vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Athletics": 75.863575
+      },
+      "totalCost": 24.57999923,
+      "realizedPnL": -24.57999923
+    },
+    "18307285433383970199203640748949532642200802667994601663482860097653929941567": {
+      "question": "Washington Nationals vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 1.0856080000000006
+      },
+      "totalCost": -19.917500720000007,
+      "realizedPnL": 21.003108720000007
+    },
+    "4274267118076813495173130758992506070572035574620260536119995252652731576613": {
+      "question": "New York Mets vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "New York Mets": 134.318625
+      },
+      "totalCost": 20.52999965,
+      "realizedPnL": -20.52999965
+    },
+    "92613228884049408303318386867489511086172450225763291481103357829055571119532": {
+      "question": "Texas Rangers vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Texas Rangers": 1.9028559999999999
+      },
+      "totalCost": -2.1912003999999996,
+      "realizedPnL": 2.1912003999999996
+    },
+    "20917078926772397395909145119546936235488318152445401010392576450691700983495": {
+      "question": "Colorado Rockies vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Colorado Rockies": 100
+      },
+      "totalCost": 17,
+      "realizedPnL": -17
+    },
+    "23959088412983872209299010632556123770260715388906641088869061322102457051785": {
+      "question": "Los Angeles Angels vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "New York Yankees": 0.5666649999999969
+      },
+      "totalCost": -17.839000500000004,
+      "realizedPnL": 18.4056655
+    },
+    "7741028720313143070063980652499832022975972412443949551518535830489499885715": {
+      "question": "Miami Marlins vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Miami Marlins": 66.666665
+      },
+      "totalCost": 11.999999699999998,
+      "realizedPnL": -11.999999699999998
+    },
+    "51008082970694330103597193288819607682398139000864340058953587826612458501415": {
+      "question": "Washington Nationals vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Washington Nationals": 101.602563
+      },
+      "totalCost": 33.99999957,
+      "realizedPnL": -33.99999957
+    },
+    "95530849225575778009977624369936581118553967479443105065329945405591332545527": {
+      "question": "Arizona Diamondbacks vs. Baltimore Orioles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.6429399999999958
+      },
+      "totalCost": -19.124500400000002,
+      "realizedPnL": 19.767440399999998
+    },
+    "105574672091058515953023332984432598181865306523478594420006435237929682580188": {
+      "question": "Texas Rangers vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Texas Rangers": 60
+      },
+      "totalCost": 9,
+      "realizedPnL": -9
+    },
+    "15102450042920970161636474556842600345083161738038583339766325076815339438485": {
+      "question": "New York Mets vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "New York Mets": 62.91729
+      },
+      "totalCost": 21.43999908,
+      "realizedPnL": -21.43999908
+    },
+    "104985760607030874773517168102136270373816915993551268694466581722759671119050": {
+      "question": "Seattle Mariners vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Seattle Mariners": 95.833332
+      },
+      "totalCost": 22.99999968,
+      "realizedPnL": -22.99999968
+    },
+    "1210318716177438695856159098837195063894481486050002184482168247076440395850": {
+      "question": "Cleveland Guardians vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 1.3691940000000073
+      },
+      "totalCost": -43.36790101999999,
+      "realizedPnL": 44.73709502
+    },
+    "98236031739794985236735750096266421007525282987927802487263311154053568376400": {
+      "question": "Avalanche vs. Oilers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Avalanche",
+      "positions": {
+        "Oilers": 41.666665
+      },
+      "totalCost": 19.9999992,
+      "realizedPnL": -19.9999992
+    },
+    "109578294687236697569482937552598429668249120308619466091840937418942342489984": {
+      "question": "Jets vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Golden Knights",
+      "positions": {
+        "Jets": 62.5
+      },
+      "totalCost": 15,
+      "realizedPnL": -15
+    },
+    "34930832912588029428833072582477549515516261007827008284839139328012435399312": {
+      "question": "New York Mets vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "New York Mets": 112.121209
+      },
+      "totalCost": 24.99999934,
+      "realizedPnL": -24.99999934
+    },
+    "15955600838261340871945730355872241790496383941417946694968430809979084317648": {
+      "question": "Los Angeles Angels vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "Los Angeles Angels": 2.230206999999993
+      },
+      "totalCost": -62.22180085000001,
+      "realizedPnL": 62.22180085000001
+    },
+    "31161571961911375864453322387270408526433432698411640504719270635388246383700": {
+      "question": "Bitcoin Up or Down - April 13, 9:55PM-10:00PM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 14.705881
+      },
+      "totalCost": 4.99999954,
+      "realizedPnL": -4.99999954
+    },
+    "86810673268844356832912467670299923789766375345730051600068123024268377919129": {
+      "question": "Miami Marlins vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Atlanta Braves": 0.9266649999999998
+      },
+      "totalCost": 4.5719995,
+      "realizedPnL": -4.5719995
+    },
+    "56633382215903178187255308976524028047476094056490581863672394526315247258230": {
+      "question": "Houston Astros vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Houston Astros": 50
+      },
+      "totalCost": 2,
+      "realizedPnL": -2
+    },
+    "111898964842132645986397166907803581986428105609389988067706764731634456823222": {
+      "question": "Bitcoin Up or Down - April 13, 12:40AM-12:45AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 17.241378
+      },
+      "totalCost": 4.99999962,
+      "realizedPnL": -4.99999962
+    },
+    "29446801145833071582173300815158824851300662768307760458240089361159075946820": {
+      "question": "Canucks vs. Ducks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canucks",
+      "positions": {
+        "Canucks": 0.0005390000000033979
+      },
+      "totalCost": -25.134600569999996,
+      "realizedPnL": 25.134600569999996
+    },
+    "110690581719475086435875024309955493645246881626812914874586426730680802716351": {
+      "question": "Cleveland Guardians vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Cleveland Guardians": 127.5
+      },
+      "totalCost": 13.1,
+      "realizedPnL": -13.1
+    },
+    "36348988882210654327793333821373148284800969268104550207011578943670467241135": {
+      "question": "Chicago White Sox vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Chicago White Sox": 1.8900000000000006
+      },
+      "totalCost": -55.73528999999999,
+      "realizedPnL": 57.62528999999999
+    },
+    "6356528018795901922580928634484372106022524103463351016802731651101812079908": {
+      "question": "Washington Nationals vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 1.8144430000000114
+      },
+      "totalCost": -58.537370519999996,
+      "realizedPnL": 60.35181352000001
+    },
+    "59878804012802373716975708306468133433417032218818228497228813992712711388303": {
+      "question": "Houston Astros vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Houston Astros": 197.127318
+      },
+      "totalCost": 33.58999886,
+      "realizedPnL": -33.58999886
+    },
+    "103676207326232433100671423406187047250159068870105162510898090839636278803305": {
+      "question": "Texas Rangers vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Texas Rangers": 76.923075
+      },
+      "totalCost": 9.99999975,
+      "realizedPnL": -9.99999975
+    },
+    "8875639021176165951333448065003914234613628544926519460240489303064597387561": {
+      "question": "Colorado Rockies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Colorado Rockies": 68.333332
+      },
+      "totalCost": 8.19999984,
+      "realizedPnL": -8.19999984
+    },
+    "28649990681830227335787966292598915765350037658015126397942269197258950100014": {
+      "question": "Washington Nationals vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 1.6330380000000062
+      },
+      "totalCost": -39.36100092999999,
+      "realizedPnL": 40.994038929999995
+    },
+    "63419676361778234736603643621439197953147548307527951704439919452923817134348": {
+      "question": "Boston Red Sox vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "St. Louis Cardinals": 45.454544
+      },
+      "totalCost": 9.99999968,
+      "realizedPnL": -9.99999968
+    },
+    "97844153089719065536948655467265403844309371112299944362667909040877345181087": {
+      "question": "Los Angeles Angels vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Los Angeles Angels": 170.554812
+      },
+      "totalCost": 49.819998999999996,
+      "realizedPnL": -49.819998999999996
+    },
+    "21337100341200482070557317060891033680864314822118609409777698884449926328557": {
+      "question": "Pittsburgh Pirates vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Chicago Cubs": 32
+      },
+      "totalCost": 8,
+      "realizedPnL": -8
+    },
+    "16217042692189579536301106586411247578544122482537687240092809405011242899156": {
+      "question": "Pittsburgh Pirates vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Pittsburgh Pirates": 1.8647500000000008
+      },
+      "totalCost": -26.928547499999993,
+      "realizedPnL": 28.793297499999994
+    },
+    "99237965040716747156198706150009093244910918607150806774948813739478780304538": {
+      "question": "Texas Rangers vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Texas Rangers": 59.113299
+      },
+      "totalCost": 23.999999394,
+      "realizedPnL": -23.999999394
+    },
+    "9978173237728483229177169637315213180219279538877826240917630870183646434206": {
+      "question": "Houston Astros vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Houston Astros": 131.10824
+      },
+      "totalCost": 43.789999069,
+      "realizedPnL": -43.789999069
+    },
+    "29113880134236219239968340991984855481101809241823842649828380931041732703482": {
+      "question": "Colorado Rockies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Colorado Rockies": 44.444443
+      },
+      "totalCost": 11.999999610000001,
+      "realizedPnL": -11.999999610000001
+    },
+    "50785904672758323875068754775226184593344258045153965448950436899486248002568": {
+      "question": "Washington Nationals vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.5833319999999986
+      },
+      "totalCost": -18.258750560000003,
+      "realizedPnL": 18.84208256
+    },
+    "79146652206316360482925580173225678087925377818558533509565008097016038367169": {
+      "question": "Arizona Diamondbacks vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 1.3499999999999943
+      },
+      "totalCost": -43.576350000000005,
+      "realizedPnL": 44.92635
+    },
+    "45507086413678005743283594303196770649728015368302308539996032314734578698453": {
+      "question": "Miami Marlins vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Miami Marlins": 85.714284
+      },
+      "totalCost": 29.9999994,
+      "realizedPnL": -29.9999994
+    },
+    "92794253746799737460139341505593291185529532455646996016205709084649609199823": {
+      "question": "Colorado Rockies vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Colorado Rockies": 49.037223999999995
+      },
+      "totalCost": 18.99999872,
+      "realizedPnL": -18.99999872
+    },
+    "96865446836511074755141084742965162260333541096125568519119670608459909407235": {
+      "question": "Arizona Diamondbacks vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 1.9585389999999876
+      },
+      "totalCost": -62.75014093000001,
+      "realizedPnL": 64.70867992999999
+    },
+    "105684741723504950912453789025809250312687578664604464888858117271048958482613": {
+      "question": "Detroit Tigers vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Detroit Tigers": 1.690292999999997
+      },
+      "totalCost": 4.971499009999995,
+      "realizedPnL": -4.971499009999995
+    },
+    "20231811853655481545057633462480601574938055495839824387330267229179183297479": {
+      "question": "Cincinnati Reds vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Cincinnati Reds": 79.88955999999999
+      },
+      "totalCost": 32.190198609999996,
+      "realizedPnL": -32.190198609999996
+    },
+    "52774742416775258046069749257693567003840440274153054914257642275411021219153": {
+      "question": "Detroit Tigers vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Detroit Tigers": 83.040467
+      },
+      "totalCost": 9.96485604,
+      "realizedPnL": -9.96485604
+    },
+    "66020666250153010726059869334591993003150592180799527755725607319944751118103": {
+      "question": "Athletics vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 1.5435469999999896
+      },
+      "totalCost": -46.01750043,
+      "realizedPnL": 47.56104742999999
+    },
+    "2403260698225660798210860314582701765908836710884735496045246307509277648920": {
+      "question": "Cincinnati Reds vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Cincinnati Reds": 69.84495799999999
+      },
+      "totalCost": 21.3999991,
+      "realizedPnL": -21.3999991
+    },
+    "71959119295560957405003494282047995051013148211901718469572324786820226993773": {
+      "question": "Chicago Cubs vs. Tampa Bay Rays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Chicago Cubs": 0.6263250000000014
+      },
+      "totalCost": -19.908670750000002,
+      "realizedPnL": 20.534995750000004
+    },
+    "114090555141983795527345506774288181542533427944259172403974309060515774468675": {
+      "question": "Atlanta Braves vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Los Angeles Angels": 93.749997
+      },
+      "totalCost": 39.99999886,
+      "realizedPnL": -39.99999886
+    },
+    "25920909439686975947003900442868445075273174839835538733222409858825582700887": {
+      "question": "Spread: Seattle Mariners (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Seattle Mariners": 39.024389
+      },
+      "totalCost": 15.999999489999999,
+      "realizedPnL": -15.999999489999999
+    },
+    "75103355814092755716214520389666138713087324677821187011124025443810691506725": {
+      "question": "Philadelphia Phillies vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "Philadelphia Phillies": 78.333332
+      },
+      "totalCost": 8.9999998,
+      "realizedPnL": -8.9999998
+    },
+    "95461855217617684335387887292069456362507915113822051894772677360899991928002": {
+      "question": "Atlanta Braves vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Atlanta Braves": 0.5634130000000006
+      },
+      "totalCost": -12.74700067,
+      "realizedPnL": 13.31041367
+    },
+    "49217293181309878816171293102995653536325480620480852470106451942638496571273": {
+      "question": "Spread: Cincinnati Reds (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 0.9145439999999994
+      },
+      "totalCost": -29.13914048,
+      "realizedPnL": 30.053684479999998
+    },
+    "12880421227541615698950978344051973476567530209287053343103820385806697436335": {
+      "question": "St. Louis Cardinals vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Washington Nationals": 1.2962149999999895
+      },
+      "totalCost": -34.162800450000006,
+      "realizedPnL": 34.162800450000006
+    },
+    "62061165392285408261686464072126950673235205487636363645214940759243950980438": {
+      "question": "Baltimore Orioles vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Baltimore Orioles": 0.8587780000000009
+      },
+      "totalCost": -23.792001260000006,
+      "realizedPnL": 24.650779260000007
+    },
+    "65448416125570779603115460105805741822778482201477555477702639878705882431575": {
+      "question": "Arizona Diamondbacks vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Mets",
+      "positions": {
+        "Arizona Diamondbacks": 53.048779
+      },
+      "totalCost": 21.74999939,
+      "realizedPnL": -21.74999939
+    },
+    "66516613570626044721640203770219359832444828852819473239486289715391421282460": {
+      "question": "Spread: Philadelphia Phillies (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Philadelphia Phillies": 0.9354999999999976
+      },
+      "totalCost": -22.144155,
+      "realizedPnL": 23.079655
+    },
+    "57447893678691732500013067317309535757556090133849129341870543365835168518293": {
+      "question": "Philadelphia Phillies vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Philadelphia Phillies",
+      "positions": {
+        "Philadelphia Phillies": 0.6877759999999995
+      },
+      "totalCost": -18.29740032,
+      "realizedPnL": 18.98517632
+    },
+    "72366711975805571374660628153225204556559937284048893748248897309484385762835": {
+      "question": "Predators vs. Kings",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Kings",
+      "positions": {
+        "Predators": 0.006664999999998145
+      },
+      "totalCost": 1.335199499999998,
+      "realizedPnL": -1.335199499999998
+    },
+    "36999196011227856798204295856559032460692212120636553159942886082311660028802": {
+      "question": "Cincinnati Reds vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 1.4036200000000036
+      },
+      "totalCost": -39.14300149999999,
+      "realizedPnL": 40.54662149999999
+    },
+    "108026446302848359622919223793005437163350783172758188645977553244236236706914": {
+      "question": "St. Louis Cardinals vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Detroit Tigers": 122.222221
+      },
+      "totalCost": 10.99999945,
+      "realizedPnL": -10.99999945
+    },
+    "82153965108591876413942742526961264845301704502066400439303350043877890098862": {
+      "question": "St. Louis Cardinals vs. Detroit Tigers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 2.6056239999999917
+      },
+      "totalCost": -46.75100072000001,
+      "realizedPnL": 49.35662472
+    },
+    "45116025513331382414744070815857686113675684851919592639573525371359483738829": {
+      "question": "Houston Astros vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Houston Astros": 81.481477
+      },
+      "totalCost": 38.999997990000004,
+      "realizedPnL": -38.999997990000004
+    },
+    "8900646888518016225309471143871432350390068354242348860287031787947164619615": {
+      "question": "Seattle Mariners vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "Los Angeles Angels": 0.8236600000000038
+      },
+      "totalCost": -25.008001639999996,
+      "realizedPnL": 25.83166164
+    },
+    "66998574198630274244063764755391238476210847565341173067737991914569070597385": {
+      "question": "Cincinnati Reds vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 1.0644430000000042
+      },
+      "totalCost": -30.260300650000005,
+      "realizedPnL": 31.32474365000001
+    },
+    "3713889045079304432368802378989908520171150034756547157883260689292288730043": {
+      "question": "Toronto Blue Jays vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Toronto Blue Jays": 44.444443
+      },
+      "totalCost": 19.99999935,
+      "realizedPnL": -19.99999935
+    },
+    "113449074008582427962342668475487286643686259241240264327858326458493482667041": {
+      "question": "Seattle Mariners vs. Los Angeles Angels",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Los Angeles Angels": 88.857138
+      },
+      "totalCost": 31.21999846,
+      "realizedPnL": -31.21999846
+    },
+    "87109343692172406518990887248406959657282606420084552199350219610350201990984": {
+      "question": "Toronto Blue Jays vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Toronto Blue Jays": 31.81
+      },
+      "totalCost": 11.7697,
+      "realizedPnL": -11.7697
+    },
+    "50142662631503011428795380301870875581192763449089433271930313858823203908911": {
+      "question": "New York Mets vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "New York Mets": 22
+      },
+      "totalCost": 2.6399999999999997,
+      "realizedPnL": -2.6399999999999997
+    },
+    "100474537518760754781383156580080981755593675752439438067238414316949653388533": {
+      "question": "Atlanta Braves vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Atlanta Braves": 0.6680380000000028
+      },
+      "totalCost": -20.896840619999995,
+      "realizedPnL": 21.564878619999998
+    },
+    "44668185583545088650440138362716962438925445505725783105033404006516374468726": {
+      "question": "Cleveland Guardians vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Los Angeles Dodgers": 36.666665
+      },
+      "totalCost": 10.9999995,
+      "realizedPnL": -10.9999995
+    },
+    "22387209209064959406965328112927485127747950171938717319813001790462084524667": {
+      "question": "Cleveland Guardians vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Cleveland Guardians": 1.1784140000000036
+      },
+      "totalCost": -21.108000660000002,
+      "realizedPnL": 22.286414660000005
+    },
+    "81605744191771903668955687113373328830317800238836703383769664590642916453398": {
+      "question": "San Francisco Giants vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "San Francisco Giants": 62.884614
+      },
+      "totalCost": 15.004999892,
+      "realizedPnL": -15.004999892
+    },
+    "50801016592669428214331672536225881551761101938864161687636774230346012546860": {
+      "question": "New York Mets vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 1.1300000000000026
+      },
+      "totalCost": -4.457599999999999,
+      "realizedPnL": 5.587600000000002
+    },
+    "114007211169614830877647133431090153543472557793706639671381858157379114492465": {
+      "question": "Cleveland Guardians vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Cleveland Guardians": 64.705881
+      },
+      "totalCost": 10.999999770000002,
+      "realizedPnL": -10.999999770000002
+    },
+    "84559823605774043885036314580705870170540673988992813696463122100073512120164": {
+      "question": "San Francisco Giants vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Francisco Giants",
+      "positions": {
+        "San Diego Padres": 40.740739
+      },
+      "totalCost": 10.99999953,
+      "realizedPnL": -10.99999953
+    },
+    "34299124939879668321036809315270213509516931141320075020539748240207832191285": {
+      "question": "New York Mets vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "New York Mets": 49.744358000000005
+      },
+      "totalCost": 6.63999962,
+      "realizedPnL": -6.63999962
+    },
+    "1472864401358605644288975251099681884523395832129550468604977462554948586011": {
+      "question": "Los Angeles Angels vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "Los Angeles Angels": 0.522556999999999
+      },
+      "totalCost": -9.87670049,
+      "realizedPnL": 10.399257489999998
+    },
+    "66857105434288814689311613608771763087985391626644277068015770735363126884046": {
+      "question": "Spread: Texas Rangers (-1.5)",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Texas Rangers": 1.4123789999999872
+      },
+      "totalCost": -35.199800820000014,
+      "realizedPnL": 36.61217982
+    },
+    "87657988846555122642963808267658549734919476297697946930974463484210748120789": {
+      "question": "Cleveland Guardians vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Los Angeles Dodgers": 65.076784
+      },
+      "totalCost": 1.496766032,
+      "realizedPnL": -1.496766032
+    },
+    "70549755569363497268446013568031243601518844994023463038823454258665602031440": {
+      "question": "New York Yankees vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "New York Yankees": 63.157893
+      },
+      "totalCost": 23.999999340000002,
+      "realizedPnL": -23.999999340000002
+    },
+    "114333341533795798781307041621102881420541265030735621543509169000200865043169": {
+      "question": "Minnesota Twins vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Minnesota Twins": 26.086955
+      },
+      "totalCost": 5.99999965,
+      "realizedPnL": -5.99999965
+    },
+    "29066659364798708907745483147497559316848588164220693379735292007873498624417": {
+      "question": "Cleveland Guardians vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Cleveland Guardians": 100
+      },
+      "totalCost": 5,
+      "realizedPnL": -5
+    },
+    "35229205131878601484060272567806856170467585812083785054881457223476152726775": {
+      "question": "Tampa Bay Rays vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Tampa Bay Rays",
+      "positions": {
+        "St. Louis Cardinals": 105.769229
+      },
+      "totalCost": 24.999999770000002,
+      "realizedPnL": -24.999999770000002
+    },
+    "1822436456489952285835649117747936650183046830858712531191754545297873734447": {
+      "question": "Texas Rangers vs. Philadelphia Phillies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Philadelphia Phillies": 93.939392
+      },
+      "totalCost": 30.99999936,
+      "realizedPnL": -30.99999936
+    },
+    "31508733642429538449940491786758969913221308787418853388076606421206614704833": {
+      "question": "Cleveland Guardians vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Seattle Mariners": 37.777776
+      },
+      "totalCost": 9.822221760000001,
+      "realizedPnL": -9.822221760000001
+    },
+    "67825530731449273166896481531740706652392523622769642796875645463120481240159": {
+      "question": "Cleveland Guardians vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Cleveland Guardians": 0.005713000000000079
+      },
+      "totalCost": -65.13880018,
+      "realizedPnL": 65.13880018
+    },
+    "86173995161304107918962536049565537672152376219695135463711078746942142825904": {
+      "question": "Detroit Tigers vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Detroit Tigers": 106.366152
+      },
+      "totalCost": 22.613538000000002,
+      "realizedPnL": -22.613538000000002
+    },
+    "84803944245862070623096907093721422230424461328441347333822574413089913292697": {
+      "question": "Los Angeles Angels vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "Los Angeles Angels": 66.666665
+      },
+      "totalCost": 29.99999925,
+      "realizedPnL": -29.99999925
+    },
+    "37806748883989218834158945753242980398008409741910360199056980562755117824476": {
+      "question": "Colorado Rockies vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Colorado Rockies": 70
+      },
+      "totalCost": 25,
+      "realizedPnL": -25
+    },
+    "75035657465320243583033748857319949133077314051423725586021095106704553940345": {
+      "question": "Washington Nationals vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Washington Nationals": 147.985344
+      },
+      "totalCost": 25.999999459999998,
+      "realizedPnL": -25.999999459999998
+    },
+    "94477751672177338542077267338875040751970852616299093509799472689792216023035": {
+      "question": "Arizona Diamondbacks vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Arizona Diamondbacks": 75.027776
+      },
+      "totalCost": 13.779999359999998,
+      "realizedPnL": -13.779999359999998
+    },
+    "16307849973369588222089704250411572093863489752790442979321073689306257732868": {
+      "question": "Detroit Tigers vs. San Diego Padres",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Detroit Tigers",
+      "positions": {
+        "Detroit Tigers": 0.002148000000005368
+      },
+      "totalCost": -43.813578039999996,
+      "realizedPnL": 43.813578039999996
+    },
+    "14649036281095876766907701774025347450294799172119152513220550318973638568423": {
+      "question": "Colorado Rockies vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Colorado Rockies": 126.984124
+      },
+      "totalCost": 34.99999922,
+      "realizedPnL": -34.99999922
+    },
+    "46279366178946002236702991560076753335903017977790180105725986204777757717714": {
+      "question": "New York Yankees vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "San Francisco Giants": 126.984124
+      },
+      "totalCost": 29.9999992,
+      "realizedPnL": -29.9999992
+    },
+    "102427642560616812425473506732186160623892697013836116954344836371078839421256": {
+      "question": "Boston Red Sox vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "Cincinnati Reds": 59.334841999999995
+      },
+      "totalCost": 24.999998839999996,
+      "realizedPnL": -24.999998839999996
+    },
+    "75382429219667152288541335879263338434373119855928217133689165764324442698956": {
+      "question": "Washington Nationals vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Chicago Cubs": 26.333332
+      },
+      "totalCost": 3.9499997999999996,
+      "realizedPnL": -3.9499997999999996
+    },
+    "14295118933324881647821767693026695440456282242558855918597765837669246776385": {
+      "question": "Washington Nationals vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.0028559999999941965
+      },
+      "totalCost": -41.65460040000001,
+      "realizedPnL": 41.65460040000001
+    },
+    "113879856413913776332924685468712043725820912931985350006574436513271970243261": {
+      "question": "Cleveland Guardians vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cleveland Guardians",
+      "positions": {
+        "Arizona Diamondbacks": 85.946955
+      },
+      "totalCost": 15.308330100000001,
+      "realizedPnL": -15.308330100000001
+    },
+    "25579971641687344579912017323678192273411173562257246997658969285632143159147": {
+      "question": "Boston Red Sox vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Minnesota Twins": 0
+      },
+      "totalCost": -28.7316,
+      "realizedPnL": 28.7316
+    },
+    "62772010268264414499333932227519767504222100686912305450215026766916069816644": {
+      "question": "Minnesota Twins vs. Boston Red Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Minnesota Twins": 0.00636199999999576
+      },
+      "totalCost": -35.566370719999995,
+      "realizedPnL": 35.566370719999995
+    },
+    "114842310911515009246506961765941473719589033150160765483706067439744030115310": {
+      "question": "Baltimore Orioles vs. Washington Nationals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Washington Nationals": 30.7
+      },
+      "totalCost": 15.043,
+      "realizedPnL": -15.043
+    },
+    "49535483277090639103043267733617639220968800367240416643936379307808802319578": {
+      "question": "Milwaukee Brewers vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Milwaukee Brewers": 57.813863999999995
+      },
+      "totalCost": 12.99345197,
+      "realizedPnL": -12.99345197
+    },
+    "44020698477616327614927314670317048348666312699043508980717323299357240128060": {
+      "question": "Atlanta Braves vs. Minnesota Twins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Minnesota Twins",
+      "positions": {
+        "Minnesota Twins": 0.0036350000000027194
+      },
+      "totalCost": -40.522276649999995,
+      "realizedPnL": 40.522276649999995
+    },
+    "9090512489941184646051765064923448732564328444649102153608586740393220560515": {
+      "question": "Washington Nationals vs. Baltimore Orioles",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Baltimore Orioles",
+      "positions": {
+        "Washington Nationals": 57.125
+      },
+      "totalCost": 10.85375,
+      "realizedPnL": -10.85375
+    },
+    "37026011763609476164364232957827386709309377684382644434510371684109141805146": {
+      "question": "San Diego Padres vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Milwaukee Brewers",
+      "positions": {
+        "San Diego Padres": 172.857141
+      },
+      "totalCost": 23.299999740000004,
+      "realizedPnL": -23.299999740000004
+    },
+    "43182363803927225448265963891026190727784961394607489263187453953301864339381": {
+      "question": "Athletics vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "",
+      "positions": {
+        "Los Angeles Dodgers": 0.006800000000012574
+      },
+      "totalCost": -24.72189999999999,
+      "realizedPnL": 24.72189999999999
+    },
+    "75542239311039669179566278817412023462323472432726094665898882711337662440667": {
+      "question": "Miami Marlins vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "Miami Marlins": 117.416314
+      },
+      "totalCost": 21.13493652,
+      "realizedPnL": -21.13493652
+    },
+    "113585316433123442536791100600311303712932916773596400542759753818685391890060": {
+      "question": "Ducks vs. Utah",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Ducks",
+      "positions": {
+        "Utah": 57.142856
+      },
+      "totalCost": 15.999999680000002,
+      "realizedPnL": -15.999999680000002
+    },
+    "86442730742708042416888432834241910606840647832189260976186949831818492042465": {
+      "question": "Milwaukee Brewers vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Milwaukee Brewers": 0
+      },
+      "totalCost": 22.483220000000003,
+      "realizedPnL": -22.483220000000003
+    },
+    "104488322254089688400467132289979219568892034233002078561860243018235199369954": {
+      "question": "Cincinnati Reds vs. Chicago Cubs",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Chicago Cubs": 0
+      },
+      "totalCost": 4.85,
+      "realizedPnL": -4.85
+    },
+    "66374822841627082869008385435751806344078784525722422781225744323250278659792": {
+      "question": "San Diego Padres vs. Los Angeles Dodgers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "San Diego Padres": 45.363635
+      },
+      "totalCost": 5.709999850000001,
+      "realizedPnL": -5.709999850000001
+    },
+    "9248132973568327696435901251121429616486729324900772450206681720580052676582": {
+      "question": "San Francisco Giants vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "San Francisco Giants": 0.0052820000000082246
+      },
+      "totalCost": -30.66308053999999,
+      "realizedPnL": 30.66308053999999
+    },
+    "23746597279716195071226171476435710741277215392914582190523133472877685893393": {
+      "question": "Washington Nationals vs. Miami Marlins",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Washington Nationals": 79.339621
+      },
+      "totalCost": 42.049999129999996,
+      "realizedPnL": -42.049999129999996
+    },
+    "104282259978008763683990681912446989766361284558190027819210037038391009200048": {
+      "question": "Minnesota Twins vs. Boston Red Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Boston Red Sox",
+      "positions": {
+        "Minnesota Twins": 15
+      },
+      "totalCost": 2.5500000000000003,
+      "realizedPnL": -2.5500000000000003
+    },
+    "58362091472300853291142371327155565893481674387472951085874055349722371894986": {
+      "question": "Panthers vs. Canucks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canucks",
+      "positions": {
+        "Panthers": 87.974919
+      },
+      "totalCost": 35.73999906,
+      "realizedPnL": -35.73999906
+    },
+    "24709461503122858665188867964940084934449382280426532086543419668257380266925": {
+      "question": "Bruins vs. Canadiens",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canadiens",
+      "positions": {
+        "Bruins": 83.333332
+      },
+      "totalCost": 34.999999439999996,
+      "realizedPnL": -34.999999439999996
+    },
+    "18167915224877900427825095408652110275833383739620995832945056280817854175009": {
+      "question": "Islanders vs. Maple Leafs",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Islanders",
+      "positions": {
+        "Maple Leafs": 68.965516
+      },
+      "totalCost": 19.999999639999995,
+      "realizedPnL": -19.999999639999995
+    },
+    "21227960390457733582010838831961150976453011410002536824769876836375846729312": {
+      "question": "Seattle Mariners vs. Colorado Rockies",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Seattle Mariners",
+      "positions": {
+        "Colorado Rockies": 71.42857
+      },
+      "totalCost": 9.9999998,
+      "realizedPnL": -9.9999998
+    },
+    "7962968184914633800224299942638941615795528699804439768853521567944193969786": {
+      "question": "San Diego Padres vs. Seattle Mariners",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "Seattle Mariners": 53.333332
+      },
+      "totalCost": 23.9999994,
+      "realizedPnL": -23.9999994
+    },
+    "37640321208381058989994040150583737245813807770029991223644334709175043888177": {
+      "question": "Bitcoin Up or Down - March 17, 3:45AM-4:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 41.666665
+      },
+      "totalCost": 4.9999998,
+      "realizedPnL": -4.9999998
+    },
+    "8599106080125457931895302308686855889596024434786567007351007816214030903561": {
+      "question": "Bitcoin Up or Down - March 17, 3:45AM-3:50AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 19.354837
+      },
+      "totalCost": 5.99999947,
+      "realizedPnL": -5.99999947
+    },
+    "39457235254027315429549250649571610633652196070896141244990675412353119065011": {
+      "question": "Bitcoin Up or Down - March 17, 1:50AM-1:55AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 150
+      },
+      "totalCost": 3,
+      "realizedPnL": -3
+    },
+    "115211901053300943963252234039992882276073023890170606413154257157886935610355": {
+      "question": "Bitcoin Up or Down - March 17, 12:30AM-12:45AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 523.809522
+      },
+      "totalCost": 5.99999962,
+      "realizedPnL": -5.99999962
+    },
+    "29795137783540041313215487687912041338147791040890014937209483322496919028599": {
+      "question": "Chicago Cubs vs. Cleveland Guardians",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago Cubs",
+      "positions": {
+        "Chicago Cubs": 0
+      },
+      "totalCost": -9.073199999999998,
+      "realizedPnL": 9.073199999999998
+    },
+    "3816518481671871062577988250327091694215573060566533078632537202325188211390": {
+      "question": "Suns vs. Celtics",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Celtics",
+      "positions": {
+        "Suns": 0.0007680000000007681
+      },
+      "totalCost": -7.8550001599999995,
+      "realizedPnL": 7.8550001599999995
+    },
+    "24475584037482783016879733113995915625506709892570781857565366304193819677093": {
+      "question": "Washington Nationals vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.004073000000005322
+      },
+      "totalCost": -62.74514102,
+      "realizedPnL": 62.74514102
+    },
+    "87636442223118439171962259226410913396671997631392742967631319178642812338737": {
+      "question": "Cincinnati Reds vs. Arizona Diamondbacks",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Cincinnati Reds": 115.087807
+      },
+      "totalCost": 35.24768929,
+      "realizedPnL": -35.24768929
+    },
+    "14523176195235954344472583227568234284089088448147091012658523607097190753191": {
+      "question": "Bitcoin Up or Down - March 16, 4:00AM-4:15AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 28.571427
+      },
+      "totalCost": 3.9999997800000004,
+      "realizedPnL": -3.9999997800000004
+    },
+    "29938514184970414348155694778671980817991099472183324339505529775105034074937": {
+      "question": "Jazz vs. Kings",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Kings",
+      "positions": {
+        "Jazz": 203.758333
+      },
+      "totalCost": 1.018791665,
+      "realizedPnL": -1.018791665
+    },
+    "22307182722431130206358794107727621448338448269878425626274781141328215412638": {
+      "question": "Warriors vs. Knicks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Knicks",
+      "positions": {
+        "Warriors": 43.644441
+      },
+      "totalCost": 12.379999109999998,
+      "realizedPnL": -12.379999109999998
+    },
+    "32339520010773292544355100813714754948527432815531037183384020321673819215260": {
+      "question": "Maple Leafs vs. Wild",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Maple Leafs",
+      "positions": {
+        "Maple Leafs": 0.004543999999995663
+      },
+      "totalCost": -29.99550048,
+      "realizedPnL": 29.99550048
+    },
+    "67148695335904698967473236943323912222504836491328964109592752140717188940399": {
+      "question": "Chicago White Sox vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Kansas City Royals",
+      "positions": {
+        "Kansas City Royals": 0.008822000000009211
+      },
+      "totalCost": -61.11828873999999,
+      "realizedPnL": 61.11828873999999
+    },
+    "110262684193431423840057192745934217483247568571316159188617200888884881147674": {
+      "question": "Bitcoin Up or Down - March 15, 1:55AM-2:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 16.666665
+      },
+      "totalCost": 6.999999299999999,
+      "realizedPnL": -6.999999299999999
+    },
+    "34029302344827176924552482427693191096582361944534514304936212566111186266106": {
+      "question": "Bitcoin Up or Down - March 15, 1:50AM-1:55AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 18.75
+      },
+      "totalCost": 3,
+      "realizedPnL": -3
+    },
+    "24898184046436110250669275099498985798506223894129440955908428327403378583167": {
+      "question": "Blue Jackets vs. Flyers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Blue Jackets",
+      "positions": {
+        "Flyers": 49.164633
+      },
+      "totalCost": 20.15749953,
+      "realizedPnL": -20.15749953
+    },
+    "31001260396369028425842643495018788732487589092140832993780125093972608458938": {
+      "question": "Maple Leafs vs. Sabres",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Sabres",
+      "positions": {
+        "Maple Leafs": 64.102563
+      },
+      "totalCost": 24.999999570000004,
+      "realizedPnL": -24.999999570000004
+    },
+    "14882106517673191490895801381963587145068840002364454182964711722247373715857": {
+      "question": "Boston Red Sox vs. Atlanta Braves",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Atlanta Braves",
+      "positions": {
+        "Boston Red Sox": 34.766469
+      },
+      "totalCost": 11.12527008,
+      "realizedPnL": -11.12527008
+    },
+    "14977302773370719194740864089413740520099108852725425357781064412787995077495": {
+      "question": "New York Mets vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Houston Astros",
+      "positions": {
+        "New York Mets": 7.29
+      },
+      "totalCost": 2.2599,
+      "realizedPnL": -2.2599
+    },
+    "2909978340435278471847243532543572367666048606300369144397709625762563846561": {
+      "question": "Arizona Diamondbacks vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Arizona Diamondbacks": 0.004457000000002154
+      },
+      "totalCost": -23.819377608,
+      "realizedPnL": 23.819377608
+    },
+    "31648785551752939806599566596120370647362675228899721296205823820152126504700": {
+      "question": "Los Angeles Dodgers vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Los Angeles Dodgers": 110.474005
+      },
+      "totalCost": 21.2989994,
+      "realizedPnL": -21.2989994
+    },
+    "99541619091457566637034579871894293298838390625145045783102359168712429816413": {
+      "question": "Arizona Diamondbacks vs. Kansas City Royals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Arizona Diamondbacks",
+      "positions": {
+        "Kansas City Royals": 43.634
+      },
+      "totalCost": 14.651720000000001,
+      "realizedPnL": -14.651720000000001
+    },
+    "115479456251014083807687727243459822990110122836608893727136940760036044378962": {
+      "question": "Bitcoin Up or Down - March 13, 10:25PM-10:30PM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 19.042591
+      },
+      "totalCost": 4.9510736600000005,
+      "realizedPnL": -4.9510736600000005
+    },
+    "58308516446555868569619995803369631254442771186836054695857775610526850710405": {
+      "question": "Bitcoin Up or Down - March 13, 10:20PM-10:25PM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.1851199999999995
+      },
+      "totalCost": -0.7648007999999997,
+      "realizedPnL": 0.9499207999999992
+    },
+    "18951603648425932973966981225300780531532162978924043149151211377970731032159": {
+      "question": "Houston Astros vs. St. Louis Cardinals",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "St. Louis Cardinals",
+      "positions": {
+        "St. Louis Cardinals": 0.0031020000000054893
+      },
+      "totalCost": -26.159820419999992,
+      "realizedPnL": 26.159820419999992
+    },
+    "7677988638976178252527310113409118453456952771644392160210796747250157266496": {
+      "question": "Miami Marlins vs. New York Mets",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Miami Marlins",
+      "positions": {
+        "Miami Marlins": 0.00636199999999576
+      },
+      "totalCost": -10.427300719999998,
+      "realizedPnL": 10.427300719999998
+    },
+    "16937964198884687291536603798248957349183519320690301258387667951770078411862": {
+      "question": "San Diego Padres vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "San Diego Padres",
+      "positions": {
+        "San Diego Padres": 0.00636199999999576
+      },
+      "totalCost": -52.535664340000004,
+      "realizedPnL": 52.535664340000004
+    },
+    "55290734204219272214120687487760544849937669131819863647743216833010039783817": {
+      "question": "Bitcoin Up or Down - March 13, 5:15PM-5:20PM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.18475999999999893
+      },
+      "totalCost": -6.602800800000001,
+      "realizedPnL": 6.7875608
+    },
+    "22175911931861505273989902470620138973233177297252605010796587537941104988234": {
+      "question": "Chicago Cubs vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Chicago White Sox",
+      "positions": {
+        "Chicago Cubs": 60.829088
+      },
+      "totalCost": 14.93197511,
+      "realizedPnL": -14.93197511
+    },
+    "65172177534294468202595336902370291831825521000804203164771953618821991693266": {
+      "question": "Solana Up or Down - March 13, 2:45PM-2:50PM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 50
+      },
+      "totalCost": 7.000000000000001,
+      "realizedPnL": -7.000000000000001
+    },
+    "1219823301056420048843811367999145130505851604649820737947285420969056792117": {
+      "question": "Minnesota Twins vs. Toronto Blue Jays",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Toronto Blue Jays",
+      "positions": {
+        "Minnesota Twins": 67.603989
+      },
+      "totalCost": 22.162522510000002,
+      "realizedPnL": -22.162522510000002
+    },
+    "63113905430580935642046538982037607036261580892858010260562882357728218064336": {
+      "question": "Bitcoin Up or Down - March 13, 6:10AM-6:15AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 21.943545
+      },
+      "totalCost": 7.0219344,
+      "realizedPnL": -7.0219344
+    },
+    "26617257678475508569589875813098681914678006523866794810982102674295581674743": {
+      "question": "Bitcoin Up or Down - March 13, 6:05AM-6:10AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 25
+      },
+      "totalCost": 10,
+      "realizedPnL": -10
+    },
+    "92240844238605871913723540150077167092317826670527459747523478165086200520078": {
+      "question": "Bitcoin Up or Down - March 13, 5:55AM-6:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 18.181817
+      },
+      "totalCost": 9.99999935,
+      "realizedPnL": -9.99999935
+    },
+    "83964810662594963310720248577927024648399269924464883828050322847250630476154": {
+      "question": "Bitcoin Up or Down - March 13, 5:50AM-5:55AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 16.326529
+      },
+      "totalCost": 7.99999921,
+      "realizedPnL": -7.99999921
+    },
+    "70092182608561891358724910206583666465528109314132864668093004693671364522669": {
+      "question": "Bitcoin Up or Down - March 13, 5:45AM-5:50AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 46.39
+      },
+      "totalCost": 0.46390000000000003,
+      "realizedPnL": -0.46390000000000003
+    },
+    "113643966671804669233305748726851028213591455520207240215767370817141801211469": {
+      "question": "Bitcoin Up or Down - March 13, 5:40AM-5:45AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.328164000000001
+      },
+      "totalCost": -7.670398860000001,
+      "realizedPnL": 7.998562860000002
+    },
+    "45387272651516763152712107915926755415980816176821274426335905089657379134416": {
+      "question": "Bitcoin Up or Down - March 13, 5:35AM-5:40AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 9.259258
+      },
+      "totalCost": 4.999999320000001,
+      "realizedPnL": -4.999999320000001
+    },
+    "12616063495965589770512019055526885297172194715904987503358177312648369587257": {
+      "question": "Bitcoin Up or Down - March 13, 5:30AM-5:35AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.328164000000001
+      },
+      "totalCost": -9.87919864,
+      "realizedPnL": 10.207362640000001
+    },
+    "16491650256764937541500442479670374348798433353683363209584664602651202177955": {
+      "question": "Bitcoin Up or Down - March 13, 5:25AM-5:30AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.3202460000000009
+      },
+      "totalCost": -7.961976179999999,
+      "realizedPnL": 8.28222218
+    },
+    "97187805138496900681527248358287201092520043994302256882829180515373898894646": {
+      "question": "Bitcoin Up or Down - March 13, 5:20AM-5:25AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 13.422787
+      },
+      "totalCost": 2.01341805,
+      "realizedPnL": -2.01341805
+    },
+    "84688051602976713934005746715956366415388480620737117200427612857264957943520": {
+      "question": "Bitcoin Up or Down - March 13, 5:15AM-5:20AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.14792300000000047
+      },
+      "totalCost": -9.084320339999998,
+      "realizedPnL": 9.232243339999998
+    },
+    "13324507052823691307669665460630127708300982532200276443235090643794546427754": {
+      "question": "Bitcoin Up or Down - March 13, 5:10AM-5:15AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Down": 0.19993599999999923
+      },
+      "totalCost": -5.937030360000001,
+      "realizedPnL": 6.136966360000001
+    },
+    "75057703953602394371214992633119258380375114122514077668225415867018839818464": {
+      "question": "Bitcoin Up or Down - March 13, 5:05AM-5:10AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Down": 0.1831700000000005
+      },
+      "totalCost": -4.0355685999999995,
+      "realizedPnL": 4.2187386
+    },
+    "44386831355324237040016028575813851337000511240368079206167747242846630305682": {
+      "question": "Bitcoin Up or Down - March 13, 2:55AM-3:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 20.44989
+      },
+      "totalCost": 10.0204461,
+      "realizedPnL": -10.0204461
+    },
+    "9148278871897645783162489659993977220681955342578792808261596991675861438867": {
+      "question": "Chicago White Sox vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "",
+      "positions": {
+        "San Francisco Giants": 0.007258000000007314
+      },
+      "totalCost": -6.30476857,
+      "realizedPnL": 6.30476857
+    },
+    "64311754590795607418507603203188935017972290813507064761826874775467682853948": {
+      "question": "Washington Nationals vs. Houston Astros",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Washington Nationals",
+      "positions": {
+        "Washington Nationals": 0.0032010000000042282
+      },
+      "totalCost": -63.433436159999985,
+      "realizedPnL": 63.433436159999985
+    },
+    "47675976458969602013444366251551780380019467847547276161881329610574723326489": {
+      "question": "Atlanta Braves vs. Pittsburgh Pirates",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Atlanta Braves": 59.462744
+      },
+      "totalCost": 29.731372,
+      "realizedPnL": -29.731372
+    },
+    "64899718341473730726599678818651148404161814664763421738256818990725371176453": {
+      "question": "Athletics vs. Texas Rangers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Texas Rangers",
+      "positions": {
+        "Athletics": 33.333332
+      },
+      "totalCost": 4.999999799999999,
+      "realizedPnL": -4.999999799999999
+    },
+    "58134011617369062843236786581422358937121952111212296469357125337452216402143": {
+      "question": "Bitcoin Up or Down - March 12, 1:30AM-1:35AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Down": 36.336978
+      },
+      "totalCost": 7.994135160000001,
+      "realizedPnL": -7.994135160000001
+    },
+    "78230094086822331361039646612257031577643620122125623028806454200594206789817": {
+      "question": "Rockets vs. Nuggets",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Nuggets",
+      "positions": {
+        "Rockets": 44.444443
+      },
+      "totalCost": 11.999999610000001,
+      "realizedPnL": -11.999999610000001
+    },
+    "110938816887430862876572832934506847557647124377908560240164164667035738873653": {
+      "question": "Canadiens vs. Senators",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Canadiens",
+      "positions": {
+        "Canadiens": 0.009045999999997889
+      },
+      "totalCost": -27.562390680000004,
+      "realizedPnL": 27.562390680000004
+    },
+    "10904164366856725228161126547253007912554949719110267607075356796124696168688": {
+      "question": "Toronto Blue Jays vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "New York Yankees",
+      "positions": {
+        "Toronto Blue Jays": 80.35714
+      },
+      "totalCost": 29.99999904,
+      "realizedPnL": -29.99999904
+    },
+    "86724389344052373245551025338578064245575731841457043650207641955304192509786": {
+      "question": "Milwaukee Brewers vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 0.00636199999999576
+      },
+      "totalCost": -22.2670009,
+      "realizedPnL": 22.2670009
+    },
+    "92852364653102984416878519868980228938325706045453116305194113785159537773258": {
+      "question": "Los Angeles Angels vs. Chicago White Sox",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "Chicago White Sox": 61.028431
+      },
+      "totalCost": 20.138188630000002,
+      "realizedPnL": -20.138188630000002
+    },
+    "4144208824514002346297322470506652099015595884313620293690507536838964521588": {
+      "question": "Bitcoin Up or Down - March 11, 5:00AM-5:05AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Down",
+      "positions": {
+        "Up": 23.922874
+      },
+      "totalCost": 5.02380354,
+      "realizedPnL": -5.02380354
+    },
+    "67997758730957440570766463407523167728896390056341348558585751091999268974770": {
+      "question": "Bitcoin Up or Down - March 11, 4:55AM-5:00AM ET",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Up",
+      "positions": {
+        "Up": 0.000600000000000378
+      },
+      "totalCost": -0.05394599999999983,
+      "realizedPnL": 0.05394599999999983
+    },
+    "20908402868360918945993422311376819698803555970376384791850447482902613837382": {
+      "question": "Timberwolves vs. Lakers",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Lakers",
+      "positions": {
+        "Timberwolves": 0.0015369999999990114
+      },
+      "totalCost": 9.38463962,
+      "realizedPnL": -9.38463962
+    },
+    "103819767137915658034021170978331323777037716995846508383613499200009384342706": {
+      "question": "Oilers vs. Avalanche",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Oilers",
+      "positions": {
+        "Oilers": 0.003923999999997818
+      },
+      "totalCost": -59.818132599999984,
+      "realizedPnL": 59.818132599999984
+    },
+    "4102746561708840350185615697132908622085077406845189792484426447216754499531": {
+      "question": "Utah vs. Blackhawks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Blackhawks",
+      "positions": {
+        "Blackhawks": 0.007366999999998569
+      },
+      "totalCost": -17.91106054,
+      "realizedPnL": 17.91106054
+    },
+    "97261566466769817952215911136457067913672410534904649115867108938851100203384": {
+      "question": "Pittsburgh Pirates vs. New York Yankees",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Pittsburgh Pirates",
+      "positions": {
+        "Pittsburgh Pirates": 0.006827999999998724
+      },
+      "totalCost": -19.419805359999998,
+      "realizedPnL": 19.419805359999998
+    },
+    "40203675251178780407808929173074942793825429239764219587293668173902492479027": {
+      "question": "Flames vs. Capitals",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Capitals",
+      "positions": {
+        "Flames": 25.581394
+      },
+      "totalCost": 10.99999942,
+      "realizedPnL": -10.99999942
+    },
+    "105030013683010362146812559212711983841036547939126071724017333702474694849796": {
+      "question": "Los Angeles Dodgers vs. Milwaukee Brewers",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Dodgers",
+      "positions": {
+        "Los Angeles Dodgers": 0.007140999999997177
+      },
+      "totalCost": -21.421500910000002,
+      "realizedPnL": 21.421500910000002
+    },
+    "6237622810428115459749641137806125046739432180151416201201441846144922984031": {
+      "question": "Los Angeles Angels vs. San Francisco Giants",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Los Angeles Angels",
+      "positions": {
+        "Los Angeles Angels": 47.131738
+      },
+      "totalCost": 21.68059948,
+      "realizedPnL": 25.451138519999997
+    },
+    "81430981218324622149719834729795629932100865163306877139373837568069423419173": {
+      "question": "Oilers vs. Golden Knights",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Oilers",
+      "positions": {
+        "Oilers": 0.006324999999996805
+      },
+      "totalCost": -20.769190750000003,
+      "realizedPnL": 20.769190750000003
+    },
+    "24815664355526874630102301585193002309948113531791396813963199972418199041303": {
+      "question": "Lightning vs. Sabres",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Sabres",
+      "positions": {
+        "Lightning": 0.00018900000000243722
+      },
+      "totalCost": -10.423030070000001,
+      "realizedPnL": 10.423030070000001
+    },
+    "41273877269344042494476162859403521654981183995597187569601189673384322710509": {
+      "question": "Arizona Diamondbacks vs. Cincinnati Reds",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Cincinnati Reds",
+      "positions": {
+        "Cincinnati Reds": 0.0005959999999944898
+      },
+      "totalCost": -19.94732664,
+      "realizedPnL": 19.94732664
+    },
+    "75505116006778003193689671820087545156895503578550745793765701216283927392550": {
+      "question": "Los Angeles Dodgers vs. Athletics",
+      "isBaseball": true,
+      "closed": true,
+      "winner": "Athletics",
+      "positions": {
+        "Athletics": 0.0017290000000045325
+      },
+      "totalCost": -34.733219381,
+      "realizedPnL": 34.733219381
+    },
+    "114519120207975591413242609950419486047530855836692591163324720541619026462478": {
+      "question": "Lightning vs. Sabres",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Sabres",
+      "positions": {
+        "Sabres": 0.010000000000005116
+      },
+      "totalCost": 0.35489996000000446,
+      "realizedPnL": -0.34489995999999934
+    },
+    "112023976551239373880601632091575194003060280525024941705420244398238775060812": {
+      "question": "Hornets vs. Suns",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Suns",
+      "positions": {
+        "Hornets": 0.009997000000000256
+      },
+      "totalCost": 0.03629806000000002,
+      "realizedPnL": -0.03629806000000002
+    },
+    "85855868262769459367536286559769851399243527937227450373315083550141030884172": {
+      "question": "Islanders vs. Sharks",
+      "isBaseball": false,
+      "closed": true,
+      "winner": "Islanders",
+      "positions": {
+        "Sharks": 43.265305
+      },
+      "totalCost": 21.19999945,
+      "realizedPnL": -21.19999945
+    }
+  }
+}

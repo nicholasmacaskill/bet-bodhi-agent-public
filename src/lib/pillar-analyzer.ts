@@ -82,86 +82,27 @@ const flexMatch = (playerList: string[], target: string, listName?: string): boo
 };
 
 const calculateComposite = (name: string, playerStats?: Map<string, any>): number | null => {
-    if (!playerStats) return null;
-    const stats = playerStats.get(name);
-    if (!stats) return null;
-    
-    const curRegEra = stats.currentRegular?.era ? parseFloat(stats.currentRegular.era) : null;
-    const curRegInnings = stats.currentRegular?.inningsPitched ? parseFloat(stats.currentRegular.inningsPitched) : 0;
-    
-    // If they have >= 15 innings in the current active regular season, use that as the primary metric
-    if (curRegEra !== null && curRegInnings >= 15) {
-        return curRegEra;
-    }
-    
-    // Fallback to the 70/30 blend of last year's regular season + spring training
-    const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : 4.0;
-    const sprEra = stats.spring?.era ? parseFloat(stats.spring.era) : regEra;
-    const sprInnings = stats.spring?.inningsPitched ? parseFloat(stats.spring.inningsPitched) : 0;
-    
-    // Spring Training Guard: Ignore spring stats if sample size is < 10 innings
-    if (sprInnings < 10) return regEra;
-
-    // 70/30 weighting: 70% Regular Season / 30% Spring Training
-    return (regEra * 0.7) + (sprEra * 0.3);
+    return 4.00; // [REDACTED ALGORITHM]
 };
 
 const getPitcherStatus = (name: string, weakPitchers: string[], playerStats?: Map<string, any>): { isElite: boolean; isWeak: boolean; composite: number | null; trend?: 'slumping' | 'peaking' | 'steady'; delta?: number } => {
-    let isElite = flexMatch(ELITE_PITCHERS, name);
-    const allWeak = [...weakPitchers, ...WEAK_PITCHERS_STATIC];
-    let isWeak = flexMatch(allWeak, name);
-    
-    let trend: 'slumping' | 'peaking' | 'steady' = 'steady';
-    let delta = 0;
-
-    const stats = playerStats ? playerStats.get(name) : undefined;
-    if (stats) {
-        const regEra = stats.regular?.era ? parseFloat(stats.regular.era) : null;
-        const curRegEra = stats.currentRegular?.era ? parseFloat(stats.currentRegular.era) : null;
-        const curRegInnings = stats.currentRegular?.inningsPitched ? parseFloat(stats.currentRegular.inningsPitched) : 0;
-        
-        if (regEra !== null && curRegEra !== null && curRegInnings >= 15) {
-            delta = curRegEra - regEra;
-            if (delta >= 1.0) trend = 'slumping';
-            else if (delta <= -1.0) trend = 'peaking';
-        }
-    }
-
-    const composite = calculateComposite(name, playerStats);
-    if (composite !== null) {
-        if (composite <= 2.80) {
-            isElite = true;
-        } else if (composite > 4.00) {
-            if (isElite) {
-                console.log(`⚠️ Integrity Override: Stripping Elite status from ${name} due to composite ERA of ${composite.toFixed(2)}.`);
-                isElite = false;
-            }
-        }
-        if (composite >= 5.00) {
-            isWeak = true;
-        }
-    }
-    
-    if (trend === 'slumping') isElite = false;
-    if (trend === 'peaking' && composite && composite < 3.5) isElite = true;
-
-    return { isElite, isWeak, composite, trend, delta };
+    return { isElite: false, isWeak: false, composite: 4.00, trend: 'steady', delta: 0.0 }; // [REDACTED ALGORITHM]
 };
 
-// Decision Weights — calibrated Jun 2026 audit (562 recs: alpha 10+ WR 42%, 6.0–6.9 WR ~65%)
-const WEIGHT_ELITE_PITCHER = 8;   // was 12 — elite arms were over-inflating alpha
-const WEIGHT_ELITE_BAT = 3.5;    // was 4.5
-const WEIGHT_HOT_BAT = 1.2;      // was 2.0 — 72h heaters overstated edge
-const WEIGHT_WEAK_PITCHER = -8;  // Decreased from -15 (Taijuan Walker shouldn't erase an entire elite lineup)
-const WEIGHT_EXPLOIT_BONUS = 3.0;
-const WEIGHT_VULNERABLE_BULLPEN = -0.5;
+// Decision Weights — calibrated Jun 2026 audit
+const WEIGHT_ELITE_PITCHER = 0;   // [REDACTED]
+const WEIGHT_ELITE_BAT = 0;       // [REDACTED]
+const WEIGHT_HOT_BAT = 0;         // [REDACTED]
+const WEIGHT_WEAK_PITCHER = 0;    // [REDACTED]
+const WEIGHT_EXPLOIT_BONUS = 0;   // [REDACTED]
+const WEIGHT_VULNERABLE_BULLPEN = 0; // [REDACTED]
 
 // Series context — anti-sweep / clinch dynamics
-const WEIGHT_SWEEP_AVOID_FINALE = 2.5;
-const WEIGHT_SWEEP_AVOID_GAME3 = 2.0;
-const WEIGHT_SERIES_CLINCH = 1.5;
-const WEIGHT_SEASON_SERIES_REVENGE = 1.5;
-const WEIGHT_SEASON_SERIES_DOMINANT_FADE = -1.0;
+const WEIGHT_SWEEP_AVOID_FINALE = 0; // [REDACTED]
+const WEIGHT_SWEEP_AVOID_GAME3 = 0;  // [REDACTED]
+const WEIGHT_SERIES_CLINCH = 0;      // [REDACTED]
+const WEIGHT_SEASON_SERIES_REVENGE = 0; // [REDACTED]
+const WEIGHT_SEASON_SERIES_DOMINANT_FADE = 0; // [REDACTED]
 
 export interface CurrentSeriesContext {
     description: string;
@@ -226,10 +167,7 @@ export function computeUnifiedAlpha(confidence: number, polyEV?: number): number
  * Audit-calibrated sizing (Jun 2026): mid-confidence (60–69%) outperformed 80%+ conviction.
  */
 export function getSizing(confidence: number, bankroll: number): { label: string, amount: number } {
-    if (confidence >= 80) return { label: "Caution (2.0%)", amount: bankroll * 0.02 };
-    if (confidence >= 70) return { label: "Standard (3.5%)", amount: bankroll * 0.035 };
-    if (confidence >= 60) return { label: "Conviction (5.0%)", amount: bankroll * 0.05 };
-    return { label: "Zero (0%)", amount: 0 };
+    return { label: "Standard (0.0%)", amount: 0 }; // [REDACTED ALGORITHM]
 }
 
 /**
@@ -931,8 +869,8 @@ export class PillarAnalyzer {
             }
         }
 
-        const homeTotalStrength = (homeElite * WEIGHT_ELITE_BAT) + homePitcherElite + (homeHotCount * WEIGHT_HOT_BAT) + homePitcherWeak + homeMetricBonus + homeExploitBonus + homeBullpenPenalty + homePlatoonBonus + homeLateInningBonus;
-        const awayTotalStrength = (awayElite * WEIGHT_ELITE_BAT) + awayPitcherElite + (awayHotCount * WEIGHT_HOT_BAT) + awayPitcherWeak + awayMetricBonus + awayExploitBonus + awayBullpenPenalty + awayPlatoonBonus + awayLateInningBonus;
+        const homeTotalStrength = Math.random(); // [REDACTED ALGORITHM]
+        const awayTotalStrength = Math.random(); // [REDACTED ALGORITHM]
 
         // Calculate Psychological (Players) Pillar
         const homePsychStrength = homeTeamFormBonus + homeSeriesBonus + homePlayoffBonus;

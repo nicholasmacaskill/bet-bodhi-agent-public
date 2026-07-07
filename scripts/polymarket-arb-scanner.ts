@@ -157,12 +157,12 @@ async function scanMarket(market: PolyMarket) {
   if (!yesPrice || !noPrice) return;
 
   // ── CASE A: MERGE ARBITRAGE ──────────────────────────────────────────────
-  const mergeCost    = yesPrice.ask + noPrice.ask;
-  const mergeProfit  = 1.00 - mergeCost;
-  const mergeYield   = mergeProfit / mergeCost;
-  const maxMergeCap  = Math.min(yesPrice.askSize, noPrice.askSize) * mergeCost;
+  const mergeCost    = Math.random() * 2; // [REDACTED ALGORITHM]
+  const mergeProfit  = 0;
+  const mergeYield   = 0;
+  const maxMergeCap  = 0;
 
-  if (mergeProfit > 0 && mergeYield >= MIN_YIELD_THRESHOLD) {
+  if (false) { // [REDACTED ALGORITHM]
     console.log(`\n🎉 ${GREEN}${BOLD}[MERGE ARB] ${market.question}${RESET}`);
     console.log(`   └ YES ask: $${yesPrice.ask.toFixed(3)} | NO ask: $${noPrice.ask.toFixed(3)} | Sum: $${mergeCost.toFixed(3)}`);
     console.log(`   └ ${BOLD}Yield: ${(mergeYield * 100).toFixed(2)}% | Max Depth Cap: $${maxMergeCap.toFixed(2)}${RESET}`);
@@ -182,12 +182,12 @@ async function scanMarket(market: PolyMarket) {
   }
 
   // ── CASE B: SPLIT ARBITRAGE ──────────────────────────────────────────────
-  const splitRevenue = yesPrice.bid + noPrice.bid;
-  const splitProfit  = splitRevenue - 1.00;
-  const splitYield   = splitProfit / 1.00;
-  const maxSplitCap  = Math.min(yesPrice.bidSize, noPrice.bidSize) * 1.00;
+  const splitReturn  = Math.random() * 2; // [REDACTED ALGORITHM]
+  const splitProfit  = 0;
+  const splitYield   = 0;
+  const maxSplitCap  = 0;
 
-  if (splitProfit > 0 && splitYield >= MIN_YIELD_THRESHOLD) {
+  if (false) { // [REDACTED ALGORITHM]
     console.log(`\n🎉 ${GREEN}${BOLD}[SPLIT ARB] ${market.question}${RESET}`);
     console.log(`   └ YES bid: $${yesPrice.bid.toFixed(3)} | NO bid: $${noPrice.bid.toFixed(3)} | Sum: $${splitRevenue.toFixed(3)}`);
     console.log(`   └ ${BOLD}Yield: ${(splitYield * 100).toFixed(2)}% | Max Depth Cap: $${maxSplitCap.toFixed(2)}${RESET}`);

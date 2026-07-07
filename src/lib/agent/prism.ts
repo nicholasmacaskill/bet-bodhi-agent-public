@@ -6,19 +6,15 @@
  */
 
 import { PillarAnalyzer } from '../pillar-analyzer';
-import { NHLPillarAnalyzer } from '../nhl-pillar-analyzer';
 import { MLBApi } from '../mlb-api';
-import { NHLApi } from '../nhl-api';
 import { OddsApi } from '../odds-api';
 import { logBet, BetLogEntry } from '../bet-logger';
 import { supabaseAdmin } from '../supabase-admin';
 
 export class BodhiPrism {
     private mlb = new MLBApi();
-    private nhl = new NHLApi();
     private odds = new OddsApi();
     private mlbAnalyzer = new PillarAnalyzer();
-    private nhlAnalyzer = new NHLPillarAnalyzer();
 
     /**
      * Scans all MLB games for a given date and returns +EV opportunities.
@@ -35,19 +31,7 @@ export class BodhiPrism {
         }).filter(a => a.overallConfidence >= 60);
     }
 
-    /**
-     * Scans all NHL games for a given date and returns +EV opportunities.
-     */
-    async scanNHL(date: string, bankroll: number = 464) {
-        const games = await this.nhl.getSchedule(date);
-        const stats = await this.nhl.getTeamStats();
-        const odds = await this.odds.getNHLOdds();
-        const leaders = await this.nhl.getGoalieLeaders();
 
-        return games.map(g => {
-            return this.nhlAnalyzer.analyzeGame(g, stats, odds, leaders, undefined, bankroll);
-        }).filter(a => a.overallConfidence >= 60);
-    }
 
     /**
      * Logs a bet with full psychometric tracking.

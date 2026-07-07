@@ -28,7 +28,7 @@ Evaluates market discrepancies and calculates Expected Value (EV):
 * **Polymarket Crowd Discrepancy**: Evaluates current Polymarket share price ($0.00 to $1.00) against Bodhi's True Probability.
 * **Expected Value (EV)** is calculated as:
   $$\text{EV} = \text{Bodhi Probability} - \text{Polymarket Share Price}$$
-* **Favorite Tax**: If market price exceeds `$0.60` (or `$0.70`), the model triggers a stricter minimum EV edge threshold (`8%` and `12%` respectively) to protect capital from overvalued favorites.
+* **Favorite Tax**: If market price exceeds a specified threshold, the model triggers a stricter minimum EV edge threshold to protect capital from overvalued favorites.
 
 ---
 
@@ -36,12 +36,12 @@ Evaluates market discrepancies and calculates Expected Value (EV):
 
 | Factor | Weight | Impact |
 | :--- | :--- | :--- |
-| **Elite Starting Pitcher** | `+12.0` | Heavy boost to pitching-dominated slates |
-| **Elite Bat (Roster)** | `+4.5` | Baseline hitter strength adjustment |
-| **Hot Bat (72h heater)** | `+2.0` | Short-term momentum multiplier |
-| **Weak Starting Pitcher** | `-8.0` | Penalty for vulnerable arms (ERA/xERA $\ge$ 5.00) |
-| **Platoon Exploits** | `+2.0` | Bonus if hitter matchup matches pitcher's weak split |
-| **Bullpen Fatigue Penalty** | `up to -3.0` | Penalty if bullpen threw $>50$ pitches yesterday |
+| **Elite Starting Pitcher** | `+[REDACTED]` | Heavy boost to pitching-dominated slates |
+| **Elite Bat (Roster)** | `+[REDACTED]` | Baseline hitter strength adjustment |
+| **Hot Bat (72h heater)** | `+[REDACTED]` | Short-term momentum multiplier |
+| **Weak Starting Pitcher** | `-[REDACTED]` | Penalty for vulnerable arms |
+| **Platoon Exploits** | `+[REDACTED]` | Bonus if hitter matchup matches pitcher's weak split |
+| **Bullpen Fatigue Penalty** | `up to -[REDACTED]` | Penalty if bullpen threw multiple pitches yesterday |
 
 ---
 
@@ -67,10 +67,10 @@ Stake sizing scales dynamically with the calculated **Objective Confidence** (av
 $$\text{Confidence} = \frac{\text{Technical Sport} + \text{Seasonal} + \text{Technical Bookies}}{30} \times 100$$
 
 ### Sizing Scale:
-* **$\ge 80\%$ Confidence**: Aggressive Stake (`7.5%` of bankroll)
-* **$70\% - 79\%$ Confidence**: Standard Stake (`4.0%` of bankroll)
-* **$60\% - 69\%$ Confidence**: Caution Stake (`2.0%` of bankroll)
-* **$<60\%$ Confidence**: Zero Stake (`0.0%`)
+* **$\ge [REDACTED]\%$ Confidence**: Aggressive Stake (`[REDACTED]%` of bankroll)
+* **$[REDACTED]\% - [REDACTED]\%$ Confidence**: Standard Stake (`[REDACTED]%` of bankroll)
+* **$[REDACTED]\% - [REDACTED]\%$ Confidence**: Caution Stake (`[REDACTED]%` of bankroll)
+* **$<[REDACTED]\%$ Confidence**: Zero Stake (`0.0%`)
 
 > [!IMPORTANT]
-> **Strict League Thresholds**: In NHL and NBA, variance is structurally higher. The model applies a strict confidence floor of **$85\%$** for these sports. Any recommendation scoring under 85% is automatically filtered out as a `PASS`.
+> **Strict League Thresholds**: In NHL and NBA, variance is structurally higher. The model applies a strict confidence floor of **[REDACTED]** for these sports. Any recommendation scoring under this threshold is automatically filtered out as a `PASS`.

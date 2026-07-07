@@ -1,0 +1,686 @@
+[
+  {
+    "date": "2024-06-01",
+    "gamePk": 744932,
+    "matchup": "Pittsburgh Pirates @ Toronto Blue Jays",
+    "winner": "Pittsburgh Pirates",
+    "valueTeam": "Pittsburgh Pirates",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Pittsburgh Pirates, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Pirates is 1.5 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 747029,
+    "matchup": "Tampa Bay Rays @ Baltimore Orioles",
+    "winner": "Baltimore Orioles",
+    "valueTeam": "Baltimore Orioles",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Baltimore Orioles, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): Orioles is 2 GB in the division — title-race urgency.",
+      "🔥 Elite Starting Pitcher: Kyle Bradish is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746952,
+    "matchup": "Detroit Tigers @ Boston Red Sox",
+    "winner": "Boston Red Sox",
+    "valueTeam": "Boston Red Sox",
+    "alpha": 5.7,
+    "confidence": 57,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Boston Red Sox, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): Red Sox is 2.5 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746629,
+    "matchup": "Washington Nationals @ Cleveland Guardians",
+    "winner": "Cleveland Guardians",
+    "valueTeam": "Cleveland Guardians",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Cleveland Guardians, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Nationals is 2 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 745812,
+    "matchup": "Arizona Diamondbacks @ New York Mets",
+    "winner": "Arizona Diamondbacks",
+    "valueTeam": "New York Mets",
+    "alpha": 6,
+    "confidence": 60,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on New York Mets, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): D-backs is 2.5 GB of the Wild Card — must-win pressure.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746305,
+    "matchup": "San Diego Padres @ Kansas City Royals",
+    "winner": "San Diego Padres",
+    "valueTeam": null,
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - No clear edge.",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Late Power: San Diego Padres boasts elite late-game hitting (7th+ OPS: 0.766).",
+      "🎯 Playoff Push (Home): Royals is 2 GB of the Wild Card — must-win pressure.",
+      "🎯 Playoff Push (Away): Padres is 2 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746384,
+    "matchup": "Minnesota Twins @ Houston Astros",
+    "winner": "Houston Astros",
+    "valueTeam": null,
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Home, but Away has elite pitcher (Joe Ryan).",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Framber Valdez is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 747111,
+    "matchup": "Oakland Athletics @ Atlanta Braves",
+    "winner": "Oakland Athletics",
+    "valueTeam": "Atlanta Braves",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Atlanta Braves, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Chris Sale is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746062,
+    "matchup": "Texas Rangers @ Miami Marlins",
+    "winner": "Texas Rangers",
+    "valueTeam": "Miami Marlins",
+    "alpha": 6.3,
+    "confidence": 63,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Miami Marlins, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 745980,
+    "matchup": "Chicago White Sox @ Milwaukee Brewers",
+    "winner": "Milwaukee Brewers",
+    "valueTeam": "Milwaukee Brewers",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Milwaukee Brewers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Robert Gasser is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746870,
+    "matchup": "Cincinnati Reds @ Chicago Cubs",
+    "winner": "Chicago Cubs",
+    "valueTeam": null,
+    "alpha": 4.3,
+    "confidence": 43,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Home has elite pitcher (Justin Steele).",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Hunter Greene is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 745251,
+    "matchup": "Los Angeles Angels @ Seattle Mariners",
+    "winner": "Seattle Mariners",
+    "valueTeam": "Seattle Mariners",
+    "alpha": 6.5,
+    "confidence": 65,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Seattle Mariners, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Bryce Miller is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 745575,
+    "matchup": "St. Louis Cardinals @ Philadelphia Phillies",
+    "winner": "Philadelphia Phillies",
+    "valueTeam": "Philadelphia Phillies",
+    "alpha": 6.3,
+    "confidence": 63,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Philadelphia Phillies, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Cardinals is 0.5 GB of the Wild Card — must-win pressure.",
+      "🔥 Elite Starting Pitcher: Ranger Suarez is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 745332,
+    "matchup": "New York Yankees @ San Francisco Giants",
+    "winner": "New York Yankees",
+    "valueTeam": null,
+    "alpha": 5.2,
+    "confidence": 52,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Home has elite pitcher (Logan Webb).",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): Giants is 0.5 GB of the Wild Card — must-win pressure.",
+      "🔥 Elite Starting Pitcher: Cody Poteet is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "gamePk": 746138,
+    "matchup": "Colorado Rockies @ Los Angeles Dodgers",
+    "winner": "Los Angeles Dodgers",
+    "valueTeam": "Los Angeles Dodgers",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Los Angeles Dodgers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Late Power: Los Angeles Dodgers boasts elite late-game hitting (7th+ OPS: 0.769).",
+      "🔥 Late Inning Mismatch: Los Angeles Dodgers has elite late hitting facing a vulnerable Colorado Rockies bullpen (Comeback Potential).",
+      "🔥 Elite Starting Pitcher: Yoshinobu Yamamoto is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746383,
+    "matchup": "Minnesota Twins @ Houston Astros",
+    "winner": "Minnesota Twins",
+    "valueTeam": "Houston Astros",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Houston Astros, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Minnesota Twins can wrap the series with a win today (game 3/3).",
+      "🔥 Elite Starting Pitcher: Hunter Brown is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746953,
+    "matchup": "Detroit Tigers @ Boston Red Sox",
+    "winner": "Detroit Tigers",
+    "valueTeam": "Detroit Tigers",
+    "alpha": 5.7,
+    "confidence": 57,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Detroit Tigers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": []
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 747030,
+    "matchup": "Tampa Bay Rays @ Baltimore Orioles",
+    "winner": "Tampa Bay Rays",
+    "valueTeam": "Tampa Bay Rays",
+    "alpha": 5.7,
+    "confidence": 57,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Tampa Bay Rays, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Baltimore Orioles can wrap the series with a win today (game 3/3).",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 747110,
+    "matchup": "Oakland Athletics @ Atlanta Braves",
+    "winner": "Atlanta Braves",
+    "valueTeam": "Atlanta Braves",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Atlanta Braves, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Atlanta Braves can wrap the series with a win today (game 3/3).",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 744929,
+    "matchup": "Pittsburgh Pirates @ Toronto Blue Jays",
+    "winner": "Toronto Blue Jays",
+    "valueTeam": "Pittsburgh Pirates",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Pittsburgh Pirates, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Toronto Blue Jays can wrap the series with a win today (game 3/3).",
+      "🎯 Playoff Push (Away): Pirates is 2 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746632,
+    "matchup": "Washington Nationals @ Cleveland Guardians",
+    "winner": "Washington Nationals",
+    "valueTeam": "Washington Nationals",
+    "alpha": 6,
+    "confidence": 60,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Washington Nationals, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Cleveland Guardians can wrap the series with a win today (game 3/3).",
+      "🎯 Playoff Push (Away): Nationals is 1.5 GB of the Wild Card — must-win pressure.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 745813,
+    "matchup": "Arizona Diamondbacks @ New York Mets",
+    "winner": "Arizona Diamondbacks",
+    "valueTeam": "Arizona Diamondbacks",
+    "alpha": 5.7,
+    "confidence": 57,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Arizona Diamondbacks, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): D-backs is 2 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746061,
+    "matchup": "Texas Rangers @ Miami Marlins",
+    "winner": "Texas Rangers",
+    "valueTeam": "Texas Rangers",
+    "alpha": 6.3,
+    "confidence": 63,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Texas Rangers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Texas Rangers can wrap the series with a win today (game 3/3)."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746301,
+    "matchup": "San Diego Padres @ Kansas City Royals",
+    "winner": "Kansas City Royals",
+    "valueTeam": "Kansas City Royals",
+    "alpha": 6.7,
+    "confidence": 67,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Kansas City Royals, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Late Power: San Diego Padres boasts elite late-game hitting (7th+ OPS: 0.766).",
+      "🏆 Series Clinch: San Diego Padres can wrap the series with a win today (game 3/3).",
+      "🎯 Playoff Push (Home): Royals is 2 GB of the Wild Card — must-win pressure.",
+      "🎯 Playoff Push (Away): Padres is 1.5 GB of the Wild Card — must-win pressure.",
+      "🔥 Elite Starting Pitcher: Cole Ragans is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 745984,
+    "matchup": "Chicago White Sox @ Milwaukee Brewers",
+    "winner": "Milwaukee Brewers",
+    "valueTeam": "Milwaukee Brewers",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Milwaukee Brewers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🧹 Sweep Avoidance: Chicago White Sox faces a potential sweep (game 3/3, MIL wins 3-0) — teams rarely go quietly.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746871,
+    "matchup": "Cincinnati Reds @ Chicago Cubs",
+    "winner": "Cincinnati Reds",
+    "valueTeam": "Chicago Cubs",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Chicago Cubs, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): Cubs is 0.5 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 745330,
+    "matchup": "New York Yankees @ San Francisco Giants",
+    "winner": "New York Yankees",
+    "valueTeam": "New York Yankees",
+    "alpha": 5.2,
+    "confidence": 52,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on New York Yankees, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🧹 Sweep Avoidance: San Francisco Giants faces a potential sweep (game 3/3, NYY wins 3-0) — teams rarely go quietly.",
+      "🎯 Playoff Push (Home): Giants is 0.5 GB of the Wild Card — must-win pressure.",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 746141,
+    "matchup": "Colorado Rockies @ Los Angeles Dodgers",
+    "winner": "Los Angeles Dodgers",
+    "valueTeam": "Los Angeles Dodgers",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Los Angeles Dodgers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Late Power: Los Angeles Dodgers boasts elite late-game hitting (7th+ OPS: 0.769).",
+      "🔥 Late Inning Mismatch: Los Angeles Dodgers has elite late hitting facing a vulnerable Colorado Rockies bullpen (Comeback Potential).",
+      "🏆 Series Clinch: Los Angeles Dodgers can wrap the series with a win today (game 3/3).",
+      "💎 Superior Roster Depth: Our 2026 depth-chart model identifies multiple 'Elite' tier bats active in this lineup, providing offensive stability through the mid-innings."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 745252,
+    "matchup": "Los Angeles Angels @ Seattle Mariners",
+    "winner": "Seattle Mariners",
+    "valueTeam": "Seattle Mariners",
+    "alpha": 6.5,
+    "confidence": 65,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Seattle Mariners, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🧹 Sweep Avoidance: Los Angeles Angels faces a potential sweep (game 3/3, SEA wins 3-0) — teams rarely go quietly.",
+      "🔥 Elite Starting Pitcher: Luis Castillo is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-02",
+    "gamePk": 745572,
+    "matchup": "St. Louis Cardinals @ Philadelphia Phillies",
+    "winner": "St. Louis Cardinals",
+    "valueTeam": "St. Louis Cardinals",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on St. Louis Cardinals, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🏆 Series Clinch: Philadelphia Phillies can wrap the series with a win today (game 3/3).",
+      "📊 Season Series: Philadelphia Phillies leads the 4-1 season series — St. Louis Cardinals has revenge motivation.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 745569,
+    "matchup": "Milwaukee Brewers @ Philadelphia Phillies",
+    "winner": "Philadelphia Phillies",
+    "valueTeam": null,
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - No clear edge.",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "🔥 Elite Starting Pitcher: Jared Koenig is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 744854,
+    "matchup": "New York Mets @ Washington Nationals",
+    "winner": "New York Mets",
+    "valueTeam": "New York Mets",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on New York Mets, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): Nationals is 1.5 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 744930,
+    "matchup": "Baltimore Orioles @ Toronto Blue Jays",
+    "winner": "Baltimore Orioles",
+    "valueTeam": null,
+    "alpha": 5.7,
+    "confidence": 57,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "VETO: +EV on Away, but Home has elite pitcher (Kevin Gausman).",
+    "pickWon": null,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Orioles is 2.5 GB in the division — title-race urgency.",
+      "🔥 Elite Starting Pitcher: Grayson Rodriguez is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 745009,
+    "matchup": "Detroit Tigers @ Texas Rangers",
+    "winner": "Detroit Tigers",
+    "valueTeam": "Detroit Tigers",
+    "alpha": 7,
+    "confidence": 70,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Detroit Tigers, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Tigers is 2.5 GB of the Wild Card — must-win pressure.",
+      "🔥 Elite Starting Pitcher: Tarik Skubal is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 746382,
+    "matchup": "St. Louis Cardinals @ Houston Astros",
+    "winner": "Houston Astros",
+    "valueTeam": "St. Louis Cardinals",
+    "alpha": 6.3,
+    "confidence": 63,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on St. Louis Cardinals, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Cardinals is 1 GB of the Wild Card — must-win pressure.",
+      "⚡ Weak Pitcher Exploit: Opposing starter carries an ERA/xERA >= 5.00, providing a significant scoring uplift."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 746548,
+    "matchup": "Cincinnati Reds @ Colorado Rockies",
+    "winner": "Cincinnati Reds",
+    "valueTeam": "Cincinnati Reds",
+    "alpha": 7.8,
+    "confidence": 78,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on Cincinnati Reds, but no executable Polymarket route.",
+    "pickWon": true,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Away): Reds is 2 GB of the Wild Card — must-win pressure.",
+      "🔥 Elite Starting Pitcher: Andrew Abbott is currently in the top 10% of the league for xERA/Whiff rate (2026 stats), providing a significant technical edge on the mound."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 746224,
+    "matchup": "San Diego Padres @ Los Angeles Angels",
+    "winner": "Los Angeles Angels",
+    "valueTeam": "San Diego Padres",
+    "alpha": 6,
+    "confidence": 60,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on San Diego Padres, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "⚡ Late Power: San Diego Padres boasts elite late-game hitting (7th+ OPS: 0.766).",
+      "🎯 Playoff Push (Away): Padres is 0.5 GB of the Wild Card — must-win pressure."
+    ]
+  },
+  {
+    "date": "2024-06-03",
+    "gamePk": 747194,
+    "matchup": "San Francisco Giants @ Arizona Diamondbacks",
+    "winner": "Arizona Diamondbacks",
+    "valueTeam": "San Francisco Giants",
+    "alpha": 5.3,
+    "confidence": 53,
+    "polyEV": null,
+    "executionRoute": "NONE",
+    "recommendedAction": "PASS - Edge on San Francisco Giants, but no executable Polymarket route.",
+    "pickWon": false,
+    "polyMatched": false,
+    "flags": [
+      "🎯 Playoff Push (Home): D-backs is 1 GB of the Wild Card — must-win pressure.",
+      "🎯 Playoff Push (Away): Giants is 1.5 GB of the Wild Card — must-win pressure."
+    ]
+  }
+]

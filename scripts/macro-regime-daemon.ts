@@ -5,7 +5,7 @@ import * as path from 'path';
 import { sendTelegramAlert } from '../src/lib/agent/telegram-notify';
 
 const STATE_FILE = path.join(__dirname, '../data/macro_regime_state.json');
-const ALERT_THRESHOLD = 0.5;
+const ALERT_THRESHOLD = 0.0; // [REDACTED]
 
 function formatDateString(date: Date): string {
     const yyyy = date.getFullYear();

@@ -1,0 +1,1170 @@
+Unhandled error while processing {
+  update_id: 278930310,
+  message: {
+    message_id: 770,
+    from: {
+      id: 7934081383,
+      is_bot: false,
+      first_name: 'Nicholas Alexander',
+      last_name: 'MacAskill',
+      username: 'nicholasmacaskill',
+      language_code: 'en'
+    },
+    chat: {
+      id: 7934081383,
+      first_name: 'Nicholas Alexander',
+      last_name: 'MacAskill',
+      username: 'nicholasmacaskill',
+      type: 'private'
+    },
+    date: 1783207987,
+    text: '7'
+  }
+}
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/p-timeout/index.js:39
+			const timeoutError = fallback instanceof Error ? fallback : new TimeoutError(message);
+			                                                            ^
+
+TimeoutError: Promise timed out after 90000 milliseconds
+    at Timeout._onTimeout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/p-timeout/index.js:39:64)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+
+Node.js v20.19.6
+[2026-07-04T23:41:26.672Z] Unified scan failed: TypeError: Cannot read properties of undefined (reading 'toUpperCase')
+    at <anonymous> (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/telegram-bot.ts:262:68)
+    at Array.forEach (<anonymous>)
+    at unifiedScan (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/telegram-bot.ts:259:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async execute (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:518:17)
+    at async /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:519:21
+    at async execute (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:518:17)
+    at async /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:519:21
+    at async execute (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:518:17)
+    at async /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/composer.js:519:21
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:362:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:363:34)
+
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:362:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:363:34)
+
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+Unhandled error while processing {
+  update_id: 278930327,
+  message: {
+    message_id: 830,
+    from: {
+      id: 7934081383,
+      is_bot: false,
+      first_name: 'Nicholas Alexander',
+      last_name: 'MacAskill',
+      username: 'nicholasmacaskill',
+      language_code: 'en'
+    },
+    chat: {
+      id: 7934081383,
+      first_name: 'Nicholas Alexander',
+      last_name: 'MacAskill',
+      username: 'nicholasmacaskill',
+      type: 'private'
+    },
+    date: 1783269559,
+    text: '/ask what is my precise polymarket on chain pnl',
+    entities: [ [Object] ]
+  }
+}
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/p-timeout/index.js:39
+			const timeoutError = fallback instanceof Error ? fallback : new TimeoutError(message);
+			                                                            ^
+
+TimeoutError: Promise timed out after 90000 milliseconds
+    at Timeout._onTimeout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/p-timeout/index.js:39:64)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+
+Node.js v20.19.6
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:438:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:439:34)
+
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+[2026-07-05T21:19:36.656Z] Sovereign scan failed: Error: Command failed: npx tsx scripts/scanners/nightly_full_report.ts
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+Error: Transform failed with 1 error:
+/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:678:22: ERROR: The symbol "contentNodes" has already been declared
+    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {
+  name: 'TransformError'
+}
+
+Node.js v20.19.6
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1104:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'npx tsx scripts/scanners/nightly_full_report.ts',
+  stdout: '',
+  stderr: '\n' +
+    'node:internal/modules/run_main:123\n' +
+    '    triggerUncaughtException(\n' +
+    '    ^\n' +
+    'Error: Transform failed with 1 error:\n' +
+    '/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:678:22: ERROR: The symbol "contentNodes" has already been declared\n' +
+    '    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)\n' +
+    '    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50\n' +
+    '    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)\n' +
+    '    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)\n' +
+    '    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)\n' +
+    '    at Socket.emit (node:events:524:28)\n' +
+    '    at addChunk (node:internal/streams/readable:561:12)\n' +
+    '    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n' +
+    '    at Readable.push (node:internal/streams/readable:392:5)\n' +
+    '    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {\n' +
+    "  name: 'TransformError'\n" +
+    '}\n' +
+    '\n' +
+    'Node.js v20.19.6\n'
+}
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:439:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:440:34)
+
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:439:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:440:34)
+
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+[2026-07-05T22:01:13.713Z] Sovereign scan failed: Error: Command failed: npx tsx scripts/scanners/nightly_full_report.ts
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+Error: Transform failed with 1 error:
+/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:3:107: ERROR: Expected ";" but found "from"
+    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {
+  name: 'TransformError'
+}
+
+Node.js v20.19.6
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1104:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'npx tsx scripts/scanners/nightly_full_report.ts',
+  stdout: '',
+  stderr: '\n' +
+    'node:internal/modules/run_main:123\n' +
+    '    triggerUncaughtException(\n' +
+    '    ^\n' +
+    'Error: Transform failed with 1 error:\n' +
+    '/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:3:107: ERROR: Expected ";" but found "from"\n' +
+    '    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)\n' +
+    '    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50\n' +
+    '    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)\n' +
+    '    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)\n' +
+    '    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)\n' +
+    '    at Socket.emit (node:events:524:28)\n' +
+    '    at addChunk (node:internal/streams/readable:561:12)\n' +
+    '    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n' +
+    '    at Readable.push (node:internal/streams/readable:392:5)\n' +
+    '    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {\n' +
+    "  name: 'TransformError'\n" +
+    '}\n' +
+    '\n' +
+    'Node.js v20.19.6\n'
+}
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+[2026-07-05T22:07:13.439Z] Sovereign scan failed: Error: Command failed: npx tsx scripts/scanners/nightly_full_report.ts
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+Error: Transform failed with 1 error:
+/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:567:17: ERROR: Expected ";" but found ")"
+    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {
+  name: 'TransformError'
+}
+
+Node.js v20.19.6
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:524:28)
+    at maybeClose (node:internal/child_process:1104:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:304:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: 'npx tsx scripts/scanners/nightly_full_report.ts',
+  stdout: '',
+  stderr: '\n' +
+    'node:internal/modules/run_main:123\n' +
+    '    triggerUncaughtException(\n' +
+    '    ^\n' +
+    'Error: Transform failed with 1 error:\n' +
+    '/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:567:17: ERROR: Expected ";" but found ")"\n' +
+    '    at failureErrorWithLog (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:1467:15)\n' +
+    '    at /Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:736:50\n' +
+    '    at responseCallbacks.<computed> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:603:9)\n' +
+    '    at handleIncomingPacket (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:658:12)\n' +
+    '    at Socket.readFromStdout (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/esbuild/lib/main.js:581:7)\n' +
+    '    at Socket.emit (node:events:524:28)\n' +
+    '    at addChunk (node:internal/streams/readable:561:12)\n' +
+    '    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)\n' +
+    '    at Readable.push (node:internal/streams/readable:392:5)\n' +
+    '    at Pipe.onStreamRead (node:internal/stream_base_commons:191:23) {\n' +
+    "  name: 'TransformError'\n" +
+    '}\n' +
+    '\n' +
+    'Node.js v20.19.6\n'
+}
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:453:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:454:34)
+
+[sentiment] SQLite write failed: UNIQUE constraint failed: user_sentiment.id
+KBO internal schedule fetch failed: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getSchedule (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:88:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:453:30)
+⚠️ Failed to fetch live KBO stats via Internal API: SyntaxError: Unexpected token '<', "<!--[if IE"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:5852:19)
+    at successSteps (node:internal/deps/undici/undici:5833:27)
+    at fullyReadBody (node:internal/deps/undici/undici:4725:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async consumeBody (node:internal/deps/undici/undici:5842:7)
+    at async KBOApi.getTeamStats (/Users/nicholasmacaskill/Downloads/bet-bodhi/src/lib/kbo-api.ts:134:26)
+    at async main (/Users/nicholasmacaskill/Downloads/bet-bodhi/scripts/scanners/nightly_full_report.ts:454:34)
+
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/node-fetch/lib/index.js:1501
+			reject(new FetchError(`request to ${request.url} failed, reason: ${err.message}`, 'system', err));
+			       ^
+FetchError: request to https://api.telegram.org/bot8666755886:[REDACTED]/getMe failed, reason: read ECONNRESET
+    at ClientRequest.<anonymous> (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/node-fetch/lib/index.js:1501:11)
+    at ClientRequest.emit (node:events:524:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at TLSSocket.socketErrorListener (node:_http_client:504:5)
+    at TLSSocket.emit (node:events:524:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  type: 'system',
+  errno: 'ECONNRESET',
+  code: 'ECONNRESET'
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6
+/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315
+            throw new error_1.default(data, { method, payload });
+                  ^
+
+TelegramError: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+    at Telegram.callApi (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/client.js:315:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async [Symbol.asyncIterator] (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:30:33)
+    at async Polling.loop (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/core/network/polling.js:73:30)
+    at async Telegraf.launch (/Users/nicholasmacaskill/Downloads/bet-bodhi/node_modules/telegraf/lib/telegraf.js:194:13) {
+  response: {
+    ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+Node.js v20.19.6

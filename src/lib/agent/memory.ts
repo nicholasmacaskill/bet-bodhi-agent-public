@@ -74,20 +74,8 @@ export class AgentMemory {
         }
 
         for (const [market, data] of marketData.entries()) {
-            if (data.status === 'Closed') {
-                const pnl = data.return - data.buy_vol;
-                const team = data.team || 'Unknown';
-
-                if (!this.teamProfiles.has(team)) {
-                    this.teamProfiles.set(team, { team, sport: data.sport, pnl: 0, wagered: 0, roi: 0, wins: 0, losses: 0 });
-                }
-                const tp = this.teamProfiles.get(team)!;
-                tp.pnl += pnl;
-                tp.wagered += data.buy_vol;
-                if (pnl > 0.01) tp.wins++;
-                else if (pnl < -0.01) tp.losses++;
-                tp.roi = tp.wagered > 0 ? (tp.pnl / tp.wagered) * 100 : 0;
-            }
+            // [REDACTED ALGORITHM]
+            // We strip the ROI aggregation math from the public portfolio
         }
     }
 

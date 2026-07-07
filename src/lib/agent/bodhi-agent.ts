@@ -26,15 +26,14 @@ export class BodhiAgent {
         const liveBalance = await this.polyApi.getUSDCBalance();
         const bankroll = liveBalance > 0 ? liveBalance : 800.00;
 
-        const [mlbOpportunities, nhlOpportunities, biasAlert] = await Promise.all([
+        const [mlbOpportunities, biasAlert] = await Promise.all([
             this.prism.scanMLB(date, bankroll),
-            this.prism.scanNHL(date, bankroll),
             this.prism.analyzeBiases()
         ]);
 
         console.log(`-> Hello. I've scanned today's slate.`);
         console.log(`   Your live bankroll is $${bankroll.toFixed(2)}.`);
-        console.log(`   Found ${mlbOpportunities.length} MLB and ${nhlOpportunities.length} NHL value plays.\n`);
+        console.log(`   Found ${mlbOpportunities.length} MLB value plays.\n`);
 
         if (biasAlert !== "No immediate high-risk psychological patterns detected.") {
             console.warn(`🛑 ATTENTION: ${biasAlert}`);
@@ -44,7 +43,7 @@ export class BodhiAgent {
         }
 
         // EXECUTION RECOMMENDATIONS
-        const recommendations = [...mlbOpportunities, ...nhlOpportunities].filter(p => p.overallConfidence >= 75);
+        const recommendations = mlbOpportunities.filter((p: any) => p.overallConfidence >= 75);
         if (recommendations.length > 0) {
             console.log(`\n--- ${recommendations.length} High-Conviction Plays (Terminal Commands) ---`);
             for (const play of recommendations) {
@@ -58,12 +57,11 @@ export class BodhiAgent {
         }
 
         // Log this to internal memory
-        await this.logInternal('awaken', `Morning scan complete. Found ${mlbOpportunities.length + nhlOpportunities.length} total plays.`, {
-            mlbCount: mlbOpportunities.length,
-            nhlCount: nhlOpportunities.length
+        await this.logInternal('awaken', `Morning scan complete. Found ${mlbOpportunities.length} total plays.`, {
+            mlbCount: mlbOpportunities.length
         });
 
-        return { mlb: mlbOpportunities, nhl: nhlOpportunities };
+        return { mlb: mlbOpportunities };
     }
 
     /**

@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-30",
+  "bankroll": 1000,
+  "stake_range": [
+    40,
+    80
+  ],
+  "payout_model": "polymarket_actual",
+  "top1_all_days": 203,
+  "top1_poly": {
+    "bets": 153,
+    "wr": 66.01307189542483,
+    "wagered": 10375,
+    "pnl": 5446.305930388863,
+    "roi_on_wagered": 52.49451499169988,
+    "roi_on_bankroll": 544.6305930388863,
+    "ending_bankroll": 6446.305930388863,
+    "max_drawdown_pct": 11.700000000000001,
+    "avg_entry_price": 0.4639934640522876
+  },
+  "overlap_same": 153,
+  "overlap_diff": 0,
+  "pass_only_days": 50,
+  "pass_only_wr": 52
+}

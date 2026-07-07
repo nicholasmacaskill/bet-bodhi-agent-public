@@ -729,7 +729,7 @@ async function main() {
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             chat_id: chatId,
-                            text: `🚨 **LIVE UPDATE SCAN COMPLETE** 🚨\n\n[Original Pre-Game Report](${originalPageUrl})`,
+                            text: `🚨 **LIVE UPDATE SCAN COMPLETE** 🚨\n\n1️⃣ **ORIGINAL REPORT** (Pre-Game Baseline):\n[View Original Report](${originalPageUrl})`,
                             parse_mode: 'Markdown',
                             disable_web_page_preview: false
                         })
@@ -740,7 +740,7 @@ async function main() {
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             chat_id: chatId,
-                            text: `[Updated Live Report](${pageUrl})`,
+                            text: `2️⃣ **LIVE UPDATE REPORT** (Current In-Game State):\n[View Live Update Report](${pageUrl})`,
                             parse_mode: 'Markdown',
                             disable_web_page_preview: false
                         })
@@ -751,7 +751,7 @@ async function main() {
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             chat_id: chatId,
-                            text: `[Daily Sovereign Report](${pageUrl})`,
+                            text: `1️⃣ **PRE-GAME REPORT** (Original Baseline):\n[View Daily Sovereign Report](${pageUrl})`,
                             parse_mode: 'Markdown',
                             disable_web_page_preview: false
                         })

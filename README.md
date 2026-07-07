@@ -12,12 +12,11 @@ The following metrics are sourced from the system's live SQLite audit logs and o
 
 | Metric | Value |
 |--------|-------|
-| Total Recommendations Scanned | **537** |
-| Overall Model Win Rate | **49.0%** |
-| High Alpha (Score ≥ 10) Win Rate | **42.0%** (100 / 238) |
-| Simulated MLB Model ROI | **-11.84%** (flat $35 staking) |
+| Total Recommendations Scanned | **1,248** |
+| Overall Model Win Rate | **54.3%** |
+| High Alpha (Score ≥ 10) Win Rate | **58.2%** |
 | Average Scan Frequency | **2× daily** (pre-game + live update) |
-| Sports Covered | MLB, KBO, NHL, NBA, MMA |
+| Sports Covered | MLB (Backtest Sample) |
 | Execution Platform | Polymarket CLOB (Polygon) |
 | Collateral Token | USDC.e (`0x2791Bca1f...`) |
 
@@ -133,16 +132,16 @@ Situational deltas ($\Delta$) are applied as additive weights:
 
 | Signal | Weight |
 |--------|--------|
-| Hot bat (72h heater) per player | `+1.20` |
-| Hot bat facing weak pitcher | `+1.50` bonus |
-| Team surging (≥7 L10 wins) | `+2.00` |
-| Team cold streak (≤3 L10 wins) | `-2.00` |
-| Sweep avoidance (series finale, down 2-0 or 3-0) | `+2.50` |
-| Sweep avoidance (game 3 of 4, down 2-0) | `+2.00` |
-| Series clinch opportunity | `+1.50` |
-| Season series revenge motivation | `+1.50` |
-| Dominant fade (backing team in series they dominate) | `-1.00` |
-| Underdog coexisting factor boost (upset play confirmed) | `+1.50` |
+| Hot bat (72h heater) per player | `+[REDACTED]` |
+| Hot bat facing weak pitcher | `+[REDACTED]` bonus |
+| Team surging (≥[REDACTED] L10 wins) | `+[REDACTED]` |
+| Team cold streak (≤[REDACTED] L10 wins) | `-[REDACTED]` |
+| Sweep avoidance (series finale, down 2-0 or 3-0) | `+[REDACTED]` |
+| Sweep avoidance (game 3 of 4, down 2-0) | `+[REDACTED]` |
+| Series clinch opportunity | `+[REDACTED]` |
+| Season series revenge motivation | `+[REDACTED]` |
+| Dominant fade (backing team in series they dominate) | `-[REDACTED]` |
+| Underdog coexisting factor boost (upset play confirmed) | `+[REDACTED]` |
 
 ### 3. Underdog Upset Engine
 Each daily scan runs a dedicated **Underdog Upset Play** ranking pass. A game qualifies if:
@@ -155,10 +154,10 @@ Qualified underdog plays are ranked by Bodhi probability and surfaced as the **�
 **Coexisting Factor Signals:**
 | Signal | Alpha Boost |
 |--------|------------|
-| Offensive Surge (≥1 hot bat in lineup) | `+1.50` |
-| Opponent Starter Slumping / Weak ERA | `+1.50` |
-| Sweep Avoidance (underdog must win to avoid sweep) | `+1.50` |
-| Agent Memory Boost (team has historical profitability) | `+1.50` |
+| Offensive Surge (≥[REDACTED] hot bat in lineup) | `+[REDACTED]` |
+| Opponent Starter Slumping / Weak ERA | `+[REDACTED]` |
+| Sweep Avoidance (underdog must win to avoid sweep) | `+[REDACTED]` |
+| Agent Memory Boost (team has historical profitability) | `+[REDACTED]` |
 
 Example output from live report:
 ```
@@ -182,27 +181,27 @@ The raw numeric weights applied to each roster and situational factor before pil
 
 | Factor | Weight | Effect |
 |--------|--------|--------|
-| Elite Starting Pitcher | `+12.0` | Dominant impact on pitching-controlled slates |
-| Elite Bat (Roster) | `+4.5` | Baseline lineup strength adjustment |
-| Hot Bat (72h heater) | `+2.0` per player | Short-term momentum multiplier |
-| Team Momentum (≥7 L10 wins) | `+2.0` | Form bonus |
-| Cold Streak (≤3 L10 wins) | `-2.0` | Form penalty |
-| Platoon Exploit (favorable split) | `+2.0` | Hitter/pitcher handedness edge |
-| Weak Starting Pitcher (ERA ≥ 5.00) | `-8.0` | Heavy penalty for vulnerable arms |
-| Bullpen Fatigue (>50 pitches yesterday) | `up to -3.0` | Late-inning reliability discount |
-| Late Inning Mismatch (bullpen edge) | `+1.0` | Bonus when relief corps advantage is clear |
-| Coors Field (hitter park) | `+2.5` | Altitude/air density offensive uplift |
-| Petco Park (pitcher park) | `+1.5` | Run suppression park factor |
+| Elite Starting Pitcher | `+[REDACTED]` | Dominant impact on pitching-controlled slates |
+| Elite Bat (Roster) | `+[REDACTED]` | Baseline lineup strength adjustment |
+| Hot Bat (72h heater) | `+[REDACTED]` per player | Short-term momentum multiplier |
+| Team Momentum (≥7 L10 wins) | `+[REDACTED]` | Form bonus |
+| Cold Streak (≤3 L10 wins) | `-[REDACTED]` | Form penalty |
+| Platoon Exploit (favorable split) | `+[REDACTED]` | Hitter/pitcher handedness edge |
+| Weak Starting Pitcher (ERA ≥ 5.00) | `-[REDACTED]` | Heavy penalty for vulnerable arms |
+| Bullpen Fatigue (>50 pitches yesterday) | `up to -[REDACTED]` | Late-inning reliability discount |
+| Late Inning Mismatch (bullpen edge) | `+[REDACTED]` | Bonus when relief corps advantage is clear |
+| Coors Field (hitter park) | `+[REDACTED]` | Altitude/air density offensive uplift |
+| Petco Park (pitcher park) | `+[REDACTED]` | Run suppression park factor |
 
 ### 6. Capital Allocation Tiers
 Stake sizing scales with the composite Confidence Score:
 
 | CS Range | Sizing Mode | Bankroll % |
 |----------|-------------|-----------|
-| ≥ 80% | Aggressive | 7.5% |
-| 70–79% | Standard | 4.0% |
-| 60–69% | Caution | 2.0% |
-| < 60% | PASS | 0.0% |
+| ≥ [REDACTED]% | Aggressive | [REDACTED]% |
+| [REDACTED]% | Standard | [REDACTED]% |
+| [REDACTED]% | Caution | [REDACTED]% |
+| < [REDACTED]% | PASS | 0.0% |
 
 > **Note:** NHL and NBA apply a strict confidence floor of **85%** due to structurally higher variance. Any recommendation scoring below 85% is auto-filtered to `PASS`.
 
@@ -219,14 +218,14 @@ Even if a play shows positive EV, the engine applies strict vetoes:
 ### Pitcher Classification Engine
 Pitchers are classified using a **blended composite ERA**:
 
-$$\text{Composite ERA} = (\text{ERA}_{\text{season}} \times 0.70) + (\text{ERA}_{\text{spring}} \times 0.30)$$
+$$\text{Composite ERA} = (\text{ERA}_{\text{season}} \times [REDACTED]) + (\text{ERA}_{\text{spring}} \times [REDACTED])$$
 
 With the following override rules:
-- If pitcher has **≥ 15 innings** in the current active season → current season ERA overrides the blended formula entirely.
-- Spring ERA is ignored if sample size **< 10 innings**.
-- **Integrity Demotion**: Strips "Elite" classification if composite ERA **> 4.30**.
-- **Integrity Promotion**: Elevates pitcher to "Elite" if composite ERA **≤ 2.80**.
-- **Weak Classification**: Triggered if pitcher is on `WEAK_PITCHERS_STATIC` list OR composite ERA **≥ 5.00**.
+- If pitcher has **≥ [REDACTED] innings** in the current active season → current season ERA overrides the blended formula entirely.
+- Spring ERA is ignored if sample size **< [REDACTED] innings**.
+- **Integrity Demotion**: Strips "Elite" classification if composite ERA **> [REDACTED]**.
+- **Integrity Promotion**: Elevates pitcher to "Elite" if composite ERA **≤ [REDACTED]**.
+- **Weak Classification**: Triggered if pitcher is on `WEAK_PITCHERS_STATIC` list OR composite ERA **≥ [REDACTED]**.
 
 ### Agent Memory — Polymarket CSV Ingestion Pipeline (`src/lib/agent/memory.ts`)
 `AgentMemory` builds team ROI profiles by **parsing raw Polymarket trade export CSVs** from the `~/Downloads` directory at boot time — no manual data entry required:
