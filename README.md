@@ -762,3 +762,5 @@ npx tsx scratch/check_active_bets.ts              # Check open positions
 ---
 
 *Built and maintained by [@nicholasmacaskill](https://github.com/nicholasmacaskill)*
+
+*For a conceptual overview of the products in my portfolio, visit [www.nicholasmacaskill.com](https://www.nicholasmacaskill.com).*
