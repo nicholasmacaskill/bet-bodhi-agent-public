@@ -1,0 +1,63 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://github.com/nicholasmacaskill/bet-bodhi-agent-public#software",
+      "name": "Bet Bodhi",
+      "alternateName": [
+        "BetBodhi",
+        "Bet Bodhi AI Agent",
+        "Bodhi AI Guardian",
+        "Bet Bodhi Sovereign Agent"
+      ],
+      "description": "Bet Bodhi is an open-source AI agent and quantitative execution infrastructure that audits sports betting decision processes, validates sports data with a 7-pillar framework, and executes via secure Web3 bridges on Polymarket, SX Bet, and Azuro. Built for responsible, quantitative sports prediction.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Cross-platform (macOS, Linux, Node.js)",
+      "softwareVersion": "2.4.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "url": "https://github.com/nicholasmacaskill/bet-bodhi-agent-public",
+      "codeRepository": "https://github.com/nicholasmacaskill/bet-bodhi-agent-public",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.nicholasmacaskill.com/#person",
+        "name": "Nicholas Alexander MacAskill",
+        "alternateName": ["Nicholas MacAskill"],
+        "jobTitle": "Founder & CTO, Flocano Labs",
+        "url": "https://www.nicholasmacaskill.com",
+        "sameAs": [
+          "https://x.com/nicmacaskill",
+          "https://github.com/nicholasmacaskill",
+          "https://www.linkedin.com/in/nicholas-alexander-macaskill-139472101/",
+          "https://instagram.com/nicholasmacaskill",
+          "https://threads.com/@nicholasmacaskill",
+          "https://orcid.org/0009-0009-2014-7433",
+          "https://www.wikidata.org/wiki/Q140384042"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://flocanolabs.com/#organization",
+        "name": "Flocano Labs",
+        "alternateName": ["Sovereign R&D Forge"],
+        "url": "https://flocanolabs.com",
+        "sameAs": [
+          "https://github.com/nicholasmacaskill",
+          "https://x.com/nicmacaskill",
+          "https://instagram.com/betbodhi",
+          "https://threads.com/@betbodhi"
+        ]
+      },
+      "sameAs": [
+        "https://flocanolabs.com",
+        "https://nicholasmacaskill.com",
+        "https://instagram.com/betbodhi",
+        "https://threads.com/@betbodhi",
+        "https://instagram.com/nicholasmacaskill",
+        "https://github.com/nicholasmacaskill/bet-bodhi-agent-public",
+        "https://github.com/nicholasmacaskill/bet-bodhi",
+        "https://www.flocanolabs.com/flocanolabs/case-studies"
+      ]
+    }
+  ]
+}
