@@ -1,630 +1,46 @@
-# 🧠 Bet Bodhi: Autonomous Quantitative Sports Trading & Multi-DEX Execution Infrastructure
+# Bet Bodhi
 
-### Technical Dossier & Whitepaper v2.4
-**Architecture, Mathematical Foundations, Risk Engineering, and Empirical Telemetry**
+> **classification:** `sovereign_system` &nbsp;|&nbsp; **sys_id:** `FL-BET-` &nbsp;|&nbsp; **status:** `production`  
+> **origin:** [Flocano Labs Sovereign R&D Forge](https://www.flocanolabs.com/flocanolabs/case-studies?project=bet-bodhi)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Network: Polygon](https://img.shields.io/badge/Network-Polygon-8247E5)](https://polygon.technology/)
-[![Contracts: Solidity](https://img.shields.io/badge/Contracts-Solidity%200.8.20-363636)](https://soliditylang.org/)
-[![TypeScript: 5.x](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
-[![Node: v20+](https://img.shields.io/badge/Node-v20+-green)](https://nodejs.org/)
+### *Sovereign Web3 Sports Prediction Arbitrage Engine*
+
+An autonomous quantitative execution engine for Polymarket sports markets — validated across 5,107-game MLB temporal replay (2024–2025) with signal-vs-execution decomposition, closed-market historical indexing, and post-hoc slate concentration proving tighter daily filters lift win rate without changing the underlying model.
 
 ---
 
-## 📑 Executive Abstract
+### 📊 System Telemetry & Empirical HUD
 
-**Bet Bodhi** is an institutional-grade, fully autonomous **Sovereign AI Trading Agent** and **Web3 Multi-DEX Execution Infrastructure** designed for continuous operation across professional sports prediction markets and decentralized exchanges (MLB, KBO, NPB, NHL, NBA, MMA, Soccer, Tennis, and Golf).
-
-Traditional sports betting and prediction market execution suffer from three foundational inefficiencies:
-1. **Discretionary Behavioral Decay:** Emotional cognitive bias, chasing losses under drawdown ("tilt"), and fatigue-induced execution drift.
-2. **Execution Latency & Fragmentation:** Inability to simultaneously price, aggregate, and route capital across disparate liquidity architectures (peer-to-peer Central Limit Order Books vs. decentralized Automated Market Makers).
-3. **Mid-Season Regime Drift:** Structural breakdowns in static quantitative models caused by weather-induced variance expansion, bullpen exhaustion, and market efficiency convergence.
-
-Bet Bodhi resolves these challenges through an end-to-end autonomous pipeline:
-* **The 7-Pillar Quantitative Model:** An objective composite scoring engine synthesizing pitcher whiff distributions, platoon splits, xWOBA trends, environmental park factors, and situational motivation.
-* **The PRISM Behavioral Gate:** A proprietary Psychological Risk Intelligence and Sentiment Module gating capital exposure and sizing to psychometric trader state before execution.
-* **The Multi-DEX Liquidity Aggregator:** Real-time concurrent order routing across **Polymarket CLOB**, **SX Bet**, **Azuro Protocol AMMs**, **Overtime Markets**, and **Limitless Exchange**.
-* **Autonomous Volatility Telemetry & Circuit Breakers:** Decoupled background daemons monitoring rolling league lead-change distributions, Closing Line Value (CLV) drift, and automated 50% capital throttling under drawdown streaks.
-* **ESPN Play-by-Play Trade Attribution Replayer:** Historical backtesting and live fill enrichment linking every on-chain transaction to the sub-second wallclock game state at the instant of execution.
+| Metric | Production Ground Truth | Description |
+|:---|:---|:---|
+| **mlb_games_replayed** | `5,107` | Complete 2024–2025 MLB regular season games replayed with zero lookahead |
+| **polymarket_match_rate** | `98.4%` | Historical moneyline contract resolution match rate (2,509 / 2,551 games) |
+| **top5_per_day_wr** | `63.6%` | Win rate achieved via daily Top-5 slate concentration filter across 923 bets |
+| **top3_per_day_wr** | `62.4%` | Win rate achieved via daily Top-3 slate concentration filter across 577 bets |
+| **top1_tradable_wr** | `66.0%` | Win rate achieved on daily Top-1 tradable Polymarket execution route (153 bets) |
 
 ---
 
-## 🏛️ System Architecture Topology
+### 🏛️ Engineering Disciplines
+* **Quantitative Engineering & Microstructure**
+* **Web3 Primitives & Cryptographic Routing**
+* **Cognitive AI & Multi-Agent Swarms**
+* **Distributed Systems & High-Throughput State**
 
-The Bodhi architecture is engineered as five decoupled, asynchronous layers connected via IPC, local SQLite persistence, and Web3 RPC channels:
-
-```mermaid
-graph TD
-    subgraph Client [1. Neural Communicator & User Interface Layer]
-        TG[Telegram Interface /scan /pick /ask /sentiment] <-->|State Commands| BOT[com.betbodhi.telegrambot Daemon]
-        BOT <-->|Psychometric Auditing| PRISM[PRISM Engine]
-        BOT <-->|Natural Language Ingestion| LLM[OpenRouter FinOps Engine]
-    end
-
-    subgraph Daemons [2. Sovereign OS Daemon Layer - launchd]
-        SCAN[nightly_full_report.ts Master Scanner]
-        ARB[com.betbodhi.arbscanner Daemon]
-        SYNC[com.betbodhi.pnlsync Daemon]
-        DOG[BodhiWatchdog Live Drift Monitor]
-        REG[macro-regime-daemon.ts Telemetry]
-    end
-
-    subgraph DataLake [3. Data Lake & High-Performance Persistence]
-        DB[(Local SQLite: bodhi.db)]
-        SUPA[(Cloud Supabase Postgres)]
-        REP[reports/ Sovereign Reports MD]
-        CACHE[data/active_slate.json Snapshot]
-        PNL[data/latest_pnl.json Cache]
-    end
-
-    subgraph Quant [4. Quantitative Analytics Core]
-        P7[7-Pillar Evaluation Engine]
-        MEM[AgentMemory & Burn List Cache]
-        COMP[Unified Alpha & EV Calculator]
-        UNDERDOG[Underdog Upset Play Ranker]
-    end
-
-    subgraph Execution [5. Web3 Multi-DEX Execution Layer]
-        ROUTER[MultiDexRouter Aggregator]
-        POLY[Polymarket CLOB REST / WebSocket]
-        SX[SX Bet P2P CLOB on Polygon]
-        AZURO[Azuro Protocol AMM Network]
-        SMART[BodhiArbitrageRouter.sol Contract]
-    end
-
-    TG --> BOT
-    BOT --> SCAN
-    SCAN --> P7
-    P7 --> MEM
-    P7 --> COMP
-    COMP --> UNDERDOG
-    UNDERDOG --> ROUTER
-    ROUTER --> POLY
-    ROUTER --> SX
-    ROUTER --> AZURO
-    ROUTER --> SMART
-    SCAN --> DB
-    SCAN --> REP
-    SCAN --> CACHE
-    SYNC --> PNL
-    DOG --> CACHE
-    DOG --> TG
-```
-
-### Decoupled Sovereign Daemon Architecture
-To eliminate UI latency and survive terminal disconnects, all mission-critical operations are daemonized via native macOS `launchd` services:
-
-| Daemon Identifier | Execution Script | Primary Responsibility | SLA / Schedule |
-|---|---|---|---|
-| `com.betbodhi.telegrambot` | `scripts/telegram-bot.ts` | Command router, interactive PRISM audits, on-demand scan triggers | Continuous daemon |
-| `com.betbodhi.arbscanner` | `scripts/polymarket-arb-scanner.ts` | Continuous orderbook scanning for atomic MERGE / SPLIT arbitrage | 150ms poll loop |
-| `com.betbodhi.pnlsync` | `scripts/calculate-live-pnl.ts` | Direct on-chain USDC.e transaction log reconciliation | 15-minute CRON |
-| `com.betbodhi.watchdog` | `src/lib/agent/watchdog.ts` | Live post-scan drift detection (pitcher scratches, lineup swaps) | 5-minute poll loop |
-| `com.betbodhi.macroregime` | `scripts/macro-regime-daemon.ts` | 3-day rolling league lead-change telemetry and flatline detection | Hourly calculation |
+### 🛠️ Unified Technology Stack
+`@polymarket/clob-client` • `@sx-bet/sportx-js` • `Active Taker Sniping` • `Algorithmic Routing` • `Arbitrum RPC` • `As-Of Execution Hydration` • `Azuro Protocol` • `Azuro Protocol V3` • `Bayesian Logic` • `BodhiPrism` • `CLOB prices-history` • `Context Compression` • `Daily Budget Throttling` • `Decimal Odds Normalization` • `EIP-712` • `EIP-712 Order Matching` • `EIP-712 Permit` • `ESPN API` • `Ethers.js v6` • `Fractional Kelly Sizing` • `Gemini API` • `Gnosis Chain` • `GraphQL` • `Hardcoded Risk Ceilings` • `JSON State` • `KBO API` • `Limit Order Placement` • `MLB API` • `MLB Stats API` • `MMA API` • `Macro Regime Telemetry` • `Multi-Chain Routing` • `NBA API` • `NHL API` • `Node.js` • `Odds API` • `On-Chain Bankroll Verification` • `One-Tap Execution` • `OpenRouter` • `Polygon` • `Polygon CTF` • `Polygon RPC` • `Polymarket CLOB` • `Polymarket Data API` • `Polymarket Gamma API` • `PolymarketGateway` • `Promise.all Concurrency` • `RPC Node` • `RPC Node Failover` • `Rolling Volatility Tracking` • `SQLite` • `SQLite WAL` • `SX Bet API` • `SX Rollup` • `Schema Normalization` • `Sentiment Guard` • `Shallow Paging` • `Slate Optimization` • `Slump Mode Throttling` • `Solana` • `Supabase` • `Telegram Bot API` • `Temporal Concentration` • `Token Telemetry` • `TokenTransferProxy` • `TypeScript` • `USDC.e Approvals` • `USDC.e Contract Reads` • `macOS launchd`
 
 ---
 
-## 📐 The 7-Pillar Quantitative Evaluation Model
+## 📑 Complete Engineering Dossiers (Shards 01–16)
 
-Every fixture is systematically audited across **seven independent pillars** scored from `0.0` to `10.0`. The composite weighted mean yields the **Objective Confidence Score** ($\text{CS}$), which anchors fair-value probabilities.
+### [01] Autonomous CLOB Mispricing Resolver
 
-$$\text{CS} = \left( \frac{\sum_{i=1}^{7} W_i \cdot \text{Pillar}_i}{\sum_{i=1}^{7} W_i} \right) \times 10$$
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `execution: active_maker_taker` &nbsp;|&nbsp; **dossier_id:** [`bodhi-clob-mispricing-resolver`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-```
-                                  ┌────────────────────────────────┐
-                                  │    Matchup Ingestion Engine    │
-                                  └────────────────┬───────────────┘
-                                                   │
-         ┌──────────────────┬──────────────────────┼──────────────────────┬──────────────────┐
-         ▼                  ▼                      ▼                      ▼                  ▼
-┌─────────────────┐┌─────────────────┐   ┌──────────────────┐   ┌─────────────────┐┌─────────────────┐
-│ 1. Tech Roster  ││ 2. Environment  │   │ 3. Market Bookies│   │ 4. Bankroll &   ││ 5. Contextual   │
-│ Advantage (10)  ││ & Park Factor(10│   │ Discrepancy (10) │   │ Kelly Sizing(10)││ Motivation (10) │
-└────────┬────────┘└────────┬────────┘   └────────┬─────────┘   └────────┬────────┘└────────┬────────┘
-         │                  │                     │                      │                  │
-         └──────────────────┼─────────────────────┼──────────────────────┼──────────────────┘
-                            ▼                     ▼                      ▼
-                   ┌─────────────────┐   ┌──────────────────┐   ┌─────────────────┐
-                   │ 6. Psychological│   │ 7. Physiological │   │ 8. Objective    │
-                   │ (PRISM Trader)  │   │ / Spiritual Circ.│   │ Confidence (CS) │
-                   └─────────────────┘   └──────────────────┘   └─────────────────┘
-```
+*reliever fatigue telemetry & orderbook pricing latency*
 
-### Pillar Definitions & Algorithmic Inputs
-
-| # | Pillar Dimension | Weight | Mathematical Input Parameters |
-|:---:|---|:---:|---|
-| **1** | **Technical Roster Advantage** | `1.00` | Composite Starting Pitcher ERA ($70/30$ weighted blend), xERA vs. ERA variance, Whiff%, 72-hour lineup rolling xWOBA, handedness platoon splits ($L/R$), and bullpen rolling 7th+ inning ERA. |
-| **2** | **Seasonal & Environmental** | `0.85` | Park factor multipliers (Coors Field $+2.5$ run uplift, Petco Park $-1.5$ run suppression), altitude air-density adjustments, temperature-derived flight vectors, and crosswinds $>20\text{ mph}$. |
-| **3** | **Market Sentiment Discrepancy** | `1.15` | Absolute delta between internal true probability ($P_{\text{Bodhi}}$) and market-clearing price ($C_{\text{Market}}$) across decentralized exchanges. |
-| **4** | **Bankroll & Kelly Sizing** | `0.90` | Fractional Kelly criterion ($f^*$) scaled against dynamic high-water mark bankrolls with strict single-trade concentration bounds. |
-| **5** | **Contextual & Motivational** | `0.80` | Travel fatigue schedules (cross-country time zone deltas), rest disparity, 10-game rolling momentum ($L10$), series sweep avoidance stakes, and postseason elimination leverage. |
-| **6** | **Psychological (PRISM Trader)** | `1.00` | Real-time psychometric gating score ($1\text{--}10$) capturing trader cognitive clarity, emotional tilt risk, and drawdown fatigue. |
-| **7** | **Physiological / Circadian** | `0.70` | Circadian rhythm body-clock alignment for night-to-day turnarounds, travel jet-lag penalties, and cognitive decision sharpness metrics. |
-
----
-
-## 🔬 Starting Pitcher Classification & Matchup Archetypes
-
-Starting pitching represents over 60% of single-game variance in baseball forecasting. Bodhi utilizes a **Blended Composite Pitching Metric** with strict sample-size overrides:
-
-$$\text{Composite ERA} = (\text{ERA}_{\text{Season}} \times 0.70) + (\text{ERA}_{\text{Spring/Historical}} \times 0.30)$$
-
-* **Active Season Override:** If current active season innings pitched $\ge 15.0\text{ IP}$, historical blending is deprecated and current season metrics govern exclusively.
-* **Integrity Demotion:** Any starter with a composite ERA $> 4.30$ or WHIP $> 1.35$ is stripped of "Elite" classification regardless of public consensus prestige.
-* **Integrity Promotion:** Any starter maintaining composite ERA $\le 2.80$ with Whiff% in the 90th percentile is classified "Elite."
-* **Weak Starter Classification:** Pitchers with composite ERA $\ge 5.00$ or listed on the curated regression registry are assigned a $-8.0$ technical penalty.
-
-### Tactical Matchup Archetype Engine
-Every game evaluated is algorithmically mapped into one of seven mutually exclusive operational archetypes:
-
-```
-+-------------------------------+-------------------------------------------------------------+
-| Archetype Tag                 | Trigger Logic & Algorithmic Implication                     |
-+-------------------------------+-------------------------------------------------------------+
-| 🎯 PITCHING DUEL              | Both starters in top-10% xERA/Whiff%; heavy run-under bias. |
-| 💪 DOMINANT PITCHING          | Single elite starter facing non-elite arm (+15.0 net edge). |
-| ⚡ OFFENSE VS DEFENSE MISMATCH| Top-quartile lineup wOBA facing starter with xERA >= 5.00.  |
-| 🌀 BULLPEN CHAOS              | Opener or TBD designation; pricing favors late relief corps.|
-| 💎 LINEUP DEPTH EDGE          | Multiple top-tier bats active; mid-inning resilience.       |
-| ⚖️ EVEN TECHNICAL PROFILE     | Symmetrical roster strength; pure line-value dependency.    |
-| 📊 MARGINAL EDGE              | Sub-threshold disparity requiring confirmatory signals.     |
-+-------------------------------+-------------------------------------------------------------+
-```
-
----
-
-## 📈 Expected Value Formulation & Unified Alpha Score
-
-### 1. Mathematical Expected Value ($\text{EV}$)
-
-$$\text{EV} = P_{\text{Bodhi}} - C_{\text{Market}}$$
-
-Where:
-* $P_{\text{Bodhi}} \in [0.0, 1.0]$ is the calibrated Bayesian win probability derived from the 7-Pillar model.
-* $C_{\text{Market}} \in [0.0, 1.0]$ is the executable contract share price on the Central Limit Order Book or implied probability from AMM odds.
-
-### 2. The Unified Alpha Formulation ($\alpha$)
-The **Unified Alpha Score** serves as the master ranking metric across all sports slates, harmonizing intrinsic confidence, pricing edge, and situational catalysts:
-
-$$\alpha = \left( \frac{\text{CS}}{10} \right) + (\text{EV} \times 10) + \sum \Delta_{\text{situational}}$$
-
-### Situational Delta Calibration Table ($\Delta_{\text{situational}}$)
-
-| Situational Catalyst Condition | Delta Weight | Strategic Rationale |
-|---|:---:|---|
-| **Hot Bat (72h Rolling Heater)** | `+1.20` | Captures micro-window batter peak exit velocities and hard-hit clusters. |
-| **Hot Bat Facing Weak Starter** | `+1.50` | Compounding multiplier: elite contact bat against high-barrel pitcher. |
-| **Team Surging ($\ge 7$ wins in L10)** | `+2.00` | Positive clubhouse momentum and high-leverage bullpen confidence. |
-| **Team Cold Streak ($\le 3$ wins in L10)** | `-2.00` | Negative momentum penalty; systemic offensive slumps. |
-| **Sweep Avoidance (Down 0-2 / 0-3)** | `+2.50` | Maximum regular-season motivation; teams exhaust top bullpen arms to avoid sweep. |
-| **Sweep Avoidance (Game 3 of 4)** | `+2.00` | Elevated motivation threshold for multi-game series preservation. |
-| **Series Clinch Opportunity** | `+1.50` | High-leverage incentives to secure division/season series tiebreakers. |
-| **Season Series Revenge Spot** | `+1.50` | Psychological rebound spot against historical regular-season rivals. |
-| **Dominant Fade Penalty** | `-1.00` | Discount applied against backing favorites in matches they historically overlook. |
-| **Underdog Upset Coexistence Boost** | `+1.50` | Multiplicative boost applied when an underdog satisfies two or more catalysts. |
-
-### 3. Dynamic Favorite Tax Protection
-To protect capital against asymmetric risk when backing heavy market favorites, minimum EV thresholds dynamically scale with contract price:
-
-$$\text{Minimum EV Threshold} = \begin{cases} 
-12.0\% & \text{if } C_{\text{Market}} > 0.70 \\ 
-8.0\% & \text{if } 0.60 < C_{\text{Market}} \le 0.70 \\ 
-5.0\% & \text{if } C_{\text{Market}} \le 0.60 
-\end{cases}$$
-
----
-
-## 🐶 The Underdog Upset Engine
-
-The system features an autonomous engine specifically calibrated to exploit liquidity imbalances on underdogs. A matchup triggers an **Underdog Upset Alert** only when:
-1. $C_{\text{Market}} < \$0.50$ (True market underdog pricing).
-2. $P_{\text{Bodhi}} > C_{\text{Market}}$ by at least $+8.0\%$ Expected Value.
-3. At least one **Coexisting Structural Factor** confirms the thesis:
-
-```
-                       ┌───────────────────────────────┐
-                       │ Underdog Candidate Discovery  │
-                       │   Market Share Price < $0.50   │
-                       └───────────────┬───────────────┘
-                                       │
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │    Expected Value Filter      │
-                       │    PBodhi - CMarket >= +8%    │
-                       └───────────────┬───────────────┘
-                                       │
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │ Coexisting Factor Validation  │
-                       └───────────────┬───────────────┘
-                                       │
-        ┌──────────────────────┼──────────────────────┬──────────────────────┐
-        ▼                      ▼                      ▼                      ▼
-┌───────────────┐      ┌───────────────┐      ┌───────────────┐      ┌───────────────┐
-│Offensive Surge│      │Opponent Arm   │      │Sweep Avoidance│      │Agent Memory   │
-│(>=1 Hot Bat)  │      │Slumping (ERA>5│      │Must-Win Finale│      │Profitable ROI │
-└───────┬───────┘      └───────┬───────┘      └───────┬───────┘      └───────┬───────┘
-        │                      │                      │                      │
-        └──────────────────────┼──────────────────────┴──────────────────────┘
-                               ▼
-               ┌───────────────────────────────┐
-               │  🥇 Primary / 🥈 Secondary    │
-               │   Underdog Play Promoted      │
-               └───────────────────────────────┘
-```
-
-When verified, the pick is tagged with an automatic **`+1.50` Alpha Boost** and highlighted prominently on the sovereign slate report.
-
----
-
-## 🎛️ PRISM: Psychological Risk Intelligence & Sentiment Module
-
-Quantitative algorithmic models fail in real-world deployment when disconnected from the human trader managing execution. Emotional stress, sleep deprivation, and drawdown tilt cause premature trade cancellation, manual over-sizing, and revenge wagering.
-
-**PRISM** establishes an un-bypassable cognitive gate before any scan can generate actionable sizing:
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Trader as Human Operator
-    participant Bot as Telegram Bot
-    participant PRISM as PRISM Module
-    participant DB as SQLite / Supabase
-    participant Core as Master Scanner
-
-    Trader->>Bot: /scan (or /pick)
-    Bot->>PRISM: Check Active Session Sentiment
-    alt No Sentiment on File or Stale (>6h)
-        PRISM-->>Bot: Require Sentiment Audit
-        Bot->>Trader: "🧠 Bodhi Mindset Audit: Describe current mood (e.g. focused, neutral, anxious)?"
-        Trader->>Bot: "focused"
-        Bot->>Trader: "Rate your calmness on a scale of 1 to 10:"
-        Trader->>Bot: "8"
-        PRISM->>PRISM: Compute Risk Multiplier (Mrisk = 1.0x)
-        PRISM->>DB: INSERT INTO user_sentiment (mood, calmness, risk_multiplier)
-        PRISM->>DB: Cache session_sentiment.json
-    end
-    PRISM-->>Core: Inject Mrisk Multiplier & Sentiment FK
-    Core->>Core: Apply Mrisk to Suggested Stakes
-    Core-->>Trader: Deliver Sizing-Throttled Slate Report
-```
-
-### Mathematical Risk Multiplier ($M_{\text{risk}}$)
-
-$$M_{\text{risk}} = \begin{cases} 
-1.00\text{x} & \text{if } S_{\text{calm}} \ge 7 \quad \text{(Full Sizing: Green Light)} \\ 
-0.50\text{x} & \text{if } 5 \le S_{\text{calm}} < 7 \quad \text{(Caution: 50% Capital Throttle)} \\ 
-0.00\text{x} & \text{if } S_{\text{calm}} < 5 \quad \text{(Hard Circuit Breaker: Complete System Veto)} 
-\end{cases}$$
-
-Every generated recommendation in `betting_opportunities` stores a foreign key reference (`sentiment_id`) to the active sentiment record, enabling retrospective multi-dimensional correlation audits:
-
-```sql
-SELECT 
-    us.mood,
-    ROUND(AVG(us.calmness), 2) AS avg_calmness,
-    COUNT(*) AS total_trades,
-    ROUND(COUNT(*) FILTER (WHERE bo.result = 'WIN')::float / COUNT(*) * 100, 1) AS win_rate_pct
-FROM betting_opportunities bo
-JOIN user_sentiment us ON bo.sentiment_id = us.id
-GROUP BY us.mood
-ORDER BY win_rate_pct DESC;
-```
-
----
-
-## 🌐 Web3 Multi-DEX Liquidity Aggregator
-
-Following regional geoblocking shifts in 2026 across decentralized prediction markets, Bet Bodhi transitioned from a single-venue architecture to a **Universal Multi-DEX Aggregator** (`src/lib/multi-dex-router.ts`).
-
-### Multi-Venue Routing Matrix
-
-```
-                          ┌───────────────────────────┐
-                          │   Directional Pick from   │
-                          │   7-Pillar Quant Core     │
-                          └─────────────┬─────────────┘
-                                        │
-                                        ▼
-                          ┌───────────────────────────┐
-                          │     MultiDexRouter        │
-                          │   Parallel Execution Scan │
-                          └─────────────┬─────────────┘
-                                        │
-     ┌──────────────────┬───────────────┼───────────────┬──────────────────┐
-     ▼                  ▼               ▼               ▼                  ▼
-┌──────────────┐ ┌──────────────┐┌──────────────┐┌──────────────┐ ┌──────────────┐
-│  Polymarket  │ │    SX Bet    ││ Azuro AMM    ││ Overtime Mkt │ │ Limitless Ex │
-│ (Polygon)    │ │(Polygon/Arb) ││(Arbitrum/Base││ (Optimism)   │ │  (EVM / SVM) │
-│ P2P CLOB     │ │ P2P CLOB     ││ Pooled AMM   ││ Chainlink AMM│ │ Binary Order │
-└──────┬───────┘ └──────┬───────┘└──────┬───────┘└──────┬───────┘ └──────┬───────┘
-       │                │               │               │                │
-       └────────────────┼───────────────┼───────────────┼────────────────┘
-                        ▼               ▼               ▼
-                 ┌──────────────────────────────────────────────┐
-                 │     Net Payout & Slippage Comparator         │
-                 │     Identifies Best Execution Route          │
-                 └──────────────────────┬───────────────────────┘
-                                        ▼
-                 ┌──────────────────────────────────────────────┐
-                 │  Dispatch Execution Order / Direct Web3 Fill │
-                 └──────────────────────────────────────────────┘
-```
-
-1. **Polymarket (Polygon POS):** Central Limit Order Book settlement via conditional tokens.
-2. **SX Bet (Arbitrum / Polygon):** Peer-to-peer sports exchange protocol (`@sx-bet/sportx-js`) reading executable taker book depth.
-3. **Azuro Protocol (Arbitrum / Base):** Decentralized Automated Market Maker network with shared pool liquidity.
-4. **Overtime Markets (Optimism / Base):** Chainlink oracle-settled sports AMM.
-5. **Limitless Exchange:** EVM/SVM decentralized prediction market aggregator.
-
-### Ethers v5 ↔ v6 Dynamic Signer Compatibility Adapter
-Because the Polymarket CLOB SDK strictly expects an Ethers v5 signer while modern DeFi contracts require Ethers v6, Bet Bodhi utilizes a custom adapter layer that strips internal `EIP712Domain` structural mismatches:
-
-```typescript
-export function createEthersV5SignerAdapter(wallet: ethers.Wallet): any {
-    return {
-        getAddress: async () => wallet.address,
-        signMessage: async (message: string | Uint8Array) => 
-            wallet.signMessage(typeof message === 'string' ? message : ethers.hexlify(message)),
-        _signTypedData: async (domain: any, types: any, value: any) => {
-            // Ethers v6 internally populates and manages EIP712Domain;
-            // Ethers v5 CLOB SDK expects it stripped to avoid collision.
-            const { EIP712Domain, ...sanitizedTypes } = types;
-            return await wallet.signTypedData(domain, sanitizedTypes, value);
-        },
-        connect: () => createEthersV5SignerAdapter(wallet)
-    };
-}
-```
-
-### Capital Protection & Execution Safeguards
-* **Enforced Stake Cap:** Hardcoded `MAX_TEST_STAKE` ceiling (`$35.00` default) enforced in the transaction dispatch layer. Any model recommendation exceeding this limit automatically throws and halts before on-chain signing.
-* **Bounded Slippage Limits:** Every CLOB execution order is submitted with an explicit slippage ceiling:
-  $$\text{Execution Limit Price} = \min(C_{\text{Target}} + 0.05, 0.99)$$
-* **Non-Custodial Multi-Chain Balances:** Real-time balances are queried directly across Polygon, Arbitrum, and Base RPC nodes via ERC-20 smart contracts—never through fragile browser scraping.
-
-### 🛠️ Programmatic Web3 Execution Challenges & Solutions
-
-Building automated, sub-second execution across decentralized prediction markets and sports rollups surfaced critical infrastructure bottlenecks:
-
-#### 1. The SX Rollup (Chain ID 4162) RPC Stabilization
-* **The Challenge:** Standard `ethers.FallbackProvider` crashed during live trading. Default Gelato RPC endpoints (`rpc.sx-rollup.gelato.digital`) experienced DNS degradation that caused Ethers.js to enter infinite retry loops, while Thirdweb public gateways (`4162.rpc.thirdweb.com`) throttled raw `eth_call` smart contract reads, causing immediate `CALL_EXCEPTION` errors on balance queries.
-* **The Solution:** Deep network analysis identified the dedicated, stable `rpc-rollup.sx.technology` node. The client pipeline was re-architected with automated endpoint health-check failovers, permanently eliminating RPC timeout crashes.
-
-#### 2. The "Gasless" Allowance Trap
-* **The Challenge:** SX Rollup transitioned to a "gasless" architecture, deprecating native gas tokens. When the bot attempted programmatic on-chain ERC-20 `approve` transactions via Ethers.js, the network threw `INSUFFICIENT_FUNDS` because the wallet held `0` native gas tokens.
-* **The Root Cause & Fix:** SX Bet's web UI achieves gaslessness via proprietary relayer `permit` signatures targeting the `TokenTransferProxy` contract. Our bot was initially checking allowance on `EIP712FillHasher`. By updating `sxbet-client.ts` to query `TokenTransferProxy`, the bot recognized existing infinite allowances and bypassed on-chain gas-heavy approvals entirely.
-
-#### 3. v6.0 API Payload Schema Strictness
-* **The Challenge:** The SX Matching Engine rejected EIP-712 taker fills with `500 Internal Server Error` despite valid signatures and allowance.
-* **The Solution:** Auditing the `/orders/fill/v2` endpoint revealed that legacy clients wrapped payloads in a JSON array (`[payload]`). Re-engineering `executeTakerFill` to pass the exact flat schema resulted in instantaneous, deterministic orderbook matching.
-
-#### 4. macOS launchd TCC Restrictions & Concurrency
-* **The Challenge:** macOS Transparency, Consent, and Control (TCC) security blocked `launchd` background agents from executing shell scripts in `~/Downloads`, throwing `Operation not permitted`. Concurrently, duplicate polling processes caused Telegram `409 Conflict` errors.
-* **The Solution:** Plist service templates were refactored to invoke the `tsx` runtime binary directly, bypassing `/bin/bash` wrappers. Telegram polling was centralized into a single-instance mutex pattern, eliminating duplicate alerts and stabilizing 24/7 autonomous daemon execution.
-
----
-
-## ⚡ Atomic Cross-DEX Arbitrage Engine
-
-In addition to directional predictive trading, Bodhi operates an autonomous on-chain arbitrage daemon (`com.betbodhi.arbscanner`) monitoring structural pricing discrepancies on conditional token order books.
-
-### Arbitrage Mathematical Topologies
-
-#### 1. The MERGE Arbitrage (Capital Reconstitution)
-Triggered when the sum of the executable ask prices for both complementary outcomes falls below the $\$1.00$ guaranteed collateral redemption value:
-
-$$\text{Net Merge Profit} = 1.000 - (P_{\text{YES ask}} + P_{\text{NO ask}}) - \text{GasFees}$$
-
-#### 2. The SPLIT Arbitrage (Collateral Minting)
-Triggered when the sum of the executable bid prices for both outcomes exceeds $\$1.00$:
-
-$$\text{Net Split Profit} = (P_{\text{YES bid}} + P_{\text{NO bid}}) - 1.000 - \text{GasFees}$$
-
-### The Solidity Smart Contract (`contracts/BodhiArbitrageRouter.sol`)
-To prevent execution legging risk (where leg one fills but leg two fails, exposing the trader to unwanted directional risk), Bodhi executes arbitrage atomically via custom smart contracts deployed on Polygon:
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
-
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-
-contract BodhiArbitrageRouter is Ownable {
-    error InsufficientOutput(uint256 received, uint256 minimum);
-    error TransferFailed();
-    error ArbitrageExecutionFailed(bytes reason);
-
-    enum RouterType { UNISWAP_V2, UNISWAP_V3, GENERIC_CALLED }
-
-    struct ArbitrageParams {
-        address router;
-        RouterType routerType;
-        address tokenIn;
-        address tokenOut;
-        uint256 amountIn;
-        uint256 minAmountOut;
-        bytes path;
-        address recipient;
-    }
-
-    constructor() Ownable(msg.sender) {}
-
-    function executeArbitrage(ArbitrageParams calldata params) external onlyOwner returns (uint256 amountOut) {
-        if (!IERC20(params.tokenIn).transferFrom(msg.sender, address(this), params.amountIn)) {
-            revert TransferFailed();
-        }
-        IERC20(params.tokenIn).approve(params.router, params.amountIn);
-
-        if (params.routerType == RouterType.GENERIC_CALLED) {
-            (bool success, bytes memory result) = params.router.call(params.path);
-            if (!success) revert ArbitrageExecutionFailed(result);
-            amountOut = IERC20(params.tokenOut).balanceOf(address(this));
-        }
-
-        if (amountOut < params.minAmountOut) {
-            revert InsufficientOutput(amountOut, params.minAmountOut);
-        }
-
-        if (!IERC20(params.tokenOut).transfer(params.recipient, amountOut)) {
-            revert TransferFailed();
-        }
-    }
-}
-```
-
----
-
-## 🛡️ Risk Management & Automated Circuit Breakers
-
-### 1. The Slump Circuit Breaker
-Drawdowns in sports trading naturally cluster due to macro schedule compression and weather anomalies. Bodhi enforces an automated, mathematical circuit breaker tracking rolling SQLite records:
-* **Trigger 1:** Three (`3`) consecutive settled losses.
-* **Trigger 2:** Four (`4`) losses across the trailing five (`5`) settled wagers.
-* **Automated Action:** All model-recommended unit sizes are instantly scaled down by an additional **`0.50x` multiplier**. Normal capital allocation is restored only after a winning trade breaks the sequence.
-
-### 2. Multi-League Macro Volatility Telemetry
-Static models decay when league-wide competitive dynamics shift. Bodhi deploys decoupled, league-specific telemetry monitors (`macro-regime-daemon.ts` for MLB and `kbo-regime-daemon.ts` for KBO):
-* **Baseline Norm:** $\approx 1.80$ average late-inning lead changes per 10-game slate.
-* **Regime Warning:** If rolling 48-hour average lead changes drop below **$0.50$**, the daemon fires a high-priority `REGIME_FLATLINED` alert to Telegram.
-* **Algorithmic Response:** Unit sizing is pre-emptively throttled before slate scan generation, protecting the bankroll from low-volatility dead markets.
-
-### 3. BodhiWatchdog: Live Post-Scan Drift Monitor
-Between pre-game scan generation (typically 1:00 PM EST) and game kickoff, team line-ups and starting pitchers frequently drift. `BodhiWatchdog` runs continuously:
-* **Pitcher Scratches:** Compares live starter identities against the `active_slate.json` snapshot. If a scratch occurs, an instantaneous `🚨 VETO ALERT` is dispatched via Telegram.
-* **Consensus Market Reversal:** If market crowd prices collapse below `$0.45` after recommendation time, the trade is marked `ABORT`.
-* **Wind / Weather Inversion:** Checks real-time weather stations; winds $>20\text{ mph}$ blowing in invalidate high-total offensive plays.
-
----
-
-## 🧬 Trade Attribution via ESPN Play-by-Play Replay
-
-A critical flaw in quantitative sports trading is the inability to reconstruct the exact game context when evaluating historical fills. A trade entered at 7:35 PM on an 8:00 PM game could be pre-game, delayed, or live in the 3rd inning.
-
-Bet Bodhi's **Trade Attribution Engine** (`scripts/enrich-trade-context.ts`) solves this by reconstructing reality at the exact Unix timestamp of every on-chain fill:
-
-```
-                      ┌─────────────────────────────────┐
-                      │  On-Chain Trade Fill Ingestion  │
-                      │  (Timestamp: match_time_unix)   │
-                      └────────────────┬────────────────┘
-                                       │
-                                       ▼
-                      ┌─────────────────────────────────┐
-                      │   Polymarket Gateway Resolver   │
-                      │  Resolves Question & Team IDs   │
-                      └────────────────┬────────────────┘
-                                       │
-                                       ▼
-                      ┌─────────────────────────────────┐
-                      │   ESPN Play-by-Play Wallclock   │
-                      │        Replay Engine            │
-                      └────────────────┬────────────────┘
-                                       │
-     ┌─────────────────────────────────┼─────────────────────────────────┐
-     ▼                                 ▼                                 ▼
-┌──────────────────┐          ┌──────────────────┐             ┌──────────────────┐
-│ Exact Inning &   │          │ Real-Time Score  │             │ Target Deficit   │
-│ Inning Half      │          │ (Home vs. Away)  │             │ at Execution     │
-└────────┬─────────┘          └────────┬─────────┘             └────────┬─────────┘
-         │                             │                                │
-         └─────────────────────────────┼────────────────────────────────┘
-                                       ▼
-                      ┌─────────────────────────────────┐
-                      │  Upsert trade_enrichment Record │
-                      │  Enables Post-Hoc Alpha Audits  │
-                      └─────────────────────────────────┘
-```
-
-This infrastructure enables complex attribution queries such as:
-> *"What is our empirical win rate and ROI on in-play trades executed when our team was trailing by 1 to 2 runs between the 5th and 7th innings?"*
-
----
-
-## 🤖 LLM FinOps & Smart Context Compression
-
-Running complex AI-driven quantitative audits across 15+ daily matchups using commercial LLMs (Gemini Pro, Claude Sonnet) incurs substantial token costs and latency bottlenecks.
-
-Bet Bodhi implements a dual-layer FinOps architecture:
-
-1. **Domain-Specific Token Filtering:** Strips raw roster bloat, tracking only high-information quantitative tokens (`xwoba`, `xera`, `whiff`, `platoon`, `fatigue`, `kelly`).
-2. **Deterministic Character Caps:** Compresses pre-prompt context to a maximum of **4,000 characters**, delivering an **80% reduction in token density**.
-3. **SQLite Hard Budget Interception:** Every completion is tracked in `token_usage_logs`. If daily expenditure reaches **$1.60 (80%)**, an alert is dispatched; at **$2.00 (100%)**, a hard execution lock halts LLM calls, protecting operational runway.
-
----
-
-## 🔬 Historical Backtesting & Empirical Performance
-
-The historical backtesting suite (`scripts/mlb-historical-backtest.ts`) replays the complete 7-Pillar model against past MLB seasons with strict **no-lookahead data hydration**: all rosters, injuries, weather, and odds are resolved as-of the exact scheduled kickoff time.
-
-```
-========================================================================================
-📊 BODHI HISTORICAL REPLAY: 2024–2026 EMPIRICAL AUDIT
-========================================================================================
-• Total Analyzed Slate Fixtures:             537
-• Overall Model Directional Accuracy:        49.0%
-• High-Alpha Recommendations (Alpha >= 10):  42.0% (100 Wins / 238 Trades)
-• Average Daily Scan Cadence:                2x (Pre-Game + Live Mid-Inning Update)
-• Web3 Collateral Settlement Asset:          USDC.e (Polygon PoS)
-========================================================================================
-```
-
-### The Mid-Season Regime Shift Discovery
-Extensive backtesting and live execution audits revealed a notable performance compression during the mid-season window (June–July). Root-cause analysis uncovered three structural drivers:
-1. **Thermodynamic Ball Travel Variance:** Ambient summer temperatures decrease air density, inflating home run variance and reducing the predictability of starting pitcher ERA models.
-2. **Relief Pitcher Accumulation Fatigue:** After 60+ games, bullpen arms suffer non-linear degradation in fastball spin rates, causing late-inning blown holds that invalidate early-game leads.
-3. **Crowd Market Efficiency Convergence:** Early in the season, prediction market pricing is inefficient; by mid-summer, sharp automated market makers converge toward true consensus, narrowing raw pricing discrepancies.
-
-**Engineering Mitigations Deployed:**
-* Added explicit **Bullpen Fatigue Modifiers** (deducting up to $-3.0$ from Pillar 1 for tired bullpens).
-* Built the **`macro-regime-daemon.ts`** to scale down position sizes when league volatility flatlines.
-* Elevated the minimum EV threshold for heavy favorites to **12.0%**.
-
----
-
----
-
-## 🔬 The Flocano Labs Applied Engineering Dossiers (The Complete 16-Dossier Corpus)
-
-Bet Bodhi is formally documented through **16 peer-reviewed engineering case studies and technical dossiers** published on the [Flocano Labs Sovereign R&D Forge](https://www.flocanolabs.com/flocanolabs/case-studies). Each dossier details a mission-critical architectural transition, latency bottleneck elimination, cryptographic relayer bypass, mathematical calibration, or live incident response executing in production.
-
-### 📊 Master Engineering Dossier Matrix
-
-| # | Dossier Title | Slug / ID | Date | Discipline | Key Production Telemetry / Metric | Core Stack |
-|:---|:---|:---|:---|:---|:---|:---|
-| **01** | **Autonomous CLOB Mispricing Resolver** | `bodhi-clob-mispricing-resolver` | 2026-08-16 | Quantitative & Microstructure | `+$546` realized PnL; Win rate `20.0% -> 35.4%`; `$17,947` volume | `@polymarket/clob-client`, EIP-712, SQLite WAL |
-| **02** | **L2 Execution & Relayer Bypass** | `bodhi-execution-pipeline` | 2026-08-08 | Web3 & Cryptographic Routing | Latency `<150ms`; Bypassed gasless proxy delays | Ethers v6, SX Rollup 4162, Polygon CTF |
-| **03** | **Multi-DEX Arbitrage Engine** | `bodhi-multidex-arbitrage` | 2026-07-17 | Quantitative & Microstructure | Polymarket fair-value oracle; Alpha `>2.5%`; `Promise.all` | Polymarket, SX Bet, Azuro, Overtime |
-| **04** | **Multi-Chain Execution Abstraction** | `bodhi-crosschain-abstraction` | 2026-07-17 | Web3 & Cryptographic Routing | Cross-chain Poly + Gnosis + Solana; Gas `<$0.01` | Polygon, Gnosis, Solana, Ethers v6 |
-| **05** | **Cryptographic Sniping & Infrastructure Upgrades** | `bodhi-cryptographic-sniping` | 2026-07-17 | Web3 & Cryptographic Routing | Active taker EIP-712 sniping; Azuro V3; `$100` risk ceiling | `@sx-bet/sportx-js`, Azuro V3 GraphQL |
-| **06** | **The Telegram Sentinel & Bayesian Risk** | `bodhi-telegram-sentinel` | 2026-07-17 | Quantitative & Microstructure | `<1s` one-tap execution; `0.5x` psychometric stress gate | Telegram Bot API, Kelly sizing, JSON state |
-| **07** | **Incident Report: Polymarket CLOB API Auth Block** | `polymarket-clob-auth-block` | 2026-07-05 | Web3 & Cryptographic Routing | Session token extraction; `<1ms` reads; 0% timeout risk | macOS `launchd`, `@polymarket/clob-client` |
-| **08** | **Pillar Evaluation & Probability Calibration** | `pillar-analysis` | 2026-06-20 | Quantitative & Microstructure | 3-pillar scoring; `$0.60` favorite tax; 85% max confidence | Odds API, MLB API, KBO API, Supabase |
-| **09** | **Web3 Liquidity Resolution & CLOB Order Routing** | `polymarket-clob-pipeline` | 2026-06-20 | Web3 & Cryptographic Routing | Slippage `≤$0.05`; Safety limit `$35`; Ethers v5-v6 adapter | Polymarket Gamma, CTF, Polygon USDC.e |
-| **10** | **Context Compression & SQLite Token Telemetry** | `llm-finops-optimization` | 2026-06-20 | Cognitive AI & Swarms | 80% context compression; `$2.00/day` hard budget ceiling | Gemini 2.0 Flash, SQLite WAL, Telegram bot |
-| **11** | **Polymarket On-Chain Settlement Translation & Gateway** | `bet-bodhi-polymarket-middleware` | 2026-06-20 | Web3 & Cryptographic Routing | 1,037 trades audited; 0.0% error; 85.2% cache hit; `<40ms` | PolymarketGateway, Data API, Gamma API |
-| **12** | **Shallow On-Chain State Sync & Bankroll Verification** | `bodhi-shallow-on-chain-sync` | 2026-06-26 | Web3 & Cryptographic Routing | Latency `11m -> <5s` (99.2% cut); 100% accuracy; no CSV | Polygon RPC, USDC.e contract, CLOB paging |
-| **13** | **Macro Regime Telemetry & Psychometric Circuit Breakers** | `bodhi-macro-regime-daemon` | 2026-06-26 | Quantitative & Microstructure | Rolling 3d lead-change `<0.5` alarm; 50% slump stake throttle | ESPN API, Supabase, `macro-regime-daemon.ts` |
-| **14** | **Multi-Sport Scanner Pipeline & Bodhi Prism Facade** | `bodhi-scanner-prism` | 2026-06-26 | Cognitive AI & Swarms | 5 concurrent sports engines; 60% EV confidence floor | `BodhiPrism`, `daily-scanner.ts`, Gamma API |
-| **15** | **MLB Temporal Replay & Polymarket Historical Index** | `bodhi-mlb-temporal-replay` | 2026-06-30 | Quantitative & Microstructure | 5,107 games replayed; 98.4% market match; 5–10× speedup | `mlb-historical-backtest.ts`, Gamma bulk |
-| **16** | **Signal vs Execution & Slate Concentration** | `bodhi-signal-concentration` | 2026-06-30 | Quantitative & Microstructure | Top-1 tradable 66.0% WR (153 bets); Top-5 63.6%; Signal 60% | Temporal concentration, SQLite WAL |
-| * | **Executive Policy Alignment & Asymmetric Ruin-Weighted SLMs** *(Companion)* | `executive-policy-alignment` | 2026-08-01 | Quantitative & Microstructure | Asymmetric tail-risk loss penalty; Capital preservation invariant | Small Language Models, Risk Envelopes, PRISM |
-
----
-
-### Detailed Technical Dossier Walkthroughs
-
-#### Dossier 01: Autonomous CLOB Mispricing Resolver
-
-* **Identifier:** [`bodhi-clob-mispricing-resolver`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-08-16` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *reliever fatigue telemetry & orderbook pricing latency*
-* **Production Telemetry:** `execution: active_maker_taker // edge_target: polymarket_clob // realized_pnl: +$546 // win_rate_trend: 20.0%->35.4%`
-* **Technology Stack:** `TypeScript`, `@polymarket/clob-client`, `EIP-712 Order Matching`, `Polymarket Gamma API`, `MLB Stats API`, `Odds API`, `Node.js`, `SQLite WAL`, `Ethers.js v6`
-* **Executive Summary:** Exploits prediction market pricing latency around late-game bullpen exhaustion by synthesizing 72-hour reliever pitch counts, platoon splits, and atmospheric vectors against Polymarket CLOB spreads.
-
-| Metric Parameter | Production Empirical Value |
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **Recent Win Rate** | `35.4%` |
 | **Realized Profit** | `+$546` |
@@ -665,15 +81,13 @@ Because the engine targets asymmetric underdog odds on Polymarket (e.g. purchasi
 
 ---
 
-#### Dossier 02: L2 Execution & Relayer Bypass
+### [02] L2 Execution & Relayer Bypass
 
-* **Identifier:** [`bodhi-execution-pipeline`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-08-08` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *bypassing gasless UX abstractions & EIP-712 alignment*
-* **Production Telemetry:** `status: resolved // execution: automated // bottlenecks: bypassed`
-* **Technology Stack:** `Ethers.js v6`, `SX Rollup`, `Polygon CTF`, `Node.js`, `EIP-712 Permit`, `TokenTransferProxy`, `Arbitrum RPC`
-* **Executive Summary:** Corporate L2 platforms hide behind proprietary relayers and 'gasless' UI illusions to capture order flow. We dismantled the UX abstractions across SX Rollup and Polygon to build an unmediated, zero-friction execution pipeline.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `status: resolved` &nbsp;|&nbsp; **dossier_id:** [`bodhi-execution-pipeline`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*bypassing gasless UX abstractions & EIP-712 alignment*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **Execution Latency** | `<150ms` |
 | **RPC Infrastructure** | `Dedicated Nodes` |
@@ -694,15 +108,13 @@ Polymarket's Conditional Token Framework (CTF) Exchange on Polygon relies on off
 
 ---
 
-#### Dossier 03: Multi-DEX Arbitrage Engine
+### [03] Multi-DEX Arbitrage Engine
 
-* **Identifier:** [`bodhi-multidex-arbitrage`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-07-17` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `strategic`
-* **Architecture Subtitle:** *baseline oracle resolution & concurrent execution*
-* **Production Telemetry:** `mode: two_step_auth // oracle: polymarket_clob // concurrency: enabled`
-* **Technology Stack:** `TypeScript`, `Polymarket CLOB`, `Algorithmic Routing`, `Azuro Protocol`, `SX Bet API`, `Promise.all Concurrency`, `Decimal Odds Normalization`
-* **Executive Summary:** Uses Polymarket as a highly liquid 'fair value' oracle to establish a baseline edge before hunting alternative venues for maximum execution odds using concurrent Promise.all architecture.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `strategic` &nbsp;|&nbsp; **telemetry:** `mode: two_step_auth` &nbsp;|&nbsp; **dossier_id:** [`bodhi-multidex-arbitrage`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*baseline oracle resolution & concurrent execution*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **alpha_threshold** | `>2.5%` |
 | **latency_bottleneck** | `slowest_api_node` |
@@ -719,15 +131,13 @@ In algorithmic sniping, execution speed dictates success. Instead of sequential 
 
 ---
 
-#### Dossier 04: Multi-Chain Execution Abstraction
+### [04] Multi-Chain Execution Abstraction
 
-* **Identifier:** [`bodhi-crosschain-abstraction`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-07-17` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *cross-chain liquidity routing & schema normalization*
-* **Production Telemetry:** `networks: poly+gno+sol // gas_calc: dynamic // schema: normalized`
-* **Technology Stack:** `Polygon`, `Gnosis Chain`, `Solana`, `Ethers.js v6`, `Multi-Chain Routing`, `Schema Normalization`, `RPC Node Failover`
-* **Executive Summary:** Abstracts away cross-chain complexity by dynamically routing execution payloads across Polygon, Gnosis, and Solana natively while normalizing fragmented API schemas.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `networks: poly+gno+sol` &nbsp;|&nbsp; **dossier_id:** [`bodhi-crosschain-abstraction`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*cross-chain liquidity routing & schema normalization*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **gas_overhead** | `<$0.01` |
 | **manual_bridging** | `eliminated` |
@@ -742,15 +152,13 @@ Aggregating decentralized exchanges requires translating disparate data structur
 
 ---
 
-#### Dossier 05: Cryptographic Sniping & Infrastructure Upgrades
+### [05] Cryptographic Sniping & Infrastructure Upgrades
 
-* **Identifier:** [`bodhi-cryptographic-sniping`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-07-17` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *active maker/taker execution*
-* **Production Telemetry:** `mode: active_taker // protocol: sbet+azuro // max_risk: 100_USDC`
-* **Technology Stack:** `EIP-712`, `@sx-bet/sportx-js`, `GraphQL`, `Azuro Protocol V3`, `Active Taker Sniping`, `Polygon RPC`, `Hardcoded Risk Ceilings`
-* **Executive Summary:** Overhauled the SX Bet API into an active Taker utilizing EIP-712 signature matching and modernized the Azuro execution module to support V3 subgraphs.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `mode: active_taker` &nbsp;|&nbsp; **dossier_id:** [`bodhi-cryptographic-sniping`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*active maker/taker execution*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **cryptographic_standard** | `EIP-712` |
 | **native_risk_ceiling** | `$100` |
@@ -765,15 +173,13 @@ To ensure Azuro was a viable execution venue, we modernized the \`AzuroApi\`. Th
 
 ---
 
-#### Dossier 06: The Telegram Sentinel & Bayesian Risk
+### [06] The Telegram Sentinel & Bayesian Risk
 
-* **Identifier:** [`bodhi-telegram-sentinel`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-07-17` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `strategic`
-* **Architecture Subtitle:** *one-tap execution & risk throttling*
-* **Production Telemetry:** `interface: telegram_bot // payload_state: latest_picks.json // slippage_protection: native`
-* **Technology Stack:** `Telegram Bot API`, `Node.js`, `JSON State`, `Bayesian Logic`, `Fractional Kelly Sizing`, `Sentiment Guard`, `One-Tap Execution`
-* **Executive Summary:** Built a fully interactive Telegram execution terminal that pairs cryptographic payload caching with sentiment-adjusted Kelly risk sizing.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `strategic` &nbsp;|&nbsp; **telemetry:** `interface: telegram_bot` &nbsp;|&nbsp; **dossier_id:** [`bodhi-telegram-sentinel`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*one-tap execution & risk throttling*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **time_to_execute** | `<1_second` |
 | **sentiment_risk_throttle** | `0.5x (stressed)` |
@@ -790,15 +196,13 @@ This mathematical sizing is dynamically throttled by a psychological Sentiment G
 
 ---
 
-#### Dossier 07: Incident Report: Polymarket CLOB API Auth Block
+### [07] Incident Report: Polymarket CLOB API Auth Block
 
-* **Identifier:** [`polymarket-clob-auth-block`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-07-05` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `incident`
-* **Architecture Subtitle:** *sovereign infrastructure shift*
-* **Production Telemetry:** `mode: background_daemon // sync_interval: 15_minutes // failover: mitigated`
-* **Technology Stack:** `macOS launchd`, `TypeScript`, `@polymarket/clob-client`, `SQLite`, `OpenRouter`
-* **Executive Summary:** Architectural overhaul decoupling Bet Bodhi from Polymarket's fragile upstream auth endpoint via cryptographic session extraction and macOS UNIX kernel daemonization.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `incident` &nbsp;|&nbsp; **telemetry:** `mode: background_daemon` &nbsp;|&nbsp; **dossier_id:** [`polymarket-clob-auth-block`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*sovereign infrastructure shift*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **data_retrieval_latency** | `<1ms` |
 | **telegram_api_timeout_risk** | `0%` |
@@ -829,15 +233,13 @@ To resolve the dependency on the fragile upstream auth endpoint, we deployed a t
 
 ---
 
-#### Dossier 08: Pillar Evaluation & Probability Calibration
+### [08] Pillar Evaluation & Probability Calibration
 
-* **Identifier:** [`pillar-analysis`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-20` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `strategic`
-* **Architecture Subtitle:** *matchup probability weighting*
-* **Production Telemetry:** `mode: active // calibration: multi-sport // favorite_tax_threshold: 0.60`
-* **Technology Stack:** `TypeScript`, `Odds API`, `MLB API`, `KBO API`, `Supabase`, `Gemini API`
-* **Executive Summary:** Scores sporting matchups on a three-pillar scale to resolve the mathematical discrepancy between internal baseline probability and Polymarket crowd prices.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `strategic` &nbsp;|&nbsp; **telemetry:** `mode: active` &nbsp;|&nbsp; **dossier_id:** [`pillar-analysis`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*matchup probability weighting*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **confidence_weight_limit** | `85% (nhl/nba)` |
 | **base_stake_multiplier** | `0.5 (slump_mode)` |
@@ -867,15 +269,13 @@ If the system detects a performance drawdown (e.g. 3 consecutive losses or 4 of 
 
 ---
 
-#### Dossier 09: Web3 Liquidity Resolution & CLOB Order Routing
+### [09] Web3 Liquidity Resolution & CLOB Order Routing
 
-* **Identifier:** [`polymarket-clob-pipeline`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-20` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *on-chain order execution*
-* **Production Telemetry:** `chain_id: 137 // contract: usdc.e_0x2791B... // signature_type: poly_proxy`
-* **Technology Stack:** `Ethers.js v6`, `@polymarket/clob-client`, `Polygon CTF`, `RPC Node`, `Polymarket Gamma API`, `USDC.e Approvals`, `Limit Order Placement`
-* **Executive Summary:** Resolves CLOB token identifiers via the Gamma API and routes bounded limit orders directly to Polygon with custom wallet adapters.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `chain_id: 137` &nbsp;|&nbsp; **dossier_id:** [`polymarket-clob-pipeline`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*on-chain order execution*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **max_execution_slippage** | `$0.05` |
 | **safety_stake_limit** | `$35.00` |
@@ -908,15 +308,13 @@ If `POLY_PROXY_ADDRESS` is specified in the environment, the client routes trans
 
 ---
 
-#### Dossier 10: Context Compression & SQLite Token Telemetry
+### [10] Context Compression & SQLite Token Telemetry
 
-* **Identifier:** [`llm-finops-optimization`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-20` &nbsp;|&nbsp; **Classification:** `Cognitive AI & Multi-Agent Swarms` &nbsp;|&nbsp; **Type:** `feedback`
-* **Architecture Subtitle:** *prompt cost reduction*
-* **Production Telemetry:** `budget_limit: $2.00/day // alert_threshold: 0.80 // sqlite: active`
-* **Technology Stack:** `TypeScript`, `SQLite WAL`, `Telegram Bot API`, `Token Telemetry`, `Context Compression`, `Daily Budget Throttling`
-* **Executive Summary:** Filters raw scraping payloads for critical keywords and monitors daily prompt/completion cost metrics to enforce budget caps.
+> **discipline:** `Cognitive AI & Multi-Agent Swarms` // **type:** `feedback` &nbsp;|&nbsp; **telemetry:** `budget_limit: $2.00/day` &nbsp;|&nbsp; **dossier_id:** [`llm-finops-optimization`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*prompt cost reduction*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **context_compression_rate** | `80%` |
 | **max_context_chars** | `4000` |
@@ -949,15 +347,13 @@ The `TokenTracker` intercepts response usage metadata, estimates real-time API f
 
 ---
 
-#### Dossier 11: Polymarket On-Chain Settlement Translation & Caching Gateway
+### [11] Polymarket On-Chain Settlement Translation & Caching Gateway
 
-* **Identifier:** [`bet-bodhi-polymarket-middleware`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-20` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *decoupled middleware resolving binary contract translation mismatches and sequential rate-limiting overhead*
-* **Production Telemetry:** `status: active // cache_hit_ratio: 85.2% // settlement_accuracy: 100%`
-* **Technology Stack:** `TypeScript`, `Ethers.js v6`, `@polymarket/clob-client`, `Polymarket Gamma API`, `Polymarket Data API`, `PolymarketGateway`
-* **Executive Summary:** Decoupled Polymarket middleware implementing stateful caching, plural parameter routing, and outcome translation logic to correctly audit on-chain PnL for multi-team sports slates.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `status: active` &nbsp;|&nbsp; **dossier_id:** [`bet-bodhi-polymarket-middleware`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*decoupled middleware resolving binary contract translation mismatches and sequential rate-limiting overhead*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **Historical Trades Audited** | `1,037` |
 | **PnL Alignment Error Rate** | `0.0%` |
@@ -1018,15 +414,13 @@ Settlement math keys markets by `conditionId` and buckets MLB/KBO realized profi
 
 ---
 
-#### Dossier 12: Shallow On-Chain State Sync & Bankroll Verification
+### [12] Shallow On-Chain State Sync & Bankroll Verification
 
-* **Identifier:** [`bodhi-shallow-on-chain-sync`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-26` &nbsp;|&nbsp; **Classification:** `Web3 Primitives & Cryptographic Routing` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *replacing brittle csv logs with bounded polygon queries*
-* **Production Telemetry:** `sync_mode: shallow // usdc_contract: 0x2791B... // csv_fallback: removed`
-* **Technology Stack:** `Ethers.js v6`, `@polymarket/clob-client`, `Polygon RPC`, `TypeScript`, `USDC.e Contract Reads`, `Shallow Paging`, `On-Chain Bankroll Verification`
-* **Executive Summary:** Replaces full historical database tree walks with shallow CLOB paging and direct USDC.e balance reads, cutting settlement checks from 11 minutes to under 5 seconds.
+> **discipline:** `Web3 Primitives & Cryptographic Routing` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `sync_mode: shallow` &nbsp;|&nbsp; **dossier_id:** [`bodhi-shallow-on-chain-sync`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*replacing brittle csv logs with bounded polygon queries*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **full_sync_duration** | `~11 min` |
 | **shallow_sync_duration** | `< 5s` |
@@ -1067,15 +461,13 @@ async getUSDCBalance(): Promise<number> {
 
 ---
 
-#### Dossier 13: Macro Regime Telemetry & Psychometric Circuit Breakers
+### [13] Macro Regime Telemetry & Psychometric Circuit Breakers
 
-* **Identifier:** [`bodhi-macro-regime-daemon`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-26` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `strategic`
-* **Architecture Subtitle:** *league volatility index and slump mode stake throttling*
-* **Production Telemetry:** `daemon: macro-regime-daemon.ts // alert_threshold: 0.5 // slump_multiplier: 0.5`
-* **Technology Stack:** `TypeScript`, `ESPN API`, `Supabase`, `Telegram Bot API`, `Macro Regime Telemetry`, `Slump Mode Throttling`, `Rolling Volatility Tracking`
-* **Executive Summary:** Tracks rolling 3-day late-inning lead change averages to detect flatlined volatility regimes and pairs macro alerts with automated 50% stake reduction during losing streaks.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `strategic` &nbsp;|&nbsp; **telemetry:** `daemon: macro-regime-daemon.ts` &nbsp;|&nbsp; **dossier_id:** [`bodhi-macro-regime-daemon`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*league volatility index and slump mode stake throttling*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **rolling_window** | `3 days` |
 | **regime_alert_threshold** | `< 0.5 lead changes` |
@@ -1123,15 +515,13 @@ The macro daemon catches **environmental** regime shifts before they eat the ban
 
 ---
 
-#### Dossier 14: Multi-Sport Scanner Pipeline & Bodhi Prism Agent Facade
+### [14] Multi-Sport Scanner Pipeline & Bodhi Prism Agent Facade
 
-* **Identifier:** [`bodhi-scanner-prism`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-26` &nbsp;|&nbsp; **Classification:** `Cognitive AI & Multi-Agent Swarms` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *five-league ingestion through a unified agent interface*
-* **Production Telemetry:** `sports_engines: 5 // pipeline: daily-scanner.ts // agent_facade: BodhiPrism`
-* **Technology Stack:** `TypeScript`, `Polymarket Gamma API`, `MLB API`, `NHL API`, `NBA API`, `KBO API`, `MMA API`, `Odds API`, `Gemini API`, `BodhiPrism`, `Supabase`, `Node.js`
-* **Executive Summary:** Orchestrates daily-scanner.ts across MLB, NHL, NBA, MMA, and KBO data engines, resolves Gamma markets via fuzzy mascot matching, and exposes all capabilities through the Bodhi Prism agent facade.
+> **discipline:** `Cognitive AI & Multi-Agent Swarms` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `sports_engines: 5` &nbsp;|&nbsp; **dossier_id:** [`bodhi-scanner-prism`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*five-league ingestion through a unified agent interface*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **concurrent_sport_engines** | `5` |
 | **pillar_analyzers** | `5 sport-specific` |
@@ -1183,15 +573,13 @@ Agents call Prism methods instead of invoking scripts directly — scanning, ban
 
 ---
 
-#### Dossier 15: MLB Temporal Replay & Polymarket Historical Index
+### [15] MLB Temporal Replay & Polymarket Historical Index
 
-* **Identifier:** [`bodhi-mlb-temporal-replay`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-30` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *5,107-game no-lookahead backtest with 98.4% closed-market match rate*
-* **Production Telemetry:** `games: 5107 // poly_match: 98.4% // lookahead: none // fast_mode: 5-10x`
-* **Technology Stack:** `TypeScript`, `MLB API`, `Node.js`, `SQLite`, `Polymarket Gamma API`, `CLOB prices-history`, `PolymarketGateway`
-* **Executive Summary:** Replays every 2024–2025 final MLB game through production pillar weights with as-of-first-pitch hydration, bulk-loaded closed Gamma moneylines, resumable row cache, and post-run concentration slicing.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `technical` &nbsp;|&nbsp; **telemetry:** `games: 5107` &nbsp;|&nbsp; **dossier_id:** [`bodhi-mlb-temporal-replay`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*5,107-game no-lookahead backtest with 98.4% closed-market match rate*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **games_replayed** | `5,107` |
 | **2025_poly_match_rate** | `98.4%` |
@@ -1257,15 +645,13 @@ npx tsx scripts/mlb-historical-backtest.ts --season 2025 --fast --concurrency 4 
 
 ---
 
-#### Dossier 16: Signal vs Execution & Slate Concentration
+### [16] Signal vs Execution & Slate Concentration
 
-* **Identifier:** [`bodhi-signal-concentration`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Date:** `2026-06-30` &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `strategic`
-* **Architecture Subtitle:** *full firehose vs top-5 / top-3 / top-1 daily filters*
-* **Production Telemetry:** `all_wr: 60.0% // top5_wr: 63.6% // top1_tradable_wr: 66.0% // pass_vs_poly: split`
-* **Technology Stack:** `TypeScript`, `Polymarket Gamma API`, `SQLite WAL`, `Temporal Concentration`, `Slate Optimization`, `As-Of Execution Hydration`
-* **Executive Summary:** Decomposes handicapping signal from tradable Polymarket routes, then proves tighter daily concentration monotonically lifts win rate — top-1 tradable reaches 66.0% on 153 bets without changing the underlying model.
+> **discipline:** `Quantitative Engineering & Microstructure` // **type:** `strategic` &nbsp;|&nbsp; **telemetry:** `all_wr: 60.0%` &nbsp;|&nbsp; **dossier_id:** [`bodhi-signal-concentration`](https://www.flocanolabs.com/flocanolabs/case-studies)
 
-| Metric Parameter | Production Empirical Value |
+*full firehose vs top-5 / top-3 / top-1 daily filters*
+
+| Telemetry Metric | Empirical Value |
 |:---|:---|
 | **all_picks_WR** | `60.0%` |
 | **top5_per_day_WR** | `63.6%` |
@@ -1319,179 +705,19 @@ This is **decomposition research**, not a new ML stack: prove signal at scale, s
 
 ---
 
-#### Companion Architectural Foundation: Executive Policy Alignment & Asymmetric Ruin-Weighted SLMs
-* **Identifier:** [`executive-policy-alignment`](https://www.flocanolabs.com/flocanolabs/case-studies) &nbsp;|&nbsp; **Classification:** `Quantitative Engineering & Microstructure` &nbsp;|&nbsp; **Type:** `technical`
-* **Architecture Subtitle:** *microstructure tokenization, semantic prompt leakage forensics & unified-memory edge inference*
-* **Core Stack:** `Small Language Models (1.5B)`, `Asymmetric Ruin Loss`, `Bayesian Risk Bounds`, `PRISM Behavioral Gate`
-* **Executive Summary:** Adapts proprietary 1.5B parameter SLMs for real-time market microstructure reasoning. Rather than optimizing for generic cross-entropy or symmetric loss, the model enforces an **asymmetric ruin-weighted penalty function**: downside tail-risk mistakes that threaten bankroll preservation are penalized by an exponential factor ($e^{\lambda \cdot \text{drawdown}}$), guaranteeing mathematical survival under gambler's ruin conditions. This foundation directly powers Bet Bodhi's PRISM cognitive safeguard module.
+## 🏛️ Sovereign Attribution & Portfolio
 
----
+Bet Bodhi is an autonomous quantitative trading infrastructure designed, engineered, and deployed by **Nicholas MacAskill** under **Flocano Labs**.
 
----
+* **Executive Portfolio & Engineering Practice:**  
+  👉 [https://nicholasmacaskill.com](https://nicholasmacaskill.com)
 
-## 🗄️ Database Schemas & Storage Architecture
+* **Flocano Labs Applied R&D Forge:**  
+  👉 [https://flocanolabs.com](https://flocanolabs.com)
 
-### Local SQLite Database (`data/bodhi.db` — 9 Relational Tables)
-
-```
-┌─────────────────────────────────┐       ┌─────────────────────────────────┐
-│       user_sentiment            │       │      betting_opportunities      │
-├─────────────────────────────────┤       ├─────────────────────────────────┤
-│ id (UUID, PK)                   │◄──────┤ id (TEXT, PK)                   │
-│ created_at (TIMESTAMP)          │       │ game_pk (INTEGER)               │
-│ session_id (TEXT)               │       │ game_date (TEXT)                │
-│ mood (TEXT)                     │       │ matchup (TEXT)                  │
-│ calmness (INTEGER, 1-10)        │       │ confidence_score (REAL)         │
-│ risk_multiplier (REAL)          │       │ pillar_breakdown (JSON)         │
-│ report_date (TEXT)              │       │ alpha_score (REAL)              │
-└─────────────────────────────────┘       │ detected_value_team (TEXT)      │
-                                          │ sentiment_id (UUID, FK)         │
-┌─────────────────────────────────┐       │ scan_type (PRE_GAME/LIVE)       │
-│             bets                │       └─────────────────────────────────┘
-├─────────────────────────────────┤
-│ id (TEXT, PK)                   │       ┌─────────────────────────────────┐
-│ trade_id (TEXT)                 │       │        trade_enrichment         │
-│ market_id (TEXT)                │       ├─────────────────────────────────┤
-│ team (TEXT)                     │       │ trade_id (TEXT, PK)             │
-│ stake (REAL)                    │       │ sport (TEXT)                    │
-│ odds (REAL)                     │       │ entry_price (REAL)              │
-│ motivation_tag (TEXT)           │       │ game_phase (PRE/LIVE/POST)      │
-│ result (WIN/LOSS/PENDING)       │       │ inning (INTEGER)                │
-│ pnl (REAL)                      │       │ bet_team_deficit (INTEGER)      │
-└─────────────────────────────────┘       └─────────────────────────────────┘
-```
-
----
-
-## 📁 Repository Directory Structure
-
-```
-bet-bodhi/
-├── contracts/
-│   └── BodhiArbitrageRouter.sol       # Atomic cross-DEX arbitrage contract (Solidity 0.8.20)
-├── docs/
-│   ├── SCANNER_ARCHITECTURE.md        # Comprehensive multi-sport ingestion topology
-│   ├── POLYMARKET_INTEGRATION.md      # Web3 CLOB/Gamma APIs and signer adapters
-│   ├── PARAMETERS.md                  # Mathematical Kelly parameters and pillar weights
-│   ├── MULTI_DEX_PIVOT_STRATEGY.md    # Multi-DEX architecture (SX, Azuro, Overtime)
-│   ├── MACRO_REGIME_SHIFT_BLUEPRINT.md# Volatility telemetry and CLV tracking specs
-│   ├── ENGINEERING_CASE_STUDIES.md   # Deep dives into LLM FinOps and latency reduction
-│   └── ALL_BODHI_DOSSIERS.md         # The 16 Flocano Labs engineering dossiers
-├── reports/                           # Generated daily markdown sovereign slate reports
-├── scripts/
-│   ├── scanners/
-│   │   └── nightly_full_report.ts    # Master 6-sport daily sovereign report generator
-│   ├── daily-scanner.ts               # Terminal-optimized live interactive scanner
-│   ├── telegram-bot.ts               # Telegram command daemon with PRISM flow
-│   ├── polymarket-arb-scanner.ts     # Real-time MERGE/SPLIT arbitrage detector
-│   ├── macro-regime-daemon.ts        # MLB league-wide volatility telemetry daemon
-│   ├── kbo-regime-daemon.ts          # KBO-specific volatility telemetry daemon
-│   ├── mlb-historical-backtest.ts    # Multi-season no-lookahead historical backtester
-│   ├── calculate-live-pnl.ts         # Multi-chain on-chain PnL reconciliation engine
-│   ├── enrich-trade-context.ts       # ESPN play-by-play trade attribution replayer
-│   ├── performance_audit.ts          # Automated SQLite win-rate and ROI auditor
-│   └── send-sovereign-report-email.ts# Automated daily HTML intelligence email dispatcher
-└── src/
-    └── lib/
-        ├── multi-dex-router.ts       # Universal Web3 sports liquidity aggregator
-        ├── pillar-analyzer.ts        # MLB 7-Pillar Quantitative Evaluation Core
-        ├── kbo-pillar-analyzer.ts    # KBO-specific evaluation model
-        ├── npb-pillar-analyzer.ts    # NPB-specific evaluation model
-        ├── email.ts                  # Resend automated reporting integration
-        ├── picks-manager.ts          # Stable daily pick mapping & Telegram resolver
-        ├── sqlite-client.ts          # Local SQLite initialization and prepared queries
-        └── agent/
-            ├── prism.ts              # PRISM psychometric facade
-            ├── watchdog.ts           # Post-scan reality drift monitor
-            ├── memory.ts             # CSV trade history ingestion & burn list
-            └── openrouter-handler.ts # LLM FinOps token budget circuit breaker
-```
-
----
-
-## 🚀 Deployment & Operating Instructions
-
-### 1. Environment Configuration
-Clone the repository and initialize the environment variables:
-```bash
-git clone https://github.com/nicholasmacaskill/bet-bodhi.git
-cd bet-bodhi
-cp .env.example .env
-```
-
-Key environment configuration entries:
-```ini
-# Web3 / Polymarket CLOB Credentials
-POLY_API_KEY="your-clob-api-key"
-POLY_SECRET="your-clob-secret"
-POLY_PASSPHRASE="your-clob-passphrase"
-WALLET_PRIVATE_KEY="your-private-key"
-POLYGON_RPC_URL="https://polygon-bor-rpc.publicnode.com"
-
-# Multi-DEX API Keys
-AZURO_API_KEY="your-azuro-portal-key"
-SX_API_KEY="your-sx-bet-api-key"
-
-# Telegram Bot Interface
-TELEGRAM_BOT_TOKEN="your-bot-token"
-TELEGRAM_ADMIN_ID="your-chat-id"
-
-# LLM FinOps & Automated Reporting
-OPENROUTER_API_KEY="your-openrouter-key"
-RESEND_API_KEY="your-resend-api-key"
-EMAIL_FROM="Bodhi Sovereign <scanner@yourverifieddomain.com>"
-```
-
-### 2. Dependency Installation & Smart Contract Compilation
-```bash
-npm install
-npx hardhat compile
-```
-
-### 3. Initialize SQLite Storage
-```bash
-npx tsx -e "import { initDb } from './src/lib/sqlite-client'; initDb();"
-```
-
-### 4. Run the Sovereign Daily Scan
-```bash
-# Execute a full multi-sport sovereign scan (MLB, KBO, NPB, Soccer, Golf, Tennis)
-npx tsx scripts/scanners/nightly_full_report.ts
-
-# Run the terminal interactive daily scanner
-npm run scan
-
-# Audit historical model performance from SQLite records
-npm run audit
-
-# Reconcile live on-chain USDC.e bankroll balances
-npm run pnl
-```
-
-### 5. Launch Sovereign Background Daemons (macOS)
-```bash
-launchctl load ~/Library/LaunchAgents/com.betbodhi.telegrambot.plist
-launchctl load ~/Library/LaunchAgents/com.betbodhi.arbscanner.plist
-launchctl load ~/Library/LaunchAgents/com.betbodhi.pnlsync.plist
-```
-
----
-
-## 🏛️ Institutional Portfolio & Case Studies
-
-Bet Bodhi is designed, engineered, and maintained by **Nicholas MacAskill** as part of the **Flocano Labs** applied algorithmic intelligence portfolio.
-
-For comprehensive architectural breakdowns, client engineering case studies, and enterprise deployment methodologies, explore the links below:
-
-* **Executive Portfolio & Engineering Overview:**  
-  👉 [nicholasmacaskill.com](https://nicholasmacaskill.com)
-
-* **Flocano Labs Applied AI & Quantitative Systems:**  
-  👉 [flocanolabs.com](https://flocanolabs.com)
-
-* **Flocano Labs Case Studies & Deep-Dive Technical Reviews:**  
+* **Flocano Labs Dossiers & Whitepapers:**  
   👉 [https://www.flocanolabs.com/flocanolabs/case-studies](https://www.flocanolabs.com/flocanolabs/case-studies)
 
 ---
 
-*© 2026 Nicholas MacAskill. All rights reserved. Bet Bodhi is an experimental quantitative research framework and autonomous trading infrastructure.*
+*© 2026 Nicholas MacAskill. All rights reserved. Bet Bodhi is a sovereign quantitative research system.*
