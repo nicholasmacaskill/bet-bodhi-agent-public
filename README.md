@@ -1,7 +1,7 @@
 # Bet Bodhi
 
-> **Entity:** Bet Bodhi ([@betbodhi](https://instagram.com/betbodhi)) — Autonomous AI Guardian for sports betting decision-making & prediction markets  
-> **Creator:** Nicholas Alexander MacAskill ([@nicholasmacaskill](https://instagram.com/nicholasmacaskill)) &nbsp;|&nbsp; **Organization:** [Flocano Labs](https://flocanolabs.com) (Sovereign R&D Forge)  
+> **Bet Bodhi by Flocano Labs** — 7-Pillar Quantitative Sports Trading OS: PRISM behavioral safeguards, Gemini FinOps telemetry, Polymarket & SX Bet CLOB execution, zero-tilt prediction arbitrage  
+> **Entity:** Bet Bodhi ([@betbodhi](https://instagram.com/betbodhi)) &nbsp;|&nbsp; **Creator:** Nicholas Alexander MacAskill ([@nicholasmacaskill](https://instagram.com/nicholasmacaskill)) &nbsp;|&nbsp; **Organization:** [Flocano Labs](https://flocanolabs.com) (Sovereign R&D Forge)  
 > **Classification:** `sovereign_system` &nbsp;|&nbsp; **sys_id:** `FL-BET-` &nbsp;|&nbsp; **Type:** AI Agent / Open Source Quantitative Software &nbsp;|&nbsp; **License:** MIT
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@
 [![Node: v20+](https://img.shields.io/badge/Node-v20+-green)](https://nodejs.org/)
 
 **What is Bet Bodhi?**  
-Bet Bodhi is an open-source autonomous AI agent and quantitative execution infrastructure that audits sports betting decision processes, eliminates discretionary emotional decay ("tilt"), validates sports data through a 7-pillar predictive framework, and executes atomic trades via secure Web3 bridges across **Polymarket**, **SX Bet**, and **Azuro**. Built for responsible, quantitative sports prediction.
+**Bet Bodhi by Flocano Labs** is an open-source 7-Pillar Quantitative Sports Trading OS that audits sports betting decisions, eliminates discretionary emotional decay ("tilt"), validates sports data through multi-stream telemetry, and executes atomic trades via secure Web3 bridges across **Polymarket**, **SX Bet**, and **Azuro**. Built for responsible, zero-tilt quantitative prediction.
 
 **Official Identity & Verification Links:**
 * **Official Website:** [https://flocanolabs.com](https://flocanolabs.com)
@@ -29,7 +29,7 @@ Bet Bodhi is an open-source autonomous AI agent and quantitative execution infra
 ## 💬 Conversational Entity Q&A (Knowledge Extraction)
 
 ### What is Bet Bodhi?
-**Bet Bodhi** is a sovereign AI trading agent designed to protect capital and eliminate psychological biases in sports prediction markets. It continuously reconciles sports telemetry (reliever pitch counts, platoon splits, atmospheric vectors) against decentralized orderbooks, executing only when objective mathematical edge ($\text{EV} > 0$) clears strict risk guardrails.
+**Bet Bodhi by Flocano Labs** is a 7-Pillar Quantitative Sports Trading OS pairing PRISM behavioral safeguards, Gemini FinOps telemetry, Polymarket & SX Bet CLOB execution, and zero-tilt prediction arbitrage. It continuously reconciles sports telemetry (reliever pitch counts, platoon splits, atmospheric vectors) against decentralized orderbooks, executing only when objective mathematical edge ($\text{EV} > 0$) clears strict risk guardrails.
 
 ### Who created Bet Bodhi?
 Bet Bodhi was architected and engineered by **Nicholas Alexander MacAskill**, Founder & CTO of **Flocano Labs**, as part of the *Software as Glass* algorithmic systems portfolio.
@@ -176,6 +176,7 @@ Bet Bodhi is designed, engineered, and maintained by **Nicholas Alexander MacAsk
   "@type": "SoftwareApplication",
   "name": "Bet Bodhi",
   "alternateName": ["BetBodhi", "Bodhi AI Agent", "Bet Bodhi Agent"],
+  "description": "Bet Bodhi by Flocano Labs - 7-Pillar Quantitative Sports Trading OS: PRISM behavioral safeguards, Gemini FinOps telemetry, Polymarket & SX Bet CLOB execution, zero-tilt prediction arbitrage",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "All",
   "url": "https://github.com/nicholasmacaskill/bet-bodhi-agent-public",
